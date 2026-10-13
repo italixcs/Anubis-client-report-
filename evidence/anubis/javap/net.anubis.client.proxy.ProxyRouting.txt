@@ -1,0 +1,442 @@
+Classfile analysis-workspace/extracted/run.oEA4CbVx/net/anubis/client/proxy/ProxyRouting.class
+  Last modified Oct 13, 2026; size 3264 bytes
+  SHA-256 checksum df6449811a13700d32c0cd8782cce024b318328ddc0e356e8a155b94d6ff1643
+  Compiled from "ProxyRouting.java"
+public final class net.anubis.client.proxy.ProxyRouting
+  minor version: 0
+  major version: 65
+  flags: (0x0031) ACC_PUBLIC, ACC_FINAL, ACC_SUPER
+  this_class: #2                          // net/anubis/client/proxy/ProxyRouting
+  super_class: #4                         // java/lang/Object
+  interfaces: 0, fields: 1, methods: 4, attributes: 4
+Constant pool:
+    #1 = Utf8               net/anubis/client/proxy/ProxyRouting
+    #2 = Class              #1            // net/anubis/client/proxy/ProxyRouting
+    #3 = Utf8               java/lang/Object
+    #4 = Class              #3            // java/lang/Object
+    #5 = Utf8               ProxyRouting.java
+    #6 = Utf8               net/anubis/client/proxy/ProxyRouting$2
+    #7 = Class              #6            // net/anubis/client/proxy/ProxyRouting$2
+    #8 = Utf8               net/anubis/client/proxy/ProxyRouting$1
+    #9 = Class              #8            // net/anubis/client/proxy/ProxyRouting$1
+   #10 = Utf8               HANDLER_NAME
+   #11 = Utf8               Ljava/lang/String;
+   #12 = Utf8               anubis_proxy
+   #13 = String             #12           // anubis_proxy
+   #14 = Utf8               <init>
+   #15 = Utf8               ()V
+   #16 = NameAndType        #14:#15       // "<init>":()V
+   #17 = Methodref          #4.#16        // java/lang/Object."<init>":()V
+   #18 = Utf8               this
+   #19 = Utf8               Lnet/anubis/client/proxy/ProxyRouting;
+   #20 = Utf8               route
+   #21 = Utf8               (Ljava/net/InetSocketAddress;Lio/netty/channel/ChannelHandler;)Lio/netty/channel/ChannelHandler;
+   #22 = Utf8               target
+   #23 = Utf8               initializer
+   #24 = Utf8               isLocal
+   #25 = Utf8               (Ljava/net/InetSocketAddress;)Z
+   #26 = NameAndType        #24:#25       // isLocal:(Ljava/net/InetSocketAddress;)Z
+   #27 = Methodref          #2.#26        // net/anubis/client/proxy/ProxyRouting.isLocal:(Ljava/net/InetSocketAddress;)Z
+   #28 = Utf8               net/anubis/client/proxy/Proxies
+   #29 = Class              #28           // net/anubis/client/proxy/Proxies
+   #30 = Utf8               get
+   #31 = Utf8               ()Lnet/anubis/client/proxy/Proxies;
+   #32 = NameAndType        #30:#31       // get:()Lnet/anubis/client/proxy/Proxies;
+   #33 = Methodref          #29.#32       // net/anubis/client/proxy/Proxies.get:()Lnet/anubis/client/proxy/Proxies;
+   #34 = Utf8               enabledCopy
+   #35 = Utf8               ()Lnet/anubis/client/proxy/Proxy;
+   #36 = NameAndType        #34:#35       // enabledCopy:()Lnet/anubis/client/proxy/Proxy;
+   #37 = Methodref          #29.#36       // net/anubis/client/proxy/Proxies.enabledCopy:()Lnet/anubis/client/proxy/Proxy;
+   #38 = Utf8               net/anubis/client/proxy/Proxy
+   #39 = Class              #38           // net/anubis/client/proxy/Proxy
+   #40 = Utf8               isValid
+   #41 = Utf8               ()Z
+   #42 = NameAndType        #40:#41       // isValid:()Z
+   #43 = Methodref          #39.#42       // net/anubis/client/proxy/Proxy.isValid:()Z
+   #44 = Utf8               handler
+   #45 = Utf8               (Lnet/anubis/client/proxy/Proxy;)Lio/netty/handler/proxy/ProxyHandler;
+   #46 = NameAndType        #44:#45       // handler:(Lnet/anubis/client/proxy/Proxy;)Lio/netty/handler/proxy/ProxyHandler;
+   #47 = Methodref          #2.#46        // net/anubis/client/proxy/ProxyRouting.handler:(Lnet/anubis/client/proxy/Proxy;)Lio/netty/handler/proxy/ProxyHandler;
+   #48 = Utf8               (Lio/netty/handler/proxy/ProxyHandler;Lio/netty/channel/ChannelHandler;)V
+   #49 = NameAndType        #14:#48       // "<init>":(Lio/netty/handler/proxy/ProxyHandler;Lio/netty/channel/ChannelHandler;)V
+   #50 = Methodref          #9.#49        // net/anubis/client/proxy/ProxyRouting$1."<init>":(Lio/netty/handler/proxy/ProxyHandler;Lio/netty/channel/ChannelHandler;)V
+   #51 = Utf8               Ljava/net/InetSocketAddress;
+   #52 = Utf8               Lio/netty/channel/ChannelHandler;
+   #53 = Utf8               proxy
+   #54 = Utf8               Lnet/anubis/client/proxy/Proxy;
+   #55 = Utf8               Lio/netty/handler/proxy/ProxyHandler;
+   #56 = Utf8               java/net/InetSocketAddress
+   #57 = Class              #56           // java/net/InetSocketAddress
+   #58 = Utf8               address
+   #59 = NameAndType        #58:#11       // address:Ljava/lang/String;
+   #60 = Fieldref           #39.#59       // net/anubis/client/proxy/Proxy.address:Ljava/lang/String;
+   #61 = Utf8               java/lang/String
+   #62 = Class              #61           // java/lang/String
+   #63 = Utf8               trim
+   #64 = Utf8               ()Ljava/lang/String;
+   #65 = NameAndType        #63:#64       // trim:()Ljava/lang/String;
+   #66 = Methodref          #62.#65       // java/lang/String.trim:()Ljava/lang/String;
+   #67 = Utf8               port
+   #68 = Utf8               I
+   #69 = NameAndType        #67:#68       // port:I
+   #70 = Fieldref           #39.#69       // net/anubis/client/proxy/Proxy.port:I
+   #71 = Utf8               (Ljava/lang/String;I)V
+   #72 = NameAndType        #14:#71       // "<init>":(Ljava/lang/String;I)V
+   #73 = Methodref          #57.#72       // java/net/InetSocketAddress."<init>":(Ljava/lang/String;I)V
+   #74 = Utf8               username
+   #75 = NameAndType        #74:#11       // username:Ljava/lang/String;
+   #76 = Fieldref           #39.#75       // net/anubis/client/proxy/Proxy.username:Ljava/lang/String;
+   #77 = Utf8               isEmpty
+   #78 = NameAndType        #77:#41       // isEmpty:()Z
+   #79 = Methodref          #62.#78       // java/lang/String.isEmpty:()Z
+   #80 = Utf8               password
+   #81 = NameAndType        #80:#11       // password:Ljava/lang/String;
+   #82 = Fieldref           #39.#81       // net/anubis/client/proxy/Proxy.password:Ljava/lang/String;
+   #83 = Utf8               $SwitchMap$net$anubis$client$proxy$ProxyType
+   #84 = Utf8               [I
+   #85 = NameAndType        #83:#84       // $SwitchMap$net$anubis$client$proxy$ProxyType:[I
+   #86 = Fieldref           #7.#85        // net/anubis/client/proxy/ProxyRouting$2.$SwitchMap$net$anubis$client$proxy$ProxyType:[I
+   #87 = Utf8               type
+   #88 = Utf8               Lnet/anubis/client/proxy/ProxyType;
+   #89 = NameAndType        #87:#88       // type:Lnet/anubis/client/proxy/ProxyType;
+   #90 = Fieldref           #39.#89       // net/anubis/client/proxy/Proxy.type:Lnet/anubis/client/proxy/ProxyType;
+   #91 = Utf8               net/anubis/client/proxy/ProxyType
+   #92 = Class              #91           // net/anubis/client/proxy/ProxyType
+   #93 = Utf8               ordinal
+   #94 = Utf8               ()I
+   #95 = NameAndType        #93:#94       // ordinal:()I
+   #96 = Methodref          #92.#95       // net/anubis/client/proxy/ProxyType.ordinal:()I
+   #97 = Utf8               java/lang/MatchException
+   #98 = Class              #97           // java/lang/MatchException
+   #99 = Utf8               (Ljava/lang/String;Ljava/lang/Throwable;)V
+  #100 = NameAndType        #14:#99       // "<init>":(Ljava/lang/String;Ljava/lang/Throwable;)V
+  #101 = Methodref          #98.#100      // java/lang/MatchException."<init>":(Ljava/lang/String;Ljava/lang/Throwable;)V
+  #102 = Utf8               io/netty/handler/proxy/Socks4ProxyHandler
+  #103 = Class              #102          // io/netty/handler/proxy/Socks4ProxyHandler
+  #104 = Utf8               (Ljava/net/SocketAddress;Ljava/lang/String;)V
+  #105 = NameAndType        #14:#104      // "<init>":(Ljava/net/SocketAddress;Ljava/lang/String;)V
+  #106 = Methodref          #103.#105     // io/netty/handler/proxy/Socks4ProxyHandler."<init>":(Ljava/net/SocketAddress;Ljava/lang/String;)V
+  #107 = Utf8               io/netty/handler/proxy/Socks5ProxyHandler
+  #108 = Class              #107          // io/netty/handler/proxy/Socks5ProxyHandler
+  #109 = Utf8               (Ljava/net/SocketAddress;Ljava/lang/String;Ljava/lang/String;)V
+  #110 = NameAndType        #14:#109      // "<init>":(Ljava/net/SocketAddress;Ljava/lang/String;Ljava/lang/String;)V
+  #111 = Methodref          #108.#110     // io/netty/handler/proxy/Socks5ProxyHandler."<init>":(Ljava/net/SocketAddress;Ljava/lang/String;Ljava/lang/String;)V
+  #112 = Utf8               io/netty/handler/proxy/ProxyHandler
+  #113 = Class              #112          // io/netty/handler/proxy/ProxyHandler
+  #114 = Utf8               server
+  #115 = Utf8               getAddress
+  #116 = Utf8               ()Ljava/net/InetAddress;
+  #117 = NameAndType        #115:#116     // getAddress:()Ljava/net/InetAddress;
+  #118 = Methodref          #57.#117      // java/net/InetSocketAddress.getAddress:()Ljava/net/InetAddress;
+  #119 = Utf8               localhost
+  #120 = String             #119          // localhost
+  #121 = Utf8               getHostString
+  #122 = NameAndType        #121:#64      // getHostString:()Ljava/lang/String;
+  #123 = Methodref          #57.#122      // java/net/InetSocketAddress.getHostString:()Ljava/lang/String;
+  #124 = Utf8               equalsIgnoreCase
+  #125 = Utf8               (Ljava/lang/String;)Z
+  #126 = NameAndType        #124:#125     // equalsIgnoreCase:(Ljava/lang/String;)Z
+  #127 = Methodref          #62.#126      // java/lang/String.equalsIgnoreCase:(Ljava/lang/String;)Z
+  #128 = Utf8               java/net/InetAddress
+  #129 = Class              #128          // java/net/InetAddress
+  #130 = Utf8               isLoopbackAddress
+  #131 = NameAndType        #130:#41      // isLoopbackAddress:()Z
+  #132 = Methodref          #129.#131     // java/net/InetAddress.isLoopbackAddress:()Z
+  #133 = Utf8               isAnyLocalAddress
+  #134 = NameAndType        #133:#41      // isAnyLocalAddress:()Z
+  #135 = Methodref          #129.#134     // java/net/InetAddress.isAnyLocalAddress:()Z
+  #136 = Utf8               isLinkLocalAddress
+  #137 = NameAndType        #136:#41      // isLinkLocalAddress:()Z
+  #138 = Methodref          #129.#137     // java/net/InetAddress.isLinkLocalAddress:()Z
+  #139 = Utf8               isSiteLocalAddress
+  #140 = NameAndType        #139:#41      // isSiteLocalAddress:()Z
+  #141 = Methodref          #129.#140     // java/net/InetAddress.isSiteLocalAddress:()Z
+  #142 = Utf8               ()[B
+  #143 = NameAndType        #115:#142     // getAddress:()[B
+  #144 = Methodref          #129.#143     // java/net/InetAddress.getAddress:()[B
+  #145 = Utf8               [B
+  #146 = Class              #145          // "[B"
+  #147 = Utf8               ip
+  #148 = Utf8               Ljava/net/InetAddress;
+  #149 = Utf8               raw
+  #150 = Utf8               Lnet/fabricmc/api/Environment;
+  #151 = Utf8               value
+  #152 = Utf8               Lnet/fabricmc/api/EnvType;
+  #153 = Utf8               CLIENT
+  #154 = Utf8               ConstantValue
+  #155 = Utf8               Code
+  #156 = Utf8               LineNumberTable
+  #157 = Utf8               LocalVariableTable
+  #158 = Utf8               StackMapTable
+  #159 = Utf8               MethodParameters
+  #160 = Utf8               InnerClasses
+  #161 = Utf8               SourceFile
+  #162 = Utf8               RuntimeVisibleAnnotations
+  #163 = Utf8               NestMembers
+{
+  private static final java.lang.String HANDLER_NAME;
+    descriptor: Ljava/lang/String;
+    flags: (0x001a) ACC_PRIVATE, ACC_STATIC, ACC_FINAL
+    ConstantValue: String anubis_proxy
+
+  private net.anubis.client.proxy.ProxyRouting();
+    descriptor: ()V
+    flags: (0x0002) ACC_PRIVATE
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: invokespecial #17                 // Method java/lang/Object."<init>":()V
+         4: return
+      LineNumberTable:
+        line 16: 0
+        line 17: 4
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       5     0  this   Lnet/anubis/client/proxy/ProxyRouting;
+
+  public static io.netty.channel.ChannelHandler route(java.net.InetSocketAddress, io.netty.channel.ChannelHandler);
+    descriptor: (Ljava/net/InetSocketAddress;Lio/netty/channel/ChannelHandler;)Lio/netty/channel/ChannelHandler;
+    flags: (0x0009) ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=4, locals=4, args_size=2
+         0: aload_0
+         1: ifnull        11
+         4: aload_0
+         5: invokestatic  #27                 // Method isLocal:(Ljava/net/InetSocketAddress;)Z
+         8: ifeq          13
+        11: aload_1
+        12: areturn
+        13: invokestatic  #33                 // Method net/anubis/client/proxy/Proxies.get:()Lnet/anubis/client/proxy/Proxies;
+        16: invokevirtual #37                 // Method net/anubis/client/proxy/Proxies.enabledCopy:()Lnet/anubis/client/proxy/Proxy;
+        19: astore_2
+        20: aload_2
+        21: ifnull        31
+        24: aload_2
+        25: invokevirtual #43                 // Method net/anubis/client/proxy/Proxy.isValid:()Z
+        28: ifne          33
+        31: aload_1
+        32: areturn
+        33: aload_2
+        34: invokestatic  #47                 // Method handler:(Lnet/anubis/client/proxy/Proxy;)Lio/netty/handler/proxy/ProxyHandler;
+        37: astore_3
+        38: new           #9                  // class net/anubis/client/proxy/ProxyRouting$1
+        41: dup
+        42: aload_3
+        43: aload_1
+        44: invokespecial #50                 // Method net/anubis/client/proxy/ProxyRouting$1."<init>":(Lio/netty/handler/proxy/ProxyHandler;Lio/netty/channel/ChannelHandler;)V
+        47: areturn
+      StackMapTable: number_of_entries = 4
+        frame_type = 11 /* same */
+        frame_type = 1 /* same */
+        frame_type = 252 /* append */
+          offset_delta = 17
+          locals = [ class net/anubis/client/proxy/Proxy ]
+        frame_type = 1 /* same */
+      LineNumberTable:
+        line 20: 0
+        line 21: 13
+        line 23: 20
+        line 24: 33
+        line 25: 38
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      48     0 target   Ljava/net/InetSocketAddress;
+            0      48     1 initializer   Lio/netty/channel/ChannelHandler;
+           20      28     2 proxy   Lnet/anubis/client/proxy/Proxy;
+           38      10     3 handler   Lio/netty/handler/proxy/ProxyHandler;
+    MethodParameters:
+      Name                           Flags
+      target
+      initializer
+
+  static io.netty.handler.proxy.ProxyHandler handler(net.anubis.client.proxy.Proxy);
+    descriptor: (Lnet/anubis/client/proxy/Proxy;)Lio/netty/handler/proxy/ProxyHandler;
+    flags: (0x0008) ACC_STATIC
+    Code:
+      stack=5, locals=4, args_size=1
+         0: new           #57                 // class java/net/InetSocketAddress
+         3: dup
+         4: aload_0
+         5: getfield      #60                 // Field net/anubis/client/proxy/Proxy.address:Ljava/lang/String;
+         8: invokevirtual #66                 // Method java/lang/String.trim:()Ljava/lang/String;
+        11: aload_0
+        12: getfield      #70                 // Field net/anubis/client/proxy/Proxy.port:I
+        15: invokespecial #73                 // Method java/net/InetSocketAddress."<init>":(Ljava/lang/String;I)V
+        18: astore_1
+        19: aload_0
+        20: getfield      #76                 // Field net/anubis/client/proxy/Proxy.username:Ljava/lang/String;
+        23: ifnull        36
+        26: aload_0
+        27: getfield      #76                 // Field net/anubis/client/proxy/Proxy.username:Ljava/lang/String;
+        30: invokevirtual #79                 // Method java/lang/String.isEmpty:()Z
+        33: ifeq          40
+        36: aconst_null
+        37: goto          44
+        40: aload_0
+        41: getfield      #76                 // Field net/anubis/client/proxy/Proxy.username:Ljava/lang/String;
+        44: astore_2
+        45: aload_0
+        46: getfield      #82                 // Field net/anubis/client/proxy/Proxy.password:Ljava/lang/String;
+        49: ifnull        62
+        52: aload_0
+        53: getfield      #82                 // Field net/anubis/client/proxy/Proxy.password:Ljava/lang/String;
+        56: invokevirtual #79                 // Method java/lang/String.isEmpty:()Z
+        59: ifeq          66
+        62: aconst_null
+        63: goto          70
+        66: aload_0
+        67: getfield      #82                 // Field net/anubis/client/proxy/Proxy.password:Ljava/lang/String;
+        70: astore_3
+        71: getstatic     #86                 // Field net/anubis/client/proxy/ProxyRouting$2.$SwitchMap$net$anubis$client$proxy$ProxyType:[I
+        74: aload_0
+        75: getfield      #90                 // Field net/anubis/client/proxy/Proxy.type:Lnet/anubis/client/proxy/ProxyType;
+        78: invokevirtual #96                 // Method net/anubis/client/proxy/ProxyType.ordinal:()I
+        81: iaload
+        82: lookupswitch  { // 2
+                       1: 118
+                       2: 130
+                 default: 108
+            }
+       108: new           #98                 // class java/lang/MatchException
+       111: dup
+       112: aconst_null
+       113: aconst_null
+       114: invokespecial #101                // Method java/lang/MatchException."<init>":(Ljava/lang/String;Ljava/lang/Throwable;)V
+       117: athrow
+       118: new           #103                // class io/netty/handler/proxy/Socks4ProxyHandler
+       121: dup
+       122: aload_1
+       123: aload_2
+       124: invokespecial #106                // Method io/netty/handler/proxy/Socks4ProxyHandler."<init>":(Ljava/net/SocketAddress;Ljava/lang/String;)V
+       127: goto          140
+       130: new           #108                // class io/netty/handler/proxy/Socks5ProxyHandler
+       133: dup
+       134: aload_1
+       135: aload_2
+       136: aload_3
+       137: invokespecial #111                // Method io/netty/handler/proxy/Socks5ProxyHandler."<init>":(Ljava/net/SocketAddress;Ljava/lang/String;Ljava/lang/String;)V
+       140: areturn
+      StackMapTable: number_of_entries = 10
+        frame_type = 252 /* append */
+          offset_delta = 36
+          locals = [ class java/net/InetSocketAddress ]
+        frame_type = 3 /* same */
+        frame_type = 67 /* same_locals_1_stack_item */
+          stack = [ class java/lang/String ]
+        frame_type = 252 /* append */
+          offset_delta = 17
+          locals = [ class java/lang/String ]
+        frame_type = 3 /* same */
+        frame_type = 67 /* same_locals_1_stack_item */
+          stack = [ class java/lang/String ]
+        frame_type = 252 /* append */
+          offset_delta = 37
+          locals = [ class java/lang/String ]
+        frame_type = 9 /* same */
+        frame_type = 11 /* same */
+        frame_type = 73 /* same_locals_1_stack_item */
+          stack = [ class io/netty/handler/proxy/ProxyHandler ]
+      LineNumberTable:
+        line 35: 0
+        line 37: 19
+        line 38: 45
+        line 39: 71
+        line 40: 118
+        line 41: 130
+        line 39: 140
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0     141     0 proxy   Lnet/anubis/client/proxy/Proxy;
+           19     122     1 server   Ljava/net/InetSocketAddress;
+           45      96     2 username   Ljava/lang/String;
+           71      70     3 password   Ljava/lang/String;
+    MethodParameters:
+      Name                           Flags
+      proxy
+
+  private static boolean isLocal(java.net.InetSocketAddress);
+    descriptor: (Ljava/net/InetSocketAddress;)Z
+    flags: (0x000a) ACC_PRIVATE, ACC_STATIC
+    Code:
+      stack=2, locals=3, args_size=1
+         0: aload_0
+         1: invokevirtual #118                // Method java/net/InetSocketAddress.getAddress:()Ljava/net/InetAddress;
+         4: astore_1
+         5: aload_1
+         6: ifnonnull     19
+         9: ldc           #120                // String localhost
+        11: aload_0
+        12: invokevirtual #123                // Method java/net/InetSocketAddress.getHostString:()Ljava/lang/String;
+        15: invokevirtual #127                // Method java/lang/String.equalsIgnoreCase:(Ljava/lang/String;)Z
+        18: ireturn
+        19: aload_1
+        20: invokevirtual #132                // Method java/net/InetAddress.isLoopbackAddress:()Z
+        23: ifne          47
+        26: aload_1
+        27: invokevirtual #135                // Method java/net/InetAddress.isAnyLocalAddress:()Z
+        30: ifne          47
+        33: aload_1
+        34: invokevirtual #138                // Method java/net/InetAddress.isLinkLocalAddress:()Z
+        37: ifne          47
+        40: aload_1
+        41: invokevirtual #141                // Method java/net/InetAddress.isSiteLocalAddress:()Z
+        44: ifeq          49
+        47: iconst_1
+        48: ireturn
+        49: aload_1
+        50: invokevirtual #144                // Method java/net/InetAddress.getAddress:()[B
+        53: astore_2
+        54: aload_2
+        55: arraylength
+        56: bipush        16
+        58: if_icmpne     78
+        61: aload_2
+        62: iconst_0
+        63: baload
+        64: sipush        254
+        67: iand
+        68: sipush        252
+        71: if_icmpne     78
+        74: iconst_1
+        75: goto          79
+        78: iconst_0
+        79: ireturn
+      StackMapTable: number_of_entries = 5
+        frame_type = 252 /* append */
+          offset_delta = 19
+          locals = [ class java/net/InetAddress ]
+        frame_type = 27 /* same */
+        frame_type = 1 /* same */
+        frame_type = 252 /* append */
+          offset_delta = 28
+          locals = [ class "[B" ]
+        frame_type = 64 /* same_locals_1_stack_item */
+          stack = [ int ]
+      LineNumberTable:
+        line 46: 0
+        line 47: 5
+        line 48: 19
+        line 49: 47
+        line 51: 49
+        line 52: 54
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      80     0 target   Ljava/net/InetSocketAddress;
+            5      75     1    ip   Ljava/net/InetAddress;
+           54      26     2   raw   [B
+    MethodParameters:
+      Name                           Flags
+      target
+}
+InnerClasses:
+  #9;                                     // class net/anubis/client/proxy/ProxyRouting$1
+  static #7;                              // class net/anubis/client/proxy/ProxyRouting$2
+SourceFile: "ProxyRouting.java"
+RuntimeVisibleAnnotations:
+  0: #150(#151=e#152.#153)
+    net.fabricmc.api.Environment(
+      value=Lnet/fabricmc/api/EnvType;.CLIENT
+    )
+NestMembers:
+  net/anubis/client/proxy/ProxyRouting$2
+  net/anubis/client/proxy/ProxyRouting$1

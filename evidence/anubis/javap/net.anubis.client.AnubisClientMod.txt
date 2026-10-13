@@ -1,0 +1,1218 @@
+Classfile analysis-workspace/extracted/run.oEA4CbVx/net/anubis/client/AnubisClientMod.class
+  Last modified Oct 13, 2026; size 10544 bytes
+  SHA-256 checksum 6f6e4d0badd3b63f30732451652e3c4dcd8f6fd5fa1c9b65c2f165299c50d237
+  Compiled from "AnubisClientMod.java"
+public final class net.anubis.client.AnubisClientMod implements net.fabricmc.api.ClientModInitializer
+  minor version: 0
+  major version: 65
+  flags: (0x0031) ACC_PUBLIC, ACC_FINAL, ACC_SUPER
+  this_class: #2                          // net/anubis/client/AnubisClientMod
+  super_class: #4                         // java/lang/Object
+  interfaces: 1, fields: 9, methods: 14, attributes: 4
+Constant pool:
+    #1 = Utf8               net/anubis/client/AnubisClientMod
+    #2 = Class              #1            // net/anubis/client/AnubisClientMod
+    #3 = Utf8               java/lang/Object
+    #4 = Class              #3            // java/lang/Object
+    #5 = Utf8               net/fabricmc/api/ClientModInitializer
+    #6 = Class              #5            // net/fabricmc/api/ClientModInitializer
+    #7 = Utf8               AnubisClientMod.java
+    #8 = Utf8               net/fabricmc/fabric/api/client/event/lifecycle/v1/ClientLifecycleEvents$ClientStopping
+    #9 = Class              #8            // net/fabricmc/fabric/api/client/event/lifecycle/v1/ClientLifecycleEvents$ClientStopping
+   #10 = Utf8               net/fabricmc/fabric/api/client/event/lifecycle/v1/ClientLifecycleEvents
+   #11 = Class              #10           // net/fabricmc/fabric/api/client/event/lifecycle/v1/ClientLifecycleEvents
+   #12 = Utf8               ClientStopping
+   #13 = Utf8               net/minecraft/class_3675$class_307
+   #14 = Class              #13           // net/minecraft/class_3675$class_307
+   #15 = Utf8               net/minecraft/class_3675
+   #16 = Class              #15           // net/minecraft/class_3675
+   #17 = Utf8               class_307
+   #18 = Utf8               net/minecraft/class_304$class_11900
+   #19 = Class              #18           // net/minecraft/class_304$class_11900
+   #20 = Utf8               net/minecraft/class_304
+   #21 = Class              #20           // net/minecraft/class_304
+   #22 = Utf8               class_11900
+   #23 = Utf8               net/fabricmc/fabric/api/client/event/lifecycle/v1/ClientTickEvents$EndTick
+   #24 = Class              #23           // net/fabricmc/fabric/api/client/event/lifecycle/v1/ClientTickEvents$EndTick
+   #25 = Utf8               net/fabricmc/fabric/api/client/event/lifecycle/v1/ClientTickEvents
+   #26 = Class              #25           // net/fabricmc/fabric/api/client/event/lifecycle/v1/ClientTickEvents
+   #27 = Utf8               EndTick
+   #28 = Utf8               java/lang/invoke/MethodHandles$Lookup
+   #29 = Class              #28           // java/lang/invoke/MethodHandles$Lookup
+   #30 = Utf8               java/lang/invoke/MethodHandles
+   #31 = Class              #30           // java/lang/invoke/MethodHandles
+   #32 = Utf8               Lookup
+   #33 = Utf8               LOGGER
+   #34 = Utf8               Lorg/slf4j/Logger;
+   #35 = Utf8               SPAWNER_NOTIFY_SOUND_ID
+   #36 = Utf8               Lnet/minecraft/class_2960;
+   #37 = Utf8               SPAWNER_NOTIFY_SOUND
+   #38 = Utf8               Lnet/minecraft/class_3414;
+   #39 = Utf8               KEY_CATEGORY
+   #40 = Utf8               Lnet/minecraft/class_304$class_11900;
+   #41 = Utf8               openGuiKey
+   #42 = Utf8               Lnet/minecraft/class_304;
+   #43 = Utf8               keybinds
+   #44 = Utf8               Lnet/anubis/client/input/ModuleKeybinds;
+   #45 = Utf8               LEAK_TRACKER_OWNER
+   #46 = Utf8               Ljava/lang/Object;
+   #47 = Utf8               PLAYER_BYPASS_TRACKER_OWNER
+   #48 = Utf8               NETHERITE_TRACKER_OWNER
+   #49 = Utf8               <init>
+   #50 = Utf8               ()V
+   #51 = NameAndType        #49:#50       // "<init>":()V
+   #52 = Methodref          #4.#51        // java/lang/Object."<init>":()V
+   #53 = Utf8               net/anubis/client/input/ModuleKeybinds
+   #54 = Class              #53           // net/anubis/client/input/ModuleKeybinds
+   #55 = Methodref          #54.#51       // net/anubis/client/input/ModuleKeybinds."<init>":()V
+   #56 = NameAndType        #43:#44       // keybinds:Lnet/anubis/client/input/ModuleKeybinds;
+   #57 = Fieldref           #2.#56        // net/anubis/client/AnubisClientMod.keybinds:Lnet/anubis/client/input/ModuleKeybinds;
+   #58 = Utf8               this
+   #59 = Utf8               Lnet/anubis/client/AnubisClientMod;
+   #60 = Utf8               onInitializeClient
+   #61 = NameAndType        #33:#34       // LOGGER:Lorg/slf4j/Logger;
+   #62 = Fieldref           #2.#61        // net/anubis/client/AnubisClientMod.LOGGER:Lorg/slf4j/Logger;
+   #63 = Utf8               [Anubis] Initialising
+   #64 = String             #63           // [Anubis] Initialising
+   #65 = Utf8               org/slf4j/Logger
+   #66 = Class              #65           // org/slf4j/Logger
+   #67 = Utf8               info
+   #68 = Utf8               (Ljava/lang/String;)V
+   #69 = NameAndType        #67:#68       // info:(Ljava/lang/String;)V
+   #70 = InterfaceMethodref #66.#69       // org/slf4j/Logger.info:(Ljava/lang/String;)V
+   #71 = Utf8               net/anubis/client/addon/AddonManager
+   #72 = Class              #71           // net/anubis/client/addon/AddonManager
+   #73 = Utf8               init
+   #74 = NameAndType        #73:#50       // init:()V
+   #75 = Methodref          #72.#74       // net/anubis/client/addon/AddonManager.init:()V
+   #76 = Utf8               net/anubis/client/imgui/ImGuiManager
+   #77 = Class              #76           // net/anubis/client/imgui/ImGuiManager
+   #78 = Utf8               getInstance
+   #79 = Utf8               ()Lnet/anubis/client/imgui/ImGuiManager;
+   #80 = NameAndType        #78:#79       // getInstance:()Lnet/anubis/client/imgui/ImGuiManager;
+   #81 = Methodref          #77.#80       // net/anubis/client/imgui/ImGuiManager.getInstance:()Lnet/anubis/client/imgui/ImGuiManager;
+   #82 = Utf8               net/anubis/client/gui/HudRenderer
+   #83 = Class              #82           // net/anubis/client/gui/HudRenderer
+   #84 = Utf8               ()Lnet/anubis/client/gui/HudRenderer;
+   #85 = NameAndType        #78:#84       // getInstance:()Lnet/anubis/client/gui/HudRenderer;
+   #86 = Methodref          #83.#85       // net/anubis/client/gui/HudRenderer.getInstance:()Lnet/anubis/client/gui/HudRenderer;
+   #87 = Utf8               java/util/Objects
+   #88 = Class              #87           // java/util/Objects
+   #89 = Utf8               requireNonNull
+   #90 = Utf8               (Ljava/lang/Object;)Ljava/lang/Object;
+   #91 = NameAndType        #89:#90       // requireNonNull:(Ljava/lang/Object;)Ljava/lang/Object;
+   #92 = Methodref          #88.#91       // java/util/Objects.requireNonNull:(Ljava/lang/Object;)Ljava/lang/Object;
+   #93 = MethodType         #50           //  ()V
+   #94 = Utf8               render
+   #95 = NameAndType        #94:#50       // render:()V
+   #96 = Methodref          #83.#95       // net/anubis/client/gui/HudRenderer.render:()V
+   #97 = MethodHandle       5:#96         // REF_invokeVirtual net/anubis/client/gui/HudRenderer.render:()V
+   #98 = Utf8               java/lang/invoke/LambdaMetafactory
+   #99 = Class              #98           // java/lang/invoke/LambdaMetafactory
+  #100 = Utf8               metafactory
+  #101 = Utf8               (Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+  #102 = NameAndType        #100:#101     // metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+  #103 = Methodref          #99.#102      // java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+  #104 = MethodHandle       6:#103        // REF_invokeStatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+  #105 = Utf8               run
+  #106 = Utf8               (Lnet/anubis/client/gui/HudRenderer;)Ljava/lang/Runnable;
+  #107 = NameAndType        #105:#106     // run:(Lnet/anubis/client/gui/HudRenderer;)Ljava/lang/Runnable;
+  #108 = InvokeDynamic      #0:#107       // #0:run:(Lnet/anubis/client/gui/HudRenderer;)Ljava/lang/Runnable;
+  #109 = Utf8               ()Z
+  #110 = MethodType         #109          //  ()Z
+  #111 = Utf8               hasWork
+  #112 = NameAndType        #111:#109     // hasWork:()Z
+  #113 = Methodref          #83.#112      // net/anubis/client/gui/HudRenderer.hasWork:()Z
+  #114 = MethodHandle       5:#113        // REF_invokeVirtual net/anubis/client/gui/HudRenderer.hasWork:()Z
+  #115 = Utf8               getAsBoolean
+  #116 = Utf8               (Lnet/anubis/client/gui/HudRenderer;)Ljava/util/function/BooleanSupplier;
+  #117 = NameAndType        #115:#116     // getAsBoolean:(Lnet/anubis/client/gui/HudRenderer;)Ljava/util/function/BooleanSupplier;
+  #118 = InvokeDynamic      #1:#117       // #1:getAsBoolean:(Lnet/anubis/client/gui/HudRenderer;)Ljava/util/function/BooleanSupplier;
+  #119 = Utf8               setHudRenderer
+  #120 = Utf8               (Ljava/lang/Runnable;Ljava/util/function/BooleanSupplier;)V
+  #121 = NameAndType        #119:#120     // setHudRenderer:(Ljava/lang/Runnable;Ljava/util/function/BooleanSupplier;)V
+  #122 = Methodref          #77.#121      // net/anubis/client/imgui/ImGuiManager.setHudRenderer:(Ljava/lang/Runnable;Ljava/util/function/BooleanSupplier;)V
+  #123 = Utf8               net/anubis/client/module/impl/misc/noinvleak/StreamOverlay
+  #124 = Class              #123          // net/anubis/client/module/impl/misc/noinvleak/StreamOverlay
+  #125 = Utf8               drawFakes
+  #126 = NameAndType        #125:#50      // drawFakes:()V
+  #127 = Methodref          #124.#126     // net/anubis/client/module/impl/misc/noinvleak/StreamOverlay.drawFakes:()V
+  #128 = MethodHandle       6:#127        // REF_invokeStatic net/anubis/client/module/impl/misc/noinvleak/StreamOverlay.drawFakes:()V
+  #129 = Utf8               ()Ljava/lang/Runnable;
+  #130 = NameAndType        #105:#129     // run:()Ljava/lang/Runnable;
+  #131 = InvokeDynamic      #2:#130       // #2:run:()Ljava/lang/Runnable;
+  #132 = Utf8               hasFakes
+  #133 = NameAndType        #132:#109     // hasFakes:()Z
+  #134 = Methodref          #124.#133     // net/anubis/client/module/impl/misc/noinvleak/StreamOverlay.hasFakes:()Z
+  #135 = MethodHandle       6:#134        // REF_invokeStatic net/anubis/client/module/impl/misc/noinvleak/StreamOverlay.hasFakes:()Z
+  #136 = Utf8               ()Ljava/util/function/BooleanSupplier;
+  #137 = NameAndType        #115:#136     // getAsBoolean:()Ljava/util/function/BooleanSupplier;
+  #138 = InvokeDynamic      #3:#137       // #3:getAsBoolean:()Ljava/util/function/BooleanSupplier;
+  #139 = Utf8               setStreamRenderer
+  #140 = NameAndType        #139:#120     // setStreamRenderer:(Ljava/lang/Runnable;Ljava/util/function/BooleanSupplier;)V
+  #141 = Methodref          #77.#140      // net/anubis/client/imgui/ImGuiManager.setStreamRenderer:(Ljava/lang/Runnable;Ljava/util/function/BooleanSupplier;)V
+  #142 = Utf8               net/anubis/client/gui/ToggleToasts
+  #143 = Class              #142          // net/anubis/client/gui/ToggleToasts
+  #144 = Methodref          #143.#95      // net/anubis/client/gui/ToggleToasts.render:()V
+  #145 = MethodHandle       6:#144        // REF_invokeStatic net/anubis/client/gui/ToggleToasts.render:()V
+  #146 = InvokeDynamic      #4:#130       // #4:run:()Ljava/lang/Runnable;
+  #147 = Methodref          #143.#112     // net/anubis/client/gui/ToggleToasts.hasWork:()Z
+  #148 = MethodHandle       6:#147        // REF_invokeStatic net/anubis/client/gui/ToggleToasts.hasWork:()Z
+  #149 = InvokeDynamic      #5:#137       // #5:getAsBoolean:()Ljava/util/function/BooleanSupplier;
+  #150 = Utf8               setToastRenderer
+  #151 = NameAndType        #150:#120     // setToastRenderer:(Ljava/lang/Runnable;Ljava/util/function/BooleanSupplier;)V
+  #152 = Methodref          #77.#151      // net/anubis/client/imgui/ImGuiManager.setToastRenderer:(Ljava/lang/Runnable;Ljava/util/function/BooleanSupplier;)V
+  #153 = Utf8               net/anubis/client/gui/LoadingScreens
+  #154 = Class              #153          // net/anubis/client/gui/LoadingScreens
+  #155 = Methodref          #154.#95      // net/anubis/client/gui/LoadingScreens.render:()V
+  #156 = MethodHandle       6:#155        // REF_invokeStatic net/anubis/client/gui/LoadingScreens.render:()V
+  #157 = InvokeDynamic      #6:#130       // #6:run:()Ljava/lang/Runnable;
+  #158 = Methodref          #154.#112     // net/anubis/client/gui/LoadingScreens.hasWork:()Z
+  #159 = MethodHandle       6:#158        // REF_invokeStatic net/anubis/client/gui/LoadingScreens.hasWork:()Z
+  #160 = InvokeDynamic      #7:#137       // #7:getAsBoolean:()Ljava/util/function/BooleanSupplier;
+  #161 = Utf8               setOverlayRenderer
+  #162 = NameAndType        #161:#120     // setOverlayRenderer:(Ljava/lang/Runnable;Ljava/util/function/BooleanSupplier;)V
+  #163 = Methodref          #77.#162      // net/anubis/client/imgui/ImGuiManager.setOverlayRenderer:(Ljava/lang/Runnable;Ljava/util/function/BooleanSupplier;)V
+  #164 = Utf8               net/anubis/client/gui/StaffGhost
+  #165 = Class              #164          // net/anubis/client/gui/StaffGhost
+  #166 = Methodref          #165.#95      // net/anubis/client/gui/StaffGhost.render:()V
+  #167 = MethodHandle       6:#166        // REF_invokeStatic net/anubis/client/gui/StaffGhost.render:()V
+  #168 = InvokeDynamic      #8:#130       // #8:run:()Ljava/lang/Runnable;
+  #169 = Methodref          #165.#112     // net/anubis/client/gui/StaffGhost.hasWork:()Z
+  #170 = MethodHandle       6:#169        // REF_invokeStatic net/anubis/client/gui/StaffGhost.hasWork:()Z
+  #171 = InvokeDynamic      #9:#137       // #9:getAsBoolean:()Ljava/util/function/BooleanSupplier;
+  #172 = Utf8               setAlertRenderer
+  #173 = NameAndType        #172:#120     // setAlertRenderer:(Ljava/lang/Runnable;Ljava/util/function/BooleanSupplier;)V
+  #174 = Methodref          #77.#173      // net/anubis/client/imgui/ImGuiManager.setAlertRenderer:(Ljava/lang/Runnable;Ljava/util/function/BooleanSupplier;)V
+  #175 = Utf8               net/anubis/client/event/impl/Render2DEvent
+  #176 = Class              #175          // net/anubis/client/event/impl/Render2DEvent
+  #177 = Utf8               TYPE
+  #178 = Utf8               Lnet/anubis/client/event/EventType;
+  #179 = NameAndType        #177:#178     // TYPE:Lnet/anubis/client/event/EventType;
+  #180 = Fieldref           #176.#179     // net/anubis/client/event/impl/Render2DEvent.TYPE:Lnet/anubis/client/event/EventType;
+  #181 = Utf8               (Ljava/lang/Object;)V
+  #182 = MethodType         #181          //  (Ljava/lang/Object;)V
+  #183 = Utf8               renderNote
+  #184 = Utf8               (Lnet/anubis/client/event/impl/Render2DEvent;)V
+  #185 = NameAndType        #183:#184     // renderNote:(Lnet/anubis/client/event/impl/Render2DEvent;)V
+  #186 = Methodref          #165.#185     // net/anubis/client/gui/StaffGhost.renderNote:(Lnet/anubis/client/event/impl/Render2DEvent;)V
+  #187 = MethodHandle       6:#186        // REF_invokeStatic net/anubis/client/gui/StaffGhost.renderNote:(Lnet/anubis/client/event/impl/Render2DEvent;)V
+  #188 = MethodType         #184          //  (Lnet/anubis/client/event/impl/Render2DEvent;)V
+  #189 = Utf8               accept
+  #190 = Utf8               ()Ljava/util/function/Consumer;
+  #191 = NameAndType        #189:#190     // accept:()Ljava/util/function/Consumer;
+  #192 = InvokeDynamic      #10:#191      // #10:accept:()Ljava/util/function/Consumer;
+  #193 = Utf8               net/anubis/client/event/EventType
+  #194 = Class              #193          // net/anubis/client/event/EventType
+  #195 = Utf8               listen
+  #196 = Utf8               (Ljava/lang/Object;Ljava/util/function/Consumer;)Lnet/anubis/client/event/ListenerHandle;
+  #197 = NameAndType        #195:#196     // listen:(Ljava/lang/Object;Ljava/util/function/Consumer;)Lnet/anubis/client/event/ListenerHandle;
+  #198 = Methodref          #194.#197     // net/anubis/client/event/EventType.listen:(Ljava/lang/Object;Ljava/util/function/Consumer;)Lnet/anubis/client/event/ListenerHandle;
+  #199 = Utf8               net/anubis/client/esp/ChunkScanner
+  #200 = Class              #199          // net/anubis/client/esp/ChunkScanner
+  #201 = Methodref          #200.#74      // net/anubis/client/esp/ChunkScanner.init:()V
+  #202 = Utf8               net/anubis/client/event/impl/PacketReceiveNettyEvent
+  #203 = Class              #202          // net/anubis/client/event/impl/PacketReceiveNettyEvent
+  #204 = Utf8               Lnet/anubis/client/event/PooledCancellableEventType;
+  #205 = NameAndType        #177:#204     // TYPE:Lnet/anubis/client/event/PooledCancellableEventType;
+  #206 = Fieldref           #203.#205     // net/anubis/client/event/impl/PacketReceiveNettyEvent.TYPE:Lnet/anubis/client/event/PooledCancellableEventType;
+  #207 = NameAndType        #45:#46       // LEAK_TRACKER_OWNER:Ljava/lang/Object;
+  #208 = Fieldref           #2.#207       // net/anubis/client/AnubisClientMod.LEAK_TRACKER_OWNER:Ljava/lang/Object;
+  #209 = Utf8               lambda$onInitializeClient$0
+  #210 = Utf8               (Lnet/anubis/client/event/impl/PacketReceiveNettyEvent;)V
+  #211 = NameAndType        #209:#210     // lambda$onInitializeClient$0:(Lnet/anubis/client/event/impl/PacketReceiveNettyEvent;)V
+  #212 = Methodref          #2.#211       // net/anubis/client/AnubisClientMod.lambda$onInitializeClient$0:(Lnet/anubis/client/event/impl/PacketReceiveNettyEvent;)V
+  #213 = MethodHandle       6:#212        // REF_invokeStatic net/anubis/client/AnubisClientMod.lambda$onInitializeClient$0:(Lnet/anubis/client/event/impl/PacketReceiveNettyEvent;)V
+  #214 = MethodType         #210          //  (Lnet/anubis/client/event/impl/PacketReceiveNettyEvent;)V
+  #215 = InvokeDynamic      #11:#191      // #11:accept:()Ljava/util/function/Consumer;
+  #216 = Utf8               net/anubis/client/event/PooledCancellableEventType
+  #217 = Class              #216          // net/anubis/client/event/PooledCancellableEventType
+  #218 = Methodref          #217.#197     // net/anubis/client/event/PooledCancellableEventType.listen:(Ljava/lang/Object;Ljava/util/function/Consumer;)Lnet/anubis/client/event/ListenerHandle;
+  #219 = Utf8               net/anubis/client/event/impl/PacketAppliedEvent
+  #220 = Class              #219          // net/anubis/client/event/impl/PacketAppliedEvent
+  #221 = Fieldref           #220.#179     // net/anubis/client/event/impl/PacketAppliedEvent.TYPE:Lnet/anubis/client/event/EventType;
+  #222 = NameAndType        #47:#46       // PLAYER_BYPASS_TRACKER_OWNER:Ljava/lang/Object;
+  #223 = Fieldref           #2.#222       // net/anubis/client/AnubisClientMod.PLAYER_BYPASS_TRACKER_OWNER:Ljava/lang/Object;
+  #224 = Utf8               lambda$onInitializeClient$1
+  #225 = Utf8               (Lnet/anubis/client/event/impl/PacketAppliedEvent;)V
+  #226 = NameAndType        #224:#225     // lambda$onInitializeClient$1:(Lnet/anubis/client/event/impl/PacketAppliedEvent;)V
+  #227 = Methodref          #2.#226       // net/anubis/client/AnubisClientMod.lambda$onInitializeClient$1:(Lnet/anubis/client/event/impl/PacketAppliedEvent;)V
+  #228 = MethodHandle       6:#227        // REF_invokeStatic net/anubis/client/AnubisClientMod.lambda$onInitializeClient$1:(Lnet/anubis/client/event/impl/PacketAppliedEvent;)V
+  #229 = MethodType         #225          //  (Lnet/anubis/client/event/impl/PacketAppliedEvent;)V
+  #230 = InvokeDynamic      #12:#191      // #12:accept:()Ljava/util/function/Consumer;
+  #231 = Utf8               net/anubis/client/event/impl/TickEvent
+  #232 = Class              #231          // net/anubis/client/event/impl/TickEvent
+  #233 = Fieldref           #232.#179     // net/anubis/client/event/impl/TickEvent.TYPE:Lnet/anubis/client/event/EventType;
+  #234 = Utf8               lambda$onInitializeClient$2
+  #235 = Utf8               (Lnet/anubis/client/event/impl/TickEvent;)V
+  #236 = NameAndType        #234:#235     // lambda$onInitializeClient$2:(Lnet/anubis/client/event/impl/TickEvent;)V
+  #237 = Methodref          #2.#236       // net/anubis/client/AnubisClientMod.lambda$onInitializeClient$2:(Lnet/anubis/client/event/impl/TickEvent;)V
+  #238 = MethodHandle       6:#237        // REF_invokeStatic net/anubis/client/AnubisClientMod.lambda$onInitializeClient$2:(Lnet/anubis/client/event/impl/TickEvent;)V
+  #239 = MethodType         #235          //  (Lnet/anubis/client/event/impl/TickEvent;)V
+  #240 = InvokeDynamic      #13:#191      // #13:accept:()Ljava/util/function/Consumer;
+  #241 = Utf8               net/anubis/client/gui/BorderlessFullscreen
+  #242 = Class              #241          // net/anubis/client/gui/BorderlessFullscreen
+  #243 = Utf8               lambda$onInitializeClient$3
+  #244 = NameAndType        #243:#235     // lambda$onInitializeClient$3:(Lnet/anubis/client/event/impl/TickEvent;)V
+  #245 = Methodref          #2.#244       // net/anubis/client/AnubisClientMod.lambda$onInitializeClient$3:(Lnet/anubis/client/event/impl/TickEvent;)V
+  #246 = MethodHandle       6:#245        // REF_invokeStatic net/anubis/client/AnubisClientMod.lambda$onInitializeClient$3:(Lnet/anubis/client/event/impl/TickEvent;)V
+  #247 = InvokeDynamic      #14:#191      // #14:accept:()Ljava/util/function/Consumer;
+  #248 = Utf8               net/anubis/client/util/combat/CombatTarget
+  #249 = Class              #248          // net/anubis/client/util/combat/CombatTarget
+  #250 = Utf8               install
+  #251 = NameAndType        #250:#50      // install:()V
+  #252 = Methodref          #249.#251     // net/anubis/client/util/combat/CombatTarget.install:()V
+  #253 = NameAndType        #48:#46       // NETHERITE_TRACKER_OWNER:Ljava/lang/Object;
+  #254 = Fieldref           #2.#253       // net/anubis/client/AnubisClientMod.NETHERITE_TRACKER_OWNER:Ljava/lang/Object;
+  #255 = Utf8               lambda$onInitializeClient$4
+  #256 = NameAndType        #255:#225     // lambda$onInitializeClient$4:(Lnet/anubis/client/event/impl/PacketAppliedEvent;)V
+  #257 = Methodref          #2.#256       // net/anubis/client/AnubisClientMod.lambda$onInitializeClient$4:(Lnet/anubis/client/event/impl/PacketAppliedEvent;)V
+  #258 = MethodHandle       6:#257        // REF_invokeStatic net/anubis/client/AnubisClientMod.lambda$onInitializeClient$4:(Lnet/anubis/client/event/impl/PacketAppliedEvent;)V
+  #259 = InvokeDynamic      #15:#191      // #15:accept:()Ljava/util/function/Consumer;
+  #260 = Methodref          #143.#251     // net/anubis/client/gui/ToggleToasts.install:()V
+  #261 = Utf8               net/anubis/client/config/ProfileAutoLoad
+  #262 = Class              #261          // net/anubis/client/config/ProfileAutoLoad
+  #263 = Methodref          #262.#251     // net/anubis/client/config/ProfileAutoLoad.install:()V
+  #264 = Utf8               CLIENT_STOPPING
+  #265 = Utf8               Lnet/fabricmc/fabric/api/event/Event;
+  #266 = NameAndType        #264:#265     // CLIENT_STOPPING:Lnet/fabricmc/fabric/api/event/Event;
+  #267 = Fieldref           #11.#266      // net/fabricmc/fabric/api/client/event/lifecycle/v1/ClientLifecycleEvents.CLIENT_STOPPING:Lnet/fabricmc/fabric/api/event/Event;
+  #268 = Utf8               (Lnet/minecraft/class_310;)V
+  #269 = MethodType         #268          //  (Lnet/minecraft/class_310;)V
+  #270 = Utf8               lambda$onInitializeClient$5
+  #271 = NameAndType        #270:#268     // lambda$onInitializeClient$5:(Lnet/minecraft/class_310;)V
+  #272 = Methodref          #2.#271       // net/anubis/client/AnubisClientMod.lambda$onInitializeClient$5:(Lnet/minecraft/class_310;)V
+  #273 = MethodHandle       6:#272        // REF_invokeStatic net/anubis/client/AnubisClientMod.lambda$onInitializeClient$5:(Lnet/minecraft/class_310;)V
+  #274 = Utf8               onClientStopping
+  #275 = Utf8               ()Lnet/fabricmc/fabric/api/client/event/lifecycle/v1/ClientLifecycleEvents$ClientStopping;
+  #276 = NameAndType        #274:#275     // onClientStopping:()Lnet/fabricmc/fabric/api/client/event/lifecycle/v1/ClientLifecycleEvents$ClientStopping;
+  #277 = InvokeDynamic      #16:#276      // #16:onClientStopping:()Lnet/fabricmc/fabric/api/client/event/lifecycle/v1/ClientLifecycleEvents$ClientStopping;
+  #278 = Utf8               net/fabricmc/fabric/api/event/Event
+  #279 = Class              #278          // net/fabricmc/fabric/api/event/Event
+  #280 = Utf8               register
+  #281 = NameAndType        #280:#181     // register:(Ljava/lang/Object;)V
+  #282 = Methodref          #279.#281     // net/fabricmc/fabric/api/event/Event.register:(Ljava/lang/Object;)V
+  #283 = Utf8               key.anubis.open_gui
+  #284 = String             #283          // key.anubis.open_gui
+  #285 = Utf8               field_1668
+  #286 = Utf8               Lnet/minecraft/class_3675$class_307;
+  #287 = NameAndType        #285:#286     // field_1668:Lnet/minecraft/class_3675$class_307;
+  #288 = Fieldref           #14.#287      // net/minecraft/class_3675$class_307.field_1668:Lnet/minecraft/class_3675$class_307;
+  #289 = NameAndType        #39:#40       // KEY_CATEGORY:Lnet/minecraft/class_304$class_11900;
+  #290 = Fieldref           #2.#289       // net/anubis/client/AnubisClientMod.KEY_CATEGORY:Lnet/minecraft/class_304$class_11900;
+  #291 = Utf8               (Ljava/lang/String;Lnet/minecraft/class_3675$class_307;ILnet/minecraft/class_304$class_11900;)V
+  #292 = NameAndType        #49:#291      // "<init>":(Ljava/lang/String;Lnet/minecraft/class_3675$class_307;ILnet/minecraft/class_304$class_11900;)V
+  #293 = Methodref          #21.#292      // net/minecraft/class_304."<init>":(Ljava/lang/String;Lnet/minecraft/class_3675$class_307;ILnet/minecraft/class_304$class_11900;)V
+  #294 = Utf8               net/fabricmc/fabric/api/client/keybinding/v1/KeyBindingHelper
+  #295 = Class              #294          // net/fabricmc/fabric/api/client/keybinding/v1/KeyBindingHelper
+  #296 = Utf8               registerKeyBinding
+  #297 = Utf8               (Lnet/minecraft/class_304;)Lnet/minecraft/class_304;
+  #298 = NameAndType        #296:#297     // registerKeyBinding:(Lnet/minecraft/class_304;)Lnet/minecraft/class_304;
+  #299 = Methodref          #295.#298     // net/fabricmc/fabric/api/client/keybinding/v1/KeyBindingHelper.registerKeyBinding:(Lnet/minecraft/class_304;)Lnet/minecraft/class_304;
+  #300 = NameAndType        #41:#42       // openGuiKey:Lnet/minecraft/class_304;
+  #301 = Fieldref           #2.#300       // net/anubis/client/AnubisClientMod.openGuiKey:Lnet/minecraft/class_304;
+  #302 = Utf8               net/anubis/client/config/ModuleConfigStore
+  #303 = Class              #302          // net/anubis/client/config/ModuleConfigStore
+  #304 = Utf8               ()Lnet/anubis/client/config/ModuleConfigStore;
+  #305 = NameAndType        #78:#304      // getInstance:()Lnet/anubis/client/config/ModuleConfigStore;
+  #306 = Methodref          #303.#305     // net/anubis/client/config/ModuleConfigStore.getInstance:()Lnet/anubis/client/config/ModuleConfigStore;
+  #307 = Utf8               load
+  #308 = NameAndType        #307:#50      // load:()V
+  #309 = Methodref          #303.#308     // net/anubis/client/config/ModuleConfigStore.load:()V
+  #310 = Utf8               configLoaded
+  #311 = NameAndType        #310:#50      // configLoaded:()V
+  #312 = Methodref          #72.#311      // net/anubis/client/addon/AddonManager.configLoaded:()V
+  #313 = Utf8               END_CLIENT_TICK
+  #314 = NameAndType        #313:#265     // END_CLIENT_TICK:Lnet/fabricmc/fabric/api/event/Event;
+  #315 = Fieldref           #26.#314      // net/fabricmc/fabric/api/client/event/lifecycle/v1/ClientTickEvents.END_CLIENT_TICK:Lnet/fabricmc/fabric/api/event/Event;
+  #316 = Utf8               lambda$onInitializeClient$6
+  #317 = NameAndType        #316:#268     // lambda$onInitializeClient$6:(Lnet/minecraft/class_310;)V
+  #318 = Methodref          #2.#317       // net/anubis/client/AnubisClientMod.lambda$onInitializeClient$6:(Lnet/minecraft/class_310;)V
+  #319 = MethodHandle       5:#318        // REF_invokeVirtual net/anubis/client/AnubisClientMod.lambda$onInitializeClient$6:(Lnet/minecraft/class_310;)V
+  #320 = Utf8               onEndTick
+  #321 = Utf8               (Lnet/anubis/client/AnubisClientMod;)Lnet/fabricmc/fabric/api/client/event/lifecycle/v1/ClientTickEvents$EndTick;
+  #322 = NameAndType        #320:#321     // onEndTick:(Lnet/anubis/client/AnubisClientMod;)Lnet/fabricmc/fabric/api/client/event/lifecycle/v1/ClientTickEvents$EndTick;
+  #323 = InvokeDynamic      #17:#322      // #17:onEndTick:(Lnet/anubis/client/AnubisClientMod;)Lnet/fabricmc/fabric/api/client/event/lifecycle/v1/ClientTickEvents$EndTick;
+  #324 = Utf8               isGuiKey
+  #325 = Utf8               (JLnet/minecraft/class_11908;)Z
+  #326 = Utf8               window
+  #327 = Utf8               event
+  #328 = Utf8               net/minecraft/class_310
+  #329 = Class              #328          // net/minecraft/class_310
+  #330 = Utf8               method_1551
+  #331 = Utf8               ()Lnet/minecraft/class_310;
+  #332 = NameAndType        #330:#331     // method_1551:()Lnet/minecraft/class_310;
+  #333 = Methodref          #329.#332     // net/minecraft/class_310.method_1551:()Lnet/minecraft/class_310;
+  #334 = Utf8               method_22683
+  #335 = Utf8               ()Lnet/minecraft/class_1041;
+  #336 = NameAndType        #334:#335     // method_22683:()Lnet/minecraft/class_1041;
+  #337 = Methodref          #329.#336     // net/minecraft/class_310.method_22683:()Lnet/minecraft/class_1041;
+  #338 = Utf8               net/minecraft/class_1041
+  #339 = Class              #338          // net/minecraft/class_1041
+  #340 = Utf8               method_4490
+  #341 = Utf8               ()J
+  #342 = NameAndType        #340:#341     // method_4490:()J
+  #343 = Methodref          #339.#342     // net/minecraft/class_1041.method_4490:()J
+  #344 = Utf8               method_1417
+  #345 = Utf8               (Lnet/minecraft/class_11908;)Z
+  #346 = NameAndType        #344:#345     // method_1417:(Lnet/minecraft/class_11908;)Z
+  #347 = Methodref          #21.#346      // net/minecraft/class_304.method_1417:(Lnet/minecraft/class_11908;)Z
+  #348 = Utf8               J
+  #349 = Utf8               Lnet/minecraft/class_11908;
+  #350 = Utf8               toggleGuiFromKey
+  #351 = Utf8               field_1755
+  #352 = Utf8               Lnet/minecraft/class_437;
+  #353 = NameAndType        #351:#352     // field_1755:Lnet/minecraft/class_437;
+  #354 = Fieldref           #329.#353     // net/minecraft/class_310.field_1755:Lnet/minecraft/class_437;
+  #355 = Utf8               net/anubis/client/gui/ImGuiScreen
+  #356 = Class              #355          // net/anubis/client/gui/ImGuiScreen
+  #357 = Methodref          #356.#51      // net/anubis/client/gui/ImGuiScreen."<init>":()V
+  #358 = Utf8               method_1507
+  #359 = Utf8               (Lnet/minecraft/class_437;)V
+  #360 = NameAndType        #358:#359     // method_1507:(Lnet/minecraft/class_437;)V
+  #361 = Methodref          #329.#360     // net/minecraft/class_310.method_1507:(Lnet/minecraft/class_437;)V
+  #362 = Utf8               capturesKeys
+  #363 = NameAndType        #362:#109     // capturesKeys:()Z
+  #364 = Methodref          #356.#363     // net/anubis/client/gui/ImGuiScreen.capturesKeys:()Z
+  #365 = Utf8               gui
+  #366 = Utf8               Lnet/anubis/client/gui/ImGuiScreen;
+  #367 = Utf8               client
+  #368 = Utf8               Lnet/minecraft/class_310;
+  #369 = Utf8               dropGuiClicks
+  #370 = Utf8               method_1436
+  #371 = NameAndType        #370:#109     // method_1436:()Z
+  #372 = Methodref          #21.#371      // net/minecraft/class_304.method_1436:()Z
+  #373 = Utf8               isBoundKeyDown
+  #374 = Utf8               (I)Z
+  #375 = Utf8               key
+  #376 = Utf8               org/lwjgl/glfw/GLFW
+  #377 = Class              #376          // org/lwjgl/glfw/GLFW
+  #378 = Utf8               glfwGetMouseButton
+  #379 = Utf8               (JI)I
+  #380 = NameAndType        #378:#379     // glfwGetMouseButton:(JI)I
+  #381 = Methodref          #377.#380     // org/lwjgl/glfw/GLFW.glfwGetMouseButton:(JI)I
+  #382 = Utf8               net/anubis/client/input/AnubisKeyPolling
+  #383 = Class              #382          // net/anubis/client/input/AnubisKeyPolling
+  #384 = Utf8               isKeyDown
+  #385 = Utf8               (Lnet/minecraft/class_1041;I)Z
+  #386 = NameAndType        #384:#385     // isKeyDown:(Lnet/minecraft/class_1041;I)Z
+  #387 = Methodref          #383.#386     // net/anubis/client/input/AnubisKeyPolling.isKeyDown:(Lnet/minecraft/class_1041;I)Z
+  #388 = Utf8               I
+  #389 = Utf8               applyPendingEnabled
+  #390 = NameAndType        #389:#50      // applyPendingEnabled:()V
+  #391 = Methodref          #303.#390     // net/anubis/client/config/ModuleConfigStore.applyPendingEnabled:()V
+  #392 = Utf8               net/anubis/client/module/ModuleRegistry
+  #393 = Class              #392          // net/anubis/client/module/ModuleRegistry
+  #394 = Utf8               all
+  #395 = Utf8               ()Ljava/util/List;
+  #396 = NameAndType        #394:#395     // all:()Ljava/util/List;
+  #397 = Methodref          #393.#396     // net/anubis/client/module/ModuleRegistry.all:()Ljava/util/List;
+  #398 = MethodType         #374          //  (I)Z
+  #399 = NameAndType        #373:#374     // isBoundKeyDown:(I)Z
+  #400 = Methodref          #2.#399       // net/anubis/client/AnubisClientMod.isBoundKeyDown:(I)Z
+  #401 = MethodHandle       6:#400        // REF_invokeStatic net/anubis/client/AnubisClientMod.isBoundKeyDown:(I)Z
+  #402 = Utf8               test
+  #403 = Utf8               ()Ljava/util/function/IntPredicate;
+  #404 = NameAndType        #402:#403     // test:()Ljava/util/function/IntPredicate;
+  #405 = InvokeDynamic      #18:#404      // #18:test:()Ljava/util/function/IntPredicate;
+  #406 = Utf8               method_1569
+  #407 = NameAndType        #406:#109     // method_1569:()Z
+  #408 = Methodref          #329.#407     // net/minecraft/class_310.method_1569:()Z
+  #409 = Utf8               field_1724
+  #410 = Utf8               Lnet/minecraft/class_746;
+  #411 = NameAndType        #409:#410     // field_1724:Lnet/minecraft/class_746;
+  #412 = Fieldref           #329.#411     // net/minecraft/class_310.field_1724:Lnet/minecraft/class_746;
+  #413 = Utf8               java/util/List
+  #414 = Class              #413          // java/util/List
+  #415 = Utf8               java/util/function/IntPredicate
+  #416 = Class              #415          // java/util/function/IntPredicate
+  #417 = Utf8               update
+  #418 = Utf8               (Ljava/util/List;Ljava/util/function/IntPredicate;Z)V
+  #419 = NameAndType        #417:#418     // update:(Ljava/util/List;Ljava/util/function/IntPredicate;Z)V
+  #420 = Methodref          #54.#419      // net/anubis/client/input/ModuleKeybinds.update:(Ljava/util/List;Ljava/util/function/IntPredicate;Z)V
+  #421 = Utf8               tickAutosave
+  #422 = NameAndType        #421:#50      // tickAutosave:()V
+  #423 = Methodref          #303.#422     // net/anubis/client/config/ModuleConfigStore.tickAutosave:()V
+  #424 = Utf8               net/anubis/client/gui/HudLayoutStore
+  #425 = Class              #424          // net/anubis/client/gui/HudLayoutStore
+  #426 = Utf8               ()Lnet/anubis/client/gui/HudLayoutStore;
+  #427 = NameAndType        #78:#426      // getInstance:()Lnet/anubis/client/gui/HudLayoutStore;
+  #428 = Methodref          #425.#427     // net/anubis/client/gui/HudLayoutStore.getInstance:()Lnet/anubis/client/gui/HudLayoutStore;
+  #429 = Utf8               save
+  #430 = NameAndType        #429:#50      // save:()V
+  #431 = Methodref          #425.#430     // net/anubis/client/gui/HudLayoutStore.save:()V
+  #432 = Methodref          #303.#430     // net/anubis/client/config/ModuleConfigStore.save:()V
+  #433 = Utf8               net/anubis/client/config/ThemeStore
+  #434 = Class              #433          // net/anubis/client/config/ThemeStore
+  #435 = Utf8               get
+  #436 = Utf8               ()Lnet/anubis/client/config/ThemeStore;
+  #437 = NameAndType        #435:#436     // get:()Lnet/anubis/client/config/ThemeStore;
+  #438 = Methodref          #434.#437     // net/anubis/client/config/ThemeStore.get:()Lnet/anubis/client/config/ThemeStore;
+  #439 = Methodref          #434.#430     // net/anubis/client/config/ThemeStore.save:()V
+  #440 = Utf8               net/anubis/client/config/HudTheme
+  #441 = Class              #440          // net/anubis/client/config/HudTheme
+  #442 = Utf8               ()Lnet/anubis/client/config/HudTheme;
+  #443 = NameAndType        #435:#442     // get:()Lnet/anubis/client/config/HudTheme;
+  #444 = Methodref          #441.#443     // net/anubis/client/config/HudTheme.get:()Lnet/anubis/client/config/HudTheme;
+  #445 = Methodref          #441.#430     // net/anubis/client/config/HudTheme.save:()V
+  #446 = Utf8               net/anubis/client/util/playerbypass/ProtectedChunkStore
+  #447 = Class              #446          // net/anubis/client/util/playerbypass/ProtectedChunkStore
+  #448 = Utf8               ()Lnet/anubis/client/util/playerbypass/ProtectedChunkStore;
+  #449 = NameAndType        #435:#448     // get:()Lnet/anubis/client/util/playerbypass/ProtectedChunkStore;
+  #450 = Methodref          #447.#449     // net/anubis/client/util/playerbypass/ProtectedChunkStore.get:()Lnet/anubis/client/util/playerbypass/ProtectedChunkStore;
+  #451 = Utf8               flushAndWait
+  #452 = NameAndType        #451:#50      // flushAndWait:()V
+  #453 = Methodref          #447.#452     // net/anubis/client/util/playerbypass/ProtectedChunkStore.flushAndWait:()V
+  #454 = Utf8               stop
+  #455 = NameAndType        #454:#50      // stop:()V
+  #456 = Methodref          #124.#455     // net/anubis/client/module/impl/misc/noinvleak/StreamOverlay.stop:()V
+  #457 = Utf8               packet
+  #458 = Utf8               Lnet/minecraft/class_2596;
+  #459 = NameAndType        #457:#458     // packet:Lnet/minecraft/class_2596;
+  #460 = Fieldref           #220.#459     // net/anubis/client/event/impl/PacketAppliedEvent.packet:Lnet/minecraft/class_2596;
+  #461 = Utf8               net/anubis/client/util/netherite/NetheriteChunkTracker
+  #462 = Class              #461          // net/anubis/client/util/netherite/NetheriteChunkTracker
+  #463 = Utf8               onPacketApplied
+  #464 = Utf8               (Lnet/minecraft/class_2596;)V
+  #465 = NameAndType        #463:#464     // onPacketApplied:(Lnet/minecraft/class_2596;)V
+  #466 = Methodref          #462.#465     // net/anubis/client/util/netherite/NetheriteChunkTracker.onPacketApplied:(Lnet/minecraft/class_2596;)V
+  #467 = Utf8               Lnet/anubis/client/event/impl/PacketAppliedEvent;
+  #468 = Utf8               tick
+  #469 = NameAndType        #468:#50      // tick:()V
+  #470 = Methodref          #242.#469     // net/anubis/client/gui/BorderlessFullscreen.tick:()V
+  #471 = Utf8               Lnet/anubis/client/event/impl/TickEvent;
+  #472 = Utf8               net/anubis/client/util/playerbypass/PlayerBypassLightTracker
+  #473 = Class              #472          // net/anubis/client/util/playerbypass/PlayerBypassLightTracker
+  #474 = Utf8               onTick
+  #475 = NameAndType        #474:#50      // onTick:()V
+  #476 = Methodref          #473.#475     // net/anubis/client/util/playerbypass/PlayerBypassLightTracker.onTick:()V
+  #477 = Methodref          #473.#465     // net/anubis/client/util/playerbypass/PlayerBypassLightTracker.onPacketApplied:(Lnet/minecraft/class_2596;)V
+  #478 = Fieldref           #203.#459     // net/anubis/client/event/impl/PacketReceiveNettyEvent.packet:Lnet/minecraft/class_2596;
+  #479 = Utf8               net/anubis/client/util/BlockEntityLeakTracker
+  #480 = Class              #479          // net/anubis/client/util/BlockEntityLeakTracker
+  #481 = Utf8               ingest
+  #482 = NameAndType        #481:#464     // ingest:(Lnet/minecraft/class_2596;)V
+  #483 = Methodref          #480.#482     // net/anubis/client/util/BlockEntityLeakTracker.ingest:(Lnet/minecraft/class_2596;)V
+  #484 = Utf8               Lnet/anubis/client/event/impl/PacketReceiveNettyEvent;
+  #485 = Utf8               <clinit>
+  #486 = Utf8               Anubis
+  #487 = String             #486          // Anubis
+  #488 = Utf8               org/slf4j/LoggerFactory
+  #489 = Class              #488          // org/slf4j/LoggerFactory
+  #490 = Utf8               getLogger
+  #491 = Utf8               (Ljava/lang/String;)Lorg/slf4j/Logger;
+  #492 = NameAndType        #490:#491     // getLogger:(Ljava/lang/String;)Lorg/slf4j/Logger;
+  #493 = Methodref          #489.#492     // org/slf4j/LoggerFactory.getLogger:(Ljava/lang/String;)Lorg/slf4j/Logger;
+  #494 = Utf8               anubis
+  #495 = String             #494          // anubis
+  #496 = Utf8               spawner_notify
+  #497 = String             #496          // spawner_notify
+  #498 = Utf8               net/minecraft/class_2960
+  #499 = Class              #498          // net/minecraft/class_2960
+  #500 = Utf8               method_60655
+  #501 = Utf8               (Ljava/lang/String;Ljava/lang/String;)Lnet/minecraft/class_2960;
+  #502 = NameAndType        #500:#501     // method_60655:(Ljava/lang/String;Ljava/lang/String;)Lnet/minecraft/class_2960;
+  #503 = Methodref          #499.#502     // net/minecraft/class_2960.method_60655:(Ljava/lang/String;Ljava/lang/String;)Lnet/minecraft/class_2960;
+  #504 = NameAndType        #35:#36       // SPAWNER_NOTIFY_SOUND_ID:Lnet/minecraft/class_2960;
+  #505 = Fieldref           #2.#504       // net/anubis/client/AnubisClientMod.SPAWNER_NOTIFY_SOUND_ID:Lnet/minecraft/class_2960;
+  #506 = Utf8               net/minecraft/class_3414
+  #507 = Class              #506          // net/minecraft/class_3414
+  #508 = Utf8               method_47908
+  #509 = Utf8               (Lnet/minecraft/class_2960;)Lnet/minecraft/class_3414;
+  #510 = NameAndType        #508:#509     // method_47908:(Lnet/minecraft/class_2960;)Lnet/minecraft/class_3414;
+  #511 = Methodref          #507.#510     // net/minecraft/class_3414.method_47908:(Lnet/minecraft/class_2960;)Lnet/minecraft/class_3414;
+  #512 = NameAndType        #37:#38       // SPAWNER_NOTIFY_SOUND:Lnet/minecraft/class_3414;
+  #513 = Fieldref           #2.#512       // net/anubis/client/AnubisClientMod.SPAWNER_NOTIFY_SOUND:Lnet/minecraft/class_3414;
+  #514 = Utf8               controls
+  #515 = String             #514          // controls
+  #516 = Utf8               method_74698
+  #517 = Utf8               (Lnet/minecraft/class_2960;)Lnet/minecraft/class_304$class_11900;
+  #518 = NameAndType        #516:#517     // method_74698:(Lnet/minecraft/class_2960;)Lnet/minecraft/class_304$class_11900;
+  #519 = Methodref          #19.#518      // net/minecraft/class_304$class_11900.method_74698:(Lnet/minecraft/class_2960;)Lnet/minecraft/class_304$class_11900;
+  #520 = Utf8               Lnet/fabricmc/api/Environment;
+  #521 = Utf8               value
+  #522 = Utf8               Lnet/fabricmc/api/EnvType;
+  #523 = Utf8               CLIENT
+  #524 = Utf8               Code
+  #525 = Utf8               LineNumberTable
+  #526 = Utf8               LocalVariableTable
+  #527 = Utf8               StackMapTable
+  #528 = Utf8               MethodParameters
+  #529 = Utf8               InnerClasses
+  #530 = Utf8               SourceFile
+  #531 = Utf8               RuntimeVisibleAnnotations
+  #532 = Utf8               BootstrapMethods
+{
+  public static final org.slf4j.Logger LOGGER;
+    descriptor: Lorg/slf4j/Logger;
+    flags: (0x0019) ACC_PUBLIC, ACC_STATIC, ACC_FINAL
+
+  public static final net.minecraft.class_2960 SPAWNER_NOTIFY_SOUND_ID;
+    descriptor: Lnet/minecraft/class_2960;
+    flags: (0x0019) ACC_PUBLIC, ACC_STATIC, ACC_FINAL
+
+  public static final net.minecraft.class_3414 SPAWNER_NOTIFY_SOUND;
+    descriptor: Lnet/minecraft/class_3414;
+    flags: (0x0019) ACC_PUBLIC, ACC_STATIC, ACC_FINAL
+
+  public static final net.minecraft.class_304$class_11900 KEY_CATEGORY;
+    descriptor: Lnet/minecraft/class_304$class_11900;
+    flags: (0x0019) ACC_PUBLIC, ACC_STATIC, ACC_FINAL
+
+  private static net.minecraft.class_304 openGuiKey;
+    descriptor: Lnet/minecraft/class_304;
+    flags: (0x000a) ACC_PRIVATE, ACC_STATIC
+
+  private final net.anubis.client.input.ModuleKeybinds keybinds;
+    descriptor: Lnet/anubis/client/input/ModuleKeybinds;
+    flags: (0x0012) ACC_PRIVATE, ACC_FINAL
+
+  private static final java.lang.Object LEAK_TRACKER_OWNER;
+    descriptor: Ljava/lang/Object;
+    flags: (0x001a) ACC_PRIVATE, ACC_STATIC, ACC_FINAL
+
+  private static final java.lang.Object PLAYER_BYPASS_TRACKER_OWNER;
+    descriptor: Ljava/lang/Object;
+    flags: (0x001a) ACC_PRIVATE, ACC_STATIC, ACC_FINAL
+
+  private static final java.lang.Object NETHERITE_TRACKER_OWNER;
+    descriptor: Ljava/lang/Object;
+    flags: (0x001a) ACC_PRIVATE, ACC_STATIC, ACC_FINAL
+
+  public net.anubis.client.AnubisClientMod();
+    descriptor: ()V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=3, locals=1, args_size=1
+         0: aload_0
+         1: invokespecial #52                 // Method java/lang/Object."<init>":()V
+         4: aload_0
+         5: new           #54                 // class net/anubis/client/input/ModuleKeybinds
+         8: dup
+         9: invokespecial #55                 // Method net/anubis/client/input/ModuleKeybinds."<init>":()V
+        12: putfield      #57                 // Field keybinds:Lnet/anubis/client/input/ModuleKeybinds;
+        15: return
+      LineNumberTable:
+        line 44: 0
+        line 54: 4
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      16     0  this   Lnet/anubis/client/AnubisClientMod;
+
+  public void onInitializeClient();
+    descriptor: ()V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=6, locals=1, args_size=1
+         0: getstatic     #62                 // Field LOGGER:Lorg/slf4j/Logger;
+         3: ldc           #64                 // String [Anubis] Initialising
+         5: invokeinterface #70,  2           // InterfaceMethod org/slf4j/Logger.info:(Ljava/lang/String;)V
+        10: invokestatic  #75                 // Method net/anubis/client/addon/AddonManager.init:()V
+        13: invokestatic  #81                 // Method net/anubis/client/imgui/ImGuiManager.getInstance:()Lnet/anubis/client/imgui/ImGuiManager;
+        16: invokestatic  #86                 // Method net/anubis/client/gui/HudRenderer.getInstance:()Lnet/anubis/client/gui/HudRenderer;
+        19: dup
+        20: invokestatic  #92                 // Method java/util/Objects.requireNonNull:(Ljava/lang/Object;)Ljava/lang/Object;
+        23: pop
+        24: invokedynamic #108,  0            // InvokeDynamic #0:run:(Lnet/anubis/client/gui/HudRenderer;)Ljava/lang/Runnable;
+        29: invokestatic  #86                 // Method net/anubis/client/gui/HudRenderer.getInstance:()Lnet/anubis/client/gui/HudRenderer;
+        32: dup
+        33: invokestatic  #92                 // Method java/util/Objects.requireNonNull:(Ljava/lang/Object;)Ljava/lang/Object;
+        36: pop
+        37: invokedynamic #118,  0            // InvokeDynamic #1:getAsBoolean:(Lnet/anubis/client/gui/HudRenderer;)Ljava/util/function/BooleanSupplier;
+        42: invokevirtual #122                // Method net/anubis/client/imgui/ImGuiManager.setHudRenderer:(Ljava/lang/Runnable;Ljava/util/function/BooleanSupplier;)V
+        45: invokestatic  #81                 // Method net/anubis/client/imgui/ImGuiManager.getInstance:()Lnet/anubis/client/imgui/ImGuiManager;
+        48: invokedynamic #131,  0            // InvokeDynamic #2:run:()Ljava/lang/Runnable;
+        53: invokedynamic #138,  0            // InvokeDynamic #3:getAsBoolean:()Ljava/util/function/BooleanSupplier;
+        58: invokevirtual #141                // Method net/anubis/client/imgui/ImGuiManager.setStreamRenderer:(Ljava/lang/Runnable;Ljava/util/function/BooleanSupplier;)V
+        61: invokestatic  #81                 // Method net/anubis/client/imgui/ImGuiManager.getInstance:()Lnet/anubis/client/imgui/ImGuiManager;
+        64: invokedynamic #146,  0            // InvokeDynamic #4:run:()Ljava/lang/Runnable;
+        69: invokedynamic #149,  0            // InvokeDynamic #5:getAsBoolean:()Ljava/util/function/BooleanSupplier;
+        74: invokevirtual #152                // Method net/anubis/client/imgui/ImGuiManager.setToastRenderer:(Ljava/lang/Runnable;Ljava/util/function/BooleanSupplier;)V
+        77: invokestatic  #81                 // Method net/anubis/client/imgui/ImGuiManager.getInstance:()Lnet/anubis/client/imgui/ImGuiManager;
+        80: invokedynamic #157,  0            // InvokeDynamic #6:run:()Ljava/lang/Runnable;
+        85: invokedynamic #160,  0            // InvokeDynamic #7:getAsBoolean:()Ljava/util/function/BooleanSupplier;
+        90: invokevirtual #163                // Method net/anubis/client/imgui/ImGuiManager.setOverlayRenderer:(Ljava/lang/Runnable;Ljava/util/function/BooleanSupplier;)V
+        93: invokestatic  #81                 // Method net/anubis/client/imgui/ImGuiManager.getInstance:()Lnet/anubis/client/imgui/ImGuiManager;
+        96: invokedynamic #168,  0            // InvokeDynamic #8:run:()Ljava/lang/Runnable;
+       101: invokedynamic #171,  0            // InvokeDynamic #9:getAsBoolean:()Ljava/util/function/BooleanSupplier;
+       106: invokevirtual #174                // Method net/anubis/client/imgui/ImGuiManager.setAlertRenderer:(Ljava/lang/Runnable;Ljava/util/function/BooleanSupplier;)V
+       109: getstatic     #180                // Field net/anubis/client/event/impl/Render2DEvent.TYPE:Lnet/anubis/client/event/EventType;
+       112: ldc           #165                // class net/anubis/client/gui/StaffGhost
+       114: invokedynamic #192,  0            // InvokeDynamic #10:accept:()Ljava/util/function/Consumer;
+       119: invokevirtual #198                // Method net/anubis/client/event/EventType.listen:(Ljava/lang/Object;Ljava/util/function/Consumer;)Lnet/anubis/client/event/ListenerHandle;
+       122: pop
+       123: invokestatic  #201                // Method net/anubis/client/esp/ChunkScanner.init:()V
+       126: getstatic     #206                // Field net/anubis/client/event/impl/PacketReceiveNettyEvent.TYPE:Lnet/anubis/client/event/PooledCancellableEventType;
+       129: getstatic     #208                // Field LEAK_TRACKER_OWNER:Ljava/lang/Object;
+       132: invokedynamic #215,  0            // InvokeDynamic #11:accept:()Ljava/util/function/Consumer;
+       137: invokevirtual #218                // Method net/anubis/client/event/PooledCancellableEventType.listen:(Ljava/lang/Object;Ljava/util/function/Consumer;)Lnet/anubis/client/event/ListenerHandle;
+       140: pop
+       141: getstatic     #221                // Field net/anubis/client/event/impl/PacketAppliedEvent.TYPE:Lnet/anubis/client/event/EventType;
+       144: getstatic     #223                // Field PLAYER_BYPASS_TRACKER_OWNER:Ljava/lang/Object;
+       147: invokedynamic #230,  0            // InvokeDynamic #12:accept:()Ljava/util/function/Consumer;
+       152: invokevirtual #198                // Method net/anubis/client/event/EventType.listen:(Ljava/lang/Object;Ljava/util/function/Consumer;)Lnet/anubis/client/event/ListenerHandle;
+       155: pop
+       156: getstatic     #233                // Field net/anubis/client/event/impl/TickEvent.TYPE:Lnet/anubis/client/event/EventType;
+       159: getstatic     #223                // Field PLAYER_BYPASS_TRACKER_OWNER:Ljava/lang/Object;
+       162: invokedynamic #240,  0            // InvokeDynamic #13:accept:()Ljava/util/function/Consumer;
+       167: invokevirtual #198                // Method net/anubis/client/event/EventType.listen:(Ljava/lang/Object;Ljava/util/function/Consumer;)Lnet/anubis/client/event/ListenerHandle;
+       170: pop
+       171: getstatic     #233                // Field net/anubis/client/event/impl/TickEvent.TYPE:Lnet/anubis/client/event/EventType;
+       174: ldc           #242                // class net/anubis/client/gui/BorderlessFullscreen
+       176: invokedynamic #247,  0            // InvokeDynamic #14:accept:()Ljava/util/function/Consumer;
+       181: invokevirtual #198                // Method net/anubis/client/event/EventType.listen:(Ljava/lang/Object;Ljava/util/function/Consumer;)Lnet/anubis/client/event/ListenerHandle;
+       184: pop
+       185: invokestatic  #252                // Method net/anubis/client/util/combat/CombatTarget.install:()V
+       188: getstatic     #221                // Field net/anubis/client/event/impl/PacketAppliedEvent.TYPE:Lnet/anubis/client/event/EventType;
+       191: getstatic     #254                // Field NETHERITE_TRACKER_OWNER:Ljava/lang/Object;
+       194: invokedynamic #259,  0            // InvokeDynamic #15:accept:()Ljava/util/function/Consumer;
+       199: invokevirtual #198                // Method net/anubis/client/event/EventType.listen:(Ljava/lang/Object;Ljava/util/function/Consumer;)Lnet/anubis/client/event/ListenerHandle;
+       202: pop
+       203: invokestatic  #260                // Method net/anubis/client/gui/ToggleToasts.install:()V
+       206: invokestatic  #263                // Method net/anubis/client/config/ProfileAutoLoad.install:()V
+       209: getstatic     #267                // Field net/fabricmc/fabric/api/client/event/lifecycle/v1/ClientLifecycleEvents.CLIENT_STOPPING:Lnet/fabricmc/fabric/api/event/Event;
+       212: invokedynamic #277,  0            // InvokeDynamic #16:onClientStopping:()Lnet/fabricmc/fabric/api/client/event/lifecycle/v1/ClientLifecycleEvents$ClientStopping;
+       217: invokevirtual #282                // Method net/fabricmc/fabric/api/event/Event.register:(Ljava/lang/Object;)V
+       220: new           #21                 // class net/minecraft/class_304
+       223: dup
+       224: ldc_w         #284                // String key.anubis.open_gui
+       227: getstatic     #288                // Field net/minecraft/class_3675$class_307.field_1668:Lnet/minecraft/class_3675$class_307;
+       230: sipush        344
+       233: getstatic     #290                // Field KEY_CATEGORY:Lnet/minecraft/class_304$class_11900;
+       236: invokespecial #293                // Method net/minecraft/class_304."<init>":(Ljava/lang/String;Lnet/minecraft/class_3675$class_307;ILnet/minecraft/class_304$class_11900;)V
+       239: invokestatic  #299                // Method net/fabricmc/fabric/api/client/keybinding/v1/KeyBindingHelper.registerKeyBinding:(Lnet/minecraft/class_304;)Lnet/minecraft/class_304;
+       242: putstatic     #301                // Field openGuiKey:Lnet/minecraft/class_304;
+       245: invokestatic  #306                // Method net/anubis/client/config/ModuleConfigStore.getInstance:()Lnet/anubis/client/config/ModuleConfigStore;
+       248: invokevirtual #309                // Method net/anubis/client/config/ModuleConfigStore.load:()V
+       251: invokestatic  #312                // Method net/anubis/client/addon/AddonManager.configLoaded:()V
+       254: getstatic     #315                // Field net/fabricmc/fabric/api/client/event/lifecycle/v1/ClientTickEvents.END_CLIENT_TICK:Lnet/fabricmc/fabric/api/event/Event;
+       257: aload_0
+       258: invokedynamic #323,  0            // InvokeDynamic #17:onEndTick:(Lnet/anubis/client/AnubisClientMod;)Lnet/fabricmc/fabric/api/client/event/lifecycle/v1/ClientTickEvents$EndTick;
+       263: invokevirtual #282                // Method net/fabricmc/fabric/api/event/Event.register:(Ljava/lang/Object;)V
+       266: return
+      LineNumberTable:
+        line 64: 0
+        line 66: 10
+        line 68: 13
+        line 69: 45
+        line 70: 61
+        line 71: 77
+        line 72: 93
+        line 73: 109
+        line 74: 123
+        line 76: 126
+        line 79: 141
+        line 82: 156
+        line 83: 171
+        line 84: 185
+        line 86: 188
+        line 89: 203
+        line 90: 206
+        line 92: 209
+        line 101: 220
+        line 108: 245
+        line 110: 251
+        line 112: 254
+        line 127: 266
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0     267     0  this   Lnet/anubis/client/AnubisClientMod;
+
+  public static boolean isGuiKey(long, net.minecraft.class_11908);
+    descriptor: (JLnet/minecraft/class_11908;)Z
+    flags: (0x0009) ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=4, locals=3, args_size=2
+         0: getstatic     #301                // Field openGuiKey:Lnet/minecraft/class_304;
+         3: ifnull        34
+         6: lload_0
+         7: invokestatic  #333                // Method net/minecraft/class_310.method_1551:()Lnet/minecraft/class_310;
+        10: invokevirtual #337                // Method net/minecraft/class_310.method_22683:()Lnet/minecraft/class_1041;
+        13: invokevirtual #343                // Method net/minecraft/class_1041.method_4490:()J
+        16: lcmp
+        17: ifne          34
+        20: getstatic     #301                // Field openGuiKey:Lnet/minecraft/class_304;
+        23: aload_2
+        24: invokevirtual #347                // Method net/minecraft/class_304.method_1417:(Lnet/minecraft/class_11908;)Z
+        27: ifeq          34
+        30: iconst_1
+        31: goto          35
+        34: iconst_0
+        35: ireturn
+      StackMapTable: number_of_entries = 2
+        frame_type = 34 /* same */
+        frame_type = 64 /* same_locals_1_stack_item */
+          stack = [ int ]
+      LineNumberTable:
+        line 130: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      36     0 window   J
+            0      36     2 event   Lnet/minecraft/class_11908;
+    MethodParameters:
+      Name                           Flags
+      window
+      event
+
+  public static boolean toggleGuiFromKey();
+    descriptor: ()Z
+    flags: (0x0009) ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=3, locals=3, args_size=0
+         0: invokestatic  #333                // Method net/minecraft/class_310.method_1551:()Lnet/minecraft/class_310;
+         3: astore_0
+         4: aload_0
+         5: getfield      #354                // Field net/minecraft/class_310.field_1755:Lnet/minecraft/class_437;
+         8: ifnonnull     24
+        11: aload_0
+        12: new           #356                // class net/anubis/client/gui/ImGuiScreen
+        15: dup
+        16: invokespecial #357                // Method net/anubis/client/gui/ImGuiScreen."<init>":()V
+        19: invokevirtual #361                // Method net/minecraft/class_310.method_1507:(Lnet/minecraft/class_437;)V
+        22: iconst_1
+        23: ireturn
+        24: aload_0
+        25: getfield      #354                // Field net/minecraft/class_310.field_1755:Lnet/minecraft/class_437;
+        28: astore_2
+        29: aload_2
+        30: instanceof    #356                // class net/anubis/client/gui/ImGuiScreen
+        33: ifeq          53
+        36: aload_2
+        37: checkcast     #356                // class net/anubis/client/gui/ImGuiScreen
+        40: astore_1
+        41: aload_1
+        42: invokevirtual #364                // Method net/anubis/client/gui/ImGuiScreen.capturesKeys:()Z
+        45: ifne          53
+        48: aload_0
+        49: aconst_null
+        50: invokevirtual #361                // Method net/minecraft/class_310.method_1507:(Lnet/minecraft/class_437;)V
+        53: iconst_0
+        54: ireturn
+      StackMapTable: number_of_entries = 2
+        frame_type = 252 /* append */
+          offset_delta = 24
+          locals = [ class net/minecraft/class_310 ]
+        frame_type = 28 /* same */
+      LineNumberTable:
+        line 134: 0
+        line 135: 4
+        line 136: 11
+        line 137: 22
+        line 139: 24
+        line 140: 53
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+           41      12     1   gui   Lnet/anubis/client/gui/ImGuiScreen;
+            4      51     0 client   Lnet/minecraft/class_310;
+
+  public static void dropGuiClicks();
+    descriptor: ()V
+    flags: (0x0009) ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=1, locals=0, args_size=0
+         0: getstatic     #301                // Field openGuiKey:Lnet/minecraft/class_304;
+         3: invokevirtual #372                // Method net/minecraft/class_304.method_1436:()Z
+         6: ifeq          12
+         9: goto          0
+        12: return
+      StackMapTable: number_of_entries = 2
+        frame_type = 0 /* same */
+        frame_type = 11 /* same */
+      LineNumberTable:
+        line 144: 0
+        line 146: 12
+
+  private static boolean isBoundKeyDown(int);
+    descriptor: (I)Z
+    flags: (0x000a) ACC_PRIVATE, ACC_STATIC
+    Code:
+      stack=4, locals=2, args_size=1
+         0: invokestatic  #333                // Method net/minecraft/class_310.method_1551:()Lnet/minecraft/class_310;
+         3: astore_1
+         4: iload_0
+         5: sipush        1000
+         8: if_icmplt     38
+        11: aload_1
+        12: invokevirtual #337                // Method net/minecraft/class_310.method_22683:()Lnet/minecraft/class_1041;
+        15: invokevirtual #343                // Method net/minecraft/class_1041.method_4490:()J
+        18: iload_0
+        19: sipush        1000
+        22: isub
+        23: invokestatic  #381                // Method org/lwjgl/glfw/GLFW.glfwGetMouseButton:(JI)I
+        26: iconst_1
+        27: if_icmpne     34
+        30: iconst_1
+        31: goto          46
+        34: iconst_0
+        35: goto          46
+        38: aload_1
+        39: invokevirtual #337                // Method net/minecraft/class_310.method_22683:()Lnet/minecraft/class_1041;
+        42: iload_0
+        43: invokestatic  #387                // Method net/anubis/client/input/AnubisKeyPolling.isKeyDown:(Lnet/minecraft/class_1041;I)Z
+        46: ireturn
+      StackMapTable: number_of_entries = 3
+        frame_type = 252 /* append */
+          offset_delta = 34
+          locals = [ class net/minecraft/class_310 ]
+        frame_type = 3 /* same */
+        frame_type = 71 /* same_locals_1_stack_item */
+          stack = [ int ]
+      LineNumberTable:
+        line 149: 0
+        line 150: 4
+        line 151: 11
+        line 152: 38
+        line 150: 46
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      47     0   key   I
+            4      43     1 client   Lnet/minecraft/class_310;
+    MethodParameters:
+      Name                           Flags
+      key
+
+  private void lambda$onInitializeClient$6(net.minecraft.class_310);
+    descriptor: (Lnet/minecraft/class_310;)V
+    flags: (0x1002) ACC_PRIVATE, ACC_SYNTHETIC
+    Code:
+      stack=4, locals=2, args_size=2
+         0: invokestatic  #306                // Method net/anubis/client/config/ModuleConfigStore.getInstance:()Lnet/anubis/client/config/ModuleConfigStore;
+         3: invokevirtual #391                // Method net/anubis/client/config/ModuleConfigStore.applyPendingEnabled:()V
+         6: getstatic     #301                // Field openGuiKey:Lnet/minecraft/class_304;
+         9: invokevirtual #372                // Method net/minecraft/class_304.method_1436:()Z
+        12: ifeq          47
+        15: aload_1
+        16: getfield      #354                // Field net/minecraft/class_310.field_1755:Lnet/minecraft/class_437;
+        19: instanceof    #356                // class net/anubis/client/gui/ImGuiScreen
+        22: ifeq          33
+        25: aload_1
+        26: aconst_null
+        27: invokevirtual #361                // Method net/minecraft/class_310.method_1507:(Lnet/minecraft/class_437;)V
+        30: goto          6
+        33: aload_1
+        34: new           #356                // class net/anubis/client/gui/ImGuiScreen
+        37: dup
+        38: invokespecial #357                // Method net/anubis/client/gui/ImGuiScreen."<init>":()V
+        41: invokevirtual #361                // Method net/minecraft/class_310.method_1507:(Lnet/minecraft/class_437;)V
+        44: goto          6
+        47: aload_0
+        48: getfield      #57                 // Field keybinds:Lnet/anubis/client/input/ModuleKeybinds;
+        51: invokestatic  #397                // Method net/anubis/client/module/ModuleRegistry.all:()Ljava/util/List;
+        54: invokedynamic #405,  0            // InvokeDynamic #18:test:()Ljava/util/function/IntPredicate;
+        59: aload_1
+        60: getfield      #354                // Field net/minecraft/class_310.field_1755:Lnet/minecraft/class_437;
+        63: ifnonnull     84
+        66: aload_1
+        67: invokevirtual #408                // Method net/minecraft/class_310.method_1569:()Z
+        70: ifeq          84
+        73: aload_1
+        74: getfield      #412                // Field net/minecraft/class_310.field_1724:Lnet/minecraft/class_746;
+        77: ifnull        84
+        80: iconst_1
+        81: goto          85
+        84: iconst_0
+        85: invokevirtual #420                // Method net/anubis/client/input/ModuleKeybinds.update:(Ljava/util/List;Ljava/util/function/IntPredicate;Z)V
+        88: invokestatic  #306                // Method net/anubis/client/config/ModuleConfigStore.getInstance:()Lnet/anubis/client/config/ModuleConfigStore;
+        91: invokevirtual #423                // Method net/anubis/client/config/ModuleConfigStore.tickAutosave:()V
+        94: return
+      StackMapTable: number_of_entries = 5
+        frame_type = 6 /* same */
+        frame_type = 26 /* same */
+        frame_type = 13 /* same */
+        frame_type = 255 /* full_frame */
+          offset_delta = 36
+          locals = [ class net/anubis/client/AnubisClientMod, class net/minecraft/class_310 ]
+          stack = [ class net/anubis/client/input/ModuleKeybinds, class java/util/List, class java/util/function/IntPredicate ]
+        frame_type = 255 /* full_frame */
+          offset_delta = 0
+          locals = [ class net/anubis/client/AnubisClientMod, class net/minecraft/class_310 ]
+          stack = [ class net/anubis/client/input/ModuleKeybinds, class java/util/List, class java/util/function/IntPredicate, int ]
+      LineNumberTable:
+        line 113: 0
+        line 115: 6
+        line 116: 15
+        line 117: 25
+        line 119: 33
+        line 123: 47
+        line 124: 67
+        line 123: 85
+        line 125: 88
+        line 126: 94
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      95     0  this   Lnet/anubis/client/AnubisClientMod;
+            0      95     1 client   Lnet/minecraft/class_310;
+    MethodParameters:
+      Name                           Flags
+      client
+
+  private static void lambda$onInitializeClient$5(net.minecraft.class_310);
+    descriptor: (Lnet/minecraft/class_310;)V
+    flags: (0x100a) ACC_PRIVATE, ACC_STATIC, ACC_SYNTHETIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: invokestatic  #428                // Method net/anubis/client/gui/HudLayoutStore.getInstance:()Lnet/anubis/client/gui/HudLayoutStore;
+         3: invokevirtual #431                // Method net/anubis/client/gui/HudLayoutStore.save:()V
+         6: invokestatic  #306                // Method net/anubis/client/config/ModuleConfigStore.getInstance:()Lnet/anubis/client/config/ModuleConfigStore;
+         9: invokevirtual #432                // Method net/anubis/client/config/ModuleConfigStore.save:()V
+        12: invokestatic  #438                // Method net/anubis/client/config/ThemeStore.get:()Lnet/anubis/client/config/ThemeStore;
+        15: invokevirtual #439                // Method net/anubis/client/config/ThemeStore.save:()V
+        18: invokestatic  #444                // Method net/anubis/client/config/HudTheme.get:()Lnet/anubis/client/config/HudTheme;
+        21: invokevirtual #445                // Method net/anubis/client/config/HudTheme.save:()V
+        24: invokestatic  #450                // Method net/anubis/client/util/playerbypass/ProtectedChunkStore.get:()Lnet/anubis/client/util/playerbypass/ProtectedChunkStore;
+        27: invokevirtual #453                // Method net/anubis/client/util/playerbypass/ProtectedChunkStore.flushAndWait:()V
+        30: invokestatic  #456                // Method net/anubis/client/module/impl/misc/noinvleak/StreamOverlay.stop:()V
+        33: return
+      LineNumberTable:
+        line 93: 0
+        line 94: 6
+        line 95: 12
+        line 96: 18
+        line 97: 24
+        line 98: 30
+        line 99: 33
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      34     0 client   Lnet/minecraft/class_310;
+    MethodParameters:
+      Name                           Flags
+      client
+
+  private static void lambda$onInitializeClient$4(net.anubis.client.event.impl.PacketAppliedEvent);
+    descriptor: (Lnet/anubis/client/event/impl/PacketAppliedEvent;)V
+    flags: (0x100a) ACC_PRIVATE, ACC_STATIC, ACC_SYNTHETIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: getfield      #460                // Field net/anubis/client/event/impl/PacketAppliedEvent.packet:Lnet/minecraft/class_2596;
+         4: invokestatic  #466                // Method net/anubis/client/util/netherite/NetheriteChunkTracker.onPacketApplied:(Lnet/minecraft/class_2596;)V
+         7: return
+      LineNumberTable:
+        line 87: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       8     0 event   Lnet/anubis/client/event/impl/PacketAppliedEvent;
+    MethodParameters:
+      Name                           Flags
+      event
+
+  private static void lambda$onInitializeClient$3(net.anubis.client.event.impl.TickEvent);
+    descriptor: (Lnet/anubis/client/event/impl/TickEvent;)V
+    flags: (0x100a) ACC_PRIVATE, ACC_STATIC, ACC_SYNTHETIC
+    Code:
+      stack=0, locals=1, args_size=1
+         0: invokestatic  #470                // Method net/anubis/client/gui/BorderlessFullscreen.tick:()V
+         3: return
+      LineNumberTable:
+        line 83: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       4     0 event   Lnet/anubis/client/event/impl/TickEvent;
+    MethodParameters:
+      Name                           Flags
+      event
+
+  private static void lambda$onInitializeClient$2(net.anubis.client.event.impl.TickEvent);
+    descriptor: (Lnet/anubis/client/event/impl/TickEvent;)V
+    flags: (0x100a) ACC_PRIVATE, ACC_STATIC, ACC_SYNTHETIC
+    Code:
+      stack=0, locals=1, args_size=1
+         0: invokestatic  #476                // Method net/anubis/client/util/playerbypass/PlayerBypassLightTracker.onTick:()V
+         3: return
+      LineNumberTable:
+        line 82: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       4     0 event   Lnet/anubis/client/event/impl/TickEvent;
+    MethodParameters:
+      Name                           Flags
+      event
+
+  private static void lambda$onInitializeClient$1(net.anubis.client.event.impl.PacketAppliedEvent);
+    descriptor: (Lnet/anubis/client/event/impl/PacketAppliedEvent;)V
+    flags: (0x100a) ACC_PRIVATE, ACC_STATIC, ACC_SYNTHETIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: getfield      #460                // Field net/anubis/client/event/impl/PacketAppliedEvent.packet:Lnet/minecraft/class_2596;
+         4: invokestatic  #477                // Method net/anubis/client/util/playerbypass/PlayerBypassLightTracker.onPacketApplied:(Lnet/minecraft/class_2596;)V
+         7: return
+      LineNumberTable:
+        line 80: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       8     0 event   Lnet/anubis/client/event/impl/PacketAppliedEvent;
+    MethodParameters:
+      Name                           Flags
+      event
+
+  private static void lambda$onInitializeClient$0(net.anubis.client.event.impl.PacketReceiveNettyEvent);
+    descriptor: (Lnet/anubis/client/event/impl/PacketReceiveNettyEvent;)V
+    flags: (0x100a) ACC_PRIVATE, ACC_STATIC, ACC_SYNTHETIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: getfield      #478                // Field net/anubis/client/event/impl/PacketReceiveNettyEvent.packet:Lnet/minecraft/class_2596;
+         4: invokestatic  #483                // Method net/anubis/client/util/BlockEntityLeakTracker.ingest:(Lnet/minecraft/class_2596;)V
+         7: return
+      LineNumberTable:
+        line 77: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       8     0 event   Lnet/anubis/client/event/impl/PacketReceiveNettyEvent;
+    MethodParameters:
+      Name                           Flags
+      event
+
+  static {};
+    descriptor: ()V
+    flags: (0x0008) ACC_STATIC
+    Code:
+      stack=2, locals=0, args_size=0
+         0: ldc_w         #487                // String Anubis
+         3: invokestatic  #493                // Method org/slf4j/LoggerFactory.getLogger:(Ljava/lang/String;)Lorg/slf4j/Logger;
+         6: putstatic     #62                 // Field LOGGER:Lorg/slf4j/Logger;
+         9: ldc_w         #495                // String anubis
+        12: ldc_w         #497                // String spawner_notify
+        15: invokestatic  #503                // Method net/minecraft/class_2960.method_60655:(Ljava/lang/String;Ljava/lang/String;)Lnet/minecraft/class_2960;
+        18: putstatic     #505                // Field SPAWNER_NOTIFY_SOUND_ID:Lnet/minecraft/class_2960;
+        21: getstatic     #505                // Field SPAWNER_NOTIFY_SOUND_ID:Lnet/minecraft/class_2960;
+        24: invokestatic  #511                // Method net/minecraft/class_3414.method_47908:(Lnet/minecraft/class_2960;)Lnet/minecraft/class_3414;
+        27: putstatic     #513                // Field SPAWNER_NOTIFY_SOUND:Lnet/minecraft/class_3414;
+        30: ldc_w         #495                // String anubis
+        33: ldc_w         #515                // String controls
+        36: invokestatic  #503                // Method net/minecraft/class_2960.method_60655:(Ljava/lang/String;Ljava/lang/String;)Lnet/minecraft/class_2960;
+        39: invokestatic  #519                // Method net/minecraft/class_304$class_11900.method_74698:(Lnet/minecraft/class_2960;)Lnet/minecraft/class_304$class_11900;
+        42: putstatic     #290                // Field KEY_CATEGORY:Lnet/minecraft/class_304$class_11900;
+        45: new           #4                  // class java/lang/Object
+        48: dup
+        49: invokespecial #52                 // Method java/lang/Object."<init>":()V
+        52: putstatic     #208                // Field LEAK_TRACKER_OWNER:Ljava/lang/Object;
+        55: new           #4                  // class java/lang/Object
+        58: dup
+        59: invokespecial #52                 // Method java/lang/Object."<init>":()V
+        62: putstatic     #223                // Field PLAYER_BYPASS_TRACKER_OWNER:Ljava/lang/Object;
+        65: new           #4                  // class java/lang/Object
+        68: dup
+        69: invokespecial #52                 // Method java/lang/Object."<init>":()V
+        72: putstatic     #254                // Field NETHERITE_TRACKER_OWNER:Ljava/lang/Object;
+        75: return
+      LineNumberTable:
+        line 45: 0
+        line 46: 9
+        line 47: 21
+        line 49: 30
+        line 50: 36
+        line 49: 39
+        line 56: 45
+        line 58: 55
+        line 60: 65
+}
+InnerClasses:
+  public static #12= #9 of #11;           // ClientStopping=class net/fabricmc/fabric/api/client/event/lifecycle/v1/ClientLifecycleEvents$ClientStopping of class net/fabricmc/fabric/api/client/event/lifecycle/v1/ClientLifecycleEvents
+  public static final #17= #14 of #16;    // class_307=class net/minecraft/class_3675$class_307 of class net/minecraft/class_3675
+  public static final #22= #19 of #21;    // class_11900=class net/minecraft/class_304$class_11900 of class net/minecraft/class_304
+  public static #27= #24 of #26;          // EndTick=class net/fabricmc/fabric/api/client/event/lifecycle/v1/ClientTickEvents$EndTick of class net/fabricmc/fabric/api/client/event/lifecycle/v1/ClientTickEvents
+  public static final #32= #29 of #31;    // Lookup=class java/lang/invoke/MethodHandles$Lookup of class java/lang/invoke/MethodHandles
+SourceFile: "AnubisClientMod.java"
+RuntimeVisibleAnnotations:
+  0: #520(#521=e#522.#523)
+    net.fabricmc.api.Environment(
+      value=Lnet/fabricmc/api/EnvType;.CLIENT
+    )
+BootstrapMethods:
+  0: #104 REF_invokeStatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #93 ()V
+      #97 REF_invokeVirtual net/anubis/client/gui/HudRenderer.render:()V
+      #93 ()V
+  1: #104 REF_invokeStatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #110 ()Z
+      #114 REF_invokeVirtual net/anubis/client/gui/HudRenderer.hasWork:()Z
+      #110 ()Z
+  2: #104 REF_invokeStatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #93 ()V
+      #128 REF_invokeStatic net/anubis/client/module/impl/misc/noinvleak/StreamOverlay.drawFakes:()V
+      #93 ()V
+  3: #104 REF_invokeStatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #110 ()Z
+      #135 REF_invokeStatic net/anubis/client/module/impl/misc/noinvleak/StreamOverlay.hasFakes:()Z
+      #110 ()Z
+  4: #104 REF_invokeStatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #93 ()V
+      #145 REF_invokeStatic net/anubis/client/gui/ToggleToasts.render:()V
+      #93 ()V
+  5: #104 REF_invokeStatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #110 ()Z
+      #148 REF_invokeStatic net/anubis/client/gui/ToggleToasts.hasWork:()Z
+      #110 ()Z
+  6: #104 REF_invokeStatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #93 ()V
+      #156 REF_invokeStatic net/anubis/client/gui/LoadingScreens.render:()V
+      #93 ()V
+  7: #104 REF_invokeStatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #110 ()Z
+      #159 REF_invokeStatic net/anubis/client/gui/LoadingScreens.hasWork:()Z
+      #110 ()Z
+  8: #104 REF_invokeStatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #93 ()V
+      #167 REF_invokeStatic net/anubis/client/gui/StaffGhost.render:()V
+      #93 ()V
+  9: #104 REF_invokeStatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #110 ()Z
+      #170 REF_invokeStatic net/anubis/client/gui/StaffGhost.hasWork:()Z
+      #110 ()Z
+  10: #104 REF_invokeStatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #182 (Ljava/lang/Object;)V
+      #187 REF_invokeStatic net/anubis/client/gui/StaffGhost.renderNote:(Lnet/anubis/client/event/impl/Render2DEvent;)V
+      #188 (Lnet/anubis/client/event/impl/Render2DEvent;)V
+  11: #104 REF_invokeStatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #182 (Ljava/lang/Object;)V
+      #213 REF_invokeStatic net/anubis/client/AnubisClientMod.lambda$onInitializeClient$0:(Lnet/anubis/client/event/impl/PacketReceiveNettyEvent;)V
+      #214 (Lnet/anubis/client/event/impl/PacketReceiveNettyEvent;)V
+  12: #104 REF_invokeStatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #182 (Ljava/lang/Object;)V
+      #228 REF_invokeStatic net/anubis/client/AnubisClientMod.lambda$onInitializeClient$1:(Lnet/anubis/client/event/impl/PacketAppliedEvent;)V
+      #229 (Lnet/anubis/client/event/impl/PacketAppliedEvent;)V
+  13: #104 REF_invokeStatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #182 (Ljava/lang/Object;)V
+      #238 REF_invokeStatic net/anubis/client/AnubisClientMod.lambda$onInitializeClient$2:(Lnet/anubis/client/event/impl/TickEvent;)V
+      #239 (Lnet/anubis/client/event/impl/TickEvent;)V
+  14: #104 REF_invokeStatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #182 (Ljava/lang/Object;)V
+      #246 REF_invokeStatic net/anubis/client/AnubisClientMod.lambda$onInitializeClient$3:(Lnet/anubis/client/event/impl/TickEvent;)V
+      #239 (Lnet/anubis/client/event/impl/TickEvent;)V
+  15: #104 REF_invokeStatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #182 (Ljava/lang/Object;)V
+      #258 REF_invokeStatic net/anubis/client/AnubisClientMod.lambda$onInitializeClient$4:(Lnet/anubis/client/event/impl/PacketAppliedEvent;)V
+      #229 (Lnet/anubis/client/event/impl/PacketAppliedEvent;)V
+  16: #104 REF_invokeStatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #269 (Lnet/minecraft/class_310;)V
+      #273 REF_invokeStatic net/anubis/client/AnubisClientMod.lambda$onInitializeClient$5:(Lnet/minecraft/class_310;)V
+      #269 (Lnet/minecraft/class_310;)V
+  17: #104 REF_invokeStatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #269 (Lnet/minecraft/class_310;)V
+      #319 REF_invokeVirtual net/anubis/client/AnubisClientMod.lambda$onInitializeClient$6:(Lnet/minecraft/class_310;)V
+      #269 (Lnet/minecraft/class_310;)V
+  18: #104 REF_invokeStatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #398 (I)Z
+      #401 REF_invokeStatic net/anubis/client/AnubisClientMod.isBoundKeyDown:(I)Z
+      #398 (I)Z

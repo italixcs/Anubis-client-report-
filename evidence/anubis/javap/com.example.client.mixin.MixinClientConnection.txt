@@ -1,0 +1,303 @@
+Classfile analysis-workspace/extracted/run.oEA4CbVx/com/example/client/mixin/MixinClientConnection.class
+  Last modified Oct 13, 2026; size 3585 bytes
+  SHA-256 checksum 3d30f917c17e25864a5743011ec11197c33386ba54e825c0fed56744004592f6
+  Compiled from "MixinClientConnection.java"
+public abstract class com.example.client.mixin.MixinClientConnection
+  minor version: 0
+  major version: 65
+  flags: (0x0421) ACC_PUBLIC, ACC_SUPER, ACC_ABSTRACT
+  this_class: #2                          // com/example/client/mixin/MixinClientConnection
+  super_class: #4                         // java/lang/Object
+  interfaces: 0, fields: 1, methods: 5, attributes: 5
+Constant pool:
+    #1 = Utf8               com/example/client/mixin/MixinClientConnection
+    #2 = Class              #1            // com/example/client/mixin/MixinClientConnection
+    #3 = Utf8               java/lang/Object
+    #4 = Class              #3            // java/lang/Object
+    #5 = Utf8               MixinClientConnection.java
+    #6 = Utf8               Lorg/spongepowered/asm/mixin/Mixin;
+    #7 = Utf8               value
+    #8 = Utf8               Lnet/minecraft/class_2535;
+    #9 = Utf8               java/lang/invoke/MethodHandles$Lookup
+   #10 = Class              #9            // java/lang/invoke/MethodHandles$Lookup
+   #11 = Utf8               java/lang/invoke/MethodHandles
+   #12 = Class              #11           // java/lang/invoke/MethodHandles
+   #13 = Utf8               Lookup
+   #14 = Utf8               anubis$connectionActive
+   #15 = Utf8               Ljava/util/function/BooleanSupplier;
+   #16 = Utf8               Lorg/spongepowered/asm/mixin/Unique;
+   #17 = Utf8               <init>
+   #18 = Utf8               ()V
+   #19 = NameAndType        #17:#18       // "<init>":()V
+   #20 = Methodref          #4.#19        // java/lang/Object."<init>":()V
+   #21 = Utf8               ()Z
+   #22 = MethodType         #21           //  ()Z
+   #23 = Utf8               method_10758
+   #24 = NameAndType        #23:#21       // method_10758:()Z
+   #25 = Methodref          #2.#24        // com/example/client/mixin/MixinClientConnection.method_10758:()Z
+   #26 = MethodHandle       5:#25         // REF_invokeVirtual com/example/client/mixin/MixinClientConnection.method_10758:()Z
+   #27 = Utf8               java/lang/invoke/LambdaMetafactory
+   #28 = Class              #27           // java/lang/invoke/LambdaMetafactory
+   #29 = Utf8               metafactory
+   #30 = Utf8               (Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+   #31 = NameAndType        #29:#30       // metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+   #32 = Methodref          #28.#31       // java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+   #33 = MethodHandle       6:#32         // REF_invokeStatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+   #34 = Utf8               getAsBoolean
+   #35 = Utf8               (Lcom/example/client/mixin/MixinClientConnection;)Ljava/util/function/BooleanSupplier;
+   #36 = NameAndType        #34:#35       // getAsBoolean:(Lcom/example/client/mixin/MixinClientConnection;)Ljava/util/function/BooleanSupplier;
+   #37 = InvokeDynamic      #0:#36        // #0:getAsBoolean:(Lcom/example/client/mixin/MixinClientConnection;)Ljava/util/function/BooleanSupplier;
+   #38 = NameAndType        #14:#15       // anubis$connectionActive:Ljava/util/function/BooleanSupplier;
+   #39 = Fieldref           #2.#38        // com/example/client/mixin/MixinClientConnection.anubis$connectionActive:Ljava/util/function/BooleanSupplier;
+   #40 = Utf8               this
+   #41 = Utf8               Lcom/example/client/mixin/MixinClientConnection;
+   #42 = Utf8               Lorg/spongepowered/asm/mixin/Shadow;
+   #43 = Utf8               method_36121
+   #44 = Utf8               ()Lnet/minecraft/class_2598;
+   #45 = Utf8               anubis$onPacketReceive
+   #46 = Utf8               (Lio/netty/channel/ChannelHandlerContext;Lnet/minecraft/class_2596;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V
+   #47 = Utf8               (Lio/netty/channel/ChannelHandlerContext;Lnet/minecraft/class_2596<*>;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V
+   #48 = Utf8               ctx
+   #49 = Utf8               packet
+   #50 = Utf8               ci
+   #51 = Utf8               Lorg/spongepowered/asm/mixin/injection/Inject;
+   #52 = Utf8               method
+   #53 = Utf8               method_10770
+   #54 = Utf8               at
+   #55 = Utf8               Lorg/spongepowered/asm/mixin/injection/At;
+   #56 = Utf8               HEAD
+   #57 = Utf8               cancellable
+   #58 = Integer            1
+   #59 = NameAndType        #43:#44       // method_36121:()Lnet/minecraft/class_2598;
+   #60 = Methodref          #2.#59        // com/example/client/mixin/MixinClientConnection.method_36121:()Lnet/minecraft/class_2598;
+   #61 = Utf8               net/minecraft/class_2598
+   #62 = Class              #61           // net/minecraft/class_2598
+   #63 = Utf8               field_11942
+   #64 = Utf8               Lnet/minecraft/class_2598;
+   #65 = NameAndType        #63:#64       // field_11942:Lnet/minecraft/class_2598;
+   #66 = Fieldref           #62.#65       // net/minecraft/class_2598.field_11942:Lnet/minecraft/class_2598;
+   #67 = Utf8               net/anubis/client/event/impl/PacketReceiveNettyEvent
+   #68 = Class              #67           // net/anubis/client/event/impl/PacketReceiveNettyEvent
+   #69 = Utf8               dispatchSync
+   #70 = Utf8               (Lnet/minecraft/class_2596;)Z
+   #71 = NameAndType        #69:#70       // dispatchSync:(Lnet/minecraft/class_2596;)Z
+   #72 = Methodref          #68.#71       // net/anubis/client/event/impl/PacketReceiveNettyEvent.dispatchSync:(Lnet/minecraft/class_2596;)Z
+   #73 = Utf8               org/spongepowered/asm/mixin/injection/callback/CallbackInfo
+   #74 = Class              #73           // org/spongepowered/asm/mixin/injection/callback/CallbackInfo
+   #75 = Utf8               cancel
+   #76 = NameAndType        #75:#18       // cancel:()V
+   #77 = Methodref          #74.#76       // org/spongepowered/asm/mixin/injection/callback/CallbackInfo.cancel:()V
+   #78 = Utf8               net/anubis/client/event/impl/PacketReceiveEvent
+   #79 = Class              #78           // net/anubis/client/event/impl/PacketReceiveEvent
+   #80 = Utf8               dispatchAsync
+   #81 = Utf8               (Lnet/minecraft/class_2596;Ljava/util/function/BooleanSupplier;)V
+   #82 = NameAndType        #80:#81       // dispatchAsync:(Lnet/minecraft/class_2596;Ljava/util/function/BooleanSupplier;)V
+   #83 = Methodref          #79.#82       // net/anubis/client/event/impl/PacketReceiveEvent.dispatchAsync:(Lnet/minecraft/class_2596;Ljava/util/function/BooleanSupplier;)V
+   #84 = Utf8               Lio/netty/channel/ChannelHandlerContext;
+   #85 = Utf8               Lnet/minecraft/class_2596<*>;
+   #86 = Utf8               Lnet/minecraft/class_2596;
+   #87 = Utf8               Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;
+   #88 = Utf8               anubis$onPacketSend
+   #89 = Utf8               (Lnet/minecraft/class_2596;Lio/netty/channel/ChannelFutureListener;ZLorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V
+   #90 = Utf8               (Lnet/minecraft/class_2596<*>;Lio/netty/channel/ChannelFutureListener;ZLorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V
+   #91 = Utf8               listener
+   #92 = Utf8               flush
+   #93 = Utf8               method_52906
+   #94 = Utf8               net/anubis/client/event/impl/PacketSendEvent
+   #95 = Class              #94           // net/anubis/client/event/impl/PacketSendEvent
+   #96 = Methodref          #95.#71       // net/anubis/client/event/impl/PacketSendEvent.dispatchSync:(Lnet/minecraft/class_2596;)Z
+   #97 = Utf8               net/anubis/client/util/pvp/ServerRotation
+   #98 = Class              #97           // net/anubis/client/util/pvp/ServerRotation
+   #99 = Utf8               noteSent
+  #100 = Utf8               (Lnet/minecraft/class_2596;)V
+  #101 = NameAndType        #99:#100      // noteSent:(Lnet/minecraft/class_2596;)V
+  #102 = Methodref          #98.#101      // net/anubis/client/util/pvp/ServerRotation.noteSent:(Lnet/minecraft/class_2596;)V
+  #103 = Utf8               Lio/netty/channel/ChannelFutureListener;
+  #104 = Utf8               Z
+  #105 = Utf8               Lnet/fabricmc/api/Environment;
+  #106 = Utf8               Lnet/fabricmc/api/EnvType;
+  #107 = Utf8               CLIENT
+  #108 = Utf8               RuntimeVisibleAnnotations
+  #109 = Utf8               Code
+  #110 = Utf8               LineNumberTable
+  #111 = Utf8               LocalVariableTable
+  #112 = Utf8               StackMapTable
+  #113 = Utf8               LocalVariableTypeTable
+  #114 = Utf8               Signature
+  #115 = Utf8               MethodParameters
+  #116 = Utf8               InnerClasses
+  #117 = Utf8               SourceFile
+  #118 = Utf8               RuntimeInvisibleAnnotations
+  #119 = Utf8               BootstrapMethods
+{
+  private final java.util.function.BooleanSupplier anubis$connectionActive;
+    descriptor: Ljava/util/function/BooleanSupplier;
+    flags: (0x0012) ACC_PRIVATE, ACC_FINAL
+    RuntimeVisibleAnnotations:
+      0: #16()
+        org.spongepowered.asm.mixin.Unique
+
+  public com.example.client.mixin.MixinClientConnection();
+    descriptor: ()V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=2, locals=1, args_size=1
+         0: aload_0
+         1: invokespecial #20                 // Method java/lang/Object."<init>":()V
+         4: aload_0
+         5: aload_0
+         6: invokedynamic #37,  0             // InvokeDynamic #0:getAsBoolean:(Lcom/example/client/mixin/MixinClientConnection;)Ljava/util/function/BooleanSupplier;
+        11: putfield      #39                 // Field anubis$connectionActive:Ljava/util/function/BooleanSupplier;
+        14: return
+      LineNumberTable:
+        line 20: 0
+        line 23: 4
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      15     0  this   Lcom/example/client/mixin/MixinClientConnection;
+
+  public abstract boolean method_10758();
+    descriptor: ()Z
+    flags: (0x0401) ACC_PUBLIC, ACC_ABSTRACT
+    RuntimeVisibleAnnotations:
+      0: #42()
+        org.spongepowered.asm.mixin.Shadow
+
+  public abstract net.minecraft.class_2598 method_36121();
+    descriptor: ()Lnet/minecraft/class_2598;
+    flags: (0x0401) ACC_PUBLIC, ACC_ABSTRACT
+    RuntimeVisibleAnnotations:
+      0: #42()
+        org.spongepowered.asm.mixin.Shadow
+
+  private void anubis$onPacketReceive(io.netty.channel.ChannelHandlerContext, net.minecraft.class_2596<?>, org.spongepowered.asm.mixin.injection.callback.CallbackInfo);
+    descriptor: (Lio/netty/channel/ChannelHandlerContext;Lnet/minecraft/class_2596;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V
+    flags: (0x0002) ACC_PRIVATE
+    Code:
+      stack=2, locals=4, args_size=4
+         0: aload_0
+         1: invokevirtual #60                 // Method method_36121:()Lnet/minecraft/class_2598;
+         4: getstatic     #66                 // Field net/minecraft/class_2598.field_11942:Lnet/minecraft/class_2598;
+         7: if_acmpeq     11
+        10: return
+        11: aload_2
+        12: invokestatic  #72                 // Method net/anubis/client/event/impl/PacketReceiveNettyEvent.dispatchSync:(Lnet/minecraft/class_2596;)Z
+        15: ifeq          23
+        18: aload_3
+        19: invokevirtual #77                 // Method org/spongepowered/asm/mixin/injection/callback/CallbackInfo.cancel:()V
+        22: return
+        23: aload_2
+        24: aload_0
+        25: getfield      #39                 // Field anubis$connectionActive:Ljava/util/function/BooleanSupplier;
+        28: invokestatic  #83                 // Method net/anubis/client/event/impl/PacketReceiveEvent.dispatchAsync:(Lnet/minecraft/class_2596;Ljava/util/function/BooleanSupplier;)V
+        31: return
+      StackMapTable: number_of_entries = 2
+        frame_type = 11 /* same */
+        frame_type = 11 /* same */
+      LineNumberTable:
+        line 31: 0
+        line 32: 11
+        line 33: 18
+        line 34: 22
+        line 36: 23
+        line 37: 31
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      32     0  this   Lcom/example/client/mixin/MixinClientConnection;
+            0      32     1   ctx   Lio/netty/channel/ChannelHandlerContext;
+            0      32     2 packet   Lnet/minecraft/class_2596;
+            0      32     3    ci   Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;
+      LocalVariableTypeTable:
+        Start  Length  Slot  Name   Signature
+            0      32     2 packet   Lnet/minecraft/class_2596<*>;
+    Signature: #47                          // (Lio/netty/channel/ChannelHandlerContext;Lnet/minecraft/class_2596<*>;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V
+    RuntimeVisibleAnnotations:
+      0: #51(#52=[s#53],#54=[@#55(#7=s#56)],#57=Z#58)
+        org.spongepowered.asm.mixin.injection.Inject(
+          method=["method_10770"]
+          at=[@org.spongepowered.asm.mixin.injection.At(
+            value="HEAD"
+          )]
+          cancellable=true
+        )
+    MethodParameters:
+      Name                           Flags
+      ctx
+      packet
+      ci
+
+  private void anubis$onPacketSend(net.minecraft.class_2596<?>, io.netty.channel.ChannelFutureListener, boolean, org.spongepowered.asm.mixin.injection.callback.CallbackInfo);
+    descriptor: (Lnet/minecraft/class_2596;Lio/netty/channel/ChannelFutureListener;ZLorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V
+    flags: (0x0002) ACC_PRIVATE
+    Code:
+      stack=2, locals=5, args_size=5
+         0: aload_0
+         1: invokevirtual #60                 // Method method_36121:()Lnet/minecraft/class_2598;
+         4: getstatic     #66                 // Field net/minecraft/class_2598.field_11942:Lnet/minecraft/class_2598;
+         7: if_acmpeq     11
+        10: return
+        11: aload_1
+        12: invokestatic  #96                 // Method net/anubis/client/event/impl/PacketSendEvent.dispatchSync:(Lnet/minecraft/class_2596;)Z
+        15: ifeq          24
+        18: aload         4
+        20: invokevirtual #77                 // Method org/spongepowered/asm/mixin/injection/callback/CallbackInfo.cancel:()V
+        23: return
+        24: aload_1
+        25: invokestatic  #102                // Method net/anubis/client/util/pvp/ServerRotation.noteSent:(Lnet/minecraft/class_2596;)V
+        28: return
+      StackMapTable: number_of_entries = 2
+        frame_type = 11 /* same */
+        frame_type = 12 /* same */
+      LineNumberTable:
+        line 45: 0
+        line 46: 11
+        line 47: 18
+        line 48: 23
+        line 50: 24
+        line 51: 28
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      29     0  this   Lcom/example/client/mixin/MixinClientConnection;
+            0      29     1 packet   Lnet/minecraft/class_2596;
+            0      29     2 listener   Lio/netty/channel/ChannelFutureListener;
+            0      29     3 flush   Z
+            0      29     4    ci   Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;
+      LocalVariableTypeTable:
+        Start  Length  Slot  Name   Signature
+            0      29     1 packet   Lnet/minecraft/class_2596<*>;
+    Signature: #90                          // (Lnet/minecraft/class_2596<*>;Lio/netty/channel/ChannelFutureListener;ZLorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V
+    RuntimeVisibleAnnotations:
+      0: #51(#52=[s#93],#54=[@#55(#7=s#56)],#57=Z#58)
+        org.spongepowered.asm.mixin.injection.Inject(
+          method=["method_52906"]
+          at=[@org.spongepowered.asm.mixin.injection.At(
+            value="HEAD"
+          )]
+          cancellable=true
+        )
+    MethodParameters:
+      Name                           Flags
+      packet
+      listener
+      flush
+      ci
+}
+InnerClasses:
+  public static final #13= #10 of #12;    // Lookup=class java/lang/invoke/MethodHandles$Lookup of class java/lang/invoke/MethodHandles
+SourceFile: "MixinClientConnection.java"
+RuntimeVisibleAnnotations:
+  0: #105(#7=e#106.#107)
+    net.fabricmc.api.Environment(
+      value=Lnet/fabricmc/api/EnvType;.CLIENT
+    )
+RuntimeInvisibleAnnotations:
+  0: #6(#7=[c#8])
+    org.spongepowered.asm.mixin.Mixin(
+      value=[class Lnet/minecraft/class_2535;]
+    )
+BootstrapMethods:
+  0: #33 REF_invokeStatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #22 ()Z
+      #26 REF_invokeVirtual com/example/client/mixin/MixinClientConnection.method_10758:()Z
+      #22 ()Z

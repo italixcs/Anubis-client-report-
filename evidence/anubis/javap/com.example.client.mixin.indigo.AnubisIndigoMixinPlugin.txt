@@ -1,0 +1,241 @@
+Classfile analysis-workspace/extracted/run.oEA4CbVx/com/example/client/mixin/indigo/AnubisIndigoMixinPlugin.class
+  Last modified Oct 13, 2026; size 2281 bytes
+  SHA-256 checksum b3f3c19c1c40f315a986cc73fb73f2fe2b5516867c198fbea65525480c997986
+  Compiled from "AnubisIndigoMixinPlugin.java"
+public final class com.example.client.mixin.indigo.AnubisIndigoMixinPlugin implements org.spongepowered.asm.mixin.extensibility.IMixinConfigPlugin
+  minor version: 0
+  major version: 65
+  flags: (0x0031) ACC_PUBLIC, ACC_FINAL, ACC_SUPER
+  this_class: #2                          // com/example/client/mixin/indigo/AnubisIndigoMixinPlugin
+  super_class: #4                         // java/lang/Object
+  interfaces: 1, fields: 1, methods: 8, attributes: 2
+Constant pool:
+   #1 = Utf8               com/example/client/mixin/indigo/AnubisIndigoMixinPlugin
+   #2 = Class              #1             // com/example/client/mixin/indigo/AnubisIndigoMixinPlugin
+   #3 = Utf8               java/lang/Object
+   #4 = Class              #3             // java/lang/Object
+   #5 = Utf8               org/spongepowered/asm/mixin/extensibility/IMixinConfigPlugin
+   #6 = Class              #5             // org/spongepowered/asm/mixin/extensibility/IMixinConfigPlugin
+   #7 = Utf8               AnubisIndigoMixinPlugin.java
+   #8 = Utf8               indigoLoaded
+   #9 = Utf8               Z
+  #10 = Utf8               <init>
+  #11 = Utf8               ()V
+  #12 = NameAndType        #10:#11        // "<init>":()V
+  #13 = Methodref          #4.#12         // java/lang/Object."<init>":()V
+  #14 = Utf8               this
+  #15 = Utf8               Lcom/example/client/mixin/indigo/AnubisIndigoMixinPlugin;
+  #16 = Utf8               onLoad
+  #17 = Utf8               (Ljava/lang/String;)V
+  #18 = Utf8               mixinPackage
+  #19 = Utf8               net/fabricmc/loader/api/FabricLoader
+  #20 = Class              #19            // net/fabricmc/loader/api/FabricLoader
+  #21 = Utf8               getInstance
+  #22 = Utf8               ()Lnet/fabricmc/loader/api/FabricLoader;
+  #23 = NameAndType        #21:#22        // getInstance:()Lnet/fabricmc/loader/api/FabricLoader;
+  #24 = InterfaceMethodref #20.#23        // net/fabricmc/loader/api/FabricLoader.getInstance:()Lnet/fabricmc/loader/api/FabricLoader;
+  #25 = Utf8               fabric-renderer-indigo
+  #26 = String             #25            // fabric-renderer-indigo
+  #27 = Utf8               isModLoaded
+  #28 = Utf8               (Ljava/lang/String;)Z
+  #29 = NameAndType        #27:#28        // isModLoaded:(Ljava/lang/String;)Z
+  #30 = InterfaceMethodref #20.#29        // net/fabricmc/loader/api/FabricLoader.isModLoaded:(Ljava/lang/String;)Z
+  #31 = NameAndType        #8:#9          // indigoLoaded:Z
+  #32 = Fieldref           #2.#31         // com/example/client/mixin/indigo/AnubisIndigoMixinPlugin.indigoLoaded:Z
+  #33 = Utf8               Ljava/lang/String;
+  #34 = Utf8               getRefMapperConfig
+  #35 = Utf8               ()Ljava/lang/String;
+  #36 = Utf8               shouldApplyMixin
+  #37 = Utf8               (Ljava/lang/String;Ljava/lang/String;)Z
+  #38 = Utf8               targetClassName
+  #39 = Utf8               mixinClassName
+  #40 = Utf8               acceptTargets
+  #41 = Utf8               (Ljava/util/Set;Ljava/util/Set;)V
+  #42 = Utf8               (Ljava/util/Set<Ljava/lang/String;>;Ljava/util/Set<Ljava/lang/String;>;)V
+  #43 = Utf8               myTargets
+  #44 = Utf8               otherTargets
+  #45 = Utf8               Ljava/util/Set<Ljava/lang/String;>;
+  #46 = Utf8               Ljava/util/Set;
+  #47 = Utf8               getMixins
+  #48 = Utf8               ()Ljava/util/List;
+  #49 = Utf8               ()Ljava/util/List<Ljava/lang/String;>;
+  #50 = Utf8               preApply
+  #51 = Utf8               (Ljava/lang/String;Lorg/objectweb/asm/tree/ClassNode;Ljava/lang/String;Lorg/spongepowered/asm/mixin/extensibility/IMixinInfo;)V
+  #52 = Utf8               targetClass
+  #53 = Utf8               mixinInfo
+  #54 = Utf8               Lorg/objectweb/asm/tree/ClassNode;
+  #55 = Utf8               Lorg/spongepowered/asm/mixin/extensibility/IMixinInfo;
+  #56 = Utf8               postApply
+  #57 = Utf8               Lnet/fabricmc/api/Environment;
+  #58 = Utf8               value
+  #59 = Utf8               Lnet/fabricmc/api/EnvType;
+  #60 = Utf8               CLIENT
+  #61 = Utf8               Code
+  #62 = Utf8               LineNumberTable
+  #63 = Utf8               LocalVariableTable
+  #64 = Utf8               MethodParameters
+  #65 = Utf8               LocalVariableTypeTable
+  #66 = Utf8               Signature
+  #67 = Utf8               SourceFile
+  #68 = Utf8               RuntimeVisibleAnnotations
+{
+  private boolean indigoLoaded;
+    descriptor: Z
+    flags: (0x0002) ACC_PRIVATE
+
+  public com.example.client.mixin.indigo.AnubisIndigoMixinPlugin();
+    descriptor: ()V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: invokespecial #13                 // Method java/lang/Object."<init>":()V
+         4: return
+      LineNumberTable:
+        line 11: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       5     0  this   Lcom/example/client/mixin/indigo/AnubisIndigoMixinPlugin;
+
+  public void onLoad(java.lang.String);
+    descriptor: (Ljava/lang/String;)V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=3, locals=2, args_size=2
+         0: aload_0
+         1: invokestatic  #24                 // InterfaceMethod net/fabricmc/loader/api/FabricLoader.getInstance:()Lnet/fabricmc/loader/api/FabricLoader;
+         4: ldc           #26                 // String fabric-renderer-indigo
+         6: invokeinterface #30,  2           // InterfaceMethod net/fabricmc/loader/api/FabricLoader.isModLoaded:(Ljava/lang/String;)Z
+        11: putfield      #32                 // Field indigoLoaded:Z
+        14: return
+      LineNumberTable:
+        line 16: 0
+        line 17: 14
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      15     0  this   Lcom/example/client/mixin/indigo/AnubisIndigoMixinPlugin;
+            0      15     1 mixinPackage   Ljava/lang/String;
+    MethodParameters:
+      Name                           Flags
+      mixinPackage
+
+  public java.lang.String getRefMapperConfig();
+    descriptor: ()Ljava/lang/String;
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aconst_null
+         1: areturn
+      LineNumberTable:
+        line 21: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       2     0  this   Lcom/example/client/mixin/indigo/AnubisIndigoMixinPlugin;
+
+  public boolean shouldApplyMixin(java.lang.String, java.lang.String);
+    descriptor: (Ljava/lang/String;Ljava/lang/String;)Z
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=1, locals=3, args_size=3
+         0: aload_0
+         1: getfield      #32                 // Field indigoLoaded:Z
+         4: ireturn
+      LineNumberTable:
+        line 26: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       5     0  this   Lcom/example/client/mixin/indigo/AnubisIndigoMixinPlugin;
+            0       5     1 targetClassName   Ljava/lang/String;
+            0       5     2 mixinClassName   Ljava/lang/String;
+    MethodParameters:
+      Name                           Flags
+      targetClassName
+      mixinClassName
+
+  public void acceptTargets(java.util.Set<java.lang.String>, java.util.Set<java.lang.String>);
+    descriptor: (Ljava/util/Set;Ljava/util/Set;)V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=0, locals=3, args_size=3
+         0: return
+      LineNumberTable:
+        line 31: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       1     0  this   Lcom/example/client/mixin/indigo/AnubisIndigoMixinPlugin;
+            0       1     1 myTargets   Ljava/util/Set;
+            0       1     2 otherTargets   Ljava/util/Set;
+      LocalVariableTypeTable:
+        Start  Length  Slot  Name   Signature
+            0       1     1 myTargets   Ljava/util/Set<Ljava/lang/String;>;
+            0       1     2 otherTargets   Ljava/util/Set<Ljava/lang/String;>;
+    Signature: #42                          // (Ljava/util/Set<Ljava/lang/String;>;Ljava/util/Set<Ljava/lang/String;>;)V
+    MethodParameters:
+      Name                           Flags
+      myTargets
+      otherTargets
+
+  public java.util.List<java.lang.String> getMixins();
+    descriptor: ()Ljava/util/List;
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aconst_null
+         1: areturn
+      LineNumberTable:
+        line 35: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       2     0  this   Lcom/example/client/mixin/indigo/AnubisIndigoMixinPlugin;
+    Signature: #49                          // ()Ljava/util/List<Ljava/lang/String;>;
+
+  public void preApply(java.lang.String, org.objectweb.asm.tree.ClassNode, java.lang.String, org.spongepowered.asm.mixin.extensibility.IMixinInfo);
+    descriptor: (Ljava/lang/String;Lorg/objectweb/asm/tree/ClassNode;Ljava/lang/String;Lorg/spongepowered/asm/mixin/extensibility/IMixinInfo;)V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=0, locals=5, args_size=5
+         0: return
+      LineNumberTable:
+        line 40: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       1     0  this   Lcom/example/client/mixin/indigo/AnubisIndigoMixinPlugin;
+            0       1     1 targetClassName   Ljava/lang/String;
+            0       1     2 targetClass   Lorg/objectweb/asm/tree/ClassNode;
+            0       1     3 mixinClassName   Ljava/lang/String;
+            0       1     4 mixinInfo   Lorg/spongepowered/asm/mixin/extensibility/IMixinInfo;
+    MethodParameters:
+      Name                           Flags
+      targetClassName
+      targetClass
+      mixinClassName
+      mixinInfo
+
+  public void postApply(java.lang.String, org.objectweb.asm.tree.ClassNode, java.lang.String, org.spongepowered.asm.mixin.extensibility.IMixinInfo);
+    descriptor: (Ljava/lang/String;Lorg/objectweb/asm/tree/ClassNode;Ljava/lang/String;Lorg/spongepowered/asm/mixin/extensibility/IMixinInfo;)V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=0, locals=5, args_size=5
+         0: return
+      LineNumberTable:
+        line 44: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       1     0  this   Lcom/example/client/mixin/indigo/AnubisIndigoMixinPlugin;
+            0       1     1 targetClassName   Ljava/lang/String;
+            0       1     2 targetClass   Lorg/objectweb/asm/tree/ClassNode;
+            0       1     3 mixinClassName   Ljava/lang/String;
+            0       1     4 mixinInfo   Lorg/spongepowered/asm/mixin/extensibility/IMixinInfo;
+    MethodParameters:
+      Name                           Flags
+      targetClassName
+      targetClass
+      mixinClassName
+      mixinInfo
+}
+SourceFile: "AnubisIndigoMixinPlugin.java"
+RuntimeVisibleAnnotations:
+  0: #57(#58=e#59.#60)
+    net.fabricmc.api.Environment(
+      value=Lnet/fabricmc/api/EnvType;.CLIENT
+    )

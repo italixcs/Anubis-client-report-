@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 370" role="img" aria-labelledby="title desc">
+  <title id="title">Account safety meter — credential-storage caution</title>
+  <desc id="desc">The middle of three evidence categories is selected. No stealing path identified, but plaintext saved account tokens are confirmed. Categories are not percentages or probabilities.</desc>
+  <rect width="1280" height="370" rx="20" fill="#102030"/>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="40" y="49" fill="#f1f5fa" font-size="27" font-weight="700">THE ACCOUNT-SAFETY METER</text>
+    <text x="40" y="79" fill="#9cb1c4" font-size="17">Evidence category · account and session-token scope</text>
+    <rect x="40" y="111" width="380" height="98" rx="10" fill="#1d3a36"/>
+    <rect x="450" y="111" width="380" height="98" rx="10" fill="#e5bc69" stroke="#fae4b0" stroke-width="3"/>
+    <rect x="860" y="111" width="380" height="98" rx="10" fill="#402d37"/>
+    <text x="230" y="152" text-anchor="middle" fill="#bad8cc" font-size="22">No credential issue</text>
+    <text x="230" y="181" text-anchor="middle" fill="#bad8cc" font-size="22">identified</text>
+    <text x="640" y="151" text-anchor="middle" fill="#142131" font-size="23" font-weight="700">Credential-storage</text>
+    <text x="640" y="181" text-anchor="middle" fill="#142131" font-size="23" font-weight="700">caution</text>
+    <text x="1050" y="151" text-anchor="middle" fill="#ddbec8" font-size="22">Stealing path</text>
+    <text x="1050" y="181" text-anchor="middle" fill="#ddbec8" font-size="22">confirmed</text>
+    <path d="M626 232L640 216L654 232Z" fill="#e5bc69"/>
+    <text x="640" y="258" text-anchor="middle" fill="#e5bc69" font-size="15" font-weight="700" letter-spacing="2">CURRENT ASSESSMENT</text>
+    <text x="40" y="303" fill="#d7e2ec" font-size="20">No theft route identified. Plaintext token storage is a real local exposure.</text>
+    <text x="40" y="337" fill="#95acbf" font-size="16">This is not an antivirus verdict, likelihood estimate, or guarantee of complete runtime safety.</text>
+  </g>
+</svg>

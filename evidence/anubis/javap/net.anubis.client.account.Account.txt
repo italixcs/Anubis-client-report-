@@ -1,0 +1,345 @@
+Classfile analysis-workspace/extracted/run.oEA4CbVx/net/anubis/client/account/Account.class
+  Last modified Oct 13, 2026; size 2441 bytes
+  SHA-256 checksum b2fd0361d6800642dcd9062ab984fd8f771c4106f725ca3dfe82f6907e3ca7ac
+  Compiled from "Account.java"
+public final class net.anubis.client.account.Account
+  minor version: 0
+  major version: 65
+  flags: (0x0031) ACC_PUBLIC, ACC_FINAL, ACC_SUPER
+  this_class: #2                          // net/anubis/client/account/Account
+  super_class: #4                         // java/lang/Object
+  interfaces: 0, fields: 5, methods: 10, attributes: 4
+Constant pool:
+   #1 = Utf8               net/anubis/client/account/Account
+   #2 = Class              #1             // net/anubis/client/account/Account
+   #3 = Utf8               java/lang/Object
+   #4 = Class              #3             // java/lang/Object
+   #5 = Utf8               Account.java
+   #6 = Utf8               java/lang/invoke/MethodHandles$Lookup
+   #7 = Class              #6             // java/lang/invoke/MethodHandles$Lookup
+   #8 = Utf8               java/lang/invoke/MethodHandles
+   #9 = Class              #8             // java/lang/invoke/MethodHandles
+  #10 = Utf8               Lookup
+  #11 = Utf8               id
+  #12 = Utf8               Ljava/lang/String;
+  #13 = Utf8               type
+  #14 = Utf8               Lnet/anubis/client/account/AccountType;
+  #15 = Utf8               name
+  #16 = Utf8               uuid
+  #17 = Utf8               secret
+  #18 = Utf8               <init>
+  #19 = Utf8               (Ljava/lang/String;Lnet/anubis/client/account/AccountType;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+  #20 = Utf8               ()V
+  #21 = NameAndType        #18:#20        // "<init>":()V
+  #22 = Methodref          #4.#21         // java/lang/Object."<init>":()V
+  #23 = NameAndType        #11:#12        // id:Ljava/lang/String;
+  #24 = Fieldref           #2.#23         // net/anubis/client/account/Account.id:Ljava/lang/String;
+  #25 = NameAndType        #13:#14        // type:Lnet/anubis/client/account/AccountType;
+  #26 = Fieldref           #2.#25         // net/anubis/client/account/Account.type:Lnet/anubis/client/account/AccountType;
+  #27 = NameAndType        #15:#12        // name:Ljava/lang/String;
+  #28 = Fieldref           #2.#27         // net/anubis/client/account/Account.name:Ljava/lang/String;
+  #29 = NameAndType        #16:#12        // uuid:Ljava/lang/String;
+  #30 = Fieldref           #2.#29         // net/anubis/client/account/Account.uuid:Ljava/lang/String;
+  #31 = NameAndType        #17:#12        // secret:Ljava/lang/String;
+  #32 = Fieldref           #2.#31         // net/anubis/client/account/Account.secret:Ljava/lang/String;
+  #33 = Utf8               this
+  #34 = Utf8               Lnet/anubis/client/account/Account;
+  #35 = Utf8               ()Lnet/anubis/client/account/AccountType;
+  #36 = Utf8               ()Ljava/lang/String;
+  #37 = Utf8               withLogin
+  #38 = Utf8               (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lnet/anubis/client/account/Account;
+  #39 = NameAndType        #18:#19        // "<init>":(Ljava/lang/String;Lnet/anubis/client/account/AccountType;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+  #40 = Methodref          #2.#39         // net/anubis/client/account/Account."<init>":(Ljava/lang/String;Lnet/anubis/client/account/AccountType;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+  #41 = Utf8               equals
+  #42 = Utf8               (Ljava/lang/Object;)Z
+  #43 = Utf8               other
+  #44 = Utf8               java/lang/String
+  #45 = Class              #44            // java/lang/String
+  #46 = NameAndType        #41:#42        // equals:(Ljava/lang/Object;)Z
+  #47 = Methodref          #45.#46        // java/lang/String.equals:(Ljava/lang/Object;)Z
+  #48 = Utf8               account
+  #49 = Utf8               Ljava/lang/Object;
+  #50 = Utf8               hashCode
+  #51 = Utf8               ()I
+  #52 = NameAndType        #50:#51        // hashCode:()I
+  #53 = Methodref          #45.#52        // java/lang/String.hashCode:()I
+  #54 = Utf8               toString
+  #55 = Utf8               net/anubis/client/account/AccountType
+  #56 = Class              #55            // net/anubis/client/account/AccountType
+  #57 = Utf8               label
+  #58 = NameAndType        #57:#36        // label:()Ljava/lang/String;
+  #59 = Methodref          #56.#58        // net/anubis/client/account/AccountType.label:()Ljava/lang/String;
+  #60 = Utf8               \u0001 \u0001
+  #61 = String             #60            // \u0001 \u0001
+  #62 = Utf8               java/lang/invoke/StringConcatFactory
+  #63 = Class              #62            // java/lang/invoke/StringConcatFactory
+  #64 = Utf8               makeConcatWithConstants
+  #65 = Utf8               (Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+  #66 = NameAndType        #64:#65        // makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+  #67 = Methodref          #63.#66        // java/lang/invoke/StringConcatFactory.makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+  #68 = MethodHandle       6:#67          // REF_invokeStatic java/lang/invoke/StringConcatFactory.makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+  #69 = Utf8               (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+  #70 = NameAndType        #64:#69        // makeConcatWithConstants:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+  #71 = InvokeDynamic      #0:#70         // #0:makeConcatWithConstants:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+  #72 = Utf8               Lnet/fabricmc/api/Environment;
+  #73 = Utf8               value
+  #74 = Utf8               Lnet/fabricmc/api/EnvType;
+  #75 = Utf8               CLIENT
+  #76 = Utf8               Code
+  #77 = Utf8               LineNumberTable
+  #78 = Utf8               LocalVariableTable
+  #79 = Utf8               MethodParameters
+  #80 = Utf8               StackMapTable
+  #81 = Utf8               InnerClasses
+  #82 = Utf8               SourceFile
+  #83 = Utf8               RuntimeVisibleAnnotations
+  #84 = Utf8               BootstrapMethods
+{
+  private final java.lang.String id;
+    descriptor: Ljava/lang/String;
+    flags: (0x0012) ACC_PRIVATE, ACC_FINAL
+
+  private final net.anubis.client.account.AccountType type;
+    descriptor: Lnet/anubis/client/account/AccountType;
+    flags: (0x0012) ACC_PRIVATE, ACC_FINAL
+
+  private final java.lang.String name;
+    descriptor: Ljava/lang/String;
+    flags: (0x0012) ACC_PRIVATE, ACC_FINAL
+
+  private final java.lang.String uuid;
+    descriptor: Ljava/lang/String;
+    flags: (0x0012) ACC_PRIVATE, ACC_FINAL
+
+  private final java.lang.String secret;
+    descriptor: Ljava/lang/String;
+    flags: (0x0012) ACC_PRIVATE, ACC_FINAL
+
+  net.anubis.client.account.Account(java.lang.String, net.anubis.client.account.AccountType, java.lang.String, java.lang.String, java.lang.String);
+    descriptor: (Ljava/lang/String;Lnet/anubis/client/account/AccountType;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    flags: (0x0000)
+    Code:
+      stack=2, locals=6, args_size=6
+         0: aload_0
+         1: invokespecial #22                 // Method java/lang/Object."<init>":()V
+         4: aload_0
+         5: aload_1
+         6: putfield      #24                 // Field id:Ljava/lang/String;
+         9: aload_0
+        10: aload_2
+        11: putfield      #26                 // Field type:Lnet/anubis/client/account/AccountType;
+        14: aload_0
+        15: aload_3
+        16: putfield      #28                 // Field name:Ljava/lang/String;
+        19: aload_0
+        20: aload         4
+        22: putfield      #30                 // Field uuid:Ljava/lang/String;
+        25: aload_0
+        26: aload         5
+        28: putfield      #32                 // Field secret:Ljava/lang/String;
+        31: return
+      LineNumberTable:
+        line 11: 0
+        line 12: 4
+        line 13: 9
+        line 14: 14
+        line 15: 19
+        line 16: 25
+        line 17: 31
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      32     0  this   Lnet/anubis/client/account/Account;
+            0      32     1    id   Ljava/lang/String;
+            0      32     2  type   Lnet/anubis/client/account/AccountType;
+            0      32     3  name   Ljava/lang/String;
+            0      32     4  uuid   Ljava/lang/String;
+            0      32     5 secret   Ljava/lang/String;
+    MethodParameters:
+      Name                           Flags
+      id
+      type
+      name
+      uuid
+      secret
+
+  public net.anubis.client.account.AccountType type();
+    descriptor: ()Lnet/anubis/client/account/AccountType;
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: getfield      #26                 // Field type:Lnet/anubis/client/account/AccountType;
+         4: areturn
+      LineNumberTable:
+        line 20: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       5     0  this   Lnet/anubis/client/account/Account;
+
+  public java.lang.String name();
+    descriptor: ()Ljava/lang/String;
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: getfield      #28                 // Field name:Ljava/lang/String;
+         4: areturn
+      LineNumberTable:
+        line 24: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       5     0  this   Lnet/anubis/client/account/Account;
+
+  public java.lang.String uuid();
+    descriptor: ()Ljava/lang/String;
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: getfield      #30                 // Field uuid:Ljava/lang/String;
+         4: areturn
+      LineNumberTable:
+        line 28: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       5     0  this   Lnet/anubis/client/account/Account;
+
+  public java.lang.String id();
+    descriptor: ()Ljava/lang/String;
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: getfield      #24                 // Field id:Ljava/lang/String;
+         4: areturn
+      LineNumberTable:
+        line 32: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       5     0  this   Lnet/anubis/client/account/Account;
+
+  java.lang.String secret();
+    descriptor: ()Ljava/lang/String;
+    flags: (0x0000)
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: getfield      #32                 // Field secret:Ljava/lang/String;
+         4: areturn
+      LineNumberTable:
+        line 36: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       5     0  this   Lnet/anubis/client/account/Account;
+
+  net.anubis.client.account.Account withLogin(java.lang.String, java.lang.String, java.lang.String);
+    descriptor: (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lnet/anubis/client/account/Account;
+    flags: (0x0000)
+    Code:
+      stack=7, locals=4, args_size=4
+         0: new           #2                  // class net/anubis/client/account/Account
+         3: dup
+         4: aload_0
+         5: getfield      #24                 // Field id:Ljava/lang/String;
+         8: aload_0
+         9: getfield      #26                 // Field type:Lnet/anubis/client/account/AccountType;
+        12: aload_1
+        13: aload_2
+        14: aload_3
+        15: invokespecial #40                 // Method "<init>":(Ljava/lang/String;Lnet/anubis/client/account/AccountType;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+        18: areturn
+      LineNumberTable:
+        line 40: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      19     0  this   Lnet/anubis/client/account/Account;
+            0      19     1  name   Ljava/lang/String;
+            0      19     2  uuid   Ljava/lang/String;
+            0      19     3 secret   Ljava/lang/String;
+    MethodParameters:
+      Name                           Flags
+      name
+      uuid
+      secret
+
+  public boolean equals(java.lang.Object);
+    descriptor: (Ljava/lang/Object;)Z
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=2, locals=3, args_size=2
+         0: aload_1
+         1: instanceof    #2                  // class net/anubis/client/account/Account
+         4: ifeq          30
+         7: aload_1
+         8: checkcast     #2                  // class net/anubis/client/account/Account
+        11: astore_2
+        12: aload_2
+        13: getfield      #24                 // Field id:Ljava/lang/String;
+        16: aload_0
+        17: getfield      #24                 // Field id:Ljava/lang/String;
+        20: invokevirtual #47                 // Method java/lang/String.equals:(Ljava/lang/Object;)Z
+        23: ifeq          30
+        26: iconst_1
+        27: goto          31
+        30: iconst_0
+        31: ireturn
+      StackMapTable: number_of_entries = 2
+        frame_type = 30 /* same */
+        frame_type = 64 /* same_locals_1_stack_item */
+          stack = [ int ]
+      LineNumberTable:
+        line 45: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+           12      18     2 account   Lnet/anubis/client/account/Account;
+            0      32     0  this   Lnet/anubis/client/account/Account;
+            0      32     1 other   Ljava/lang/Object;
+    MethodParameters:
+      Name                           Flags
+      other
+
+  public int hashCode();
+    descriptor: ()I
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: getfield      #24                 // Field id:Ljava/lang/String;
+         4: invokevirtual #53                 // Method java/lang/String.hashCode:()I
+         7: ireturn
+      LineNumberTable:
+        line 50: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       8     0  this   Lnet/anubis/client/account/Account;
+
+  public java.lang.String toString();
+    descriptor: ()Ljava/lang/String;
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=2, locals=1, args_size=1
+         0: aload_0
+         1: getfield      #26                 // Field type:Lnet/anubis/client/account/AccountType;
+         4: invokevirtual #59                 // Method net/anubis/client/account/AccountType.label:()Ljava/lang/String;
+         7: aload_0
+         8: getfield      #28                 // Field name:Ljava/lang/String;
+        11: invokedynamic #71,  0             // InvokeDynamic #0:makeConcatWithConstants:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+        16: areturn
+      LineNumberTable:
+        line 55: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      17     0  this   Lnet/anubis/client/account/Account;
+}
+InnerClasses:
+  public static final #10= #7 of #9;      // Lookup=class java/lang/invoke/MethodHandles$Lookup of class java/lang/invoke/MethodHandles
+SourceFile: "Account.java"
+RuntimeVisibleAnnotations:
+  0: #72(#73=e#74.#75)
+    net.fabricmc.api.Environment(
+      value=Lnet/fabricmc/api/EnvType;.CLIENT
+    )
+BootstrapMethods:
+  0: #68 REF_invokeStatic java/lang/invoke/StringConcatFactory.makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #61 \u0001 \u0001

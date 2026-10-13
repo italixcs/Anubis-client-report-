@@ -1,0 +1,13 @@
+{
+  "outer_class_files": 1110,
+  "nested_class_files": 570,
+  "total_methods": 20878,
+  "outer_static_initializers": 323,
+  "jadx_source_files": 663,
+  "cfr_source_files": 663,
+  "jadx_placeholder_files": 25,
+  "parser_errors": 0,
+  "cfr_placeholder_files": 6,
+  "selected_javap_disassemblies": 30,
+  "android_dex_classes": 13
+}

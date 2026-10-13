@@ -1,0 +1,841 @@
+Classfile analysis-workspace/extracted/run.oEA4CbVx/net/anubis/client/account/AuthHttp.class
+  Last modified Oct 13, 2026; size 8440 bytes
+  SHA-256 checksum 50ef7110a69ad1f6aa24aaf9af4821f888fd4212e4fb042b3cb0f2cadbabd5e8
+  Compiled from "AuthHttp.java"
+final class net.anubis.client.account.AuthHttp
+  minor version: 0
+  major version: 65
+  flags: (0x0030) ACC_FINAL, ACC_SUPER
+  this_class: #2                          // net/anubis/client/account/AuthHttp
+  super_class: #4                         // java/lang/Object
+  interfaces: 0, fields: 3, methods: 10, attributes: 5
+Constant pool:
+    #1 = Utf8               net/anubis/client/account/AuthHttp
+    #2 = Class              #1            // net/anubis/client/account/AuthHttp
+    #3 = Utf8               java/lang/Object
+    #4 = Class              #3            // java/lang/Object
+    #5 = Utf8               AuthHttp.java
+    #6 = Utf8               net/anubis/client/account/AuthHttp$Reply
+    #7 = Class              #6            // net/anubis/client/account/AuthHttp$Reply
+    #8 = Utf8               java/net/http/HttpRequest$Builder
+    #9 = Class              #8            // java/net/http/HttpRequest$Builder
+   #10 = Utf8               java/net/http/HttpRequest
+   #11 = Class              #10           // java/net/http/HttpRequest
+   #12 = Utf8               Builder
+   #13 = Utf8               java/net/http/HttpRequest$BodyPublishers
+   #14 = Class              #13           // java/net/http/HttpRequest$BodyPublishers
+   #15 = Utf8               BodyPublishers
+   #16 = Utf8               java/net/http/HttpRequest$BodyPublisher
+   #17 = Class              #16           // java/net/http/HttpRequest$BodyPublisher
+   #18 = Utf8               BodyPublisher
+   #19 = Utf8               Reply
+   #20 = Utf8               java/net/http/HttpResponse$BodyHandlers
+   #21 = Class              #20           // java/net/http/HttpResponse$BodyHandlers
+   #22 = Utf8               java/net/http/HttpResponse
+   #23 = Class              #22           // java/net/http/HttpResponse
+   #24 = Utf8               BodyHandlers
+   #25 = Utf8               java/net/http/HttpResponse$BodyHandler
+   #26 = Class              #25           // java/net/http/HttpResponse$BodyHandler
+   #27 = Utf8               BodyHandler
+   #28 = Utf8               java/util/Map$Entry
+   #29 = Class              #28           // java/util/Map$Entry
+   #30 = Utf8               java/util/Map
+   #31 = Class              #30           // java/util/Map
+   #32 = Utf8               Entry
+   #33 = Utf8               java/net/http/HttpClient$Builder
+   #34 = Class              #33           // java/net/http/HttpClient$Builder
+   #35 = Utf8               java/net/http/HttpClient
+   #36 = Class              #35           // java/net/http/HttpClient
+   #37 = Utf8               java/net/http/HttpClient$Redirect
+   #38 = Class              #37           // java/net/http/HttpClient$Redirect
+   #39 = Utf8               Redirect
+   #40 = Utf8               java/lang/invoke/MethodHandles$Lookup
+   #41 = Class              #40           // java/lang/invoke/MethodHandles$Lookup
+   #42 = Utf8               java/lang/invoke/MethodHandles
+   #43 = Class              #42           // java/lang/invoke/MethodHandles
+   #44 = Utf8               Lookup
+   #45 = Utf8               CLIENT
+   #46 = Utf8               Ljava/net/http/HttpClient;
+   #47 = Utf8               TIMEOUT
+   #48 = Utf8               Ljava/time/Duration;
+   #49 = Utf8               USER_AGENT
+   #50 = Utf8               Ljava/lang/String;
+   #51 = Utf8               AnubisClient
+   #52 = String             #51           // AnubisClient
+   #53 = Utf8               <init>
+   #54 = Utf8               ()V
+   #55 = NameAndType        #53:#54       // "<init>":()V
+   #56 = Methodref          #4.#55        // java/lang/Object."<init>":()V
+   #57 = Utf8               this
+   #58 = Utf8               Lnet/anubis/client/account/AuthHttp;
+   #59 = Utf8               postForm
+   #60 = Utf8               (Ljava/lang/String;Ljava/util/Map;)Lnet/anubis/client/account/AuthHttp$Reply;
+   #61 = Utf8               (Ljava/lang/String;Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;)Lnet/anubis/client/account/AuthHttp$Reply;
+   #62 = Utf8               java/lang/InterruptedException
+   #63 = Class              #62           // java/lang/InterruptedException
+   #64 = Utf8               url
+   #65 = Utf8               form
+   #66 = Utf8               entrySet
+   #67 = Utf8               ()Ljava/util/Set;
+   #68 = NameAndType        #66:#67       // entrySet:()Ljava/util/Set;
+   #69 = InterfaceMethodref #31.#68       // java/util/Map.entrySet:()Ljava/util/Set;
+   #70 = Utf8               java/util/Set
+   #71 = Class              #70           // java/util/Set
+   #72 = Utf8               stream
+   #73 = Utf8               ()Ljava/util/stream/Stream;
+   #74 = NameAndType        #72:#73       // stream:()Ljava/util/stream/Stream;
+   #75 = InterfaceMethodref #71.#74       // java/util/Set.stream:()Ljava/util/stream/Stream;
+   #76 = Utf8               (Ljava/lang/Object;)Ljava/lang/Object;
+   #77 = MethodType         #76           //  (Ljava/lang/Object;)Ljava/lang/Object;
+   #78 = Utf8               lambda$postForm$0
+   #79 = Utf8               (Ljava/util/Map$Entry;)Ljava/lang/String;
+   #80 = NameAndType        #78:#79       // lambda$postForm$0:(Ljava/util/Map$Entry;)Ljava/lang/String;
+   #81 = Methodref          #2.#80        // net/anubis/client/account/AuthHttp.lambda$postForm$0:(Ljava/util/Map$Entry;)Ljava/lang/String;
+   #82 = MethodHandle       6:#81         // REF_invokeStatic net/anubis/client/account/AuthHttp.lambda$postForm$0:(Ljava/util/Map$Entry;)Ljava/lang/String;
+   #83 = MethodType         #79           //  (Ljava/util/Map$Entry;)Ljava/lang/String;
+   #84 = Utf8               java/lang/invoke/LambdaMetafactory
+   #85 = Class              #84           // java/lang/invoke/LambdaMetafactory
+   #86 = Utf8               metafactory
+   #87 = Utf8               (Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+   #88 = NameAndType        #86:#87       // metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+   #89 = Methodref          #85.#88       // java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+   #90 = MethodHandle       6:#89         // REF_invokeStatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+   #91 = Utf8               apply
+   #92 = Utf8               ()Ljava/util/function/Function;
+   #93 = NameAndType        #91:#92       // apply:()Ljava/util/function/Function;
+   #94 = InvokeDynamic      #0:#93        // #0:apply:()Ljava/util/function/Function;
+   #95 = Utf8               java/util/stream/Stream
+   #96 = Class              #95           // java/util/stream/Stream
+   #97 = Utf8               map
+   #98 = Utf8               (Ljava/util/function/Function;)Ljava/util/stream/Stream;
+   #99 = NameAndType        #97:#98       // map:(Ljava/util/function/Function;)Ljava/util/stream/Stream;
+  #100 = InterfaceMethodref #96.#99       // java/util/stream/Stream.map:(Ljava/util/function/Function;)Ljava/util/stream/Stream;
+  #101 = Utf8               &
+  #102 = String             #101          // &
+  #103 = Utf8               java/util/stream/Collectors
+  #104 = Class              #103          // java/util/stream/Collectors
+  #105 = Utf8               joining
+  #106 = Utf8               (Ljava/lang/CharSequence;)Ljava/util/stream/Collector;
+  #107 = NameAndType        #105:#106     // joining:(Ljava/lang/CharSequence;)Ljava/util/stream/Collector;
+  #108 = Methodref          #104.#107     // java/util/stream/Collectors.joining:(Ljava/lang/CharSequence;)Ljava/util/stream/Collector;
+  #109 = Utf8               collect
+  #110 = Utf8               (Ljava/util/stream/Collector;)Ljava/lang/Object;
+  #111 = NameAndType        #109:#110     // collect:(Ljava/util/stream/Collector;)Ljava/lang/Object;
+  #112 = InterfaceMethodref #96.#111      // java/util/stream/Stream.collect:(Ljava/util/stream/Collector;)Ljava/lang/Object;
+  #113 = Utf8               java/lang/String
+  #114 = Class              #113          // java/lang/String
+  #115 = Utf8               java/net/URI
+  #116 = Class              #115          // java/net/URI
+  #117 = Utf8               create
+  #118 = Utf8               (Ljava/lang/String;)Ljava/net/URI;
+  #119 = NameAndType        #117:#118     // create:(Ljava/lang/String;)Ljava/net/URI;
+  #120 = Methodref          #116.#119     // java/net/URI.create:(Ljava/lang/String;)Ljava/net/URI;
+  #121 = Utf8               newBuilder
+  #122 = Utf8               (Ljava/net/URI;)Ljava/net/http/HttpRequest$Builder;
+  #123 = NameAndType        #121:#122     // newBuilder:(Ljava/net/URI;)Ljava/net/http/HttpRequest$Builder;
+  #124 = Methodref          #11.#123      // java/net/http/HttpRequest.newBuilder:(Ljava/net/URI;)Ljava/net/http/HttpRequest$Builder;
+  #125 = Utf8               Content-Type
+  #126 = String             #125          // Content-Type
+  #127 = Utf8               application/x-www-form-urlencoded
+  #128 = String             #127          // application/x-www-form-urlencoded
+  #129 = Utf8               header
+  #130 = Utf8               (Ljava/lang/String;Ljava/lang/String;)Ljava/net/http/HttpRequest$Builder;
+  #131 = NameAndType        #129:#130     // header:(Ljava/lang/String;Ljava/lang/String;)Ljava/net/http/HttpRequest$Builder;
+  #132 = InterfaceMethodref #9.#131       // java/net/http/HttpRequest$Builder.header:(Ljava/lang/String;Ljava/lang/String;)Ljava/net/http/HttpRequest$Builder;
+  #133 = Utf8               ofString
+  #134 = Utf8               (Ljava/lang/String;)Ljava/net/http/HttpRequest$BodyPublisher;
+  #135 = NameAndType        #133:#134     // ofString:(Ljava/lang/String;)Ljava/net/http/HttpRequest$BodyPublisher;
+  #136 = Methodref          #14.#135      // java/net/http/HttpRequest$BodyPublishers.ofString:(Ljava/lang/String;)Ljava/net/http/HttpRequest$BodyPublisher;
+  #137 = Utf8               POST
+  #138 = Utf8               (Ljava/net/http/HttpRequest$BodyPublisher;)Ljava/net/http/HttpRequest$Builder;
+  #139 = NameAndType        #137:#138     // POST:(Ljava/net/http/HttpRequest$BodyPublisher;)Ljava/net/http/HttpRequest$Builder;
+  #140 = InterfaceMethodref #9.#139       // java/net/http/HttpRequest$Builder.POST:(Ljava/net/http/HttpRequest$BodyPublisher;)Ljava/net/http/HttpRequest$Builder;
+  #141 = Utf8               send
+  #142 = Utf8               (Ljava/lang/String;Ljava/net/http/HttpRequest$Builder;)Lnet/anubis/client/account/AuthHttp$Reply;
+  #143 = NameAndType        #141:#142     // send:(Ljava/lang/String;Ljava/net/http/HttpRequest$Builder;)Lnet/anubis/client/account/AuthHttp$Reply;
+  #144 = Methodref          #2.#143       // net/anubis/client/account/AuthHttp.send:(Ljava/lang/String;Ljava/net/http/HttpRequest$Builder;)Lnet/anubis/client/account/AuthHttp$Reply;
+  #145 = Utf8               Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;
+  #146 = Utf8               Ljava/util/Map;
+  #147 = Utf8               body
+  #148 = Utf8               postJson
+  #149 = Utf8               (Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;)Lnet/anubis/client/account/AuthHttp$Reply;
+  #150 = Utf8               (Ljava/lang/String;Ljava/lang/String;Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;)Lnet/anubis/client/account/AuthHttp$Reply;
+  #151 = Utf8               headers
+  #152 = Utf8               application/json
+  #153 = String             #152          // application/json
+  #154 = Utf8               java/nio/charset/StandardCharsets
+  #155 = Class              #154          // java/nio/charset/StandardCharsets
+  #156 = Utf8               UTF_8
+  #157 = Utf8               Ljava/nio/charset/Charset;
+  #158 = NameAndType        #156:#157     // UTF_8:Ljava/nio/charset/Charset;
+  #159 = Fieldref           #155.#158     // java/nio/charset/StandardCharsets.UTF_8:Ljava/nio/charset/Charset;
+  #160 = Utf8               (Ljava/lang/String;Ljava/nio/charset/Charset;)Ljava/net/http/HttpRequest$BodyPublisher;
+  #161 = NameAndType        #133:#160     // ofString:(Ljava/lang/String;Ljava/nio/charset/Charset;)Ljava/net/http/HttpRequest$BodyPublisher;
+  #162 = Methodref          #14.#161      // java/net/http/HttpRequest$BodyPublishers.ofString:(Ljava/lang/String;Ljava/nio/charset/Charset;)Ljava/net/http/HttpRequest$BodyPublisher;
+  #163 = Utf8               java/util/Objects
+  #164 = Class              #163          // java/util/Objects
+  #165 = Utf8               requireNonNull
+  #166 = NameAndType        #165:#76      // requireNonNull:(Ljava/lang/Object;)Ljava/lang/Object;
+  #167 = Methodref          #164.#166     // java/util/Objects.requireNonNull:(Ljava/lang/Object;)Ljava/lang/Object;
+  #168 = Utf8               (Ljava/lang/Object;Ljava/lang/Object;)V
+  #169 = MethodType         #168          //  (Ljava/lang/Object;Ljava/lang/Object;)V
+  #170 = MethodHandle       9:#132        // REF_invokeInterface java/net/http/HttpRequest$Builder.header:(Ljava/lang/String;Ljava/lang/String;)Ljava/net/http/HttpRequest$Builder;
+  #171 = Utf8               (Ljava/lang/String;Ljava/lang/String;)V
+  #172 = MethodType         #171          //  (Ljava/lang/String;Ljava/lang/String;)V
+  #173 = Utf8               accept
+  #174 = Utf8               (Ljava/net/http/HttpRequest$Builder;)Ljava/util/function/BiConsumer;
+  #175 = NameAndType        #173:#174     // accept:(Ljava/net/http/HttpRequest$Builder;)Ljava/util/function/BiConsumer;
+  #176 = InvokeDynamic      #1:#175       // #1:accept:(Ljava/net/http/HttpRequest$Builder;)Ljava/util/function/BiConsumer;
+  #177 = Utf8               forEach
+  #178 = Utf8               (Ljava/util/function/BiConsumer;)V
+  #179 = NameAndType        #177:#178     // forEach:(Ljava/util/function/BiConsumer;)V
+  #180 = InterfaceMethodref #31.#179      // java/util/Map.forEach:(Ljava/util/function/BiConsumer;)V
+  #181 = Utf8               request
+  #182 = Utf8               Ljava/net/http/HttpRequest$Builder;
+  #183 = Utf8               get
+  #184 = Utf8               (Ljava/lang/String;Ljava/lang/String;)Lnet/anubis/client/account/AuthHttp$Reply;
+  #185 = Utf8               bearerToken
+  #186 = Utf8               Authorization
+  #187 = String             #186          // Authorization
+  #188 = Utf8               Bearer \u0001
+  #189 = String             #188          // Bearer \u0001
+  #190 = Utf8               java/lang/invoke/StringConcatFactory
+  #191 = Class              #190          // java/lang/invoke/StringConcatFactory
+  #192 = Utf8               makeConcatWithConstants
+  #193 = Utf8               (Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+  #194 = NameAndType        #192:#193     // makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+  #195 = Methodref          #191.#194     // java/lang/invoke/StringConcatFactory.makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+  #196 = MethodHandle       6:#195        // REF_invokeStatic java/lang/invoke/StringConcatFactory.makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+  #197 = Utf8               (Ljava/lang/String;)Ljava/lang/String;
+  #198 = NameAndType        #192:#197     // makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+  #199 = InvokeDynamic      #2:#198       // #2:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+  #200 = Utf8               GET
+  #201 = Utf8               ()Ljava/net/http/HttpRequest$Builder;
+  #202 = NameAndType        #200:#201     // GET:()Ljava/net/http/HttpRequest$Builder;
+  #203 = InterfaceMethodref #9.#202       // java/net/http/HttpRequest$Builder.GET:()Ljava/net/http/HttpRequest$Builder;
+  #204 = Utf8               text
+  #205 = Utf8               (Lcom/google/gson/JsonObject;Ljava/lang/String;)Ljava/lang/String;
+  #206 = Utf8               object
+  #207 = Utf8               key
+  #208 = Utf8               com/google/gson/JsonObject
+  #209 = Class              #208          // com/google/gson/JsonObject
+  #210 = Utf8               (Ljava/lang/String;)Lcom/google/gson/JsonElement;
+  #211 = NameAndType        #183:#210     // get:(Ljava/lang/String;)Lcom/google/gson/JsonElement;
+  #212 = Methodref          #209.#211     // com/google/gson/JsonObject.get:(Ljava/lang/String;)Lcom/google/gson/JsonElement;
+  #213 = Utf8               com/google/gson/JsonElement
+  #214 = Class              #213          // com/google/gson/JsonElement
+  #215 = Utf8               isJsonPrimitive
+  #216 = Utf8               ()Z
+  #217 = NameAndType        #215:#216     // isJsonPrimitive:()Z
+  #218 = Methodref          #214.#217     // com/google/gson/JsonElement.isJsonPrimitive:()Z
+  #219 = Utf8               getAsString
+  #220 = Utf8               ()Ljava/lang/String;
+  #221 = NameAndType        #219:#220     // getAsString:()Ljava/lang/String;
+  #222 = Methodref          #214.#221     // com/google/gson/JsonElement.getAsString:()Ljava/lang/String;
+  #223 = Utf8               Lcom/google/gson/JsonObject;
+  #224 = Utf8               value
+  #225 = Utf8               Lcom/google/gson/JsonElement;
+  #226 = Utf8               (Lcom/google/gson/JsonObject;Ljava/lang/String;)Lcom/google/gson/JsonObject;
+  #227 = Utf8               isJsonObject
+  #228 = NameAndType        #227:#216     // isJsonObject:()Z
+  #229 = Methodref          #214.#228     // com/google/gson/JsonElement.isJsonObject:()Z
+  #230 = Utf8               getAsJsonObject
+  #231 = Utf8               ()Lcom/google/gson/JsonObject;
+  #232 = NameAndType        #230:#231     // getAsJsonObject:()Lcom/google/gson/JsonObject;
+  #233 = Methodref          #214.#232     // com/google/gson/JsonElement.getAsJsonObject:()Lcom/google/gson/JsonObject;
+  #234 = Utf8               java/io/IOException
+  #235 = Class              #234          // java/io/IOException
+  #236 = NameAndType        #45:#46       // CLIENT:Ljava/net/http/HttpClient;
+  #237 = Fieldref           #2.#236       // net/anubis/client/account/AuthHttp.CLIENT:Ljava/net/http/HttpClient;
+  #238 = NameAndType        #47:#48       // TIMEOUT:Ljava/time/Duration;
+  #239 = Fieldref           #2.#238       // net/anubis/client/account/AuthHttp.TIMEOUT:Ljava/time/Duration;
+  #240 = Utf8               timeout
+  #241 = Utf8               (Ljava/time/Duration;)Ljava/net/http/HttpRequest$Builder;
+  #242 = NameAndType        #240:#241     // timeout:(Ljava/time/Duration;)Ljava/net/http/HttpRequest$Builder;
+  #243 = InterfaceMethodref #9.#242       // java/net/http/HttpRequest$Builder.timeout:(Ljava/time/Duration;)Ljava/net/http/HttpRequest$Builder;
+  #244 = Utf8               Accept
+  #245 = String             #244          // Accept
+  #246 = Utf8               User-Agent
+  #247 = String             #246          // User-Agent
+  #248 = Utf8               build
+  #249 = Utf8               ()Ljava/net/http/HttpRequest;
+  #250 = NameAndType        #248:#249     // build:()Ljava/net/http/HttpRequest;
+  #251 = InterfaceMethodref #9.#250       // java/net/http/HttpRequest$Builder.build:()Ljava/net/http/HttpRequest;
+  #252 = Utf8               (Ljava/nio/charset/Charset;)Ljava/net/http/HttpResponse$BodyHandler;
+  #253 = NameAndType        #133:#252     // ofString:(Ljava/nio/charset/Charset;)Ljava/net/http/HttpResponse$BodyHandler;
+  #254 = Methodref          #21.#253      // java/net/http/HttpResponse$BodyHandlers.ofString:(Ljava/nio/charset/Charset;)Ljava/net/http/HttpResponse$BodyHandler;
+  #255 = Utf8               (Ljava/net/http/HttpRequest;Ljava/net/http/HttpResponse$BodyHandler;)Ljava/net/http/HttpResponse;
+  #256 = NameAndType        #141:#255     // send:(Ljava/net/http/HttpRequest;Ljava/net/http/HttpResponse$BodyHandler;)Ljava/net/http/HttpResponse;
+  #257 = Methodref          #36.#256      // java/net/http/HttpClient.send:(Ljava/net/http/HttpRequest;Ljava/net/http/HttpResponse$BodyHandler;)Ljava/net/http/HttpResponse;
+  #258 = Utf8               statusCode
+  #259 = Utf8               ()I
+  #260 = NameAndType        #258:#259     // statusCode:()I
+  #261 = InterfaceMethodref #23.#260      // java/net/http/HttpResponse.statusCode:()I
+  #262 = Utf8               ()Ljava/lang/Object;
+  #263 = NameAndType        #147:#262     // body:()Ljava/lang/Object;
+  #264 = InterfaceMethodref #23.#263      // java/net/http/HttpResponse.body:()Ljava/lang/Object;
+  #265 = Utf8               parse
+  #266 = Utf8               (Ljava/lang/String;)Lcom/google/gson/JsonObject;
+  #267 = NameAndType        #265:#266     // parse:(Ljava/lang/String;)Lcom/google/gson/JsonObject;
+  #268 = Methodref          #2.#267       // net/anubis/client/account/AuthHttp.parse:(Ljava/lang/String;)Lcom/google/gson/JsonObject;
+  #269 = Utf8               ()Ljava/net/http/HttpHeaders;
+  #270 = NameAndType        #151:#269     // headers:()Ljava/net/http/HttpHeaders;
+  #271 = InterfaceMethodref #23.#270      // java/net/http/HttpResponse.headers:()Ljava/net/http/HttpHeaders;
+  #272 = Utf8               (ILcom/google/gson/JsonObject;Ljava/net/http/HttpHeaders;)V
+  #273 = NameAndType        #53:#272      // "<init>":(ILcom/google/gson/JsonObject;Ljava/net/http/HttpHeaders;)V
+  #274 = Methodref          #7.#273       // net/anubis/client/account/AuthHttp$Reply."<init>":(ILcom/google/gson/JsonObject;Ljava/net/http/HttpHeaders;)V
+  #275 = Utf8               net/anubis/client/account/AccountException
+  #276 = Class              #275          // net/anubis/client/account/AccountException
+  #277 = Utf8               getHost
+  #278 = NameAndType        #277:#220     // getHost:()Ljava/lang/String;
+  #279 = Methodref          #116.#278     // java/net/URI.getHost:()Ljava/lang/String;
+  #280 = Utf8               Couldn\'t reach \u0001 - check your connection
+  #281 = String             #280          // Couldn\'t reach \u0001 - check your connection
+  #282 = InvokeDynamic      #3:#198       // #3:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+  #283 = Utf8               (Ljava/lang/String;Ljava/lang/Throwable;)V
+  #284 = NameAndType        #53:#283      // "<init>":(Ljava/lang/String;Ljava/lang/Throwable;)V
+  #285 = Methodref          #276.#284     // net/anubis/client/account/AccountException."<init>":(Ljava/lang/String;Ljava/lang/Throwable;)V
+  #286 = Utf8               response
+  #287 = Utf8               Ljava/net/http/HttpResponse<Ljava/lang/String;>;
+  #288 = Utf8               Ljava/net/http/HttpResponse;
+  #289 = Utf8               e
+  #290 = Utf8               Ljava/io/IOException;
+  #291 = Utf8               java/lang/RuntimeException
+  #292 = Class              #291          // java/lang/RuntimeException
+  #293 = Utf8               com/google/gson/JsonParser
+  #294 = Class              #293          // com/google/gson/JsonParser
+  #295 = Utf8               parseString
+  #296 = NameAndType        #295:#210     // parseString:(Ljava/lang/String;)Lcom/google/gson/JsonElement;
+  #297 = Methodref          #294.#296     // com/google/gson/JsonParser.parseString:(Ljava/lang/String;)Lcom/google/gson/JsonElement;
+  #298 = Methodref          #209.#55      // com/google/gson/JsonObject."<init>":()V
+  #299 = Utf8               root
+  #300 = Utf8               notJson
+  #301 = Utf8               Ljava/lang/RuntimeException;
+  #302 = Utf8               getKey
+  #303 = NameAndType        #302:#262     // getKey:()Ljava/lang/Object;
+  #304 = InterfaceMethodref #29.#303      // java/util/Map$Entry.getKey:()Ljava/lang/Object;
+  #305 = Utf8               java/net/URLEncoder
+  #306 = Class              #305          // java/net/URLEncoder
+  #307 = Utf8               encode
+  #308 = Utf8               (Ljava/lang/String;Ljava/nio/charset/Charset;)Ljava/lang/String;
+  #309 = NameAndType        #307:#308     // encode:(Ljava/lang/String;Ljava/nio/charset/Charset;)Ljava/lang/String;
+  #310 = Methodref          #306.#309     // java/net/URLEncoder.encode:(Ljava/lang/String;Ljava/nio/charset/Charset;)Ljava/lang/String;
+  #311 = Utf8               getValue
+  #312 = NameAndType        #311:#262     // getValue:()Ljava/lang/Object;
+  #313 = InterfaceMethodref #29.#312      // java/util/Map$Entry.getValue:()Ljava/lang/Object;
+  #314 = Utf8               \u0001=\u0001
+  #315 = String             #314          // \u0001=\u0001
+  #316 = Utf8               (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+  #317 = NameAndType        #192:#316     // makeConcatWithConstants:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+  #318 = InvokeDynamic      #4:#317       // #4:makeConcatWithConstants:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+  #319 = Utf8               Ljava/util/Map$Entry;
+  #320 = Utf8               <clinit>
+  #321 = Utf8               ()Ljava/net/http/HttpClient$Builder;
+  #322 = NameAndType        #121:#321     // newBuilder:()Ljava/net/http/HttpClient$Builder;
+  #323 = Methodref          #36.#322      // java/net/http/HttpClient.newBuilder:()Ljava/net/http/HttpClient$Builder;
+  #324 = Long               8l
+  #326 = Utf8               java/time/Duration
+  #327 = Class              #326          // java/time/Duration
+  #328 = Utf8               ofSeconds
+  #329 = Utf8               (J)Ljava/time/Duration;
+  #330 = NameAndType        #328:#329     // ofSeconds:(J)Ljava/time/Duration;
+  #331 = Methodref          #327.#330     // java/time/Duration.ofSeconds:(J)Ljava/time/Duration;
+  #332 = Utf8               connectTimeout
+  #333 = Utf8               (Ljava/time/Duration;)Ljava/net/http/HttpClient$Builder;
+  #334 = NameAndType        #332:#333     // connectTimeout:(Ljava/time/Duration;)Ljava/net/http/HttpClient$Builder;
+  #335 = InterfaceMethodref #34.#334      // java/net/http/HttpClient$Builder.connectTimeout:(Ljava/time/Duration;)Ljava/net/http/HttpClient$Builder;
+  #336 = Utf8               NEVER
+  #337 = Utf8               Ljava/net/http/HttpClient$Redirect;
+  #338 = NameAndType        #336:#337     // NEVER:Ljava/net/http/HttpClient$Redirect;
+  #339 = Fieldref           #38.#338      // java/net/http/HttpClient$Redirect.NEVER:Ljava/net/http/HttpClient$Redirect;
+  #340 = Utf8               followRedirects
+  #341 = Utf8               (Ljava/net/http/HttpClient$Redirect;)Ljava/net/http/HttpClient$Builder;
+  #342 = NameAndType        #340:#341     // followRedirects:(Ljava/net/http/HttpClient$Redirect;)Ljava/net/http/HttpClient$Builder;
+  #343 = InterfaceMethodref #34.#342      // java/net/http/HttpClient$Builder.followRedirects:(Ljava/net/http/HttpClient$Redirect;)Ljava/net/http/HttpClient$Builder;
+  #344 = Utf8               ()Ljava/net/http/HttpClient;
+  #345 = NameAndType        #248:#344     // build:()Ljava/net/http/HttpClient;
+  #346 = InterfaceMethodref #34.#345      // java/net/http/HttpClient$Builder.build:()Ljava/net/http/HttpClient;
+  #347 = Long               30l
+  #349 = Utf8               Lnet/fabricmc/api/Environment;
+  #350 = Utf8               Lnet/fabricmc/api/EnvType;
+  #351 = Utf8               ConstantValue
+  #352 = Utf8               Code
+  #353 = Utf8               LineNumberTable
+  #354 = Utf8               LocalVariableTable
+  #355 = Utf8               LocalVariableTypeTable
+  #356 = Utf8               Exceptions
+  #357 = Utf8               Signature
+  #358 = Utf8               MethodParameters
+  #359 = Utf8               StackMapTable
+  #360 = Utf8               InnerClasses
+  #361 = Utf8               SourceFile
+  #362 = Utf8               RuntimeVisibleAnnotations
+  #363 = Utf8               BootstrapMethods
+  #364 = Utf8               NestMembers
+{
+  private static final java.net.http.HttpClient CLIENT;
+    descriptor: Ljava/net/http/HttpClient;
+    flags: (0x001a) ACC_PRIVATE, ACC_STATIC, ACC_FINAL
+
+  private static final java.time.Duration TIMEOUT;
+    descriptor: Ljava/time/Duration;
+    flags: (0x001a) ACC_PRIVATE, ACC_STATIC, ACC_FINAL
+
+  private static final java.lang.String USER_AGENT;
+    descriptor: Ljava/lang/String;
+    flags: (0x001a) ACC_PRIVATE, ACC_STATIC, ACC_FINAL
+    ConstantValue: String AnubisClient
+
+  private net.anubis.client.account.AuthHttp();
+    descriptor: ()V
+    flags: (0x0002) ACC_PRIVATE
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: invokespecial #56                 // Method java/lang/Object."<init>":()V
+         4: return
+      LineNumberTable:
+        line 39: 0
+        line 40: 4
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       5     0  this   Lnet/anubis/client/account/AuthHttp;
+
+  static net.anubis.client.account.AuthHttp$Reply postForm(java.lang.String, java.util.Map<java.lang.String, java.lang.String>) throws java.lang.InterruptedException;
+    descriptor: (Ljava/lang/String;Ljava/util/Map;)Lnet/anubis/client/account/AuthHttp$Reply;
+    flags: (0x0008) ACC_STATIC
+    Code:
+      stack=4, locals=3, args_size=2
+         0: aload_1
+         1: invokeinterface #69,  1           // InterfaceMethod java/util/Map.entrySet:()Ljava/util/Set;
+         6: invokeinterface #75,  1           // InterfaceMethod java/util/Set.stream:()Ljava/util/stream/Stream;
+        11: invokedynamic #94,  0             // InvokeDynamic #0:apply:()Ljava/util/function/Function;
+        16: invokeinterface #100,  2          // InterfaceMethod java/util/stream/Stream.map:(Ljava/util/function/Function;)Ljava/util/stream/Stream;
+        21: ldc           #102                // String &
+        23: invokestatic  #108                // Method java/util/stream/Collectors.joining:(Ljava/lang/CharSequence;)Ljava/util/stream/Collector;
+        26: invokeinterface #112,  2          // InterfaceMethod java/util/stream/Stream.collect:(Ljava/util/stream/Collector;)Ljava/lang/Object;
+        31: checkcast     #114                // class java/lang/String
+        34: astore_2
+        35: aload_0
+        36: aload_0
+        37: invokestatic  #120                // Method java/net/URI.create:(Ljava/lang/String;)Ljava/net/URI;
+        40: invokestatic  #124                // Method java/net/http/HttpRequest.newBuilder:(Ljava/net/URI;)Ljava/net/http/HttpRequest$Builder;
+        43: ldc           #126                // String Content-Type
+        45: ldc           #128                // String application/x-www-form-urlencoded
+        47: invokeinterface #132,  3          // InterfaceMethod java/net/http/HttpRequest$Builder.header:(Ljava/lang/String;Ljava/lang/String;)Ljava/net/http/HttpRequest$Builder;
+        52: aload_2
+        53: invokestatic  #136                // Method java/net/http/HttpRequest$BodyPublishers.ofString:(Ljava/lang/String;)Ljava/net/http/HttpRequest$BodyPublisher;
+        56: invokeinterface #140,  2          // InterfaceMethod java/net/http/HttpRequest$Builder.POST:(Ljava/net/http/HttpRequest$BodyPublisher;)Ljava/net/http/HttpRequest$Builder;
+        61: invokestatic  #144                // Method send:(Ljava/lang/String;Ljava/net/http/HttpRequest$Builder;)Lnet/anubis/client/account/AuthHttp$Reply;
+        64: areturn
+      LineNumberTable:
+        line 43: 0
+        line 44: 16
+        line 45: 23
+        line 46: 35
+        line 47: 47
+        line 48: 53
+        line 46: 61
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      65     0   url   Ljava/lang/String;
+            0      65     1  form   Ljava/util/Map;
+           35      30     2  body   Ljava/lang/String;
+      LocalVariableTypeTable:
+        Start  Length  Slot  Name   Signature
+            0      65     1  form   Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;
+    Exceptions:
+      throws java.lang.InterruptedException
+    Signature: #61                          // (Ljava/lang/String;Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;)Lnet/anubis/client/account/AuthHttp$Reply;
+    MethodParameters:
+      Name                           Flags
+      url
+      form
+
+  static net.anubis.client.account.AuthHttp$Reply postJson(java.lang.String, java.lang.String, java.util.Map<java.lang.String, java.lang.String>) throws java.lang.InterruptedException;
+    descriptor: (Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;)Lnet/anubis/client/account/AuthHttp$Reply;
+    flags: (0x0008) ACC_STATIC
+    Code:
+      stack=3, locals=4, args_size=3
+         0: aload_0
+         1: invokestatic  #120                // Method java/net/URI.create:(Ljava/lang/String;)Ljava/net/URI;
+         4: invokestatic  #124                // Method java/net/http/HttpRequest.newBuilder:(Ljava/net/URI;)Ljava/net/http/HttpRequest$Builder;
+         7: ldc           #126                // String Content-Type
+         9: ldc           #153                // String application/json
+        11: invokeinterface #132,  3          // InterfaceMethod java/net/http/HttpRequest$Builder.header:(Ljava/lang/String;Ljava/lang/String;)Ljava/net/http/HttpRequest$Builder;
+        16: aload_1
+        17: getstatic     #159                // Field java/nio/charset/StandardCharsets.UTF_8:Ljava/nio/charset/Charset;
+        20: invokestatic  #162                // Method java/net/http/HttpRequest$BodyPublishers.ofString:(Ljava/lang/String;Ljava/nio/charset/Charset;)Ljava/net/http/HttpRequest$BodyPublisher;
+        23: invokeinterface #140,  2          // InterfaceMethod java/net/http/HttpRequest$Builder.POST:(Ljava/net/http/HttpRequest$BodyPublisher;)Ljava/net/http/HttpRequest$Builder;
+        28: astore_3
+        29: aload_2
+        30: aload_3
+        31: dup
+        32: invokestatic  #167                // Method java/util/Objects.requireNonNull:(Ljava/lang/Object;)Ljava/lang/Object;
+        35: pop
+        36: invokedynamic #176,  0            // InvokeDynamic #1:accept:(Ljava/net/http/HttpRequest$Builder;)Ljava/util/function/BiConsumer;
+        41: invokeinterface #180,  2          // InterfaceMethod java/util/Map.forEach:(Ljava/util/function/BiConsumer;)V
+        46: aload_0
+        47: aload_3
+        48: invokestatic  #144                // Method send:(Ljava/lang/String;Ljava/net/http/HttpRequest$Builder;)Lnet/anubis/client/account/AuthHttp$Reply;
+        51: areturn
+      LineNumberTable:
+        line 52: 0
+        line 53: 11
+        line 54: 20
+        line 55: 29
+        line 56: 46
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      52     0   url   Ljava/lang/String;
+            0      52     1  body   Ljava/lang/String;
+            0      52     2 headers   Ljava/util/Map;
+           29      23     3 request   Ljava/net/http/HttpRequest$Builder;
+      LocalVariableTypeTable:
+        Start  Length  Slot  Name   Signature
+            0      52     2 headers   Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;
+    Exceptions:
+      throws java.lang.InterruptedException
+    Signature: #150                         // (Ljava/lang/String;Ljava/lang/String;Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;)Lnet/anubis/client/account/AuthHttp$Reply;
+    MethodParameters:
+      Name                           Flags
+      url
+      body
+      headers
+
+  static net.anubis.client.account.AuthHttp$Reply get(java.lang.String, java.lang.String) throws java.lang.InterruptedException;
+    descriptor: (Ljava/lang/String;Ljava/lang/String;)Lnet/anubis/client/account/AuthHttp$Reply;
+    flags: (0x0008) ACC_STATIC
+    Code:
+      stack=4, locals=2, args_size=2
+         0: aload_0
+         1: aload_0
+         2: invokestatic  #120                // Method java/net/URI.create:(Ljava/lang/String;)Ljava/net/URI;
+         5: invokestatic  #124                // Method java/net/http/HttpRequest.newBuilder:(Ljava/net/URI;)Ljava/net/http/HttpRequest$Builder;
+         8: ldc           #187                // String Authorization
+        10: aload_1
+        11: invokedynamic #199,  0            // InvokeDynamic #2:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+        16: invokeinterface #132,  3          // InterfaceMethod java/net/http/HttpRequest$Builder.header:(Ljava/lang/String;Ljava/lang/String;)Ljava/net/http/HttpRequest$Builder;
+        21: invokeinterface #203,  1          // InterfaceMethod java/net/http/HttpRequest$Builder.GET:()Ljava/net/http/HttpRequest$Builder;
+        26: invokestatic  #144                // Method send:(Ljava/lang/String;Ljava/net/http/HttpRequest$Builder;)Lnet/anubis/client/account/AuthHttp$Reply;
+        29: areturn
+      LineNumberTable:
+        line 60: 0
+        line 61: 16
+        line 62: 21
+        line 60: 26
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      30     0   url   Ljava/lang/String;
+            0      30     1 bearerToken   Ljava/lang/String;
+    Exceptions:
+      throws java.lang.InterruptedException
+    MethodParameters:
+      Name                           Flags
+      url
+      bearerToken
+
+  static java.lang.String text(com.google.gson.JsonObject, java.lang.String);
+    descriptor: (Lcom/google/gson/JsonObject;Ljava/lang/String;)Ljava/lang/String;
+    flags: (0x0008) ACC_STATIC
+    Code:
+      stack=2, locals=3, args_size=2
+         0: aload_0
+         1: ifnonnull     8
+         4: aconst_null
+         5: goto          13
+         8: aload_0
+         9: aload_1
+        10: invokevirtual #212                // Method com/google/gson/JsonObject.get:(Ljava/lang/String;)Lcom/google/gson/JsonElement;
+        13: astore_2
+        14: aload_2
+        15: ifnull        32
+        18: aload_2
+        19: invokevirtual #218                // Method com/google/gson/JsonElement.isJsonPrimitive:()Z
+        22: ifeq          32
+        25: aload_2
+        26: invokevirtual #222                // Method com/google/gson/JsonElement.getAsString:()Ljava/lang/String;
+        29: goto          33
+        32: aconst_null
+        33: areturn
+      StackMapTable: number_of_entries = 4
+        frame_type = 8 /* same */
+        frame_type = 68 /* same_locals_1_stack_item */
+          stack = [ class com/google/gson/JsonElement ]
+        frame_type = 252 /* append */
+          offset_delta = 18
+          locals = [ class com/google/gson/JsonElement ]
+        frame_type = 64 /* same_locals_1_stack_item */
+          stack = [ class java/lang/String ]
+      LineNumberTable:
+        line 66: 0
+        line 67: 14
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      34     0 object   Lcom/google/gson/JsonObject;
+            0      34     1   key   Ljava/lang/String;
+           14      20     2 value   Lcom/google/gson/JsonElement;
+    MethodParameters:
+      Name                           Flags
+      object
+      key
+
+  static com.google.gson.JsonObject object(com.google.gson.JsonObject, java.lang.String);
+    descriptor: (Lcom/google/gson/JsonObject;Ljava/lang/String;)Lcom/google/gson/JsonObject;
+    flags: (0x0008) ACC_STATIC
+    Code:
+      stack=2, locals=3, args_size=2
+         0: aload_0
+         1: ifnonnull     8
+         4: aconst_null
+         5: goto          13
+         8: aload_0
+         9: aload_1
+        10: invokevirtual #212                // Method com/google/gson/JsonObject.get:(Ljava/lang/String;)Lcom/google/gson/JsonElement;
+        13: astore_2
+        14: aload_2
+        15: ifnull        32
+        18: aload_2
+        19: invokevirtual #229                // Method com/google/gson/JsonElement.isJsonObject:()Z
+        22: ifeq          32
+        25: aload_2
+        26: invokevirtual #233                // Method com/google/gson/JsonElement.getAsJsonObject:()Lcom/google/gson/JsonObject;
+        29: goto          33
+        32: aconst_null
+        33: areturn
+      StackMapTable: number_of_entries = 4
+        frame_type = 8 /* same */
+        frame_type = 68 /* same_locals_1_stack_item */
+          stack = [ class com/google/gson/JsonElement ]
+        frame_type = 252 /* append */
+          offset_delta = 18
+          locals = [ class com/google/gson/JsonElement ]
+        frame_type = 64 /* same_locals_1_stack_item */
+          stack = [ class com/google/gson/JsonObject ]
+      LineNumberTable:
+        line 71: 0
+        line 72: 14
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      34     0 object   Lcom/google/gson/JsonObject;
+            0      34     1   key   Ljava/lang/String;
+           14      20     2 value   Lcom/google/gson/JsonElement;
+    MethodParameters:
+      Name                           Flags
+      object
+      key
+
+  private static net.anubis.client.account.AuthHttp$Reply send(java.lang.String, java.net.http.HttpRequest$Builder) throws java.lang.InterruptedException;
+    descriptor: (Ljava/lang/String;Ljava/net/http/HttpRequest$Builder;)Lnet/anubis/client/account/AuthHttp$Reply;
+    flags: (0x000a) ACC_PRIVATE, ACC_STATIC
+    Code:
+      stack=5, locals=3, args_size=2
+         0: getstatic     #237                // Field CLIENT:Ljava/net/http/HttpClient;
+         3: aload_1
+         4: getstatic     #239                // Field TIMEOUT:Ljava/time/Duration;
+         7: invokeinterface #243,  2          // InterfaceMethod java/net/http/HttpRequest$Builder.timeout:(Ljava/time/Duration;)Ljava/net/http/HttpRequest$Builder;
+        12: ldc           #245                // String Accept
+        14: ldc           #153                // String application/json
+        16: invokeinterface #132,  3          // InterfaceMethod java/net/http/HttpRequest$Builder.header:(Ljava/lang/String;Ljava/lang/String;)Ljava/net/http/HttpRequest$Builder;
+        21: ldc           #247                // String User-Agent
+        23: ldc           #52                 // String AnubisClient
+        25: invokeinterface #132,  3          // InterfaceMethod java/net/http/HttpRequest$Builder.header:(Ljava/lang/String;Ljava/lang/String;)Ljava/net/http/HttpRequest$Builder;
+        30: invokeinterface #251,  1          // InterfaceMethod java/net/http/HttpRequest$Builder.build:()Ljava/net/http/HttpRequest;
+        35: getstatic     #159                // Field java/nio/charset/StandardCharsets.UTF_8:Ljava/nio/charset/Charset;
+        38: invokestatic  #254                // Method java/net/http/HttpResponse$BodyHandlers.ofString:(Ljava/nio/charset/Charset;)Ljava/net/http/HttpResponse$BodyHandler;
+        41: invokevirtual #257                // Method java/net/http/HttpClient.send:(Ljava/net/http/HttpRequest;Ljava/net/http/HttpResponse$BodyHandler;)Ljava/net/http/HttpResponse;
+        44: astore_2
+        45: new           #7                  // class net/anubis/client/account/AuthHttp$Reply
+        48: dup
+        49: aload_2
+        50: invokeinterface #261,  1          // InterfaceMethod java/net/http/HttpResponse.statusCode:()I
+        55: aload_2
+        56: invokeinterface #264,  1          // InterfaceMethod java/net/http/HttpResponse.body:()Ljava/lang/Object;
+        61: checkcast     #114                // class java/lang/String
+        64: invokestatic  #268                // Method parse:(Ljava/lang/String;)Lcom/google/gson/JsonObject;
+        67: aload_2
+        68: invokeinterface #271,  1          // InterfaceMethod java/net/http/HttpResponse.headers:()Ljava/net/http/HttpHeaders;
+        73: invokespecial #274                // Method net/anubis/client/account/AuthHttp$Reply."<init>":(ILcom/google/gson/JsonObject;Ljava/net/http/HttpHeaders;)V
+        76: areturn
+        77: astore_2
+        78: new           #276                // class net/anubis/client/account/AccountException
+        81: dup
+        82: aload_0
+        83: invokestatic  #120                // Method java/net/URI.create:(Ljava/lang/String;)Ljava/net/URI;
+        86: invokevirtual #279                // Method java/net/URI.getHost:()Ljava/lang/String;
+        89: invokedynamic #282,  0            // InvokeDynamic #3:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+        94: aload_2
+        95: invokespecial #285                // Method net/anubis/client/account/AccountException."<init>":(Ljava/lang/String;Ljava/lang/Throwable;)V
+        98: athrow
+      Exception table:
+         from    to  target type
+             0    76    77   Class java/io/IOException
+      StackMapTable: number_of_entries = 1
+        frame_type = 247 /* same_locals_1_stack_item_frame_extended */
+          offset_delta = 77
+          stack = [ class java/io/IOException ]
+      LineNumberTable:
+        line 77: 0
+        line 78: 7
+        line 79: 16
+        line 80: 25
+        line 81: 30
+        line 77: 41
+        line 82: 45
+        line 83: 77
+        line 84: 78
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+           45      32     2 response   Ljava/net/http/HttpResponse;
+           78      21     2     e   Ljava/io/IOException;
+            0      99     0   url   Ljava/lang/String;
+            0      99     1 request   Ljava/net/http/HttpRequest$Builder;
+      LocalVariableTypeTable:
+        Start  Length  Slot  Name   Signature
+           45      32     2 response   Ljava/net/http/HttpResponse<Ljava/lang/String;>;
+    Exceptions:
+      throws java.lang.InterruptedException
+    MethodParameters:
+      Name                           Flags
+      url
+      request
+
+  private static com.google.gson.JsonObject parse(java.lang.String);
+    descriptor: (Ljava/lang/String;)Lcom/google/gson/JsonObject;
+    flags: (0x000a) ACC_PRIVATE, ACC_STATIC
+    Code:
+      stack=2, locals=2, args_size=1
+         0: aload_0
+         1: invokestatic  #297                // Method com/google/gson/JsonParser.parseString:(Ljava/lang/String;)Lcom/google/gson/JsonElement;
+         4: astore_1
+         5: aload_1
+         6: invokevirtual #229                // Method com/google/gson/JsonElement.isJsonObject:()Z
+         9: ifeq          19
+        12: aload_1
+        13: invokevirtual #233                // Method com/google/gson/JsonElement.getAsJsonObject:()Lcom/google/gson/JsonObject;
+        16: goto          26
+        19: new           #209                // class com/google/gson/JsonObject
+        22: dup
+        23: invokespecial #298                // Method com/google/gson/JsonObject."<init>":()V
+        26: areturn
+        27: astore_1
+        28: new           #209                // class com/google/gson/JsonObject
+        31: dup
+        32: invokespecial #298                // Method com/google/gson/JsonObject."<init>":()V
+        35: areturn
+      Exception table:
+         from    to  target type
+             0    26    27   Class java/lang/RuntimeException
+      StackMapTable: number_of_entries = 3
+        frame_type = 252 /* append */
+          offset_delta = 19
+          locals = [ class com/google/gson/JsonElement ]
+        frame_type = 70 /* same_locals_1_stack_item */
+          stack = [ class com/google/gson/JsonObject ]
+        frame_type = 255 /* full_frame */
+          offset_delta = 0
+          locals = [ class java/lang/String ]
+          stack = [ class java/lang/RuntimeException ]
+      LineNumberTable:
+        line 90: 0
+        line 91: 5
+        line 92: 27
+        line 93: 28
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            5      22     1  root   Lcom/google/gson/JsonElement;
+           28       8     1 notJson   Ljava/lang/RuntimeException;
+            0      36     0  body   Ljava/lang/String;
+    MethodParameters:
+      Name                           Flags
+      body
+
+  private static java.lang.String lambda$postForm$0(java.util.Map$Entry);
+    descriptor: (Ljava/util/Map$Entry;)Ljava/lang/String;
+    flags: (0x100a) ACC_PRIVATE, ACC_STATIC, ACC_SYNTHETIC
+    Code:
+      stack=3, locals=1, args_size=1
+         0: aload_0
+         1: invokeinterface #304,  1          // InterfaceMethod java/util/Map$Entry.getKey:()Ljava/lang/Object;
+         6: checkcast     #114                // class java/lang/String
+         9: getstatic     #159                // Field java/nio/charset/StandardCharsets.UTF_8:Ljava/nio/charset/Charset;
+        12: invokestatic  #310                // Method java/net/URLEncoder.encode:(Ljava/lang/String;Ljava/nio/charset/Charset;)Ljava/lang/String;
+        15: aload_0
+        16: invokeinterface #313,  1          // InterfaceMethod java/util/Map$Entry.getValue:()Ljava/lang/Object;
+        21: checkcast     #114                // class java/lang/String
+        24: getstatic     #159                // Field java/nio/charset/StandardCharsets.UTF_8:Ljava/nio/charset/Charset;
+        27: invokestatic  #310                // Method java/net/URLEncoder.encode:(Ljava/lang/String;Ljava/nio/charset/Charset;)Ljava/lang/String;
+        30: invokedynamic #318,  0            // InvokeDynamic #4:makeConcatWithConstants:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+        35: areturn
+      LineNumberTable:
+        line 44: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      36     0     e   Ljava/util/Map$Entry;
+    MethodParameters:
+      Name                           Flags
+      e
+
+  static {};
+    descriptor: ()V
+    flags: (0x0008) ACC_STATIC
+    Code:
+      stack=3, locals=0, args_size=0
+         0: invokestatic  #323                // Method java/net/http/HttpClient.newBuilder:()Ljava/net/http/HttpClient$Builder;
+         3: ldc2_w        #324                // long 8l
+         6: invokestatic  #331                // Method java/time/Duration.ofSeconds:(J)Ljava/time/Duration;
+         9: invokeinterface #335,  2          // InterfaceMethod java/net/http/HttpClient$Builder.connectTimeout:(Ljava/time/Duration;)Ljava/net/http/HttpClient$Builder;
+        14: getstatic     #339                // Field java/net/http/HttpClient$Redirect.NEVER:Ljava/net/http/HttpClient$Redirect;
+        17: invokeinterface #343,  2          // InterfaceMethod java/net/http/HttpClient$Builder.followRedirects:(Ljava/net/http/HttpClient$Redirect;)Ljava/net/http/HttpClient$Builder;
+        22: invokeinterface #346,  1          // InterfaceMethod java/net/http/HttpClient$Builder.build:()Ljava/net/http/HttpClient;
+        27: putstatic     #237                // Field CLIENT:Ljava/net/http/HttpClient;
+        30: ldc2_w        #347                // long 30l
+        33: invokestatic  #331                // Method java/time/Duration.ofSeconds:(J)Ljava/time/Duration;
+        36: putstatic     #239                // Field TIMEOUT:Ljava/time/Duration;
+        39: return
+      LineNumberTable:
+        line 20: 0
+        line 21: 6
+        line 22: 17
+        line 23: 22
+        line 25: 30
+}
+InnerClasses:
+  public static #12= #9 of #11;           // Builder=class java/net/http/HttpRequest$Builder of class java/net/http/HttpRequest
+  public static #15= #14 of #11;          // BodyPublishers=class java/net/http/HttpRequest$BodyPublishers of class java/net/http/HttpRequest
+  public static #18= #17 of #11;          // BodyPublisher=class java/net/http/HttpRequest$BodyPublisher of class java/net/http/HttpRequest
+  static final #19= #7 of #2;             // Reply=class net/anubis/client/account/AuthHttp$Reply of class net/anubis/client/account/AuthHttp
+  public static #24= #21 of #23;          // BodyHandlers=class java/net/http/HttpResponse$BodyHandlers of class java/net/http/HttpResponse
+  public static #27= #26 of #23;          // BodyHandler=class java/net/http/HttpResponse$BodyHandler of class java/net/http/HttpResponse
+  public static #32= #29 of #31;          // Entry=class java/util/Map$Entry of class java/util/Map
+  public static #12= #34 of #36;          // Builder=class java/net/http/HttpClient$Builder of class java/net/http/HttpClient
+  public static final #39= #38 of #36;    // Redirect=class java/net/http/HttpClient$Redirect of class java/net/http/HttpClient
+  public static final #44= #41 of #43;    // Lookup=class java/lang/invoke/MethodHandles$Lookup of class java/lang/invoke/MethodHandles
+SourceFile: "AuthHttp.java"
+RuntimeVisibleAnnotations:
+  0: #349(#224=e#350.#45)
+    net.fabricmc.api.Environment(
+      value=Lnet/fabricmc/api/EnvType;.CLIENT
+    )
+BootstrapMethods:
+  0: #90 REF_invokeStatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #77 (Ljava/lang/Object;)Ljava/lang/Object;
+      #82 REF_invokeStatic net/anubis/client/account/AuthHttp.lambda$postForm$0:(Ljava/util/Map$Entry;)Ljava/lang/String;
+      #83 (Ljava/util/Map$Entry;)Ljava/lang/String;
+  1: #90 REF_invokeStatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #169 (Ljava/lang/Object;Ljava/lang/Object;)V
+      #170 REF_invokeInterface java/net/http/HttpRequest$Builder.header:(Ljava/lang/String;Ljava/lang/String;)Ljava/net/http/HttpRequest$Builder;
+      #172 (Ljava/lang/String;Ljava/lang/String;)V
+  2: #196 REF_invokeStatic java/lang/invoke/StringConcatFactory.makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #189 Bearer \u0001
+  3: #196 REF_invokeStatic java/lang/invoke/StringConcatFactory.makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #281 Couldn\'t reach \u0001 - check your connection
+  4: #196 REF_invokeStatic java/lang/invoke/StringConcatFactory.makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #315 \u0001=\u0001
+NestMembers:
+  net/anubis/client/account/AuthHttp$Reply

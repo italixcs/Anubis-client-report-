@@ -1,0 +1,1261 @@
+Classfile analysis-workspace/extracted/run.oEA4CbVx/net/anubis/client/addon/AddonManager.class
+  Last modified Oct 13, 2026; size 9520 bytes
+  SHA-256 checksum 6dc304fcadb4943f74bbc780e5397b1088e3620d60e7d0c21610a1cbc2d947cb
+  Compiled from "AddonManager.java"
+public final class net.anubis.client.addon.AddonManager
+  minor version: 0
+  major version: 65
+  flags: (0x0031) ACC_PUBLIC, ACC_FINAL, ACC_SUPER
+  this_class: #2                          // net/anubis/client/addon/AddonManager
+  super_class: #4                         // java/lang/Object
+  interfaces: 0, fields: 5, methods: 14, attributes: 4
+Constant pool:
+    #1 = Utf8               net/anubis/client/addon/AddonManager
+    #2 = Class              #1            // net/anubis/client/addon/AddonManager
+    #3 = Utf8               java/lang/Object
+    #4 = Class              #3            // java/lang/Object
+    #5 = Utf8               AddonManager.java
+    #6 = Utf8               net/anubis/client/addon/AnubisAddon$GithubRepo
+    #7 = Class              #6            // net/anubis/client/addon/AnubisAddon$GithubRepo
+    #8 = Utf8               net/anubis/client/addon/AnubisAddon
+    #9 = Class              #8            // net/anubis/client/addon/AnubisAddon
+   #10 = Utf8               GithubRepo
+   #11 = Utf8               java/lang/invoke/MethodHandles$Lookup
+   #12 = Class              #11           // java/lang/invoke/MethodHandles$Lookup
+   #13 = Utf8               java/lang/invoke/MethodHandles
+   #14 = Class              #13           // java/lang/invoke/MethodHandles
+   #15 = Utf8               Lookup
+   #16 = Utf8               LOGGER
+   #17 = Utf8               Lorg/slf4j/Logger;
+   #18 = Utf8               ENTRYPOINT
+   #19 = Utf8               Ljava/lang/String;
+   #20 = Utf8               anubis
+   #21 = String             #20           // anubis
+   #22 = Utf8               CLIENT_PACKAGE
+   #23 = Utf8               net.anubis.client
+   #24 = String             #23           // net.anubis.client
+   #25 = Utf8               addons
+   #26 = Utf8               Ljava/util/List;
+   #27 = Utf8               Ljava/util/List<Lnet/anubis/client/addon/AnubisAddon;>;
+   #28 = Utf8               configLoaded
+   #29 = Utf8               Z
+   #30 = Utf8               <init>
+   #31 = Utf8               ()V
+   #32 = NameAndType        #30:#31       // "<init>":()V
+   #33 = Methodref          #4.#32        // java/lang/Object."<init>":()V
+   #34 = Utf8               this
+   #35 = Utf8               Lnet/anubis/client/addon/AddonManager;
+   #36 = Utf8               ()Ljava/util/List;
+   #37 = Utf8               ()Ljava/util/List<Lnet/anubis/client/addon/AnubisAddon;>;
+   #38 = NameAndType        #25:#26       // addons:Ljava/util/List;
+   #39 = Fieldref           #2.#38        // net/anubis/client/addon/AddonManager.addons:Ljava/util/List;
+   #40 = Utf8               java/util/List
+   #41 = Class              #40           // java/util/List
+   #42 = Utf8               of
+   #43 = NameAndType        #42:#36       // of:()Ljava/util/List;
+   #44 = InterfaceMethodref #41.#43       // java/util/List.of:()Ljava/util/List;
+   #45 = Utf8               loaded
+   #46 = Utf8               init
+   #47 = Utf8               create
+   #48 = NameAndType        #47:#36       // create:()Ljava/util/List;
+   #49 = Methodref          #2.#48        // net/anubis/client/addon/AddonManager.create:()Ljava/util/List;
+   #50 = Utf8               (Ljava/lang/Object;)Z
+   #51 = MethodType         #50           //  (Ljava/lang/Object;)Z
+   #52 = Utf8               lambda$init$0
+   #53 = Utf8               (Lnet/anubis/client/addon/AnubisAddon;)Z
+   #54 = NameAndType        #52:#53       // lambda$init$0:(Lnet/anubis/client/addon/AnubisAddon;)Z
+   #55 = Methodref          #2.#54        // net/anubis/client/addon/AddonManager.lambda$init$0:(Lnet/anubis/client/addon/AnubisAddon;)Z
+   #56 = MethodHandle       6:#55         // REF_invokeStatic net/anubis/client/addon/AddonManager.lambda$init$0:(Lnet/anubis/client/addon/AnubisAddon;)Z
+   #57 = MethodType         #53           //  (Lnet/anubis/client/addon/AnubisAddon;)Z
+   #58 = Utf8               java/lang/invoke/LambdaMetafactory
+   #59 = Class              #58           // java/lang/invoke/LambdaMetafactory
+   #60 = Utf8               metafactory
+   #61 = Utf8               (Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+   #62 = NameAndType        #60:#61       // metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+   #63 = Methodref          #59.#62       // java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+   #64 = MethodHandle       6:#63         // REF_invokeStatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+   #65 = Utf8               test
+   #66 = Utf8               ()Ljava/util/function/Predicate;
+   #67 = NameAndType        #65:#66       // test:()Ljava/util/function/Predicate;
+   #68 = InvokeDynamic      #0:#67        // #0:test:()Ljava/util/function/Predicate;
+   #69 = Utf8               removeIf
+   #70 = Utf8               (Ljava/util/function/Predicate;)Z
+   #71 = NameAndType        #69:#70       // removeIf:(Ljava/util/function/Predicate;)Z
+   #72 = InterfaceMethodref #41.#71       // java/util/List.removeIf:(Ljava/util/function/Predicate;)Z
+   #73 = Utf8               lambda$init$1
+   #74 = NameAndType        #73:#53       // lambda$init$1:(Lnet/anubis/client/addon/AnubisAddon;)Z
+   #75 = Methodref          #2.#74        // net/anubis/client/addon/AddonManager.lambda$init$1:(Lnet/anubis/client/addon/AnubisAddon;)Z
+   #76 = MethodHandle       6:#75         // REF_invokeStatic net/anubis/client/addon/AddonManager.lambda$init$1:(Lnet/anubis/client/addon/AnubisAddon;)Z
+   #77 = InvokeDynamic      #1:#67        // #1:test:()Ljava/util/function/Predicate;
+   #78 = Utf8               iterator
+   #79 = Utf8               ()Ljava/util/Iterator;
+   #80 = NameAndType        #78:#79       // iterator:()Ljava/util/Iterator;
+   #81 = InterfaceMethodref #41.#80       // java/util/List.iterator:()Ljava/util/Iterator;
+   #82 = Utf8               java/util/Iterator
+   #83 = Class              #82           // java/util/Iterator
+   #84 = Utf8               hasNext
+   #85 = Utf8               ()Z
+   #86 = NameAndType        #84:#85       // hasNext:()Z
+   #87 = InterfaceMethodref #83.#86       // java/util/Iterator.hasNext:()Z
+   #88 = Utf8               next
+   #89 = Utf8               ()Ljava/lang/Object;
+   #90 = NameAndType        #88:#89       // next:()Ljava/lang/Object;
+   #91 = InterfaceMethodref #83.#90       // java/util/Iterator.next:()Ljava/lang/Object;
+   #92 = NameAndType        #16:#17       // LOGGER:Lorg/slf4j/Logger;
+   #93 = Fieldref           #2.#92        // net/anubis/client/addon/AddonManager.LOGGER:Lorg/slf4j/Logger;
+   #94 = Utf8               [Anubis] Loaded addon {} v{} by {}
+   #95 = String             #94           // [Anubis] Loaded addon {} v{} by {}
+   #96 = Utf8               name
+   #97 = Utf8               ()Ljava/lang/String;
+   #98 = NameAndType        #96:#97       // name:()Ljava/lang/String;
+   #99 = Methodref          #9.#98        // net/anubis/client/addon/AnubisAddon.name:()Ljava/lang/String;
+  #100 = Utf8               version
+  #101 = NameAndType        #100:#97      // version:()Ljava/lang/String;
+  #102 = Methodref          #9.#101       // net/anubis/client/addon/AnubisAddon.version:()Ljava/lang/String;
+  #103 = Utf8               authors
+  #104 = NameAndType        #103:#36      // authors:()Ljava/util/List;
+  #105 = Methodref          #9.#104       // net/anubis/client/addon/AnubisAddon.authors:()Ljava/util/List;
+  #106 = Utf8               isEmpty
+  #107 = NameAndType        #106:#85      // isEmpty:()Z
+  #108 = InterfaceMethodref #41.#107      // java/util/List.isEmpty:()Z
+  #109 = Utf8               unknown
+  #110 = String             #109          // unknown
+  #111 = Utf8               org/slf4j/Logger
+  #112 = Class              #111          // org/slf4j/Logger
+  #113 = Utf8               java/lang/String
+  #114 = Class              #113          // java/lang/String
+  #115 = Utf8               [Ljava/lang/Object;
+  #116 = Class              #115          // "[Ljava/lang/Object;"
+  #117 = Utf8               ,
+  #118 = String             #117          // ,
+  #119 = Utf8               join
+  #120 = Utf8               (Ljava/lang/CharSequence;Ljava/lang/Iterable;)Ljava/lang/String;
+  #121 = NameAndType        #119:#120     // join:(Ljava/lang/CharSequence;Ljava/lang/Iterable;)Ljava/lang/String;
+  #122 = Methodref          #114.#121     // java/lang/String.join:(Ljava/lang/CharSequence;Ljava/lang/Iterable;)Ljava/lang/String;
+  #123 = Utf8               info
+  #124 = Utf8               (Ljava/lang/String;[Ljava/lang/Object;)V
+  #125 = NameAndType        #123:#124     // info:(Ljava/lang/String;[Ljava/lang/Object;)V
+  #126 = InterfaceMethodref #112.#125     // org/slf4j/Logger.info:(Ljava/lang/String;[Ljava/lang/Object;)V
+  #127 = Utf8               copyOf
+  #128 = Utf8               (Ljava/util/Collection;)Ljava/util/List;
+  #129 = NameAndType        #127:#128     // copyOf:(Ljava/util/Collection;)Ljava/util/List;
+  #130 = InterfaceMethodref #41.#129      // java/util/List.copyOf:(Ljava/util/Collection;)Ljava/util/List;
+  #131 = Utf8               addon
+  #132 = Utf8               Lnet/anubis/client/addon/AnubisAddon;
+  #133 = NameAndType        #28:#29       // configLoaded:Z
+  #134 = Fieldref           #2.#133       // net/anubis/client/addon/AddonManager.configLoaded:Z
+  #135 = Utf8               java/util/ArrayList
+  #136 = Class              #135          // java/util/ArrayList
+  #137 = Utf8               (Ljava/util/Collection;)V
+  #138 = NameAndType        #30:#137      // "<init>":(Ljava/util/Collection;)V
+  #139 = Methodref          #136.#138     // java/util/ArrayList."<init>":(Ljava/util/Collection;)V
+  #140 = Utf8               lambda$configLoaded$2
+  #141 = NameAndType        #140:#53      // lambda$configLoaded$2:(Lnet/anubis/client/addon/AnubisAddon;)Z
+  #142 = Methodref          #2.#141       // net/anubis/client/addon/AddonManager.lambda$configLoaded$2:(Lnet/anubis/client/addon/AnubisAddon;)Z
+  #143 = MethodHandle       6:#142        // REF_invokeStatic net/anubis/client/addon/AddonManager.lambda$configLoaded$2:(Lnet/anubis/client/addon/AnubisAddon;)Z
+  #144 = InvokeDynamic      #2:#67        // #2:test:()Ljava/util/function/Predicate;
+  #145 = Utf8               java/lang/RuntimeException
+  #146 = Class              #145          // java/lang/RuntimeException
+  #147 = Utf8               java/lang/LinkageError
+  #148 = Class              #147          // java/lang/LinkageError
+  #149 = Methodref          #136.#32      // java/util/ArrayList."<init>":()V
+  #150 = Utf8               net/fabricmc/loader/api/FabricLoader
+  #151 = Class              #150          // net/fabricmc/loader/api/FabricLoader
+  #152 = Utf8               getInstance
+  #153 = Utf8               ()Lnet/fabricmc/loader/api/FabricLoader;
+  #154 = NameAndType        #152:#153     // getInstance:()Lnet/fabricmc/loader/api/FabricLoader;
+  #155 = InterfaceMethodref #151.#154     // net/fabricmc/loader/api/FabricLoader.getInstance:()Lnet/fabricmc/loader/api/FabricLoader;
+  #156 = Utf8               getEntrypointContainers
+  #157 = Utf8               (Ljava/lang/String;Ljava/lang/Class;)Ljava/util/List;
+  #158 = NameAndType        #156:#157     // getEntrypointContainers:(Ljava/lang/String;Ljava/lang/Class;)Ljava/util/List;
+  #159 = InterfaceMethodref #151.#158     // net/fabricmc/loader/api/FabricLoader.getEntrypointContainers:(Ljava/lang/String;Ljava/lang/Class;)Ljava/util/List;
+  #160 = Utf8               java/lang/Throwable
+  #161 = Class              #160          // java/lang/Throwable
+  #162 = Utf8               [Anubis] Could not list addons; starting without them
+  #163 = String             #162          // [Anubis] Could not list addons; starting without them
+  #164 = Utf8               error
+  #165 = Utf8               (Ljava/lang/String;Ljava/lang/Throwable;)V
+  #166 = NameAndType        #164:#165     // error:(Ljava/lang/String;Ljava/lang/Throwable;)V
+  #167 = InterfaceMethodref #112.#166     // org/slf4j/Logger.error:(Ljava/lang/String;Ljava/lang/Throwable;)V
+  #168 = Utf8               net/fabricmc/loader/api/entrypoint/EntrypointContainer
+  #169 = Class              #168          // net/fabricmc/loader/api/entrypoint/EntrypointContainer
+  #170 = Utf8               getProvider
+  #171 = Utf8               ()Lnet/fabricmc/loader/api/ModContainer;
+  #172 = NameAndType        #170:#171     // getProvider:()Lnet/fabricmc/loader/api/ModContainer;
+  #173 = InterfaceMethodref #169.#172     // net/fabricmc/loader/api/entrypoint/EntrypointContainer.getProvider:()Lnet/fabricmc/loader/api/ModContainer;
+  #174 = Utf8               net/fabricmc/loader/api/ModContainer
+  #175 = Class              #174          // net/fabricmc/loader/api/ModContainer
+  #176 = Utf8               getMetadata
+  #177 = Utf8               ()Lnet/fabricmc/loader/api/metadata/ModMetadata;
+  #178 = NameAndType        #176:#177     // getMetadata:()Lnet/fabricmc/loader/api/metadata/ModMetadata;
+  #179 = InterfaceMethodref #175.#178     // net/fabricmc/loader/api/ModContainer.getMetadata:()Lnet/fabricmc/loader/api/metadata/ModMetadata;
+  #180 = Utf8               getEntrypoint
+  #181 = NameAndType        #180:#89      // getEntrypoint:()Ljava/lang/Object;
+  #182 = InterfaceMethodref #169.#181     // net/fabricmc/loader/api/entrypoint/EntrypointContainer.getEntrypoint:()Ljava/lang/Object;
+  #183 = Utf8               getPackage
+  #184 = NameAndType        #183:#97      // getPackage:()Ljava/lang/String;
+  #185 = Methodref          #9.#184       // net/anubis/client/addon/AnubisAddon.getPackage:()Ljava/lang/String;
+  #186 = Utf8               net/fabricmc/loader/api/metadata/ModMetadata
+  #187 = Class              #186          // net/fabricmc/loader/api/metadata/ModMetadata
+  #188 = Utf8               [Anubis] Addon {} ({}) could not be created and is skipped
+  #189 = String             #188          // [Anubis] Addon {} ({}) could not be created and is skipped
+  #190 = Utf8               getName
+  #191 = NameAndType        #190:#97      // getName:()Ljava/lang/String;
+  #192 = InterfaceMethodref #187.#191     // net/fabricmc/loader/api/metadata/ModMetadata.getName:()Ljava/lang/String;
+  #193 = Utf8               getId
+  #194 = NameAndType        #193:#97      // getId:()Ljava/lang/String;
+  #195 = InterfaceMethodref #187.#194     // net/fabricmc/loader/api/metadata/ModMetadata.getId:()Ljava/lang/String;
+  #196 = NameAndType        #164:#124     // error:(Ljava/lang/String;[Ljava/lang/Object;)V
+  #197 = InterfaceMethodref #112.#196     // org/slf4j/Logger.error:(Ljava/lang/String;[Ljava/lang/Object;)V
+  #198 = Utf8               bind
+  #199 = Utf8               (Lnet/fabricmc/loader/api/metadata/ModMetadata;)V
+  #200 = NameAndType        #198:#199     // bind:(Lnet/fabricmc/loader/api/metadata/ModMetadata;)V
+  #201 = Methodref          #9.#200       // net/anubis/client/addon/AnubisAddon.bind:(Lnet/fabricmc/loader/api/metadata/ModMetadata;)V
+  #202 = Utf8               packageProblem
+  #203 = Utf8               (Lnet/anubis/client/addon/AnubisAddon;Ljava/lang/String;Ljava/util/List;)Ljava/lang/String;
+  #204 = NameAndType        #202:#203     // packageProblem:(Lnet/anubis/client/addon/AnubisAddon;Ljava/lang/String;Ljava/util/List;)Ljava/lang/String;
+  #205 = Methodref          #2.#204       // net/anubis/client/addon/AddonManager.packageProblem:(Lnet/anubis/client/addon/AnubisAddon;Ljava/lang/String;Ljava/util/List;)Ljava/lang/String;
+  #206 = Utf8               [Anubis] Addon {} is skipped: {}
+  #207 = String             #206          // [Anubis] Addon {} is skipped: {}
+  #208 = Utf8               (Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
+  #209 = NameAndType        #164:#208     // error:(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
+  #210 = InterfaceMethodref #112.#209     // org/slf4j/Logger.error:(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
+  #211 = Utf8               packageName
+  #212 = NameAndType        #211:#19      // packageName:Ljava/lang/String;
+  #213 = Fieldref           #9.#212       // net/anubis/client/addon/AnubisAddon.packageName:Ljava/lang/String;
+  #214 = Utf8               add
+  #215 = NameAndType        #214:#50      // add:(Ljava/lang/Object;)Z
+  #216 = InterfaceMethodref #41.#215      // java/util/List.add:(Ljava/lang/Object;)Z
+  #217 = Utf8               containers
+  #218 = Utf8               Ljava/util/List<Lnet/fabricmc/loader/api/entrypoint/EntrypointContainer<Lnet/anubis/client/addon/AnubisAddon;>;>;
+  #219 = Utf8               e
+  #220 = Utf8               Ljava/lang/Throwable;
+  #221 = Utf8               pkg
+  #222 = Utf8               metadata
+  #223 = Utf8               Lnet/fabricmc/loader/api/metadata/ModMetadata;
+  #224 = Utf8               problem
+  #225 = Utf8               container
+  #226 = Utf8               Lnet/fabricmc/loader/api/entrypoint/EntrypointContainer<Lnet/anubis/client/addon/AnubisAddon;>;
+  #227 = Utf8               Lnet/fabricmc/loader/api/entrypoint/EntrypointContainer;
+  #228 = Utf8               created
+  #229 = Utf8               (Lnet/anubis/client/addon/AnubisAddon;Ljava/lang/String;Ljava/util/List<Lnet/anubis/client/addon/AnubisAddon;>;)Ljava/lang/String;
+  #230 = Utf8               getClass
+  #231 = Utf8               ()Ljava/lang/Class;
+  #232 = NameAndType        #230:#231     // getClass:()Ljava/lang/Class;
+  #233 = Methodref          #4.#232       // java/lang/Object.getClass:()Ljava/lang/Class;
+  #234 = Utf8               java/lang/Class
+  #235 = Class              #234          // java/lang/Class
+  #236 = Methodref          #235.#191     // java/lang/Class.getName:()Ljava/lang/String;
+  #237 = Utf8               \u0001.
+  #238 = String             #237          // \u0001.
+  #239 = Utf8               java/lang/invoke/StringConcatFactory
+  #240 = Class              #239          // java/lang/invoke/StringConcatFactory
+  #241 = Utf8               makeConcatWithConstants
+  #242 = Utf8               (Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+  #243 = NameAndType        #241:#242     // makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+  #244 = Methodref          #240.#243     // java/lang/invoke/StringConcatFactory.makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+  #245 = MethodHandle       6:#244        // REF_invokeStatic java/lang/invoke/StringConcatFactory.makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+  #246 = Utf8               (Ljava/lang/String;)Ljava/lang/String;
+  #247 = NameAndType        #241:#246     // makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+  #248 = InvokeDynamic      #3:#247       // #3:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+  #249 = Utf8               startsWith
+  #250 = Utf8               (Ljava/lang/String;)Z
+  #251 = NameAndType        #249:#250     // startsWith:(Ljava/lang/String;)Z
+  #252 = Methodref          #114.#251     // java/lang/String.startsWith:(Ljava/lang/String;)Z
+  #253 = Utf8               getPackage() is \"\u0001\", which doesn\'t hold its class \u0001
+  #254 = String             #253          // getPackage() is \"\u0001\", which doesn\'t hold its class \u0001
+  #255 = Utf8               (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+  #256 = NameAndType        #241:#255     // makeConcatWithConstants:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+  #257 = InvokeDynamic      #4:#256       // #4:makeConcatWithConstants:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+  #258 = Utf8               overlap
+  #259 = Utf8               (Ljava/lang/String;Ljava/lang/String;)Z
+  #260 = NameAndType        #258:#259     // overlap:(Ljava/lang/String;Ljava/lang/String;)Z
+  #261 = Methodref          #2.#260       // net/anubis/client/addon/AddonManager.overlap:(Ljava/lang/String;Ljava/lang/String;)Z
+  #262 = Utf8               its package \u0001 overlaps Anubis\' own (net.anubis.client)
+  #263 = String             #262          // its package \u0001 overlaps Anubis\' own (net.anubis.client)
+  #264 = InvokeDynamic      #5:#247       // #5:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+  #265 = Utf8               its package \u0001 overlaps \u0001\'s (\u0001); an addon made from the template needs its package renamed
+  #266 = String             #265          // its package \u0001 overlaps \u0001\'s (\u0001); an addon made from the template needs its package renamed
+  #267 = Utf8               (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+  #268 = NameAndType        #241:#267     // makeConcatWithConstants:(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+  #269 = InvokeDynamic      #6:#268       // #6:makeConcatWithConstants:(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+  #270 = Utf8               other
+  #271 = Utf8               a
+  #272 = Utf8               b
+  #273 = Utf8               run
+  #274 = Utf8               (Lnet/anubis/client/addon/AnubisAddon;Ljava/lang/String;Ljava/util/function/Consumer;)Z
+  #275 = Utf8               (Lnet/anubis/client/addon/AnubisAddon;Ljava/lang/String;Ljava/util/function/Consumer<Lnet/anubis/client/addon/AnubisAddon;>;)Z
+  #276 = Utf8               step
+  #277 = Utf8               action
+  #278 = Utf8               java/util/function/Consumer
+  #279 = Class              #278          // java/util/function/Consumer
+  #280 = Utf8               accept
+  #281 = Utf8               (Ljava/lang/Object;)V
+  #282 = NameAndType        #280:#281     // accept:(Ljava/lang/Object;)V
+  #283 = InterfaceMethodref #279.#282     // java/util/function/Consumer.accept:(Ljava/lang/Object;)V
+  #284 = Utf8               [Anubis] Addon {} failed to {} and is skipped{}
+  #285 = String             #284          // [Anubis] Addon {} failed to {} and is skipped{}
+  #286 = Utf8               reportHint
+  #287 = Utf8               (Lnet/anubis/client/addon/AnubisAddon;)Ljava/lang/String;
+  #288 = NameAndType        #286:#287     // reportHint:(Lnet/anubis/client/addon/AnubisAddon;)Ljava/lang/String;
+  #289 = Methodref          #2.#288       // net/anubis/client/addon/AddonManager.reportHint:(Lnet/anubis/client/addon/AnubisAddon;)Ljava/lang/String;
+  #290 = Utf8               Ljava/util/function/Consumer<Lnet/anubis/client/addon/AnubisAddon;>;
+  #291 = Utf8               Ljava/util/function/Consumer;
+  #292 = Utf8               getRepo
+  #293 = Utf8               ()Lnet/anubis/client/addon/AnubisAddon$GithubRepo;
+  #294 = NameAndType        #292:#293     // getRepo:()Lnet/anubis/client/addon/AnubisAddon$GithubRepo;
+  #295 = Methodref          #9.#294       // net/anubis/client/addon/AnubisAddon.getRepo:()Lnet/anubis/client/addon/AnubisAddon$GithubRepo;
+  #296 = Utf8               url
+  #297 = NameAndType        #296:#97      // url:()Ljava/lang/String;
+  #298 = Methodref          #7.#297       // net/anubis/client/addon/AnubisAddon$GithubRepo.url:()Ljava/lang/String;
+  #299 = Utf8               \u0001/issues
+  #300 = String             #299          // \u0001/issues
+  #301 = InvokeDynamic      #7:#247       // #7:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+  #302 = Utf8               getWebsite
+  #303 = NameAndType        #302:#97      // getWebsite:()Ljava/lang/String;
+  #304 = Methodref          #9.#303       // net/anubis/client/addon/AnubisAddon.getWebsite:()Ljava/lang/String;
+  #305 = Utf8                - report it at \u0001
+  #306 = String             #305          //  - report it at \u0001
+  #307 = InvokeDynamic      #8:#247       // #8:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+  #308 = Utf8
+  #309 = String             #308          //
+  #310 = Utf8               repo
+  #311 = Utf8               Lnet/anubis/client/addon/AnubisAddon$GithubRepo;
+  #312 = Utf8               where
+  #313 = Utf8               removeModules
+  #314 = Utf8               (Lnet/anubis/client/addon/AnubisAddon;)V
+  #315 = Utf8               net/anubis/client/module/ModuleRegistry
+  #316 = Class              #315          // net/anubis/client/module/ModuleRegistry
+  #317 = Utf8               all
+  #318 = NameAndType        #317:#36      // all:()Ljava/util/List;
+  #319 = Methodref          #316.#318     // net/anubis/client/module/ModuleRegistry.all:()Ljava/util/List;
+  #320 = Utf8               net/anubis/client/module/ClientModule
+  #321 = Class              #320          // net/anubis/client/module/ClientModule
+  #322 = Utf8               net/anubis/client/config/ModuleConfigStore
+  #323 = Class              #322          // net/anubis/client/config/ModuleConfigStore
+  #324 = Utf8               ()Lnet/anubis/client/config/ModuleConfigStore;
+  #325 = NameAndType        #152:#324     // getInstance:()Lnet/anubis/client/config/ModuleConfigStore;
+  #326 = Methodref          #323.#325     // net/anubis/client/config/ModuleConfigStore.getInstance:()Lnet/anubis/client/config/ModuleConfigStore;
+  #327 = Utf8               release
+  #328 = Utf8               (Lnet/anubis/client/module/ClientModule;)V
+  #329 = NameAndType        #327:#328     // release:(Lnet/anubis/client/module/ClientModule;)V
+  #330 = Methodref          #323.#329     // net/anubis/client/config/ModuleConfigStore.release:(Lnet/anubis/client/module/ClientModule;)V
+  #331 = Utf8               isEnabled
+  #332 = NameAndType        #331:#85      // isEnabled:()Z
+  #333 = Methodref          #321.#332     // net/anubis/client/module/ClientModule.isEnabled:()Z
+  #334 = Utf8               setEnabled
+  #335 = Utf8               (Z)V
+  #336 = NameAndType        #334:#335     // setEnabled:(Z)V
+  #337 = Methodref          #321.#336     // net/anubis/client/module/ClientModule.setEnabled:(Z)V
+  #338 = Utf8               remove
+  #339 = NameAndType        #338:#328     // remove:(Lnet/anubis/client/module/ClientModule;)V
+  #340 = Methodref          #316.#339     // net/anubis/client/module/ModuleRegistry.remove:(Lnet/anubis/client/module/ClientModule;)V
+  #341 = Utf8               module
+  #342 = Utf8               Lnet/anubis/client/module/ClientModule;
+  #343 = Utf8               prefix
+  #344 = Utf8               start
+  #345 = String             #344          // start
+  #346 = MethodType         #281          //  (Ljava/lang/Object;)V
+  #347 = Utf8               onConfigLoaded
+  #348 = NameAndType        #347:#31      // onConfigLoaded:()V
+  #349 = Methodref          #9.#348       // net/anubis/client/addon/AnubisAddon.onConfigLoaded:()V
+  #350 = MethodHandle       5:#349        // REF_invokeVirtual net/anubis/client/addon/AnubisAddon.onConfigLoaded:()V
+  #351 = MethodType         #314          //  (Lnet/anubis/client/addon/AnubisAddon;)V
+  #352 = Utf8               ()Ljava/util/function/Consumer;
+  #353 = NameAndType        #280:#352     // accept:()Ljava/util/function/Consumer;
+  #354 = InvokeDynamic      #9:#353       // #9:accept:()Ljava/util/function/Consumer;
+  #355 = NameAndType        #273:#274     // run:(Lnet/anubis/client/addon/AnubisAddon;Ljava/lang/String;Ljava/util/function/Consumer;)Z
+  #356 = Methodref          #2.#355       // net/anubis/client/addon/AddonManager.run:(Lnet/anubis/client/addon/AnubisAddon;Ljava/lang/String;Ljava/util/function/Consumer;)Z
+  #357 = NameAndType        #313:#314     // removeModules:(Lnet/anubis/client/addon/AnubisAddon;)V
+  #358 = Methodref          #2.#357       // net/anubis/client/addon/AddonManager.removeModules:(Lnet/anubis/client/addon/AnubisAddon;)V
+  #359 = Utf8               initialise
+  #360 = String             #359          // initialise
+  #361 = Utf8               onInitialize
+  #362 = NameAndType        #361:#31      // onInitialize:()V
+  #363 = Methodref          #9.#362       // net/anubis/client/addon/AnubisAddon.onInitialize:()V
+  #364 = MethodHandle       5:#363        // REF_invokeVirtual net/anubis/client/addon/AnubisAddon.onInitialize:()V
+  #365 = InvokeDynamic      #10:#353      // #10:accept:()Ljava/util/function/Consumer;
+  #366 = Utf8               register its categories
+  #367 = String             #366          // register its categories
+  #368 = Utf8               onRegisterCategories
+  #369 = NameAndType        #368:#31      // onRegisterCategories:()V
+  #370 = Methodref          #9.#369       // net/anubis/client/addon/AnubisAddon.onRegisterCategories:()V
+  #371 = MethodHandle       5:#370        // REF_invokeVirtual net/anubis/client/addon/AnubisAddon.onRegisterCategories:()V
+  #372 = InvokeDynamic      #11:#353      // #11:accept:()Ljava/util/function/Consumer;
+  #373 = Utf8               <clinit>
+  #374 = Utf8               Anubis
+  #375 = String             #374          // Anubis
+  #376 = Utf8               org/slf4j/LoggerFactory
+  #377 = Class              #376          // org/slf4j/LoggerFactory
+  #378 = Utf8               getLogger
+  #379 = Utf8               (Ljava/lang/String;)Lorg/slf4j/Logger;
+  #380 = NameAndType        #378:#379     // getLogger:(Ljava/lang/String;)Lorg/slf4j/Logger;
+  #381 = Methodref          #377.#380     // org/slf4j/LoggerFactory.getLogger:(Ljava/lang/String;)Lorg/slf4j/Logger;
+  #382 = Utf8               Lnet/fabricmc/api/Environment;
+  #383 = Utf8               value
+  #384 = Utf8               Lnet/fabricmc/api/EnvType;
+  #385 = Utf8               CLIENT
+  #386 = Utf8               ConstantValue
+  #387 = Utf8               Signature
+  #388 = Utf8               Code
+  #389 = Utf8               LineNumberTable
+  #390 = Utf8               LocalVariableTable
+  #391 = Utf8               StackMapTable
+  #392 = Utf8               LocalVariableTypeTable
+  #393 = Utf8               MethodParameters
+  #394 = Utf8               InnerClasses
+  #395 = Utf8               SourceFile
+  #396 = Utf8               RuntimeVisibleAnnotations
+  #397 = Utf8               BootstrapMethods
+{
+  private static final org.slf4j.Logger LOGGER;
+    descriptor: Lorg/slf4j/Logger;
+    flags: (0x001a) ACC_PRIVATE, ACC_STATIC, ACC_FINAL
+
+  public static final java.lang.String ENTRYPOINT;
+    descriptor: Ljava/lang/String;
+    flags: (0x0019) ACC_PUBLIC, ACC_STATIC, ACC_FINAL
+    ConstantValue: String anubis
+
+  private static final java.lang.String CLIENT_PACKAGE;
+    descriptor: Ljava/lang/String;
+    flags: (0x001a) ACC_PRIVATE, ACC_STATIC, ACC_FINAL
+    ConstantValue: String net.anubis.client
+
+  private static java.util.List<net.anubis.client.addon.AnubisAddon> addons;
+    descriptor: Ljava/util/List;
+    flags: (0x000a) ACC_PRIVATE, ACC_STATIC
+    Signature: #27                          // Ljava/util/List<Lnet/anubis/client/addon/AnubisAddon;>;
+
+  private static boolean configLoaded;
+    descriptor: Z
+    flags: (0x000a) ACC_PRIVATE, ACC_STATIC
+
+  private net.anubis.client.addon.AddonManager();
+    descriptor: ()V
+    flags: (0x0002) ACC_PRIVATE
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: invokespecial #33                 // Method java/lang/Object."<init>":()V
+         4: return
+      LineNumberTable:
+        line 28: 0
+        line 29: 4
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       5     0  this   Lnet/anubis/client/addon/AddonManager;
+
+  public static java.util.List<net.anubis.client.addon.AnubisAddon> addons();
+    descriptor: ()Ljava/util/List;
+    flags: (0x0009) ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=1, locals=1, args_size=0
+         0: getstatic     #39                 // Field addons:Ljava/util/List;
+         3: astore_0
+         4: aload_0
+         5: ifnull        12
+         8: aload_0
+         9: goto          15
+        12: invokestatic  #44                 // InterfaceMethod java/util/List.of:()Ljava/util/List;
+        15: areturn
+      StackMapTable: number_of_entries = 2
+        frame_type = 252 /* append */
+          offset_delta = 12
+          locals = [ class java/util/List ]
+        frame_type = 66 /* same_locals_1_stack_item */
+          stack = [ class java/util/List ]
+      LineNumberTable:
+        line 32: 0
+        line 33: 4
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            4      12     0 loaded   Ljava/util/List;
+      LocalVariableTypeTable:
+        Start  Length  Slot  Name   Signature
+            4      12     0 loaded   Ljava/util/List<Lnet/anubis/client/addon/AnubisAddon;>;
+    Signature: #37                          // ()Ljava/util/List<Lnet/anubis/client/addon/AnubisAddon;>;
+
+  public static void init();
+    descriptor: ()V
+    flags: (0x0009) ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=7, locals=3, args_size=0
+         0: getstatic     #39                 // Field addons:Ljava/util/List;
+         3: ifnull        7
+         6: return
+         7: invokestatic  #49                 // Method create:()Ljava/util/List;
+        10: astore_0
+        11: aload_0
+        12: invokedynamic #68,  0             // InvokeDynamic #0:test:()Ljava/util/function/Predicate;
+        17: invokeinterface #72,  2           // InterfaceMethod java/util/List.removeIf:(Ljava/util/function/Predicate;)Z
+        22: pop
+        23: aload_0
+        24: invokedynamic #77,  0             // InvokeDynamic #1:test:()Ljava/util/function/Predicate;
+        29: invokeinterface #72,  2           // InterfaceMethod java/util/List.removeIf:(Ljava/util/function/Predicate;)Z
+        34: pop
+        35: aload_0
+        36: invokeinterface #81,  1           // InterfaceMethod java/util/List.iterator:()Ljava/util/Iterator;
+        41: astore_1
+        42: aload_1
+        43: invokeinterface #87,  1           // InterfaceMethod java/util/Iterator.hasNext:()Z
+        48: ifeq          121
+        51: aload_1
+        52: invokeinterface #91,  1           // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+        57: checkcast     #9                  // class net/anubis/client/addon/AnubisAddon
+        60: astore_2
+        61: getstatic     #93                 // Field LOGGER:Lorg/slf4j/Logger;
+        64: ldc           #95                 // String [Anubis] Loaded addon {} v{} by {}
+        66: iconst_3
+        67: anewarray     #4                  // class java/lang/Object
+        70: dup
+        71: iconst_0
+        72: aload_2
+        73: invokevirtual #99                 // Method net/anubis/client/addon/AnubisAddon.name:()Ljava/lang/String;
+        76: aastore
+        77: dup
+        78: iconst_1
+        79: aload_2
+        80: invokevirtual #102                // Method net/anubis/client/addon/AnubisAddon.version:()Ljava/lang/String;
+        83: aastore
+        84: dup
+        85: iconst_2
+        86: aload_2
+        87: invokevirtual #105                // Method net/anubis/client/addon/AnubisAddon.authors:()Ljava/util/List;
+        90: invokeinterface #108,  1          // InterfaceMethod java/util/List.isEmpty:()Z
+        95: ifeq          103
+        98: ldc           #110                // String unknown
+       100: goto          112
+       103: ldc           #118                // String ,
+       105: aload_2
+       106: invokevirtual #105                // Method net/anubis/client/addon/AnubisAddon.authors:()Ljava/util/List;
+       109: invokestatic  #122                // Method java/lang/String.join:(Ljava/lang/CharSequence;Ljava/lang/Iterable;)Ljava/lang/String;
+       112: aastore
+       113: invokeinterface #126,  3          // InterfaceMethod org/slf4j/Logger.info:(Ljava/lang/String;[Ljava/lang/Object;)V
+       118: goto          42
+       121: aload_0
+       122: invokestatic  #130                // InterfaceMethod java/util/List.copyOf:(Ljava/util/Collection;)Ljava/util/List;
+       125: putstatic     #39                 // Field addons:Ljava/util/List;
+       128: return
+      StackMapTable: number_of_entries = 5
+        frame_type = 7 /* same */
+        frame_type = 253 /* append */
+          offset_delta = 34
+          locals = [ class java/util/List, class java/util/Iterator ]
+        frame_type = 255 /* full_frame */
+          offset_delta = 60
+          locals = [ class java/util/List, class java/util/Iterator, class net/anubis/client/addon/AnubisAddon ]
+          stack = [ class org/slf4j/Logger, class java/lang/String, class "[Ljava/lang/Object;", class "[Ljava/lang/Object;", int ]
+        frame_type = 255 /* full_frame */
+          offset_delta = 8
+          locals = [ class java/util/List, class java/util/Iterator, class net/anubis/client/addon/AnubisAddon ]
+          stack = [ class org/slf4j/Logger, class java/lang/String, class "[Ljava/lang/Object;", class "[Ljava/lang/Object;", int, class java/lang/Object ]
+        frame_type = 249 /* chop */
+          offset_delta = 8
+      LineNumberTable:
+        line 37: 0
+        line 38: 7
+        line 39: 11
+        line 40: 23
+        line 45: 35
+        line 46: 61
+        line 47: 86
+        line 46: 113
+        line 48: 118
+        line 49: 121
+        line 50: 128
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+           61      57     2 addon   Lnet/anubis/client/addon/AnubisAddon;
+           11     118     0 loaded   Ljava/util/List;
+      LocalVariableTypeTable:
+        Start  Length  Slot  Name   Signature
+           11     118     0 loaded   Ljava/util/List<Lnet/anubis/client/addon/AnubisAddon;>;
+
+  public static void configLoaded();
+    descriptor: ()V
+    flags: (0x0009) ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=3, locals=1, args_size=0
+         0: getstatic     #39                 // Field addons:Ljava/util/List;
+         3: ifnull        12
+         6: getstatic     #134                // Field configLoaded:Z
+         9: ifeq          13
+        12: return
+        13: iconst_1
+        14: putstatic     #134                // Field configLoaded:Z
+        17: new           #136                // class java/util/ArrayList
+        20: dup
+        21: getstatic     #39                 // Field addons:Ljava/util/List;
+        24: invokespecial #139                // Method java/util/ArrayList."<init>":(Ljava/util/Collection;)V
+        27: astore_0
+        28: aload_0
+        29: invokedynamic #144,  0            // InvokeDynamic #2:test:()Ljava/util/function/Predicate;
+        34: invokeinterface #72,  2           // InterfaceMethod java/util/List.removeIf:(Ljava/util/function/Predicate;)Z
+        39: pop
+        40: aload_0
+        41: invokestatic  #130                // InterfaceMethod java/util/List.copyOf:(Ljava/util/Collection;)Ljava/util/List;
+        44: putstatic     #39                 // Field addons:Ljava/util/List;
+        47: return
+      StackMapTable: number_of_entries = 2
+        frame_type = 12 /* same */
+        frame_type = 0 /* same */
+      LineNumberTable:
+        line 53: 0
+        line 54: 13
+        line 55: 17
+        line 56: 28
+        line 61: 40
+        line 62: 47
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+           28      20     0 loaded   Ljava/util/List;
+      LocalVariableTypeTable:
+        Start  Length  Slot  Name   Signature
+           28      20     0 loaded   Ljava/util/List<Lnet/anubis/client/addon/AnubisAddon;>;
+
+  private static java.util.List<net.anubis.client.addon.AnubisAddon> create();
+    descriptor: ()Ljava/util/List;
+    flags: (0x000a) ACC_PRIVATE, ACC_STATIC
+    Code:
+      stack=6, locals=8, args_size=0
+         0: new           #136                // class java/util/ArrayList
+         3: dup
+         4: invokespecial #149                // Method java/util/ArrayList."<init>":()V
+         7: astore_0
+         8: invokestatic  #155                // InterfaceMethod net/fabricmc/loader/api/FabricLoader.getInstance:()Lnet/fabricmc/loader/api/FabricLoader;
+        11: ldc           #21                 // String anubis
+        13: ldc           #9                  // class net/anubis/client/addon/AnubisAddon
+        15: invokeinterface #159,  3          // InterfaceMethod net/fabricmc/loader/api/FabricLoader.getEntrypointContainers:(Ljava/lang/String;Ljava/lang/Class;)Ljava/util/List;
+        20: astore_1
+        21: goto          38
+        24: astore_2
+        25: getstatic     #93                 // Field LOGGER:Lorg/slf4j/Logger;
+        28: ldc           #163                // String [Anubis] Could not list addons; starting without them
+        30: aload_2
+        31: invokeinterface #167,  3          // InterfaceMethod org/slf4j/Logger.error:(Ljava/lang/String;Ljava/lang/Throwable;)V
+        36: aload_0
+        37: areturn
+        38: aload_1
+        39: invokeinterface #81,  1           // InterfaceMethod java/util/List.iterator:()Ljava/util/Iterator;
+        44: astore_2
+        45: aload_2
+        46: invokeinterface #87,  1           // InterfaceMethod java/util/Iterator.hasNext:()Z
+        51: ifeq          203
+        54: aload_2
+        55: invokeinterface #91,  1           // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+        60: checkcast     #169                // class net/fabricmc/loader/api/entrypoint/EntrypointContainer
+        63: astore_3
+        64: aload_3
+        65: invokeinterface #173,  1          // InterfaceMethod net/fabricmc/loader/api/entrypoint/EntrypointContainer.getProvider:()Lnet/fabricmc/loader/api/ModContainer;
+        70: invokeinterface #179,  1          // InterfaceMethod net/fabricmc/loader/api/ModContainer.getMetadata:()Lnet/fabricmc/loader/api/metadata/ModMetadata;
+        75: astore        4
+        77: aload_3
+        78: invokeinterface #182,  1          // InterfaceMethod net/fabricmc/loader/api/entrypoint/EntrypointContainer.getEntrypoint:()Ljava/lang/Object;
+        83: checkcast     #9                  // class net/anubis/client/addon/AnubisAddon
+        86: astore        5
+        88: aload         5
+        90: invokevirtual #185                // Method net/anubis/client/addon/AnubisAddon.getPackage:()Ljava/lang/String;
+        93: astore        6
+        95: goto          142
+        98: astore        7
+       100: getstatic     #93                 // Field LOGGER:Lorg/slf4j/Logger;
+       103: ldc           #189                // String [Anubis] Addon {} ({}) could not be created and is skipped
+       105: iconst_3
+       106: anewarray     #4                  // class java/lang/Object
+       109: dup
+       110: iconst_0
+       111: aload         4
+       113: invokeinterface #192,  1          // InterfaceMethod net/fabricmc/loader/api/metadata/ModMetadata.getName:()Ljava/lang/String;
+       118: aastore
+       119: dup
+       120: iconst_1
+       121: aload         4
+       123: invokeinterface #195,  1          // InterfaceMethod net/fabricmc/loader/api/metadata/ModMetadata.getId:()Ljava/lang/String;
+       128: aastore
+       129: dup
+       130: iconst_2
+       131: aload         7
+       133: aastore
+       134: invokeinterface #197,  3          // InterfaceMethod org/slf4j/Logger.error:(Ljava/lang/String;[Ljava/lang/Object;)V
+       139: goto          45
+       142: aload         5
+       144: aload         4
+       146: invokevirtual #201                // Method net/anubis/client/addon/AnubisAddon.bind:(Lnet/fabricmc/loader/api/metadata/ModMetadata;)V
+       149: aload         5
+       151: aload         6
+       153: aload_0
+       154: invokestatic  #205                // Method packageProblem:(Lnet/anubis/client/addon/AnubisAddon;Ljava/lang/String;Ljava/util/List;)Ljava/lang/String;
+       157: astore        7
+       159: aload         7
+       161: ifnull        184
+       164: getstatic     #93                 // Field LOGGER:Lorg/slf4j/Logger;
+       167: ldc           #207                // String [Anubis] Addon {} is skipped: {}
+       169: aload         5
+       171: invokevirtual #99                 // Method net/anubis/client/addon/AnubisAddon.name:()Ljava/lang/String;
+       174: aload         7
+       176: invokeinterface #210,  4          // InterfaceMethod org/slf4j/Logger.error:(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
+       181: goto          45
+       184: aload         5
+       186: aload         6
+       188: putfield      #213                // Field net/anubis/client/addon/AnubisAddon.packageName:Ljava/lang/String;
+       191: aload_0
+       192: aload         5
+       194: invokeinterface #216,  2          // InterfaceMethod java/util/List.add:(Ljava/lang/Object;)Z
+       199: pop
+       200: goto          45
+       203: aload_0
+       204: areturn
+      Exception table:
+         from    to  target type
+             8    21    24   Class java/lang/RuntimeException
+             8    21    24   Class java/lang/LinkageError
+            77    95    98   Class java/lang/RuntimeException
+            77    95    98   Class java/lang/LinkageError
+      StackMapTable: number_of_entries = 7
+        frame_type = 255 /* full_frame */
+          offset_delta = 24
+          locals = [ class java/util/List ]
+          stack = [ class java/lang/Throwable ]
+        frame_type = 252 /* append */
+          offset_delta = 13
+          locals = [ class java/util/List ]
+        frame_type = 252 /* append */
+          offset_delta = 6
+          locals = [ class java/util/Iterator ]
+        frame_type = 255 /* full_frame */
+          offset_delta = 52
+          locals = [ class java/util/List, class java/util/List, class java/util/Iterator, class net/fabricmc/loader/api/entrypoint/EntrypointContainer, class net/fabricmc/loader/api/metadata/ModMetadata ]
+          stack = [ class java/lang/Throwable ]
+        frame_type = 253 /* append */
+          offset_delta = 43
+          locals = [ class net/anubis/client/addon/AnubisAddon, class java/lang/String ]
+        frame_type = 252 /* append */
+          offset_delta = 41
+          locals = [ class java/lang/String ]
+        frame_type = 255 /* full_frame */
+          offset_delta = 18
+          locals = [ class java/util/List, class java/util/List ]
+          stack = []
+      LineNumberTable:
+        line 65: 0
+        line 68: 8
+        line 72: 21
+        line 69: 24
+        line 70: 25
+        line 71: 36
+        line 73: 38
+        line 74: 64
+        line 78: 77
+        line 79: 88
+        line 84: 95
+        line 80: 98
+        line 81: 100
+        line 82: 113
+        line 81: 134
+        line 83: 139
+        line 85: 142
+        line 86: 149
+        line 87: 159
+        line 88: 164
+        line 89: 181
+        line 91: 184
+        line 92: 191
+        line 93: 200
+        line 94: 203
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+           21       3     1 containers   Ljava/util/List;
+           25      13     2     e   Ljava/lang/Throwable;
+           88      10     5 addon   Lnet/anubis/client/addon/AnubisAddon;
+           95       3     6   pkg   Ljava/lang/String;
+          100      42     7     e   Ljava/lang/Throwable;
+           77     123     4 metadata   Lnet/fabricmc/loader/api/metadata/ModMetadata;
+          142      58     5 addon   Lnet/anubis/client/addon/AnubisAddon;
+          142      58     6   pkg   Ljava/lang/String;
+          159      41     7 problem   Ljava/lang/String;
+           64     136     3 container   Lnet/fabricmc/loader/api/entrypoint/EntrypointContainer;
+            8     197     0 created   Ljava/util/List;
+           38     167     1 containers   Ljava/util/List;
+      LocalVariableTypeTable:
+        Start  Length  Slot  Name   Signature
+           21       3     1 containers   Ljava/util/List<Lnet/fabricmc/loader/api/entrypoint/EntrypointContainer<Lnet/anubis/client/addon/AnubisAddon;>;>;
+           64     136     3 container   Lnet/fabricmc/loader/api/entrypoint/EntrypointContainer<Lnet/anubis/client/addon/AnubisAddon;>;
+            8     197     0 created   Ljava/util/List<Lnet/anubis/client/addon/AnubisAddon;>;
+           38     167     1 containers   Ljava/util/List<Lnet/fabricmc/loader/api/entrypoint/EntrypointContainer<Lnet/anubis/client/addon/AnubisAddon;>;>;
+    Signature: #37                          // ()Ljava/util/List<Lnet/anubis/client/addon/AnubisAddon;>;
+
+  private static java.lang.String packageProblem(net.anubis.client.addon.AnubisAddon, java.lang.String, java.util.List<net.anubis.client.addon.AnubisAddon>);
+    descriptor: (Lnet/anubis/client/addon/AnubisAddon;Ljava/lang/String;Ljava/util/List;)Ljava/lang/String;
+    flags: (0x000a) ACC_PRIVATE, ACC_STATIC
+    Code:
+      stack=3, locals=5, args_size=3
+         0: aload_1
+         1: ifnull        23
+         4: aload_0
+         5: invokevirtual #233                // Method java/lang/Object.getClass:()Ljava/lang/Class;
+         8: invokevirtual #236                // Method java/lang/Class.getName:()Ljava/lang/String;
+        11: aload_1
+        12: invokedynamic #248,  0            // InvokeDynamic #3:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+        17: invokevirtual #252                // Method java/lang/String.startsWith:(Ljava/lang/String;)Z
+        20: ifne          37
+        23: aload_1
+        24: aload_0
+        25: invokevirtual #233                // Method java/lang/Object.getClass:()Ljava/lang/Class;
+        28: invokevirtual #236                // Method java/lang/Class.getName:()Ljava/lang/String;
+        31: invokedynamic #257,  0            // InvokeDynamic #4:makeConcatWithConstants:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+        36: areturn
+        37: aload_1
+        38: ldc           #24                 // String net.anubis.client
+        40: invokestatic  #261                // Method overlap:(Ljava/lang/String;Ljava/lang/String;)Z
+        43: ifeq          53
+        46: aload_1
+        47: invokedynamic #264,  0            // InvokeDynamic #5:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+        52: areturn
+        53: aload_2
+        54: invokeinterface #81,  1           // InterfaceMethod java/util/List.iterator:()Ljava/util/Iterator;
+        59: astore_3
+        60: aload_3
+        61: invokeinterface #87,  1           // InterfaceMethod java/util/Iterator.hasNext:()Z
+        66: ifeq          112
+        69: aload_3
+        70: invokeinterface #91,  1           // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+        75: checkcast     #9                  // class net/anubis/client/addon/AnubisAddon
+        78: astore        4
+        80: aload_1
+        81: aload         4
+        83: getfield      #213                // Field net/anubis/client/addon/AnubisAddon.packageName:Ljava/lang/String;
+        86: invokestatic  #261                // Method overlap:(Ljava/lang/String;Ljava/lang/String;)Z
+        89: ifeq          109
+        92: aload_1
+        93: aload         4
+        95: invokevirtual #99                 // Method net/anubis/client/addon/AnubisAddon.name:()Ljava/lang/String;
+        98: aload         4
+       100: getfield      #213                // Field net/anubis/client/addon/AnubisAddon.packageName:Ljava/lang/String;
+       103: invokedynamic #269,  0            // InvokeDynamic #6:makeConcatWithConstants:(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+       108: areturn
+       109: goto          60
+       112: aconst_null
+       113: areturn
+      StackMapTable: number_of_entries = 6
+        frame_type = 23 /* same */
+        frame_type = 13 /* same */
+        frame_type = 15 /* same */
+        frame_type = 252 /* append */
+          offset_delta = 6
+          locals = [ class java/util/Iterator ]
+        frame_type = 48 /* same */
+        frame_type = 250 /* chop */
+          offset_delta = 2
+      LineNumberTable:
+        line 98: 0
+        line 99: 23
+        line 100: 37
+        line 101: 46
+        line 102: 53
+        line 103: 80
+        line 104: 92
+        line 106: 109
+        line 107: 112
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+           80      29     4 other   Lnet/anubis/client/addon/AnubisAddon;
+            0     114     0 addon   Lnet/anubis/client/addon/AnubisAddon;
+            0     114     1   pkg   Ljava/lang/String;
+            0     114     2 created   Ljava/util/List;
+      LocalVariableTypeTable:
+        Start  Length  Slot  Name   Signature
+            0     114     2 created   Ljava/util/List<Lnet/anubis/client/addon/AnubisAddon;>;
+    Signature: #229                         // (Lnet/anubis/client/addon/AnubisAddon;Ljava/lang/String;Ljava/util/List<Lnet/anubis/client/addon/AnubisAddon;>;)Ljava/lang/String;
+    MethodParameters:
+      Name                           Flags
+      addon
+      pkg
+      created
+
+  private static boolean overlap(java.lang.String, java.lang.String);
+    descriptor: (Ljava/lang/String;Ljava/lang/String;)Z
+    flags: (0x000a) ACC_PRIVATE, ACC_STATIC
+    Code:
+      stack=2, locals=2, args_size=2
+         0: aload_0
+         1: invokedynamic #248,  0            // InvokeDynamic #3:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+         6: aload_1
+         7: invokedynamic #248,  0            // InvokeDynamic #3:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+        12: invokevirtual #252                // Method java/lang/String.startsWith:(Ljava/lang/String;)Z
+        15: ifne          36
+        18: aload_1
+        19: invokedynamic #248,  0            // InvokeDynamic #3:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+        24: aload_0
+        25: invokedynamic #248,  0            // InvokeDynamic #3:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+        30: invokevirtual #252                // Method java/lang/String.startsWith:(Ljava/lang/String;)Z
+        33: ifeq          40
+        36: iconst_1
+        37: goto          41
+        40: iconst_0
+        41: ireturn
+      StackMapTable: number_of_entries = 3
+        frame_type = 36 /* same */
+        frame_type = 3 /* same */
+        frame_type = 64 /* same_locals_1_stack_item */
+          stack = [ int ]
+      LineNumberTable:
+        line 111: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      42     0     a   Ljava/lang/String;
+            0      42     1     b   Ljava/lang/String;
+    MethodParameters:
+      Name                           Flags
+      a
+      b
+
+  private static boolean run(net.anubis.client.addon.AnubisAddon, java.lang.String, java.util.function.Consumer<net.anubis.client.addon.AnubisAddon>);
+    descriptor: (Lnet/anubis/client/addon/AnubisAddon;Ljava/lang/String;Ljava/util/function/Consumer;)Z
+    flags: (0x000a) ACC_PRIVATE, ACC_STATIC
+    Code:
+      stack=6, locals=4, args_size=3
+         0: aload_2
+         1: aload_0
+         2: invokeinterface #283,  2          // InterfaceMethod java/util/function/Consumer.accept:(Ljava/lang/Object;)V
+         7: iconst_1
+         8: ireturn
+         9: astore_3
+        10: getstatic     #93                 // Field LOGGER:Lorg/slf4j/Logger;
+        13: ldc_w         #285                // String [Anubis] Addon {} failed to {} and is skipped{}
+        16: iconst_4
+        17: anewarray     #4                  // class java/lang/Object
+        20: dup
+        21: iconst_0
+        22: aload_0
+        23: invokevirtual #99                 // Method net/anubis/client/addon/AnubisAddon.name:()Ljava/lang/String;
+        26: aastore
+        27: dup
+        28: iconst_1
+        29: aload_1
+        30: aastore
+        31: dup
+        32: iconst_2
+        33: aload_0
+        34: invokestatic  #289                // Method reportHint:(Lnet/anubis/client/addon/AnubisAddon;)Ljava/lang/String;
+        37: aastore
+        38: dup
+        39: iconst_3
+        40: aload_3
+        41: aastore
+        42: invokeinterface #197,  3          // InterfaceMethod org/slf4j/Logger.error:(Ljava/lang/String;[Ljava/lang/Object;)V
+        47: iconst_0
+        48: ireturn
+      Exception table:
+         from    to  target type
+             0     8     9   Class java/lang/RuntimeException
+             0     8     9   Class java/lang/LinkageError
+      StackMapTable: number_of_entries = 1
+        frame_type = 73 /* same_locals_1_stack_item */
+          stack = [ class java/lang/Throwable ]
+      LineNumberTable:
+        line 116: 0
+        line 117: 7
+        line 118: 9
+        line 119: 10
+        line 120: 47
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+           10      39     3     e   Ljava/lang/Throwable;
+            0      49     0 addon   Lnet/anubis/client/addon/AnubisAddon;
+            0      49     1  step   Ljava/lang/String;
+            0      49     2 action   Ljava/util/function/Consumer;
+      LocalVariableTypeTable:
+        Start  Length  Slot  Name   Signature
+            0      49     2 action   Ljava/util/function/Consumer<Lnet/anubis/client/addon/AnubisAddon;>;
+    Signature: #275                         // (Lnet/anubis/client/addon/AnubisAddon;Ljava/lang/String;Ljava/util/function/Consumer<Lnet/anubis/client/addon/AnubisAddon;>;)Z
+    MethodParameters:
+      Name                           Flags
+      addon
+      step
+      action
+
+  private static java.lang.String reportHint(net.anubis.client.addon.AnubisAddon);
+    descriptor: (Lnet/anubis/client/addon/AnubisAddon;)Ljava/lang/String;
+    flags: (0x000a) ACC_PRIVATE, ACC_STATIC
+    Code:
+      stack=1, locals=3, args_size=1
+         0: aload_0
+         1: invokevirtual #295                // Method net/anubis/client/addon/AnubisAddon.getRepo:()Lnet/anubis/client/addon/AnubisAddon$GithubRepo;
+         4: astore_1
+         5: aload_1
+         6: ifnull        21
+         9: aload_1
+        10: invokevirtual #298                // Method net/anubis/client/addon/AnubisAddon$GithubRepo.url:()Ljava/lang/String;
+        13: invokedynamic #301,  0            // InvokeDynamic #7:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+        18: goto          25
+        21: aload_0
+        22: invokevirtual #304                // Method net/anubis/client/addon/AnubisAddon.getWebsite:()Ljava/lang/String;
+        25: astore_2
+        26: aload_2
+        27: ifnull        39
+        30: aload_2
+        31: invokedynamic #307,  0            // InvokeDynamic #8:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+        36: goto          42
+        39: ldc_w         #309                // String
+        42: areturn
+        43: astore_1
+        44: ldc_w         #309                // String
+        47: areturn
+      Exception table:
+         from    to  target type
+             0    42    43   Class java/lang/RuntimeException
+             0    42    43   Class java/lang/LinkageError
+      StackMapTable: number_of_entries = 5
+        frame_type = 252 /* append */
+          offset_delta = 21
+          locals = [ class net/anubis/client/addon/AnubisAddon$GithubRepo ]
+        frame_type = 67 /* same_locals_1_stack_item */
+          stack = [ class java/lang/String ]
+        frame_type = 252 /* append */
+          offset_delta = 13
+          locals = [ class java/lang/String ]
+        frame_type = 66 /* same_locals_1_stack_item */
+          stack = [ class java/lang/String ]
+        frame_type = 255 /* full_frame */
+          offset_delta = 0
+          locals = [ class net/anubis/client/addon/AnubisAddon ]
+          stack = [ class java/lang/Throwable ]
+      LineNumberTable:
+        line 126: 0
+        line 127: 5
+        line 128: 26
+        line 129: 43
+        line 130: 44
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            5      38     1  repo   Lnet/anubis/client/addon/AnubisAddon$GithubRepo;
+           26      17     2 where   Ljava/lang/String;
+           44       4     1     e   Ljava/lang/Throwable;
+            0      48     0 addon   Lnet/anubis/client/addon/AnubisAddon;
+    MethodParameters:
+      Name                           Flags
+      addon
+
+  private static void removeModules(net.anubis.client.addon.AnubisAddon);
+    descriptor: (Lnet/anubis/client/addon/AnubisAddon;)V
+    flags: (0x000a) ACC_PRIVATE, ACC_STATIC
+    Code:
+      stack=2, locals=4, args_size=1
+         0: aload_0
+         1: getfield      #213                // Field net/anubis/client/addon/AnubisAddon.packageName:Ljava/lang/String;
+         4: invokedynamic #248,  0            // InvokeDynamic #3:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+         9: astore_1
+        10: invokestatic  #319                // Method net/anubis/client/module/ModuleRegistry.all:()Ljava/util/List;
+        13: invokeinterface #81,  1           // InterfaceMethod java/util/List.iterator:()Ljava/util/Iterator;
+        18: astore_2
+        19: aload_2
+        20: invokeinterface #87,  1           // InterfaceMethod java/util/Iterator.hasNext:()Z
+        25: ifeq          81
+        28: aload_2
+        29: invokeinterface #91,  1           // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+        34: checkcast     #321                // class net/anubis/client/module/ClientModule
+        37: astore_3
+        38: aload_3
+        39: invokevirtual #233                // Method java/lang/Object.getClass:()Ljava/lang/Class;
+        42: invokevirtual #236                // Method java/lang/Class.getName:()Ljava/lang/String;
+        45: aload_1
+        46: invokevirtual #252                // Method java/lang/String.startsWith:(Ljava/lang/String;)Z
+        49: ifne          55
+        52: goto          19
+        55: invokestatic  #326                // Method net/anubis/client/config/ModuleConfigStore.getInstance:()Lnet/anubis/client/config/ModuleConfigStore;
+        58: aload_3
+        59: invokevirtual #330                // Method net/anubis/client/config/ModuleConfigStore.release:(Lnet/anubis/client/module/ClientModule;)V
+        62: aload_3
+        63: invokevirtual #333                // Method net/anubis/client/module/ClientModule.isEnabled:()Z
+        66: ifeq          74
+        69: aload_3
+        70: iconst_0
+        71: invokevirtual #337                // Method net/anubis/client/module/ClientModule.setEnabled:(Z)V
+        74: aload_3
+        75: invokestatic  #340                // Method net/anubis/client/module/ModuleRegistry.remove:(Lnet/anubis/client/module/ClientModule;)V
+        78: goto          19
+        81: return
+      StackMapTable: number_of_entries = 4
+        frame_type = 253 /* append */
+          offset_delta = 19
+          locals = [ class java/lang/String, class java/util/Iterator ]
+        frame_type = 252 /* append */
+          offset_delta = 35
+          locals = [ class net/anubis/client/module/ClientModule ]
+        frame_type = 18 /* same */
+        frame_type = 249 /* chop */
+          offset_delta = 6
+      LineNumberTable:
+        line 135: 0
+        line 136: 10
+        line 137: 38
+        line 138: 55
+        line 139: 62
+        line 140: 74
+        line 141: 78
+        line 142: 81
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+           38      40     3 module   Lnet/anubis/client/module/ClientModule;
+            0      82     0 addon   Lnet/anubis/client/addon/AnubisAddon;
+           10      72     1 prefix   Ljava/lang/String;
+    MethodParameters:
+      Name                           Flags
+      addon
+
+  private static boolean lambda$configLoaded$2(net.anubis.client.addon.AnubisAddon);
+    descriptor: (Lnet/anubis/client/addon/AnubisAddon;)Z
+    flags: (0x100a) ACC_PRIVATE, ACC_STATIC, ACC_SYNTHETIC
+    Code:
+      stack=3, locals=1, args_size=1
+         0: aload_0
+         1: ldc_w         #345                // String start
+         4: invokedynamic #354,  0            // InvokeDynamic #9:accept:()Ljava/util/function/Consumer;
+         9: invokestatic  #356                // Method run:(Lnet/anubis/client/addon/AnubisAddon;Ljava/lang/String;Ljava/util/function/Consumer;)Z
+        12: ifeq          17
+        15: iconst_0
+        16: ireturn
+        17: aload_0
+        18: invokestatic  #358                // Method removeModules:(Lnet/anubis/client/addon/AnubisAddon;)V
+        21: iconst_1
+        22: ireturn
+      StackMapTable: number_of_entries = 1
+        frame_type = 17 /* same */
+      LineNumberTable:
+        line 57: 0
+        line 58: 17
+        line 59: 21
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      23     0 addon   Lnet/anubis/client/addon/AnubisAddon;
+    MethodParameters:
+      Name                           Flags
+      addon
+
+  private static boolean lambda$init$1(net.anubis.client.addon.AnubisAddon);
+    descriptor: (Lnet/anubis/client/addon/AnubisAddon;)Z
+    flags: (0x100a) ACC_PRIVATE, ACC_STATIC, ACC_SYNTHETIC
+    Code:
+      stack=3, locals=1, args_size=1
+         0: aload_0
+         1: ldc_w         #360                // String initialise
+         4: invokedynamic #365,  0            // InvokeDynamic #10:accept:()Ljava/util/function/Consumer;
+         9: invokestatic  #356                // Method run:(Lnet/anubis/client/addon/AnubisAddon;Ljava/lang/String;Ljava/util/function/Consumer;)Z
+        12: ifeq          17
+        15: iconst_0
+        16: ireturn
+        17: aload_0
+        18: invokestatic  #358                // Method removeModules:(Lnet/anubis/client/addon/AnubisAddon;)V
+        21: iconst_1
+        22: ireturn
+      StackMapTable: number_of_entries = 1
+        frame_type = 17 /* same */
+      LineNumberTable:
+        line 41: 0
+        line 42: 17
+        line 43: 21
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      23     0 addon   Lnet/anubis/client/addon/AnubisAddon;
+    MethodParameters:
+      Name                           Flags
+      addon
+
+  private static boolean lambda$init$0(net.anubis.client.addon.AnubisAddon);
+    descriptor: (Lnet/anubis/client/addon/AnubisAddon;)Z
+    flags: (0x100a) ACC_PRIVATE, ACC_STATIC, ACC_SYNTHETIC
+    Code:
+      stack=3, locals=1, args_size=1
+         0: aload_0
+         1: ldc_w         #367                // String register its categories
+         4: invokedynamic #372,  0            // InvokeDynamic #11:accept:()Ljava/util/function/Consumer;
+         9: invokestatic  #356                // Method run:(Lnet/anubis/client/addon/AnubisAddon;Ljava/lang/String;Ljava/util/function/Consumer;)Z
+        12: ifne          19
+        15: iconst_1
+        16: goto          20
+        19: iconst_0
+        20: ireturn
+      StackMapTable: number_of_entries = 2
+        frame_type = 19 /* same */
+        frame_type = 64 /* same_locals_1_stack_item */
+          stack = [ int ]
+      LineNumberTable:
+        line 39: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      21     0 addon   Lnet/anubis/client/addon/AnubisAddon;
+    MethodParameters:
+      Name                           Flags
+      addon
+
+  static {};
+    descriptor: ()V
+    flags: (0x0008) ACC_STATIC
+    Code:
+      stack=1, locals=0, args_size=0
+         0: ldc_w         #375                // String Anubis
+         3: invokestatic  #381                // Method org/slf4j/LoggerFactory.getLogger:(Ljava/lang/String;)Lorg/slf4j/Logger;
+         6: putstatic     #93                 // Field LOGGER:Lorg/slf4j/Logger;
+         9: return
+      LineNumberTable:
+        line 18: 0
+}
+InnerClasses:
+  public static final #10= #7 of #9;      // GithubRepo=class net/anubis/client/addon/AnubisAddon$GithubRepo of class net/anubis/client/addon/AnubisAddon
+  public static final #15= #12 of #14;    // Lookup=class java/lang/invoke/MethodHandles$Lookup of class java/lang/invoke/MethodHandles
+SourceFile: "AddonManager.java"
+RuntimeVisibleAnnotations:
+  0: #382(#383=e#384.#385)
+    net.fabricmc.api.Environment(
+      value=Lnet/fabricmc/api/EnvType;.CLIENT
+    )
+BootstrapMethods:
+  0: #64 REF_invokeStatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #51 (Ljava/lang/Object;)Z
+      #56 REF_invokeStatic net/anubis/client/addon/AddonManager.lambda$init$0:(Lnet/anubis/client/addon/AnubisAddon;)Z
+      #57 (Lnet/anubis/client/addon/AnubisAddon;)Z
+  1: #64 REF_invokeStatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #51 (Ljava/lang/Object;)Z
+      #76 REF_invokeStatic net/anubis/client/addon/AddonManager.lambda$init$1:(Lnet/anubis/client/addon/AnubisAddon;)Z
+      #57 (Lnet/anubis/client/addon/AnubisAddon;)Z
+  2: #64 REF_invokeStatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #51 (Ljava/lang/Object;)Z
+      #143 REF_invokeStatic net/anubis/client/addon/AddonManager.lambda$configLoaded$2:(Lnet/anubis/client/addon/AnubisAddon;)Z
+      #57 (Lnet/anubis/client/addon/AnubisAddon;)Z
+  3: #245 REF_invokeStatic java/lang/invoke/StringConcatFactory.makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #238 \u0001.
+  4: #245 REF_invokeStatic java/lang/invoke/StringConcatFactory.makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #254 getPackage() is \"\u0001\", which doesn\'t hold its class \u0001
+  5: #245 REF_invokeStatic java/lang/invoke/StringConcatFactory.makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #263 its package \u0001 overlaps Anubis\' own (net.anubis.client)
+  6: #245 REF_invokeStatic java/lang/invoke/StringConcatFactory.makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #266 its package \u0001 overlaps \u0001\'s (\u0001); an addon made from the template needs its package renamed
+  7: #245 REF_invokeStatic java/lang/invoke/StringConcatFactory.makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #300 \u0001/issues
+  8: #245 REF_invokeStatic java/lang/invoke/StringConcatFactory.makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #306  - report it at \u0001
+  9: #64 REF_invokeStatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #346 (Ljava/lang/Object;)V
+      #350 REF_invokeVirtual net/anubis/client/addon/AnubisAddon.onConfigLoaded:()V
+      #351 (Lnet/anubis/client/addon/AnubisAddon;)V
+  10: #64 REF_invokeStatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #346 (Ljava/lang/Object;)V
+      #364 REF_invokeVirtual net/anubis/client/addon/AnubisAddon.onInitialize:()V
+      #351 (Lnet/anubis/client/addon/AnubisAddon;)V
+  11: #64 REF_invokeStatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #346 (Ljava/lang/Object;)V
+      #371 REF_invokeVirtual net/anubis/client/addon/AnubisAddon.onRegisterCategories:()V
+      #351 (Lnet/anubis/client/addon/AnubisAddon;)V

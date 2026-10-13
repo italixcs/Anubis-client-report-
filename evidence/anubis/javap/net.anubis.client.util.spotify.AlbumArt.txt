@@ -1,0 +1,864 @@
+Classfile analysis-workspace/extracted/run.oEA4CbVx/net/anubis/client/util/spotify/AlbumArt.class
+  Last modified Oct 13, 2026; size 4030 bytes
+  SHA-256 checksum 1bbb58d63fcef779afdf656b4016c17da65b7012c5fdd497970a6566373af0bb
+  Compiled from "AlbumArt.java"
+public final class net.anubis.client.util.spotify.AlbumArt
+  minor version: 0
+  major version: 65
+  flags: (0x0031) ACC_PUBLIC, ACC_FINAL, ACC_SUPER
+  this_class: #2                          // net/anubis/client/util/spotify/AlbumArt
+  super_class: #4                         // java/lang/Object
+  interfaces: 0, fields: 3, methods: 6, attributes: 2
+Constant pool:
+    #1 = Utf8               net/anubis/client/util/spotify/AlbumArt
+    #2 = Class              #1            // net/anubis/client/util/spotify/AlbumArt
+    #3 = Utf8               java/lang/Object
+    #4 = Class              #3            // java/lang/Object
+    #5 = Utf8               AlbumArt.java
+    #6 = Utf8               MAX_SOURCE_SIDE
+    #7 = Utf8               I
+    #8 = Integer            4096
+    #9 = Utf8               size
+   #10 = Utf8               rgba
+   #11 = Utf8               [B
+   #12 = Utf8               <init>
+   #13 = Utf8               (I[B)V
+   #14 = Utf8               ()V
+   #15 = NameAndType        #12:#14       // "<init>":()V
+   #16 = Methodref          #4.#15        // java/lang/Object."<init>":()V
+   #17 = NameAndType        #9:#7         // size:I
+   #18 = Fieldref           #2.#17        // net/anubis/client/util/spotify/AlbumArt.size:I
+   #19 = NameAndType        #10:#11       // rgba:[B
+   #20 = Fieldref           #2.#19        // net/anubis/client/util/spotify/AlbumArt.rgba:[B
+   #21 = Utf8               this
+   #22 = Utf8               Lnet/anubis/client/util/spotify/AlbumArt;
+   #23 = Utf8               decode
+   #24 = Utf8               ([BI)Lnet/anubis/client/util/spotify/AlbumArt;
+   #25 = Utf8               encoded
+   #26 = Utf8               maxSide
+   #27 = Utf8               java/lang/Throwable
+   #28 = Class              #27           // java/lang/Throwable
+   #29 = Utf8               org/lwjgl/system/MemoryUtil
+   #30 = Class              #29           // org/lwjgl/system/MemoryUtil
+   #31 = Utf8               memAlloc
+   #32 = Utf8               (I)Ljava/nio/ByteBuffer;
+   #33 = NameAndType        #31:#32       // memAlloc:(I)Ljava/nio/ByteBuffer;
+   #34 = Methodref          #30.#33       // org/lwjgl/system/MemoryUtil.memAlloc:(I)Ljava/nio/ByteBuffer;
+   #35 = Utf8               org/lwjgl/system/MemoryStack
+   #36 = Class              #35           // org/lwjgl/system/MemoryStack
+   #37 = Utf8               stackPush
+   #38 = Utf8               ()Lorg/lwjgl/system/MemoryStack;
+   #39 = NameAndType        #37:#38       // stackPush:()Lorg/lwjgl/system/MemoryStack;
+   #40 = Methodref          #36.#39       // org/lwjgl/system/MemoryStack.stackPush:()Lorg/lwjgl/system/MemoryStack;
+   #41 = Utf8               java/nio/ByteBuffer
+   #42 = Class              #41           // java/nio/ByteBuffer
+   #43 = Utf8               put
+   #44 = Utf8               ([B)Ljava/nio/ByteBuffer;
+   #45 = NameAndType        #43:#44       // put:([B)Ljava/nio/ByteBuffer;
+   #46 = Methodref          #42.#45       // java/nio/ByteBuffer.put:([B)Ljava/nio/ByteBuffer;
+   #47 = Utf8               flip
+   #48 = Utf8               ()Ljava/nio/ByteBuffer;
+   #49 = NameAndType        #47:#48       // flip:()Ljava/nio/ByteBuffer;
+   #50 = Methodref          #42.#49       // java/nio/ByteBuffer.flip:()Ljava/nio/ByteBuffer;
+   #51 = Utf8               mallocInt
+   #52 = Utf8               (I)Ljava/nio/IntBuffer;
+   #53 = NameAndType        #51:#52       // mallocInt:(I)Ljava/nio/IntBuffer;
+   #54 = Methodref          #36.#53       // org/lwjgl/system/MemoryStack.mallocInt:(I)Ljava/nio/IntBuffer;
+   #55 = Utf8               org/lwjgl/stb/STBImage
+   #56 = Class              #55           // org/lwjgl/stb/STBImage
+   #57 = Utf8               stbi_info_from_memory
+   #58 = Utf8               (Ljava/nio/ByteBuffer;Ljava/nio/IntBuffer;Ljava/nio/IntBuffer;Ljava/nio/IntBuffer;)Z
+   #59 = NameAndType        #57:#58       // stbi_info_from_memory:(Ljava/nio/ByteBuffer;Ljava/nio/IntBuffer;Ljava/nio/IntBuffer;Ljava/nio/IntBuffer;)Z
+   #60 = Methodref          #56.#59       // org/lwjgl/stb/STBImage.stbi_info_from_memory:(Ljava/nio/ByteBuffer;Ljava/nio/IntBuffer;Ljava/nio/IntBuffer;Ljava/nio/IntBuffer;)Z
+   #61 = Utf8               close
+   #62 = NameAndType        #61:#14       // close:()V
+   #63 = Methodref          #36.#62       // org/lwjgl/system/MemoryStack.close:()V
+   #64 = Class              #11           // "[B"
+   #65 = Utf8               java/nio/IntBuffer
+   #66 = Class              #65           // java/nio/IntBuffer
+   #67 = Utf8               stbi_image_free
+   #68 = Utf8               (Ljava/nio/ByteBuffer;)V
+   #69 = NameAndType        #67:#68       // stbi_image_free:(Ljava/nio/ByteBuffer;)V
+   #70 = Methodref          #56.#69       // org/lwjgl/stb/STBImage.stbi_image_free:(Ljava/nio/ByteBuffer;)V
+   #71 = Utf8               memFree
+   #72 = Utf8               (Ljava/nio/Buffer;)V
+   #73 = NameAndType        #71:#72       // memFree:(Ljava/nio/Buffer;)V
+   #74 = Methodref          #30.#73       // org/lwjgl/system/MemoryUtil.memFree:(Ljava/nio/Buffer;)V
+   #75 = Utf8               get
+   #76 = Utf8               (I)I
+   #77 = NameAndType        #75:#76       // get:(I)I
+   #78 = Methodref          #66.#77       // java/nio/IntBuffer.get:(I)I
+   #79 = Utf8               stbi_load_from_memory
+   #80 = Utf8               (Ljava/nio/ByteBuffer;Ljava/nio/IntBuffer;Ljava/nio/IntBuffer;Ljava/nio/IntBuffer;I)Ljava/nio/ByteBuffer;
+   #81 = NameAndType        #79:#80       // stbi_load_from_memory:(Ljava/nio/ByteBuffer;Ljava/nio/IntBuffer;Ljava/nio/IntBuffer;Ljava/nio/IntBuffer;I)Ljava/nio/ByteBuffer;
+   #82 = Methodref          #56.#81       // org/lwjgl/stb/STBImage.stbi_load_from_memory:(Ljava/nio/ByteBuffer;Ljava/nio/IntBuffer;Ljava/nio/IntBuffer;Ljava/nio/IntBuffer;I)Ljava/nio/ByteBuffer;
+   #83 = Utf8               crop
+   #84 = Utf8               (Ljava/nio/ByteBuffer;III)Lnet/anubis/client/util/spotify/AlbumArt;
+   #85 = NameAndType        #83:#84       // crop:(Ljava/nio/ByteBuffer;III)Lnet/anubis/client/util/spotify/AlbumArt;
+   #86 = Methodref          #2.#85        // net/anubis/client/util/spotify/AlbumArt.crop:(Ljava/nio/ByteBuffer;III)Lnet/anubis/client/util/spotify/AlbumArt;
+   #87 = Utf8               addSuppressed
+   #88 = Utf8               (Ljava/lang/Throwable;)V
+   #89 = NameAndType        #87:#88       // addSuppressed:(Ljava/lang/Throwable;)V
+   #90 = Methodref          #28.#89       // java/lang/Throwable.addSuppressed:(Ljava/lang/Throwable;)V
+   #91 = Utf8               w
+   #92 = Utf8               Ljava/nio/IntBuffer;
+   #93 = Utf8               h
+   #94 = Utf8               channels
+   #95 = Utf8               stack
+   #96 = Utf8               Lorg/lwjgl/system/MemoryStack;
+   #97 = Utf8               file
+   #98 = Utf8               Ljava/nio/ByteBuffer;
+   #99 = Utf8               pixels
+  #100 = Utf8               width
+  #101 = Utf8               height
+  #102 = Utf8               java/lang/Math
+  #103 = Class              #102          // java/lang/Math
+  #104 = Utf8               min
+  #105 = Utf8               (II)I
+  #106 = NameAndType        #104:#105     // min:(II)I
+  #107 = Methodref          #103.#106     // java/lang/Math.min:(II)I
+  #108 = Utf8               max
+  #109 = NameAndType        #108:#105     // max:(II)I
+  #110 = Methodref          #103.#109     // java/lang/Math.max:(II)I
+  #111 = Utf8               (I)B
+  #112 = NameAndType        #75:#111      // get:(I)B
+  #113 = Methodref          #42.#112      // java/nio/ByteBuffer.get:(I)B
+  #114 = Long               2l
+  #116 = NameAndType        #12:#13       // "<init>":(I[B)V
+  #117 = Methodref          #2.#116       // net/anubis/client/util/spotify/AlbumArt."<init>":(I[B)V
+  #118 = Utf8               x
+  #119 = Utf8               row
+  #120 = Utf8               y
+  #121 = Utf8               x0
+  #122 = Utf8               x1
+  #123 = Utf8               r
+  #124 = Utf8               J
+  #125 = Utf8               g
+  #126 = Utf8               b
+  #127 = Utf8               a
+  #128 = Utf8               count
+  #129 = Utf8               ox
+  #130 = Utf8               y0
+  #131 = Utf8               y1
+  #132 = Utf8               oy
+  #133 = Utf8               side
+  #134 = Utf8               left
+  #135 = Utf8               top
+  #136 = Utf8               out
+  #137 = Utf8               o
+  #138 = Utf8               ()I
+  #139 = Utf8               byteSize
+  #140 = Utf8               copyTo
+  #141 = Utf8               target
+  #142 = Utf8               Lnet/fabricmc/api/Environment;
+  #143 = Utf8               value
+  #144 = Utf8               Lnet/fabricmc/api/EnvType;
+  #145 = Utf8               CLIENT
+  #146 = Utf8               ConstantValue
+  #147 = Utf8               Code
+  #148 = Utf8               LineNumberTable
+  #149 = Utf8               LocalVariableTable
+  #150 = Utf8               MethodParameters
+  #151 = Utf8               StackMapTable
+  #152 = Utf8               SourceFile
+  #153 = Utf8               RuntimeVisibleAnnotations
+{
+  private static final int MAX_SOURCE_SIDE;
+    descriptor: I
+    flags: (0x001a) ACC_PRIVATE, ACC_STATIC, ACC_FINAL
+    ConstantValue: int 4096
+
+  private final int size;
+    descriptor: I
+    flags: (0x0012) ACC_PRIVATE, ACC_FINAL
+
+  private final byte[] rgba;
+    descriptor: [B
+    flags: (0x0012) ACC_PRIVATE, ACC_FINAL
+
+  private net.anubis.client.util.spotify.AlbumArt(int, byte[]);
+    descriptor: (I[B)V
+    flags: (0x0002) ACC_PRIVATE
+    Code:
+      stack=2, locals=3, args_size=3
+         0: aload_0
+         1: invokespecial #16                 // Method java/lang/Object."<init>":()V
+         4: aload_0
+         5: iload_1
+         6: putfield      #18                 // Field size:I
+         9: aload_0
+        10: aload_2
+        11: putfield      #20                 // Field rgba:[B
+        14: return
+      LineNumberTable:
+        line 16: 0
+        line 17: 4
+        line 18: 9
+        line 19: 14
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      15     0  this   Lnet/anubis/client/util/spotify/AlbumArt;
+            0      15     1  size   I
+            0      15     2  rgba   [B
+    MethodParameters:
+      Name                           Flags
+      size
+      rgba
+
+  public static net.anubis.client.util.spotify.AlbumArt decode(byte[], int);
+    descriptor: ([BI)Lnet/anubis/client/util/spotify/AlbumArt;
+    flags: (0x0009) ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=5, locals=10, args_size=2
+         0: aload_0
+         1: ifnull        13
+         4: aload_0
+         5: arraylength
+         6: ifeq          13
+         9: iload_1
+        10: ifgt          15
+        13: aconst_null
+        14: areturn
+        15: aload_0
+        16: arraylength
+        17: invokestatic  #34                 // Method org/lwjgl/system/MemoryUtil.memAlloc:(I)Ljava/nio/ByteBuffer;
+        20: astore_2
+        21: aconst_null
+        22: astore_3
+        23: invokestatic  #40                 // Method org/lwjgl/system/MemoryStack.stackPush:()Lorg/lwjgl/system/MemoryStack;
+        26: astore        4
+        28: aload_2
+        29: aload_0
+        30: invokevirtual #46                 // Method java/nio/ByteBuffer.put:([B)Ljava/nio/ByteBuffer;
+        33: invokevirtual #50                 // Method java/nio/ByteBuffer.flip:()Ljava/nio/ByteBuffer;
+        36: pop
+        37: aload         4
+        39: iconst_1
+        40: invokevirtual #54                 // Method org/lwjgl/system/MemoryStack.mallocInt:(I)Ljava/nio/IntBuffer;
+        43: astore        5
+        45: aload         4
+        47: iconst_1
+        48: invokevirtual #54                 // Method org/lwjgl/system/MemoryStack.mallocInt:(I)Ljava/nio/IntBuffer;
+        51: astore        6
+        53: aload         4
+        55: iconst_1
+        56: invokevirtual #54                 // Method org/lwjgl/system/MemoryStack.mallocInt:(I)Ljava/nio/IntBuffer;
+        59: astore        7
+        61: aload_2
+        62: aload         5
+        64: aload         6
+        66: aload         7
+        68: invokestatic  #60                 // Method org/lwjgl/stb/STBImage.stbi_info_from_memory:(Ljava/nio/ByteBuffer;Ljava/nio/IntBuffer;Ljava/nio/IntBuffer;Ljava/nio/IntBuffer;)Z
+        71: ifne          102
+        74: aconst_null
+        75: astore        8
+        77: aload         4
+        79: ifnull        87
+        82: aload         4
+        84: invokevirtual #63                 // Method org/lwjgl/system/MemoryStack.close:()V
+        87: aload_3
+        88: ifnull        95
+        91: aload_3
+        92: invokestatic  #70                 // Method org/lwjgl/stb/STBImage.stbi_image_free:(Ljava/nio/ByteBuffer;)V
+        95: aload_2
+        96: invokestatic  #74                 // Method org/lwjgl/system/MemoryUtil.memFree:(Ljava/nio/Buffer;)V
+        99: aload         8
+       101: areturn
+       102: aload         5
+       104: iconst_0
+       105: invokevirtual #78                 // Method java/nio/IntBuffer.get:(I)I
+       108: ifle          144
+       111: aload         6
+       113: iconst_0
+       114: invokevirtual #78                 // Method java/nio/IntBuffer.get:(I)I
+       117: ifle          144
+       120: aload         5
+       122: iconst_0
+       123: invokevirtual #78                 // Method java/nio/IntBuffer.get:(I)I
+       126: sipush        4096
+       129: if_icmpgt     144
+       132: aload         6
+       134: iconst_0
+       135: invokevirtual #78                 // Method java/nio/IntBuffer.get:(I)I
+       138: sipush        4096
+       141: if_icmple     172
+       144: aconst_null
+       145: astore        8
+       147: aload         4
+       149: ifnull        157
+       152: aload         4
+       154: invokevirtual #63                 // Method org/lwjgl/system/MemoryStack.close:()V
+       157: aload_3
+       158: ifnull        165
+       161: aload_3
+       162: invokestatic  #70                 // Method org/lwjgl/stb/STBImage.stbi_image_free:(Ljava/nio/ByteBuffer;)V
+       165: aload_2
+       166: invokestatic  #74                 // Method org/lwjgl/system/MemoryUtil.memFree:(Ljava/nio/Buffer;)V
+       169: aload         8
+       171: areturn
+       172: aload_2
+       173: aload         5
+       175: aload         6
+       177: aload         7
+       179: iconst_4
+       180: invokestatic  #82                 // Method org/lwjgl/stb/STBImage.stbi_load_from_memory:(Ljava/nio/ByteBuffer;Ljava/nio/IntBuffer;Ljava/nio/IntBuffer;Ljava/nio/IntBuffer;I)Ljava/nio/ByteBuffer;
+       183: astore_3
+       184: aload_3
+       185: ifnonnull     216
+       188: aconst_null
+       189: astore        8
+       191: aload         4
+       193: ifnull        201
+       196: aload         4
+       198: invokevirtual #63                 // Method org/lwjgl/system/MemoryStack.close:()V
+       201: aload_3
+       202: ifnull        209
+       205: aload_3
+       206: invokestatic  #70                 // Method org/lwjgl/stb/STBImage.stbi_image_free:(Ljava/nio/ByteBuffer;)V
+       209: aload_2
+       210: invokestatic  #74                 // Method org/lwjgl/system/MemoryUtil.memFree:(Ljava/nio/Buffer;)V
+       213: aload         8
+       215: areturn
+       216: aload_3
+       217: aload         5
+       219: iconst_0
+       220: invokevirtual #78                 // Method java/nio/IntBuffer.get:(I)I
+       223: aload         6
+       225: iconst_0
+       226: invokevirtual #78                 // Method java/nio/IntBuffer.get:(I)I
+       229: iload_1
+       230: invokestatic  #86                 // Method crop:(Ljava/nio/ByteBuffer;III)Lnet/anubis/client/util/spotify/AlbumArt;
+       233: astore        8
+       235: aload         4
+       237: ifnull        245
+       240: aload         4
+       242: invokevirtual #63                 // Method org/lwjgl/system/MemoryStack.close:()V
+       245: aload_3
+       246: ifnull        253
+       249: aload_3
+       250: invokestatic  #70                 // Method org/lwjgl/stb/STBImage.stbi_image_free:(Ljava/nio/ByteBuffer;)V
+       253: aload_2
+       254: invokestatic  #74                 // Method org/lwjgl/system/MemoryUtil.memFree:(Ljava/nio/Buffer;)V
+       257: aload         8
+       259: areturn
+       260: astore        5
+       262: aload         4
+       264: ifnull        284
+       267: aload         4
+       269: invokevirtual #63                 // Method org/lwjgl/system/MemoryStack.close:()V
+       272: goto          284
+       275: astore        6
+       277: aload         5
+       279: aload         6
+       281: invokevirtual #90                 // Method java/lang/Throwable.addSuppressed:(Ljava/lang/Throwable;)V
+       284: aload         5
+       286: athrow
+       287: astore        9
+       289: aload_3
+       290: ifnull        297
+       293: aload_3
+       294: invokestatic  #70                 // Method org/lwjgl/stb/STBImage.stbi_image_free:(Ljava/nio/ByteBuffer;)V
+       297: aload_2
+       298: invokestatic  #74                 // Method org/lwjgl/system/MemoryUtil.memFree:(Ljava/nio/Buffer;)V
+       301: aload         9
+       303: athrow
+      Exception table:
+         from    to  target type
+            28    77   260   Class java/lang/Throwable
+           102   147   260   Class java/lang/Throwable
+           172   191   260   Class java/lang/Throwable
+           216   235   260   Class java/lang/Throwable
+           267   272   275   Class java/lang/Throwable
+            23    87   287   any
+           102   157   287   any
+           172   201   287   any
+           216   245   287   any
+           260   289   287   any
+      StackMapTable: number_of_entries = 19
+        frame_type = 13 /* same */
+        frame_type = 1 /* same */
+        frame_type = 255 /* full_frame */
+          offset_delta = 71
+          locals = [ class "[B", int, class java/nio/ByteBuffer, class java/nio/ByteBuffer, class org/lwjgl/system/MemoryStack, class java/nio/IntBuffer, class java/nio/IntBuffer, class java/nio/IntBuffer, class net/anubis/client/util/spotify/AlbumArt ]
+          stack = []
+        frame_type = 7 /* same */
+        frame_type = 250 /* chop */
+          offset_delta = 6
+        frame_type = 41 /* same */
+        frame_type = 252 /* append */
+          offset_delta = 12
+          locals = [ class net/anubis/client/util/spotify/AlbumArt ]
+        frame_type = 7 /* same */
+        frame_type = 250 /* chop */
+          offset_delta = 6
+        frame_type = 252 /* append */
+          offset_delta = 28
+          locals = [ class net/anubis/client/util/spotify/AlbumArt ]
+        frame_type = 7 /* same */
+        frame_type = 250 /* chop */
+          offset_delta = 6
+        frame_type = 252 /* append */
+          offset_delta = 28
+          locals = [ class net/anubis/client/util/spotify/AlbumArt ]
+        frame_type = 7 /* same */
+        frame_type = 255 /* full_frame */
+          offset_delta = 6
+          locals = [ class "[B", int, class java/nio/ByteBuffer, class java/nio/ByteBuffer, class org/lwjgl/system/MemoryStack ]
+          stack = [ class java/lang/Throwable ]
+        frame_type = 255 /* full_frame */
+          offset_delta = 14
+          locals = [ class "[B", int, class java/nio/ByteBuffer, class java/nio/ByteBuffer, class org/lwjgl/system/MemoryStack, class java/lang/Throwable ]
+          stack = [ class java/lang/Throwable ]
+        frame_type = 8 /* same */
+        frame_type = 255 /* full_frame */
+          offset_delta = 2
+          locals = [ class "[B", int, class java/nio/ByteBuffer, class java/nio/ByteBuffer ]
+          stack = [ class java/lang/Throwable ]
+        frame_type = 255 /* full_frame */
+          offset_delta = 9
+          locals = [ class "[B", int, class java/nio/ByteBuffer, class java/nio/ByteBuffer, top, top, top, top, top, class java/lang/Throwable ]
+          stack = []
+      LineNumberTable:
+        line 22: 0
+        line 23: 15
+        line 24: 21
+        line 25: 23
+        line 26: 28
+        line 27: 37
+        line 28: 45
+        line 29: 53
+        line 30: 61
+        line 35: 77
+        line 36: 87
+        line 37: 95
+        line 30: 99
+        line 31: 102
+        line 35: 147
+        line 36: 157
+        line 37: 165
+        line 31: 169
+        line 32: 172
+        line 33: 184
+        line 35: 191
+        line 36: 201
+        line 37: 209
+        line 33: 213
+        line 34: 216
+        line 35: 235
+        line 36: 245
+        line 37: 253
+        line 34: 257
+        line 25: 260
+        line 36: 287
+        line 37: 297
+        line 38: 301
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+           45     215     5     w   Ljava/nio/IntBuffer;
+           53     207     6     h   Ljava/nio/IntBuffer;
+           61     199     7 channels   Ljava/nio/IntBuffer;
+           28     259     4 stack   Lorg/lwjgl/system/MemoryStack;
+            0     304     0 encoded   [B
+            0     304     1 maxSide   I
+           21     283     2  file   Ljava/nio/ByteBuffer;
+           23     281     3 pixels   Ljava/nio/ByteBuffer;
+    MethodParameters:
+      Name                           Flags
+      encoded
+      maxSide
+
+  static net.anubis.client.util.spotify.AlbumArt crop(java.nio.ByteBuffer, int, int, int);
+    descriptor: (Ljava/nio/ByteBuffer;III)Lnet/anubis/client/util/spotify/AlbumArt;
+    flags: (0x0008) ACC_STATIC
+    Code:
+      stack=8, locals=27, args_size=4
+         0: iload_1
+         1: iload_2
+         2: invokestatic  #107                // Method java/lang/Math.min:(II)I
+         5: istore        4
+         7: iload_1
+         8: iload         4
+        10: isub
+        11: iconst_2
+        12: idiv
+        13: istore        5
+        15: iload_2
+        16: iload         4
+        18: isub
+        19: iconst_2
+        20: idiv
+        21: istore        6
+        23: iload         4
+        25: iload_3
+        26: invokestatic  #107                // Method java/lang/Math.min:(II)I
+        29: istore        7
+        31: iload         7
+        33: iload         7
+        35: imul
+        36: iconst_4
+        37: imul
+        38: newarray       byte
+        40: astore        8
+        42: iconst_0
+        43: istore        9
+        45: iconst_0
+        46: istore        10
+        48: iload         10
+        50: iload         7
+        52: if_icmpge     396
+        55: iload         6
+        57: iload         10
+        59: i2l
+        60: iload         4
+        62: i2l
+        63: lmul
+        64: iload         7
+        66: i2l
+        67: ldiv
+        68: l2i
+        69: iadd
+        70: istore        11
+        72: iload         11
+        74: iconst_1
+        75: iadd
+        76: iload         6
+        78: iload         10
+        80: iconst_1
+        81: iadd
+        82: i2l
+        83: iload         4
+        85: i2l
+        86: lmul
+        87: iload         7
+        89: i2l
+        90: ldiv
+        91: l2i
+        92: iadd
+        93: invokestatic  #110                // Method java/lang/Math.max:(II)I
+        96: istore        12
+        98: iconst_0
+        99: istore        13
+       101: iload         13
+       103: iload         7
+       105: if_icmpge     390
+       108: iload         5
+       110: iload         13
+       112: i2l
+       113: iload         4
+       115: i2l
+       116: lmul
+       117: iload         7
+       119: i2l
+       120: ldiv
+       121: l2i
+       122: iadd
+       123: istore        14
+       125: iload         14
+       127: iconst_1
+       128: iadd
+       129: iload         5
+       131: iload         13
+       133: iconst_1
+       134: iadd
+       135: i2l
+       136: iload         4
+       138: i2l
+       139: lmul
+       140: iload         7
+       142: i2l
+       143: ldiv
+       144: l2i
+       145: iadd
+       146: invokestatic  #110                // Method java/lang/Math.max:(II)I
+       149: istore        15
+       151: lconst_0
+       152: lstore        16
+       154: lconst_0
+       155: lstore        18
+       157: lconst_0
+       158: lstore        20
+       160: lconst_0
+       161: lstore        22
+       163: iload         11
+       165: istore        24
+       167: iload         24
+       169: iload         12
+       171: if_icmpge     281
+       174: iload         24
+       176: iload_1
+       177: imul
+       178: iload         14
+       180: iadd
+       181: iconst_4
+       182: imul
+       183: istore        25
+       185: iload         14
+       187: istore        26
+       189: iload         26
+       191: iload         15
+       193: if_icmpge     275
+       196: lload         16
+       198: aload_0
+       199: iload         25
+       201: invokevirtual #113                // Method java/nio/ByteBuffer.get:(I)B
+       204: sipush        255
+       207: iand
+       208: i2l
+       209: ladd
+       210: lstore        16
+       212: lload         18
+       214: aload_0
+       215: iload         25
+       217: iconst_1
+       218: iadd
+       219: invokevirtual #113                // Method java/nio/ByteBuffer.get:(I)B
+       222: sipush        255
+       225: iand
+       226: i2l
+       227: ladd
+       228: lstore        18
+       230: lload         20
+       232: aload_0
+       233: iload         25
+       235: iconst_2
+       236: iadd
+       237: invokevirtual #113                // Method java/nio/ByteBuffer.get:(I)B
+       240: sipush        255
+       243: iand
+       244: i2l
+       245: ladd
+       246: lstore        20
+       248: lload         22
+       250: aload_0
+       251: iload         25
+       253: iconst_3
+       254: iadd
+       255: invokevirtual #113                // Method java/nio/ByteBuffer.get:(I)B
+       258: sipush        255
+       261: iand
+       262: i2l
+       263: ladd
+       264: lstore        22
+       266: iinc          26, 1
+       269: iinc          25, 4
+       272: goto          189
+       275: iinc          24, 1
+       278: goto          167
+       281: iload         12
+       283: iload         11
+       285: isub
+       286: i2l
+       287: iload         15
+       289: iload         14
+       291: isub
+       292: i2l
+       293: lmul
+       294: lstore        24
+       296: aload         8
+       298: iload         9
+       300: iinc          9, 1
+       303: lload         16
+       305: lload         24
+       307: ldc2_w        #114                // long 2l
+       310: ldiv
+       311: ladd
+       312: lload         24
+       314: ldiv
+       315: l2i
+       316: i2b
+       317: bastore
+       318: aload         8
+       320: iload         9
+       322: iinc          9, 1
+       325: lload         18
+       327: lload         24
+       329: ldc2_w        #114                // long 2l
+       332: ldiv
+       333: ladd
+       334: lload         24
+       336: ldiv
+       337: l2i
+       338: i2b
+       339: bastore
+       340: aload         8
+       342: iload         9
+       344: iinc          9, 1
+       347: lload         20
+       349: lload         24
+       351: ldc2_w        #114                // long 2l
+       354: ldiv
+       355: ladd
+       356: lload         24
+       358: ldiv
+       359: l2i
+       360: i2b
+       361: bastore
+       362: aload         8
+       364: iload         9
+       366: iinc          9, 1
+       369: lload         22
+       371: lload         24
+       373: ldc2_w        #114                // long 2l
+       376: ldiv
+       377: ladd
+       378: lload         24
+       380: ldiv
+       381: l2i
+       382: i2b
+       383: bastore
+       384: iinc          13, 1
+       387: goto          101
+       390: iinc          10, 1
+       393: goto          48
+       396: new           #2                  // class net/anubis/client/util/spotify/AlbumArt
+       399: dup
+       400: iload         7
+       402: aload         8
+       404: invokespecial #117                // Method "<init>":(I[B)V
+       407: areturn
+      StackMapTable: number_of_entries = 8
+        frame_type = 255 /* full_frame */
+          offset_delta = 48
+          locals = [ class java/nio/ByteBuffer, int, int, int, int, int, int, int, class "[B", int, int ]
+          stack = []
+        frame_type = 254 /* append */
+          offset_delta = 52
+          locals = [ int, int, int ]
+        frame_type = 255 /* full_frame */
+          offset_delta = 65
+          locals = [ class java/nio/ByteBuffer, int, int, int, int, int, int, int, class "[B", int, int, int, int, int, int, int, long, long, long, long, int ]
+          stack = []
+        frame_type = 253 /* append */
+          offset_delta = 21
+          locals = [ int, int ]
+        frame_type = 249 /* chop */
+          offset_delta = 85
+        frame_type = 250 /* chop */
+          offset_delta = 5
+        frame_type = 255 /* full_frame */
+          offset_delta = 108
+          locals = [ class java/nio/ByteBuffer, int, int, int, int, int, int, int, class "[B", int, int ]
+          stack = []
+        frame_type = 250 /* chop */
+          offset_delta = 5
+      LineNumberTable:
+        line 42: 0
+        line 43: 7
+        line 44: 15
+        line 45: 23
+        line 46: 31
+        line 47: 42
+        line 48: 45
+        line 49: 55
+        line 50: 72
+        line 51: 98
+        line 52: 108
+        line 53: 125
+        line 54: 151
+        line 55: 163
+        line 56: 174
+        line 57: 185
+        line 58: 196
+        line 59: 212
+        line 60: 230
+        line 61: 248
+        line 57: 266
+        line 55: 275
+        line 64: 281
+        line 65: 296
+        line 66: 318
+        line 67: 340
+        line 68: 362
+        line 51: 384
+        line 48: 390
+        line 71: 396
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+          189      86    26     x   I
+          185      90    25   row   I
+          167     114    24     y   I
+          125     259    14    x0   I
+          151     233    15    x1   I
+          154     230    16     r   J
+          157     227    18     g   J
+          160     224    20     b   J
+          163     221    22     a   J
+          296      88    24 count   J
+          101     289    13    ox   I
+           72     318    11    y0   I
+           98     292    12    y1   I
+           48     348    10    oy   I
+            0     408     0 pixels   Ljava/nio/ByteBuffer;
+            0     408     1 width   I
+            0     408     2 height   I
+            0     408     3 maxSide   I
+            7     401     4  side   I
+           15     393     5  left   I
+           23     385     6   top   I
+           31     377     7  size   I
+           42     366     8   out   [B
+           45     363     9     o   I
+    MethodParameters:
+      Name                           Flags
+      pixels
+      width
+      height
+      maxSide
+
+  public int size();
+    descriptor: ()I
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: getfield      #18                 // Field size:I
+         4: ireturn
+      LineNumberTable:
+        line 75: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       5     0  this   Lnet/anubis/client/util/spotify/AlbumArt;
+
+  public int byteSize();
+    descriptor: ()I
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: getfield      #20                 // Field rgba:[B
+         4: arraylength
+         5: ireturn
+      LineNumberTable:
+        line 79: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       6     0  this   Lnet/anubis/client/util/spotify/AlbumArt;
+
+  public void copyTo(java.nio.ByteBuffer);
+    descriptor: (Ljava/nio/ByteBuffer;)V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=2, locals=2, args_size=2
+         0: aload_1
+         1: aload_0
+         2: getfield      #20                 // Field rgba:[B
+         5: invokevirtual #46                 // Method java/nio/ByteBuffer.put:([B)Ljava/nio/ByteBuffer;
+         8: pop
+         9: return
+      LineNumberTable:
+        line 83: 0
+        line 84: 9
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      10     0  this   Lnet/anubis/client/util/spotify/AlbumArt;
+            0      10     1 target   Ljava/nio/ByteBuffer;
+    MethodParameters:
+      Name                           Flags
+      target
+}
+SourceFile: "AlbumArt.java"
+RuntimeVisibleAnnotations:
+  0: #142(#143=e#144.#145)
+    net.fabricmc.api.Environment(
+      value=Lnet/fabricmc/api/EnvType;.CLIENT
+    )

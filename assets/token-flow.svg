@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 530" role="img" aria-labelledby="title desc">
+  <title id="title">Where the reviewed account tokens go</title>
+  <desc id="desc">A user-selected account feeds the account manager. Tokens are used for official Microsoft, Xbox and Minecraft HTTPS authentication and saved locally in plaintext accounts.json. No reviewed path to an unrelated collector was identified.</desc>
+  <defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#9eb5c8"/></marker></defs>
+  <rect width="1280" height="530" rx="20" fill="#102030"/>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="40" y="49" fill="#f1f5fa" font-size="27" font-weight="700">TOKEN FLOW · AUTHENTICATION IS NOT EXFILTRATION</text>
+    <text x="40" y="80" fill="#9cb1c4" font-size="17">Reviewed Java call chains · the target was never executed</text>
+    <rect x="40" y="121" width="290" height="114" rx="12" fill="#1a3044" stroke="#425e75"/>
+    <rect x="450" y="121" width="290" height="114" rx="12" fill="#1a3044" stroke="#425e75"/>
+    <rect x="860" y="121" width="380" height="114" rx="12" fill="#193b34" stroke="#476f5b"/>
+    <text x="62" y="154" fill="#edf3f9" font-size="22" font-weight="700">User-selected account</text>
+    <text x="62" y="186" fill="#b7c8d8" font-size="16">Session-token input or</text>
+    <text x="62" y="211" fill="#b7c8d8" font-size="16">Microsoft sign-in / saved login</text>
+    <text x="472" y="154" fill="#edf3f9" font-size="22" font-weight="700">Account manager</text>
+    <text x="472" y="186" fill="#b7c8d8" font-size="16">Accounts.signIn / login</text>
+    <text x="472" y="211" fill="#b7c8d8" font-size="16">AuthHttp / selected credentials</text>
+    <text x="882" y="154" fill="#e2f2e8" font-size="22" font-weight="700">Official authentication</text>
+    <text x="882" y="186" fill="#b8d3c8" font-size="16">Microsoft · Xbox · Minecraft</text>
+    <text x="882" y="211" fill="#b8d3c8" font-size="16">HTTPS requests to documented APIs</text>
+    <path d="M342 178H434M752 178H844" fill="none" stroke="#9eb5c8" stroke-width="3" marker-end="url(#arrow)"/>
+    <path d="M595 247V304" fill="none" stroke="#9eb5c8" stroke-width="3" marker-end="url(#arrow)"/>
+    <rect x="450" y="321" width="370" height="119" rx="12" fill="#3c3526" stroke="#bda365"/>
+    <text x="472" y="355" fill="#f0d59d" font-size="22" font-weight="700">Local saved-account file</text>
+    <text x="472" y="386" fill="#dfd2b7" font-size="16">config/anubis/accounts.json</text>
+    <text x="472" y="414" fill="#f0d59d" font-size="17" font-weight="700">Plaintext refresh/session tokens</text>
+    <rect x="860" y="321" width="380" height="119" rx="12" fill="#182737" stroke="#607386" stroke-dasharray="6 5"/>
+    <text x="882" y="355" fill="#c4d1dd" font-size="22">Unrelated collector</text>
+    <text x="882" y="386" fill="#a6b8c9" font-size="16">Developer / Discord / webhook</text>
+    <text x="882" y="414" fill="#c4d1dd" font-size="17">No reviewed token route identified</text>
+    <text x="40" y="490" fill="#95acbf" font-size="16">Local storage risk is confirmed. An unauthorized collection-and-send chain was not established.</text>
+  </g>
+</svg>

@@ -1,0 +1,504 @@
+Classfile analysis-workspace/extracted/run.oEA4CbVx/net/anubis/client/webhook/WebhookConfig.class
+  Last modified Oct 13, 2026; size 3529 bytes
+  SHA-256 checksum 83ed2ad54744718397a591af4bc24ae71e25bf2995b1d0313ea36190208a4581
+  Compiled from "WebhookConfig.java"
+public final class net.anubis.client.webhook.WebhookConfig extends java.lang.Record
+  minor version: 0
+  major version: 65
+  flags: (0x0031) ACC_PUBLIC, ACC_FINAL, ACC_SUPER
+  this_class: #2                          // net/anubis/client/webhook/WebhookConfig
+  super_class: #4                         // java/lang/Record
+  interfaces: 0, fields: 5, methods: 11, attributes: 5
+Constant pool:
+    #1 = Utf8               net/anubis/client/webhook/WebhookConfig
+    #2 = Class              #1            // net/anubis/client/webhook/WebhookConfig
+    #3 = Utf8               java/lang/Record
+    #4 = Class              #3            // java/lang/Record
+    #5 = Utf8               WebhookConfig.java
+    #6 = Utf8               java/lang/invoke/MethodHandles$Lookup
+    #7 = Class              #6            // java/lang/invoke/MethodHandles$Lookup
+    #8 = Utf8               java/lang/invoke/MethodHandles
+    #9 = Class              #8            // java/lang/invoke/MethodHandles
+   #10 = Utf8               Lookup
+   #11 = Utf8               url
+   #12 = Utf8               Ljava/lang/String;
+   #13 = Utf8               username
+   #14 = Utf8               avatarUrl
+   #15 = Utf8               DEFAULT_USERNAME
+   #16 = Utf8               Anubis
+   #17 = String             #16           // Anubis
+   #18 = Utf8               DEFAULT_AVATAR_URL
+   #19 = Utf8               https://i.imgur.com/W3cTqvc.png
+   #20 = String             #19           // https://i.imgur.com/W3cTqvc.png
+   #21 = Utf8               <init>
+   #22 = Utf8               (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+   #23 = Utf8               ()V
+   #24 = NameAndType        #21:#23       // "<init>":()V
+   #25 = Methodref          #4.#24        // java/lang/Record."<init>":()V
+   #26 = String             #11           // url
+   #27 = Utf8               normalizeRequired
+   #28 = Utf8               (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+   #29 = NameAndType        #27:#28       // normalizeRequired:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+   #30 = Methodref          #2.#29        // net/anubis/client/webhook/WebhookConfig.normalizeRequired:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+   #31 = Utf8               normalizeOptional
+   #32 = NameAndType        #31:#28       // normalizeOptional:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+   #33 = Methodref          #2.#32        // net/anubis/client/webhook/WebhookConfig.normalizeOptional:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+   #34 = NameAndType        #11:#12       // url:Ljava/lang/String;
+   #35 = Fieldref           #2.#34        // net/anubis/client/webhook/WebhookConfig.url:Ljava/lang/String;
+   #36 = NameAndType        #13:#12       // username:Ljava/lang/String;
+   #37 = Fieldref           #2.#36        // net/anubis/client/webhook/WebhookConfig.username:Ljava/lang/String;
+   #38 = NameAndType        #14:#12       // avatarUrl:Ljava/lang/String;
+   #39 = Fieldref           #2.#38        // net/anubis/client/webhook/WebhookConfig.avatarUrl:Ljava/lang/String;
+   #40 = Utf8               this
+   #41 = Utf8               Lnet/anubis/client/webhook/WebhookConfig;
+   #42 = Utf8               (Ljava/lang/String;)V
+   #43 = NameAndType        #21:#22       // "<init>":(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+   #44 = Methodref          #2.#43        // net/anubis/client/webhook/WebhookConfig."<init>":(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+   #45 = Utf8               isValidUrl
+   #46 = Utf8               (Ljava/lang/String;)Z
+   #47 = Utf8               java/net/URISyntaxException
+   #48 = Class              #47           // java/net/URISyntaxException
+   #49 = Utf8               java/net/URI
+   #50 = Class              #49           // java/net/URI
+   #51 = NameAndType        #21:#42       // "<init>":(Ljava/lang/String;)V
+   #52 = Methodref          #50.#51       // java/net/URI."<init>":(Ljava/lang/String;)V
+   #53 = Utf8               getScheme
+   #54 = Utf8               ()Ljava/lang/String;
+   #55 = NameAndType        #53:#54       // getScheme:()Ljava/lang/String;
+   #56 = Methodref          #50.#55       // java/net/URI.getScheme:()Ljava/lang/String;
+   #57 = Utf8               getHost
+   #58 = NameAndType        #57:#54       // getHost:()Ljava/lang/String;
+   #59 = Methodref          #50.#58       // java/net/URI.getHost:()Ljava/lang/String;
+   #60 = Utf8               https
+   #61 = String             #60           // https
+   #62 = Utf8               java/lang/String
+   #63 = Class              #62           // java/lang/String
+   #64 = Utf8               equalsIgnoreCase
+   #65 = NameAndType        #64:#46       // equalsIgnoreCase:(Ljava/lang/String;)Z
+   #66 = Methodref          #63.#65       // java/lang/String.equalsIgnoreCase:(Ljava/lang/String;)Z
+   #67 = Utf8               http
+   #68 = String             #67           // http
+   #69 = Utf8               uri
+   #70 = Utf8               Ljava/net/URI;
+   #71 = Utf8               scheme
+   #72 = Utf8               e
+   #73 = Utf8               Ljava/net/URISyntaxException;
+   #74 = Utf8               value
+   #75 = Utf8               fieldName
+   #76 = Utf8               java/lang/IllegalArgumentException
+   #77 = Class              #76           // java/lang/IllegalArgumentException
+   #78 = Utf8               \u0001 cannot be blank
+   #79 = String             #78           // \u0001 cannot be blank
+   #80 = Utf8               java/lang/invoke/StringConcatFactory
+   #81 = Class              #80           // java/lang/invoke/StringConcatFactory
+   #82 = Utf8               makeConcatWithConstants
+   #83 = Utf8               (Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+   #84 = NameAndType        #82:#83       // makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+   #85 = Methodref          #81.#84       // java/lang/invoke/StringConcatFactory.makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+   #86 = MethodHandle       6:#85         // REF_invokeStatic java/lang/invoke/StringConcatFactory.makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+   #87 = Utf8               (Ljava/lang/String;)Ljava/lang/String;
+   #88 = NameAndType        #82:#87       // makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+   #89 = InvokeDynamic      #0:#88        // #0:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+   #90 = Methodref          #77.#51       // java/lang/IllegalArgumentException."<init>":(Ljava/lang/String;)V
+   #91 = Utf8               normalized
+   #92 = Utf8               fallback
+   #93 = Utf8               trim
+   #94 = NameAndType        #93:#54       // trim:()Ljava/lang/String;
+   #95 = Methodref          #63.#94       // java/lang/String.trim:()Ljava/lang/String;
+   #96 = Utf8               isEmpty
+   #97 = Utf8               ()Z
+   #98 = NameAndType        #96:#97       // isEmpty:()Z
+   #99 = Methodref          #63.#98       // java/lang/String.isEmpty:()Z
+  #100 = Utf8               toString
+  #101 = Utf8               url;username;avatarUrl
+  #102 = String             #101          // url;username;avatarUrl
+  #103 = MethodHandle       1:#35         // REF_getField net/anubis/client/webhook/WebhookConfig.url:Ljava/lang/String;
+  #104 = MethodHandle       1:#37         // REF_getField net/anubis/client/webhook/WebhookConfig.username:Ljava/lang/String;
+  #105 = MethodHandle       1:#39         // REF_getField net/anubis/client/webhook/WebhookConfig.avatarUrl:Ljava/lang/String;
+  #106 = Utf8               java/lang/runtime/ObjectMethods
+  #107 = Class              #106          // java/lang/runtime/ObjectMethods
+  #108 = Utf8               bootstrap
+  #109 = Utf8               (Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/TypeDescriptor;Ljava/lang/Class;Ljava/lang/String;[Ljava/lang/invoke/MethodHandle;)Ljava/lang/Object;
+  #110 = NameAndType        #108:#109     // bootstrap:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/TypeDescriptor;Ljava/lang/Class;Ljava/lang/String;[Ljava/lang/invoke/MethodHandle;)Ljava/lang/Object;
+  #111 = Methodref          #107.#110     // java/lang/runtime/ObjectMethods.bootstrap:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/TypeDescriptor;Ljava/lang/Class;Ljava/lang/String;[Ljava/lang/invoke/MethodHandle;)Ljava/lang/Object;
+  #112 = MethodHandle       6:#111        // REF_invokeStatic java/lang/runtime/ObjectMethods.bootstrap:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/TypeDescriptor;Ljava/lang/Class;Ljava/lang/String;[Ljava/lang/invoke/MethodHandle;)Ljava/lang/Object;
+  #113 = Utf8               (Lnet/anubis/client/webhook/WebhookConfig;)Ljava/lang/String;
+  #114 = NameAndType        #100:#113     // toString:(Lnet/anubis/client/webhook/WebhookConfig;)Ljava/lang/String;
+  #115 = InvokeDynamic      #1:#114       // #1:toString:(Lnet/anubis/client/webhook/WebhookConfig;)Ljava/lang/String;
+  #116 = Utf8               hashCode
+  #117 = Utf8               ()I
+  #118 = Utf8               (Lnet/anubis/client/webhook/WebhookConfig;)I
+  #119 = NameAndType        #116:#118     // hashCode:(Lnet/anubis/client/webhook/WebhookConfig;)I
+  #120 = InvokeDynamic      #1:#119       // #1:hashCode:(Lnet/anubis/client/webhook/WebhookConfig;)I
+  #121 = Utf8               equals
+  #122 = Utf8               (Ljava/lang/Object;)Z
+  #123 = Utf8               o
+  #124 = Utf8               (Lnet/anubis/client/webhook/WebhookConfig;Ljava/lang/Object;)Z
+  #125 = NameAndType        #121:#124     // equals:(Lnet/anubis/client/webhook/WebhookConfig;Ljava/lang/Object;)Z
+  #126 = InvokeDynamic      #1:#125       // #1:equals:(Lnet/anubis/client/webhook/WebhookConfig;Ljava/lang/Object;)Z
+  #127 = Utf8               Ljava/lang/Object;
+  #128 = Utf8               Lnet/fabricmc/api/Environment;
+  #129 = Utf8               Lnet/fabricmc/api/EnvType;
+  #130 = Utf8               CLIENT
+  #131 = Utf8               ConstantValue
+  #132 = Utf8               Code
+  #133 = Utf8               LineNumberTable
+  #134 = Utf8               LocalVariableTable
+  #135 = Utf8               MethodParameters
+  #136 = Utf8               StackMapTable
+  #137 = Utf8               InnerClasses
+  #138 = Utf8               SourceFile
+  #139 = Utf8               RuntimeVisibleAnnotations
+  #140 = Utf8               BootstrapMethods
+  #141 = Utf8               Record
+{
+  private final java.lang.String url;
+    descriptor: Ljava/lang/String;
+    flags: (0x0012) ACC_PRIVATE, ACC_FINAL
+
+  private final java.lang.String username;
+    descriptor: Ljava/lang/String;
+    flags: (0x0012) ACC_PRIVATE, ACC_FINAL
+
+  private final java.lang.String avatarUrl;
+    descriptor: Ljava/lang/String;
+    flags: (0x0012) ACC_PRIVATE, ACC_FINAL
+
+  public static final java.lang.String DEFAULT_USERNAME;
+    descriptor: Ljava/lang/String;
+    flags: (0x0019) ACC_PUBLIC, ACC_STATIC, ACC_FINAL
+    ConstantValue: String Anubis
+
+  public static final java.lang.String DEFAULT_AVATAR_URL;
+    descriptor: Ljava/lang/String;
+    flags: (0x0019) ACC_PUBLIC, ACC_STATIC, ACC_FINAL
+    ConstantValue: String https://i.imgur.com/W3cTqvc.png
+
+  public net.anubis.client.webhook.WebhookConfig(java.lang.String, java.lang.String, java.lang.String);
+    descriptor: (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=2, locals=4, args_size=4
+         0: aload_0
+         1: invokespecial #25                 // Method java/lang/Record."<init>":()V
+         4: aload_1
+         5: ldc           #26                 // String url
+         7: invokestatic  #30                 // Method normalizeRequired:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+        10: astore_1
+        11: aload_2
+        12: ldc           #17                 // String Anubis
+        14: invokestatic  #33                 // Method normalizeOptional:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+        17: astore_2
+        18: aload_3
+        19: ldc           #20                 // String https://i.imgur.com/W3cTqvc.png
+        21: invokestatic  #33                 // Method normalizeOptional:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+        24: astore_3
+        25: aload_0
+        26: aload_1
+        27: putfield      #35                 // Field url:Ljava/lang/String;
+        30: aload_0
+        31: aload_2
+        32: putfield      #37                 // Field username:Ljava/lang/String;
+        35: aload_0
+        36: aload_3
+        37: putfield      #39                 // Field avatarUrl:Ljava/lang/String;
+        40: return
+      LineNumberTable:
+        line 16: 0
+        line 17: 4
+        line 18: 11
+        line 19: 18
+        line 16: 25
+        line 20: 40
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      41     0  this   Lnet/anubis/client/webhook/WebhookConfig;
+            0      41     1   url   Ljava/lang/String;
+            0      41     2 username   Ljava/lang/String;
+            0      41     3 avatarUrl   Ljava/lang/String;
+    MethodParameters:
+      Name                           Flags
+      url                            mandated
+      username                       mandated
+      avatarUrl                      mandated
+
+  public net.anubis.client.webhook.WebhookConfig(java.lang.String);
+    descriptor: (Ljava/lang/String;)V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=4, locals=2, args_size=2
+         0: aload_0
+         1: aload_1
+         2: ldc           #17                 // String Anubis
+         4: ldc           #20                 // String https://i.imgur.com/W3cTqvc.png
+         6: invokespecial #44                 // Method "<init>":(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+         9: return
+      LineNumberTable:
+        line 23: 0
+        line 24: 9
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      10     0  this   Lnet/anubis/client/webhook/WebhookConfig;
+            0      10     1   url   Ljava/lang/String;
+    MethodParameters:
+      Name                           Flags
+      url
+
+  public static boolean isValidUrl(java.lang.String);
+    descriptor: (Ljava/lang/String;)Z
+    flags: (0x0009) ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=3, locals=3, args_size=1
+         0: new           #50                 // class java/net/URI
+         3: dup
+         4: aload_0
+         5: invokespecial #52                 // Method java/net/URI."<init>":(Ljava/lang/String;)V
+         8: astore_1
+         9: aload_1
+        10: invokevirtual #56                 // Method java/net/URI.getScheme:()Ljava/lang/String;
+        13: astore_2
+        14: aload_1
+        15: invokevirtual #59                 // Method java/net/URI.getHost:()Ljava/lang/String;
+        18: ifnull        43
+        21: ldc           #61                 // String https
+        23: aload_2
+        24: invokevirtual #66                 // Method java/lang/String.equalsIgnoreCase:(Ljava/lang/String;)Z
+        27: ifne          39
+        30: ldc           #68                 // String http
+        32: aload_2
+        33: invokevirtual #66                 // Method java/lang/String.equalsIgnoreCase:(Ljava/lang/String;)Z
+        36: ifeq          43
+        39: iconst_1
+        40: goto          44
+        43: iconst_0
+        44: ireturn
+        45: astore_1
+        46: iconst_0
+        47: ireturn
+      Exception table:
+         from    to  target type
+             0    44    45   Class java/net/URISyntaxException
+      StackMapTable: number_of_entries = 4
+        frame_type = 253 /* append */
+          offset_delta = 39
+          locals = [ class java/net/URI, class java/lang/String ]
+        frame_type = 3 /* same */
+        frame_type = 64 /* same_locals_1_stack_item */
+          stack = [ int ]
+        frame_type = 255 /* full_frame */
+          offset_delta = 0
+          locals = [ class java/lang/String ]
+          stack = [ class java/net/URISyntaxException ]
+      LineNumberTable:
+        line 28: 0
+        line 29: 9
+        line 30: 14
+        line 31: 45
+        line 32: 46
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            9      36     1   uri   Ljava/net/URI;
+           14      31     2 scheme   Ljava/lang/String;
+           46       2     1     e   Ljava/net/URISyntaxException;
+            0      48     0   url   Ljava/lang/String;
+    MethodParameters:
+      Name                           Flags
+      url
+
+  private static java.lang.String normalizeRequired(java.lang.String, java.lang.String);
+    descriptor: (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    flags: (0x000a) ACC_PRIVATE, ACC_STATIC
+    Code:
+      stack=3, locals=3, args_size=2
+         0: aload_0
+         1: aconst_null
+         2: invokestatic  #33                 // Method normalizeOptional:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+         5: astore_2
+         6: aload_2
+         7: ifnonnull     24
+        10: new           #77                 // class java/lang/IllegalArgumentException
+        13: dup
+        14: aload_1
+        15: invokedynamic #89,  0             // InvokeDynamic #0:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+        20: invokespecial #90                 // Method java/lang/IllegalArgumentException."<init>":(Ljava/lang/String;)V
+        23: athrow
+        24: aload_2
+        25: areturn
+      StackMapTable: number_of_entries = 1
+        frame_type = 252 /* append */
+          offset_delta = 24
+          locals = [ class java/lang/String ]
+      LineNumberTable:
+        line 37: 0
+        line 38: 6
+        line 39: 10
+        line 41: 24
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      26     0 value   Ljava/lang/String;
+            0      26     1 fieldName   Ljava/lang/String;
+            6      20     2 normalized   Ljava/lang/String;
+    MethodParameters:
+      Name                           Flags
+      value
+      fieldName
+
+  private static java.lang.String normalizeOptional(java.lang.String, java.lang.String);
+    descriptor: (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    flags: (0x000a) ACC_PRIVATE, ACC_STATIC
+    Code:
+      stack=1, locals=3, args_size=2
+         0: aload_0
+         1: ifnonnull     6
+         4: aload_1
+         5: areturn
+         6: aload_0
+         7: invokevirtual #95                 // Method java/lang/String.trim:()Ljava/lang/String;
+        10: astore_2
+        11: aload_2
+        12: invokevirtual #99                 // Method java/lang/String.isEmpty:()Z
+        15: ifeq          22
+        18: aload_1
+        19: goto          23
+        22: aload_2
+        23: areturn
+      StackMapTable: number_of_entries = 3
+        frame_type = 6 /* same */
+        frame_type = 252 /* append */
+          offset_delta = 15
+          locals = [ class java/lang/String ]
+        frame_type = 64 /* same_locals_1_stack_item */
+          stack = [ class java/lang/String ]
+      LineNumberTable:
+        line 45: 0
+        line 46: 4
+        line 49: 6
+        line 50: 11
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      24     0 value   Ljava/lang/String;
+            0      24     1 fallback   Ljava/lang/String;
+           11      13     2 normalized   Ljava/lang/String;
+    MethodParameters:
+      Name                           Flags
+      value
+      fallback
+
+  public final java.lang.String toString();
+    descriptor: ()Ljava/lang/String;
+    flags: (0x0011) ACC_PUBLIC, ACC_FINAL
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: invokedynamic #115,  0            // InvokeDynamic #1:toString:(Lnet/anubis/client/webhook/WebhookConfig;)Ljava/lang/String;
+         6: areturn
+      LineNumberTable:
+        line 8: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       7     0  this   Lnet/anubis/client/webhook/WebhookConfig;
+
+  public final int hashCode();
+    descriptor: ()I
+    flags: (0x0011) ACC_PUBLIC, ACC_FINAL
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: invokedynamic #120,  0            // InvokeDynamic #1:hashCode:(Lnet/anubis/client/webhook/WebhookConfig;)I
+         6: ireturn
+      LineNumberTable:
+        line 8: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       7     0  this   Lnet/anubis/client/webhook/WebhookConfig;
+
+  public final boolean equals(java.lang.Object);
+    descriptor: (Ljava/lang/Object;)Z
+    flags: (0x0011) ACC_PUBLIC, ACC_FINAL
+    Code:
+      stack=2, locals=2, args_size=2
+         0: aload_0
+         1: aload_1
+         2: invokedynamic #126,  0            // InvokeDynamic #1:equals:(Lnet/anubis/client/webhook/WebhookConfig;Ljava/lang/Object;)Z
+         7: ireturn
+      LineNumberTable:
+        line 8: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       8     0  this   Lnet/anubis/client/webhook/WebhookConfig;
+            0       8     1     o   Ljava/lang/Object;
+    MethodParameters:
+      Name                           Flags
+      o
+
+  public java.lang.String url();
+    descriptor: ()Ljava/lang/String;
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: getfield      #35                 // Field url:Ljava/lang/String;
+         4: areturn
+      LineNumberTable:
+        line 8: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       5     0  this   Lnet/anubis/client/webhook/WebhookConfig;
+
+  public java.lang.String username();
+    descriptor: ()Ljava/lang/String;
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: getfield      #37                 // Field username:Ljava/lang/String;
+         4: areturn
+      LineNumberTable:
+        line 8: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       5     0  this   Lnet/anubis/client/webhook/WebhookConfig;
+
+  public java.lang.String avatarUrl();
+    descriptor: ()Ljava/lang/String;
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: getfield      #39                 // Field avatarUrl:Ljava/lang/String;
+         4: areturn
+      LineNumberTable:
+        line 8: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       5     0  this   Lnet/anubis/client/webhook/WebhookConfig;
+}
+InnerClasses:
+  public static final #10= #7 of #9;      // Lookup=class java/lang/invoke/MethodHandles$Lookup of class java/lang/invoke/MethodHandles
+SourceFile: "WebhookConfig.java"
+RuntimeVisibleAnnotations:
+  0: #128(#74=e#129.#130)
+    net.fabricmc.api.Environment(
+      value=Lnet/fabricmc/api/EnvType;.CLIENT
+    )
+BootstrapMethods:
+  0: #86 REF_invokeStatic java/lang/invoke/StringConcatFactory.makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #79 \u0001 cannot be blank
+  1: #112 REF_invokeStatic java/lang/runtime/ObjectMethods.bootstrap:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/TypeDescriptor;Ljava/lang/Class;Ljava/lang/String;[Ljava/lang/invoke/MethodHandle;)Ljava/lang/Object;
+    Method arguments:
+      #2 net/anubis/client/webhook/WebhookConfig
+      #102 url;username;avatarUrl
+      #103 REF_getField net/anubis/client/webhook/WebhookConfig.url:Ljava/lang/String;
+      #104 REF_getField net/anubis/client/webhook/WebhookConfig.username:Ljava/lang/String;
+      #105 REF_getField net/anubis/client/webhook/WebhookConfig.avatarUrl:Ljava/lang/String;
+Record:
+  java.lang.String url;
+    descriptor: Ljava/lang/String;
+
+  java.lang.String username;
+    descriptor: Ljava/lang/String;
+
+  java.lang.String avatarUrl;
+    descriptor: Ljava/lang/String;
+

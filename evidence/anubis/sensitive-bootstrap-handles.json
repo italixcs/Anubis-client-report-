@@ -1,0 +1,24 @@
+[
+  {
+    "class": "net/anubis/client/account/AuthHttp",
+    "method": "postJson",
+    "handle": {
+      "owner": "java/net/http/HttpRequest$Builder",
+      "name": "header",
+      "descriptor": "(Ljava/lang/String;Ljava/lang/String;)Ljava/net/http/HttpRequest$Builder;",
+      "tag": 11,
+      "handle_kind": 9
+    }
+  },
+  {
+    "class": "net/anubis/client/util/PerformanceBudget",
+    "method": "<clinit>",
+    "handle": {
+      "owner": "java/lang/System",
+      "name": "nanoTime",
+      "descriptor": "()J",
+      "tag": 10,
+      "handle_kind": 6
+    }
+  }
+]

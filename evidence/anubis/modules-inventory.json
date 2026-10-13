@@ -1,0 +1,1307 @@
+[
+  {
+    "class": "net/anubis/client/module/impl/client/HotkeysModule",
+    "constructor_strings": [
+      "hotkeys",
+      "Hotkeys",
+      "Lists the modules you have bound to a key, and their keys."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": true
+  },
+  {
+    "class": "net/anubis/client/module/impl/client/HudModule",
+    "constructor_strings": [
+      "hud",
+      "HUD",
+      "Module list, coordinates and status overlays."
+    ],
+    "default_enabled_method": true,
+    "fresh_default_enabled": true
+  },
+  {
+    "class": "net/anubis/client/module/impl/client/PerformanceModule",
+    "constructor_strings": [
+      "performance",
+      "Performance",
+      "Reduces background work and image memory while keeping effects and features. Disable to compare FPS."
+    ],
+    "default_enabled_method": null,
+    "fresh_default_enabled": null
+  },
+  {
+    "class": "net/anubis/client/module/impl/client/RadarModule",
+    "constructor_strings": [
+      "radar",
+      "Radar",
+      "A round radar of the players around you."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": true
+  },
+  {
+    "class": "net/anubis/client/module/impl/client/RegionMapModule",
+    "constructor_strings": [
+      "region-map",
+      "Region Map",
+      "DonutSMP region map with directional indicator."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": true
+  },
+  {
+    "class": "net/anubis/client/module/impl/client/SpotifyHudModule",
+    "constructor_strings": [
+      "spotify-hud",
+      "Spotify HUD",
+      "Shows what Spotify is playing, with synced lyrics and optional media keys."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": true
+  },
+  {
+    "class": "net/anubis/client/module/impl/combat/AimAssistModule",
+    "constructor_strings": [
+      "aim-assist",
+      "Aim Assist",
+      "Eases your crosshair onto the nearest enemy player while you move the mouse."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": false
+  },
+  {
+    "class": "net/anubis/client/module/impl/combat/AnchorAuraModule",
+    "constructor_strings": [
+      "anchor-aura",
+      "Anchor Aura",
+      "Places, charges and detonates respawn anchors on nearby enemies."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": false
+  },
+  {
+    "class": "net/anubis/client/module/impl/combat/AutoCityModule",
+    "constructor_strings": [
+      "auto-city",
+      "Auto City",
+      "Mines a surround block of the best enemy in a hole, then turns off so Crystal Aura can blow through it."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": false
+  },
+  {
+    "class": "net/anubis/client/module/impl/combat/AutoInvTotemModule",
+    "constructor_strings": [
+      "autoinvtotem",
+      "Auto Inventory Totem",
+      "Refills the offhand totem after a pop through the inventory or a hotbar swap; Double Hand also keeps one in the main hand while in danger."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": false
+  },
+  {
+    "class": "net/anubis/client/module/impl/combat/AutoTotemModule",
+    "constructor_strings": [
+      "autototem",
+      "Auto Totem",
+      "Fills an empty offhand with a totem without opening the inventory; Double Hand also keeps one in the main hand while in danger."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": false
+  },
+  {
+    "class": "net/anubis/client/module/impl/combat/CrystalAuraModule",
+    "constructor_strings": [
+      "crystal-aura",
+      "Crystal Aura",
+      "Places and breaks end crystals for the most damage."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": false
+  },
+  {
+    "class": "net/anubis/client/module/impl/combat/CrystalMacroModule",
+    "constructor_strings": [
+      "crystal-macro",
+      "Crystal Macro",
+      "Breaks and places crystals while you hold right-click."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": false
+  },
+  {
+    "class": "net/anubis/client/module/impl/combat/CrystalOptimizerModule",
+    "constructor_strings": [
+      "crystal-optimizer",
+      "Crystal Optimizer",
+      "Removes crystals client-side as soon as your hit breaks them."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": false
+  },
+  {
+    "class": "net/anubis/client/module/impl/combat/FastXpModule",
+    "constructor_strings": [
+      "fastxp",
+      "FastXP",
+      "Throws experience bottles faster while use is held."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": false
+  },
+  {
+    "class": "net/anubis/client/module/impl/combat/FriendGuardModule",
+    "constructor_strings": [
+      "friend-guard",
+      "Friend Guard",
+      "Stops you from hitting players on your friends list."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": true
+  },
+  {
+    "class": "net/anubis/client/module/impl/combat/HoverTotemModule",
+    "constructor_strings": [
+      "hovertotem",
+      "Hover Totem",
+      "Swaps a hovered totem from any open container into the offhand or selected hotbar slot."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": false
+  },
+  {
+    "class": "net/anubis/client/module/impl/combat/JumpResetModule",
+    "constructor_strings": [
+      "jump-reset",
+      "Jump Reset",
+      "Jumps the tick knockback lands to take less of it."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": false
+  },
+  {
+    "class": "net/anubis/client/module/impl/combat/KeyThrowModule",
+    "constructor_strings": [
+      "key-throw",
+      "Key Throw",
+      "Throws a pearl or a wind charge with a key and swaps back."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": false
+  },
+  {
+    "class": "net/anubis/client/module/impl/combat/KillAuraModule",
+    "constructor_strings": [
+      "kill-aura",
+      "Kill Aura",
+      "Attacks nearby targets without moving your camera."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": false
+  },
+  {
+    "class": "net/anubis/client/module/impl/combat/MaceModule",
+    "constructor_strings": [
+      "mace",
+      "Mace",
+      "Swaps to the strongest mace for smash hits, with an optional smash assist."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": false
+  },
+  {
+    "class": "net/anubis/client/module/impl/combat/ShieldBreakerModule",
+    "constructor_strings": [
+      "shield-breaker",
+      "Shield Breaker",
+      "Swaps to an axe for any hit into a raised shield. Auto also makes the hit."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": false
+  },
+  {
+    "class": "net/anubis/client/module/impl/combat/SingleAnchorMacroModule",
+    "constructor_strings": [
+      "anchor-macro",
+      "Anchor Macro",
+      "Places, charges and blows up respawn anchors on right-click."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": false
+  },
+  {
+    "class": "net/anubis/client/module/impl/combat/SpearLungeModule",
+    "constructor_strings": [
+      "spear-swap",
+      "Spear Swap",
+      "Swaps to your Lunge spear and lunges. Reach Poke stabs with a spear past sword reach."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": false
+  },
+  {
+    "class": "net/anubis/client/module/impl/combat/TriggerbotModule",
+    "constructor_strings": [
+      "triggerbot",
+      "Triggerbot",
+      "Hits the entity under the crosshair once the swing is charged, with a reaction delay."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": false
+  },
+  {
+    "class": "net/anubis/client/module/impl/combat/WTapRecodeModule",
+    "constructor_strings": [
+      "w-tap-recode",
+      "W Tap",
+      "Resets your sprint right after a sprint hit so the next hit knocks back too."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": false
+  },
+  {
+    "class": "net/anubis/client/module/impl/donutmacros/AhSellModule",
+    "constructor_strings": [
+      "ah-sell",
+      "AH Sell",
+      "Lists up to 9 items from your inventory on the Auction House at your price or the cheapest price."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": false
+  },
+  {
+    "class": "net/anubis/client/module/impl/donutmacros/AhSniperModule",
+    "constructor_strings": [
+      "ah-sniper",
+      "AH Sniper",
+      "Refreshes the AH and instantly buys your item below your price, with optional auto selling."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": false
+  },
+  {
+    "class": "net/anubis/client/module/impl/donutmacros/AutoSellModule",
+    "constructor_strings": [
+      "auto-sell",
+      "Auto Sell",
+      "Keeps the /sell menu open and keeps selling everything that is not on your Never Sell list."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": false
+  },
+  {
+    "class": "net/anubis/client/module/impl/donutmacros/AutoTpaHereModule",
+    "constructor_strings": [
+      "auto-tpahere",
+      "Tpahere Kill Bot",
+      "Sends tpahere requests to online players one by one, pauses when someone arrives and fights them. Servers can detect this."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": false
+  },
+  {
+    "class": "net/anubis/client/module/impl/donutmacros/OrderAhSellerModule",
+    "constructor_strings": [
+      "order-ah-seller",
+      "Order AH Trader",
+      "Sells an item on the Auction House, undercuts other sellers and restocks through orders."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": false
+  },
+  {
+    "class": "net/anubis/client/module/impl/donutmacros/OrderDropperModule",
+    "constructor_strings": [
+      "order-dropper",
+      "Order Dropper",
+      "Opens one of your orders, collects it and drops the chosen number of pages, then turns off."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": false
+  },
+  {
+    "class": "net/anubis/client/module/impl/donutmacros/PanicPayModule",
+    "constructor_strings": [
+      "panic-pay",
+      "Panic Pay",
+      "Sells your whole inventory and armor with /sell, then pays all your money to one player."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": false
+  },
+  {
+    "class": "net/anubis/client/module/impl/donutmacros/TpMacroModule",
+    "constructor_strings": [
+      "tp-macro",
+      "Tp Macro",
+      "Sends /tpa or /tpahere to one player on a timer."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": false
+  },
+  {
+    "class": "net/anubis/client/module/impl/misc/AirStuckModule",
+    "constructor_strings": [
+      "air-stuck",
+      "Air Stuck",
+      "Freezes you in place, even mid-air."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": false
+  },
+  {
+    "class": "net/anubis/client/module/impl/misc/AmethystBypassModule",
+    "constructor_strings": [
+      "amethyst-bypass",
+      "Amethyst Bypass",
+      "Shows amethyst geodes hidden by anti-xray."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": false
+  },
+  {
+    "class": "net/anubis/client/module/impl/misc/AntiTrapModule",
+    "constructor_strings": [
+      "anti-trap",
+      "Anti Trap",
+      "Allows you to escape from armor stands and chest minecarts."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": false
+  },
+  {
+    "class": "net/anubis/client/module/impl/misc/AntiVanishModule",
+    "constructor_strings": [
+      "anti-vanish",
+      "Anti Vanish",
+      "Detects vanished players."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": false
+  },
+  {
+    "class": "net/anubis/client/module/impl/misc/AutoClickerModule",
+    "constructor_strings": [
+      "auto-clicker",
+      "Auto Clicker",
+      "Clicks the left and/or right mouse button at a randomised, human CPS."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": false
+  },
+  {
+    "class": "net/anubis/client/module/impl/misc/AutoEatModule",
+    "constructor_strings": [
+      "auto-eat",
+      "Auto Eat",
+      "Eats hotbar or offhand food once hunger or health drops too low."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": false
+  },
+  {
+    "class": "net/anubis/client/module/impl/misc/AutoReconnectModule",
+    "constructor_strings": [
+      "auto-reconnect",
+      "Auto Reconnect",
+      "Reconnects to the last server after an unexpected disconnect."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": false
+  },
+  {
+    "class": "net/anubis/client/module/impl/misc/AutoRelogModule",
+    "constructor_strings": [
+      "auto-relog",
+      "Auto Relog",
+      "Relogs once when you go down to deepslate level."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": false
+  },
+  {
+    "class": "net/anubis/client/module/impl/misc/AutoReplenishModule",
+    "constructor_strings": [
+      "auto-replenish",
+      "Auto Replenish",
+      "Refills a hotbar or offhand slot from the main inventory once it runs low."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": false
+  },
+  {
+    "class": "net/anubis/client/module/impl/misc/BlockNotifierModule",
+    "constructor_strings": [
+      "block-notifier",
+      "Block Notifier",
+      "Shows a toast with the block and its coordinates when one of your chosen blocks shows up."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": false
+  },
+  {
+    "class": "net/anubis/client/module/impl/misc/ChatMacroModule",
+    "constructor_strings": [
+      "chat-macro",
+      "Chat Macro",
+      "Sends chat messages or commands with a key press."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": false
+  },
+  {
+    "class": "net/anubis/client/module/impl/misc/CoordSnapperModule",
+    "constructor_strings": [
+      "coord-snapper",
+      "Coord Snapper",
+      "Copies the coordinates you look at or stand on with one key."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": false
+  },
+  {
+    "class": "net/anubis/client/module/impl/misc/DiscordPresenceModule",
+    "constructor_strings": [
+      "discord-presence",
+      "Discord Presence",
+      "Shows Anubis Client and the server you are on in your Discord status."
+    ],
+    "default_enabled_method": true,
+    "fresh_default_enabled": true
+  },
+  {
+    "class": "net/anubis/client/module/impl/misc/DonutNoFallModule",
+    "constructor_strings": [
+      "donut-nofall",
+      "Donut NoFall",
+      "Take no fall damage on DonutSMP."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": false
+  },
+  {
+    "class": "net/anubis/client/module/impl/misc/FakeStats",
+    "constructor_strings": [
+      "fake-stats",
+      "Fake Stats",
+      "Shows your own name and stats on the sidebar and tab list. Blank stats get scrambled."
+    ],
+    "default_enabled_method": true,
+    "fresh_default_enabled": true
+  },
+  {
+    "class": "net/anubis/client/module/impl/misc/FastUseModule",
+    "constructor_strings": [
+      "fast-use",
+      "Fast Use",
+      "Places blocks and uses items faster while use is held."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": false
+  },
+  {
+    "class": "net/anubis/client/module/impl/misc/FreecamModule",
+    "constructor_strings": [
+      "freecam",
+      "Freecam",
+      "Detached camera."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": false
+  },
+  {
+    "class": "net/anubis/client/module/impl/misc/HomeMetaModule",
+    "constructor_strings": [
+      "home-meta",
+      "Home Meta",
+      "Re-sets a home, RTPs away, then teleports back home."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": false
+  },
+  {
+    "class": "net/anubis/client/module/impl/misc/LegitAutoToolModule",
+    "constructor_strings": [
+      "legit-auto-tool",
+      "Legit Auto Tool",
+      "Auto tool that only switches hotbar slots like a player."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": false
+  },
+  {
+    "class": "net/anubis/client/module/impl/misc/NameProtectModule",
+    "constructor_strings": [
+      "name-protect",
+      "Name Protect",
+      "Shows aliases instead of player names on your screen."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": false
+  },
+  {
+    "class": "net/anubis/client/module/impl/misc/NetheriteFinderModule",
+    "constructor_strings": [
+      "netherite-finder",
+      "Netherite Finder",
+      "Boxes Nether chunk sections hiding ancient debris."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": false
+  },
+  {
+    "class": "net/anubis/client/module/impl/misc/NoInvLeakModule",
+    "constructor_strings": [
+      "no-inv-leak",
+      "No Inv Leak",
+      "Hides your items on screen for screen shares. Stream Only keeps them visible to you alone."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": false
+  },
+  {
+    "class": "net/anubis/client/module/impl/misc/PlayerBypass2Module",
+    "constructor_strings": [
+      "player-bypass-2",
+      "Player Bypass 2",
+      "Finds hidden players from chunks that keep ticking outside your simulation distance."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": false
+  },
+  {
+    "class": "net/anubis/client/module/impl/misc/PlayerBypassModule",
+    "constructor_strings": [
+      "player-bypass",
+      "Player Bypass",
+      "Flags chunks with signs of underground player bases from light data."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": false
+  },
+  {
+    "class": "net/anubis/client/module/impl/misc/PlayerDetectionModule",
+    "constructor_strings": [
+      "player-detection",
+      "Player Detection",
+      "Detects when players are in the world."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": false
+  },
+  {
+    "class": "net/anubis/client/module/impl/misc/QuantumModule",
+    "constructor_strings": [
+      "quantum",
+      "Quantum & Render",
+      "Finds player activity in resent chunks and marks the area around it."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": false
+  },
+  {
+    "class": "net/anubis/client/module/impl/misc/RenderDistanceToggleModule",
+    "constructor_strings": [
+      "render-distance-toggle",
+      "Render Distance Toggle",
+      "Reloads chunks when you go below a Y level."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": false
+  },
+  {
+    "class": "net/anubis/client/module/impl/misc/RiptideModule",
+    "constructor_strings": [
+      "riptide",
+      "Riptide",
+      "Uses a riptide trident while you hold right-click."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": false
+  },
+  {
+    "class": "net/anubis/client/module/impl/misc/SkinChangeModule",
+    "constructor_strings": [
+      "skin-change",
+      "Skin Change",
+      "Wear any player's skin client-side."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": false
+  },
+  {
+    "class": "net/anubis/client/module/impl/misc/SlowSwingModule",
+    "constructor_strings": [
+      "slow-swing",
+      "Slow Swing",
+      "Control hand swing animation speed."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": false
+  },
+  {
+    "class": "net/anubis/client/module/impl/misc/SpamModule",
+    "constructor_strings": [
+      "spam",
+      "Spam",
+      "Spams specified messages in chat."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": false
+  },
+  {
+    "class": "net/anubis/client/module/impl/misc/SpawnerProtectModule",
+    "constructor_strings": [
+      "spawner-protect",
+      "Spawner Protect",
+      "Protects spawners on block updates; player arrivals only send webhook notifications."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": false
+  },
+  {
+    "class": "net/anubis/client/module/impl/misc/SpeedMineModule",
+    "constructor_strings": [
+      "speed-mine",
+      "Donut Speed Mine",
+      "Finishes breaking blocks before the full break time."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": false
+  },
+  {
+    "class": "net/anubis/client/module/impl/misc/StaffListModule",
+    "constructor_strings": [
+      "staff-list",
+      "Staff List",
+      "Lists online DonutSMP staff."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": false
+  },
+  {
+    "class": "net/anubis/client/module/impl/misc/TridentUtilModule",
+    "constructor_strings": [
+      "trident-util",
+      "Trident Util",
+      "Use tridents out of water and charge them faster."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": false
+  },
+  {
+    "class": "net/anubis/client/module/impl/misc/WeatherNotifierModule",
+    "constructor_strings": [
+      "weather-notifier",
+      "Weather Notifier",
+      "Shows an advancement-style toast when it starts raining."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": true
+  },
+  {
+    "class": "net/anubis/client/module/impl/movement/AutoJumpModule",
+    "constructor_strings": [
+      "auto-jump",
+      "Auto Jump",
+      "Automatically jumps."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": false
+  },
+  {
+    "class": "net/anubis/client/module/impl/movement/AutoWalkModule",
+    "constructor_strings": [
+      "auto-walk",
+      "Auto Walk",
+      "Automatically walks forward."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": false
+  },
+  {
+    "class": "net/anubis/client/module/impl/movement/BoatFlyModule",
+    "constructor_strings": [
+      "boat-fly",
+      "Boat Fly",
+      "Transforms your boat (or any ridden vehicle) into a plane."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": false
+  },
+  {
+    "class": "net/anubis/client/module/impl/movement/BoatNoclipModule",
+    "constructor_strings": [
+      "boat-noclip",
+      "Boat Noclip",
+      "Fly your boat through blocks and entities."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": false
+  },
+  {
+    "class": "net/anubis/client/module/impl/movement/ClickTpModule",
+    "constructor_strings": [
+      "click-tp",
+      "Click TP",
+      "Teleports you to the block you click on."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": false
+  },
+  {
+    "class": "net/anubis/client/module/impl/movement/ElytraFlyModule",
+    "constructor_strings": [
+      "elytra-fly",
+      "Elytra Fly",
+      "Gives you more control over your elytra."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": false
+  },
+  {
+    "class": "net/anubis/client/module/impl/movement/ElytraSwapModule",
+    "constructor_strings": [
+      "elytra-swap",
+      "Elytra Swap",
+      "Swaps between your chestplate and elytra with one key."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": false
+  },
+  {
+    "class": "net/anubis/client/module/impl/movement/EntityControlModule",
+    "constructor_strings": [
+      "entity-control",
+      "Entity Control",
+      "Lets you control rideable entities without a saddle."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": false
+  },
+  {
+    "class": "net/anubis/client/module/impl/movement/EntitySpeedModule",
+    "constructor_strings": [
+      "entity-speed",
+      "Entity Speed",
+      "Makes you go faster horizontally when riding entities."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": false
+  },
+  {
+    "class": "net/anubis/client/module/impl/movement/FlyModule",
+    "constructor_strings": [
+      "fly",
+      "Fly",
+      "Lets you fly."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": false
+  },
+  {
+    "class": "net/anubis/client/module/impl/movement/JesusModule",
+    "constructor_strings": [
+      "jesus",
+      "Jesus",
+      "Walk on liquids and powder snow like Jesus."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": false
+  },
+  {
+    "class": "net/anubis/client/module/impl/movement/NoJumpDelayModule",
+    "constructor_strings": [
+      "no-jump-delay",
+      "No Jump Delay",
+      "Removes the delay between jumps."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": false
+  },
+  {
+    "class": "net/anubis/client/module/impl/movement/SneakModule",
+    "constructor_strings": [
+      "sneak",
+      "Sneak",
+      "Sneaks for you."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": false
+  },
+  {
+    "class": "net/anubis/client/module/impl/movement/SpeedModule",
+    "constructor_strings": [
+      "speed",
+      "Speed",
+      "Modifies your movement speed when moving on the ground."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": false
+  },
+  {
+    "class": "net/anubis/client/module/impl/movement/SpiderModule",
+    "constructor_strings": [
+      "spider",
+      "Spider",
+      "Allows you to climb walls like a spider."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": false
+  },
+  {
+    "class": "net/anubis/client/module/impl/movement/SprintModule",
+    "constructor_strings": [
+      "sprint",
+      "Sprint",
+      "Keeps you sprinting while you move forward, like vanilla Toggle Sprint."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": false
+  },
+  {
+    "class": "net/anubis/client/module/impl/movement/TridentBoostModule",
+    "constructor_strings": [
+      "trident-boost",
+      "Trident Boost",
+      "Boosts you when using riptide with a trident."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": false
+  },
+  {
+    "class": "net/anubis/client/module/impl/render/AtmosphereModule",
+    "constructor_strings": [
+      "atmosphere",
+      "Atmosphere",
+      "A custom sky with stars and an aurora."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": true
+  },
+  {
+    "class": "net/anubis/client/module/impl/render/BlockEntityDebugModule",
+    "constructor_strings": [
+      "block-entity-debug",
+      "Block Entity Debug",
+      "Renders every leaked block entity as ESP (always-on Netty capture)."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": false
+  },
+  {
+    "class": "net/anubis/client/module/impl/render/BlockEspModule",
+    "constructor_strings": [
+      "block-esp",
+      "Block ESP",
+      "Highlights chosen blocks; touching blocks merge into one shape."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": false
+  },
+  {
+    "class": "net/anubis/client/module/impl/render/BlockOverlayModule",
+    "constructor_strings": [
+      "block-overlay",
+      "Block Overlay",
+      "A smooth, animated outline and fill on the block you look at."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": true
+  },
+  {
+    "class": "net/anubis/client/module/impl/render/ChunkScannerModule",
+    "constructor_strings": [
+      "chunk-scanner",
+      "Chunk Scanner",
+      "Marks suspicious chunks with signs of player activity."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": false
+  },
+  {
+    "class": "net/anubis/client/module/impl/render/ColorGradingModule",
+    "constructor_strings": [
+      "color-grading",
+      "Color Grading",
+      "Adds color, contrast and a vignette to the world."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": true
+  },
+  {
+    "class": "net/anubis/client/module/impl/render/CustomCrosshairModule",
+    "constructor_strings": [
+      "custom-crosshair",
+      "Custom Crosshair",
+      "Draws a configurable crosshair in place of the vanilla one."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": true
+  },
+  {
+    "class": "net/anubis/client/module/impl/render/CustomFovModule",
+    "constructor_strings": [
+      "custom-fov",
+      "Custom Fov",
+      "Changes your field of view (FOV)."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": true
+  },
+  {
+    "class": "net/anubis/client/module/impl/render/CustomGlintModule",
+    "constructor_strings": [
+      "custom-glint",
+      "Custom Glint",
+      "Recolours the enchantment glint and changes its speed and pattern size."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": true
+  },
+  {
+    "class": "net/anubis/client/module/impl/render/EspModule",
+    "constructor_strings": [
+      "esp",
+      "ESP",
+      "Highlights players, hostile and passive mobs with outlines, boxes and tracers."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": false
+  },
+  {
+    "class": "net/anubis/client/module/impl/render/FloatingRelicsModule",
+    "constructor_strings": [
+      "floating-relics",
+      "Floating Relics",
+      "Egyptian symbols float and spin around you."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": true
+  },
+  {
+    "class": "net/anubis/client/module/impl/render/FreelookModule",
+    "constructor_strings": [
+      "freelook",
+      "Freelook",
+      "Turns the camera and the player separately."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": false
+  },
+  {
+    "class": "net/anubis/client/module/impl/render/FullbrightModule",
+    "constructor_strings": [
+      "fullbright",
+      "Fullbright",
+      "Brighten dark areas by overriding the client lightmap gamma."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": true
+  },
+  {
+    "class": "net/anubis/client/module/impl/render/HandAuraModule",
+    "constructor_strings": [
+      "hand-aura",
+      "Hand Aura",
+      "Adds a glowing outline to your hand and held item."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": true
+  },
+  {
+    "class": "net/anubis/client/module/impl/render/HandModelModule",
+    "constructor_strings": [
+      "3d-hand",
+      "3D Hand",
+      "Shows your own arm holding the item in first person: swords, tools, items and blocks."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": false
+  },
+  {
+    "class": "net/anubis/client/module/impl/render/HandsModule",
+    "constructor_strings": [
+      "hand-pose",
+      "Hand Pose",
+      "Moves, rotates and resizes your first-person hands."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": true
+  },
+  {
+    "class": "net/anubis/client/module/impl/render/HeadCosmeticModule",
+    "constructor_strings": [],
+    "default_enabled_method": false
+  },
+  {
+    "class": "net/anubis/client/module/impl/render/HitParticlesModule",
+    "constructor_strings": [
+      "hit-particles",
+      "Hit Particles",
+      "Spawns particles where your hits land."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": true
+  },
+  {
+    "class": "net/anubis/client/module/impl/render/HoleEspModule",
+    "constructor_strings": [
+      "hole-esp",
+      "Hole ESP",
+      "Highlights holes, tunnels, and staircases."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": false
+  },
+  {
+    "class": "net/anubis/client/module/impl/render/ItemEspModule",
+    "constructor_strings": [
+      "item-esp",
+      "Item ESP",
+      "Highlights selected dropped items with model outlines and tracers."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": false
+  },
+  {
+    "class": "net/anubis/client/module/impl/render/JumpCirclesModule",
+    "constructor_strings": [
+      "jump-circles",
+      "Jump Circles",
+      "Draws a fading Anubis ring where you jump."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": true
+  },
+  {
+    "class": "net/anubis/client/module/impl/render/LightEspModule",
+    "constructor_strings": [
+      "light-debug",
+      "Light Debug",
+      "Highlights artificial light underground."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": false
+  },
+  {
+    "class": "net/anubis/client/module/impl/render/LowHealthWarningModule",
+    "constructor_strings": [
+      "low-health-warning",
+      "Low Health Warning",
+      "Flashes the screen edges when your health is low."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": false
+  },
+  {
+    "class": "net/anubis/client/module/impl/render/MotionBlurModule",
+    "constructor_strings": [
+      "motion-blur",
+      "Motion Blur",
+      "Adds motion blur when you turn."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": true
+  },
+  {
+    "class": "net/anubis/client/module/impl/render/NametagsModule",
+    "constructor_strings": [
+      "nametags",
+      "Nametags",
+      "Player nametags with held items, armour, health, ping and distance."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": true
+  },
+  {
+    "class": "net/anubis/client/module/impl/render/NoRenderModule",
+    "constructor_strings": [
+      "no-render",
+      "No Render",
+      "Hide selected overlays, screen effects and entity renders."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": false
+  },
+  {
+    "class": "net/anubis/client/module/impl/render/PearlTrajectoryModule",
+    "constructor_strings": [
+      "pearl-trajectory",
+      "Pearl Trajectory",
+      "Predicts where a held pearl lands and previews the flight of thrown pearls."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": false
+  },
+  {
+    "class": "net/anubis/client/module/impl/render/PrimeChunkFinderModule",
+    "constructor_strings": [
+      "prime-chunk-finder",
+      "Prime Chunk Finder",
+      "Flags chunks with light and redstone changes below Y 0."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": false
+  },
+  {
+    "class": "net/anubis/client/module/impl/render/RelicParticlesModule",
+    "constructor_strings": [
+      "particles",
+      "Particles",
+      "Egyptian particles for totem pops, projectiles and footsteps."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": true
+  },
+  {
+    "class": "net/anubis/client/module/impl/render/ShaderEspModule",
+    "constructor_strings": [
+      "glow-esp",
+      "Glow ESP",
+      "Outlines entities through walls with a glow."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": true
+  },
+  {
+    "class": "net/anubis/client/module/impl/render/SpawnerNametagsModule",
+    "constructor_strings": [
+      "spawner-nametags",
+      "Spawner Nametags",
+      "Shows each spawner's mob and activation range over the block."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": false
+  },
+  {
+    "class": "net/anubis/client/module/impl/render/SpawnerNotifierModule",
+    "constructor_strings": [
+      "spawner-notifier",
+      "Spawner Notifier",
+      "Scans chunks for mob spawners and highlights them."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": false
+  },
+  {
+    "class": "net/anubis/client/module/impl/render/StorageEspModule",
+    "constructor_strings": [
+      "storage-esp",
+      "Storage ESP",
+      "Highlights storage blocks and spawners with per-type colours."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": false
+  },
+  {
+    "class": "net/anubis/client/module/impl/render/SusChunkFinderModule",
+    "constructor_strings": [
+      "sus-chunk-finder",
+      "Sus Chunk Finder",
+      "Finds chunks with signs of player activity from fully grown amethyst."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": false
+  },
+  {
+    "class": "net/anubis/client/module/impl/render/SwingAnimationModule",
+    "constructor_strings": [
+      "swing-animation",
+      "Swing Animation",
+      "Changes your first-person swing animation."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": true
+  },
+  {
+    "class": "net/anubis/client/module/impl/render/TargetEspModule",
+    "constructor_strings": [
+      "target-esp",
+      "Target ESP",
+      "Draws an Egyptian mark on your combat target."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": true
+  },
+  {
+    "class": "net/anubis/client/module/impl/render/TimeChangerModule",
+    "constructor_strings": [
+      "time-changer",
+      "Time Changer",
+      "Makes you able to set a custom time."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": false
+  },
+  {
+    "class": "net/anubis/client/module/impl/render/TotemSpiritModule",
+    "constructor_strings": [
+      "totem-spirit",
+      "Totem Spirit",
+      "A glowing ghost rises when a player pops a totem."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": true
+  },
+  {
+    "class": "net/anubis/client/module/impl/render/TracersModule",
+    "constructor_strings": [
+      "tracers",
+      "Tracers",
+      "Displays tracer lines to specified entities."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": false
+  },
+  {
+    "class": "net/anubis/client/module/impl/render/TrajectoriesModule",
+    "constructor_strings": [
+      "trajectories",
+      "Trajectories",
+      "Shows where your projectiles will land."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": false
+  },
+  {
+    "class": "net/anubis/client/module/impl/render/WeaponInspectModule",
+    "constructor_strings": [
+      "weapon-inspect",
+      "CS Knife",
+      "Knife skins for your sword and CS-style inspects with a key of your choice (F by default); hold the key to keep the knife spinning."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": true
+  },
+  {
+    "class": "net/anubis/client/module/impl/render/XrayModule",
+    "constructor_strings": [
+      "xray",
+      "Xray",
+      "Hide or fade everything but a block whitelist to see ores through terrain."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": false
+  },
+  {
+    "class": "net/anubis/client/module/impl/render/ZoomModule",
+    "constructor_strings": [
+      "zoom",
+      "Zoom",
+      "Hold the key to zoom in."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": false
+  },
+  {
+    "class": "net/anubis/client/module/impl/render/character/CharacterModule",
+    "constructor_strings": [
+      "character-3d",
+      "3D Character",
+      "Replaces your player model with a 3D character."
+    ],
+    "default_enabled_method": false,
+    "fresh_default_enabled": true
+  }
+]

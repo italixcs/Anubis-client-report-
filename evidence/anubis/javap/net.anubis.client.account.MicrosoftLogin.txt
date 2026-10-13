@@ -1,0 +1,2187 @@
+Classfile analysis-workspace/extracted/run.oEA4CbVx/net/anubis/client/account/MicrosoftLogin.class
+  Last modified Oct 13, 2026; size 16330 bytes
+  SHA-256 checksum 3585b078603cf950035c6b6c8753255904c2de821c84166a45c1e04fbd548b1a
+  Compiled from "MicrosoftLogin.java"
+final class net.anubis.client.account.MicrosoftLogin
+  minor version: 0
+  major version: 65
+  flags: (0x0030) ACC_FINAL, ACC_SUPER
+  this_class: #2                          // net/anubis/client/account/MicrosoftLogin
+  super_class: #4                         // java/lang/Object
+  interfaces: 0, fields: 11, methods: 15, attributes: 5
+Constant pool:
+    #1 = Utf8               net/anubis/client/account/MicrosoftLogin
+    #2 = Class              #1            // net/anubis/client/account/MicrosoftLogin
+    #3 = Utf8               java/lang/Object
+    #4 = Class              #3            // java/lang/Object
+    #5 = Utf8               MicrosoftLogin.java
+    #6 = Utf8               net/anubis/client/account/MicrosoftLogin$MsaToken
+    #7 = Class              #6            // net/anubis/client/account/MicrosoftLogin$MsaToken
+    #8 = Utf8               net/anubis/client/account/MicrosoftLogin$DeviceCode
+    #9 = Class              #8            // net/anubis/client/account/MicrosoftLogin$DeviceCode
+   #10 = Utf8               net/anubis/client/account/AuthHttp$Reply
+   #11 = Class              #10           // net/anubis/client/account/AuthHttp$Reply
+   #12 = Utf8               net/anubis/client/account/AuthHttp
+   #13 = Class              #12           // net/anubis/client/account/AuthHttp
+   #14 = Utf8               Reply
+   #15 = Utf8               DeviceCode
+   #16 = Utf8               MsaToken
+   #17 = Utf8               java/util/Base64$Encoder
+   #18 = Class              #17           // java/util/Base64$Encoder
+   #19 = Utf8               java/util/Base64
+   #20 = Class              #19           // java/util/Base64
+   #21 = Utf8               Encoder
+   #22 = Utf8               java/lang/invoke/MethodHandles$Lookup
+   #23 = Class              #22           // java/lang/invoke/MethodHandles$Lookup
+   #24 = Utf8               java/lang/invoke/MethodHandles
+   #25 = Class              #24           // java/lang/invoke/MethodHandles
+   #26 = Utf8               Lookup
+   #27 = Utf8               CLIENT_ID
+   #28 = Utf8               Ljava/lang/String;
+   #29 = Utf8               00000000402b5328
+   #30 = String             #29           // 00000000402b5328
+   #31 = Utf8               SCOPE
+   #32 = Utf8               service::user.auth.xboxlive.com::MBI_SSL
+   #33 = String             #32           // service::user.auth.xboxlive.com::MBI_SSL
+   #34 = Utf8               DEVICE_CODE_URL
+   #35 = Utf8               https://login.live.com/oauth20_connect.srf
+   #36 = String             #35           // https://login.live.com/oauth20_connect.srf
+   #37 = Utf8               TOKEN_URL
+   #38 = Utf8               https://login.live.com/oauth20_token.srf
+   #39 = String             #38           // https://login.live.com/oauth20_token.srf
+   #40 = Utf8               DEVICE_AUTH_URL
+   #41 = Utf8               https://device.auth.xboxlive.com/device/authenticate
+   #42 = String             #41           // https://device.auth.xboxlive.com/device/authenticate
+   #43 = Utf8               SISU_URL
+   #44 = Utf8               https://sisu.xboxlive.com/authorize
+   #45 = String             #44           // https://sisu.xboxlive.com/authorize
+   #46 = Utf8               LAUNCHER_LOGIN_URL
+   #47 = Utf8               https://api.minecraftservices.com/launcher/login
+   #48 = String             #47           // https://api.minecraftservices.com/launcher/login
+   #49 = Utf8               PROFILE_URL
+   #50 = Utf8               https://api.minecraftservices.com/minecraft/profile
+   #51 = String             #50           // https://api.minecraftservices.com/minecraft/profile
+   #52 = Utf8               MINECRAFT_RELYING_PARTY
+   #53 = Utf8               rp://api.minecraftservices.com/
+   #54 = String             #53           // rp://api.minecraftservices.com/
+   #55 = Utf8               FILETIME_EPOCH_OFFSET
+   #56 = Utf8               J
+   #57 = Long               11644473600l
+   #59 = Utf8               SLOW_DOWN_MS
+   #60 = Long               5000l
+   #62 = Utf8               <init>
+   #63 = Utf8               ()V
+   #64 = NameAndType        #62:#63       // "<init>":()V
+   #65 = Methodref          #4.#64        // java/lang/Object."<init>":()V
+   #66 = Utf8               this
+   #67 = Utf8               Lnet/anubis/client/account/MicrosoftLogin;
+   #68 = Utf8               requestDeviceCode
+   #69 = Utf8               ()Lnet/anubis/client/account/MicrosoftLogin$DeviceCode;
+   #70 = Utf8               java/lang/InterruptedException
+   #71 = Class              #70           // java/lang/InterruptedException
+   #72 = Utf8               client_id
+   #73 = String             #72           // client_id
+   #74 = Utf8               scope
+   #75 = String             #74           // scope
+   #76 = Utf8               response_type
+   #77 = String             #76           // response_type
+   #78 = Utf8               device_code
+   #79 = String             #78           // device_code
+   #80 = Utf8               java/util/Map
+   #81 = Class              #80           // java/util/Map
+   #82 = Utf8               of
+   #83 = Utf8               (Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map;
+   #84 = NameAndType        #82:#83       // of:(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map;
+   #85 = InterfaceMethodref #81.#84       // java/util/Map.of:(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map;
+   #86 = Utf8               postForm
+   #87 = Utf8               (Ljava/lang/String;Ljava/util/Map;)Lnet/anubis/client/account/AuthHttp$Reply;
+   #88 = NameAndType        #86:#87       // postForm:(Ljava/lang/String;Ljava/util/Map;)Lnet/anubis/client/account/AuthHttp$Reply;
+   #89 = Methodref          #13.#88       // net/anubis/client/account/AuthHttp.postForm:(Ljava/lang/String;Ljava/util/Map;)Lnet/anubis/client/account/AuthHttp$Reply;
+   #90 = Utf8               text
+   #91 = Utf8               (Ljava/lang/String;)Ljava/lang/String;
+   #92 = NameAndType        #90:#91       // text:(Ljava/lang/String;)Ljava/lang/String;
+   #93 = Methodref          #11.#92       // net/anubis/client/account/AuthHttp$Reply.text:(Ljava/lang/String;)Ljava/lang/String;
+   #94 = Utf8               user_code
+   #95 = String             #94           // user_code
+   #96 = Utf8               verification_uri
+   #97 = String             #96           // verification_uri
+   #98 = Utf8               interval
+   #99 = String             #98           // interval
+  #100 = Utf8               expires_in
+  #101 = String             #100          // expires_in
+  #102 = Utf8               ok
+  #103 = Utf8               ()Z
+  #104 = NameAndType        #102:#103     // ok:()Z
+  #105 = Methodref          #11.#104      // net/anubis/client/account/AuthHttp$Reply.ok:()Z
+  #106 = Utf8               java/lang/String
+  #107 = Class              #106          // java/lang/String
+  #108 = Utf8               net/anubis/client/account/AccountException
+  #109 = Class              #108          // net/anubis/client/account/AccountException
+  #110 = Utf8               liveError
+  #111 = Utf8               (Lnet/anubis/client/account/AuthHttp$Reply;)Ljava/lang/String;
+  #112 = NameAndType        #110:#111     // liveError:(Lnet/anubis/client/account/AuthHttp$Reply;)Ljava/lang/String;
+  #113 = Methodref          #2.#112       // net/anubis/client/account/MicrosoftLogin.liveError:(Lnet/anubis/client/account/AuthHttp$Reply;)Ljava/lang/String;
+  #114 = Utf8               Microsoft sign-in couldn\'t start: \u0001
+  #115 = String             #114          // Microsoft sign-in couldn\'t start: \u0001
+  #116 = Utf8               java/lang/invoke/StringConcatFactory
+  #117 = Class              #116          // java/lang/invoke/StringConcatFactory
+  #118 = Utf8               makeConcatWithConstants
+  #119 = Utf8               (Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+  #120 = NameAndType        #118:#119     // makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+  #121 = Methodref          #117.#120     // java/lang/invoke/StringConcatFactory.makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+  #122 = MethodHandle       6:#121        // REF_invokeStatic java/lang/invoke/StringConcatFactory.makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+  #123 = NameAndType        #118:#91      // makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+  #124 = InvokeDynamic      #0:#123       // #0:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+  #125 = Utf8               (Ljava/lang/String;)V
+  #126 = NameAndType        #62:#125      // "<init>":(Ljava/lang/String;)V
+  #127 = Methodref          #109.#126     // net/anubis/client/account/AccountException."<init>":(Ljava/lang/String;)V
+  #128 = Utf8               java/lang/Long
+  #129 = Class              #128          // java/lang/Long
+  #130 = Utf8               parseLong
+  #131 = Utf8               (Ljava/lang/String;)J
+  #132 = NameAndType        #130:#131     // parseLong:(Ljava/lang/String;)J
+  #133 = Methodref          #129.#132     // java/lang/Long.parseLong:(Ljava/lang/String;)J
+  #134 = Long               1000l
+  #136 = Utf8               java/lang/System
+  #137 = Class              #136          // java/lang/System
+  #138 = Utf8               currentTimeMillis
+  #139 = Utf8               ()J
+  #140 = NameAndType        #138:#139     // currentTimeMillis:()J
+  #141 = Methodref          #137.#140     // java/lang/System.currentTimeMillis:()J
+  #142 = Utf8               (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;JJ)V
+  #143 = NameAndType        #62:#142      // "<init>":(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;JJ)V
+  #144 = Methodref          #9.#143       // net/anubis/client/account/MicrosoftLogin$DeviceCode."<init>":(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;JJ)V
+  #145 = Utf8               reply
+  #146 = Utf8               Lnet/anubis/client/account/AuthHttp$Reply;
+  #147 = Utf8               deviceCode
+  #148 = Utf8               userCode
+  #149 = Utf8               uri
+  #150 = Utf8               expiresIn
+  #151 = Utf8               awaitApproval
+  #152 = Utf8               (Lnet/anubis/client/account/MicrosoftLogin$DeviceCode;)Lnet/anubis/client/account/MicrosoftLogin$MsaToken;
+  #153 = Utf8               code
+  #154 = Utf8               intervalMs
+  #155 = NameAndType        #154:#139     // intervalMs:()J
+  #156 = Methodref          #9.#155       // net/anubis/client/account/MicrosoftLogin$DeviceCode.intervalMs:()J
+  #157 = Utf8               expiresAtMs
+  #158 = NameAndType        #157:#139     // expiresAtMs:()J
+  #159 = Methodref          #9.#158       // net/anubis/client/account/MicrosoftLogin$DeviceCode.expiresAtMs:()J
+  #160 = Utf8               java/lang/Thread
+  #161 = Class              #160          // java/lang/Thread
+  #162 = Utf8               sleep
+  #163 = Utf8               (J)V
+  #164 = NameAndType        #162:#163     // sleep:(J)V
+  #165 = Methodref          #161.#164     // java/lang/Thread.sleep:(J)V
+  #166 = Utf8               grant_type
+  #167 = String             #166          // grant_type
+  #168 = Utf8               ()Ljava/lang/String;
+  #169 = NameAndType        #147:#168     // deviceCode:()Ljava/lang/String;
+  #170 = Methodref          #9.#169       // net/anubis/client/account/MicrosoftLogin$DeviceCode.deviceCode:()Ljava/lang/String;
+  #171 = Utf8               token
+  #172 = Utf8               (Lnet/anubis/client/account/AuthHttp$Reply;)Lnet/anubis/client/account/MicrosoftLogin$MsaToken;
+  #173 = NameAndType        #171:#172     // token:(Lnet/anubis/client/account/AuthHttp$Reply;)Lnet/anubis/client/account/MicrosoftLogin$MsaToken;
+  #174 = Methodref          #2.#173       // net/anubis/client/account/MicrosoftLogin.token:(Lnet/anubis/client/account/AuthHttp$Reply;)Lnet/anubis/client/account/MicrosoftLogin$MsaToken;
+  #175 = Utf8               error
+  #176 = String             #175          // error
+  #177 = Utf8               authorization_pending
+  #178 = String             #177          // authorization_pending
+  #179 = Utf8               equals
+  #180 = Utf8               (Ljava/lang/Object;)Z
+  #181 = NameAndType        #179:#180     // equals:(Ljava/lang/Object;)Z
+  #182 = Methodref          #107.#181     // java/lang/String.equals:(Ljava/lang/Object;)Z
+  #183 = Utf8               slow_down
+  #184 = String             #183          // slow_down
+  #185 = Utf8               authorization_declined
+  #186 = String             #185          // authorization_declined
+  #187 = Utf8               access_denied
+  #188 = String             #187          // access_denied
+  #189 = Utf8               Microsoft sign-in was declined in the browser
+  #190 = String             #189          // Microsoft sign-in was declined in the browser
+  #191 = Utf8               expired_token
+  #192 = String             #191          // expired_token
+  #193 = Utf8               Microsoft sign-in failed: \u0001
+  #194 = String             #193          // Microsoft sign-in failed: \u0001
+  #195 = InvokeDynamic      #1:#123       // #1:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+  #196 = Utf8               The Microsoft sign-in code expired - try again
+  #197 = String             #196          // The Microsoft sign-in code expired - try again
+  #198 = Utf8               Lnet/anubis/client/account/MicrosoftLogin$DeviceCode;
+  #199 = Utf8               refresh
+  #200 = Utf8               (Ljava/lang/String;)Lnet/anubis/client/account/MicrosoftLogin$MsaToken;
+  #201 = Utf8               refreshToken
+  #202 = Utf8               refresh_token
+  #203 = String             #202          // refresh_token
+  #204 = Utf8               (Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map;
+  #205 = NameAndType        #82:#204      // of:(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map;
+  #206 = InterfaceMethodref #81.#205      // java/util/Map.of:(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map;
+  #207 = Utf8               invalid_grant
+  #208 = String             #207          // invalid_grant
+  #209 = Utf8               This Microsoft login has expired - remove the account and add it again
+  #210 = String             #209          // This Microsoft login has expired - remove the account and add it again
+  #211 = Utf8               Microsoft login failed: \u0001
+  #212 = String             #211          // Microsoft login failed: \u0001
+  #213 = InvokeDynamic      #2:#123       // #2:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+  #214 = Utf8               minecraft
+  #215 = Utf8               (Lnet/anubis/client/account/MicrosoftLogin$MsaToken;)Lnet/anubis/client/account/Credentials;
+  #216 = Utf8               msa
+  #217 = Utf8               newProofKey
+  #218 = Utf8               ()Ljava/security/KeyPair;
+  #219 = NameAndType        #217:#218     // newProofKey:()Ljava/security/KeyPair;
+  #220 = Methodref          #2.#219       // net/anubis/client/account/MicrosoftLogin.newProofKey:()Ljava/security/KeyPair;
+  #221 = Utf8               com/google/gson/JsonObject
+  #222 = Class              #221          // com/google/gson/JsonObject
+  #223 = Methodref          #222.#64      // com/google/gson/JsonObject."<init>":()V
+  #224 = Utf8               DeviceType
+  #225 = String             #224          // DeviceType
+  #226 = Utf8               Win32
+  #227 = String             #226          // Win32
+  #228 = Utf8               addProperty
+  #229 = Utf8               (Ljava/lang/String;Ljava/lang/String;)V
+  #230 = NameAndType        #228:#229     // addProperty:(Ljava/lang/String;Ljava/lang/String;)V
+  #231 = Methodref          #222.#230     // com/google/gson/JsonObject.addProperty:(Ljava/lang/String;Ljava/lang/String;)V
+  #232 = Utf8               Id
+  #233 = String             #232          // Id
+  #234 = Utf8               java/util/UUID
+  #235 = Class              #234          // java/util/UUID
+  #236 = Utf8               randomUUID
+  #237 = Utf8               ()Ljava/util/UUID;
+  #238 = NameAndType        #236:#237     // randomUUID:()Ljava/util/UUID;
+  #239 = Methodref          #235.#238     // java/util/UUID.randomUUID:()Ljava/util/UUID;
+  #240 = Utf8               valueOf
+  #241 = Utf8               (Ljava/lang/Object;)Ljava/lang/String;
+  #242 = NameAndType        #240:#241     // valueOf:(Ljava/lang/Object;)Ljava/lang/String;
+  #243 = Methodref          #107.#242     // java/lang/String.valueOf:(Ljava/lang/Object;)Ljava/lang/String;
+  #244 = Utf8               {\u0001}
+  #245 = String             #244          // {\u0001}
+  #246 = InvokeDynamic      #3:#123       // #3:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+  #247 = Utf8               AuthMethod
+  #248 = String             #247          // AuthMethod
+  #249 = Utf8               ProofOfPossession
+  #250 = String             #249          // ProofOfPossession
+  #251 = Utf8               ProofKey
+  #252 = String             #251          // ProofKey
+  #253 = Utf8               java/security/KeyPair
+  #254 = Class              #253          // java/security/KeyPair
+  #255 = Utf8               getPublic
+  #256 = Utf8               ()Ljava/security/PublicKey;
+  #257 = NameAndType        #255:#256     // getPublic:()Ljava/security/PublicKey;
+  #258 = Methodref          #254.#257     // java/security/KeyPair.getPublic:()Ljava/security/PublicKey;
+  #259 = Utf8               java/security/interfaces/ECPublicKey
+  #260 = Class              #259          // java/security/interfaces/ECPublicKey
+  #261 = Utf8               jwk
+  #262 = Utf8               (Ljava/security/interfaces/ECPublicKey;)Lcom/google/gson/JsonObject;
+  #263 = NameAndType        #261:#262     // jwk:(Ljava/security/interfaces/ECPublicKey;)Lcom/google/gson/JsonObject;
+  #264 = Methodref          #2.#263       // net/anubis/client/account/MicrosoftLogin.jwk:(Ljava/security/interfaces/ECPublicKey;)Lcom/google/gson/JsonObject;
+  #265 = Utf8               add
+  #266 = Utf8               (Ljava/lang/String;Lcom/google/gson/JsonElement;)V
+  #267 = NameAndType        #265:#266     // add:(Ljava/lang/String;Lcom/google/gson/JsonElement;)V
+  #268 = Methodref          #222.#267     // com/google/gson/JsonObject.add:(Ljava/lang/String;Lcom/google/gson/JsonElement;)V
+  #269 = Utf8               Properties
+  #270 = String             #269          // Properties
+  #271 = Utf8               RelyingParty
+  #272 = String             #271          // RelyingParty
+  #273 = Utf8               http://auth.xboxlive.com
+  #274 = String             #273          // http://auth.xboxlive.com
+  #275 = Utf8               TokenType
+  #276 = String             #275          // TokenType
+  #277 = Utf8               JWT
+  #278 = String             #277          // JWT
+  #279 = Utf8               x-xbl-contract-version
+  #280 = String             #279          // x-xbl-contract-version
+  #281 = Utf8               1
+  #282 = String             #281          // 1
+  #283 = Utf8               (Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map;
+  #284 = NameAndType        #82:#283      // of:(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map;
+  #285 = InterfaceMethodref #81.#284      // java/util/Map.of:(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map;
+  #286 = Utf8               signedPost
+  #287 = Utf8               (Ljava/lang/String;Lcom/google/gson/JsonObject;Ljava/security/KeyPair;Ljava/util/Map;)Lnet/anubis/client/account/AuthHttp$Reply;
+  #288 = NameAndType        #286:#287     // signedPost:(Ljava/lang/String;Lcom/google/gson/JsonObject;Ljava/security/KeyPair;Ljava/util/Map;)Lnet/anubis/client/account/AuthHttp$Reply;
+  #289 = Methodref          #2.#288       // net/anubis/client/account/MicrosoftLogin.signedPost:(Ljava/lang/String;Lcom/google/gson/JsonObject;Ljava/security/KeyPair;Ljava/util/Map;)Lnet/anubis/client/account/AuthHttp$Reply;
+  #290 = Utf8               Token
+  #291 = String             #290          // Token
+  #292 = Utf8               xboxError
+  #293 = Utf8               (Lnet/anubis/client/account/AuthHttp$Reply;)Lnet/anubis/client/account/AccountException;
+  #294 = NameAndType        #292:#293     // xboxError:(Lnet/anubis/client/account/AuthHttp$Reply;)Lnet/anubis/client/account/AccountException;
+  #295 = Methodref          #2.#294       // net/anubis/client/account/MicrosoftLogin.xboxError:(Lnet/anubis/client/account/AuthHttp$Reply;)Lnet/anubis/client/account/AccountException;
+  #296 = Utf8               Sandbox
+  #297 = String             #296          // Sandbox
+  #298 = Utf8               RETAIL
+  #299 = String             #298          // RETAIL
+  #300 = Utf8               UseModernGamertag
+  #301 = String             #300          // UseModernGamertag
+  #302 = Utf8               java/lang/Boolean
+  #303 = Class              #302          // java/lang/Boolean
+  #304 = Utf8               (Z)Ljava/lang/Boolean;
+  #305 = NameAndType        #240:#304     // valueOf:(Z)Ljava/lang/Boolean;
+  #306 = Methodref          #303.#305     // java/lang/Boolean.valueOf:(Z)Ljava/lang/Boolean;
+  #307 = Utf8               (Ljava/lang/String;Ljava/lang/Boolean;)V
+  #308 = NameAndType        #228:#307     // addProperty:(Ljava/lang/String;Ljava/lang/Boolean;)V
+  #309 = Methodref          #222.#308     // com/google/gson/JsonObject.addProperty:(Ljava/lang/String;Ljava/lang/Boolean;)V
+  #310 = Utf8               AppId
+  #311 = String             #310          // AppId
+  #312 = Utf8               AccessToken
+  #313 = String             #312          // AccessToken
+  #314 = Utf8               accessToken
+  #315 = NameAndType        #314:#168     // accessToken:()Ljava/lang/String;
+  #316 = Methodref          #7.#315       // net/anubis/client/account/MicrosoftLogin$MsaToken.accessToken:()Ljava/lang/String;
+  #317 = Utf8               t=\u0001
+  #318 = String             #317          // t=\u0001
+  #319 = InvokeDynamic      #4:#123       // #4:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+  #320 = Utf8               DeviceToken
+  #321 = String             #320          // DeviceToken
+  #322 = Utf8               ()Ljava/util/Map;
+  #323 = NameAndType        #82:#322      // of:()Ljava/util/Map;
+  #324 = InterfaceMethodref #81.#323      // java/util/Map.of:()Ljava/util/Map;
+  #325 = Utf8               json
+  #326 = Utf8               ()Lcom/google/gson/JsonObject;
+  #327 = NameAndType        #325:#326     // json:()Lcom/google/gson/JsonObject;
+  #328 = Methodref          #11.#327      // net/anubis/client/account/AuthHttp$Reply.json:()Lcom/google/gson/JsonObject;
+  #329 = Utf8               AuthorizationToken
+  #330 = String             #329          // AuthorizationToken
+  #331 = Utf8               object
+  #332 = Utf8               (Lcom/google/gson/JsonObject;Ljava/lang/String;)Lcom/google/gson/JsonObject;
+  #333 = NameAndType        #331:#332     // object:(Lcom/google/gson/JsonObject;Ljava/lang/String;)Lcom/google/gson/JsonObject;
+  #334 = Methodref          #13.#333      // net/anubis/client/account/AuthHttp.object:(Lcom/google/gson/JsonObject;Ljava/lang/String;)Lcom/google/gson/JsonObject;
+  #335 = Utf8               (Lcom/google/gson/JsonObject;Ljava/lang/String;)Ljava/lang/String;
+  #336 = NameAndType        #90:#335      // text:(Lcom/google/gson/JsonObject;Ljava/lang/String;)Ljava/lang/String;
+  #337 = Methodref          #13.#336      // net/anubis/client/account/AuthHttp.text:(Lcom/google/gson/JsonObject;Ljava/lang/String;)Ljava/lang/String;
+  #338 = Utf8               userHash
+  #339 = Utf8               (Lcom/google/gson/JsonObject;)Ljava/lang/String;
+  #340 = NameAndType        #338:#339     // userHash:(Lcom/google/gson/JsonObject;)Ljava/lang/String;
+  #341 = Methodref          #2.#340       // net/anubis/client/account/MicrosoftLogin.userHash:(Lcom/google/gson/JsonObject;)Ljava/lang/String;
+  #342 = Utf8               platform
+  #343 = String             #342          // platform
+  #344 = Utf8               PC_LAUNCHER
+  #345 = String             #344          // PC_LAUNCHER
+  #346 = Utf8               xtoken
+  #347 = String             #346          // xtoken
+  #348 = Utf8               XBL3.0 x=\u0001;\u0001
+  #349 = String             #348          // XBL3.0 x=\u0001;\u0001
+  #350 = Utf8               (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+  #351 = NameAndType        #118:#350     // makeConcatWithConstants:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+  #352 = InvokeDynamic      #5:#351       // #5:makeConcatWithConstants:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+  #353 = Utf8               toString
+  #354 = NameAndType        #353:#168     // toString:()Ljava/lang/String;
+  #355 = Methodref          #222.#354     // com/google/gson/JsonObject.toString:()Ljava/lang/String;
+  #356 = Utf8               postJson
+  #357 = Utf8               (Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;)Lnet/anubis/client/account/AuthHttp$Reply;
+  #358 = NameAndType        #356:#357     // postJson:(Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;)Lnet/anubis/client/account/AuthHttp$Reply;
+  #359 = Methodref          #13.#358      // net/anubis/client/account/AuthHttp.postJson:(Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;)Lnet/anubis/client/account/AuthHttp$Reply;
+  #360 = Utf8               access_token
+  #361 = String             #360          // access_token
+  #362 = Utf8               servicesError
+  #363 = NameAndType        #362:#111     // servicesError:(Lnet/anubis/client/account/AuthHttp$Reply;)Ljava/lang/String;
+  #364 = Methodref          #2.#363       // net/anubis/client/account/MicrosoftLogin.servicesError:(Lnet/anubis/client/account/AuthHttp$Reply;)Ljava/lang/String;
+  #365 = Utf8               Minecraft login failed: \u0001
+  #366 = String             #365          // Minecraft login failed: \u0001
+  #367 = InvokeDynamic      #6:#123       // #6:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+  #368 = Utf8               get
+  #369 = Utf8               (Ljava/lang/String;Ljava/lang/String;)Lnet/anubis/client/account/AuthHttp$Reply;
+  #370 = NameAndType        #368:#369     // get:(Ljava/lang/String;Ljava/lang/String;)Lnet/anubis/client/account/AuthHttp$Reply;
+  #371 = Methodref          #13.#370      // net/anubis/client/account/AuthHttp.get:(Ljava/lang/String;Ljava/lang/String;)Lnet/anubis/client/account/AuthHttp$Reply;
+  #372 = Utf8               status
+  #373 = Utf8               ()I
+  #374 = NameAndType        #372:#373     // status:()I
+  #375 = Methodref          #11.#374      // net/anubis/client/account/AuthHttp$Reply.status:()I
+  #376 = Utf8               This Microsoft account doesn\'t own Minecraft: Java Edition
+  #377 = String             #376          // This Microsoft account doesn\'t own Minecraft: Java Edition
+  #378 = Utf8               name
+  #379 = String             #378          // name
+  #380 = Utf8               id
+  #381 = String             #380          // id
+  #382 = Utf8               Couldn\'t load the Minecraft profile: \u0001
+  #383 = String             #382          // Couldn\'t load the Minecraft profile: \u0001
+  #384 = InvokeDynamic      #7:#123       // #7:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+  #385 = Utf8               net/anubis/client/account/Credentials
+  #386 = Class              #385          // net/anubis/client/account/Credentials
+  #387 = Utf8               com/mojang/util/UndashedUuid
+  #388 = Class              #387          // com/mojang/util/UndashedUuid
+  #389 = Utf8               fromStringLenient
+  #390 = Utf8               (Ljava/lang/String;)Ljava/util/UUID;
+  #391 = NameAndType        #389:#390     // fromStringLenient:(Ljava/lang/String;)Ljava/util/UUID;
+  #392 = Methodref          #388.#391     // com/mojang/util/UndashedUuid.fromStringLenient:(Ljava/lang/String;)Ljava/util/UUID;
+  #393 = NameAndType        #201:#168     // refreshToken:()Ljava/lang/String;
+  #394 = Methodref          #7.#393       // net/anubis/client/account/MicrosoftLogin$MsaToken.refreshToken:()Ljava/lang/String;
+  #395 = Utf8               (Ljava/lang/String;Ljava/util/UUID;Ljava/lang/String;Ljava/lang/String;)V
+  #396 = NameAndType        #62:#395      // "<init>":(Ljava/lang/String;Ljava/util/UUID;Ljava/lang/String;Ljava/lang/String;)V
+  #397 = Methodref          #386.#396     // net/anubis/client/account/Credentials."<init>":(Ljava/lang/String;Ljava/util/UUID;Ljava/lang/String;Ljava/lang/String;)V
+  #398 = Utf8               Lnet/anubis/client/account/MicrosoftLogin$MsaToken;
+  #399 = Utf8               proofKey
+  #400 = Utf8               Ljava/security/KeyPair;
+  #401 = Utf8               deviceProperties
+  #402 = Utf8               Lcom/google/gson/JsonObject;
+  #403 = Utf8               deviceRequest
+  #404 = Utf8               device
+  #405 = Utf8               deviceToken
+  #406 = Utf8               sisuRequest
+  #407 = Utf8               sisu
+  #408 = Utf8               xsts
+  #409 = Utf8               xstsToken
+  #410 = Utf8               loginRequest
+  #411 = Utf8               login
+  #412 = Utf8               gameToken
+  #413 = Utf8               profile
+  #414 = Utf8               Microsoft returned no refresh token, so the account couldn\'t be saved
+  #415 = String             #414          // Microsoft returned no refresh token, so the account couldn\'t be saved
+  #416 = NameAndType        #62:#229      // "<init>":(Ljava/lang/String;Ljava/lang/String;)V
+  #417 = Methodref          #7.#416       // net/anubis/client/account/MicrosoftLogin$MsaToken."<init>":(Ljava/lang/String;Ljava/lang/String;)V
+  #418 = Utf8               access
+  #419 = Utf8               DisplayClaims
+  #420 = String             #419          // DisplayClaims
+  #421 = Utf8               xui
+  #422 = String             #421          // xui
+  #423 = Utf8               (Ljava/lang/String;)Lcom/google/gson/JsonElement;
+  #424 = NameAndType        #368:#423     // get:(Ljava/lang/String;)Lcom/google/gson/JsonElement;
+  #425 = Methodref          #222.#424     // com/google/gson/JsonObject.get:(Ljava/lang/String;)Lcom/google/gson/JsonElement;
+  #426 = Utf8               com/google/gson/JsonElement
+  #427 = Class              #426          // com/google/gson/JsonElement
+  #428 = Utf8               com/google/gson/JsonArray
+  #429 = Class              #428          // com/google/gson/JsonArray
+  #430 = Utf8               isEmpty
+  #431 = NameAndType        #430:#103     // isEmpty:()Z
+  #432 = Methodref          #429.#431     // com/google/gson/JsonArray.isEmpty:()Z
+  #433 = Utf8               (I)Lcom/google/gson/JsonElement;
+  #434 = NameAndType        #368:#433     // get:(I)Lcom/google/gson/JsonElement;
+  #435 = Methodref          #429.#434     // com/google/gson/JsonArray.get:(I)Lcom/google/gson/JsonElement;
+  #436 = Utf8               isJsonObject
+  #437 = NameAndType        #436:#103     // isJsonObject:()Z
+  #438 = Methodref          #427.#437     // com/google/gson/JsonElement.isJsonObject:()Z
+  #439 = Utf8               getAsJsonObject
+  #440 = NameAndType        #439:#326     // getAsJsonObject:()Lcom/google/gson/JsonObject;
+  #441 = Methodref          #427.#440     // com/google/gson/JsonElement.getAsJsonObject:()Lcom/google/gson/JsonObject;
+  #442 = Utf8               uhs
+  #443 = String             #442          // uhs
+  #444 = Utf8               list
+  #445 = Utf8               Lcom/google/gson/JsonArray;
+  #446 = Utf8               claims
+  #447 = Utf8               users
+  #448 = Utf8               Lcom/google/gson/JsonElement;
+  #449 = Utf8               java/security/GeneralSecurityException
+  #450 = Class              #449          // java/security/GeneralSecurityException
+  #451 = Utf8               EC
+  #452 = String             #451          // EC
+  #453 = Utf8               java/security/KeyPairGenerator
+  #454 = Class              #453          // java/security/KeyPairGenerator
+  #455 = Utf8               getInstance
+  #456 = Utf8               (Ljava/lang/String;)Ljava/security/KeyPairGenerator;
+  #457 = NameAndType        #455:#456     // getInstance:(Ljava/lang/String;)Ljava/security/KeyPairGenerator;
+  #458 = Methodref          #454.#457     // java/security/KeyPairGenerator.getInstance:(Ljava/lang/String;)Ljava/security/KeyPairGenerator;
+  #459 = Utf8               java/security/spec/ECGenParameterSpec
+  #460 = Class              #459          // java/security/spec/ECGenParameterSpec
+  #461 = Utf8               secp256r1
+  #462 = String             #461          // secp256r1
+  #463 = Methodref          #460.#126     // java/security/spec/ECGenParameterSpec."<init>":(Ljava/lang/String;)V
+  #464 = Utf8               initialize
+  #465 = Utf8               (Ljava/security/spec/AlgorithmParameterSpec;)V
+  #466 = NameAndType        #464:#465     // initialize:(Ljava/security/spec/AlgorithmParameterSpec;)V
+  #467 = Methodref          #454.#466     // java/security/KeyPairGenerator.initialize:(Ljava/security/spec/AlgorithmParameterSpec;)V
+  #468 = Utf8               generateKeyPair
+  #469 = NameAndType        #468:#218     // generateKeyPair:()Ljava/security/KeyPair;
+  #470 = Methodref          #454.#469     // java/security/KeyPairGenerator.generateKeyPair:()Ljava/security/KeyPair;
+  #471 = Utf8               This Java runtime can\'t create the key Xbox Live requires
+  #472 = String             #471          // This Java runtime can\'t create the key Xbox Live requires
+  #473 = Utf8               (Ljava/lang/String;Ljava/lang/Throwable;)V
+  #474 = NameAndType        #62:#473      // "<init>":(Ljava/lang/String;Ljava/lang/Throwable;)V
+  #475 = Methodref          #109.#474     // net/anubis/client/account/AccountException."<init>":(Ljava/lang/String;Ljava/lang/Throwable;)V
+  #476 = Utf8               generator
+  #477 = Utf8               Ljava/security/KeyPairGenerator;
+  #478 = Utf8               e
+  #479 = Utf8               Ljava/security/GeneralSecurityException;
+  #480 = Utf8               (Ljava/lang/String;Lcom/google/gson/JsonObject;Ljava/security/KeyPair;Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;)Lnet/anubis/client/account/AuthHttp$Reply;
+  #481 = Utf8               url
+  #482 = Utf8               body
+  #483 = Utf8               key
+  #484 = Utf8               headers
+  #485 = Utf8               java/util/HashMap
+  #486 = Class              #485          // java/util/HashMap
+  #487 = Utf8               (Ljava/util/Map;)V
+  #488 = NameAndType        #62:#487      // "<init>":(Ljava/util/Map;)V
+  #489 = Methodref          #486.#488     // java/util/HashMap."<init>":(Ljava/util/Map;)V
+  #490 = Utf8               Signature
+  #491 = String             #490          // Signature
+  #492 = Utf8               java/net/URI
+  #493 = Class              #492          // java/net/URI
+  #494 = Utf8               create
+  #495 = Utf8               (Ljava/lang/String;)Ljava/net/URI;
+  #496 = NameAndType        #494:#495     // create:(Ljava/lang/String;)Ljava/net/URI;
+  #497 = Methodref          #493.#496     // java/net/URI.create:(Ljava/lang/String;)Ljava/net/URI;
+  #498 = Utf8               getPath
+  #499 = NameAndType        #498:#168     // getPath:()Ljava/lang/String;
+  #500 = Methodref          #493.#499     // java/net/URI.getPath:()Ljava/lang/String;
+  #501 = Utf8               getPrivate
+  #502 = Utf8               ()Ljava/security/PrivateKey;
+  #503 = NameAndType        #501:#502     // getPrivate:()Ljava/security/PrivateKey;
+  #504 = Methodref          #254.#503     // java/security/KeyPair.getPrivate:()Ljava/security/PrivateKey;
+  #505 = Utf8               signature
+  #506 = Utf8               (Ljava/lang/String;Ljava/lang/String;Ljava/security/PrivateKey;)Ljava/lang/String;
+  #507 = NameAndType        #505:#506     // signature:(Ljava/lang/String;Ljava/lang/String;Ljava/security/PrivateKey;)Ljava/lang/String;
+  #508 = Methodref          #2.#507       // net/anubis/client/account/MicrosoftLogin.signature:(Ljava/lang/String;Ljava/lang/String;Ljava/security/PrivateKey;)Ljava/lang/String;
+  #509 = Utf8               put
+  #510 = Utf8               (Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+  #511 = NameAndType        #509:#510     // put:(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+  #512 = InterfaceMethodref #81.#511      // java/util/Map.put:(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+  #513 = Utf8               Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;
+  #514 = Utf8               Ljava/util/Map;
+  #515 = Utf8               signed
+  #516 = Utf8               path
+  #517 = Utf8               java/io/IOException
+  #518 = Class              #517          // java/io/IOException
+  #519 = Utf8               java/time/Instant
+  #520 = Class              #519          // java/time/Instant
+  #521 = Utf8               now
+  #522 = Utf8               ()Ljava/time/Instant;
+  #523 = NameAndType        #521:#522     // now:()Ljava/time/Instant;
+  #524 = Methodref          #520.#523     // java/time/Instant.now:()Ljava/time/Instant;
+  #525 = Utf8               getEpochSecond
+  #526 = NameAndType        #525:#139     // getEpochSecond:()J
+  #527 = Methodref          #520.#526     // java/time/Instant.getEpochSecond:()J
+  #528 = Long               10000000l
+  #530 = Utf8               java/io/ByteArrayOutputStream
+  #531 = Class              #530          // java/io/ByteArrayOutputStream
+  #532 = Methodref          #531.#64      // java/io/ByteArrayOutputStream."<init>":()V
+  #533 = Utf8               java/io/DataOutputStream
+  #534 = Class              #533          // java/io/DataOutputStream
+  #535 = Utf8               (Ljava/io/OutputStream;)V
+  #536 = NameAndType        #62:#535      // "<init>":(Ljava/io/OutputStream;)V
+  #537 = Methodref          #534.#536     // java/io/DataOutputStream."<init>":(Ljava/io/OutputStream;)V
+  #538 = Utf8               writeInt
+  #539 = Utf8               (I)V
+  #540 = NameAndType        #538:#539     // writeInt:(I)V
+  #541 = Methodref          #534.#540     // java/io/DataOutputStream.writeInt:(I)V
+  #542 = Utf8               writeByte
+  #543 = NameAndType        #542:#539     // writeByte:(I)V
+  #544 = Methodref          #534.#543     // java/io/DataOutputStream.writeByte:(I)V
+  #545 = Utf8               writeLong
+  #546 = NameAndType        #545:#163     // writeLong:(J)V
+  #547 = Methodref          #534.#546     // java/io/DataOutputStream.writeLong:(J)V
+  #548 = Utf8               POST
+  #549 = String             #548          // POST
+  #550 = Utf8               java/nio/charset/StandardCharsets
+  #551 = Class              #550          // java/nio/charset/StandardCharsets
+  #552 = Utf8               UTF_8
+  #553 = Utf8               Ljava/nio/charset/Charset;
+  #554 = NameAndType        #552:#553     // UTF_8:Ljava/nio/charset/Charset;
+  #555 = Fieldref           #551.#554     // java/nio/charset/StandardCharsets.UTF_8:Ljava/nio/charset/Charset;
+  #556 = Utf8               getBytes
+  #557 = Utf8               (Ljava/nio/charset/Charset;)[B
+  #558 = NameAndType        #556:#557     // getBytes:(Ljava/nio/charset/Charset;)[B
+  #559 = Methodref          #107.#558     // java/lang/String.getBytes:(Ljava/nio/charset/Charset;)[B
+  #560 = Utf8               write
+  #561 = Utf8               ([B)V
+  #562 = NameAndType        #560:#561     // write:([B)V
+  #563 = Methodref          #534.#562     // java/io/DataOutputStream.write:([B)V
+  #564 = Utf8               SHA256withECDSAinP1363Format
+  #565 = String             #564          // SHA256withECDSAinP1363Format
+  #566 = Utf8               java/security/Signature
+  #567 = Class              #566          // java/security/Signature
+  #568 = Utf8               (Ljava/lang/String;)Ljava/security/Signature;
+  #569 = NameAndType        #455:#568     // getInstance:(Ljava/lang/String;)Ljava/security/Signature;
+  #570 = Methodref          #567.#569     // java/security/Signature.getInstance:(Ljava/lang/String;)Ljava/security/Signature;
+  #571 = Utf8               initSign
+  #572 = Utf8               (Ljava/security/PrivateKey;)V
+  #573 = NameAndType        #571:#572     // initSign:(Ljava/security/PrivateKey;)V
+  #574 = Methodref          #567.#573     // java/security/Signature.initSign:(Ljava/security/PrivateKey;)V
+  #575 = Utf8               toByteArray
+  #576 = Utf8               ()[B
+  #577 = NameAndType        #575:#576     // toByteArray:()[B
+  #578 = Methodref          #531.#577     // java/io/ByteArrayOutputStream.toByteArray:()[B
+  #579 = Utf8               update
+  #580 = NameAndType        #579:#561     // update:([B)V
+  #581 = Methodref          #567.#580     // java/security/Signature.update:([B)V
+  #582 = Utf8               sign
+  #583 = NameAndType        #582:#576     // sign:()[B
+  #584 = Methodref          #567.#583     // java/security/Signature.sign:()[B
+  #585 = Utf8               getEncoder
+  #586 = Utf8               ()Ljava/util/Base64$Encoder;
+  #587 = NameAndType        #585:#586     // getEncoder:()Ljava/util/Base64$Encoder;
+  #588 = Methodref          #20.#587      // java/util/Base64.getEncoder:()Ljava/util/Base64$Encoder;
+  #589 = Utf8               encodeToString
+  #590 = Utf8               ([B)Ljava/lang/String;
+  #591 = NameAndType        #589:#590     // encodeToString:([B)Ljava/lang/String;
+  #592 = Methodref          #18.#591      // java/util/Base64$Encoder.encodeToString:([B)Ljava/lang/String;
+  #593 = Utf8               java/security/PrivateKey
+  #594 = Class              #593          // java/security/PrivateKey
+  #595 = Utf8               java/lang/Exception
+  #596 = Class              #595          // java/lang/Exception
+  #597 = Utf8               Couldn\'t sign the Xbox Live request
+  #598 = String             #597          // Couldn\'t sign the Xbox Live request
+  #599 = Utf8               content
+  #600 = Utf8               Ljava/io/ByteArrayOutputStream;
+  #601 = Utf8               out
+  #602 = Utf8               Ljava/io/DataOutputStream;
+  #603 = Utf8               ecdsa
+  #604 = Utf8               Ljava/security/Signature;
+  #605 = Utf8               header
+  #606 = Utf8               headerOut
+  #607 = Utf8               Ljava/lang/Exception;
+  #608 = Utf8               Ljava/security/PrivateKey;
+  #609 = Utf8               stamp
+  #610 = Utf8               kty
+  #611 = String             #610          // kty
+  #612 = Utf8               alg
+  #613 = String             #612          // alg
+  #614 = Utf8               ES256
+  #615 = String             #614          // ES256
+  #616 = Utf8               crv
+  #617 = String             #616          // crv
+  #618 = Utf8               P-256
+  #619 = String             #618          // P-256
+  #620 = Utf8               use
+  #621 = String             #620          // use
+  #622 = Utf8               sig
+  #623 = String             #622          // sig
+  #624 = Utf8               x
+  #625 = String             #624          // x
+  #626 = Utf8               getW
+  #627 = Utf8               ()Ljava/security/spec/ECPoint;
+  #628 = NameAndType        #626:#627     // getW:()Ljava/security/spec/ECPoint;
+  #629 = InterfaceMethodref #260.#628     // java/security/interfaces/ECPublicKey.getW:()Ljava/security/spec/ECPoint;
+  #630 = Utf8               java/security/spec/ECPoint
+  #631 = Class              #630          // java/security/spec/ECPoint
+  #632 = Utf8               getAffineX
+  #633 = Utf8               ()Ljava/math/BigInteger;
+  #634 = NameAndType        #632:#633     // getAffineX:()Ljava/math/BigInteger;
+  #635 = Methodref          #631.#634     // java/security/spec/ECPoint.getAffineX:()Ljava/math/BigInteger;
+  #636 = Utf8               coordinate
+  #637 = Utf8               (Ljava/math/BigInteger;)Ljava/lang/String;
+  #638 = NameAndType        #636:#637     // coordinate:(Ljava/math/BigInteger;)Ljava/lang/String;
+  #639 = Methodref          #2.#638       // net/anubis/client/account/MicrosoftLogin.coordinate:(Ljava/math/BigInteger;)Ljava/lang/String;
+  #640 = Utf8               y
+  #641 = String             #640          // y
+  #642 = Utf8               getAffineY
+  #643 = NameAndType        #642:#633     // getAffineY:()Ljava/math/BigInteger;
+  #644 = Methodref          #631.#643     // java/security/spec/ECPoint.getAffineY:()Ljava/math/BigInteger;
+  #645 = Utf8               Ljava/security/interfaces/ECPublicKey;
+  #646 = Utf8               value
+  #647 = Utf8               java/math/BigInteger
+  #648 = Class              #647          // java/math/BigInteger
+  #649 = Methodref          #648.#577     // java/math/BigInteger.toByteArray:()[B
+  #650 = Utf8               java/lang/Math
+  #651 = Class              #650          // java/lang/Math
+  #652 = Utf8               min
+  #653 = Utf8               (II)I
+  #654 = NameAndType        #652:#653     // min:(II)I
+  #655 = Methodref          #651.#654     // java/lang/Math.min:(II)I
+  #656 = Utf8               arraycopy
+  #657 = Utf8               (Ljava/lang/Object;ILjava/lang/Object;II)V
+  #658 = NameAndType        #656:#657     // arraycopy:(Ljava/lang/Object;ILjava/lang/Object;II)V
+  #659 = Methodref          #137.#658     // java/lang/System.arraycopy:(Ljava/lang/Object;ILjava/lang/Object;II)V
+  #660 = Utf8               getUrlEncoder
+  #661 = NameAndType        #660:#586     // getUrlEncoder:()Ljava/util/Base64$Encoder;
+  #662 = Methodref          #20.#661      // java/util/Base64.getUrlEncoder:()Ljava/util/Base64$Encoder;
+  #663 = Utf8               withoutPadding
+  #664 = NameAndType        #663:#586     // withoutPadding:()Ljava/util/Base64$Encoder;
+  #665 = Methodref          #18.#664      // java/util/Base64$Encoder.withoutPadding:()Ljava/util/Base64$Encoder;
+  #666 = Utf8               Ljava/math/BigInteger;
+  #667 = Utf8               raw
+  #668 = Utf8               [B
+  #669 = Utf8               fixed
+  #670 = Utf8               length
+  #671 = Utf8               I
+  #672 = Utf8               error_description
+  #673 = String             #672          // error_description
+  #674 = Utf8               HTTP \u0001
+  #675 = String             #674          // HTTP \u0001
+  #676 = Utf8               (I)Ljava/lang/String;
+  #677 = NameAndType        #118:#676     // makeConcatWithConstants:(I)Ljava/lang/String;
+  #678 = InvokeDynamic      #8:#677       // #8:makeConcatWithConstants:(I)Ljava/lang/String;
+  #679 = Utf8               description
+  #680 = Utf8               errorMessage
+  #681 = String             #680          // errorMessage
+  #682 = Utf8               message
+  #683 = Utf8               java/lang/NumberFormatException
+  #684 = Class              #683          // java/lang/NumberFormatException
+  #685 = Utf8               XErr
+  #686 = String             #685          // XErr
+  #687 = Utf8               ()Ljava/net/http/HttpHeaders;
+  #688 = NameAndType        #484:#687     // headers:()Ljava/net/http/HttpHeaders;
+  #689 = Methodref          #11.#688      // net/anubis/client/account/AuthHttp$Reply.headers:()Ljava/net/http/HttpHeaders;
+  #690 = Utf8               X-Err
+  #691 = String             #690          // X-Err
+  #692 = Utf8               java/net/http/HttpHeaders
+  #693 = Class              #692          // java/net/http/HttpHeaders
+  #694 = Utf8               firstValue
+  #695 = Utf8               (Ljava/lang/String;)Ljava/util/Optional;
+  #696 = NameAndType        #694:#695     // firstValue:(Ljava/lang/String;)Ljava/util/Optional;
+  #697 = Methodref          #693.#696     // java/net/http/HttpHeaders.firstValue:(Ljava/lang/String;)Ljava/util/Optional;
+  #698 = Utf8               java/util/Optional
+  #699 = Class              #698          // java/util/Optional
+  #700 = Utf8               orElse
+  #701 = Utf8               (Ljava/lang/Object;)Ljava/lang/Object;
+  #702 = NameAndType        #700:#701     // orElse:(Ljava/lang/Object;)Ljava/lang/Object;
+  #703 = Methodref          #699.#702     // java/util/Optional.orElse:(Ljava/lang/Object;)Ljava/lang/Object;
+  #704 = Utf8               Xbox Live sign-in failed (HTTP \u0001)
+  #705 = String             #704          // Xbox Live sign-in failed (HTTP \u0001)
+  #706 = InvokeDynamic      #9:#677       // #9:makeConcatWithConstants:(I)Ljava/lang/String;
+  #707 = Utf8               Xbox Live sign-in failed (\u0001)
+  #708 = String             #707          // Xbox Live sign-in failed (\u0001)
+  #709 = InvokeDynamic      #10:#123      // #10:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+  #710 = Utf8               This account is banned from Xbox Live
+  #711 = String             #710          // This account is banned from Xbox Live
+  #712 = Utf8               This Microsoft account has no Xbox profile yet - create one at xbox.com, then try again
+  #713 = String             #712          // This Microsoft account has no Xbox profile yet - create one at xbox.com, then try again
+  #714 = Utf8               Xbox Live isn\'t available in this account\'s country
+  #715 = String             #714          // Xbox Live isn\'t available in this account\'s country
+  #716 = Utf8               This account needs age verification at account.microsoft.com first
+  #717 = String             #716          // This account needs age verification at account.microsoft.com first
+  #718 = Utf8               This account has used up its allowed playtime for now
+  #719 = String             #718          // This account has used up its allowed playtime for now
+  #720 = Utf8               This is a child account - an adult has to add it to a Microsoft family first
+  #721 = String             #720          // This is a child account - an adult has to add it to a Microsoft family first
+  #722 = Utf8               toHexString
+  #723 = Utf8               (J)Ljava/lang/String;
+  #724 = NameAndType        #722:#723     // toHexString:(J)Ljava/lang/String;
+  #725 = Methodref          #129.#724     // java/lang/Long.toHexString:(J)Ljava/lang/String;
+  #726 = Utf8               java/util/Locale
+  #727 = Class              #726          // java/util/Locale
+  #728 = Utf8               ROOT
+  #729 = Utf8               Ljava/util/Locale;
+  #730 = NameAndType        #728:#729     // ROOT:Ljava/util/Locale;
+  #731 = Fieldref           #727.#730     // java/util/Locale.ROOT:Ljava/util/Locale;
+  #732 = Utf8               toUpperCase
+  #733 = Utf8               (Ljava/util/Locale;)Ljava/lang/String;
+  #734 = NameAndType        #732:#733     // toUpperCase:(Ljava/util/Locale;)Ljava/lang/String;
+  #735 = Methodref          #107.#734     // java/lang/String.toUpperCase:(Ljava/util/Locale;)Ljava/lang/String;
+  #736 = Utf8               Xbox Live refused the sign-in (error 0x\u0001)
+  #737 = String             #736          // Xbox Live refused the sign-in (error 0x\u0001)
+  #738 = InvokeDynamic      #11:#123      // #11:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+  #739 = Utf8               xerr
+  #740 = Utf8               Ljava/lang/NumberFormatException;
+  #741 = Utf8               Lnet/fabricmc/api/Environment;
+  #742 = Utf8               Lnet/fabricmc/api/EnvType;
+  #743 = Utf8               CLIENT
+  #744 = Utf8               ConstantValue
+  #745 = Utf8               Code
+  #746 = Utf8               LineNumberTable
+  #747 = Utf8               LocalVariableTable
+  #748 = Utf8               StackMapTable
+  #749 = Utf8               Exceptions
+  #750 = Utf8               MethodParameters
+  #751 = Utf8               LocalVariableTypeTable
+  #752 = Utf8               InnerClasses
+  #753 = Utf8               SourceFile
+  #754 = Utf8               RuntimeVisibleAnnotations
+  #755 = Utf8               BootstrapMethods
+  #756 = Utf8               NestMembers
+{
+  private static final java.lang.String CLIENT_ID;
+    descriptor: Ljava/lang/String;
+    flags: (0x001a) ACC_PRIVATE, ACC_STATIC, ACC_FINAL
+    ConstantValue: String 00000000402b5328
+
+  private static final java.lang.String SCOPE;
+    descriptor: Ljava/lang/String;
+    flags: (0x001a) ACC_PRIVATE, ACC_STATIC, ACC_FINAL
+    ConstantValue: String service::user.auth.xboxlive.com::MBI_SSL
+
+  private static final java.lang.String DEVICE_CODE_URL;
+    descriptor: Ljava/lang/String;
+    flags: (0x001a) ACC_PRIVATE, ACC_STATIC, ACC_FINAL
+    ConstantValue: String https://login.live.com/oauth20_connect.srf
+
+  private static final java.lang.String TOKEN_URL;
+    descriptor: Ljava/lang/String;
+    flags: (0x001a) ACC_PRIVATE, ACC_STATIC, ACC_FINAL
+    ConstantValue: String https://login.live.com/oauth20_token.srf
+
+  private static final java.lang.String DEVICE_AUTH_URL;
+    descriptor: Ljava/lang/String;
+    flags: (0x001a) ACC_PRIVATE, ACC_STATIC, ACC_FINAL
+    ConstantValue: String https://device.auth.xboxlive.com/device/authenticate
+
+  private static final java.lang.String SISU_URL;
+    descriptor: Ljava/lang/String;
+    flags: (0x001a) ACC_PRIVATE, ACC_STATIC, ACC_FINAL
+    ConstantValue: String https://sisu.xboxlive.com/authorize
+
+  private static final java.lang.String LAUNCHER_LOGIN_URL;
+    descriptor: Ljava/lang/String;
+    flags: (0x001a) ACC_PRIVATE, ACC_STATIC, ACC_FINAL
+    ConstantValue: String https://api.minecraftservices.com/launcher/login
+
+  static final java.lang.String PROFILE_URL;
+    descriptor: Ljava/lang/String;
+    flags: (0x0018) ACC_STATIC, ACC_FINAL
+    ConstantValue: String https://api.minecraftservices.com/minecraft/profile
+
+  private static final java.lang.String MINECRAFT_RELYING_PARTY;
+    descriptor: Ljava/lang/String;
+    flags: (0x001a) ACC_PRIVATE, ACC_STATIC, ACC_FINAL
+    ConstantValue: String rp://api.minecraftservices.com/
+
+  private static final long FILETIME_EPOCH_OFFSET;
+    descriptor: J
+    flags: (0x001a) ACC_PRIVATE, ACC_STATIC, ACC_FINAL
+    ConstantValue: long 11644473600l
+
+  private static final long SLOW_DOWN_MS;
+    descriptor: J
+    flags: (0x001a) ACC_PRIVATE, ACC_STATIC, ACC_FINAL
+    ConstantValue: long 5000l
+
+  private net.anubis.client.account.MicrosoftLogin();
+    descriptor: ()V
+    flags: (0x0002) ACC_PRIVATE
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: invokespecial #65                 // Method java/lang/Object."<init>":()V
+         4: return
+      LineNumberTable:
+        line 54: 0
+        line 55: 4
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       5     0  this   Lnet/anubis/client/account/MicrosoftLogin;
+
+  static net.anubis.client.account.MicrosoftLogin$DeviceCode requestDeviceCode() throws java.lang.InterruptedException;
+    descriptor: ()Lnet/anubis/client/account/MicrosoftLogin$DeviceCode;
+    flags: (0x0008) ACC_STATIC
+    Code:
+      stack=13, locals=6, args_size=0
+         0: ldc           #36                 // String https://login.live.com/oauth20_connect.srf
+         2: ldc           #73                 // String client_id
+         4: ldc           #30                 // String 00000000402b5328
+         6: ldc           #75                 // String scope
+         8: ldc           #33                 // String service::user.auth.xboxlive.com::MBI_SSL
+        10: ldc           #77                 // String response_type
+        12: ldc           #79                 // String device_code
+        14: invokestatic  #85                 // InterfaceMethod java/util/Map.of:(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map;
+        17: invokestatic  #89                 // Method net/anubis/client/account/AuthHttp.postForm:(Ljava/lang/String;Ljava/util/Map;)Lnet/anubis/client/account/AuthHttp$Reply;
+        20: astore_0
+        21: aload_0
+        22: ldc           #79                 // String device_code
+        24: invokevirtual #93                 // Method net/anubis/client/account/AuthHttp$Reply.text:(Ljava/lang/String;)Ljava/lang/String;
+        27: astore_1
+        28: aload_0
+        29: ldc           #95                 // String user_code
+        31: invokevirtual #93                 // Method net/anubis/client/account/AuthHttp$Reply.text:(Ljava/lang/String;)Ljava/lang/String;
+        34: astore_2
+        35: aload_0
+        36: ldc           #97                 // String verification_uri
+        38: invokevirtual #93                 // Method net/anubis/client/account/AuthHttp$Reply.text:(Ljava/lang/String;)Ljava/lang/String;
+        41: astore_3
+        42: aload_0
+        43: ldc           #99                 // String interval
+        45: invokevirtual #93                 // Method net/anubis/client/account/AuthHttp$Reply.text:(Ljava/lang/String;)Ljava/lang/String;
+        48: astore        4
+        50: aload_0
+        51: ldc           #101                // String expires_in
+        53: invokevirtual #93                 // Method net/anubis/client/account/AuthHttp$Reply.text:(Ljava/lang/String;)Ljava/lang/String;
+        56: astore        5
+        58: aload_0
+        59: invokevirtual #105                // Method net/anubis/client/account/AuthHttp$Reply.ok:()Z
+        62: ifeq          87
+        65: aload_1
+        66: ifnull        87
+        69: aload_2
+        70: ifnull        87
+        73: aload_3
+        74: ifnull        87
+        77: aload         4
+        79: ifnull        87
+        82: aload         5
+        84: ifnonnull     104
+        87: new           #109                // class net/anubis/client/account/AccountException
+        90: dup
+        91: aload_0
+        92: invokestatic  #113                // Method liveError:(Lnet/anubis/client/account/AuthHttp$Reply;)Ljava/lang/String;
+        95: invokedynamic #124,  0            // InvokeDynamic #0:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+       100: invokespecial #127                // Method net/anubis/client/account/AccountException."<init>":(Ljava/lang/String;)V
+       103: athrow
+       104: new           #9                  // class net/anubis/client/account/MicrosoftLogin$DeviceCode
+       107: dup
+       108: aload_1
+       109: aload_2
+       110: aload_3
+       111: aload         4
+       113: invokestatic  #133                // Method java/lang/Long.parseLong:(Ljava/lang/String;)J
+       116: ldc2_w        #134                // long 1000l
+       119: lmul
+       120: invokestatic  #141                // Method java/lang/System.currentTimeMillis:()J
+       123: aload         5
+       125: invokestatic  #133                // Method java/lang/Long.parseLong:(Ljava/lang/String;)J
+       128: ldc2_w        #134                // long 1000l
+       131: lmul
+       132: ladd
+       133: invokespecial #144                // Method net/anubis/client/account/MicrosoftLogin$DeviceCode."<init>":(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;JJ)V
+       136: areturn
+      StackMapTable: number_of_entries = 2
+        frame_type = 255 /* full_frame */
+          offset_delta = 87
+          locals = [ class net/anubis/client/account/AuthHttp$Reply, class java/lang/String, class java/lang/String, class java/lang/String, class java/lang/String, class java/lang/String ]
+          stack = []
+        frame_type = 16 /* same */
+      LineNumberTable:
+        line 58: 0
+        line 62: 21
+        line 63: 28
+        line 64: 35
+        line 65: 42
+        line 66: 50
+        line 67: 58
+        line 68: 87
+        line 70: 104
+        line 71: 120
+        line 70: 136
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+           21     116     0 reply   Lnet/anubis/client/account/AuthHttp$Reply;
+           28     109     1 deviceCode   Ljava/lang/String;
+           35     102     2 userCode   Ljava/lang/String;
+           42      95     3   uri   Ljava/lang/String;
+           50      87     4 interval   Ljava/lang/String;
+           58      79     5 expiresIn   Ljava/lang/String;
+    Exceptions:
+      throws java.lang.InterruptedException
+
+  static net.anubis.client.account.MicrosoftLogin$MsaToken awaitApproval(net.anubis.client.account.MicrosoftLogin$DeviceCode) throws java.lang.InterruptedException;
+    descriptor: (Lnet/anubis/client/account/MicrosoftLogin$DeviceCode;)Lnet/anubis/client/account/MicrosoftLogin$MsaToken;
+    flags: (0x0008) ACC_STATIC
+    Code:
+      stack=7, locals=5, args_size=1
+         0: aload_0
+         1: invokevirtual #156                // Method net/anubis/client/account/MicrosoftLogin$DeviceCode.intervalMs:()J
+         4: lstore_1
+         5: invokestatic  #141                // Method java/lang/System.currentTimeMillis:()J
+         8: aload_0
+         9: invokevirtual #159                // Method net/anubis/client/account/MicrosoftLogin$DeviceCode.expiresAtMs:()J
+        12: lcmp
+        13: ifge          155
+        16: lload_1
+        17: invokestatic  #165                // Method java/lang/Thread.sleep:(J)V
+        20: ldc           #39                 // String https://login.live.com/oauth20_token.srf
+        22: ldc           #73                 // String client_id
+        24: ldc           #30                 // String 00000000402b5328
+        26: ldc           #167                // String grant_type
+        28: ldc           #79                 // String device_code
+        30: ldc           #79                 // String device_code
+        32: aload_0
+        33: invokevirtual #170                // Method net/anubis/client/account/MicrosoftLogin$DeviceCode.deviceCode:()Ljava/lang/String;
+        36: invokestatic  #85                 // InterfaceMethod java/util/Map.of:(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map;
+        39: invokestatic  #89                 // Method net/anubis/client/account/AuthHttp.postForm:(Ljava/lang/String;Ljava/util/Map;)Lnet/anubis/client/account/AuthHttp$Reply;
+        42: astore_3
+        43: aload_3
+        44: invokevirtual #105                // Method net/anubis/client/account/AuthHttp$Reply.ok:()Z
+        47: ifeq          55
+        50: aload_3
+        51: invokestatic  #174                // Method token:(Lnet/anubis/client/account/AuthHttp$Reply;)Lnet/anubis/client/account/MicrosoftLogin$MsaToken;
+        54: areturn
+        55: aload_3
+        56: ldc           #176                // String error
+        58: invokevirtual #93                 // Method net/anubis/client/account/AuthHttp$Reply.text:(Ljava/lang/String;)Ljava/lang/String;
+        61: astore        4
+        63: ldc           #178                // String authorization_pending
+        65: aload         4
+        67: invokevirtual #182                // Method java/lang/String.equals:(Ljava/lang/Object;)Z
+        70: ifeq          76
+        73: goto          5
+        76: ldc           #184                // String slow_down
+        78: aload         4
+        80: invokevirtual #182                // Method java/lang/String.equals:(Ljava/lang/Object;)Z
+        83: ifeq          95
+        86: lload_1
+        87: ldc2_w        #60                 // long 5000l
+        90: ladd
+        91: lstore_1
+        92: goto          5
+        95: ldc           #186                // String authorization_declined
+        97: aload         4
+        99: invokevirtual #182                // Method java/lang/String.equals:(Ljava/lang/Object;)Z
+       102: ifne          115
+       105: ldc           #188                // String access_denied
+       107: aload         4
+       109: invokevirtual #182                // Method java/lang/String.equals:(Ljava/lang/Object;)Z
+       112: ifeq          125
+       115: new           #109                // class net/anubis/client/account/AccountException
+       118: dup
+       119: ldc           #190                // String Microsoft sign-in was declined in the browser
+       121: invokespecial #127                // Method net/anubis/client/account/AccountException."<init>":(Ljava/lang/String;)V
+       124: athrow
+       125: ldc           #192                // String expired_token
+       127: aload         4
+       129: invokevirtual #182                // Method java/lang/String.equals:(Ljava/lang/Object;)Z
+       132: ifeq          138
+       135: goto          155
+       138: new           #109                // class net/anubis/client/account/AccountException
+       141: dup
+       142: aload_3
+       143: invokestatic  #113                // Method liveError:(Lnet/anubis/client/account/AuthHttp$Reply;)Ljava/lang/String;
+       146: invokedynamic #195,  0            // InvokeDynamic #1:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+       151: invokespecial #127                // Method net/anubis/client/account/AccountException."<init>":(Ljava/lang/String;)V
+       154: athrow
+       155: new           #109                // class net/anubis/client/account/AccountException
+       158: dup
+       159: ldc           #197                // String The Microsoft sign-in code expired - try again
+       161: invokespecial #127                // Method net/anubis/client/account/AccountException."<init>":(Ljava/lang/String;)V
+       164: athrow
+      StackMapTable: number_of_entries = 8
+        frame_type = 252 /* append */
+          offset_delta = 5
+          locals = [ long ]
+        frame_type = 252 /* append */
+          offset_delta = 49
+          locals = [ class net/anubis/client/account/AuthHttp$Reply ]
+        frame_type = 252 /* append */
+          offset_delta = 20
+          locals = [ class java/lang/String ]
+        frame_type = 18 /* same */
+        frame_type = 19 /* same */
+        frame_type = 9 /* same */
+        frame_type = 12 /* same */
+        frame_type = 249 /* chop */
+          offset_delta = 16
+      LineNumberTable:
+        line 75: 0
+        line 76: 5
+        line 77: 16
+        line 78: 20
+        line 81: 33
+        line 78: 36
+        line 82: 43
+        line 84: 55
+        line 85: 63
+        line 86: 76
+        line 87: 86
+        line 88: 92
+        line 90: 95
+        line 91: 115
+        line 93: 125
+        line 94: 138
+        line 96: 155
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+           43     112     3 reply   Lnet/anubis/client/account/AuthHttp$Reply;
+           63      92     4 error   Ljava/lang/String;
+            0     165     0  code   Lnet/anubis/client/account/MicrosoftLogin$DeviceCode;
+            5     160     1 interval   J
+    Exceptions:
+      throws java.lang.InterruptedException
+    MethodParameters:
+      Name                           Flags
+      code
+
+  static net.anubis.client.account.MicrosoftLogin$MsaToken refresh(java.lang.String) throws java.lang.InterruptedException;
+    descriptor: (Ljava/lang/String;)Lnet/anubis/client/account/MicrosoftLogin$MsaToken;
+    flags: (0x0008) ACC_STATIC
+    Code:
+      stack=9, locals=2, args_size=1
+         0: ldc           #39                 // String https://login.live.com/oauth20_token.srf
+         2: ldc           #73                 // String client_id
+         4: ldc           #30                 // String 00000000402b5328
+         6: ldc           #75                 // String scope
+         8: ldc           #33                 // String service::user.auth.xboxlive.com::MBI_SSL
+        10: ldc           #167                // String grant_type
+        12: ldc           #203                // String refresh_token
+        14: ldc           #203                // String refresh_token
+        16: aload_0
+        17: invokestatic  #206                // InterfaceMethod java/util/Map.of:(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map;
+        20: invokestatic  #89                 // Method net/anubis/client/account/AuthHttp.postForm:(Ljava/lang/String;Ljava/util/Map;)Lnet/anubis/client/account/AuthHttp$Reply;
+        23: astore_1
+        24: aload_1
+        25: invokevirtual #105                // Method net/anubis/client/account/AuthHttp$Reply.ok:()Z
+        28: ifeq          36
+        31: aload_1
+        32: invokestatic  #174                // Method token:(Lnet/anubis/client/account/AuthHttp$Reply;)Lnet/anubis/client/account/MicrosoftLogin$MsaToken;
+        35: areturn
+        36: ldc           #208                // String invalid_grant
+        38: aload_1
+        39: ldc           #176                // String error
+        41: invokevirtual #93                 // Method net/anubis/client/account/AuthHttp$Reply.text:(Ljava/lang/String;)Ljava/lang/String;
+        44: invokevirtual #182                // Method java/lang/String.equals:(Ljava/lang/Object;)Z
+        47: ifeq          60
+        50: new           #109                // class net/anubis/client/account/AccountException
+        53: dup
+        54: ldc           #210                // String This Microsoft login has expired - remove the account and add it again
+        56: invokespecial #127                // Method net/anubis/client/account/AccountException."<init>":(Ljava/lang/String;)V
+        59: athrow
+        60: new           #109                // class net/anubis/client/account/AccountException
+        63: dup
+        64: aload_1
+        65: invokestatic  #113                // Method liveError:(Lnet/anubis/client/account/AuthHttp$Reply;)Ljava/lang/String;
+        68: invokedynamic #213,  0            // InvokeDynamic #2:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+        73: invokespecial #127                // Method net/anubis/client/account/AccountException."<init>":(Ljava/lang/String;)V
+        76: athrow
+      StackMapTable: number_of_entries = 2
+        frame_type = 252 /* append */
+          offset_delta = 36
+          locals = [ class net/anubis/client/account/AuthHttp$Reply ]
+        frame_type = 23 /* same */
+      LineNumberTable:
+        line 100: 0
+        line 105: 24
+        line 106: 36
+        line 107: 50
+        line 109: 60
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      77     0 refreshToken   Ljava/lang/String;
+           24      53     1 reply   Lnet/anubis/client/account/AuthHttp$Reply;
+    Exceptions:
+      throws java.lang.InterruptedException
+    MethodParameters:
+      Name                           Flags
+      refreshToken
+
+  static net.anubis.client.account.Credentials minecraft(net.anubis.client.account.MicrosoftLogin$MsaToken) throws java.lang.InterruptedException;
+    descriptor: (Lnet/anubis/client/account/MicrosoftLogin$MsaToken;)Lnet/anubis/client/account/Credentials;
+    flags: (0x0008) ACC_STATIC
+    Code:
+      stack=6, locals=17, args_size=1
+         0: invokestatic  #220                // Method newProofKey:()Ljava/security/KeyPair;
+         3: astore_1
+         4: new           #222                // class com/google/gson/JsonObject
+         7: dup
+         8: invokespecial #223                // Method com/google/gson/JsonObject."<init>":()V
+        11: astore_2
+        12: aload_2
+        13: ldc           #225                // String DeviceType
+        15: ldc           #227                // String Win32
+        17: invokevirtual #231                // Method com/google/gson/JsonObject.addProperty:(Ljava/lang/String;Ljava/lang/String;)V
+        20: aload_2
+        21: ldc           #233                // String Id
+        23: invokestatic  #239                // Method java/util/UUID.randomUUID:()Ljava/util/UUID;
+        26: invokestatic  #243                // Method java/lang/String.valueOf:(Ljava/lang/Object;)Ljava/lang/String;
+        29: invokedynamic #246,  0            // InvokeDynamic #3:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+        34: invokevirtual #231                // Method com/google/gson/JsonObject.addProperty:(Ljava/lang/String;Ljava/lang/String;)V
+        37: aload_2
+        38: ldc           #248                // String AuthMethod
+        40: ldc           #250                // String ProofOfPossession
+        42: invokevirtual #231                // Method com/google/gson/JsonObject.addProperty:(Ljava/lang/String;Ljava/lang/String;)V
+        45: aload_2
+        46: ldc           #252                // String ProofKey
+        48: aload_1
+        49: invokevirtual #258                // Method java/security/KeyPair.getPublic:()Ljava/security/PublicKey;
+        52: checkcast     #260                // class java/security/interfaces/ECPublicKey
+        55: invokestatic  #264                // Method jwk:(Ljava/security/interfaces/ECPublicKey;)Lcom/google/gson/JsonObject;
+        58: invokevirtual #268                // Method com/google/gson/JsonObject.add:(Ljava/lang/String;Lcom/google/gson/JsonElement;)V
+        61: new           #222                // class com/google/gson/JsonObject
+        64: dup
+        65: invokespecial #223                // Method com/google/gson/JsonObject."<init>":()V
+        68: astore_3
+        69: aload_3
+        70: ldc_w         #270                // String Properties
+        73: aload_2
+        74: invokevirtual #268                // Method com/google/gson/JsonObject.add:(Ljava/lang/String;Lcom/google/gson/JsonElement;)V
+        77: aload_3
+        78: ldc_w         #272                // String RelyingParty
+        81: ldc_w         #274                // String http://auth.xboxlive.com
+        84: invokevirtual #231                // Method com/google/gson/JsonObject.addProperty:(Ljava/lang/String;Ljava/lang/String;)V
+        87: aload_3
+        88: ldc_w         #276                // String TokenType
+        91: ldc_w         #278                // String JWT
+        94: invokevirtual #231                // Method com/google/gson/JsonObject.addProperty:(Ljava/lang/String;Ljava/lang/String;)V
+        97: ldc           #42                 // String https://device.auth.xboxlive.com/device/authenticate
+        99: aload_3
+       100: aload_1
+       101: ldc_w         #280                // String x-xbl-contract-version
+       104: ldc_w         #282                // String 1
+       107: invokestatic  #285                // InterfaceMethod java/util/Map.of:(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map;
+       110: invokestatic  #289                // Method signedPost:(Ljava/lang/String;Lcom/google/gson/JsonObject;Ljava/security/KeyPair;Ljava/util/Map;)Lnet/anubis/client/account/AuthHttp$Reply;
+       113: astore        4
+       115: aload         4
+       117: ldc_w         #291                // String Token
+       120: invokevirtual #93                 // Method net/anubis/client/account/AuthHttp$Reply.text:(Ljava/lang/String;)Ljava/lang/String;
+       123: astore        5
+       125: aload         4
+       127: invokevirtual #105                // Method net/anubis/client/account/AuthHttp$Reply.ok:()Z
+       130: ifeq          138
+       133: aload         5
+       135: ifnonnull     144
+       138: aload         4
+       140: invokestatic  #295                // Method xboxError:(Lnet/anubis/client/account/AuthHttp$Reply;)Lnet/anubis/client/account/AccountException;
+       143: athrow
+       144: new           #222                // class com/google/gson/JsonObject
+       147: dup
+       148: invokespecial #223                // Method com/google/gson/JsonObject."<init>":()V
+       151: astore        6
+       153: aload         6
+       155: ldc_w         #297                // String Sandbox
+       158: ldc_w         #299                // String RETAIL
+       161: invokevirtual #231                // Method com/google/gson/JsonObject.addProperty:(Ljava/lang/String;Ljava/lang/String;)V
+       164: aload         6
+       166: ldc_w         #301                // String UseModernGamertag
+       169: iconst_1
+       170: invokestatic  #306                // Method java/lang/Boolean.valueOf:(Z)Ljava/lang/Boolean;
+       173: invokevirtual #309                // Method com/google/gson/JsonObject.addProperty:(Ljava/lang/String;Ljava/lang/Boolean;)V
+       176: aload         6
+       178: ldc_w         #311                // String AppId
+       181: ldc           #30                 // String 00000000402b5328
+       183: invokevirtual #231                // Method com/google/gson/JsonObject.addProperty:(Ljava/lang/String;Ljava/lang/String;)V
+       186: aload         6
+       188: ldc_w         #313                // String AccessToken
+       191: aload_0
+       192: invokevirtual #316                // Method net/anubis/client/account/MicrosoftLogin$MsaToken.accessToken:()Ljava/lang/String;
+       195: invokedynamic #319,  0            // InvokeDynamic #4:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+       200: invokevirtual #231                // Method com/google/gson/JsonObject.addProperty:(Ljava/lang/String;Ljava/lang/String;)V
+       203: aload         6
+       205: ldc_w         #321                // String DeviceToken
+       208: aload         5
+       210: invokevirtual #231                // Method com/google/gson/JsonObject.addProperty:(Ljava/lang/String;Ljava/lang/String;)V
+       213: aload         6
+       215: ldc           #252                // String ProofKey
+       217: aload_1
+       218: invokevirtual #258                // Method java/security/KeyPair.getPublic:()Ljava/security/PublicKey;
+       221: checkcast     #260                // class java/security/interfaces/ECPublicKey
+       224: invokestatic  #264                // Method jwk:(Ljava/security/interfaces/ECPublicKey;)Lcom/google/gson/JsonObject;
+       227: invokevirtual #268                // Method com/google/gson/JsonObject.add:(Ljava/lang/String;Lcom/google/gson/JsonElement;)V
+       230: aload         6
+       232: ldc_w         #272                // String RelyingParty
+       235: ldc           #54                 // String rp://api.minecraftservices.com/
+       237: invokevirtual #231                // Method com/google/gson/JsonObject.addProperty:(Ljava/lang/String;Ljava/lang/String;)V
+       240: ldc           #45                 // String https://sisu.xboxlive.com/authorize
+       242: aload         6
+       244: aload_1
+       245: invokestatic  #324                // InterfaceMethod java/util/Map.of:()Ljava/util/Map;
+       248: invokestatic  #289                // Method signedPost:(Ljava/lang/String;Lcom/google/gson/JsonObject;Ljava/security/KeyPair;Ljava/util/Map;)Lnet/anubis/client/account/AuthHttp$Reply;
+       251: astore        7
+       253: aload         7
+       255: invokevirtual #328                // Method net/anubis/client/account/AuthHttp$Reply.json:()Lcom/google/gson/JsonObject;
+       258: ldc_w         #330                // String AuthorizationToken
+       261: invokestatic  #334                // Method net/anubis/client/account/AuthHttp.object:(Lcom/google/gson/JsonObject;Ljava/lang/String;)Lcom/google/gson/JsonObject;
+       264: astore        8
+       266: aload         8
+       268: ldc_w         #291                // String Token
+       271: invokestatic  #337                // Method net/anubis/client/account/AuthHttp.text:(Lcom/google/gson/JsonObject;Ljava/lang/String;)Ljava/lang/String;
+       274: astore        9
+       276: aload         8
+       278: invokestatic  #341                // Method userHash:(Lcom/google/gson/JsonObject;)Ljava/lang/String;
+       281: astore        10
+       283: aload         7
+       285: invokevirtual #105                // Method net/anubis/client/account/AuthHttp$Reply.ok:()Z
+       288: ifeq          301
+       291: aload         9
+       293: ifnull        301
+       296: aload         10
+       298: ifnonnull     307
+       301: aload         7
+       303: invokestatic  #295                // Method xboxError:(Lnet/anubis/client/account/AuthHttp$Reply;)Lnet/anubis/client/account/AccountException;
+       306: athrow
+       307: new           #222                // class com/google/gson/JsonObject
+       310: dup
+       311: invokespecial #223                // Method com/google/gson/JsonObject."<init>":()V
+       314: astore        11
+       316: aload         11
+       318: ldc_w         #343                // String platform
+       321: ldc_w         #345                // String PC_LAUNCHER
+       324: invokevirtual #231                // Method com/google/gson/JsonObject.addProperty:(Ljava/lang/String;Ljava/lang/String;)V
+       327: aload         11
+       329: ldc_w         #347                // String xtoken
+       332: aload         10
+       334: aload         9
+       336: invokedynamic #352,  0            // InvokeDynamic #5:makeConcatWithConstants:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+       341: invokevirtual #231                // Method com/google/gson/JsonObject.addProperty:(Ljava/lang/String;Ljava/lang/String;)V
+       344: ldc           #48                 // String https://api.minecraftservices.com/launcher/login
+       346: aload         11
+       348: invokevirtual #355                // Method com/google/gson/JsonObject.toString:()Ljava/lang/String;
+       351: invokestatic  #324                // InterfaceMethod java/util/Map.of:()Ljava/util/Map;
+       354: invokestatic  #359                // Method net/anubis/client/account/AuthHttp.postJson:(Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;)Lnet/anubis/client/account/AuthHttp$Reply;
+       357: astore        12
+       359: aload         12
+       361: ldc_w         #361                // String access_token
+       364: invokevirtual #93                 // Method net/anubis/client/account/AuthHttp$Reply.text:(Ljava/lang/String;)Ljava/lang/String;
+       367: astore        13
+       369: aload         12
+       371: invokevirtual #105                // Method net/anubis/client/account/AuthHttp$Reply.ok:()Z
+       374: ifeq          382
+       377: aload         13
+       379: ifnonnull     400
+       382: new           #109                // class net/anubis/client/account/AccountException
+       385: dup
+       386: aload         12
+       388: invokestatic  #364                // Method servicesError:(Lnet/anubis/client/account/AuthHttp$Reply;)Ljava/lang/String;
+       391: invokedynamic #367,  0            // InvokeDynamic #6:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+       396: invokespecial #127                // Method net/anubis/client/account/AccountException."<init>":(Ljava/lang/String;)V
+       399: athrow
+       400: ldc           #51                 // String https://api.minecraftservices.com/minecraft/profile
+       402: aload         13
+       404: invokestatic  #371                // Method net/anubis/client/account/AuthHttp.get:(Ljava/lang/String;Ljava/lang/String;)Lnet/anubis/client/account/AuthHttp$Reply;
+       407: astore        14
+       409: aload         14
+       411: invokevirtual #375                // Method net/anubis/client/account/AuthHttp$Reply.status:()I
+       414: sipush        404
+       417: if_icmpne     431
+       420: new           #109                // class net/anubis/client/account/AccountException
+       423: dup
+       424: ldc_w         #377                // String This Microsoft account doesn\'t own Minecraft: Java Edition
+       427: invokespecial #127                // Method net/anubis/client/account/AccountException."<init>":(Ljava/lang/String;)V
+       430: athrow
+       431: aload         14
+       433: ldc_w         #379                // String name
+       436: invokevirtual #93                 // Method net/anubis/client/account/AuthHttp$Reply.text:(Ljava/lang/String;)Ljava/lang/String;
+       439: astore        15
+       441: aload         14
+       443: ldc_w         #381                // String id
+       446: invokevirtual #93                 // Method net/anubis/client/account/AuthHttp$Reply.text:(Ljava/lang/String;)Ljava/lang/String;
+       449: astore        16
+       451: aload         14
+       453: invokevirtual #105                // Method net/anubis/client/account/AuthHttp$Reply.ok:()Z
+       456: ifeq          469
+       459: aload         15
+       461: ifnull        469
+       464: aload         16
+       466: ifnonnull     487
+       469: new           #109                // class net/anubis/client/account/AccountException
+       472: dup
+       473: aload         14
+       475: invokestatic  #364                // Method servicesError:(Lnet/anubis/client/account/AuthHttp$Reply;)Ljava/lang/String;
+       478: invokedynamic #384,  0            // InvokeDynamic #7:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+       483: invokespecial #127                // Method net/anubis/client/account/AccountException."<init>":(Ljava/lang/String;)V
+       486: athrow
+       487: new           #386                // class net/anubis/client/account/Credentials
+       490: dup
+       491: aload         15
+       493: aload         16
+       495: invokestatic  #392                // Method com/mojang/util/UndashedUuid.fromStringLenient:(Ljava/lang/String;)Ljava/util/UUID;
+       498: aload         13
+       500: aload_0
+       501: invokevirtual #394                // Method net/anubis/client/account/MicrosoftLogin$MsaToken.refreshToken:()Ljava/lang/String;
+       504: invokespecial #397                // Method net/anubis/client/account/Credentials."<init>":(Ljava/lang/String;Ljava/util/UUID;Ljava/lang/String;Ljava/lang/String;)V
+       507: areturn
+      StackMapTable: number_of_entries = 9
+        frame_type = 255 /* full_frame */
+          offset_delta = 138
+          locals = [ class net/anubis/client/account/MicrosoftLogin$MsaToken, class java/security/KeyPair, class com/google/gson/JsonObject, class com/google/gson/JsonObject, class net/anubis/client/account/AuthHttp$Reply, class java/lang/String ]
+          stack = []
+        frame_type = 5 /* same */
+        frame_type = 255 /* full_frame */
+          offset_delta = 156
+          locals = [ class net/anubis/client/account/MicrosoftLogin$MsaToken, class java/security/KeyPair, class com/google/gson/JsonObject, class com/google/gson/JsonObject, class net/anubis/client/account/AuthHttp$Reply, class java/lang/String, class com/google/gson/JsonObject, class net/anubis/client/account/AuthHttp$Reply, class com/google/gson/JsonObject, class java/lang/String, class java/lang/String ]
+          stack = []
+        frame_type = 5 /* same */
+        frame_type = 254 /* append */
+          offset_delta = 74
+          locals = [ class com/google/gson/JsonObject, class net/anubis/client/account/AuthHttp$Reply, class java/lang/String ]
+        frame_type = 17 /* same */
+        frame_type = 252 /* append */
+          offset_delta = 30
+          locals = [ class net/anubis/client/account/AuthHttp$Reply ]
+        frame_type = 253 /* append */
+          offset_delta = 37
+          locals = [ class java/lang/String, class java/lang/String ]
+        frame_type = 17 /* same */
+      LineNumberTable:
+        line 113: 0
+        line 115: 4
+        line 116: 12
+        line 117: 20
+        line 118: 37
+        line 119: 45
+        line 120: 61
+        line 121: 69
+        line 122: 77
+        line 123: 87
+        line 124: 97
+        line 125: 115
+        line 126: 125
+        line 128: 144
+        line 129: 153
+        line 130: 164
+        line 131: 176
+        line 132: 186
+        line 133: 203
+        line 134: 213
+        line 135: 230
+        line 136: 240
+        line 137: 253
+        line 138: 266
+        line 139: 276
+        line 140: 283
+        line 142: 307
+        line 143: 316
+        line 144: 327
+        line 145: 344
+        line 146: 359
+        line 147: 369
+        line 148: 382
+        line 151: 400
+        line 152: 409
+        line 153: 420
+        line 155: 431
+        line 156: 441
+        line 157: 451
+        line 158: 469
+        line 160: 487
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0     508     0   msa   Lnet/anubis/client/account/MicrosoftLogin$MsaToken;
+            4     504     1 proofKey   Ljava/security/KeyPair;
+           12     496     2 deviceProperties   Lcom/google/gson/JsonObject;
+           69     439     3 deviceRequest   Lcom/google/gson/JsonObject;
+          115     393     4 device   Lnet/anubis/client/account/AuthHttp$Reply;
+          125     383     5 deviceToken   Ljava/lang/String;
+          153     355     6 sisuRequest   Lcom/google/gson/JsonObject;
+          253     255     7  sisu   Lnet/anubis/client/account/AuthHttp$Reply;
+          266     242     8  xsts   Lcom/google/gson/JsonObject;
+          276     232     9 xstsToken   Ljava/lang/String;
+          283     225    10 userHash   Ljava/lang/String;
+          316     192    11 loginRequest   Lcom/google/gson/JsonObject;
+          359     149    12 login   Lnet/anubis/client/account/AuthHttp$Reply;
+          369     139    13 gameToken   Ljava/lang/String;
+          409      99    14 profile   Lnet/anubis/client/account/AuthHttp$Reply;
+          441      67    15  name   Ljava/lang/String;
+          451      57    16    id   Ljava/lang/String;
+    Exceptions:
+      throws java.lang.InterruptedException
+    MethodParameters:
+      Name                           Flags
+      msa
+
+  private static net.anubis.client.account.MicrosoftLogin$MsaToken token(net.anubis.client.account.AuthHttp$Reply);
+    descriptor: (Lnet/anubis/client/account/AuthHttp$Reply;)Lnet/anubis/client/account/MicrosoftLogin$MsaToken;
+    flags: (0x000a) ACC_PRIVATE, ACC_STATIC
+    Code:
+      stack=4, locals=3, args_size=1
+         0: aload_0
+         1: ldc_w         #361                // String access_token
+         4: invokevirtual #93                 // Method net/anubis/client/account/AuthHttp$Reply.text:(Ljava/lang/String;)Ljava/lang/String;
+         7: astore_1
+         8: aload_0
+         9: ldc           #203                // String refresh_token
+        11: invokevirtual #93                 // Method net/anubis/client/account/AuthHttp$Reply.text:(Ljava/lang/String;)Ljava/lang/String;
+        14: astore_2
+        15: aload_1
+        16: ifnull        23
+        19: aload_2
+        20: ifnonnull     34
+        23: new           #109                // class net/anubis/client/account/AccountException
+        26: dup
+        27: ldc_w         #415                // String Microsoft returned no refresh token, so the account couldn\'t be saved
+        30: invokespecial #127                // Method net/anubis/client/account/AccountException."<init>":(Ljava/lang/String;)V
+        33: athrow
+        34: new           #7                  // class net/anubis/client/account/MicrosoftLogin$MsaToken
+        37: dup
+        38: aload_1
+        39: aload_2
+        40: invokespecial #417                // Method net/anubis/client/account/MicrosoftLogin$MsaToken."<init>":(Ljava/lang/String;Ljava/lang/String;)V
+        43: areturn
+      StackMapTable: number_of_entries = 2
+        frame_type = 253 /* append */
+          offset_delta = 23
+          locals = [ class java/lang/String, class java/lang/String ]
+        frame_type = 10 /* same */
+      LineNumberTable:
+        line 164: 0
+        line 165: 8
+        line 166: 15
+        line 167: 23
+        line 169: 34
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      44     0 reply   Lnet/anubis/client/account/AuthHttp$Reply;
+            8      36     1 access   Ljava/lang/String;
+           15      29     2 refresh   Ljava/lang/String;
+    MethodParameters:
+      Name                           Flags
+      reply
+
+  private static java.lang.String userHash(com.google.gson.JsonObject);
+    descriptor: (Lcom/google/gson/JsonObject;)Ljava/lang/String;
+    flags: (0x000a) ACC_PRIVATE, ACC_STATIC
+    Code:
+      stack=2, locals=4, args_size=1
+         0: aload_0
+         1: ldc_w         #420                // String DisplayClaims
+         4: invokestatic  #334                // Method net/anubis/client/account/AuthHttp.object:(Lcom/google/gson/JsonObject;Ljava/lang/String;)Lcom/google/gson/JsonObject;
+         7: astore_1
+         8: aload_1
+         9: ifnonnull     16
+        12: aconst_null
+        13: goto          23
+        16: aload_1
+        17: ldc_w         #422                // String xui
+        20: invokevirtual #425                // Method com/google/gson/JsonObject.get:(Ljava/lang/String;)Lcom/google/gson/JsonElement;
+        23: astore_2
+        24: aload_2
+        25: instanceof    #429                // class com/google/gson/JsonArray
+        28: ifeq          54
+        31: aload_2
+        32: checkcast     #429                // class com/google/gson/JsonArray
+        35: astore_3
+        36: aload_3
+        37: invokevirtual #432                // Method com/google/gson/JsonArray.isEmpty:()Z
+        40: ifne          54
+        43: aload_3
+        44: iconst_0
+        45: invokevirtual #435                // Method com/google/gson/JsonArray.get:(I)Lcom/google/gson/JsonElement;
+        48: invokevirtual #438                // Method com/google/gson/JsonElement.isJsonObject:()Z
+        51: ifne          56
+        54: aconst_null
+        55: areturn
+        56: aload_3
+        57: iconst_0
+        58: invokevirtual #435                // Method com/google/gson/JsonArray.get:(I)Lcom/google/gson/JsonElement;
+        61: invokevirtual #441                // Method com/google/gson/JsonElement.getAsJsonObject:()Lcom/google/gson/JsonObject;
+        64: ldc_w         #443                // String uhs
+        67: invokestatic  #337                // Method net/anubis/client/account/AuthHttp.text:(Lcom/google/gson/JsonObject;Ljava/lang/String;)Ljava/lang/String;
+        70: areturn
+      StackMapTable: number_of_entries = 4
+        frame_type = 252 /* append */
+          offset_delta = 16
+          locals = [ class com/google/gson/JsonObject ]
+        frame_type = 70 /* same_locals_1_stack_item */
+          stack = [ class com/google/gson/JsonElement ]
+        frame_type = 252 /* append */
+          offset_delta = 30
+          locals = [ class com/google/gson/JsonElement ]
+        frame_type = 252 /* append */
+          offset_delta = 1
+          locals = [ class com/google/gson/JsonArray ]
+      LineNumberTable:
+        line 173: 0
+        line 174: 8
+        line 175: 24
+        line 176: 56
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+           36      18     3  list   Lcom/google/gson/JsonArray;
+            0      71     0  xsts   Lcom/google/gson/JsonObject;
+            8      63     1 claims   Lcom/google/gson/JsonObject;
+           24      47     2 users   Lcom/google/gson/JsonElement;
+           56      15     3  list   Lcom/google/gson/JsonArray;
+    MethodParameters:
+      Name                           Flags
+      xsts
+
+  private static java.security.KeyPair newProofKey();
+    descriptor: ()Ljava/security/KeyPair;
+    flags: (0x000a) ACC_PRIVATE, ACC_STATIC
+    Code:
+      stack=4, locals=1, args_size=0
+         0: ldc_w         #452                // String EC
+         3: invokestatic  #458                // Method java/security/KeyPairGenerator.getInstance:(Ljava/lang/String;)Ljava/security/KeyPairGenerator;
+         6: astore_0
+         7: aload_0
+         8: new           #460                // class java/security/spec/ECGenParameterSpec
+        11: dup
+        12: ldc_w         #462                // String secp256r1
+        15: invokespecial #463                // Method java/security/spec/ECGenParameterSpec."<init>":(Ljava/lang/String;)V
+        18: invokevirtual #467                // Method java/security/KeyPairGenerator.initialize:(Ljava/security/spec/AlgorithmParameterSpec;)V
+        21: aload_0
+        22: invokevirtual #470                // Method java/security/KeyPairGenerator.generateKeyPair:()Ljava/security/KeyPair;
+        25: areturn
+        26: astore_0
+        27: new           #109                // class net/anubis/client/account/AccountException
+        30: dup
+        31: ldc_w         #472                // String This Java runtime can\'t create the key Xbox Live requires
+        34: aload_0
+        35: invokespecial #475                // Method net/anubis/client/account/AccountException."<init>":(Ljava/lang/String;Ljava/lang/Throwable;)V
+        38: athrow
+      Exception table:
+         from    to  target type
+             0    25    26   Class java/security/GeneralSecurityException
+      StackMapTable: number_of_entries = 1
+        frame_type = 90 /* same_locals_1_stack_item */
+          stack = [ class java/security/GeneralSecurityException ]
+      LineNumberTable:
+        line 181: 0
+        line 182: 7
+        line 183: 21
+        line 184: 26
+        line 185: 27
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            7      19     0 generator   Ljava/security/KeyPairGenerator;
+           27      12     0     e   Ljava/security/GeneralSecurityException;
+
+  private static net.anubis.client.account.AuthHttp$Reply signedPost(java.lang.String, com.google.gson.JsonObject, java.security.KeyPair, java.util.Map<java.lang.String, java.lang.String>) throws java.lang.InterruptedException;
+    descriptor: (Ljava/lang/String;Lcom/google/gson/JsonObject;Ljava/security/KeyPair;Ljava/util/Map;)Lnet/anubis/client/account/AuthHttp$Reply;
+    flags: (0x000a) ACC_PRIVATE, ACC_STATIC
+    Code:
+      stack=5, locals=6, args_size=4
+         0: aload_1
+         1: invokevirtual #355                // Method com/google/gson/JsonObject.toString:()Ljava/lang/String;
+         4: astore        4
+         6: new           #486                // class java/util/HashMap
+         9: dup
+        10: aload_3
+        11: invokespecial #489                // Method java/util/HashMap."<init>":(Ljava/util/Map;)V
+        14: astore        5
+        16: aload         5
+        18: ldc_w         #491                // String Signature
+        21: aload_0
+        22: invokestatic  #497                // Method java/net/URI.create:(Ljava/lang/String;)Ljava/net/URI;
+        25: invokevirtual #500                // Method java/net/URI.getPath:()Ljava/lang/String;
+        28: aload         4
+        30: aload_2
+        31: invokevirtual #504                // Method java/security/KeyPair.getPrivate:()Ljava/security/PrivateKey;
+        34: invokestatic  #508                // Method signature:(Ljava/lang/String;Ljava/lang/String;Ljava/security/PrivateKey;)Ljava/lang/String;
+        37: invokeinterface #512,  3          // InterfaceMethod java/util/Map.put:(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+        42: pop
+        43: aload_0
+        44: aload         4
+        46: aload         5
+        48: invokestatic  #359                // Method net/anubis/client/account/AuthHttp.postJson:(Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;)Lnet/anubis/client/account/AuthHttp$Reply;
+        51: areturn
+      LineNumberTable:
+        line 190: 0
+        line 191: 6
+        line 192: 16
+        line 193: 43
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      52     0   url   Ljava/lang/String;
+            0      52     1  body   Lcom/google/gson/JsonObject;
+            0      52     2   key   Ljava/security/KeyPair;
+            0      52     3 headers   Ljava/util/Map;
+            6      46     4  json   Ljava/lang/String;
+           16      36     5 signed   Ljava/util/Map;
+      LocalVariableTypeTable:
+        Start  Length  Slot  Name   Signature
+            0      52     3 headers   Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;
+           16      36     5 signed   Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;
+    Exceptions:
+      throws java.lang.InterruptedException
+    Signature: #480                         // (Ljava/lang/String;Lcom/google/gson/JsonObject;Ljava/security/KeyPair;Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;)Lnet/anubis/client/account/AuthHttp$Reply;
+    MethodParameters:
+      Name                           Flags
+      url
+      body
+      key
+      headers
+
+  private static java.lang.String signature(java.lang.String, java.lang.String, java.security.PrivateKey);
+    descriptor: (Ljava/lang/String;Ljava/lang/String;Ljava/security/PrivateKey;)Ljava/lang/String;
+    flags: (0x000a) ACC_PRIVATE, ACC_STATIC
+    Code:
+      stack=4, locals=10, args_size=3
+         0: invokestatic  #524                // Method java/time/Instant.now:()Ljava/time/Instant;
+         3: invokevirtual #527                // Method java/time/Instant.getEpochSecond:()J
+         6: ldc2_w        #57                 // long 11644473600l
+         9: ladd
+        10: ldc2_w        #528                // long 10000000l
+        13: lmul
+        14: lstore_3
+        15: new           #531                // class java/io/ByteArrayOutputStream
+        18: dup
+        19: invokespecial #532                // Method java/io/ByteArrayOutputStream."<init>":()V
+        22: astore        5
+        24: new           #534                // class java/io/DataOutputStream
+        27: dup
+        28: aload         5
+        30: invokespecial #537                // Method java/io/DataOutputStream."<init>":(Ljava/io/OutputStream;)V
+        33: astore        6
+        35: aload         6
+        37: iconst_1
+        38: invokevirtual #541                // Method java/io/DataOutputStream.writeInt:(I)V
+        41: aload         6
+        43: iconst_0
+        44: invokevirtual #544                // Method java/io/DataOutputStream.writeByte:(I)V
+        47: aload         6
+        49: lload_3
+        50: invokevirtual #547                // Method java/io/DataOutputStream.writeLong:(J)V
+        53: aload         6
+        55: iconst_0
+        56: invokevirtual #544                // Method java/io/DataOutputStream.writeByte:(I)V
+        59: aload         6
+        61: ldc_w         #549                // String POST
+        64: getstatic     #555                // Field java/nio/charset/StandardCharsets.UTF_8:Ljava/nio/charset/Charset;
+        67: invokevirtual #559                // Method java/lang/String.getBytes:(Ljava/nio/charset/Charset;)[B
+        70: invokevirtual #563                // Method java/io/DataOutputStream.write:([B)V
+        73: aload         6
+        75: iconst_0
+        76: invokevirtual #544                // Method java/io/DataOutputStream.writeByte:(I)V
+        79: aload         6
+        81: aload_0
+        82: getstatic     #555                // Field java/nio/charset/StandardCharsets.UTF_8:Ljava/nio/charset/Charset;
+        85: invokevirtual #559                // Method java/lang/String.getBytes:(Ljava/nio/charset/Charset;)[B
+        88: invokevirtual #563                // Method java/io/DataOutputStream.write:([B)V
+        91: aload         6
+        93: iconst_0
+        94: invokevirtual #544                // Method java/io/DataOutputStream.writeByte:(I)V
+        97: aload         6
+        99: iconst_0
+       100: invokevirtual #544                // Method java/io/DataOutputStream.writeByte:(I)V
+       103: aload         6
+       105: aload_1
+       106: getstatic     #555                // Field java/nio/charset/StandardCharsets.UTF_8:Ljava/nio/charset/Charset;
+       109: invokevirtual #559                // Method java/lang/String.getBytes:(Ljava/nio/charset/Charset;)[B
+       112: invokevirtual #563                // Method java/io/DataOutputStream.write:([B)V
+       115: aload         6
+       117: iconst_0
+       118: invokevirtual #544                // Method java/io/DataOutputStream.writeByte:(I)V
+       121: ldc_w         #565                // String SHA256withECDSAinP1363Format
+       124: invokestatic  #570                // Method java/security/Signature.getInstance:(Ljava/lang/String;)Ljava/security/Signature;
+       127: astore        7
+       129: aload         7
+       131: aload_2
+       132: invokevirtual #574                // Method java/security/Signature.initSign:(Ljava/security/PrivateKey;)V
+       135: aload         7
+       137: aload         5
+       139: invokevirtual #578                // Method java/io/ByteArrayOutputStream.toByteArray:()[B
+       142: invokevirtual #581                // Method java/security/Signature.update:([B)V
+       145: new           #531                // class java/io/ByteArrayOutputStream
+       148: dup
+       149: invokespecial #532                // Method java/io/ByteArrayOutputStream."<init>":()V
+       152: astore        8
+       154: new           #534                // class java/io/DataOutputStream
+       157: dup
+       158: aload         8
+       160: invokespecial #537                // Method java/io/DataOutputStream."<init>":(Ljava/io/OutputStream;)V
+       163: astore        9
+       165: aload         9
+       167: iconst_1
+       168: invokevirtual #541                // Method java/io/DataOutputStream.writeInt:(I)V
+       171: aload         9
+       173: lload_3
+       174: invokevirtual #547                // Method java/io/DataOutputStream.writeLong:(J)V
+       177: aload         9
+       179: aload         7
+       181: invokevirtual #584                // Method java/security/Signature.sign:()[B
+       184: invokevirtual #563                // Method java/io/DataOutputStream.write:([B)V
+       187: invokestatic  #588                // Method java/util/Base64.getEncoder:()Ljava/util/Base64$Encoder;
+       190: aload         8
+       192: invokevirtual #578                // Method java/io/ByteArrayOutputStream.toByteArray:()[B
+       195: invokevirtual #592                // Method java/util/Base64$Encoder.encodeToString:([B)Ljava/lang/String;
+       198: areturn
+       199: astore        5
+       201: new           #109                // class net/anubis/client/account/AccountException
+       204: dup
+       205: ldc_w         #598                // String Couldn\'t sign the Xbox Live request
+       208: aload         5
+       210: invokespecial #475                // Method net/anubis/client/account/AccountException."<init>":(Ljava/lang/String;Ljava/lang/Throwable;)V
+       213: athrow
+      Exception table:
+         from    to  target type
+            15   198   199   Class java/io/IOException
+            15   198   199   Class java/security/GeneralSecurityException
+      StackMapTable: number_of_entries = 1
+        frame_type = 255 /* full_frame */
+          offset_delta = 199
+          locals = [ class java/lang/String, class java/lang/String, class java/security/PrivateKey, long ]
+          stack = [ class java/lang/Exception ]
+      LineNumberTable:
+        line 197: 0
+        line 199: 15
+        line 200: 24
+        line 201: 35
+        line 202: 41
+        line 203: 47
+        line 204: 53
+        line 205: 59
+        line 206: 73
+        line 207: 79
+        line 208: 91
+        line 209: 97
+        line 210: 103
+        line 211: 115
+        line 213: 121
+        line 214: 129
+        line 215: 135
+        line 217: 145
+        line 218: 154
+        line 219: 165
+        line 220: 171
+        line 221: 177
+        line 222: 187
+        line 223: 199
+        line 224: 201
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+           24     175     5 content   Ljava/io/ByteArrayOutputStream;
+           35     164     6   out   Ljava/io/DataOutputStream;
+          129      70     7 ecdsa   Ljava/security/Signature;
+          154      45     8 header   Ljava/io/ByteArrayOutputStream;
+          165      34     9 headerOut   Ljava/io/DataOutputStream;
+          201      13     5     e   Ljava/lang/Exception;
+            0     214     0  path   Ljava/lang/String;
+            0     214     1  body   Ljava/lang/String;
+            0     214     2   key   Ljava/security/PrivateKey;
+           15     199     3 stamp   J
+    MethodParameters:
+      Name                           Flags
+      path
+      body
+      key
+
+  private static com.google.gson.JsonObject jwk(java.security.interfaces.ECPublicKey);
+    descriptor: (Ljava/security/interfaces/ECPublicKey;)Lcom/google/gson/JsonObject;
+    flags: (0x000a) ACC_PRIVATE, ACC_STATIC
+    Code:
+      stack=3, locals=2, args_size=1
+         0: new           #222                // class com/google/gson/JsonObject
+         3: dup
+         4: invokespecial #223                // Method com/google/gson/JsonObject."<init>":()V
+         7: astore_1
+         8: aload_1
+         9: ldc_w         #611                // String kty
+        12: ldc_w         #452                // String EC
+        15: invokevirtual #231                // Method com/google/gson/JsonObject.addProperty:(Ljava/lang/String;Ljava/lang/String;)V
+        18: aload_1
+        19: ldc_w         #613                // String alg
+        22: ldc_w         #615                // String ES256
+        25: invokevirtual #231                // Method com/google/gson/JsonObject.addProperty:(Ljava/lang/String;Ljava/lang/String;)V
+        28: aload_1
+        29: ldc_w         #617                // String crv
+        32: ldc_w         #619                // String P-256
+        35: invokevirtual #231                // Method com/google/gson/JsonObject.addProperty:(Ljava/lang/String;Ljava/lang/String;)V
+        38: aload_1
+        39: ldc_w         #621                // String use
+        42: ldc_w         #623                // String sig
+        45: invokevirtual #231                // Method com/google/gson/JsonObject.addProperty:(Ljava/lang/String;Ljava/lang/String;)V
+        48: aload_1
+        49: ldc_w         #625                // String x
+        52: aload_0
+        53: invokeinterface #629,  1          // InterfaceMethod java/security/interfaces/ECPublicKey.getW:()Ljava/security/spec/ECPoint;
+        58: invokevirtual #635                // Method java/security/spec/ECPoint.getAffineX:()Ljava/math/BigInteger;
+        61: invokestatic  #639                // Method coordinate:(Ljava/math/BigInteger;)Ljava/lang/String;
+        64: invokevirtual #231                // Method com/google/gson/JsonObject.addProperty:(Ljava/lang/String;Ljava/lang/String;)V
+        67: aload_1
+        68: ldc_w         #641                // String y
+        71: aload_0
+        72: invokeinterface #629,  1          // InterfaceMethod java/security/interfaces/ECPublicKey.getW:()Ljava/security/spec/ECPoint;
+        77: invokevirtual #644                // Method java/security/spec/ECPoint.getAffineY:()Ljava/math/BigInteger;
+        80: invokestatic  #639                // Method coordinate:(Ljava/math/BigInteger;)Ljava/lang/String;
+        83: invokevirtual #231                // Method com/google/gson/JsonObject.addProperty:(Ljava/lang/String;Ljava/lang/String;)V
+        86: aload_1
+        87: areturn
+      LineNumberTable:
+        line 229: 0
+        line 230: 8
+        line 231: 18
+        line 232: 28
+        line 233: 38
+        line 234: 48
+        line 235: 67
+        line 236: 86
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      88     0   key   Ljava/security/interfaces/ECPublicKey;
+            8      80     1   jwk   Lcom/google/gson/JsonObject;
+    MethodParameters:
+      Name                           Flags
+      key
+
+  private static java.lang.String coordinate(java.math.BigInteger);
+    descriptor: (Ljava/math/BigInteger;)Ljava/lang/String;
+    flags: (0x000a) ACC_PRIVATE, ACC_STATIC
+    Code:
+      stack=5, locals=4, args_size=1
+         0: aload_0
+         1: invokevirtual #649                // Method java/math/BigInteger.toByteArray:()[B
+         4: astore_1
+         5: bipush        32
+         7: newarray       byte
+         9: astore_2
+        10: aload_1
+        11: arraylength
+        12: aload_2
+        13: arraylength
+        14: invokestatic  #655                // Method java/lang/Math.min:(II)I
+        17: istore_3
+        18: aload_1
+        19: aload_1
+        20: arraylength
+        21: iload_3
+        22: isub
+        23: aload_2
+        24: aload_2
+        25: arraylength
+        26: iload_3
+        27: isub
+        28: iload_3
+        29: invokestatic  #659                // Method java/lang/System.arraycopy:(Ljava/lang/Object;ILjava/lang/Object;II)V
+        32: invokestatic  #662                // Method java/util/Base64.getUrlEncoder:()Ljava/util/Base64$Encoder;
+        35: invokevirtual #665                // Method java/util/Base64$Encoder.withoutPadding:()Ljava/util/Base64$Encoder;
+        38: aload_2
+        39: invokevirtual #592                // Method java/util/Base64$Encoder.encodeToString:([B)Ljava/lang/String;
+        42: areturn
+      LineNumberTable:
+        line 240: 0
+        line 241: 5
+        line 242: 10
+        line 243: 18
+        line 244: 32
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      43     0 value   Ljava/math/BigInteger;
+            5      38     1   raw   [B
+           10      33     2 fixed   [B
+           18      25     3 length   I
+    MethodParameters:
+      Name                           Flags
+      value
+
+  private static java.lang.String liveError(net.anubis.client.account.AuthHttp$Reply);
+    descriptor: (Lnet/anubis/client/account/AuthHttp$Reply;)Ljava/lang/String;
+    flags: (0x000a) ACC_PRIVATE, ACC_STATIC
+    Code:
+      stack=2, locals=3, args_size=1
+         0: aload_0
+         1: ldc_w         #673                // String error_description
+         4: invokevirtual #93                 // Method net/anubis/client/account/AuthHttp$Reply.text:(Ljava/lang/String;)Ljava/lang/String;
+         7: astore_1
+         8: aload_1
+         9: ifnull        14
+        12: aload_1
+        13: areturn
+        14: aload_0
+        15: ldc           #176                // String error
+        17: invokevirtual #93                 // Method net/anubis/client/account/AuthHttp$Reply.text:(Ljava/lang/String;)Ljava/lang/String;
+        20: astore_2
+        21: aload_2
+        22: ifnull        29
+        25: aload_2
+        26: goto          38
+        29: aload_0
+        30: invokevirtual #375                // Method net/anubis/client/account/AuthHttp$Reply.status:()I
+        33: invokedynamic #678,  0            // InvokeDynamic #8:makeConcatWithConstants:(I)Ljava/lang/String;
+        38: areturn
+      StackMapTable: number_of_entries = 3
+        frame_type = 252 /* append */
+          offset_delta = 14
+          locals = [ class java/lang/String ]
+        frame_type = 252 /* append */
+          offset_delta = 14
+          locals = [ class java/lang/String ]
+        frame_type = 72 /* same_locals_1_stack_item */
+          stack = [ class java/lang/String ]
+      LineNumberTable:
+        line 248: 0
+        line 249: 8
+        line 250: 14
+        line 251: 21
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      39     0 reply   Lnet/anubis/client/account/AuthHttp$Reply;
+            8      31     1 description   Ljava/lang/String;
+           21      18     2 error   Ljava/lang/String;
+    MethodParameters:
+      Name                           Flags
+      reply
+
+  private static java.lang.String servicesError(net.anubis.client.account.AuthHttp$Reply);
+    descriptor: (Lnet/anubis/client/account/AuthHttp$Reply;)Ljava/lang/String;
+    flags: (0x000a) ACC_PRIVATE, ACC_STATIC
+    Code:
+      stack=2, locals=2, args_size=1
+         0: aload_0
+         1: ldc_w         #681                // String errorMessage
+         4: invokevirtual #93                 // Method net/anubis/client/account/AuthHttp$Reply.text:(Ljava/lang/String;)Ljava/lang/String;
+         7: astore_1
+         8: aload_1
+         9: ifnull        16
+        12: aload_1
+        13: goto          25
+        16: aload_0
+        17: invokevirtual #375                // Method net/anubis/client/account/AuthHttp$Reply.status:()I
+        20: invokedynamic #678,  0            // InvokeDynamic #8:makeConcatWithConstants:(I)Ljava/lang/String;
+        25: areturn
+      StackMapTable: number_of_entries = 2
+        frame_type = 252 /* append */
+          offset_delta = 16
+          locals = [ class java/lang/String ]
+        frame_type = 72 /* same_locals_1_stack_item */
+          stack = [ class java/lang/String ]
+      LineNumberTable:
+        line 255: 0
+        line 256: 8
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      26     0 reply   Lnet/anubis/client/account/AuthHttp$Reply;
+            8      18     1 message   Ljava/lang/String;
+    MethodParameters:
+      Name                           Flags
+      reply
+
+  private static net.anubis.client.account.AccountException xboxError(net.anubis.client.account.AuthHttp$Reply);
+    descriptor: (Lnet/anubis/client/account/AuthHttp$Reply;)Lnet/anubis/client/account/AccountException;
+    flags: (0x000a) ACC_PRIVATE, ACC_STATIC
+    Code:
+      stack=4, locals=5, args_size=1
+         0: aload_0
+         1: ldc_w         #686                // String XErr
+         4: invokevirtual #93                 // Method net/anubis/client/account/AuthHttp$Reply.text:(Ljava/lang/String;)Ljava/lang/String;
+         7: astore_1
+         8: aload_1
+         9: ifnonnull     30
+        12: aload_0
+        13: invokevirtual #689                // Method net/anubis/client/account/AuthHttp$Reply.headers:()Ljava/net/http/HttpHeaders;
+        16: ldc_w         #691                // String X-Err
+        19: invokevirtual #697                // Method java/net/http/HttpHeaders.firstValue:(Ljava/lang/String;)Ljava/util/Optional;
+        22: aconst_null
+        23: invokevirtual #703                // Method java/util/Optional.orElse:(Ljava/lang/Object;)Ljava/lang/Object;
+        26: checkcast     #107                // class java/lang/String
+        29: astore_1
+        30: aload_1
+        31: ifnonnull     51
+        34: new           #109                // class net/anubis/client/account/AccountException
+        37: dup
+        38: aload_0
+        39: invokevirtual #375                // Method net/anubis/client/account/AuthHttp$Reply.status:()I
+        42: invokedynamic #706,  0            // InvokeDynamic #9:makeConcatWithConstants:(I)Ljava/lang/String;
+        47: invokespecial #127                // Method net/anubis/client/account/AccountException."<init>":(Ljava/lang/String;)V
+        50: areturn
+        51: aload_1
+        52: invokestatic  #133                // Method java/lang/Long.parseLong:(Ljava/lang/String;)J
+        55: lstore_2
+        56: goto          75
+        59: astore        4
+        61: new           #109                // class net/anubis/client/account/AccountException
+        64: dup
+        65: aload_1
+        66: invokedynamic #709,  0            // InvokeDynamic #10:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+        71: invokespecial #127                // Method net/anubis/client/account/AccountException."<init>":(Ljava/lang/String;)V
+        74: areturn
+        75: new           #109                // class net/anubis/client/account/AccountException
+        78: dup
+        79: lload_2
+        80: l2i
+        81: tableswitch   { // -2146051069 to -2146051058
+             -2146051069: 144
+             -2146051068: 180
+             -2146051067: 180
+             -2146051066: 180
+             -2146051065: 180
+             -2146051064: 180
+             -2146051063: 150
+             -2146051062: 180
+             -2146051061: 156
+             -2146051060: 162
+             -2146051059: 168
+             -2146051058: 174
+                 default: 180
+            }
+       144: ldc_w         #711                // String This account is banned from Xbox Live
+       147: goto          195
+       150: ldc_w         #713                // String This Microsoft account has no Xbox profile yet - create one at xbox.com, then try again
+       153: goto          195
+       156: ldc_w         #715                // String Xbox Live isn\'t available in this account\'s country
+       159: goto          195
+       162: ldc_w         #717                // String This account needs age verification at account.microsoft.com first
+       165: goto          195
+       168: ldc_w         #719                // String This account has used up its allowed playtime for now
+       171: goto          195
+       174: ldc_w         #721                // String This is a child account - an adult has to add it to a Microsoft family first
+       177: goto          195
+       180: lload_2
+       181: invokestatic  #725                // Method java/lang/Long.toHexString:(J)Ljava/lang/String;
+       184: getstatic     #731                // Field java/util/Locale.ROOT:Ljava/util/Locale;
+       187: invokevirtual #735                // Method java/lang/String.toUpperCase:(Ljava/util/Locale;)Ljava/lang/String;
+       190: invokedynamic #738,  0            // InvokeDynamic #11:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+       195: invokespecial #127                // Method net/anubis/client/account/AccountException."<init>":(Ljava/lang/String;)V
+       198: areturn
+      Exception table:
+         from    to  target type
+            51    56    59   Class java/lang/NumberFormatException
+      StackMapTable: number_of_entries = 12
+        frame_type = 252 /* append */
+          offset_delta = 30
+          locals = [ class java/lang/String ]
+        frame_type = 20 /* same */
+        frame_type = 71 /* same_locals_1_stack_item */
+          stack = [ class java/lang/NumberFormatException ]
+        frame_type = 252 /* append */
+          offset_delta = 15
+          locals = [ long ]
+        frame_type = 255 /* full_frame */
+          offset_delta = 68
+          locals = [ class net/anubis/client/account/AuthHttp$Reply, class java/lang/String, long ]
+          stack = [ uninitialized 75, uninitialized 75 ]
+        frame_type = 255 /* full_frame */
+          offset_delta = 5
+          locals = [ class net/anubis/client/account/AuthHttp$Reply, class java/lang/String, long ]
+          stack = [ uninitialized 75, uninitialized 75 ]
+        frame_type = 255 /* full_frame */
+          offset_delta = 5
+          locals = [ class net/anubis/client/account/AuthHttp$Reply, class java/lang/String, long ]
+          stack = [ uninitialized 75, uninitialized 75 ]
+        frame_type = 255 /* full_frame */
+          offset_delta = 5
+          locals = [ class net/anubis/client/account/AuthHttp$Reply, class java/lang/String, long ]
+          stack = [ uninitialized 75, uninitialized 75 ]
+        frame_type = 255 /* full_frame */
+          offset_delta = 5
+          locals = [ class net/anubis/client/account/AuthHttp$Reply, class java/lang/String, long ]
+          stack = [ uninitialized 75, uninitialized 75 ]
+        frame_type = 255 /* full_frame */
+          offset_delta = 5
+          locals = [ class net/anubis/client/account/AuthHttp$Reply, class java/lang/String, long ]
+          stack = [ uninitialized 75, uninitialized 75 ]
+        frame_type = 255 /* full_frame */
+          offset_delta = 5
+          locals = [ class net/anubis/client/account/AuthHttp$Reply, class java/lang/String, long ]
+          stack = [ uninitialized 75, uninitialized 75 ]
+        frame_type = 255 /* full_frame */
+          offset_delta = 14
+          locals = [ class net/anubis/client/account/AuthHttp$Reply, class java/lang/String, long ]
+          stack = [ uninitialized 75, uninitialized 75, class java/lang/String ]
+      LineNumberTable:
+        line 260: 0
+        line 261: 8
+        line 262: 30
+        line 266: 51
+        line 269: 56
+        line 267: 59
+        line 268: 61
+        line 270: 75
+        line 271: 144
+        line 272: 150
+        line 273: 156
+        line 274: 162
+        line 275: 168
+        line 276: 174
+        line 277: 180
+        line 270: 198
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+           56       3     2  xerr   J
+           61      14     4     e   Ljava/lang/NumberFormatException;
+            0     199     0 reply   Lnet/anubis/client/account/AuthHttp$Reply;
+            8     191     1  code   Ljava/lang/String;
+           75     124     2  xerr   J
+    MethodParameters:
+      Name                           Flags
+      reply
+}
+InnerClasses:
+  static final #14= #11 of #13;           // Reply=class net/anubis/client/account/AuthHttp$Reply of class net/anubis/client/account/AuthHttp
+  static final #15= #9 of #2;             // DeviceCode=class net/anubis/client/account/MicrosoftLogin$DeviceCode of class net/anubis/client/account/MicrosoftLogin
+  static final #16= #7 of #2;             // MsaToken=class net/anubis/client/account/MicrosoftLogin$MsaToken of class net/anubis/client/account/MicrosoftLogin
+  public static #21= #18 of #20;          // Encoder=class java/util/Base64$Encoder of class java/util/Base64
+  public static final #26= #23 of #25;    // Lookup=class java/lang/invoke/MethodHandles$Lookup of class java/lang/invoke/MethodHandles
+SourceFile: "MicrosoftLogin.java"
+RuntimeVisibleAnnotations:
+  0: #741(#646=e#742.#743)
+    net.fabricmc.api.Environment(
+      value=Lnet/fabricmc/api/EnvType;.CLIENT
+    )
+BootstrapMethods:
+  0: #122 REF_invokeStatic java/lang/invoke/StringConcatFactory.makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #115 Microsoft sign-in couldn\'t start: \u0001
+  1: #122 REF_invokeStatic java/lang/invoke/StringConcatFactory.makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #194 Microsoft sign-in failed: \u0001
+  2: #122 REF_invokeStatic java/lang/invoke/StringConcatFactory.makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #212 Microsoft login failed: \u0001
+  3: #122 REF_invokeStatic java/lang/invoke/StringConcatFactory.makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #245 {\u0001}
+  4: #122 REF_invokeStatic java/lang/invoke/StringConcatFactory.makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #318 t=\u0001
+  5: #122 REF_invokeStatic java/lang/invoke/StringConcatFactory.makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #349 XBL3.0 x=\u0001;\u0001
+  6: #122 REF_invokeStatic java/lang/invoke/StringConcatFactory.makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #366 Minecraft login failed: \u0001
+  7: #122 REF_invokeStatic java/lang/invoke/StringConcatFactory.makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #383 Couldn\'t load the Minecraft profile: \u0001
+  8: #122 REF_invokeStatic java/lang/invoke/StringConcatFactory.makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #675 HTTP \u0001
+  9: #122 REF_invokeStatic java/lang/invoke/StringConcatFactory.makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #705 Xbox Live sign-in failed (HTTP \u0001)
+  10: #122 REF_invokeStatic java/lang/invoke/StringConcatFactory.makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #708 Xbox Live sign-in failed (\u0001)
+  11: #122 REF_invokeStatic java/lang/invoke/StringConcatFactory.makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #737 Xbox Live refused the sign-in (error 0x\u0001)
+NestMembers:
+  net/anubis/client/account/MicrosoftLogin$MsaToken
+  net/anubis/client/account/MicrosoftLogin$DeviceCode

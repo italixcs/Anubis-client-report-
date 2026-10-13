@@ -1,0 +1,1972 @@
+Classfile analysis-workspace/extracted/run.oEA4CbVx/imgui/AnubisAndroidNative.class
+  Last modified Oct 13, 2026; size 13417 bytes
+  SHA-256 checksum 3c5cf03aa3fb78d74cf50623c80f2664a877b53802357a3485f53ed02a341f7b
+  Compiled from "AnubisAndroidNative.java"
+public final class imgui.AnubisAndroidNative
+  minor version: 0
+  major version: 65
+  flags: (0x0031) ACC_PUBLIC, ACC_FINAL, ACC_SUPER
+  this_class: #2                          // imgui/AnubisAndroidNative
+  super_class: #4                         // java/lang/Object
+  interfaces: 0, fields: 4, methods: 18, attributes: 4
+Constant pool:
+    #1 = Utf8               imgui/AnubisAndroidNative
+    #2 = Class              #1            // imgui/AnubisAndroidNative
+    #3 = Utf8               java/lang/Object
+    #4 = Class              #3            // java/lang/Object
+    #5 = Utf8               AnubisAndroidNative.java
+    #6 = Utf8               imgui/AnubisAndroidNative$NativeSource
+    #7 = Class              #6            // imgui/AnubisAndroidNative$NativeSource
+    #8 = Utf8               NativeSource
+    #9 = Utf8               java/lang/invoke/MethodHandles$Lookup
+   #10 = Class              #9            // java/lang/invoke/MethodHandles$Lookup
+   #11 = Utf8               java/lang/invoke/MethodHandles
+   #12 = Class              #11           // java/lang/invoke/MethodHandles
+   #13 = Utf8               Lookup
+   #14 = Utf8               RESOURCE
+   #15 = Utf8               Ljava/lang/String;
+   #16 = Utf8               /io/imgui/java/native-bin/android-arm64/libimgui-java64.so
+   #17 = String             #16           // /io/imgui/java/native-bin/android-arm64/libimgui-java64.so
+   #18 = Utf8               LIBRARY_PATH
+   #19 = Utf8               imgui.library.path
+   #20 = String             #19           // imgui.library.path
+   #21 = Utf8               LIBRARY_NAME
+   #22 = Utf8               imgui.library.name
+   #23 = String             #22           // imgui.library.name
+   #24 = Utf8               DEFAULT_NAME
+   #25 = Utf8               libimgui-java64.so
+   #26 = String             #25           // libimgui-java64.so
+   #27 = Utf8               <init>
+   #28 = Utf8               ()V
+   #29 = NameAndType        #27:#28       // "<init>":()V
+   #30 = Methodref          #4.#29        // java/lang/Object."<init>":()V
+   #31 = Utf8               this
+   #32 = Utf8               Limgui/AnubisAndroidNative;
+   #33 = Utf8               isAndroidRuntime
+   #34 = Utf8               ()Z
+   #35 = Utf8               java/lang/System
+   #36 = Class              #35           // java/lang/System
+   #37 = Utf8               getProperties
+   #38 = Utf8               ()Ljava/util/Properties;
+   #39 = NameAndType        #37:#38       // getProperties:()Ljava/util/Properties;
+   #40 = Methodref          #36.#39       // java/lang/System.getProperties:()Ljava/util/Properties;
+   #41 = Utf8               getenv
+   #42 = Utf8               ()Ljava/util/Map;
+   #43 = NameAndType        #41:#42       // getenv:()Ljava/util/Map;
+   #44 = Methodref          #36.#43       // java/lang/System.getenv:()Ljava/util/Map;
+   #45 = Utf8               androidFilesystem
+   #46 = NameAndType        #45:#34       // androidFilesystem:()Z
+   #47 = Methodref          #2.#46        // imgui/AnubisAndroidNative.androidFilesystem:()Z
+   #48 = Utf8               isAndroid
+   #49 = Utf8               (Ljava/util/Properties;Ljava/util/Map;Z)Z
+   #50 = NameAndType        #48:#49       // isAndroid:(Ljava/util/Properties;Ljava/util/Map;Z)Z
+   #51 = Methodref          #2.#50        // imgui/AnubisAndroidNative.isAndroid:(Ljava/util/Properties;Ljava/util/Map;Z)Z
+   #52 = Utf8               prepare
+   #53 = Utf8               ()Ljava/io/InputStream;
+   #54 = MethodType         #53           //  ()Ljava/io/InputStream;
+   #55 = Utf8               lambda$prepare$0
+   #56 = NameAndType        #55:#53       // lambda$prepare$0:()Ljava/io/InputStream;
+   #57 = Methodref          #2.#56        // imgui/AnubisAndroidNative.lambda$prepare$0:()Ljava/io/InputStream;
+   #58 = MethodHandle       6:#57         // REF_invokeStatic imgui/AnubisAndroidNative.lambda$prepare$0:()Ljava/io/InputStream;
+   #59 = Utf8               java/lang/invoke/LambdaMetafactory
+   #60 = Class              #59           // java/lang/invoke/LambdaMetafactory
+   #61 = Utf8               metafactory
+   #62 = Utf8               (Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+   #63 = NameAndType        #61:#62       // metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+   #64 = Methodref          #60.#63       // java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+   #65 = MethodHandle       6:#64         // REF_invokeStatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+   #66 = Utf8               open
+   #67 = Utf8               ()Limgui/AnubisAndroidNative$NativeSource;
+   #68 = NameAndType        #66:#67       // open:()Limgui/AnubisAndroidNative$NativeSource;
+   #69 = InvokeDynamic      #0:#68        // #0:open:()Limgui/AnubisAndroidNative$NativeSource;
+   #70 = Utf8               (Ljava/util/Properties;Ljava/util/Map;ZLimgui/AnubisAndroidNative$NativeSource;)V
+   #71 = NameAndType        #52:#70       // prepare:(Ljava/util/Properties;Ljava/util/Map;ZLimgui/AnubisAndroidNative$NativeSource;)V
+   #72 = Methodref          #2.#71        // imgui/AnubisAndroidNative.prepare:(Ljava/util/Properties;Ljava/util/Map;ZLimgui/AnubisAndroidNative$NativeSource;)V
+   #73 = Utf8               (Ljava/util/Properties;Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;ZLimgui/AnubisAndroidNative$NativeSource;)V
+   #74 = Utf8               properties
+   #75 = Utf8               environment
+   #76 = Utf8               bundledNative
+   #77 = Utf8               java/lang/Throwable
+   #78 = Class              #77           // java/lang/Throwable
+   #79 = Utf8               java/io/IOException
+   #80 = Class              #79           // java/io/IOException
+   #81 = Utf8               java/lang/RuntimeException
+   #82 = Class              #81           // java/lang/RuntimeException
+   #83 = Utf8               os.arch
+   #84 = String             #83           // os.arch
+   #85 = Utf8               java/util/Properties
+   #86 = Class              #85           // java/util/Properties
+   #87 = Utf8               getProperty
+   #88 = Utf8               (Ljava/lang/String;)Ljava/lang/String;
+   #89 = NameAndType        #87:#88       // getProperty:(Ljava/lang/String;)Ljava/lang/String;
+   #90 = Methodref          #86.#89       // java/util/Properties.getProperty:(Ljava/lang/String;)Ljava/lang/String;
+   #91 = Utf8               lower
+   #92 = NameAndType        #91:#88       // lower:(Ljava/lang/String;)Ljava/lang/String;
+   #93 = Methodref          #2.#92        // imgui/AnubisAndroidNative.lower:(Ljava/lang/String;)Ljava/lang/String;
+   #94 = Utf8               aarch64
+   #95 = String             #94           // aarch64
+   #96 = Utf8               java/lang/String
+   #97 = Class              #96           // java/lang/String
+   #98 = Utf8               equals
+   #99 = Utf8               (Ljava/lang/Object;)Z
+  #100 = NameAndType        #98:#99       // equals:(Ljava/lang/Object;)Z
+  #101 = Methodref          #97.#100      // java/lang/String.equals:(Ljava/lang/Object;)Z
+  #102 = Utf8               arm64
+  #103 = String             #102          // arm64
+  #104 = Utf8               arm64-v8a
+  #105 = String             #104          // arm64-v8a
+  #106 = Utf8               32
+  #107 = String             #106          // 32
+  #108 = Utf8               sun.arch.data.model
+  #109 = String             #108          // sun.arch.data.model
+  #110 = Utf8               Unsupported Android architecture \'\u0001\'. This build requires an ARM64 device and a 64-bit Java runtime.
+  #111 = String             #110          // Unsupported Android architecture \'\u0001\'. This build requires an ARM64 device and a 64-bit Java runtime.
+  #112 = Utf8               java/lang/invoke/StringConcatFactory
+  #113 = Class              #112          // java/lang/invoke/StringConcatFactory
+  #114 = Utf8               makeConcatWithConstants
+  #115 = Utf8               (Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+  #116 = NameAndType        #114:#115     // makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+  #117 = Methodref          #113.#116     // java/lang/invoke/StringConcatFactory.makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+  #118 = MethodHandle       6:#117        // REF_invokeStatic java/lang/invoke/StringConcatFactory.makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+  #119 = NameAndType        #114:#88      // makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+  #120 = InvokeDynamic      #1:#119       // #1:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+  #121 = Utf8               failure
+  #122 = Utf8               (Ljava/lang/String;Ljava/lang/Throwable;)Ljava/lang/UnsatisfiedLinkError;
+  #123 = NameAndType        #121:#122     // failure:(Ljava/lang/String;Ljava/lang/Throwable;)Ljava/lang/UnsatisfiedLinkError;
+  #124 = Methodref          #2.#123       // imgui/AnubisAndroidNative.failure:(Ljava/lang/String;Ljava/lang/Throwable;)Ljava/lang/UnsatisfiedLinkError;
+  #125 = Utf8               (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+  #126 = NameAndType        #87:#125      // getProperty:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+  #127 = Methodref          #86.#126      // java/util/Properties.getProperty:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+  #128 = Utf8               requireFilename
+  #129 = Utf8               (Ljava/lang/String;)V
+  #130 = NameAndType        #128:#129     // requireFilename:(Ljava/lang/String;)V
+  #131 = Methodref          #2.#130       // imgui/AnubisAndroidNative.requireFilename:(Ljava/lang/String;)V
+  #132 = Utf8               java/nio/file/Paths
+  #133 = Class              #132          // java/nio/file/Paths
+  #134 = Utf8               get
+  #135 = Utf8               (Ljava/lang/String;[Ljava/lang/String;)Ljava/nio/file/Path;
+  #136 = NameAndType        #134:#135     // get:(Ljava/lang/String;[Ljava/lang/String;)Ljava/nio/file/Path;
+  #137 = Methodref          #133.#136     // java/nio/file/Paths.get:(Ljava/lang/String;[Ljava/lang/String;)Ljava/nio/file/Path;
+  #138 = Utf8               java/nio/file/Path
+  #139 = Class              #138          // java/nio/file/Path
+  #140 = Utf8               resolve
+  #141 = Utf8               (Ljava/lang/String;)Ljava/nio/file/Path;
+  #142 = NameAndType        #140:#141     // resolve:(Ljava/lang/String;)Ljava/nio/file/Path;
+  #143 = InterfaceMethodref #139.#142     // java/nio/file/Path.resolve:(Ljava/lang/String;)Ljava/nio/file/Path;
+  #144 = Utf8               validateArm64
+  #145 = Utf8               (Ljava/nio/file/Path;)V
+  #146 = NameAndType        #144:#145     // validateArm64:(Ljava/nio/file/Path;)V
+  #147 = Methodref          #2.#146       // imgui/AnubisAndroidNative.validateArm64:(Ljava/nio/file/Path;)V
+  #148 = Utf8               containsKey
+  #149 = NameAndType        #148:#99      // containsKey:(Ljava/lang/Object;)Z
+  #150 = Methodref          #86.#149      // java/util/Properties.containsKey:(Ljava/lang/Object;)Z
+  #151 = Utf8               findNamedOverride
+  #152 = Utf8               (Ljava/lang/String;Ljava/util/Properties;)Ljava/nio/file/Path;
+  #153 = NameAndType        #151:#152     // findNamedOverride:(Ljava/lang/String;Ljava/util/Properties;)Ljava/nio/file/Path;
+  #154 = Methodref          #2.#153       // imgui/AnubisAndroidNative.findNamedOverride:(Ljava/lang/String;Ljava/util/Properties;)Ljava/nio/file/Path;
+  #155 = Utf8               getFileName
+  #156 = Utf8               ()Ljava/nio/file/Path;
+  #157 = NameAndType        #155:#156     // getFileName:()Ljava/nio/file/Path;
+  #158 = InterfaceMethodref #139.#157     // java/nio/file/Path.getFileName:()Ljava/nio/file/Path;
+  #159 = Utf8               toString
+  #160 = Utf8               ()Ljava/lang/String;
+  #161 = NameAndType        #159:#160     // toString:()Ljava/lang/String;
+  #162 = InterfaceMethodref #139.#161     // java/nio/file/Path.toString:()Ljava/lang/String;
+  #163 = Utf8               getParent
+  #164 = NameAndType        #163:#156     // getParent:()Ljava/nio/file/Path;
+  #165 = InterfaceMethodref #139.#164     // java/nio/file/Path.getParent:()Ljava/nio/file/Path;
+  #166 = Utf8               setProperty
+  #167 = Utf8               (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
+  #168 = NameAndType        #166:#167     // setProperty:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
+  #169 = Methodref          #86.#168      // java/util/Properties.setProperty:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
+  #170 = Utf8               lambda$prepare$1
+  #171 = Utf8               (Ljava/nio/file/Path;)Ljava/io/InputStream;
+  #172 = NameAndType        #170:#171     // lambda$prepare$1:(Ljava/nio/file/Path;)Ljava/io/InputStream;
+  #173 = Methodref          #2.#172       // imgui/AnubisAndroidNative.lambda$prepare$1:(Ljava/nio/file/Path;)Ljava/io/InputStream;
+  #174 = MethodHandle       6:#173        // REF_invokeStatic imgui/AnubisAndroidNative.lambda$prepare$1:(Ljava/nio/file/Path;)Ljava/io/InputStream;
+  #175 = Utf8               (Ljava/nio/file/Path;)Limgui/AnubisAndroidNative$NativeSource;
+  #176 = NameAndType        #66:#175      // open:(Ljava/nio/file/Path;)Limgui/AnubisAndroidNative$NativeSource;
+  #177 = InvokeDynamic      #2:#176       // #2:open:(Ljava/nio/file/Path;)Limgui/AnubisAndroidNative$NativeSource;
+  #178 = Utf8               cacheCandidates
+  #179 = Utf8               (Ljava/util/Properties;Ljava/util/Map;)Ljava/util/List;
+  #180 = NameAndType        #178:#179     // cacheCandidates:(Ljava/util/Properties;Ljava/util/Map;)Ljava/util/List;
+  #181 = Methodref          #2.#180       // imgui/AnubisAndroidNative.cacheCandidates:(Ljava/util/Properties;Ljava/util/Map;)Ljava/util/List;
+  #182 = Utf8               createPrivateDirectory
+  #183 = Utf8               (Ljava/util/List;)Ljava/nio/file/Path;
+  #184 = NameAndType        #182:#183     // createPrivateDirectory:(Ljava/util/List;)Ljava/nio/file/Path;
+  #185 = Methodref          #2.#184       // imgui/AnubisAndroidNative.createPrivateDirectory:(Ljava/util/List;)Ljava/nio/file/Path;
+  #186 = NameAndType        #66:#53       // open:()Ljava/io/InputStream;
+  #187 = InterfaceMethodref #7.#186       // imgui/AnubisAndroidNative$NativeSource.open:()Ljava/io/InputStream;
+  #188 = Utf8               Bundled Android ARM64 native is missing: /io/imgui/java/native-bin/android-arm64/libimgui-java64.so
+  #189 = String             #188          // Bundled Android ARM64 native is missing: /io/imgui/java/native-bin/android-arm64/libimgui-java64.so
+  #190 = NameAndType        #27:#129      // "<init>":(Ljava/lang/String;)V
+  #191 = Methodref          #80.#190      // java/io/IOException."<init>":(Ljava/lang/String;)V
+  #192 = Utf8               java/io/InputStream
+  #193 = Class              #192          // java/io/InputStream
+  #194 = Utf8               java/nio/file/CopyOption
+  #195 = Class              #194          // java/nio/file/CopyOption
+  #196 = Utf8               java/nio/file/Files
+  #197 = Class              #196          // java/nio/file/Files
+  #198 = Utf8               copy
+  #199 = Utf8               (Ljava/io/InputStream;Ljava/nio/file/Path;[Ljava/nio/file/CopyOption;)J
+  #200 = NameAndType        #198:#199     // copy:(Ljava/io/InputStream;Ljava/nio/file/Path;[Ljava/nio/file/CopyOption;)J
+  #201 = Methodref          #197.#200     // java/nio/file/Files.copy:(Ljava/io/InputStream;Ljava/nio/file/Path;[Ljava/nio/file/CopyOption;)J
+  #202 = Utf8               close
+  #203 = NameAndType        #202:#28      // close:()V
+  #204 = Methodref          #193.#203     // java/io/InputStream.close:()V
+  #205 = Utf8               java/util/Map
+  #206 = Class              #205          // java/util/Map
+  #207 = Utf8               addSuppressed
+  #208 = Utf8               (Ljava/lang/Throwable;)V
+  #209 = NameAndType        #207:#208     // addSuppressed:(Ljava/lang/Throwable;)V
+  #210 = Methodref          #78.#209      // java/lang/Throwable.addSuppressed:(Ljava/lang/Throwable;)V
+  #211 = Utf8               getFileStore
+  #212 = Utf8               (Ljava/nio/file/Path;)Ljava/nio/file/FileStore;
+  #213 = NameAndType        #211:#212     // getFileStore:(Ljava/nio/file/Path;)Ljava/nio/file/FileStore;
+  #214 = Methodref          #197.#213     // java/nio/file/Files.getFileStore:(Ljava/nio/file/Path;)Ljava/nio/file/FileStore;
+  #215 = Utf8               posix
+  #216 = String             #215          // posix
+  #217 = Utf8               java/nio/file/FileStore
+  #218 = Class              #217          // java/nio/file/FileStore
+  #219 = Utf8               supportsFileAttributeView
+  #220 = Utf8               (Ljava/lang/String;)Z
+  #221 = NameAndType        #219:#220     // supportsFileAttributeView:(Ljava/lang/String;)Z
+  #222 = Methodref          #218.#221     // java/nio/file/FileStore.supportsFileAttributeView:(Ljava/lang/String;)Z
+  #223 = Utf8               r-x------
+  #224 = String             #223          // r-x------
+  #225 = Utf8               java/nio/file/attribute/PosixFilePermissions
+  #226 = Class              #225          // java/nio/file/attribute/PosixFilePermissions
+  #227 = Utf8               fromString
+  #228 = Utf8               (Ljava/lang/String;)Ljava/util/Set;
+  #229 = NameAndType        #227:#228     // fromString:(Ljava/lang/String;)Ljava/util/Set;
+  #230 = Methodref          #226.#229     // java/nio/file/attribute/PosixFilePermissions.fromString:(Ljava/lang/String;)Ljava/util/Set;
+  #231 = Utf8               setPosixFilePermissions
+  #232 = Utf8               (Ljava/nio/file/Path;Ljava/util/Set;)Ljava/nio/file/Path;
+  #233 = NameAndType        #231:#232     // setPosixFilePermissions:(Ljava/nio/file/Path;Ljava/util/Set;)Ljava/nio/file/Path;
+  #234 = Methodref          #197.#233     // java/nio/file/Files.setPosixFilePermissions:(Ljava/nio/file/Path;Ljava/util/Set;)Ljava/nio/file/Path;
+  #235 = Utf8               toFile
+  #236 = Utf8               ()Ljava/io/File;
+  #237 = NameAndType        #235:#236     // toFile:()Ljava/io/File;
+  #238 = InterfaceMethodref #139.#237     // java/nio/file/Path.toFile:()Ljava/io/File;
+  #239 = Utf8               java/io/File
+  #240 = Class              #239          // java/io/File
+  #241 = Utf8               deleteOnExit
+  #242 = NameAndType        #241:#28      // deleteOnExit:()V
+  #243 = Methodref          #240.#242     // java/io/File.deleteOnExit:()V
+  #244 = Utf8               java/lang/Exception
+  #245 = Class              #244          // java/lang/Exception
+  #246 = Utf8               deleteIfExists
+  #247 = Utf8               (Ljava/nio/file/Path;)Z
+  #248 = NameAndType        #246:#247     // deleteIfExists:(Ljava/nio/file/Path;)Z
+  #249 = Methodref          #197.#248     // java/nio/file/Files.deleteIfExists:(Ljava/nio/file/Path;)Z
+  #250 = Methodref          #245.#209     // java/lang/Exception.addSuppressed:(Ljava/lang/Throwable;)V
+  #251 = Utf8               getMessage
+  #252 = NameAndType        #251:#160     // getMessage:()Ljava/lang/String;
+  #253 = Methodref          #245.#252     // java/lang/Exception.getMessage:()Ljava/lang/String;
+  #254 = Utf8               Cannot prepare Android ARM64 ImGui: \u0001
+  #255 = String             #254          // Cannot prepare Android ARM64 ImGui: \u0001
+  #256 = InvokeDynamic      #3:#119       // #3:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+  #257 = Utf8               custom
+  #258 = Utf8               Ljava/nio/file/Path;
+  #259 = Utf8               input
+  #260 = Utf8               Ljava/io/InputStream;
+  #261 = Utf8               cleanup
+  #262 = Utf8               Ljava/io/IOException;
+  #263 = Utf8               exception
+  #264 = Utf8               Ljava/lang/Exception;
+  #265 = Utf8               name
+  #266 = Utf8               override
+  #267 = Utf8               source
+  #268 = Utf8               Limgui/AnubisAndroidNative$NativeSource;
+  #269 = Utf8               directory
+  #270 = Utf8               nativeFile
+  #271 = Utf8               Ljava/util/Properties;
+  #272 = Utf8               Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;
+  #273 = Utf8               Ljava/util/Map;
+  #274 = Utf8               Z
+  #275 = Utf8               arch
+  #276 = Utf8               (Ljava/util/Properties;Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;Z)Z
+  #277 = Utf8               os.name
+  #278 = String             #277          // os.name
+  #279 = Utf8               java.vm.name
+  #280 = String             #279          // java.vm.name
+  #281 = Utf8               android
+  #282 = String             #281          // android
+  #283 = Utf8               contains
+  #284 = Utf8               (Ljava/lang/CharSequence;)Z
+  #285 = NameAndType        #283:#284     // contains:(Ljava/lang/CharSequence;)Z
+  #286 = Methodref          #97.#285      // java/lang/String.contains:(Ljava/lang/CharSequence;)Z
+  #287 = Utf8               java.runtime.name
+  #288 = String             #287          // java.runtime.name
+  #289 = Utf8               dalvik
+  #290 = String             #289          // dalvik
+  #291 = Utf8               linux
+  #292 = String             #291          // linux
+  #293 = Utf8               os.version
+  #294 = String             #293          // os.version
+  #295 = Utf8               POJAV_NATIVEDIR
+  #296 = String             #295          // POJAV_NATIVEDIR
+  #297 = Utf8               (Ljava/lang/Object;)Ljava/lang/Object;
+  #298 = NameAndType        #134:#297     // get:(Ljava/lang/Object;)Ljava/lang/Object;
+  #299 = InterfaceMethodref #206.#298     // java/util/Map.get:(Ljava/lang/Object;)Ljava/lang/Object;
+  #300 = Utf8               nonempty
+  #301 = NameAndType        #300:#220     // nonempty:(Ljava/lang/String;)Z
+  #302 = Methodref          #2.#301       // imgui/AnubisAndroidNative.nonempty:(Ljava/lang/String;)Z
+  #303 = Utf8               MOJO_RENDERER
+  #304 = String             #303          // MOJO_RENDERER
+  #305 = Utf8               MOD_ANDROID_RUNTIME
+  #306 = String             #305          // MOD_ANDROID_RUNTIME
+  #307 = Utf8               os
+  #308 = Utf8               vm
+  #309 = Utf8               /system/bin/linker64
+  #310 = String             #309          // /system/bin/linker64
+  #311 = Utf8               java/nio/file/LinkOption
+  #312 = Class              #311          // java/nio/file/LinkOption
+  #313 = Utf8               exists
+  #314 = Utf8               (Ljava/nio/file/Path;[Ljava/nio/file/LinkOption;)Z
+  #315 = NameAndType        #313:#314     // exists:(Ljava/nio/file/Path;[Ljava/nio/file/LinkOption;)Z
+  #316 = Methodref          #197.#315     // java/nio/file/Files.exists:(Ljava/nio/file/Path;[Ljava/nio/file/LinkOption;)Z
+  #317 = Utf8               /system/bin/linker
+  #318 = String             #317          // /system/bin/linker
+  #319 = Utf8               /system/etc
+  #320 = String             #319          // /system/etc
+  #321 = Utf8               isDirectory
+  #322 = NameAndType        #321:#314     // isDirectory:(Ljava/nio/file/Path;[Ljava/nio/file/LinkOption;)Z
+  #323 = Methodref          #197.#322     // java/nio/file/Files.isDirectory:(Ljava/nio/file/Path;[Ljava/nio/file/LinkOption;)Z
+  #324 = Utf8               (Ljava/util/Properties;Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;)Ljava/util/List<Ljava/nio/file/Path;>;
+  #325 = Utf8               java/util/ArrayList
+  #326 = Class              #325          // java/util/ArrayList
+  #327 = Methodref          #326.#29      // java/util/ArrayList."<init>":()V
+  #328 = Utf8               addCandidate
+  #329 = Utf8               (Ljava/util/List;Ljava/lang/String;)V
+  #330 = NameAndType        #328:#329     // addCandidate:(Ljava/util/List;Ljava/lang/String;)V
+  #331 = Methodref          #2.#330       // imgui/AnubisAndroidNative.addCandidate:(Ljava/util/List;Ljava/lang/String;)V
+  #332 = Utf8               TMPDIR
+  #333 = String             #332          // TMPDIR
+  #334 = Utf8               java.io.tmpdir
+  #335 = String             #334          // java.io.tmpdir
+  #336 = Utf8               paths
+  #337 = Utf8               Ljava/util/List<Ljava/nio/file/Path;>;
+  #338 = Utf8               Ljava/util/List;
+  #339 = Utf8               (Ljava/util/List<Ljava/nio/file/Path;>;Ljava/lang/String;)V
+  #340 = Utf8               value
+  #341 = Utf8               toAbsolutePath
+  #342 = NameAndType        #341:#156     // toAbsolutePath:()Ljava/nio/file/Path;
+  #343 = InterfaceMethodref #139.#342     // java/nio/file/Path.toAbsolutePath:()Ljava/nio/file/Path;
+  #344 = Utf8               normalize
+  #345 = NameAndType        #344:#156     // normalize:()Ljava/nio/file/Path;
+  #346 = InterfaceMethodref #139.#345     // java/nio/file/Path.normalize:()Ljava/nio/file/Path;
+  #347 = Utf8               java/util/List
+  #348 = Class              #347          // java/util/List
+  #349 = NameAndType        #283:#99      // contains:(Ljava/lang/Object;)Z
+  #350 = InterfaceMethodref #348.#349     // java/util/List.contains:(Ljava/lang/Object;)Z
+  #351 = Utf8               add
+  #352 = NameAndType        #351:#99      // add:(Ljava/lang/Object;)Z
+  #353 = InterfaceMethodref #348.#352     // java/util/List.add:(Ljava/lang/Object;)Z
+  #354 = Utf8               path
+  #355 = Utf8               (Ljava/util/List<Ljava/nio/file/Path;>;)Ljava/nio/file/Path;
+  #356 = Utf8               candidates
+  #357 = Utf8               java/lang/SecurityException
+  #358 = Class              #357          // java/lang/SecurityException
+  #359 = Utf8               No writable internal native cache. Use the launcher\'s private MOD_ANDROID_RUNTIME, TMPDIR or -Djava.io.tmpdir; shared storage cannot load .so files.
+  #360 = String             #359          // No writable internal native cache. Use the launcher\'s private MOD_ANDROID_RUNTIME, TMPDIR or -Djava.io.tmpdir; shared storage cannot load .so files.
+  #361 = Utf8               iterator
+  #362 = Utf8               ()Ljava/util/Iterator;
+  #363 = NameAndType        #361:#362     // iterator:()Ljava/util/Iterator;
+  #364 = InterfaceMethodref #348.#363     // java/util/List.iterator:()Ljava/util/Iterator;
+  #365 = Utf8               java/util/Iterator
+  #366 = Class              #365          // java/util/Iterator
+  #367 = Utf8               hasNext
+  #368 = NameAndType        #367:#34      // hasNext:()Z
+  #369 = InterfaceMethodref #366.#368     // java/util/Iterator.hasNext:()Z
+  #370 = Utf8               next
+  #371 = Utf8               ()Ljava/lang/Object;
+  #372 = NameAndType        #370:#371     // next:()Ljava/lang/Object;
+  #373 = InterfaceMethodref #366.#372     // java/util/Iterator.next:()Ljava/lang/Object;
+  #374 = Utf8               isSharedStorage
+  #375 = NameAndType        #374:#247     // isSharedStorage:(Ljava/nio/file/Path;)Z
+  #376 = Methodref          #2.#375       // imgui/AnubisAndroidNative.isSharedStorage:(Ljava/nio/file/Path;)Z
+  #377 = Utf8               valueOf
+  #378 = Utf8               (Ljava/lang/Object;)Ljava/lang/String;
+  #379 = NameAndType        #377:#378     // valueOf:(Ljava/lang/Object;)Ljava/lang/String;
+  #380 = Methodref          #97.#379      // java/lang/String.valueOf:(Ljava/lang/Object;)Ljava/lang/String;
+  #381 = Utf8               Shared Android storage cannot load native libraries: \u0001
+  #382 = String             #381          // Shared Android storage cannot load native libraries: \u0001
+  #383 = InvokeDynamic      #4:#119       // #4:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+  #384 = Utf8               java/nio/file/attribute/FileAttribute
+  #385 = Class              #384          // java/nio/file/attribute/FileAttribute
+  #386 = Utf8               createDirectories
+  #387 = Utf8               (Ljava/nio/file/Path;[Ljava/nio/file/attribute/FileAttribute;)Ljava/nio/file/Path;
+  #388 = NameAndType        #386:#387     // createDirectories:(Ljava/nio/file/Path;[Ljava/nio/file/attribute/FileAttribute;)Ljava/nio/file/Path;
+  #389 = Methodref          #197.#388     // java/nio/file/Files.createDirectories:(Ljava/nio/file/Path;[Ljava/nio/file/attribute/FileAttribute;)Ljava/nio/file/Path;
+  #390 = Utf8               toRealPath
+  #391 = Utf8               ([Ljava/nio/file/LinkOption;)Ljava/nio/file/Path;
+  #392 = NameAndType        #390:#391     // toRealPath:([Ljava/nio/file/LinkOption;)Ljava/nio/file/Path;
+  #393 = InterfaceMethodref #139.#392     // java/nio/file/Path.toRealPath:([Ljava/nio/file/LinkOption;)Ljava/nio/file/Path;
+  #394 = Utf8               Native cache resolves to shared Android storage: \u0001
+  #395 = String             #394          // Native cache resolves to shared Android storage: \u0001
+  #396 = InvokeDynamic      #5:#119       // #5:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+  #397 = Utf8               anubis-imgui-arm64-
+  #398 = String             #397          // anubis-imgui-arm64-
+  #399 = Utf8               rwx------
+  #400 = String             #399          // rwx------
+  #401 = Utf8               asFileAttribute
+  #402 = Utf8               (Ljava/util/Set;)Ljava/nio/file/attribute/FileAttribute;
+  #403 = NameAndType        #401:#402     // asFileAttribute:(Ljava/util/Set;)Ljava/nio/file/attribute/FileAttribute;
+  #404 = Methodref          #226.#403     // java/nio/file/attribute/PosixFilePermissions.asFileAttribute:(Ljava/util/Set;)Ljava/nio/file/attribute/FileAttribute;
+  #405 = Utf8               createTempDirectory
+  #406 = Utf8               (Ljava/nio/file/Path;Ljava/lang/String;[Ljava/nio/file/attribute/FileAttribute;)Ljava/nio/file/Path;
+  #407 = NameAndType        #405:#406     // createTempDirectory:(Ljava/nio/file/Path;Ljava/lang/String;[Ljava/nio/file/attribute/FileAttribute;)Ljava/nio/file/Path;
+  #408 = Methodref          #197.#407     // java/nio/file/Files.createTempDirectory:(Ljava/nio/file/Path;Ljava/lang/String;[Ljava/nio/file/attribute/FileAttribute;)Ljava/nio/file/Path;
+  #409 = Methodref          #80.#209      // java/io/IOException.addSuppressed:(Ljava/lang/Throwable;)V
+  #410 = Utf8               real
+  #411 = Utf8               candidate
+  #412 = Utf8               failures
+  #413 = Utf8               replace
+  #414 = Utf8               (CC)Ljava/lang/String;
+  #415 = NameAndType        #413:#414     // replace:(CC)Ljava/lang/String;
+  #416 = Methodref          #97.#415      // java/lang/String.replace:(CC)Ljava/lang/String;
+  #417 = Utf8               length
+  #418 = Utf8               ()I
+  #419 = NameAndType        #417:#418     // length:()I
+  #420 = Methodref          #97.#419      // java/lang/String.length:()I
+  #421 = Utf8               charAt
+  #422 = Utf8               (I)C
+  #423 = NameAndType        #421:#422     // charAt:(I)C
+  #424 = Methodref          #97.#423      // java/lang/String.charAt:(I)C
+  #425 = Utf8               substring
+  #426 = Utf8               (I)Ljava/lang/String;
+  #427 = NameAndType        #425:#426     // substring:(I)Ljava/lang/String;
+  #428 = Methodref          #97.#427      // java/lang/String.substring:(I)Ljava/lang/String;
+  #429 = Utf8               /sdcard
+  #430 = String             #429          // /sdcard
+  #431 = Utf8               /storage
+  #432 = String             #431          // /storage
+  #433 = Utf8               /mnt/sdcard
+  #434 = String             #433          // /mnt/sdcard
+  #435 = Utf8               /mnt/media_rw
+  #436 = String             #435          // /mnt/media_rw
+  #437 = Utf8               /data/media
+  #438 = String             #437          // /data/media
+  #439 = Utf8               [Ljava/lang/String;
+  #440 = Class              #439          // "[Ljava/lang/String;"
+  #441 = Utf8               \u0001/
+  #442 = String             #441          // \u0001/
+  #443 = InvokeDynamic      #6:#119       // #6:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+  #444 = Utf8               startsWith
+  #445 = NameAndType        #444:#220     // startsWith:(Ljava/lang/String;)Z
+  #446 = Methodref          #97.#445      // java/lang/String.startsWith:(Ljava/lang/String;)Z
+  #447 = Utf8               prefix
+  #448 = Utf8               lib\u0001.so
+  #449 = String             #448          // lib\u0001.so
+  #450 = InvokeDynamic      #7:#119       // #7:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+  #451 = Utf8               java.library.path
+  #452 = String             #451          // java.library.path
+  #453 = Utf8
+  #454 = String             #453          //
+  #455 = Utf8               pathSeparator
+  #456 = NameAndType        #455:#15      // pathSeparator:Ljava/lang/String;
+  #457 = Fieldref           #240.#456     // java/io/File.pathSeparator:Ljava/lang/String;
+  #458 = Utf8               split
+  #459 = Utf8               (Ljava/lang/String;)[Ljava/lang/String;
+  #460 = NameAndType        #458:#459     // split:(Ljava/lang/String;)[Ljava/lang/String;
+  #461 = Methodref          #97.#460      // java/lang/String.split:(Ljava/lang/String;)[Ljava/lang/String;
+  #462 = Utf8               isEmpty
+  #463 = NameAndType        #462:#34      // isEmpty:()Z
+  #464 = Methodref          #97.#463      // java/lang/String.isEmpty:()Z
+  #465 = Utf8               isRegularFile
+  #466 = NameAndType        #465:#314     // isRegularFile:(Ljava/nio/file/Path;[Ljava/nio/file/LinkOption;)Z
+  #467 = Methodref          #197.#466     // java/nio/file/Files.isRegularFile:(Ljava/nio/file/Path;[Ljava/nio/file/LinkOption;)Z
+  #468 = Utf8               Explicit -Dimgui.library.name=\u0001 was not found in java.library.path. Set -Dimgui.library.path to the folder containing the Android ARM64 .so and use its full filename as imgui.library.name.
+  #469 = String             #468          // Explicit -Dimgui.library.name=\u0001 was not found in java.library.path. Set -Dimgui.library.path to the folder containing the Android ARM64 .so and use its full filename as imgui.library.name.
+  #470 = InvokeDynamic      #8:#119       // #8:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+  #471 = Utf8               exact
+  #472 = Utf8               conventional
+  #473 = Utf8               entry
+  #474 = Utf8               mapped
+  #475 = Utf8               .
+  #476 = String             #475          // .
+  #477 = Utf8               ..
+  #478 = String             #477          // ..
+  #479 = Utf8               indexOf
+  #480 = Utf8               (I)I
+  #481 = NameAndType        #479:#480     // indexOf:(I)I
+  #482 = Methodref          #97.#481      // java/lang/String.indexOf:(I)I
+  #483 = Utf8               imgui.library.name must be a filename, not a path: \u0001
+  #484 = String             #483          // imgui.library.name must be a filename, not a path: \u0001
+  #485 = InvokeDynamic      #9:#119       // #9:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+  #486 = Utf8               file
+  #487 = Utf8               java/nio/file/OpenOption
+  #488 = Class              #487          // java/nio/file/OpenOption
+  #489 = Utf8               newInputStream
+  #490 = Utf8               (Ljava/nio/file/Path;[Ljava/nio/file/OpenOption;)Ljava/io/InputStream;
+  #491 = NameAndType        #489:#490     // newInputStream:(Ljava/nio/file/Path;[Ljava/nio/file/OpenOption;)Ljava/io/InputStream;
+  #492 = Methodref          #197.#491     // java/nio/file/Files.newInputStream:(Ljava/nio/file/Path;[Ljava/nio/file/OpenOption;)Ljava/io/InputStream;
+  #493 = Utf8               [B
+  #494 = Class              #493          // "[B"
+  #495 = Utf8               read
+  #496 = Utf8               ([BII)I
+  #497 = NameAndType        #495:#496     // read:([BII)I
+  #498 = Methodref          #193.#497     // java/io/InputStream.read:([BII)I
+  #499 = Utf8               Truncated ELF native library: \u0001
+  #500 = String             #499          // Truncated ELF native library: \u0001
+  #501 = InvokeDynamic      #10:#119      // #10:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+  #502 = Utf8               Expected a little-endian ELF64 Android ARM64 native library: \u0001
+  #503 = String             #502          // Expected a little-endian ELF64 Android ARM64 native library: \u0001
+  #504 = InvokeDynamic      #11:#119      // #11:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+  #505 = Utf8               Native architecture mismatch: ELF e_machine=\u0001, expected EM_AARCH64 (183), in \u0001. Desktop Linux x86_64 libraries cannot run on Android ARM64.
+  #506 = String             #505          // Native architecture mismatch: ELF e_machine=\u0001, expected EM_AARCH64 (183), in \u0001. Desktop Linux x86_64 libraries cannot run on Android ARM64.
+  #507 = Utf8               (ILjava/lang/String;)Ljava/lang/String;
+  #508 = NameAndType        #114:#507     // makeConcatWithConstants:(ILjava/lang/String;)Ljava/lang/String;
+  #509 = InvokeDynamic      #12:#508      // #12:makeConcatWithConstants:(ILjava/lang/String;)Ljava/lang/String;
+  #510 = Utf8               count
+  #511 = Utf8               I
+  #512 = Utf8               offset
+  #513 = Utf8               header
+  #514 = Utf8               machine
+  #515 = Utf8               java/util/Locale
+  #516 = Class              #515          // java/util/Locale
+  #517 = Utf8               ROOT
+  #518 = Utf8               Ljava/util/Locale;
+  #519 = NameAndType        #517:#518     // ROOT:Ljava/util/Locale;
+  #520 = Fieldref           #516.#519     // java/util/Locale.ROOT:Ljava/util/Locale;
+  #521 = Utf8               toLowerCase
+  #522 = Utf8               (Ljava/util/Locale;)Ljava/lang/String;
+  #523 = NameAndType        #521:#522     // toLowerCase:(Ljava/util/Locale;)Ljava/lang/String;
+  #524 = Methodref          #97.#523      // java/lang/String.toLowerCase:(Ljava/util/Locale;)Ljava/lang/String;
+  #525 = Utf8               trim
+  #526 = NameAndType        #525:#160     // trim:()Ljava/lang/String;
+  #527 = Methodref          #97.#526      // java/lang/String.trim:()Ljava/lang/String;
+  #528 = Utf8               message
+  #529 = Utf8               cause
+  #530 = Utf8               java/lang/UnsatisfiedLinkError
+  #531 = Class              #530          // java/lang/UnsatisfiedLinkError
+  #532 = Utf8               [Anubis ImGui] \u0001
+  #533 = String             #532          // [Anubis ImGui] \u0001
+  #534 = InvokeDynamic      #13:#119      // #13:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+  #535 = Methodref          #531.#190     // java/lang/UnsatisfiedLinkError."<init>":(Ljava/lang/String;)V
+  #536 = Utf8               initCause
+  #537 = Utf8               (Ljava/lang/Throwable;)Ljava/lang/Throwable;
+  #538 = NameAndType        #536:#537     // initCause:(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+  #539 = Methodref          #531.#538     // java/lang/UnsatisfiedLinkError.initCause:(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+  #540 = Utf8               Ljava/lang/Throwable;
+  #541 = Utf8               error
+  #542 = Utf8               Ljava/lang/UnsatisfiedLinkError;
+  #543 = Utf8               java/lang/Class
+  #544 = Class              #543          // java/lang/Class
+  #545 = Utf8               getResourceAsStream
+  #546 = Utf8               (Ljava/lang/String;)Ljava/io/InputStream;
+  #547 = NameAndType        #545:#546     // getResourceAsStream:(Ljava/lang/String;)Ljava/io/InputStream;
+  #548 = Methodref          #544.#547     // java/lang/Class.getResourceAsStream:(Ljava/lang/String;)Ljava/io/InputStream;
+  #549 = Utf8               ConstantValue
+  #550 = Utf8               Code
+  #551 = Utf8               LineNumberTable
+  #552 = Utf8               LocalVariableTable
+  #553 = Utf8               StackMapTable
+  #554 = Utf8               LocalVariableTypeTable
+  #555 = Utf8               Signature
+  #556 = Utf8               MethodParameters
+  #557 = Utf8               Exceptions
+  #558 = Utf8               InnerClasses
+  #559 = Utf8               SourceFile
+  #560 = Utf8               BootstrapMethods
+  #561 = Utf8               NestMembers
+{
+  static final java.lang.String RESOURCE;
+    descriptor: Ljava/lang/String;
+    flags: (0x0018) ACC_STATIC, ACC_FINAL
+    ConstantValue: String /io/imgui/java/native-bin/android-arm64/libimgui-java64.so
+
+  static final java.lang.String LIBRARY_PATH;
+    descriptor: Ljava/lang/String;
+    flags: (0x0018) ACC_STATIC, ACC_FINAL
+    ConstantValue: String imgui.library.path
+
+  static final java.lang.String LIBRARY_NAME;
+    descriptor: Ljava/lang/String;
+    flags: (0x0018) ACC_STATIC, ACC_FINAL
+    ConstantValue: String imgui.library.name
+
+  static final java.lang.String DEFAULT_NAME;
+    descriptor: Ljava/lang/String;
+    flags: (0x0018) ACC_STATIC, ACC_FINAL
+    ConstantValue: String libimgui-java64.so
+
+  private imgui.AnubisAndroidNative();
+    descriptor: ()V
+    flags: (0x0002) ACC_PRIVATE
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: invokespecial #30                 // Method java/lang/Object."<init>":()V
+         4: return
+      LineNumberTable:
+        line 21: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       5     0  this   Limgui/AnubisAndroidNative;
+
+  public static boolean isAndroidRuntime();
+    descriptor: ()Z
+    flags: (0x0009) ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=3, locals=0, args_size=0
+         0: invokestatic  #40                 // Method java/lang/System.getProperties:()Ljava/util/Properties;
+         3: invokestatic  #44                 // Method java/lang/System.getenv:()Ljava/util/Map;
+         6: invokestatic  #47                 // Method androidFilesystem:()Z
+         9: invokestatic  #51                 // Method isAndroid:(Ljava/util/Properties;Ljava/util/Map;Z)Z
+        12: ireturn
+      LineNumberTable:
+        line 24: 0
+
+  public static synchronized void prepare();
+    descriptor: ()V
+    flags: (0x0029) ACC_PUBLIC, ACC_STATIC, ACC_SYNCHRONIZED
+    Code:
+      stack=4, locals=0, args_size=0
+         0: invokestatic  #40                 // Method java/lang/System.getProperties:()Ljava/util/Properties;
+         3: invokestatic  #44                 // Method java/lang/System.getenv:()Ljava/util/Map;
+         6: invokestatic  #47                 // Method androidFilesystem:()Z
+         9: invokedynamic #69,  0             // InvokeDynamic #0:open:()Limgui/AnubisAndroidNative$NativeSource;
+        14: invokestatic  #72                 // Method prepare:(Ljava/util/Properties;Ljava/util/Map;ZLimgui/AnubisAndroidNative$NativeSource;)V
+        17: return
+      LineNumberTable:
+        line 28: 0
+        line 30: 17
+
+  static void prepare(java.util.Properties, java.util.Map<java.lang.String, java.lang.String>, boolean, imgui.AnubisAndroidNative$NativeSource);
+    descriptor: (Ljava/util/Properties;Ljava/util/Map;ZLimgui/AnubisAndroidNative$NativeSource;)V
+    flags: (0x0008) ACC_STATIC
+    Code:
+      stack=3, locals=13, args_size=4
+         0: aload_0
+         1: aload_1
+         2: iload_2
+         3: invokestatic  #51                 // Method isAndroid:(Ljava/util/Properties;Ljava/util/Map;Z)Z
+         6: ifne          10
+         9: return
+        10: aload_0
+        11: ldc           #84                 // String os.arch
+        13: invokevirtual #90                 // Method java/util/Properties.getProperty:(Ljava/lang/String;)Ljava/lang/String;
+        16: invokestatic  #93                 // Method lower:(Ljava/lang/String;)Ljava/lang/String;
+        19: astore        4
+        21: aload         4
+        23: ldc           #95                 // String aarch64
+        25: invokevirtual #101                // Method java/lang/String.equals:(Ljava/lang/Object;)Z
+        28: ifne          51
+        31: aload         4
+        33: ldc           #103                // String arm64
+        35: invokevirtual #101                // Method java/lang/String.equals:(Ljava/lang/Object;)Z
+        38: ifne          51
+        41: aload         4
+        43: ldc           #105                // String arm64-v8a
+        45: invokevirtual #101                // Method java/lang/String.equals:(Ljava/lang/Object;)Z
+        48: ifeq          65
+        51: ldc           #107                // String 32
+        53: aload_0
+        54: ldc           #109                // String sun.arch.data.model
+        56: invokevirtual #90                 // Method java/util/Properties.getProperty:(Ljava/lang/String;)Ljava/lang/String;
+        59: invokevirtual #101                // Method java/lang/String.equals:(Ljava/lang/Object;)Z
+        62: ifeq          77
+        65: aload         4
+        67: invokedynamic #120,  0            // InvokeDynamic #1:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+        72: aconst_null
+        73: invokestatic  #124                // Method failure:(Ljava/lang/String;Ljava/lang/Throwable;)Ljava/lang/UnsatisfiedLinkError;
+        76: athrow
+        77: aload_0
+        78: ldc           #23                 // String imgui.library.name
+        80: ldc           #26                 // String libimgui-java64.so
+        82: invokevirtual #127                // Method java/util/Properties.getProperty:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+        85: astore        5
+        87: aload         5
+        89: invokestatic  #131                // Method requireFilename:(Ljava/lang/String;)V
+        92: aload_0
+        93: ldc           #20                 // String imgui.library.path
+        95: invokevirtual #90                 // Method java/util/Properties.getProperty:(Ljava/lang/String;)Ljava/lang/String;
+        98: astore        6
+       100: aload         6
+       102: ifnull        125
+       105: aload         6
+       107: iconst_0
+       108: anewarray     #97                 // class java/lang/String
+       111: invokestatic  #137                // Method java/nio/file/Paths.get:(Ljava/lang/String;[Ljava/lang/String;)Ljava/nio/file/Path;
+       114: aload         5
+       116: invokeinterface #143,  2          // InterfaceMethod java/nio/file/Path.resolve:(Ljava/lang/String;)Ljava/nio/file/Path;
+       121: invokestatic  #147                // Method validateArm64:(Ljava/nio/file/Path;)V
+       124: return
+       125: aload_3
+       126: astore        7
+       128: aload_0
+       129: ldc           #23                 // String imgui.library.name
+       131: invokevirtual #150                // Method java/util/Properties.containsKey:(Ljava/lang/Object;)Z
+       134: ifeq          199
+       137: aload         5
+       139: aload_0
+       140: invokestatic  #154                // Method findNamedOverride:(Ljava/lang/String;Ljava/util/Properties;)Ljava/nio/file/Path;
+       143: astore        8
+       145: aload         8
+       147: invokestatic  #147                // Method validateArm64:(Ljava/nio/file/Path;)V
+       150: aload         8
+       152: invokeinterface #158,  1          // InterfaceMethod java/nio/file/Path.getFileName:()Ljava/nio/file/Path;
+       157: invokeinterface #162,  1          // InterfaceMethod java/nio/file/Path.toString:()Ljava/lang/String;
+       162: aload         5
+       164: invokevirtual #101                // Method java/lang/String.equals:(Ljava/lang/Object;)Z
+       167: ifeq          190
+       170: aload_0
+       171: ldc           #20                 // String imgui.library.path
+       173: aload         8
+       175: invokeinterface #165,  1          // InterfaceMethod java/nio/file/Path.getParent:()Ljava/nio/file/Path;
+       180: invokeinterface #162,  1          // InterfaceMethod java/nio/file/Path.toString:()Ljava/lang/String;
+       185: invokevirtual #169                // Method java/util/Properties.setProperty:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
+       188: pop
+       189: return
+       190: aload         8
+       192: invokedynamic #177,  0            // InvokeDynamic #2:open:(Ljava/nio/file/Path;)Limgui/AnubisAndroidNative$NativeSource;
+       197: astore        7
+       199: aload_0
+       200: aload_1
+       201: invokestatic  #181                // Method cacheCandidates:(Ljava/util/Properties;Ljava/util/Map;)Ljava/util/List;
+       204: invokestatic  #185                // Method createPrivateDirectory:(Ljava/util/List;)Ljava/nio/file/Path;
+       207: astore        8
+       209: aload         8
+       211: aload         5
+       213: invokeinterface #143,  2          // InterfaceMethod java/nio/file/Path.resolve:(Ljava/lang/String;)Ljava/nio/file/Path;
+       218: astore        9
+       220: aload         7
+       222: invokeinterface #187,  1          // InterfaceMethod imgui/AnubisAndroidNative$NativeSource.open:()Ljava/io/InputStream;
+       227: astore        10
+       229: aload         10
+       231: ifnonnull     244
+       234: new           #80                 // class java/io/IOException
+       237: dup
+       238: ldc           #189                // String Bundled Android ARM64 native is missing: /io/imgui/java/native-bin/android-arm64/libimgui-java64.so
+       240: invokespecial #191                // Method java/io/IOException."<init>":(Ljava/lang/String;)V
+       243: athrow
+       244: aload         10
+       246: aload         9
+       248: iconst_0
+       249: anewarray     #195                // class java/nio/file/CopyOption
+       252: invokestatic  #201                // Method java/nio/file/Files.copy:(Ljava/io/InputStream;Ljava/nio/file/Path;[Ljava/nio/file/CopyOption;)J
+       255: pop2
+       256: aload         10
+       258: ifnull        296
+       261: aload         10
+       263: invokevirtual #204                // Method java/io/InputStream.close:()V
+       266: goto          296
+       269: astore        11
+       271: aload         10
+       273: ifnull        293
+       276: aload         10
+       278: invokevirtual #204                // Method java/io/InputStream.close:()V
+       281: goto          293
+       284: astore        12
+       286: aload         11
+       288: aload         12
+       290: invokevirtual #210                // Method java/lang/Throwable.addSuppressed:(Ljava/lang/Throwable;)V
+       293: aload         11
+       295: athrow
+       296: aload         9
+       298: invokestatic  #147                // Method validateArm64:(Ljava/nio/file/Path;)V
+       301: aload         9
+       303: invokestatic  #214                // Method java/nio/file/Files.getFileStore:(Ljava/nio/file/Path;)Ljava/nio/file/FileStore;
+       306: ldc           #216                // String posix
+       308: invokevirtual #222                // Method java/nio/file/FileStore.supportsFileAttributeView:(Ljava/lang/String;)Z
+       311: ifeq          325
+       314: aload         9
+       316: ldc           #224                // String r-x------
+       318: invokestatic  #230                // Method java/nio/file/attribute/PosixFilePermissions.fromString:(Ljava/lang/String;)Ljava/util/Set;
+       321: invokestatic  #234                // Method java/nio/file/Files.setPosixFilePermissions:(Ljava/nio/file/Path;Ljava/util/Set;)Ljava/nio/file/Path;
+       324: pop
+       325: aload         8
+       327: invokeinterface #238,  1          // InterfaceMethod java/nio/file/Path.toFile:()Ljava/io/File;
+       332: invokevirtual #243                // Method java/io/File.deleteOnExit:()V
+       335: aload         9
+       337: invokeinterface #238,  1          // InterfaceMethod java/nio/file/Path.toFile:()Ljava/io/File;
+       342: invokevirtual #243                // Method java/io/File.deleteOnExit:()V
+       345: aload_0
+       346: ldc           #20                 // String imgui.library.path
+       348: aload         8
+       350: invokeinterface #162,  1          // InterfaceMethod java/nio/file/Path.toString:()Ljava/lang/String;
+       355: invokevirtual #169                // Method java/util/Properties.setProperty:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
+       358: pop
+       359: goto          391
+       362: astore        10
+       364: aload         9
+       366: invokestatic  #249                // Method java/nio/file/Files.deleteIfExists:(Ljava/nio/file/Path;)Z
+       369: pop
+       370: aload         8
+       372: invokestatic  #249                // Method java/nio/file/Files.deleteIfExists:(Ljava/nio/file/Path;)Z
+       375: pop
+       376: goto          388
+       379: astore        11
+       381: aload         10
+       383: aload         11
+       385: invokevirtual #250                // Method java/lang/Exception.addSuppressed:(Ljava/lang/Throwable;)V
+       388: aload         10
+       390: athrow
+       391: goto          412
+       394: astore        5
+       396: aload         5
+       398: invokevirtual #253                // Method java/lang/Exception.getMessage:()Ljava/lang/String;
+       401: invokedynamic #256,  0            // InvokeDynamic #3:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+       406: aload         5
+       408: invokestatic  #124                // Method failure:(Ljava/lang/String;Ljava/lang/Throwable;)Ljava/lang/UnsatisfiedLinkError;
+       411: athrow
+       412: return
+      Exception table:
+         from    to  target type
+           229   256   269   Class java/lang/Throwable
+           276   281   284   Class java/lang/Throwable
+           220   359   362   Class java/io/IOException
+           220   359   362   Class java/lang/RuntimeException
+           364   376   379   Class java/io/IOException
+            77   124   394   Class java/io/IOException
+            77   124   394   Class java/lang/RuntimeException
+           125   189   394   Class java/io/IOException
+           125   189   394   Class java/lang/RuntimeException
+           190   391   394   Class java/io/IOException
+           190   391   394   Class java/lang/RuntimeException
+      StackMapTable: number_of_entries = 19
+        frame_type = 10 /* same */
+        frame_type = 252 /* append */
+          offset_delta = 40
+          locals = [ class java/lang/String ]
+        frame_type = 13 /* same */
+        frame_type = 11 /* same */
+        frame_type = 253 /* append */
+          offset_delta = 47
+          locals = [ class java/lang/String, class java/lang/String ]
+        frame_type = 253 /* append */
+          offset_delta = 64
+          locals = [ class imgui/AnubisAndroidNative$NativeSource, class java/nio/file/Path ]
+        frame_type = 250 /* chop */
+          offset_delta = 8
+        frame_type = 254 /* append */
+          offset_delta = 44
+          locals = [ class java/nio/file/Path, class java/nio/file/Path, class java/io/InputStream ]
+        frame_type = 88 /* same_locals_1_stack_item */
+          stack = [ class java/lang/Throwable ]
+        frame_type = 255 /* full_frame */
+          offset_delta = 14
+          locals = [ class java/util/Properties, class java/util/Map, int, class imgui/AnubisAndroidNative$NativeSource, class java/lang/String, class java/lang/String, class java/lang/String, class imgui/AnubisAndroidNative$NativeSource, class java/nio/file/Path, class java/nio/file/Path, class java/io/InputStream, class java/lang/Throwable ]
+          stack = [ class java/lang/Throwable ]
+        frame_type = 8 /* same */
+        frame_type = 249 /* chop */
+          offset_delta = 2
+        frame_type = 28 /* same */
+        frame_type = 100 /* same_locals_1_stack_item */
+          stack = [ class java/lang/Exception ]
+        frame_type = 255 /* full_frame */
+          offset_delta = 16
+          locals = [ class java/util/Properties, class java/util/Map, int, class imgui/AnubisAndroidNative$NativeSource, class java/lang/String, class java/lang/String, class java/lang/String, class imgui/AnubisAndroidNative$NativeSource, class java/nio/file/Path, class java/nio/file/Path, class java/lang/Exception ]
+          stack = [ class java/io/IOException ]
+        frame_type = 8 /* same */
+        frame_type = 255 /* full_frame */
+          offset_delta = 2
+          locals = [ class java/util/Properties, class java/util/Map, int, class imgui/AnubisAndroidNative$NativeSource, class java/lang/String ]
+          stack = []
+        frame_type = 66 /* same_locals_1_stack_item */
+          stack = [ class java/lang/Exception ]
+        frame_type = 17 /* same */
+      LineNumberTable:
+        line 38: 0
+        line 39: 9
+        line 41: 10
+        line 42: 21
+        line 43: 56
+        line 44: 65
+        line 48: 77
+        line 49: 87
+        line 50: 92
+        line 51: 100
+        line 52: 105
+        line 53: 124
+        line 56: 125
+        line 57: 128
+        line 58: 137
+        line 59: 145
+        line 60: 150
+        line 61: 170
+        line 62: 189
+        line 64: 190
+        line 67: 199
+        line 68: 209
+        line 70: 220
+        line 71: 229
+        line 72: 234
+        line 74: 244
+        line 75: 256
+        line 70: 269
+        line 76: 296
+        line 77: 301
+        line 78: 314
+        line 80: 325
+        line 81: 335
+        line 82: 345
+        line 91: 359
+        line 83: 362
+        line 85: 364
+        line 86: 370
+        line 89: 376
+        line 87: 379
+        line 88: 381
+        line 90: 388
+        line 94: 391
+        line 92: 394
+        line 93: 396
+        line 95: 412
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+          145      54     8 custom   Ljava/nio/file/Path;
+          229      67    10 input   Ljava/io/InputStream;
+          381       7    11 cleanup   Ljava/io/IOException;
+          364      27    10 exception   Ljava/lang/Exception;
+           87     304     5  name   Ljava/lang/String;
+          100     291     6 override   Ljava/lang/String;
+          128     263     7 source   Limgui/AnubisAndroidNative$NativeSource;
+          209     182     8 directory   Ljava/nio/file/Path;
+          220     171     9 nativeFile   Ljava/nio/file/Path;
+          396      16     5 exception   Ljava/lang/Exception;
+            0     413     0 properties   Ljava/util/Properties;
+            0     413     1 environment   Ljava/util/Map;
+            0     413     2 androidFilesystem   Z
+            0     413     3 bundledNative   Limgui/AnubisAndroidNative$NativeSource;
+           21     392     4  arch   Ljava/lang/String;
+      LocalVariableTypeTable:
+        Start  Length  Slot  Name   Signature
+            0     413     1 environment   Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;
+    Signature: #73                          // (Ljava/util/Properties;Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;ZLimgui/AnubisAndroidNative$NativeSource;)V
+    MethodParameters:
+      Name                           Flags
+      properties
+      environment
+      androidFilesystem
+      bundledNative
+
+  static boolean isAndroid(java.util.Properties, java.util.Map<java.lang.String, java.lang.String>, boolean);
+    descriptor: (Ljava/util/Properties;Ljava/util/Map;Z)Z
+    flags: (0x0008) ACC_STATIC
+    Code:
+      stack=2, locals=5, args_size=3
+         0: aload_0
+         1: ldc_w         #278                // String os.name
+         4: invokevirtual #90                 // Method java/util/Properties.getProperty:(Ljava/lang/String;)Ljava/lang/String;
+         7: invokestatic  #93                 // Method lower:(Ljava/lang/String;)Ljava/lang/String;
+        10: astore_3
+        11: aload_0
+        12: ldc_w         #280                // String java.vm.name
+        15: invokevirtual #90                 // Method java/util/Properties.getProperty:(Ljava/lang/String;)Ljava/lang/String;
+        18: invokestatic  #93                 // Method lower:(Ljava/lang/String;)Ljava/lang/String;
+        21: astore        4
+        23: aload_3
+        24: ldc_w         #282                // String android
+        27: invokevirtual #286                // Method java/lang/String.contains:(Ljava/lang/CharSequence;)Z
+        30: ifne          74
+        33: aload_0
+        34: ldc_w         #288                // String java.runtime.name
+        37: invokevirtual #90                 // Method java/util/Properties.getProperty:(Ljava/lang/String;)Ljava/lang/String;
+        40: invokestatic  #93                 // Method lower:(Ljava/lang/String;)Ljava/lang/String;
+        43: ldc_w         #282                // String android
+        46: invokevirtual #286                // Method java/lang/String.contains:(Ljava/lang/CharSequence;)Z
+        49: ifne          74
+        52: aload         4
+        54: ldc_w         #282                // String android
+        57: invokevirtual #286                // Method java/lang/String.contains:(Ljava/lang/CharSequence;)Z
+        60: ifne          74
+        63: aload         4
+        65: ldc_w         #290                // String dalvik
+        68: invokevirtual #286                // Method java/lang/String.contains:(Ljava/lang/CharSequence;)Z
+        71: ifeq          76
+        74: iconst_1
+        75: ireturn
+        76: aload_3
+        77: ldc_w         #292                // String linux
+        80: invokevirtual #286                // Method java/lang/String.contains:(Ljava/lang/CharSequence;)Z
+        83: ifeq          167
+        86: iload_2
+        87: ifne          163
+        90: aload_0
+        91: ldc_w         #294                // String os.version
+        94: invokevirtual #90                 // Method java/util/Properties.getProperty:(Ljava/lang/String;)Ljava/lang/String;
+        97: invokestatic  #93                 // Method lower:(Ljava/lang/String;)Ljava/lang/String;
+       100: ldc_w         #282                // String android
+       103: invokevirtual #286                // Method java/lang/String.contains:(Ljava/lang/CharSequence;)Z
+       106: ifne          163
+       109: aload_1
+       110: ldc_w         #296                // String POJAV_NATIVEDIR
+       113: invokeinterface #299,  2          // InterfaceMethod java/util/Map.get:(Ljava/lang/Object;)Ljava/lang/Object;
+       118: checkcast     #97                 // class java/lang/String
+       121: invokestatic  #302                // Method nonempty:(Ljava/lang/String;)Z
+       124: ifne          163
+       127: aload_1
+       128: ldc_w         #304                // String MOJO_RENDERER
+       131: invokeinterface #299,  2          // InterfaceMethod java/util/Map.get:(Ljava/lang/Object;)Ljava/lang/Object;
+       136: checkcast     #97                 // class java/lang/String
+       139: invokestatic  #302                // Method nonempty:(Ljava/lang/String;)Z
+       142: ifne          163
+       145: aload_1
+       146: ldc_w         #306                // String MOD_ANDROID_RUNTIME
+       149: invokeinterface #299,  2          // InterfaceMethod java/util/Map.get:(Ljava/lang/Object;)Ljava/lang/Object;
+       154: checkcast     #97                 // class java/lang/String
+       157: invokestatic  #302                // Method nonempty:(Ljava/lang/String;)Z
+       160: ifeq          167
+       163: iconst_1
+       164: goto          168
+       167: iconst_0
+       168: ireturn
+      StackMapTable: number_of_entries = 5
+        frame_type = 253 /* append */
+          offset_delta = 74
+          locals = [ class java/lang/String, class java/lang/String ]
+        frame_type = 1 /* same */
+        frame_type = 251 /* same_frame_extended */
+          offset_delta = 86
+        frame_type = 3 /* same */
+        frame_type = 64 /* same_locals_1_stack_item */
+          stack = [ int ]
+      LineNumberTable:
+        line 99: 0
+        line 100: 11
+        line 101: 23
+        line 102: 37
+        line 103: 57
+        line 104: 74
+        line 106: 76
+        line 107: 94
+        line 108: 113
+        line 109: 131
+        line 110: 149
+        line 106: 168
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0     169     0 properties   Ljava/util/Properties;
+            0     169     1 environment   Ljava/util/Map;
+            0     169     2 androidFilesystem   Z
+           11     158     3    os   Ljava/lang/String;
+           23     146     4    vm   Ljava/lang/String;
+      LocalVariableTypeTable:
+        Start  Length  Slot  Name   Signature
+            0     169     1 environment   Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;
+    Signature: #276                         // (Ljava/util/Properties;Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;Z)Z
+    MethodParameters:
+      Name                           Flags
+      properties
+      environment
+      androidFilesystem
+
+  private static boolean androidFilesystem();
+    descriptor: ()Z
+    flags: (0x000a) ACC_PRIVATE, ACC_STATIC
+    Code:
+      stack=2, locals=0, args_size=0
+         0: ldc_w         #310                // String /system/bin/linker64
+         3: iconst_0
+         4: anewarray     #97                 // class java/lang/String
+         7: invokestatic  #137                // Method java/nio/file/Paths.get:(Ljava/lang/String;[Ljava/lang/String;)Ljava/nio/file/Path;
+        10: iconst_0
+        11: anewarray     #312                // class java/nio/file/LinkOption
+        14: invokestatic  #316                // Method java/nio/file/Files.exists:(Ljava/nio/file/Path;[Ljava/nio/file/LinkOption;)Z
+        17: ifne          40
+        20: ldc_w         #318                // String /system/bin/linker
+        23: iconst_0
+        24: anewarray     #97                 // class java/lang/String
+        27: invokestatic  #137                // Method java/nio/file/Paths.get:(Ljava/lang/String;[Ljava/lang/String;)Ljava/nio/file/Path;
+        30: iconst_0
+        31: anewarray     #312                // class java/nio/file/LinkOption
+        34: invokestatic  #316                // Method java/nio/file/Files.exists:(Ljava/nio/file/Path;[Ljava/nio/file/LinkOption;)Z
+        37: ifeq          64
+        40: ldc_w         #320                // String /system/etc
+        43: iconst_0
+        44: anewarray     #97                 // class java/lang/String
+        47: invokestatic  #137                // Method java/nio/file/Paths.get:(Ljava/lang/String;[Ljava/lang/String;)Ljava/nio/file/Path;
+        50: iconst_0
+        51: anewarray     #312                // class java/nio/file/LinkOption
+        54: invokestatic  #323                // Method java/nio/file/Files.isDirectory:(Ljava/nio/file/Path;[Ljava/nio/file/LinkOption;)Z
+        57: ifeq          64
+        60: iconst_1
+        61: goto          65
+        64: iconst_0
+        65: ireturn
+      StackMapTable: number_of_entries = 3
+        frame_type = 40 /* same */
+        frame_type = 23 /* same */
+        frame_type = 64 /* same_locals_1_stack_item */
+          stack = [ int ]
+      LineNumberTable:
+        line 114: 0
+        line 115: 27
+        line 116: 47
+        line 114: 65
+
+  static java.util.List<java.nio.file.Path> cacheCandidates(java.util.Properties, java.util.Map<java.lang.String, java.lang.String>);
+    descriptor: (Ljava/util/Properties;Ljava/util/Map;)Ljava/util/List;
+    flags: (0x0008) ACC_STATIC
+    Code:
+      stack=3, locals=3, args_size=2
+         0: new           #326                // class java/util/ArrayList
+         3: dup
+         4: invokespecial #327                // Method java/util/ArrayList."<init>":()V
+         7: astore_2
+         8: aload_2
+         9: aload_1
+        10: ldc_w         #306                // String MOD_ANDROID_RUNTIME
+        13: invokeinterface #299,  2          // InterfaceMethod java/util/Map.get:(Ljava/lang/Object;)Ljava/lang/Object;
+        18: checkcast     #97                 // class java/lang/String
+        21: invokestatic  #331                // Method addCandidate:(Ljava/util/List;Ljava/lang/String;)V
+        24: aload_2
+        25: aload_1
+        26: ldc_w         #333                // String TMPDIR
+        29: invokeinterface #299,  2          // InterfaceMethod java/util/Map.get:(Ljava/lang/Object;)Ljava/lang/Object;
+        34: checkcast     #97                 // class java/lang/String
+        37: invokestatic  #331                // Method addCandidate:(Ljava/util/List;Ljava/lang/String;)V
+        40: aload_2
+        41: aload_0
+        42: ldc_w         #335                // String java.io.tmpdir
+        45: invokevirtual #90                 // Method java/util/Properties.getProperty:(Ljava/lang/String;)Ljava/lang/String;
+        48: invokestatic  #331                // Method addCandidate:(Ljava/util/List;Ljava/lang/String;)V
+        51: aload_2
+        52: areturn
+      LineNumberTable:
+        line 120: 0
+        line 121: 8
+        line 122: 24
+        line 123: 40
+        line 124: 51
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      53     0 properties   Ljava/util/Properties;
+            0      53     1 environment   Ljava/util/Map;
+            8      45     2 paths   Ljava/util/List;
+      LocalVariableTypeTable:
+        Start  Length  Slot  Name   Signature
+            0      53     1 environment   Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;
+            8      45     2 paths   Ljava/util/List<Ljava/nio/file/Path;>;
+    Signature: #324                         // (Ljava/util/Properties;Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;)Ljava/util/List<Ljava/nio/file/Path;>;
+    MethodParameters:
+      Name                           Flags
+      properties
+      environment
+
+  private static void addCandidate(java.util.List<java.nio.file.Path>, java.lang.String);
+    descriptor: (Ljava/util/List;Ljava/lang/String;)V
+    flags: (0x000a) ACC_PRIVATE, ACC_STATIC
+    Code:
+      stack=2, locals=3, args_size=2
+         0: aload_1
+         1: invokestatic  #302                // Method nonempty:(Ljava/lang/String;)Z
+         4: ifeq          44
+         7: aload_1
+         8: iconst_0
+         9: anewarray     #97                 // class java/lang/String
+        12: invokestatic  #137                // Method java/nio/file/Paths.get:(Ljava/lang/String;[Ljava/lang/String;)Ljava/nio/file/Path;
+        15: invokeinterface #343,  1          // InterfaceMethod java/nio/file/Path.toAbsolutePath:()Ljava/nio/file/Path;
+        20: invokeinterface #346,  1          // InterfaceMethod java/nio/file/Path.normalize:()Ljava/nio/file/Path;
+        25: astore_2
+        26: aload_0
+        27: aload_2
+        28: invokeinterface #350,  2          // InterfaceMethod java/util/List.contains:(Ljava/lang/Object;)Z
+        33: ifne          44
+        36: aload_0
+        37: aload_2
+        38: invokeinterface #353,  2          // InterfaceMethod java/util/List.add:(Ljava/lang/Object;)Z
+        43: pop
+        44: return
+      StackMapTable: number_of_entries = 1
+        frame_type = 44 /* same */
+      LineNumberTable:
+        line 128: 0
+        line 129: 7
+        line 130: 26
+        line 131: 36
+        line 134: 44
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+           26      18     2  path   Ljava/nio/file/Path;
+            0      45     0 paths   Ljava/util/List;
+            0      45     1 value   Ljava/lang/String;
+      LocalVariableTypeTable:
+        Start  Length  Slot  Name   Signature
+            0      45     0 paths   Ljava/util/List<Ljava/nio/file/Path;>;
+    Signature: #339                         // (Ljava/util/List<Ljava/nio/file/Path;>;Ljava/lang/String;)V
+    MethodParameters:
+      Name                           Flags
+      paths
+      value
+
+  static java.nio.file.Path createPrivateDirectory(java.util.List<java.nio.file.Path>) throws java.io.IOException;
+    descriptor: (Ljava/util/List;)Ljava/nio/file/Path;
+    flags: (0x0008) ACC_STATIC
+    Code:
+      stack=6, locals=5, args_size=1
+         0: new           #80                 // class java/io/IOException
+         3: dup
+         4: ldc_w         #360                // String No writable internal native cache. Use the launcher\'s private MOD_ANDROID_RUNTIME, TMPDIR or -Djava.io.tmpdir; shared storage cannot load .so files.
+         7: invokespecial #191                // Method java/io/IOException."<init>":(Ljava/lang/String;)V
+        10: astore_1
+        11: aload_0
+        12: invokeinterface #364,  1          // InterfaceMethod java/util/List.iterator:()Ljava/util/Iterator;
+        17: astore_2
+        18: aload_2
+        19: invokeinterface #369,  1          // InterfaceMethod java/util/Iterator.hasNext:()Z
+        24: ifeq          170
+        27: aload_2
+        28: invokeinterface #373,  1          // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+        33: checkcast     #139                // class java/nio/file/Path
+        36: astore_3
+        37: aload_3
+        38: invokestatic  #376                // Method isSharedStorage:(Ljava/nio/file/Path;)Z
+        41: ifeq          61
+        44: new           #80                 // class java/io/IOException
+        47: dup
+        48: aload_3
+        49: invokestatic  #380                // Method java/lang/String.valueOf:(Ljava/lang/Object;)Ljava/lang/String;
+        52: invokedynamic #383,  0            // InvokeDynamic #4:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+        57: invokespecial #191                // Method java/io/IOException."<init>":(Ljava/lang/String;)V
+        60: athrow
+        61: aload_3
+        62: iconst_0
+        63: anewarray     #385                // class java/nio/file/attribute/FileAttribute
+        66: invokestatic  #389                // Method java/nio/file/Files.createDirectories:(Ljava/nio/file/Path;[Ljava/nio/file/attribute/FileAttribute;)Ljava/nio/file/Path;
+        69: pop
+        70: aload_3
+        71: iconst_0
+        72: anewarray     #312                // class java/nio/file/LinkOption
+        75: invokeinterface #393,  2          // InterfaceMethod java/nio/file/Path.toRealPath:([Ljava/nio/file/LinkOption;)Ljava/nio/file/Path;
+        80: astore        4
+        82: aload         4
+        84: invokestatic  #376                // Method isSharedStorage:(Ljava/nio/file/Path;)Z
+        87: ifeq          108
+        90: new           #80                 // class java/io/IOException
+        93: dup
+        94: aload         4
+        96: invokestatic  #380                // Method java/lang/String.valueOf:(Ljava/lang/Object;)Ljava/lang/String;
+        99: invokedynamic #396,  0            // InvokeDynamic #5:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+       104: invokespecial #191                // Method java/io/IOException."<init>":(Ljava/lang/String;)V
+       107: athrow
+       108: aload         4
+       110: invokestatic  #214                // Method java/nio/file/Files.getFileStore:(Ljava/nio/file/Path;)Ljava/nio/file/FileStore;
+       113: ldc           #216                // String posix
+       115: invokevirtual #222                // Method java/nio/file/FileStore.supportsFileAttributeView:(Ljava/lang/String;)Z
+       118: ifeq          146
+       121: aload         4
+       123: ldc_w         #398                // String anubis-imgui-arm64-
+       126: iconst_1
+       127: anewarray     #385                // class java/nio/file/attribute/FileAttribute
+       130: dup
+       131: iconst_0
+       132: ldc_w         #400                // String rwx------
+       135: invokestatic  #230                // Method java/nio/file/attribute/PosixFilePermissions.fromString:(Ljava/lang/String;)Ljava/util/Set;
+       138: invokestatic  #404                // Method java/nio/file/attribute/PosixFilePermissions.asFileAttribute:(Ljava/util/Set;)Ljava/nio/file/attribute/FileAttribute;
+       141: aastore
+       142: invokestatic  #408                // Method java/nio/file/Files.createTempDirectory:(Ljava/nio/file/Path;Ljava/lang/String;[Ljava/nio/file/attribute/FileAttribute;)Ljava/nio/file/Path;
+       145: areturn
+       146: aload         4
+       148: ldc_w         #398                // String anubis-imgui-arm64-
+       151: iconst_0
+       152: anewarray     #385                // class java/nio/file/attribute/FileAttribute
+       155: invokestatic  #408                // Method java/nio/file/Files.createTempDirectory:(Ljava/nio/file/Path;Ljava/lang/String;[Ljava/nio/file/attribute/FileAttribute;)Ljava/nio/file/Path;
+       158: areturn
+       159: astore        4
+       161: aload_1
+       162: aload         4
+       164: invokevirtual #409                // Method java/io/IOException.addSuppressed:(Ljava/lang/Throwable;)V
+       167: goto          18
+       170: aload_1
+       171: athrow
+      Exception table:
+         from    to  target type
+            37   145   159   Class java/io/IOException
+            37   145   159   Class java/lang/SecurityException
+           146   158   159   Class java/io/IOException
+           146   158   159   Class java/lang/SecurityException
+      StackMapTable: number_of_entries = 6
+        frame_type = 253 /* append */
+          offset_delta = 18
+          locals = [ class java/io/IOException, class java/util/Iterator ]
+        frame_type = 252 /* append */
+          offset_delta = 42
+          locals = [ class java/nio/file/Path ]
+        frame_type = 252 /* append */
+          offset_delta = 46
+          locals = [ class java/nio/file/Path ]
+        frame_type = 37 /* same */
+        frame_type = 255 /* full_frame */
+          offset_delta = 12
+          locals = [ class java/util/List, class java/io/IOException, class java/util/Iterator, class java/nio/file/Path ]
+          stack = [ class java/lang/Exception ]
+        frame_type = 249 /* chop */
+          offset_delta = 10
+      LineNumberTable:
+        line 137: 0
+        line 139: 11
+        line 141: 37
+        line 142: 44
+        line 144: 61
+        line 145: 70
+        line 146: 82
+        line 147: 90
+        line 149: 108
+        line 150: 121
+        line 151: 135
+        line 150: 142
+        line 153: 146
+        line 154: 159
+        line 155: 161
+        line 157: 167
+        line 158: 170
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+           82      77     4  real   Ljava/nio/file/Path;
+          161       6     4 exception   Ljava/lang/Exception;
+           37     130     3 candidate   Ljava/nio/file/Path;
+            0     172     0 candidates   Ljava/util/List;
+           11     161     1 failures   Ljava/io/IOException;
+      LocalVariableTypeTable:
+        Start  Length  Slot  Name   Signature
+            0     172     0 candidates   Ljava/util/List<Ljava/nio/file/Path;>;
+    Exceptions:
+      throws java.io.IOException
+    Signature: #355                         // (Ljava/util/List<Ljava/nio/file/Path;>;)Ljava/nio/file/Path;
+    MethodParameters:
+      Name                           Flags
+      candidates
+
+  static boolean isSharedStorage(java.nio.file.Path);
+    descriptor: (Ljava/nio/file/Path;)Z
+    flags: (0x0008) ACC_STATIC
+    Code:
+      stack=4, locals=6, args_size=1
+         0: aload_0
+         1: invokeinterface #343,  1          // InterfaceMethod java/nio/file/Path.toAbsolutePath:()Ljava/nio/file/Path;
+         6: invokeinterface #346,  1          // InterfaceMethod java/nio/file/Path.normalize:()Ljava/nio/file/Path;
+        11: invokeinterface #162,  1          // InterfaceMethod java/nio/file/Path.toString:()Ljava/lang/String;
+        16: bipush        92
+        18: bipush        47
+        20: invokevirtual #416                // Method java/lang/String.replace:(CC)Ljava/lang/String;
+        23: astore_1
+        24: aload_1
+        25: invokevirtual #420                // Method java/lang/String.length:()I
+        28: iconst_2
+        29: if_icmple     48
+        32: aload_1
+        33: iconst_1
+        34: invokevirtual #424                // Method java/lang/String.charAt:(I)C
+        37: bipush        58
+        39: if_icmpne     48
+        42: aload_1
+        43: iconst_2
+        44: invokevirtual #428                // Method java/lang/String.substring:(I)Ljava/lang/String;
+        47: astore_1
+        48: iconst_5
+        49: anewarray     #97                 // class java/lang/String
+        52: dup
+        53: iconst_0
+        54: ldc_w         #430                // String /sdcard
+        57: aastore
+        58: dup
+        59: iconst_1
+        60: ldc_w         #432                // String /storage
+        63: aastore
+        64: dup
+        65: iconst_2
+        66: ldc_w         #434                // String /mnt/sdcard
+        69: aastore
+        70: dup
+        71: iconst_3
+        72: ldc_w         #436                // String /mnt/media_rw
+        75: aastore
+        76: dup
+        77: iconst_4
+        78: ldc_w         #438                // String /data/media
+        81: aastore
+        82: astore_2
+        83: aload_2
+        84: arraylength
+        85: istore_3
+        86: iconst_0
+        87: istore        4
+        89: iload         4
+        91: iload_3
+        92: if_icmpge     132
+        95: aload_2
+        96: iload         4
+        98: aaload
+        99: astore        5
+       101: aload_1
+       102: aload         5
+       104: invokevirtual #101                // Method java/lang/String.equals:(Ljava/lang/Object;)Z
+       107: ifne          124
+       110: aload_1
+       111: aload         5
+       113: invokedynamic #443,  0            // InvokeDynamic #6:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+       118: invokevirtual #446                // Method java/lang/String.startsWith:(Ljava/lang/String;)Z
+       121: ifeq          126
+       124: iconst_1
+       125: ireturn
+       126: iinc          4, 1
+       129: goto          89
+       132: iconst_0
+       133: ireturn
+      StackMapTable: number_of_entries = 5
+        frame_type = 252 /* append */
+          offset_delta = 48
+          locals = [ class java/lang/String ]
+        frame_type = 254 /* append */
+          offset_delta = 40
+          locals = [ class "[Ljava/lang/String;", int, int ]
+        frame_type = 252 /* append */
+          offset_delta = 34
+          locals = [ class java/lang/String ]
+        frame_type = 250 /* chop */
+          offset_delta = 1
+        frame_type = 248 /* chop */
+          offset_delta = 5
+      LineNumberTable:
+        line 162: 0
+        line 163: 24
+        line 164: 42
+        line 166: 48
+        line 167: 101
+        line 168: 124
+        line 166: 126
+        line 171: 132
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+          101      25     5 prefix   Ljava/lang/String;
+            0     134     0  path   Ljava/nio/file/Path;
+           24     110     1 value   Ljava/lang/String;
+    MethodParameters:
+      Name                           Flags
+      path
+
+  private static java.nio.file.Path findNamedOverride(java.lang.String, java.util.Properties) throws java.io.IOException;
+    descriptor: (Ljava/lang/String;Ljava/util/Properties;)Ljava/nio/file/Path;
+    flags: (0x000a) ACC_PRIVATE, ACC_STATIC
+    Code:
+      stack=3, locals=10, args_size=2
+         0: aload_0
+         1: invokedynamic #450,  0            // InvokeDynamic #7:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+         6: astore_2
+         7: aload_1
+         8: ldc_w         #452                // String java.library.path
+        11: ldc_w         #454                // String
+        14: invokevirtual #127                // Method java/util/Properties.getProperty:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+        17: getstatic     #457                // Field java/io/File.pathSeparator:Ljava/lang/String;
+        20: invokevirtual #461                // Method java/lang/String.split:(Ljava/lang/String;)[Ljava/lang/String;
+        23: astore_3
+        24: aload_3
+        25: arraylength
+        26: istore        4
+        28: iconst_0
+        29: istore        5
+        31: iload         5
+        33: iload         4
+        35: if_icmpge     132
+        38: aload_3
+        39: iload         5
+        41: aaload
+        42: astore        6
+        44: aload         6
+        46: invokevirtual #464                // Method java/lang/String.isEmpty:()Z
+        49: ifeq          55
+        52: goto          126
+        55: aload         6
+        57: iconst_0
+        58: anewarray     #97                 // class java/lang/String
+        61: invokestatic  #137                // Method java/nio/file/Paths.get:(Ljava/lang/String;[Ljava/lang/String;)Ljava/nio/file/Path;
+        64: invokeinterface #343,  1          // InterfaceMethod java/nio/file/Path.toAbsolutePath:()Ljava/nio/file/Path;
+        69: invokeinterface #346,  1          // InterfaceMethod java/nio/file/Path.normalize:()Ljava/nio/file/Path;
+        74: astore        7
+        76: aload         7
+        78: aload_0
+        79: invokeinterface #143,  2          // InterfaceMethod java/nio/file/Path.resolve:(Ljava/lang/String;)Ljava/nio/file/Path;
+        84: astore        8
+        86: aload         8
+        88: iconst_0
+        89: anewarray     #312                // class java/nio/file/LinkOption
+        92: invokestatic  #467                // Method java/nio/file/Files.isRegularFile:(Ljava/nio/file/Path;[Ljava/nio/file/LinkOption;)Z
+        95: ifeq          101
+        98: aload         8
+       100: areturn
+       101: aload         7
+       103: aload_2
+       104: invokeinterface #143,  2          // InterfaceMethod java/nio/file/Path.resolve:(Ljava/lang/String;)Ljava/nio/file/Path;
+       109: astore        9
+       111: aload         9
+       113: iconst_0
+       114: anewarray     #312                // class java/nio/file/LinkOption
+       117: invokestatic  #467                // Method java/nio/file/Files.isRegularFile:(Ljava/nio/file/Path;[Ljava/nio/file/LinkOption;)Z
+       120: ifeq          126
+       123: aload         9
+       125: areturn
+       126: iinc          5, 1
+       129: goto          31
+       132: new           #80                 // class java/io/IOException
+       135: dup
+       136: aload_0
+       137: invokedynamic #470,  0            // InvokeDynamic #8:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+       142: invokespecial #191                // Method java/io/IOException."<init>":(Ljava/lang/String;)V
+       145: athrow
+      StackMapTable: number_of_entries = 5
+        frame_type = 255 /* full_frame */
+          offset_delta = 31
+          locals = [ class java/lang/String, class java/util/Properties, class java/lang/String, class "[Ljava/lang/String;", int, int ]
+          stack = []
+        frame_type = 252 /* append */
+          offset_delta = 23
+          locals = [ class java/lang/String ]
+        frame_type = 253 /* append */
+          offset_delta = 45
+          locals = [ class java/nio/file/Path, class java/nio/file/Path ]
+        frame_type = 248 /* chop */
+          offset_delta = 24
+        frame_type = 248 /* chop */
+          offset_delta = 5
+      LineNumberTable:
+        line 175: 0
+        line 176: 7
+        line 177: 44
+        line 178: 52
+        line 180: 55
+        line 181: 76
+        line 182: 86
+        line 183: 98
+        line 185: 101
+        line 186: 111
+        line 187: 123
+        line 176: 126
+        line 190: 132
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+           76      50     7 directory   Ljava/nio/file/Path;
+           86      40     8 exact   Ljava/nio/file/Path;
+          111      15     9 conventional   Ljava/nio/file/Path;
+           44      82     6 entry   Ljava/lang/String;
+            0     146     0  name   Ljava/lang/String;
+            0     146     1 properties   Ljava/util/Properties;
+            7     139     2 mapped   Ljava/lang/String;
+    Exceptions:
+      throws java.io.IOException
+    MethodParameters:
+      Name                           Flags
+      name
+      properties
+
+  private static void requireFilename(java.lang.String) throws java.io.IOException;
+    descriptor: (Ljava/lang/String;)V
+    flags: (0x000a) ACC_PRIVATE, ACC_STATIC
+    Code:
+      stack=3, locals=1, args_size=1
+         0: aload_0
+         1: invokevirtual #464                // Method java/lang/String.isEmpty:()Z
+         4: ifne          54
+         7: aload_0
+         8: ldc_w         #476                // String .
+        11: invokevirtual #101                // Method java/lang/String.equals:(Ljava/lang/Object;)Z
+        14: ifne          54
+        17: aload_0
+        18: ldc_w         #478                // String ..
+        21: invokevirtual #101                // Method java/lang/String.equals:(Ljava/lang/Object;)Z
+        24: ifne          54
+        27: aload_0
+        28: bipush        47
+        30: invokevirtual #482                // Method java/lang/String.indexOf:(I)I
+        33: ifge          54
+        36: aload_0
+        37: bipush        92
+        39: invokevirtual #482                // Method java/lang/String.indexOf:(I)I
+        42: ifge          54
+        45: aload_0
+        46: bipush        58
+        48: invokevirtual #482                // Method java/lang/String.indexOf:(I)I
+        51: iflt          68
+        54: new           #80                 // class java/io/IOException
+        57: dup
+        58: aload_0
+        59: invokedynamic #485,  0            // InvokeDynamic #9:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+        64: invokespecial #191                // Method java/io/IOException."<init>":(Ljava/lang/String;)V
+        67: athrow
+        68: return
+      StackMapTable: number_of_entries = 2
+        frame_type = 54 /* same */
+        frame_type = 13 /* same */
+      LineNumberTable:
+        line 196: 0
+        line 197: 30
+        line 198: 54
+        line 200: 68
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      69     0  name   Ljava/lang/String;
+    Exceptions:
+      throws java.io.IOException
+    MethodParameters:
+      Name                           Flags
+      name
+
+  static void validateArm64(java.nio.file.Path) throws java.io.IOException;
+    descriptor: (Ljava/nio/file/Path;)V
+    flags: (0x0008) ACC_STATIC
+    Code:
+      stack=5, locals=5, args_size=1
+         0: bipush        64
+         2: newarray       byte
+         4: astore_1
+         5: aload_0
+         6: iconst_0
+         7: anewarray     #488                // class java/nio/file/OpenOption
+        10: invokestatic  #492                // Method java/nio/file/Files.newInputStream:(Ljava/nio/file/Path;[Ljava/nio/file/OpenOption;)Ljava/io/InputStream;
+        13: astore_2
+        14: iconst_0
+        15: istore_3
+        16: iload_3
+        17: aload_1
+        18: arraylength
+        19: if_icmpge     64
+        22: aload_2
+        23: aload_1
+        24: iload_3
+        25: aload_1
+        26: arraylength
+        27: iload_3
+        28: isub
+        29: invokevirtual #498                // Method java/io/InputStream.read:([BII)I
+        32: istore        4
+        34: iload         4
+        36: ifge          56
+        39: new           #80                 // class java/io/IOException
+        42: dup
+        43: aload_0
+        44: invokestatic  #380                // Method java/lang/String.valueOf:(Ljava/lang/Object;)Ljava/lang/String;
+        47: invokedynamic #501,  0            // InvokeDynamic #10:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+        52: invokespecial #191                // Method java/io/IOException."<init>":(Ljava/lang/String;)V
+        55: athrow
+        56: iload_3
+        57: iload         4
+        59: iadd
+        60: istore_3
+        61: goto          16
+        64: aload_2
+        65: ifnull        97
+        68: aload_2
+        69: invokevirtual #204                // Method java/io/InputStream.close:()V
+        72: goto          97
+        75: astore_3
+        76: aload_2
+        77: ifnull        95
+        80: aload_2
+        81: invokevirtual #204                // Method java/io/InputStream.close:()V
+        84: goto          95
+        87: astore        4
+        89: aload_3
+        90: aload         4
+        92: invokevirtual #210                // Method java/lang/Throwable.addSuppressed:(Ljava/lang/Throwable;)V
+        95: aload_3
+        96: athrow
+        97: aload_1
+        98: iconst_0
+        99: baload
+       100: bipush        127
+       102: if_icmpne     151
+       105: aload_1
+       106: iconst_1
+       107: baload
+       108: bipush        69
+       110: if_icmpne     151
+       113: aload_1
+       114: iconst_2
+       115: baload
+       116: bipush        76
+       118: if_icmpne     151
+       121: aload_1
+       122: iconst_3
+       123: baload
+       124: bipush        70
+       126: if_icmpne     151
+       129: aload_1
+       130: iconst_4
+       131: baload
+       132: iconst_2
+       133: if_icmpne     151
+       136: aload_1
+       137: iconst_5
+       138: baload
+       139: iconst_1
+       140: if_icmpne     151
+       143: aload_1
+       144: bipush        6
+       146: baload
+       147: iconst_1
+       148: if_icmpeq     168
+       151: new           #80                 // class java/io/IOException
+       154: dup
+       155: aload_0
+       156: invokestatic  #380                // Method java/lang/String.valueOf:(Ljava/lang/Object;)Ljava/lang/String;
+       159: invokedynamic #504,  0            // InvokeDynamic #11:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+       164: invokespecial #191                // Method java/io/IOException."<init>":(Ljava/lang/String;)V
+       167: athrow
+       168: aload_1
+       169: bipush        18
+       171: baload
+       172: sipush        255
+       175: iand
+       176: aload_1
+       177: bipush        19
+       179: baload
+       180: sipush        255
+       183: iand
+       184: bipush        8
+       186: ishl
+       187: ior
+       188: istore_2
+       189: iload_2
+       190: sipush        183
+       193: if_icmpeq     214
+       196: new           #80                 // class java/io/IOException
+       199: dup
+       200: iload_2
+       201: aload_0
+       202: invokestatic  #380                // Method java/lang/String.valueOf:(Ljava/lang/Object;)Ljava/lang/String;
+       205: invokedynamic #509,  0            // InvokeDynamic #12:makeConcatWithConstants:(ILjava/lang/String;)Ljava/lang/String;
+       210: invokespecial #191                // Method java/io/IOException."<init>":(Ljava/lang/String;)V
+       213: athrow
+       214: return
+      Exception table:
+         from    to  target type
+            14    64    75   Class java/lang/Throwable
+            80    84    87   Class java/lang/Throwable
+      StackMapTable: number_of_entries = 10
+        frame_type = 254 /* append */
+          offset_delta = 16
+          locals = [ class "[B", class java/io/InputStream, int ]
+        frame_type = 252 /* append */
+          offset_delta = 39
+          locals = [ int ]
+        frame_type = 249 /* chop */
+          offset_delta = 7
+        frame_type = 74 /* same_locals_1_stack_item */
+          stack = [ class java/lang/Throwable ]
+        frame_type = 255 /* full_frame */
+          offset_delta = 11
+          locals = [ class java/nio/file/Path, class "[B", class java/io/InputStream, class java/lang/Throwable ]
+          stack = [ class java/lang/Throwable ]
+        frame_type = 7 /* same */
+        frame_type = 249 /* chop */
+          offset_delta = 1
+        frame_type = 53 /* same */
+        frame_type = 16 /* same */
+        frame_type = 252 /* append */
+          offset_delta = 45
+          locals = [ int ]
+      LineNumberTable:
+        line 203: 0
+        line 204: 5
+        line 205: 14
+        line 206: 16
+        line 207: 22
+        line 208: 34
+        line 209: 39
+        line 211: 56
+        line 212: 61
+        line 213: 64
+        line 204: 75
+        line 214: 97
+        line 216: 151
+        line 218: 168
+        line 219: 189
+        line 220: 196
+        line 224: 214
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+           34      27     4 count   I
+           16      48     3 offset   I
+           14      83     2 input   Ljava/io/InputStream;
+            0     215     0  file   Ljava/nio/file/Path;
+            5     210     1 header   [B
+          189      26     2 machine   I
+    Exceptions:
+      throws java.io.IOException
+    MethodParameters:
+      Name                           Flags
+      file
+
+  private static java.lang.String lower(java.lang.String);
+    descriptor: (Ljava/lang/String;)Ljava/lang/String;
+    flags: (0x000a) ACC_PRIVATE, ACC_STATIC
+    Code:
+      stack=2, locals=1, args_size=1
+         0: aload_0
+         1: ifnonnull     10
+         4: ldc_w         #454                // String
+         7: goto          17
+        10: aload_0
+        11: getstatic     #520                // Field java/util/Locale.ROOT:Ljava/util/Locale;
+        14: invokevirtual #524                // Method java/lang/String.toLowerCase:(Ljava/util/Locale;)Ljava/lang/String;
+        17: areturn
+      StackMapTable: number_of_entries = 2
+        frame_type = 10 /* same */
+        frame_type = 70 /* same_locals_1_stack_item */
+          stack = [ class java/lang/String ]
+      LineNumberTable:
+        line 227: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      18     0 value   Ljava/lang/String;
+    MethodParameters:
+      Name                           Flags
+      value
+
+  private static boolean nonempty(java.lang.String);
+    descriptor: (Ljava/lang/String;)Z
+    flags: (0x000a) ACC_PRIVATE, ACC_STATIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: ifnull        18
+         4: aload_0
+         5: invokevirtual #527                // Method java/lang/String.trim:()Ljava/lang/String;
+         8: invokevirtual #464                // Method java/lang/String.isEmpty:()Z
+        11: ifne          18
+        14: iconst_1
+        15: goto          19
+        18: iconst_0
+        19: ireturn
+      StackMapTable: number_of_entries = 2
+        frame_type = 18 /* same */
+        frame_type = 64 /* same_locals_1_stack_item */
+          stack = [ int ]
+      LineNumberTable:
+        line 231: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      20     0 value   Ljava/lang/String;
+    MethodParameters:
+      Name                           Flags
+      value
+
+  private static java.lang.UnsatisfiedLinkError failure(java.lang.String, java.lang.Throwable);
+    descriptor: (Ljava/lang/String;Ljava/lang/Throwable;)Ljava/lang/UnsatisfiedLinkError;
+    flags: (0x000a) ACC_PRIVATE, ACC_STATIC
+    Code:
+      stack=3, locals=3, args_size=2
+         0: new           #531                // class java/lang/UnsatisfiedLinkError
+         3: dup
+         4: aload_0
+         5: invokedynamic #534,  0            // InvokeDynamic #13:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+        10: invokespecial #535                // Method java/lang/UnsatisfiedLinkError."<init>":(Ljava/lang/String;)V
+        13: astore_2
+        14: aload_1
+        15: ifnull        24
+        18: aload_2
+        19: aload_1
+        20: invokevirtual #539                // Method java/lang/UnsatisfiedLinkError.initCause:(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+        23: pop
+        24: aload_2
+        25: areturn
+      StackMapTable: number_of_entries = 1
+        frame_type = 252 /* append */
+          offset_delta = 24
+          locals = [ class java/lang/UnsatisfiedLinkError ]
+      LineNumberTable:
+        line 235: 0
+        line 236: 14
+        line 237: 18
+        line 239: 24
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      26     0 message   Ljava/lang/String;
+            0      26     1 cause   Ljava/lang/Throwable;
+           14      12     2 error   Ljava/lang/UnsatisfiedLinkError;
+    MethodParameters:
+      Name                           Flags
+      message
+      cause
+
+  private static java.io.InputStream lambda$prepare$1(java.nio.file.Path) throws java.io.IOException;
+    descriptor: (Ljava/nio/file/Path;)Ljava/io/InputStream;
+    flags: (0x100a) ACC_PRIVATE, ACC_STATIC, ACC_SYNTHETIC
+    Code:
+      stack=2, locals=1, args_size=1
+         0: aload_0
+         1: iconst_0
+         2: anewarray     #488                // class java/nio/file/OpenOption
+         5: invokestatic  #492                // Method java/nio/file/Files.newInputStream:(Ljava/nio/file/Path;[Ljava/nio/file/OpenOption;)Ljava/io/InputStream;
+         8: areturn
+      LineNumberTable:
+        line 64: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       9     0 custom   Ljava/nio/file/Path;
+    Exceptions:
+      throws java.io.IOException
+    MethodParameters:
+      Name                           Flags
+      custom
+
+  private static java.io.InputStream lambda$prepare$0() throws java.io.IOException;
+    descriptor: ()Ljava/io/InputStream;
+    flags: (0x100a) ACC_PRIVATE, ACC_STATIC, ACC_SYNTHETIC
+    Code:
+      stack=2, locals=0, args_size=0
+         0: ldc           #2                  // class imgui/AnubisAndroidNative
+         2: ldc           #17                 // String /io/imgui/java/native-bin/android-arm64/libimgui-java64.so
+         4: invokevirtual #548                // Method java/lang/Class.getResourceAsStream:(Ljava/lang/String;)Ljava/io/InputStream;
+         7: areturn
+      LineNumberTable:
+        line 29: 0
+    Exceptions:
+      throws java.io.IOException
+}
+InnerClasses:
+  static #8= #7 of #2;                    // NativeSource=class imgui/AnubisAndroidNative$NativeSource of class imgui/AnubisAndroidNative
+  public static final #13= #10 of #12;    // Lookup=class java/lang/invoke/MethodHandles$Lookup of class java/lang/invoke/MethodHandles
+SourceFile: "AnubisAndroidNative.java"
+BootstrapMethods:
+  0: #65 REF_invokeStatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #54 ()Ljava/io/InputStream;
+      #58 REF_invokeStatic imgui/AnubisAndroidNative.lambda$prepare$0:()Ljava/io/InputStream;
+      #54 ()Ljava/io/InputStream;
+  1: #118 REF_invokeStatic java/lang/invoke/StringConcatFactory.makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #111 Unsupported Android architecture \'\u0001\'. This build requires an ARM64 device and a 64-bit Java runtime.
+  2: #65 REF_invokeStatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #54 ()Ljava/io/InputStream;
+      #174 REF_invokeStatic imgui/AnubisAndroidNative.lambda$prepare$1:(Ljava/nio/file/Path;)Ljava/io/InputStream;
+      #54 ()Ljava/io/InputStream;
+  3: #118 REF_invokeStatic java/lang/invoke/StringConcatFactory.makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #255 Cannot prepare Android ARM64 ImGui: \u0001
+  4: #118 REF_invokeStatic java/lang/invoke/StringConcatFactory.makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #382 Shared Android storage cannot load native libraries: \u0001
+  5: #118 REF_invokeStatic java/lang/invoke/StringConcatFactory.makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #395 Native cache resolves to shared Android storage: \u0001
+  6: #118 REF_invokeStatic java/lang/invoke/StringConcatFactory.makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #442 \u0001/
+  7: #118 REF_invokeStatic java/lang/invoke/StringConcatFactory.makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #449 lib\u0001.so
+  8: #118 REF_invokeStatic java/lang/invoke/StringConcatFactory.makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #469 Explicit -Dimgui.library.name=\u0001 was not found in java.library.path. Set -Dimgui.library.path to the folder containing the Android ARM64 .so and use its full filename as imgui.library.name.
+  9: #118 REF_invokeStatic java/lang/invoke/StringConcatFactory.makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #484 imgui.library.name must be a filename, not a path: \u0001
+  10: #118 REF_invokeStatic java/lang/invoke/StringConcatFactory.makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #500 Truncated ELF native library: \u0001
+  11: #118 REF_invokeStatic java/lang/invoke/StringConcatFactory.makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #503 Expected a little-endian ELF64 Android ARM64 native library: \u0001
+  12: #118 REF_invokeStatic java/lang/invoke/StringConcatFactory.makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #506 Native architecture mismatch: ELF e_machine=\u0001, expected EM_AARCH64 (183), in \u0001. Desktop Linux x86_64 libraries cannot run on Android ARM64.
+  13: #118 REF_invokeStatic java/lang/invoke/StringConcatFactory.makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #533 [Anubis ImGui] \u0001
+NestMembers:
+  imgui/AnubisAndroidNative$NativeSource

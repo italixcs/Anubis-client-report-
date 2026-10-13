@@ -1,0 +1,38 @@
+[
+  {
+    "cfr_file": "analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/gui/HudEmblem.java",
+    "jadx_file": "analysis-workspace/jadx/run.oEA4CbVx/sources/net/anubis/client/gui/HudEmblem.java",
+    "jadx_has_placeholder": false,
+    "reason": "CFR cannot reconstruct nested try/finally control flow; use JADX and bytecode."
+  },
+  {
+    "cfr_file": "analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/gui/ThemeImages.java",
+    "jadx_file": "analysis-workspace/jadx/run.oEA4CbVx/sources/net/anubis/client/gui/ThemeImages.java",
+    "jadx_has_placeholder": false,
+    "reason": "CFR cannot reconstruct nested try/finally control flow; use JADX and bytecode."
+  },
+  {
+    "cfr_file": "analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/module/impl/render/character/CustomCharacters.java",
+    "jadx_file": "analysis-workspace/jadx/run.oEA4CbVx/sources/net/anubis/client/module/impl/render/character/CustomCharacters.java",
+    "jadx_has_placeholder": false,
+    "reason": "CFR cannot reconstruct nested try/finally control flow; use JADX and bytecode."
+  },
+  {
+    "cfr_file": "analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/module/impl/render/character/gltf/CharacterBake.java",
+    "jadx_file": "analysis-workspace/jadx/run.oEA4CbVx/sources/net/anubis/client/module/impl/render/character/gltf/CharacterBake.java",
+    "jadx_has_placeholder": false,
+    "reason": "CFR cannot reconstruct nested try/finally control flow; use JADX and bytecode."
+  },
+  {
+    "cfr_file": "analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/util/spotify/AlbumArt.java",
+    "jadx_file": "analysis-workspace/jadx/run.oEA4CbVx/sources/net/anubis/client/util/spotify/AlbumArt.java",
+    "jadx_has_placeholder": false,
+    "reason": "CFR cannot reconstruct nested try/finally control flow; use JADX and bytecode."
+  },
+  {
+    "cfr_file": "analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/gui/mainmenu/MenuTextures.java",
+    "jadx_file": "analysis-workspace/jadx/run.oEA4CbVx/sources/net/anubis/client/gui/mainmenu/MenuTextures.java",
+    "jadx_has_placeholder": false,
+    "reason": "CFR cannot reconstruct nested try/finally control flow; use JADX and bytecode."
+  }
+]

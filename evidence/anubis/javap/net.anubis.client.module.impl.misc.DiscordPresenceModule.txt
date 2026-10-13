@@ -1,0 +1,1012 @@
+Classfile analysis-workspace/extracted/run.oEA4CbVx/net/anubis/client/module/impl/misc/DiscordPresenceModule.class
+  Last modified Oct 13, 2026; size 7682 bytes
+  SHA-256 checksum bf16e79d80a2d42a87d0c5d78ee25531d643d94ae35a47dbd4d1f3e8f3b3188e
+  Compiled from "DiscordPresenceModule.java"
+public final class net.anubis.client.module.impl.misc.DiscordPresenceModule extends net.anubis.client.module.ClientModule
+  minor version: 0
+  major version: 65
+  flags: (0x0031) ACC_PUBLIC, ACC_FINAL, ACC_SUPER
+  this_class: #2                          // net/anubis/client/module/impl/misc/DiscordPresenceModule
+  super_class: #4                         // net/anubis/client/module/ClientModule
+  interfaces: 0, fields: 23, methods: 9, attributes: 5
+Constant pool:
+    #1 = Utf8               net/anubis/client/module/impl/misc/DiscordPresenceModule
+    #2 = Class              #1            // net/anubis/client/module/impl/misc/DiscordPresenceModule
+    #3 = Utf8               net/anubis/client/module/ClientModule
+    #4 = Class              #3            // net/anubis/client/module/ClientModule
+    #5 = Utf8               DiscordPresenceModule.java
+    #6 = Utf8               net/anubis/client/module/impl/misc/DiscordPresenceModule$Link
+    #7 = Class              #6            // net/anubis/client/module/impl/misc/DiscordPresenceModule$Link
+    #8 = Utf8               net/anubis/client/module/impl/misc/DiscordPresenceModule$Card
+    #9 = Class              #8            // net/anubis/client/module/impl/misc/DiscordPresenceModule$Card
+   #10 = Utf8               Card
+   #11 = Utf8               Link
+   #12 = Utf8               java/lang/ProcessHandle$Info
+   #13 = Class              #12           // java/lang/ProcessHandle$Info
+   #14 = Utf8               java/lang/ProcessHandle
+   #15 = Class              #14           // java/lang/ProcessHandle
+   #16 = Utf8               Info
+   #17 = Utf8               java/lang/invoke/MethodHandles$Lookup
+   #18 = Class              #17           // java/lang/invoke/MethodHandles$Lookup
+   #19 = Utf8               java/lang/invoke/MethodHandles
+   #20 = Class              #19           // java/lang/invoke/MethodHandles
+   #21 = Utf8               Lookup
+   #22 = Utf8               LOGGER
+   #23 = Utf8               Lorg/slf4j/Logger;
+   #24 = Utf8               APPLICATION_ID
+   #25 = Utf8               Ljava/lang/String;
+   #26 = Utf8               1553391775840866314
+   #27 = String             #26           // 1553391775840866314
+   #28 = Utf8               LOGO_ASSET
+   #29 = Utf8               logo
+   #30 = String             #29           // logo
+   #31 = Utf8               LOGO_TEXT
+   #32 = Utf8               Anubis Client
+   #33 = String             #32           // Anubis Client
+   #34 = Utf8               BUTTON_LABEL
+   #35 = Utf8               Discord
+   #36 = String             #35           // Discord
+   #37 = Utf8               IN_MENU
+   #38 = Utf8               In Main Menu
+   #39 = String             #38           // In Main Menu
+   #40 = Utf8               SINGLEPLAYER
+   #41 = Utf8               Singleplayer
+   #42 = String             #41           // Singleplayer
+   #43 = Utf8               MULTIPLAYER
+   #44 = Utf8               Multiplayer
+   #45 = String             #44           // Multiplayer
+   #46 = Utf8               LAN_WORLD
+   #47 = Utf8               LAN World
+   #48 = String             #47           // LAN World
+   #49 = Utf8               REALMS
+   #50 = Utf8               Realms
+   #51 = String             #50           // Realms
+   #52 = Utf8               GAME_STARTED
+   #53 = Utf8               J
+   #54 = Utf8               RETRY_MIN_MS
+   #55 = Long               5000l
+   #57 = Utf8               RETRY_MAX_MS
+   #58 = Long               30000l
+   #60 = Utf8               IDLE_POLL_MS
+   #61 = Long               1000l
+   #63 = Utf8               MIN_UPDATE_GAP_MS
+   #64 = Long               4000l
+   #66 = Utf8               KEEP_ALIVE_MS
+   #67 = Long               60000l
+   #69 = Utf8               showServerIp
+   #70 = Utf8               Lnet/anubis/client/module/setting/BooleanSetting;
+   #71 = Utf8               discordButton
+   #72 = Utf8               card
+   #73 = Utf8               Lnet/anubis/client/module/impl/misc/DiscordPresenceModule$Card;
+   #74 = Utf8               link
+   #75 = Utf8               Lnet/anubis/client/module/impl/misc/DiscordPresenceModule$Link;
+   #76 = Utf8               session
+   #77 = Utf8               Lnet/minecraft/class_2535;
+   #78 = Utf8               joinedAt
+   #79 = Utf8               loggedIdle
+   #80 = Utf8               Z
+   #81 = Utf8               <init>
+   #82 = Utf8               ()V
+   #83 = Utf8               discord-presence
+   #84 = String             #83           // discord-presence
+   #85 = Utf8               Discord Presence
+   #86 = String             #85           // Discord Presence
+   #87 = Utf8               Shows Anubis Client and the server you are on in your Discord status.
+   #88 = String             #87           // Shows Anubis Client and the server you are on in your Discord status.
+   #89 = Utf8               net/anubis/client/module/ModuleCategory
+   #90 = Class              #89           // net/anubis/client/module/ModuleCategory
+   #91 = Utf8               CLIENT
+   #92 = Utf8               Lnet/anubis/client/module/ModuleCategory;
+   #93 = NameAndType        #91:#92       // CLIENT:Lnet/anubis/client/module/ModuleCategory;
+   #94 = Fieldref           #90.#93       // net/anubis/client/module/ModuleCategory.CLIENT:Lnet/anubis/client/module/ModuleCategory;
+   #95 = Utf8               (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lnet/anubis/client/module/ModuleCategory;)V
+   #96 = NameAndType        #81:#95       // "<init>":(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lnet/anubis/client/module/ModuleCategory;)V
+   #97 = Methodref          #4.#96        // net/anubis/client/module/ClientModule."<init>":(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lnet/anubis/client/module/ModuleCategory;)V
+   #98 = Utf8               show-server-ip
+   #99 = String             #98           // show-server-ip
+  #100 = Utf8               net/anubis/client/module/setting/BooleanSetting
+  #101 = Class              #100          // net/anubis/client/module/setting/BooleanSetting
+  #102 = Utf8               Show Server IP
+  #103 = String             #102          // Show Server IP
+  #104 = Utf8               (Ljava/lang/String;Z)V
+  #105 = NameAndType        #81:#104      // "<init>":(Ljava/lang/String;Z)V
+  #106 = Methodref          #101.#105     // net/anubis/client/module/setting/BooleanSetting."<init>":(Ljava/lang/String;Z)V
+  #107 = Utf8               addSetting
+  #108 = Utf8               (Ljava/lang/String;Lnet/anubis/client/module/setting/Setting;)Lnet/anubis/client/module/setting/Setting;
+  #109 = NameAndType        #107:#108     // addSetting:(Ljava/lang/String;Lnet/anubis/client/module/setting/Setting;)Lnet/anubis/client/module/setting/Setting;
+  #110 = Methodref          #2.#109       // net/anubis/client/module/impl/misc/DiscordPresenceModule.addSetting:(Ljava/lang/String;Lnet/anubis/client/module/setting/Setting;)Lnet/anubis/client/module/setting/Setting;
+  #111 = NameAndType        #69:#70       // showServerIp:Lnet/anubis/client/module/setting/BooleanSetting;
+  #112 = Fieldref           #2.#111       // net/anubis/client/module/impl/misc/DiscordPresenceModule.showServerIp:Lnet/anubis/client/module/setting/BooleanSetting;
+  #113 = Utf8               discord-button
+  #114 = String             #113          // discord-button
+  #115 = Utf8               Discord Button
+  #116 = String             #115          // Discord Button
+  #117 = NameAndType        #71:#70       // discordButton:Lnet/anubis/client/module/setting/BooleanSetting;
+  #118 = Fieldref           #2.#117       // net/anubis/client/module/impl/misc/DiscordPresenceModule.discordButton:Lnet/anubis/client/module/setting/BooleanSetting;
+  #119 = Utf8               this
+  #120 = Utf8               Lnet/anubis/client/module/impl/misc/DiscordPresenceModule;
+  #121 = Utf8               enabledByDefault
+  #122 = Utf8               ()Z
+  #123 = Utf8               onEnable
+  #124 = Utf8               java/lang/String
+  #125 = Class              #124          // java/lang/String
+  #126 = Utf8               isBlank
+  #127 = NameAndType        #126:#122     // isBlank:()Z
+  #128 = Methodref          #125.#127     // java/lang/String.isBlank:()Z
+  #129 = NameAndType        #79:#80       // loggedIdle:Z
+  #130 = Fieldref           #2.#129       // net/anubis/client/module/impl/misc/DiscordPresenceModule.loggedIdle:Z
+  #131 = NameAndType        #22:#23       // LOGGER:Lorg/slf4j/Logger;
+  #132 = Fieldref           #2.#131       // net/anubis/client/module/impl/misc/DiscordPresenceModule.LOGGER:Lorg/slf4j/Logger;
+  #133 = Utf8               [Anubis] Discord Presence: no Discord application id set (DiscordPresenceModule.APPLICATION_ID); idle
+  #134 = String             #133          // [Anubis] Discord Presence: no Discord application id set (DiscordPresenceModule.APPLICATION_ID); idle
+  #135 = Utf8               org/slf4j/Logger
+  #136 = Class              #135          // org/slf4j/Logger
+  #137 = Utf8               info
+  #138 = Utf8               (Ljava/lang/String;)V
+  #139 = NameAndType        #137:#138     // info:(Ljava/lang/String;)V
+  #140 = InterfaceMethodref #136.#139     // org/slf4j/Logger.info:(Ljava/lang/String;)V
+  #141 = NameAndType        #76:#77       // session:Lnet/minecraft/class_2535;
+  #142 = Fieldref           #2.#141       // net/anubis/client/module/impl/misc/DiscordPresenceModule.session:Lnet/minecraft/class_2535;
+  #143 = NameAndType        #52:#53       // GAME_STARTED:J
+  #144 = Fieldref           #2.#143       // net/anubis/client/module/impl/misc/DiscordPresenceModule.GAME_STARTED:J
+  #145 = Utf8               get
+  #146 = NameAndType        #145:#122     // get:()Z
+  #147 = Methodref          #101.#146     // net/anubis/client/module/setting/BooleanSetting.get:()Z
+  #148 = Utf8               (Ljava/lang/String;JZ)V
+  #149 = NameAndType        #81:#148      // "<init>":(Ljava/lang/String;JZ)V
+  #150 = Methodref          #9.#149       // net/anubis/client/module/impl/misc/DiscordPresenceModule$Card."<init>":(Ljava/lang/String;JZ)V
+  #151 = NameAndType        #72:#73       // card:Lnet/anubis/client/module/impl/misc/DiscordPresenceModule$Card;
+  #152 = Fieldref           #2.#151       // net/anubis/client/module/impl/misc/DiscordPresenceModule.card:Lnet/anubis/client/module/impl/misc/DiscordPresenceModule$Card;
+  #153 = NameAndType        #74:#75       // link:Lnet/anubis/client/module/impl/misc/DiscordPresenceModule$Link;
+  #154 = Fieldref           #2.#153       // net/anubis/client/module/impl/misc/DiscordPresenceModule.link:Lnet/anubis/client/module/impl/misc/DiscordPresenceModule$Link;
+  #155 = Utf8               (Lnet/anubis/client/module/impl/misc/DiscordPresenceModule;Lnet/anubis/client/module/impl/misc/DiscordPresenceModule$Link;)V
+  #156 = NameAndType        #81:#155      // "<init>":(Lnet/anubis/client/module/impl/misc/DiscordPresenceModule;Lnet/anubis/client/module/impl/misc/DiscordPresenceModule$Link;)V
+  #157 = Methodref          #7.#156       // net/anubis/client/module/impl/misc/DiscordPresenceModule$Link."<init>":(Lnet/anubis/client/module/impl/misc/DiscordPresenceModule;Lnet/anubis/client/module/impl/misc/DiscordPresenceModule$Link;)V
+  #158 = Utf8               refresh
+  #159 = NameAndType        #158:#82      // refresh:()V
+  #160 = Methodref          #2.#159       // net/anubis/client/module/impl/misc/DiscordPresenceModule.refresh:()V
+  #161 = Utf8               net/anubis/client/event/impl/TickEvent
+  #162 = Class              #161          // net/anubis/client/event/impl/TickEvent
+  #163 = Utf8               TYPE
+  #164 = Utf8               Lnet/anubis/client/event/EventType;
+  #165 = NameAndType        #163:#164     // TYPE:Lnet/anubis/client/event/EventType;
+  #166 = Fieldref           #162.#165     // net/anubis/client/event/impl/TickEvent.TYPE:Lnet/anubis/client/event/EventType;
+  #167 = Utf8               (Ljava/lang/Object;)V
+  #168 = MethodType         #167          //  (Ljava/lang/Object;)V
+  #169 = Utf8               lambda$onEnable$0
+  #170 = Utf8               (Lnet/anubis/client/event/impl/TickEvent;)V
+  #171 = NameAndType        #169:#170     // lambda$onEnable$0:(Lnet/anubis/client/event/impl/TickEvent;)V
+  #172 = Methodref          #2.#171       // net/anubis/client/module/impl/misc/DiscordPresenceModule.lambda$onEnable$0:(Lnet/anubis/client/event/impl/TickEvent;)V
+  #173 = MethodHandle       5:#172        // REF_invokeVirtual net/anubis/client/module/impl/misc/DiscordPresenceModule.lambda$onEnable$0:(Lnet/anubis/client/event/impl/TickEvent;)V
+  #174 = MethodType         #170          //  (Lnet/anubis/client/event/impl/TickEvent;)V
+  #175 = Utf8               java/lang/invoke/LambdaMetafactory
+  #176 = Class              #175          // java/lang/invoke/LambdaMetafactory
+  #177 = Utf8               metafactory
+  #178 = Utf8               (Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+  #179 = NameAndType        #177:#178     // metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+  #180 = Methodref          #176.#179     // java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+  #181 = MethodHandle       6:#180        // REF_invokeStatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+  #182 = Utf8               accept
+  #183 = Utf8               (Lnet/anubis/client/module/impl/misc/DiscordPresenceModule;)Ljava/util/function/Consumer;
+  #184 = NameAndType        #182:#183     // accept:(Lnet/anubis/client/module/impl/misc/DiscordPresenceModule;)Ljava/util/function/Consumer;
+  #185 = InvokeDynamic      #0:#184       // #0:accept:(Lnet/anubis/client/module/impl/misc/DiscordPresenceModule;)Ljava/util/function/Consumer;
+  #186 = Utf8               on
+  #187 = Utf8               (Lnet/anubis/client/event/EventType;Ljava/util/function/Consumer;)V
+  #188 = NameAndType        #186:#187     // on:(Lnet/anubis/client/event/EventType;Ljava/util/function/Consumer;)V
+  #189 = Methodref          #2.#188       // net/anubis/client/module/impl/misc/DiscordPresenceModule.on:(Lnet/anubis/client/event/EventType;Ljava/util/function/Consumer;)V
+  #190 = Utf8               start
+  #191 = NameAndType        #190:#82      // start:()V
+  #192 = Methodref          #7.#191       // net/anubis/client/module/impl/misc/DiscordPresenceModule$Link.start:()V
+  #193 = Utf8               onDisable
+  #194 = Utf8               stop
+  #195 = NameAndType        #194:#82      // stop:()V
+  #196 = Methodref          #7.#195       // net/anubis/client/module/impl/misc/DiscordPresenceModule$Link.stop:()V
+  #197 = Utf8               net/minecraft/class_310
+  #198 = Class              #197          // net/minecraft/class_310
+  #199 = Utf8               method_1551
+  #200 = Utf8               ()Lnet/minecraft/class_310;
+  #201 = NameAndType        #199:#200     // method_1551:()Lnet/minecraft/class_310;
+  #202 = Methodref          #198.#201     // net/minecraft/class_310.method_1551:()Lnet/minecraft/class_310;
+  #203 = Utf8               method_1562
+  #204 = Utf8               ()Lnet/minecraft/class_634;
+  #205 = NameAndType        #203:#204     // method_1562:()Lnet/minecraft/class_634;
+  #206 = Methodref          #198.#205     // net/minecraft/class_310.method_1562:()Lnet/minecraft/class_634;
+  #207 = Utf8               net/minecraft/class_634
+  #208 = Class              #207          // net/minecraft/class_634
+  #209 = Utf8               method_48296
+  #210 = Utf8               ()Lnet/minecraft/class_2535;
+  #211 = NameAndType        #209:#210     // method_48296:()Lnet/minecraft/class_2535;
+  #212 = Methodref          #208.#211     // net/minecraft/class_634.method_48296:()Lnet/minecraft/class_2535;
+  #213 = Utf8               java/lang/System
+  #214 = Class              #213          // java/lang/System
+  #215 = Utf8               currentTimeMillis
+  #216 = Utf8               ()J
+  #217 = NameAndType        #215:#216     // currentTimeMillis:()J
+  #218 = Methodref          #214.#217     // java/lang/System.currentTimeMillis:()J
+  #219 = NameAndType        #78:#53       // joinedAt:J
+  #220 = Fieldref           #2.#219       // net/anubis/client/module/impl/misc/DiscordPresenceModule.joinedAt:J
+  #221 = Utf8               method_45734
+  #222 = Utf8               ()Lnet/minecraft/class_642;
+  #223 = NameAndType        #221:#222     // method_45734:()Lnet/minecraft/class_642;
+  #224 = Methodref          #208.#223     // net/minecraft/class_634.method_45734:()Lnet/minecraft/class_642;
+  #225 = Utf8               place
+  #226 = Utf8               (Lnet/minecraft/class_310;Lnet/minecraft/class_642;)Ljava/lang/String;
+  #227 = NameAndType        #225:#226     // place:(Lnet/minecraft/class_310;Lnet/minecraft/class_642;)Ljava/lang/String;
+  #228 = Methodref          #2.#227       // net/anubis/client/module/impl/misc/DiscordPresenceModule.place:(Lnet/minecraft/class_310;Lnet/minecraft/class_642;)Ljava/lang/String;
+  #229 = Utf8               net/minecraft/class_2535
+  #230 = Class              #229          // net/minecraft/class_2535
+  #231 = Utf8               method_10758
+  #232 = NameAndType        #231:#122     // method_10758:()Z
+  #233 = Methodref          #230.#232     // net/minecraft/class_2535.method_10758:()Z
+  #234 = Utf8               method_10744
+  #235 = Utf8               ()Lnet/minecraft/class_2547;
+  #236 = NameAndType        #234:#235     // method_10744:()Lnet/minecraft/class_2547;
+  #237 = Methodref          #230.#236     // net/minecraft/class_2535.method_10744:()Lnet/minecraft/class_2547;
+  #238 = Utf8               net/minecraft/class_8732
+  #239 = Class              #238          // net/minecraft/class_8732
+  #240 = Utf8               startedAt
+  #241 = NameAndType        #240:#216     // startedAt:()J
+  #242 = Methodref          #9.#241       // net/anubis/client/module/impl/misc/DiscordPresenceModule$Card.startedAt:()J
+  #243 = NameAndType        #71:#122      // discordButton:()Z
+  #244 = Methodref          #9.#243       // net/anubis/client/module/impl/misc/DiscordPresenceModule$Card.discordButton:()Z
+  #245 = Utf8               details
+  #246 = Utf8               ()Ljava/lang/String;
+  #247 = NameAndType        #245:#246     // details:()Ljava/lang/String;
+  #248 = Methodref          #9.#247       // net/anubis/client/module/impl/misc/DiscordPresenceModule$Card.details:()Ljava/lang/String;
+  #249 = Utf8               equals
+  #250 = Utf8               (Ljava/lang/Object;)Z
+  #251 = NameAndType        #249:#250     // equals:(Ljava/lang/Object;)Z
+  #252 = Methodref          #125.#251     // java/lang/String.equals:(Ljava/lang/Object;)Z
+  #253 = Utf8               wake
+  #254 = NameAndType        #253:#82      // wake:()V
+  #255 = Methodref          #7.#254       // net/anubis/client/module/impl/misc/DiscordPresenceModule$Link.wake:()V
+  #256 = Utf8               mc
+  #257 = Utf8               Lnet/minecraft/class_310;
+  #258 = Utf8               listener
+  #259 = Utf8               Lnet/minecraft/class_634;
+  #260 = Utf8               button
+  #261 = Utf8               shown
+  #262 = Utf8               server
+  #263 = Utf8               method_1542
+  #264 = NameAndType        #263:#122     // method_1542:()Z
+  #265 = Methodref          #198.#264     // net/minecraft/class_310.method_1542:()Z
+  #266 = Utf8               net/minecraft/class_642
+  #267 = Class              #266          // net/minecraft/class_642
+  #268 = Utf8               method_52811
+  #269 = NameAndType        #268:#122     // method_52811:()Z
+  #270 = Methodref          #267.#269     // net/minecraft/class_642.method_52811:()Z
+  #271 = Utf8               method_2994
+  #272 = NameAndType        #271:#122     // method_2994:()Z
+  #273 = Methodref          #267.#272     // net/minecraft/class_642.method_2994:()Z
+  #274 = Utf8               field_3761
+  #275 = NameAndType        #274:#25      // field_3761:Ljava/lang/String;
+  #276 = Fieldref           #267.#275     // net/minecraft/class_642.field_3761:Ljava/lang/String;
+  #277 = Utf8               Lnet/minecraft/class_642;
+  #278 = Utf8               activity
+  #279 = Utf8               (Lnet/anubis/client/module/impl/misc/DiscordPresenceModule$Card;)Lcom/google/gson/JsonObject;
+  #280 = Utf8               com/google/gson/JsonObject
+  #281 = Class              #280          // com/google/gson/JsonObject
+  #282 = NameAndType        #81:#82       // "<init>":()V
+  #283 = Methodref          #281.#282     // com/google/gson/JsonObject."<init>":()V
+  #284 = String             #245          // details
+  #285 = Utf8               addProperty
+  #286 = Utf8               (Ljava/lang/String;Ljava/lang/String;)V
+  #287 = NameAndType        #285:#286     // addProperty:(Ljava/lang/String;Ljava/lang/String;)V
+  #288 = Methodref          #281.#287     // com/google/gson/JsonObject.addProperty:(Ljava/lang/String;Ljava/lang/String;)V
+  #289 = String             #190          // start
+  #290 = Utf8               java/lang/Long
+  #291 = Class              #290          // java/lang/Long
+  #292 = Utf8               valueOf
+  #293 = Utf8               (J)Ljava/lang/Long;
+  #294 = NameAndType        #292:#293     // valueOf:(J)Ljava/lang/Long;
+  #295 = Methodref          #291.#294     // java/lang/Long.valueOf:(J)Ljava/lang/Long;
+  #296 = Utf8               (Ljava/lang/String;Ljava/lang/Number;)V
+  #297 = NameAndType        #285:#296     // addProperty:(Ljava/lang/String;Ljava/lang/Number;)V
+  #298 = Methodref          #281.#297     // com/google/gson/JsonObject.addProperty:(Ljava/lang/String;Ljava/lang/Number;)V
+  #299 = Utf8               timestamps
+  #300 = String             #299          // timestamps
+  #301 = Utf8               add
+  #302 = Utf8               (Ljava/lang/String;Lcom/google/gson/JsonElement;)V
+  #303 = NameAndType        #301:#302     // add:(Ljava/lang/String;Lcom/google/gson/JsonElement;)V
+  #304 = Methodref          #281.#303     // com/google/gson/JsonObject.add:(Ljava/lang/String;Lcom/google/gson/JsonElement;)V
+  #305 = Utf8               large_image
+  #306 = String             #305          // large_image
+  #307 = Utf8               large_text
+  #308 = String             #307          // large_text
+  #309 = Utf8               assets
+  #310 = String             #309          // assets
+  #311 = Utf8               label
+  #312 = String             #311          // label
+  #313 = Utf8               url
+  #314 = String             #313          // url
+  #315 = Utf8               https://discord.gg/anubis
+  #316 = String             #315          // https://discord.gg/anubis
+  #317 = Utf8               com/google/gson/JsonArray
+  #318 = Class              #317          // com/google/gson/JsonArray
+  #319 = Methodref          #318.#282     // com/google/gson/JsonArray."<init>":()V
+  #320 = Utf8               (Lcom/google/gson/JsonElement;)V
+  #321 = NameAndType        #301:#320     // add:(Lcom/google/gson/JsonElement;)V
+  #322 = Methodref          #318.#321     // com/google/gson/JsonArray.add:(Lcom/google/gson/JsonElement;)V
+  #323 = Utf8               buttons
+  #324 = String             #323          // buttons
+  #325 = Utf8               Lcom/google/gson/JsonObject;
+  #326 = Utf8               Lcom/google/gson/JsonArray;
+  #327 = Utf8               event
+  #328 = Utf8               Lnet/anubis/client/event/impl/TickEvent;
+  #329 = Utf8               <clinit>
+  #330 = Utf8               Anubis
+  #331 = String             #330          // Anubis
+  #332 = Utf8               org/slf4j/LoggerFactory
+  #333 = Class              #332          // org/slf4j/LoggerFactory
+  #334 = Utf8               getLogger
+  #335 = Utf8               (Ljava/lang/String;)Lorg/slf4j/Logger;
+  #336 = NameAndType        #334:#335     // getLogger:(Ljava/lang/String;)Lorg/slf4j/Logger;
+  #337 = Methodref          #333.#336     // org/slf4j/LoggerFactory.getLogger:(Ljava/lang/String;)Lorg/slf4j/Logger;
+  #338 = Utf8               current
+  #339 = Utf8               ()Ljava/lang/ProcessHandle;
+  #340 = NameAndType        #338:#339     // current:()Ljava/lang/ProcessHandle;
+  #341 = InterfaceMethodref #15.#340      // java/lang/ProcessHandle.current:()Ljava/lang/ProcessHandle;
+  #342 = Utf8               ()Ljava/lang/ProcessHandle$Info;
+  #343 = NameAndType        #137:#342     // info:()Ljava/lang/ProcessHandle$Info;
+  #344 = InterfaceMethodref #15.#343      // java/lang/ProcessHandle.info:()Ljava/lang/ProcessHandle$Info;
+  #345 = Utf8               startInstant
+  #346 = Utf8               ()Ljava/util/Optional;
+  #347 = NameAndType        #345:#346     // startInstant:()Ljava/util/Optional;
+  #348 = InterfaceMethodref #13.#347      // java/lang/ProcessHandle$Info.startInstant:()Ljava/util/Optional;
+  #349 = Utf8               ()Ljava/lang/Object;
+  #350 = MethodType         #349          //  ()Ljava/lang/Object;
+  #351 = Utf8               java/time/Instant
+  #352 = Class              #351          // java/time/Instant
+  #353 = Utf8               now
+  #354 = Utf8               ()Ljava/time/Instant;
+  #355 = NameAndType        #353:#354     // now:()Ljava/time/Instant;
+  #356 = Methodref          #352.#355     // java/time/Instant.now:()Ljava/time/Instant;
+  #357 = MethodHandle       6:#356        // REF_invokeStatic java/time/Instant.now:()Ljava/time/Instant;
+  #358 = MethodType         #354          //  ()Ljava/time/Instant;
+  #359 = Utf8               ()Ljava/util/function/Supplier;
+  #360 = NameAndType        #145:#359     // get:()Ljava/util/function/Supplier;
+  #361 = InvokeDynamic      #1:#360       // #1:get:()Ljava/util/function/Supplier;
+  #362 = Utf8               java/util/Optional
+  #363 = Class              #362          // java/util/Optional
+  #364 = Utf8               orElseGet
+  #365 = Utf8               (Ljava/util/function/Supplier;)Ljava/lang/Object;
+  #366 = NameAndType        #364:#365     // orElseGet:(Ljava/util/function/Supplier;)Ljava/lang/Object;
+  #367 = Methodref          #363.#366     // java/util/Optional.orElseGet:(Ljava/util/function/Supplier;)Ljava/lang/Object;
+  #368 = Utf8               getEpochSecond
+  #369 = NameAndType        #368:#216     // getEpochSecond:()J
+  #370 = Methodref          #352.#369     // java/time/Instant.getEpochSecond:()J
+  #371 = Utf8               Lnet/fabricmc/api/Environment;
+  #372 = Utf8               value
+  #373 = Utf8               Lnet/fabricmc/api/EnvType;
+  #374 = Utf8               ConstantValue
+  #375 = Utf8               Code
+  #376 = Utf8               LineNumberTable
+  #377 = Utf8               LocalVariableTable
+  #378 = Utf8               StackMapTable
+  #379 = Utf8               MethodParameters
+  #380 = Utf8               InnerClasses
+  #381 = Utf8               SourceFile
+  #382 = Utf8               RuntimeVisibleAnnotations
+  #383 = Utf8               BootstrapMethods
+  #384 = Utf8               NestMembers
+{
+  private static final org.slf4j.Logger LOGGER;
+    descriptor: Lorg/slf4j/Logger;
+    flags: (0x001a) ACC_PRIVATE, ACC_STATIC, ACC_FINAL
+
+  private static final java.lang.String APPLICATION_ID;
+    descriptor: Ljava/lang/String;
+    flags: (0x001a) ACC_PRIVATE, ACC_STATIC, ACC_FINAL
+    ConstantValue: String 1553391775840866314
+
+  private static final java.lang.String LOGO_ASSET;
+    descriptor: Ljava/lang/String;
+    flags: (0x001a) ACC_PRIVATE, ACC_STATIC, ACC_FINAL
+    ConstantValue: String logo
+
+  private static final java.lang.String LOGO_TEXT;
+    descriptor: Ljava/lang/String;
+    flags: (0x001a) ACC_PRIVATE, ACC_STATIC, ACC_FINAL
+    ConstantValue: String Anubis Client
+
+  private static final java.lang.String BUTTON_LABEL;
+    descriptor: Ljava/lang/String;
+    flags: (0x001a) ACC_PRIVATE, ACC_STATIC, ACC_FINAL
+    ConstantValue: String Discord
+
+  private static final java.lang.String IN_MENU;
+    descriptor: Ljava/lang/String;
+    flags: (0x001a) ACC_PRIVATE, ACC_STATIC, ACC_FINAL
+    ConstantValue: String In Main Menu
+
+  private static final java.lang.String SINGLEPLAYER;
+    descriptor: Ljava/lang/String;
+    flags: (0x001a) ACC_PRIVATE, ACC_STATIC, ACC_FINAL
+    ConstantValue: String Singleplayer
+
+  private static final java.lang.String MULTIPLAYER;
+    descriptor: Ljava/lang/String;
+    flags: (0x001a) ACC_PRIVATE, ACC_STATIC, ACC_FINAL
+    ConstantValue: String Multiplayer
+
+  private static final java.lang.String LAN_WORLD;
+    descriptor: Ljava/lang/String;
+    flags: (0x001a) ACC_PRIVATE, ACC_STATIC, ACC_FINAL
+    ConstantValue: String LAN World
+
+  private static final java.lang.String REALMS;
+    descriptor: Ljava/lang/String;
+    flags: (0x001a) ACC_PRIVATE, ACC_STATIC, ACC_FINAL
+    ConstantValue: String Realms
+
+  private static final long GAME_STARTED;
+    descriptor: J
+    flags: (0x001a) ACC_PRIVATE, ACC_STATIC, ACC_FINAL
+
+  private static final long RETRY_MIN_MS;
+    descriptor: J
+    flags: (0x001a) ACC_PRIVATE, ACC_STATIC, ACC_FINAL
+    ConstantValue: long 5000l
+
+  private static final long RETRY_MAX_MS;
+    descriptor: J
+    flags: (0x001a) ACC_PRIVATE, ACC_STATIC, ACC_FINAL
+    ConstantValue: long 30000l
+
+  private static final long IDLE_POLL_MS;
+    descriptor: J
+    flags: (0x001a) ACC_PRIVATE, ACC_STATIC, ACC_FINAL
+    ConstantValue: long 1000l
+
+  private static final long MIN_UPDATE_GAP_MS;
+    descriptor: J
+    flags: (0x001a) ACC_PRIVATE, ACC_STATIC, ACC_FINAL
+    ConstantValue: long 4000l
+
+  private static final long KEEP_ALIVE_MS;
+    descriptor: J
+    flags: (0x001a) ACC_PRIVATE, ACC_STATIC, ACC_FINAL
+    ConstantValue: long 60000l
+
+  private final net.anubis.client.module.setting.BooleanSetting showServerIp;
+    descriptor: Lnet/anubis/client/module/setting/BooleanSetting;
+    flags: (0x0012) ACC_PRIVATE, ACC_FINAL
+
+  private final net.anubis.client.module.setting.BooleanSetting discordButton;
+    descriptor: Lnet/anubis/client/module/setting/BooleanSetting;
+    flags: (0x0012) ACC_PRIVATE, ACC_FINAL
+
+  private volatile net.anubis.client.module.impl.misc.DiscordPresenceModule$Card card;
+    descriptor: Lnet/anubis/client/module/impl/misc/DiscordPresenceModule$Card;
+    flags: (0x0042) ACC_PRIVATE, ACC_VOLATILE
+
+  private net.anubis.client.module.impl.misc.DiscordPresenceModule$Link link;
+    descriptor: Lnet/anubis/client/module/impl/misc/DiscordPresenceModule$Link;
+    flags: (0x0002) ACC_PRIVATE
+
+  private net.minecraft.class_2535 session;
+    descriptor: Lnet/minecraft/class_2535;
+    flags: (0x0002) ACC_PRIVATE
+
+  private long joinedAt;
+    descriptor: J
+    flags: (0x0002) ACC_PRIVATE
+
+  private boolean loggedIdle;
+    descriptor: Z
+    flags: (0x0002) ACC_PRIVATE
+
+  public net.anubis.client.module.impl.misc.DiscordPresenceModule();
+    descriptor: ()V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=7, locals=1, args_size=1
+         0: aload_0
+         1: ldc           #84                 // String discord-presence
+         3: ldc           #86                 // String Discord Presence
+         5: ldc           #88                 // String Shows Anubis Client and the server you are on in your Discord status.
+         7: getstatic     #94                 // Field net/anubis/client/module/ModuleCategory.CLIENT:Lnet/anubis/client/module/ModuleCategory;
+        10: invokespecial #97                 // Method net/anubis/client/module/ClientModule."<init>":(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lnet/anubis/client/module/ModuleCategory;)V
+        13: aload_0
+        14: aload_0
+        15: ldc           #99                 // String show-server-ip
+        17: new           #101                // class net/anubis/client/module/setting/BooleanSetting
+        20: dup
+        21: ldc           #103                // String Show Server IP
+        23: iconst_1
+        24: invokespecial #106                // Method net/anubis/client/module/setting/BooleanSetting."<init>":(Ljava/lang/String;Z)V
+        27: invokevirtual #110                // Method addSetting:(Ljava/lang/String;Lnet/anubis/client/module/setting/Setting;)Lnet/anubis/client/module/setting/Setting;
+        30: checkcast     #101                // class net/anubis/client/module/setting/BooleanSetting
+        33: putfield      #112                // Field showServerIp:Lnet/anubis/client/module/setting/BooleanSetting;
+        36: aload_0
+        37: aload_0
+        38: ldc           #114                // String discord-button
+        40: new           #101                // class net/anubis/client/module/setting/BooleanSetting
+        43: dup
+        44: ldc           #116                // String Discord Button
+        46: iconst_1
+        47: invokespecial #106                // Method net/anubis/client/module/setting/BooleanSetting."<init>":(Ljava/lang/String;Z)V
+        50: invokevirtual #110                // Method addSetting:(Ljava/lang/String;Lnet/anubis/client/module/setting/Setting;)Lnet/anubis/client/module/setting/Setting;
+        53: checkcast     #101                // class net/anubis/client/module/setting/BooleanSetting
+        56: putfield      #118                // Field discordButton:Lnet/anubis/client/module/setting/BooleanSetting;
+        59: return
+      LineNumberTable:
+        line 71: 0
+        line 56: 13
+        line 58: 36
+        line 73: 59
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      60     0  this   Lnet/anubis/client/module/impl/misc/DiscordPresenceModule;
+
+  public boolean enabledByDefault();
+    descriptor: ()Z
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: iconst_1
+         1: ireturn
+      LineNumberTable:
+        line 77: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       2     0  this   Lnet/anubis/client/module/impl/misc/DiscordPresenceModule;
+
+  protected void onEnable();
+    descriptor: ()V
+    flags: (0x0004) ACC_PROTECTED
+    Code:
+      stack=7, locals=1, args_size=1
+         0: ldc           #27                 // String 1553391775840866314
+         2: invokevirtual #128                // Method java/lang/String.isBlank:()Z
+         5: ifeq          31
+         8: aload_0
+         9: getfield      #130                // Field loggedIdle:Z
+        12: ifne          30
+        15: aload_0
+        16: iconst_1
+        17: putfield      #130                // Field loggedIdle:Z
+        20: getstatic     #132                // Field LOGGER:Lorg/slf4j/Logger;
+        23: ldc           #134                // String [Anubis] Discord Presence: no Discord application id set (DiscordPresenceModule.APPLICATION_ID); idle
+        25: invokeinterface #140,  2          // InterfaceMethod org/slf4j/Logger.info:(Ljava/lang/String;)V
+        30: return
+        31: aload_0
+        32: aconst_null
+        33: putfield      #142                // Field session:Lnet/minecraft/class_2535;
+        36: aload_0
+        37: new           #9                  // class net/anubis/client/module/impl/misc/DiscordPresenceModule$Card
+        40: dup
+        41: ldc           #39                 // String In Main Menu
+        43: getstatic     #144                // Field GAME_STARTED:J
+        46: aload_0
+        47: getfield      #118                // Field discordButton:Lnet/anubis/client/module/setting/BooleanSetting;
+        50: invokevirtual #147                // Method net/anubis/client/module/setting/BooleanSetting.get:()Z
+        53: invokespecial #150                // Method net/anubis/client/module/impl/misc/DiscordPresenceModule$Card."<init>":(Ljava/lang/String;JZ)V
+        56: putfield      #152                // Field card:Lnet/anubis/client/module/impl/misc/DiscordPresenceModule$Card;
+        59: aload_0
+        60: new           #7                  // class net/anubis/client/module/impl/misc/DiscordPresenceModule$Link
+        63: dup
+        64: aload_0
+        65: aload_0
+        66: getfield      #154                // Field link:Lnet/anubis/client/module/impl/misc/DiscordPresenceModule$Link;
+        69: invokespecial #157                // Method net/anubis/client/module/impl/misc/DiscordPresenceModule$Link."<init>":(Lnet/anubis/client/module/impl/misc/DiscordPresenceModule;Lnet/anubis/client/module/impl/misc/DiscordPresenceModule$Link;)V
+        72: putfield      #154                // Field link:Lnet/anubis/client/module/impl/misc/DiscordPresenceModule$Link;
+        75: aload_0
+        76: invokevirtual #160                // Method refresh:()V
+        79: aload_0
+        80: getstatic     #166                // Field net/anubis/client/event/impl/TickEvent.TYPE:Lnet/anubis/client/event/EventType;
+        83: aload_0
+        84: invokedynamic #185,  0            // InvokeDynamic #0:accept:(Lnet/anubis/client/module/impl/misc/DiscordPresenceModule;)Ljava/util/function/Consumer;
+        89: invokevirtual #189                // Method on:(Lnet/anubis/client/event/EventType;Ljava/util/function/Consumer;)V
+        92: aload_0
+        93: getfield      #154                // Field link:Lnet/anubis/client/module/impl/misc/DiscordPresenceModule$Link;
+        96: invokevirtual #192                // Method net/anubis/client/module/impl/misc/DiscordPresenceModule$Link.start:()V
+        99: return
+      StackMapTable: number_of_entries = 2
+        frame_type = 30 /* same */
+        frame_type = 0 /* same */
+      LineNumberTable:
+        line 82: 0
+        line 83: 8
+        line 84: 15
+        line 85: 20
+        line 87: 30
+        line 89: 31
+        line 90: 36
+        line 91: 59
+        line 92: 75
+        line 93: 79
+        line 94: 92
+        line 95: 99
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0     100     0  this   Lnet/anubis/client/module/impl/misc/DiscordPresenceModule;
+
+  protected void onDisable();
+    descriptor: ()V
+    flags: (0x0004) ACC_PROTECTED
+    Code:
+      stack=2, locals=1, args_size=1
+         0: aload_0
+         1: getfield      #154                // Field link:Lnet/anubis/client/module/impl/misc/DiscordPresenceModule$Link;
+         4: ifnull        14
+         7: aload_0
+         8: getfield      #154                // Field link:Lnet/anubis/client/module/impl/misc/DiscordPresenceModule$Link;
+        11: invokevirtual #196                // Method net/anubis/client/module/impl/misc/DiscordPresenceModule$Link.stop:()V
+        14: aload_0
+        15: aconst_null
+        16: putfield      #142                // Field session:Lnet/minecraft/class_2535;
+        19: return
+      StackMapTable: number_of_entries = 1
+        frame_type = 14 /* same */
+      LineNumberTable:
+        line 99: 0
+        line 100: 14
+        line 101: 19
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      20     0  this   Lnet/anubis/client/module/impl/misc/DiscordPresenceModule;
+
+  private void refresh();
+    descriptor: ()V
+    flags: (0x0002) ACC_PRIVATE
+    Code:
+      stack=7, locals=8, args_size=1
+         0: invokestatic  #202                // Method net/minecraft/class_310.method_1551:()Lnet/minecraft/class_310;
+         3: astore_1
+         4: aload_1
+         5: invokevirtual #206                // Method net/minecraft/class_310.method_1562:()Lnet/minecraft/class_634;
+         8: astore_2
+         9: aload_2
+        10: ifnull        62
+        13: aload_2
+        14: invokevirtual #212                // Method net/minecraft/class_634.method_48296:()Lnet/minecraft/class_2535;
+        17: aload_0
+        18: getfield      #142                // Field session:Lnet/minecraft/class_2535;
+        21: if_acmpeq     43
+        24: aload_0
+        25: aload_2
+        26: invokevirtual #212                // Method net/minecraft/class_634.method_48296:()Lnet/minecraft/class_2535;
+        29: putfield      #142                // Field session:Lnet/minecraft/class_2535;
+        32: aload_0
+        33: invokestatic  #218                // Method java/lang/System.currentTimeMillis:()J
+        36: ldc2_w        #61                 // long 1000l
+        39: ldiv
+        40: putfield      #220                // Field joinedAt:J
+        43: aload_0
+        44: aload_1
+        45: aload_2
+        46: invokevirtual #224                // Method net/minecraft/class_634.method_45734:()Lnet/minecraft/class_642;
+        49: invokevirtual #228                // Method place:(Lnet/minecraft/class_310;Lnet/minecraft/class_642;)Ljava/lang/String;
+        52: astore_3
+        53: aload_0
+        54: getfield      #220                // Field joinedAt:J
+        57: lstore        4
+        59: goto          106
+        62: aload_0
+        63: getfield      #142                // Field session:Lnet/minecraft/class_2535;
+        66: ifnull        93
+        69: aload_0
+        70: getfield      #142                // Field session:Lnet/minecraft/class_2535;
+        73: invokevirtual #233                // Method net/minecraft/class_2535.method_10758:()Z
+        76: ifeq          93
+        79: aload_0
+        80: getfield      #142                // Field session:Lnet/minecraft/class_2535;
+        83: invokevirtual #237                // Method net/minecraft/class_2535.method_10744:()Lnet/minecraft/class_2547;
+        86: instanceof    #239                // class net/minecraft/class_8732
+        89: ifeq          93
+        92: return
+        93: aload_0
+        94: aconst_null
+        95: putfield      #142                // Field session:Lnet/minecraft/class_2535;
+        98: ldc           #39                 // String In Main Menu
+       100: astore_3
+       101: getstatic     #144                // Field GAME_STARTED:J
+       104: lstore        4
+       106: aload_0
+       107: getfield      #118                // Field discordButton:Lnet/anubis/client/module/setting/BooleanSetting;
+       110: invokevirtual #147                // Method net/anubis/client/module/setting/BooleanSetting.get:()Z
+       113: istore        6
+       115: aload_0
+       116: getfield      #152                // Field card:Lnet/anubis/client/module/impl/misc/DiscordPresenceModule$Card;
+       119: astore        7
+       121: lload         4
+       123: aload         7
+       125: invokevirtual #242                // Method net/anubis/client/module/impl/misc/DiscordPresenceModule$Card.startedAt:()J
+       128: lcmp
+       129: ifne          154
+       132: iload         6
+       134: aload         7
+       136: invokevirtual #244                // Method net/anubis/client/module/impl/misc/DiscordPresenceModule$Card.discordButton:()Z
+       139: if_icmpne     154
+       142: aload_3
+       143: aload         7
+       145: invokevirtual #248                // Method net/anubis/client/module/impl/misc/DiscordPresenceModule$Card.details:()Ljava/lang/String;
+       148: invokevirtual #252                // Method java/lang/String.equals:(Ljava/lang/Object;)Z
+       151: ifne          177
+       154: aload_0
+       155: new           #9                  // class net/anubis/client/module/impl/misc/DiscordPresenceModule$Card
+       158: dup
+       159: aload_3
+       160: lload         4
+       162: iload         6
+       164: invokespecial #150                // Method net/anubis/client/module/impl/misc/DiscordPresenceModule$Card."<init>":(Ljava/lang/String;JZ)V
+       167: putfield      #152                // Field card:Lnet/anubis/client/module/impl/misc/DiscordPresenceModule$Card;
+       170: aload_0
+       171: getfield      #154                // Field link:Lnet/anubis/client/module/impl/misc/DiscordPresenceModule$Link;
+       174: invokevirtual #255                // Method net/anubis/client/module/impl/misc/DiscordPresenceModule$Link.wake:()V
+       177: return
+      StackMapTable: number_of_entries = 6
+        frame_type = 253 /* append */
+          offset_delta = 43
+          locals = [ class net/minecraft/class_310, class net/minecraft/class_634 ]
+        frame_type = 18 /* same */
+        frame_type = 30 /* same */
+        frame_type = 253 /* append */
+          offset_delta = 12
+          locals = [ class java/lang/String, long ]
+        frame_type = 253 /* append */
+          offset_delta = 47
+          locals = [ int, class net/anubis/client/module/impl/misc/DiscordPresenceModule$Card ]
+        frame_type = 22 /* same */
+      LineNumberTable:
+        line 104: 0
+        line 105: 4
+        line 108: 9
+        line 109: 13
+        line 110: 24
+        line 111: 32
+        line 113: 43
+        line 114: 53
+        line 115: 62
+        line 116: 83
+        line 117: 92
+        line 119: 93
+        line 120: 98
+        line 121: 101
+        line 124: 106
+        line 125: 115
+        line 126: 121
+        line 127: 154
+        line 128: 170
+        line 130: 177
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+           53       9     3 details   Ljava/lang/String;
+           59       3     4 startedAt   J
+            0     178     0  this   Lnet/anubis/client/module/impl/misc/DiscordPresenceModule;
+            4     174     1    mc   Lnet/minecraft/class_310;
+            9     169     2 listener   Lnet/minecraft/class_634;
+          101      77     3 details   Ljava/lang/String;
+          106      72     4 startedAt   J
+          115      63     6 button   Z
+          121      57     7 shown   Lnet/anubis/client/module/impl/misc/DiscordPresenceModule$Card;
+
+  private java.lang.String place(net.minecraft.class_310, net.minecraft.class_642);
+    descriptor: (Lnet/minecraft/class_310;Lnet/minecraft/class_642;)Ljava/lang/String;
+    flags: (0x0002) ACC_PRIVATE
+    Code:
+      stack=1, locals=3, args_size=3
+         0: aload_1
+         1: invokevirtual #265                // Method net/minecraft/class_310.method_1542:()Z
+         4: ifeq          10
+         7: ldc           #42                 // String Singleplayer
+         9: areturn
+        10: aload_2
+        11: ifnonnull     17
+        14: ldc           #45                 // String Multiplayer
+        16: areturn
+        17: aload_2
+        18: invokevirtual #270                // Method net/minecraft/class_642.method_52811:()Z
+        21: ifeq          27
+        24: ldc           #51                 // String Realms
+        26: areturn
+        27: aload_2
+        28: invokevirtual #273                // Method net/minecraft/class_642.method_2994:()Z
+        31: ifeq          37
+        34: ldc           #48                 // String LAN World
+        36: areturn
+        37: aload_0
+        38: getfield      #112                // Field showServerIp:Lnet/anubis/client/module/setting/BooleanSetting;
+        41: invokevirtual #147                // Method net/anubis/client/module/setting/BooleanSetting.get:()Z
+        44: ifeq          54
+        47: aload_2
+        48: getfield      #276                // Field net/minecraft/class_642.field_3761:Ljava/lang/String;
+        51: goto          56
+        54: ldc           #45                 // String Multiplayer
+        56: areturn
+      StackMapTable: number_of_entries = 6
+        frame_type = 10 /* same */
+        frame_type = 6 /* same */
+        frame_type = 9 /* same */
+        frame_type = 9 /* same */
+        frame_type = 16 /* same */
+        frame_type = 65 /* same_locals_1_stack_item */
+          stack = [ class java/lang/String ]
+      LineNumberTable:
+        line 133: 0
+        line 134: 10
+        line 135: 17
+        line 136: 27
+        line 137: 37
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      57     0  this   Lnet/anubis/client/module/impl/misc/DiscordPresenceModule;
+            0      57     1    mc   Lnet/minecraft/class_310;
+            0      57     2 server   Lnet/minecraft/class_642;
+    MethodParameters:
+      Name                           Flags
+      mc
+      server
+
+  private static com.google.gson.JsonObject activity(net.anubis.client.module.impl.misc.DiscordPresenceModule$Card);
+    descriptor: (Lnet/anubis/client/module/impl/misc/DiscordPresenceModule$Card;)Lcom/google/gson/JsonObject;
+    flags: (0x000a) ACC_PRIVATE, ACC_STATIC
+    Code:
+      stack=4, locals=6, args_size=1
+         0: new           #281                // class com/google/gson/JsonObject
+         3: dup
+         4: invokespecial #283                // Method com/google/gson/JsonObject."<init>":()V
+         7: astore_1
+         8: aload_1
+         9: ldc_w         #284                // String details
+        12: aload_0
+        13: invokevirtual #248                // Method net/anubis/client/module/impl/misc/DiscordPresenceModule$Card.details:()Ljava/lang/String;
+        16: invokevirtual #288                // Method com/google/gson/JsonObject.addProperty:(Ljava/lang/String;Ljava/lang/String;)V
+        19: new           #281                // class com/google/gson/JsonObject
+        22: dup
+        23: invokespecial #283                // Method com/google/gson/JsonObject."<init>":()V
+        26: astore_2
+        27: aload_2
+        28: ldc_w         #289                // String start
+        31: aload_0
+        32: invokevirtual #242                // Method net/anubis/client/module/impl/misc/DiscordPresenceModule$Card.startedAt:()J
+        35: invokestatic  #295                // Method java/lang/Long.valueOf:(J)Ljava/lang/Long;
+        38: invokevirtual #298                // Method com/google/gson/JsonObject.addProperty:(Ljava/lang/String;Ljava/lang/Number;)V
+        41: aload_1
+        42: ldc_w         #300                // String timestamps
+        45: aload_2
+        46: invokevirtual #304                // Method com/google/gson/JsonObject.add:(Ljava/lang/String;Lcom/google/gson/JsonElement;)V
+        49: new           #281                // class com/google/gson/JsonObject
+        52: dup
+        53: invokespecial #283                // Method com/google/gson/JsonObject."<init>":()V
+        56: astore_3
+        57: aload_3
+        58: ldc_w         #306                // String large_image
+        61: ldc           #30                 // String logo
+        63: invokevirtual #288                // Method com/google/gson/JsonObject.addProperty:(Ljava/lang/String;Ljava/lang/String;)V
+        66: aload_3
+        67: ldc_w         #308                // String large_text
+        70: ldc           #33                 // String Anubis Client
+        72: invokevirtual #288                // Method com/google/gson/JsonObject.addProperty:(Ljava/lang/String;Ljava/lang/String;)V
+        75: aload_1
+        76: ldc_w         #310                // String assets
+        79: aload_3
+        80: invokevirtual #304                // Method com/google/gson/JsonObject.add:(Ljava/lang/String;Lcom/google/gson/JsonElement;)V
+        83: aload_0
+        84: invokevirtual #244                // Method net/anubis/client/module/impl/misc/DiscordPresenceModule$Card.discordButton:()Z
+        87: ifeq          145
+        90: new           #281                // class com/google/gson/JsonObject
+        93: dup
+        94: invokespecial #283                // Method com/google/gson/JsonObject."<init>":()V
+        97: astore        4
+        99: aload         4
+       101: ldc_w         #312                // String label
+       104: ldc           #36                 // String Discord
+       106: invokevirtual #288                // Method com/google/gson/JsonObject.addProperty:(Ljava/lang/String;Ljava/lang/String;)V
+       109: aload         4
+       111: ldc_w         #314                // String url
+       114: ldc_w         #316                // String https://discord.gg/anubis
+       117: invokevirtual #288                // Method com/google/gson/JsonObject.addProperty:(Ljava/lang/String;Ljava/lang/String;)V
+       120: new           #318                // class com/google/gson/JsonArray
+       123: dup
+       124: invokespecial #319                // Method com/google/gson/JsonArray."<init>":()V
+       127: astore        5
+       129: aload         5
+       131: aload         4
+       133: invokevirtual #322                // Method com/google/gson/JsonArray.add:(Lcom/google/gson/JsonElement;)V
+       136: aload_1
+       137: ldc_w         #324                // String buttons
+       140: aload         5
+       142: invokevirtual #304                // Method com/google/gson/JsonObject.add:(Ljava/lang/String;Lcom/google/gson/JsonElement;)V
+       145: aload_1
+       146: areturn
+      StackMapTable: number_of_entries = 1
+        frame_type = 254 /* append */
+          offset_delta = 145
+          locals = [ class com/google/gson/JsonObject, class com/google/gson/JsonObject, class com/google/gson/JsonObject ]
+      LineNumberTable:
+        line 141: 0
+        line 142: 8
+        line 144: 19
+        line 145: 27
+        line 146: 41
+        line 148: 49
+        line 149: 57
+        line 150: 66
+        line 151: 75
+        line 153: 83
+        line 154: 90
+        line 155: 99
+        line 156: 109
+        line 157: 120
+        line 158: 129
+        line 159: 136
+        line 161: 145
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+           99      46     4 button   Lcom/google/gson/JsonObject;
+          129      16     5 buttons   Lcom/google/gson/JsonArray;
+            0     147     0  card   Lnet/anubis/client/module/impl/misc/DiscordPresenceModule$Card;
+            8     139     1 activity   Lcom/google/gson/JsonObject;
+           27     120     2 timestamps   Lcom/google/gson/JsonObject;
+           57      90     3 assets   Lcom/google/gson/JsonObject;
+    MethodParameters:
+      Name                           Flags
+      card
+
+  private void lambda$onEnable$0(net.anubis.client.event.impl.TickEvent);
+    descriptor: (Lnet/anubis/client/event/impl/TickEvent;)V
+    flags: (0x1002) ACC_PRIVATE, ACC_SYNTHETIC
+    Code:
+      stack=1, locals=2, args_size=2
+         0: aload_0
+         1: invokevirtual #160                // Method refresh:()V
+         4: return
+      LineNumberTable:
+        line 93: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       5     0  this   Lnet/anubis/client/module/impl/misc/DiscordPresenceModule;
+            0       5     1 event   Lnet/anubis/client/event/impl/TickEvent;
+    MethodParameters:
+      Name                           Flags
+      event
+
+  static {};
+    descriptor: ()V
+    flags: (0x0008) ACC_STATIC
+    Code:
+      stack=2, locals=0, args_size=0
+         0: ldc_w         #331                // String Anubis
+         3: invokestatic  #337                // Method org/slf4j/LoggerFactory.getLogger:(Ljava/lang/String;)Lorg/slf4j/Logger;
+         6: putstatic     #132                // Field LOGGER:Lorg/slf4j/Logger;
+         9: invokestatic  #341                // InterfaceMethod java/lang/ProcessHandle.current:()Ljava/lang/ProcessHandle;
+        12: invokeinterface #344,  1          // InterfaceMethod java/lang/ProcessHandle.info:()Ljava/lang/ProcessHandle$Info;
+        17: invokeinterface #348,  1          // InterfaceMethod java/lang/ProcessHandle$Info.startInstant:()Ljava/util/Optional;
+        22: invokedynamic #361,  0            // InvokeDynamic #1:get:()Ljava/util/function/Supplier;
+        27: invokevirtual #367                // Method java/util/Optional.orElseGet:(Ljava/util/function/Supplier;)Ljava/lang/Object;
+        30: checkcast     #352                // class java/time/Instant
+        33: invokevirtual #370                // Method java/time/Instant.getEpochSecond:()J
+        36: putstatic     #144                // Field GAME_STARTED:J
+        39: return
+      LineNumberTable:
+        line 26: 0
+        line 45: 9
+        line 44: 39
+}
+InnerClasses:
+  private static final #10= #9 of #2;     // Card=class net/anubis/client/module/impl/misc/DiscordPresenceModule$Card of class net/anubis/client/module/impl/misc/DiscordPresenceModule
+  private final #11= #7 of #2;            // Link=class net/anubis/client/module/impl/misc/DiscordPresenceModule$Link of class net/anubis/client/module/impl/misc/DiscordPresenceModule
+  public static #16= #13 of #15;          // Info=class java/lang/ProcessHandle$Info of class java/lang/ProcessHandle
+  public static final #21= #18 of #20;    // Lookup=class java/lang/invoke/MethodHandles$Lookup of class java/lang/invoke/MethodHandles
+SourceFile: "DiscordPresenceModule.java"
+RuntimeVisibleAnnotations:
+  0: #371(#372=e#373.#91)
+    net.fabricmc.api.Environment(
+      value=Lnet/fabricmc/api/EnvType;.CLIENT
+    )
+BootstrapMethods:
+  0: #181 REF_invokeStatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #168 (Ljava/lang/Object;)V
+      #173 REF_invokeVirtual net/anubis/client/module/impl/misc/DiscordPresenceModule.lambda$onEnable$0:(Lnet/anubis/client/event/impl/TickEvent;)V
+      #174 (Lnet/anubis/client/event/impl/TickEvent;)V
+  1: #181 REF_invokeStatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #350 ()Ljava/lang/Object;
+      #357 REF_invokeStatic java/time/Instant.now:()Ljava/time/Instant;
+      #358 ()Ljava/time/Instant;
+NestMembers:
+  net/anubis/client/module/impl/misc/DiscordPresenceModule$Link
+  net/anubis/client/module/impl/misc/DiscordPresenceModule$Card

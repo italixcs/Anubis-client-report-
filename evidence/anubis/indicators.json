@@ -1,0 +1,165 @@
+{
+  "malware_iocs_confirmed": false,
+  "target": {
+    "filename": "Anubis Beta 0.9.9.1.jar",
+    "size_bytes": 21206373,
+    "sha256": "20a03c38a39d013bf5f6836818c0b665478eb3381181fd372cd661c438fd752a"
+  },
+  "literal_https_domains": [
+    "api.minecraftservices.com",
+    "api.mojang.com",
+    "device.auth.xboxlive.com",
+    "discord.gg",
+    "github.com",
+    "i.imgur.com",
+    "login.live.com",
+    "lrclib.net",
+    "sessionserver.mojang.com",
+    "sisu.xboxlive.com"
+  ],
+  "domain_classification": "Legitimate-service, support or display references; these are not established malicious IOCs. See report for actual connections.",
+  "fixed_proxy_test": {
+    "ip": "1.1.1.1",
+    "port": 443,
+    "protocol": "TCP via configured SOCKS proxy"
+  },
+  "configurable_destinations": [
+    "webhook URL",
+    "SOCKS proxy address/port",
+    "response-supplied verification and skin URLs",
+    "independently installed addon links"
+  ],
+  "embedded_artifacts": [
+    {
+      "path": "META-INF/jars/fabric-api-base-1.0.5+4ebb5c083e.jar",
+      "bytes": 32615,
+      "sha256": "836892b85727222a0efd6b554660b42f39ac5e8db70e2510108b37fb1df6e53f"
+    },
+    {
+      "path": "META-INF/jars/fabric-key-binding-api-v1-1.1.7+4fc5413f3e.jar",
+      "bytes": 20734,
+      "sha256": "d2745bab1ce19186fd46f4fe6ec62111e7b2b4057f70fc0527528e8b3a6dee37"
+    },
+    {
+      "path": "META-INF/jars/fabric-lifecycle-events-v1-2.6.15+4ebb5c083e.jar",
+      "bytes": 102434,
+      "sha256": "73592f1338c5dbe70086174dfdc9d0c76d4f3369a5003af5847eb3c9dcaa1b5c"
+    },
+    {
+      "path": "META-INF/jars/fabric-rendering-fluids-v1-3.1.43+4ebb5c083e.jar",
+      "bytes": 31654,
+      "sha256": "e453d6f33b05845633f53161cf7aeee9748b8ebfb574330600e784fd4e1d28e3"
+    },
+    {
+      "path": "META-INF/jars/fabric-resource-loader-v0-3.3.4+4fc5413f3e.jar",
+      "bytes": 22146,
+      "sha256": "770b05f31dc6d894e635e513b34960cc82ccb51fe93f5c82884b7102f79d0d06"
+    },
+    {
+      "path": "META-INF/jars/fabric-resource-loader-v1-1.0.10+78c8b4663e.jar",
+      "bytes": 148622,
+      "sha256": "2340202f2a97acc61c50b48e1db8c708fc55a746772cf06e999d91b7a372c3e8"
+    },
+    {
+      "path": "META-INF/jars/fabric-screen-api-v1-3.1.7+4ebb5c083e.jar",
+      "bytes": 62437,
+      "sha256": "254fafc347bf69de405add5e11167dd315b0d07e9e67062b5058ec37d5f8fd6a"
+    },
+    {
+      "path": "META-INF/jars/imgui-java-binding-1.90.0.jar",
+      "bytes": 280271,
+      "sha256": "cb0b539a3621f101280f0d68415921f1f2757688e6d2478f6341bb69416b08f1"
+    },
+    {
+      "path": "META-INF/jars/imgui-java-lwjgl3-1.90.0.jar",
+      "bytes": 45298,
+      "sha256": "2de2e4416f2597ce9c5d831bc5df09ca084531299563962ff95408cb976decab"
+    },
+    {
+      "path": "META-INF/jars/imgui-java-natives-linux-1.90.0.jar",
+      "bytes": 1918507,
+      "sha256": "bbb87cc609f45a135bf0aeff945d79302bb6f4a89fc981c5c75f9b0aae441b9e"
+    },
+    {
+      "path": "META-INF/jars/imgui-java-natives-macos-1.90.0.jar",
+      "bytes": 3342226,
+      "sha256": "4dd80adc4d6788dc5bde3f1cdaa81abfc2d75e70574c6a3721330f0ab1fcda2a"
+    },
+    {
+      "path": "META-INF/jars/imgui-java-natives-windows-1.90.0.jar",
+      "bytes": 1956793,
+      "sha256": "5cd912c36d51b5b373bcb00ae04fc63bb39843f1973f19ae9fe32ce926d535f2"
+    },
+    {
+      "path": "META-INF/jars/netty-codec-socks-4.2.7.Final.jar",
+      "bytes": 132409,
+      "sha256": "264464f6d92b0e08a5fbd710add9749b5c40adaf4758db33ca13a80aa4326695"
+    },
+    {
+      "path": "META-INF/jars/netty-handler-proxy-4.2.7.Final.jar",
+      "bytes": 27404,
+      "sha256": "85627356c91424bb7582d912c241bfcdef97afdbd7ae7465b093d0c307567b9c"
+    },
+    {
+      "path": "io/imgui/java/native-bin/android-arm64/libimgui-java64.so",
+      "bytes": 4898472,
+      "sha256": "527f815cba3b15a217797fb3a7a0c080f68e42d103ace51121eca04b1f0cd111"
+    },
+    {
+      "path": "net/anubis/compat/android-picker/arm64-v8a/libanubis_picker.so",
+      "bytes": 3247424,
+      "sha256": "737abae16904ce3d5938b213d60fba7f8d2a2c80952715474fa4dbfae99d1e1c"
+    }
+  ],
+  "native_artifacts": [
+    {
+      "id": "native-01",
+      "path": "analysis-workspace/extracted/run.oEA4CbVx/io/imgui/java/native-bin/android-arm64/libimgui-java64.so",
+      "sha256": "527f815cba3b15a217797fb3a7a0c080f68e42d103ace51121eca04b1f0cd111",
+      "type": "ELF 64-bit LSB shared object, ARM aarch64, version 1 (SYSV), dynamically linked, for Android 21, built by NDK r28c (13676358), BuildID[sha1]=769427cc4642fbe96c1f1ea9af7ab25a745d0ffc, stripped"
+    },
+    {
+      "id": "native-02",
+      "path": "analysis-workspace/extracted/run.oEA4CbVx/net/anubis/compat/android-picker/arm64-v8a/libanubis_picker.so",
+      "sha256": "737abae16904ce3d5938b213d60fba7f8d2a2c80952715474fa4dbfae99d1e1c",
+      "type": "ELF 64-bit LSB shared object, ARM aarch64, version 1 (SYSV), dynamically linked, for Android 21, built by NDK r28c (13676358), BuildID[sha1]=7cc96d9fe47825c8b3e5e4379151fe18eb1a4178, with debug_info, not stripped"
+    },
+    {
+      "id": "native-03",
+      "path": "analysis-workspace/reports/run.oEA4CbVx/nested/992929237265/extracted/io/imgui/java/native-bin/imgui-java64.dll",
+      "sha256": "5f0cb2709a97043f8de42fc3bfb9d2f84808448dc9c605c8aac635b955dc6c24",
+      "type": "PE32+ executable for MS Windows 5.02 (DLL), x86-64 (stripped to external PDB), 11 sections"
+    },
+    {
+      "id": "native-04",
+      "path": "analysis-workspace/reports/run.oEA4CbVx/nested/5cb56217041a/extracted/io/imgui/java/native-bin/libimgui-java64.so",
+      "sha256": "3198e517a37d36fad7a8c3c928cae2ee6f71f2401dbc374731f8a4d9770060ef",
+      "type": "ELF 64-bit LSB shared object, x86-64, version 1 (GNU/Linux), dynamically linked, BuildID[sha1]=b7d55df36788529750815ddd3ec613f5cf4d497b, stripped"
+    },
+    {
+      "id": "native-05",
+      "path": "analysis-workspace/reports/run.oEA4CbVx/nested/af2d27841b89/extracted/io/imgui/java/native-bin/libimgui-java64.dylib",
+      "sha256": "da6db90baec7f227a06fbf38fc4b776558548f742899706460afd5cf1660d59a",
+      "type": "Mach-O universal binary with 2 architectures: [x86_64:\\012- Mach-O 64-bit x86_64 dynamically linked shared library, flags:<NOUNDEFS|DYLDLINK|TWOLEVEL|WEAK_DEFINES|BINDS_TO_WEAK|NO_REEXPORTED_DYLIBS>] [\\012- arm64:\\012- Mach-O 64-bit arm64 dynamically linked shared library, flags:<NOUNDEFS|DYLDLINK|TWOLEVEL|WEAK_DEFINES|BINDS_TO_WEAK|NO_REEXPORTED_DYLIBS>]"
+    }
+  ],
+  "android_dex": {
+    "path": "net/anubis/compat/android-picker/classes.dex",
+    "sha256": "2967511be3241b44d6a25c4bccaa06c8a045ac41044e5e47755d30c8cd10de90"
+  },
+  "local_state_paths": [
+    "config/anubis/accounts.json",
+    "config/anubis/proxies.json",
+    "config/anubis/modules.json",
+    "config/anubis/lyrics-cache/",
+    "config/anubis/playerbypass-protected/"
+  ],
+  "verdict": "Mostly safe, minor concerns",
+  "overall_risk": "Account theft not identified; confirmed Medium local credential-storage exposure",
+  "safe_meter": {
+    "status": "Credential-storage caution",
+    "numeric_probability": null,
+    "confirmed_stealing_path": false,
+    "plaintext_saved_tokens": true
+  }
+}

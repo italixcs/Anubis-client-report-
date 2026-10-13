@@ -1,0 +1,9 @@
+{
+  "process_spawn": [],
+  "bytecode_defining_loader": [],
+  "registry_persistence": [],
+  "awt_screen_capture": [],
+  "unsafe": [],
+  "java_agents": [],
+  "cipher": []
+}

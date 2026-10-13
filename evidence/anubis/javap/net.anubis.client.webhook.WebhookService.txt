@@ -1,0 +1,382 @@
+Classfile analysis-workspace/extracted/run.oEA4CbVx/net/anubis/client/webhook/WebhookService.class
+  Last modified Oct 13, 2026; size 4073 bytes
+  SHA-256 checksum 6cb9b96d265ea4dad0aaed87532c348bde9c72a2142c6e4400ba145fe52ab1a9
+  Compiled from "WebhookService.java"
+public final class net.anubis.client.webhook.WebhookService
+  minor version: 0
+  major version: 65
+  flags: (0x0031) ACC_PUBLIC, ACC_FINAL, ACC_SUPER
+  this_class: #2                          // net/anubis/client/webhook/WebhookService
+  super_class: #4                         // java/lang/Object
+  interfaces: 0, fields: 1, methods: 2, attributes: 3
+Constant pool:
+    #1 = Utf8               net/anubis/client/webhook/WebhookService
+    #2 = Class              #1            // net/anubis/client/webhook/WebhookService
+    #3 = Utf8               java/lang/Object
+    #4 = Class              #3            // java/lang/Object
+    #5 = Utf8               WebhookService.java
+    #6 = Utf8               java/net/http/HttpClient$Builder
+    #7 = Class              #6            // java/net/http/HttpClient$Builder
+    #8 = Utf8               java/net/http/HttpClient
+    #9 = Class              #8            // java/net/http/HttpClient
+   #10 = Utf8               Builder
+   #11 = Utf8               java/net/http/HttpRequest$Builder
+   #12 = Class              #11           // java/net/http/HttpRequest$Builder
+   #13 = Utf8               java/net/http/HttpRequest
+   #14 = Class              #13           // java/net/http/HttpRequest
+   #15 = Utf8               java/net/http/HttpRequest$BodyPublishers
+   #16 = Class              #15           // java/net/http/HttpRequest$BodyPublishers
+   #17 = Utf8               BodyPublishers
+   #18 = Utf8               java/net/http/HttpRequest$BodyPublisher
+   #19 = Class              #18           // java/net/http/HttpRequest$BodyPublisher
+   #20 = Utf8               BodyPublisher
+   #21 = Utf8               java/net/http/HttpResponse$BodyHandlers
+   #22 = Class              #21           // java/net/http/HttpResponse$BodyHandlers
+   #23 = Utf8               java/net/http/HttpResponse
+   #24 = Class              #23           // java/net/http/HttpResponse
+   #25 = Utf8               BodyHandlers
+   #26 = Utf8               java/net/http/HttpResponse$BodyHandler
+   #27 = Class              #26           // java/net/http/HttpResponse$BodyHandler
+   #28 = Utf8               BodyHandler
+   #29 = Utf8               httpClient
+   #30 = Utf8               Ljava/net/http/HttpClient;
+   #31 = Utf8               <init>
+   #32 = Utf8               ()V
+   #33 = NameAndType        #31:#32       // "<init>":()V
+   #34 = Methodref          #4.#33        // java/lang/Object."<init>":()V
+   #35 = Utf8               newBuilder
+   #36 = Utf8               ()Ljava/net/http/HttpClient$Builder;
+   #37 = NameAndType        #35:#36       // newBuilder:()Ljava/net/http/HttpClient$Builder;
+   #38 = Methodref          #9.#37        // java/net/http/HttpClient.newBuilder:()Ljava/net/http/HttpClient$Builder;
+   #39 = Long               8l
+   #41 = Utf8               java/time/Duration
+   #42 = Class              #41           // java/time/Duration
+   #43 = Utf8               ofSeconds
+   #44 = Utf8               (J)Ljava/time/Duration;
+   #45 = NameAndType        #43:#44       // ofSeconds:(J)Ljava/time/Duration;
+   #46 = Methodref          #42.#45       // java/time/Duration.ofSeconds:(J)Ljava/time/Duration;
+   #47 = Utf8               connectTimeout
+   #48 = Utf8               (Ljava/time/Duration;)Ljava/net/http/HttpClient$Builder;
+   #49 = NameAndType        #47:#48       // connectTimeout:(Ljava/time/Duration;)Ljava/net/http/HttpClient$Builder;
+   #50 = InterfaceMethodref #7.#49        // java/net/http/HttpClient$Builder.connectTimeout:(Ljava/time/Duration;)Ljava/net/http/HttpClient$Builder;
+   #51 = Utf8               build
+   #52 = Utf8               ()Ljava/net/http/HttpClient;
+   #53 = NameAndType        #51:#52       // build:()Ljava/net/http/HttpClient;
+   #54 = InterfaceMethodref #7.#53        // java/net/http/HttpClient$Builder.build:()Ljava/net/http/HttpClient;
+   #55 = NameAndType        #29:#30       // httpClient:Ljava/net/http/HttpClient;
+   #56 = Fieldref           #2.#55        // net/anubis/client/webhook/WebhookService.httpClient:Ljava/net/http/HttpClient;
+   #57 = Utf8               this
+   #58 = Utf8               Lnet/anubis/client/webhook/WebhookService;
+   #59 = Utf8               send
+   #60 = Utf8               (Lnet/anubis/client/webhook/WebhookConfig;Lnet/anubis/client/webhook/WebhookPayloadBuilder;)Z
+   #61 = Utf8               config
+   #62 = Utf8               payloadBuilder
+   #63 = Utf8               java/lang/RuntimeException
+   #64 = Class              #63           // java/lang/RuntimeException
+   #65 = Utf8               java/io/IOException
+   #66 = Class              #65           // java/io/IOException
+   #67 = Utf8               java/lang/InterruptedException
+   #68 = Class              #67           // java/lang/InterruptedException
+   #69 = Utf8               net/anubis/client/webhook/WebhookPayloadBuilder
+   #70 = Class              #69           // net/anubis/client/webhook/WebhookPayloadBuilder
+   #71 = Utf8               (Lnet/anubis/client/webhook/WebhookConfig;)Lcom/google/gson/JsonObject;
+   #72 = NameAndType        #51:#71       // build:(Lnet/anubis/client/webhook/WebhookConfig;)Lcom/google/gson/JsonObject;
+   #73 = Methodref          #70.#72       // net/anubis/client/webhook/WebhookPayloadBuilder.build:(Lnet/anubis/client/webhook/WebhookConfig;)Lcom/google/gson/JsonObject;
+   #74 = Utf8               net/anubis/client/AnubisClientMod
+   #75 = Class              #74           // net/anubis/client/AnubisClientMod
+   #76 = Utf8               LOGGER
+   #77 = Utf8               Lorg/slf4j/Logger;
+   #78 = NameAndType        #76:#77       // LOGGER:Lorg/slf4j/Logger;
+   #79 = Fieldref           #75.#78       // net/anubis/client/AnubisClientMod.LOGGER:Lorg/slf4j/Logger;
+   #80 = Utf8               [Anubis] Failed to build webhook payload
+   #81 = String             #80           // [Anubis] Failed to build webhook payload
+   #82 = Utf8               org/slf4j/Logger
+   #83 = Class              #82           // org/slf4j/Logger
+   #84 = Utf8               warn
+   #85 = Utf8               (Ljava/lang/String;Ljava/lang/Throwable;)V
+   #86 = NameAndType        #84:#85       // warn:(Ljava/lang/String;Ljava/lang/Throwable;)V
+   #87 = InterfaceMethodref #83.#86       // org/slf4j/Logger.warn:(Ljava/lang/String;Ljava/lang/Throwable;)V
+   #88 = Utf8               com/google/gson/JsonObject
+   #89 = Class              #88           // com/google/gson/JsonObject
+   #90 = Utf8               net/anubis/client/webhook/WebhookConfig
+   #91 = Class              #90           // net/anubis/client/webhook/WebhookConfig
+   #92 = Utf8               url
+   #93 = Utf8               ()Ljava/lang/String;
+   #94 = NameAndType        #92:#93       // url:()Ljava/lang/String;
+   #95 = Methodref          #91.#94       // net/anubis/client/webhook/WebhookConfig.url:()Ljava/lang/String;
+   #96 = Utf8               java/net/URI
+   #97 = Class              #96           // java/net/URI
+   #98 = Utf8               create
+   #99 = Utf8               (Ljava/lang/String;)Ljava/net/URI;
+  #100 = NameAndType        #98:#99       // create:(Ljava/lang/String;)Ljava/net/URI;
+  #101 = Methodref          #97.#100      // java/net/URI.create:(Ljava/lang/String;)Ljava/net/URI;
+  #102 = Utf8               (Ljava/net/URI;)Ljava/net/http/HttpRequest$Builder;
+  #103 = NameAndType        #35:#102      // newBuilder:(Ljava/net/URI;)Ljava/net/http/HttpRequest$Builder;
+  #104 = Methodref          #14.#103      // java/net/http/HttpRequest.newBuilder:(Ljava/net/URI;)Ljava/net/http/HttpRequest$Builder;
+  #105 = Long               10l
+  #107 = Utf8               timeout
+  #108 = Utf8               (Ljava/time/Duration;)Ljava/net/http/HttpRequest$Builder;
+  #109 = NameAndType        #107:#108     // timeout:(Ljava/time/Duration;)Ljava/net/http/HttpRequest$Builder;
+  #110 = InterfaceMethodref #12.#109      // java/net/http/HttpRequest$Builder.timeout:(Ljava/time/Duration;)Ljava/net/http/HttpRequest$Builder;
+  #111 = Utf8               Content-Type
+  #112 = String             #111          // Content-Type
+  #113 = Utf8               application/json
+  #114 = String             #113          // application/json
+  #115 = Utf8               header
+  #116 = Utf8               (Ljava/lang/String;Ljava/lang/String;)Ljava/net/http/HttpRequest$Builder;
+  #117 = NameAndType        #115:#116     // header:(Ljava/lang/String;Ljava/lang/String;)Ljava/net/http/HttpRequest$Builder;
+  #118 = InterfaceMethodref #12.#117      // java/net/http/HttpRequest$Builder.header:(Ljava/lang/String;Ljava/lang/String;)Ljava/net/http/HttpRequest$Builder;
+  #119 = Utf8               toString
+  #120 = NameAndType        #119:#93      // toString:()Ljava/lang/String;
+  #121 = Methodref          #89.#120      // com/google/gson/JsonObject.toString:()Ljava/lang/String;
+  #122 = Utf8               ofString
+  #123 = Utf8               (Ljava/lang/String;)Ljava/net/http/HttpRequest$BodyPublisher;
+  #124 = NameAndType        #122:#123     // ofString:(Ljava/lang/String;)Ljava/net/http/HttpRequest$BodyPublisher;
+  #125 = Methodref          #16.#124      // java/net/http/HttpRequest$BodyPublishers.ofString:(Ljava/lang/String;)Ljava/net/http/HttpRequest$BodyPublisher;
+  #126 = Utf8               POST
+  #127 = Utf8               (Ljava/net/http/HttpRequest$BodyPublisher;)Ljava/net/http/HttpRequest$Builder;
+  #128 = NameAndType        #126:#127     // POST:(Ljava/net/http/HttpRequest$BodyPublisher;)Ljava/net/http/HttpRequest$Builder;
+  #129 = InterfaceMethodref #12.#128      // java/net/http/HttpRequest$Builder.POST:(Ljava/net/http/HttpRequest$BodyPublisher;)Ljava/net/http/HttpRequest$Builder;
+  #130 = Utf8               ()Ljava/net/http/HttpRequest;
+  #131 = NameAndType        #51:#130      // build:()Ljava/net/http/HttpRequest;
+  #132 = InterfaceMethodref #12.#131      // java/net/http/HttpRequest$Builder.build:()Ljava/net/http/HttpRequest;
+  #133 = Utf8               discarding
+  #134 = Utf8               ()Ljava/net/http/HttpResponse$BodyHandler;
+  #135 = NameAndType        #133:#134     // discarding:()Ljava/net/http/HttpResponse$BodyHandler;
+  #136 = Methodref          #22.#135      // java/net/http/HttpResponse$BodyHandlers.discarding:()Ljava/net/http/HttpResponse$BodyHandler;
+  #137 = Utf8               (Ljava/net/http/HttpRequest;Ljava/net/http/HttpResponse$BodyHandler;)Ljava/net/http/HttpResponse;
+  #138 = NameAndType        #59:#137      // send:(Ljava/net/http/HttpRequest;Ljava/net/http/HttpResponse$BodyHandler;)Ljava/net/http/HttpResponse;
+  #139 = Methodref          #9.#138       // java/net/http/HttpClient.send:(Ljava/net/http/HttpRequest;Ljava/net/http/HttpResponse$BodyHandler;)Ljava/net/http/HttpResponse;
+  #140 = Utf8               statusCode
+  #141 = Utf8               ()I
+  #142 = NameAndType        #140:#141     // statusCode:()I
+  #143 = InterfaceMethodref #24.#142      // java/net/http/HttpResponse.statusCode:()I
+  #144 = Utf8               [Anubis] Webhook request failed with status {}
+  #145 = String             #144          // [Anubis] Webhook request failed with status {}
+  #146 = Utf8               java/lang/Integer
+  #147 = Class              #146          // java/lang/Integer
+  #148 = Utf8               valueOf
+  #149 = Utf8               (I)Ljava/lang/Integer;
+  #150 = NameAndType        #148:#149     // valueOf:(I)Ljava/lang/Integer;
+  #151 = Methodref          #147.#150     // java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+  #152 = Utf8               (Ljava/lang/String;Ljava/lang/Object;)V
+  #153 = NameAndType        #84:#152      // warn:(Ljava/lang/String;Ljava/lang/Object;)V
+  #154 = InterfaceMethodref #83.#153      // org/slf4j/Logger.warn:(Ljava/lang/String;Ljava/lang/Object;)V
+  #155 = Utf8               java/lang/Exception
+  #156 = Class              #155          // java/lang/Exception
+  #157 = Utf8               java/lang/Thread
+  #158 = Class              #157          // java/lang/Thread
+  #159 = Utf8               currentThread
+  #160 = Utf8               ()Ljava/lang/Thread;
+  #161 = NameAndType        #159:#160     // currentThread:()Ljava/lang/Thread;
+  #162 = Methodref          #158.#161     // java/lang/Thread.currentThread:()Ljava/lang/Thread;
+  #163 = Utf8               interrupt
+  #164 = NameAndType        #163:#32      // interrupt:()V
+  #165 = Methodref          #158.#164     // java/lang/Thread.interrupt:()V
+  #166 = Utf8               [Anubis] Webhook request failed
+  #167 = String             #166          // [Anubis] Webhook request failed
+  #168 = Utf8               payload
+  #169 = Utf8               Lcom/google/gson/JsonObject;
+  #170 = Utf8               exception
+  #171 = Utf8               Ljava/lang/RuntimeException;
+  #172 = Utf8               response
+  #173 = Utf8               Ljava/net/http/HttpResponse<Ljava/lang/Void;>;
+  #174 = Utf8               Ljava/net/http/HttpResponse;
+  #175 = Utf8               status
+  #176 = Utf8               I
+  #177 = Utf8               Ljava/lang/Exception;
+  #178 = Utf8               Lnet/anubis/client/webhook/WebhookConfig;
+  #179 = Utf8               Lnet/anubis/client/webhook/WebhookPayloadBuilder;
+  #180 = Utf8               request
+  #181 = Utf8               Ljava/net/http/HttpRequest;
+  #182 = Utf8               Lnet/fabricmc/api/Environment;
+  #183 = Utf8               value
+  #184 = Utf8               Lnet/fabricmc/api/EnvType;
+  #185 = Utf8               CLIENT
+  #186 = Utf8               Code
+  #187 = Utf8               LineNumberTable
+  #188 = Utf8               LocalVariableTable
+  #189 = Utf8               StackMapTable
+  #190 = Utf8               LocalVariableTypeTable
+  #191 = Utf8               MethodParameters
+  #192 = Utf8               InnerClasses
+  #193 = Utf8               SourceFile
+  #194 = Utf8               RuntimeVisibleAnnotations
+{
+  private final java.net.http.HttpClient httpClient;
+    descriptor: Ljava/net/http/HttpClient;
+    flags: (0x0012) ACC_PRIVATE, ACC_FINAL
+
+  public net.anubis.client.webhook.WebhookService();
+    descriptor: ()V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=4, locals=1, args_size=1
+         0: aload_0
+         1: invokespecial #34                 // Method java/lang/Object."<init>":()V
+         4: aload_0
+         5: invokestatic  #38                 // Method java/net/http/HttpClient.newBuilder:()Ljava/net/http/HttpClient$Builder;
+         8: ldc2_w        #39                 // long 8l
+        11: invokestatic  #46                 // Method java/time/Duration.ofSeconds:(J)Ljava/time/Duration;
+        14: invokeinterface #50,  2           // InterfaceMethod java/net/http/HttpClient$Builder.connectTimeout:(Ljava/time/Duration;)Ljava/net/http/HttpClient$Builder;
+        19: invokeinterface #54,  1           // InterfaceMethod java/net/http/HttpClient$Builder.build:()Ljava/net/http/HttpClient;
+        24: putfield      #56                 // Field httpClient:Ljava/net/http/HttpClient;
+        27: return
+      LineNumberTable:
+        line 13: 0
+        line 14: 4
+        line 15: 11
+        line 16: 19
+        line 14: 27
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      28     0  this   Lnet/anubis/client/webhook/WebhookService;
+
+  public boolean send(net.anubis.client.webhook.WebhookConfig, net.anubis.client.webhook.WebhookPayloadBuilder);
+    descriptor: (Lnet/anubis/client/webhook/WebhookConfig;Lnet/anubis/client/webhook/WebhookPayloadBuilder;)Z
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=3, locals=7, args_size=3
+         0: aload_2
+         1: aload_1
+         2: invokevirtual #73                 // Method net/anubis/client/webhook/WebhookPayloadBuilder.build:(Lnet/anubis/client/webhook/WebhookConfig;)Lcom/google/gson/JsonObject;
+         5: astore_3
+         6: goto          25
+         9: astore        4
+        11: getstatic     #79                 // Field net/anubis/client/AnubisClientMod.LOGGER:Lorg/slf4j/Logger;
+        14: ldc           #81                 // String [Anubis] Failed to build webhook payload
+        16: aload         4
+        18: invokeinterface #87,  3           // InterfaceMethod org/slf4j/Logger.warn:(Ljava/lang/String;Ljava/lang/Throwable;)V
+        23: iconst_0
+        24: ireturn
+        25: aload_1
+        26: invokevirtual #95                 // Method net/anubis/client/webhook/WebhookConfig.url:()Ljava/lang/String;
+        29: invokestatic  #101                // Method java/net/URI.create:(Ljava/lang/String;)Ljava/net/URI;
+        32: invokestatic  #104                // Method java/net/http/HttpRequest.newBuilder:(Ljava/net/URI;)Ljava/net/http/HttpRequest$Builder;
+        35: ldc2_w        #105                // long 10l
+        38: invokestatic  #46                 // Method java/time/Duration.ofSeconds:(J)Ljava/time/Duration;
+        41: invokeinterface #110,  2          // InterfaceMethod java/net/http/HttpRequest$Builder.timeout:(Ljava/time/Duration;)Ljava/net/http/HttpRequest$Builder;
+        46: ldc           #112                // String Content-Type
+        48: ldc           #114                // String application/json
+        50: invokeinterface #118,  3          // InterfaceMethod java/net/http/HttpRequest$Builder.header:(Ljava/lang/String;Ljava/lang/String;)Ljava/net/http/HttpRequest$Builder;
+        55: aload_3
+        56: invokevirtual #121                // Method com/google/gson/JsonObject.toString:()Ljava/lang/String;
+        59: invokestatic  #125                // Method java/net/http/HttpRequest$BodyPublishers.ofString:(Ljava/lang/String;)Ljava/net/http/HttpRequest$BodyPublisher;
+        62: invokeinterface #129,  2          // InterfaceMethod java/net/http/HttpRequest$Builder.POST:(Ljava/net/http/HttpRequest$BodyPublisher;)Ljava/net/http/HttpRequest$Builder;
+        67: invokeinterface #132,  1          // InterfaceMethod java/net/http/HttpRequest$Builder.build:()Ljava/net/http/HttpRequest;
+        72: astore        4
+        74: aload_0
+        75: getfield      #56                 // Field httpClient:Ljava/net/http/HttpClient;
+        78: aload         4
+        80: invokestatic  #136                // Method java/net/http/HttpResponse$BodyHandlers.discarding:()Ljava/net/http/HttpResponse$BodyHandler;
+        83: invokevirtual #139                // Method java/net/http/HttpClient.send:(Ljava/net/http/HttpRequest;Ljava/net/http/HttpResponse$BodyHandler;)Ljava/net/http/HttpResponse;
+        86: astore        5
+        88: aload         5
+        90: invokeinterface #143,  1          // InterfaceMethod java/net/http/HttpResponse.statusCode:()I
+        95: istore        6
+        97: iload         6
+        99: sipush        200
+       102: if_icmplt     115
+       105: iload         6
+       107: sipush        300
+       110: if_icmpge     115
+       113: iconst_1
+       114: ireturn
+       115: getstatic     #79                 // Field net/anubis/client/AnubisClientMod.LOGGER:Lorg/slf4j/Logger;
+       118: ldc           #145                // String [Anubis] Webhook request failed with status {}
+       120: iload         6
+       122: invokestatic  #151                // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+       125: invokeinterface #154,  3          // InterfaceMethod org/slf4j/Logger.warn:(Ljava/lang/String;Ljava/lang/Object;)V
+       130: goto          161
+       133: astore        5
+       135: aload         5
+       137: instanceof    #68                 // class java/lang/InterruptedException
+       140: ifeq          149
+       143: invokestatic  #162                // Method java/lang/Thread.currentThread:()Ljava/lang/Thread;
+       146: invokevirtual #165                // Method java/lang/Thread.interrupt:()V
+       149: getstatic     #79                 // Field net/anubis/client/AnubisClientMod.LOGGER:Lorg/slf4j/Logger;
+       152: ldc           #167                // String [Anubis] Webhook request failed
+       154: aload         5
+       156: invokeinterface #87,  3           // InterfaceMethod org/slf4j/Logger.warn:(Ljava/lang/String;Ljava/lang/Throwable;)V
+       161: iconst_0
+       162: ireturn
+      Exception table:
+         from    to  target type
+             0     6     9   Class java/lang/RuntimeException
+            74   114   133   Class java/io/IOException
+            74   114   133   Class java/lang/InterruptedException
+           115   130   133   Class java/io/IOException
+           115   130   133   Class java/lang/InterruptedException
+      StackMapTable: number_of_entries = 6
+        frame_type = 73 /* same_locals_1_stack_item */
+          stack = [ class java/lang/RuntimeException ]
+        frame_type = 252 /* append */
+          offset_delta = 15
+          locals = [ class com/google/gson/JsonObject ]
+        frame_type = 254 /* append */
+          offset_delta = 89
+          locals = [ class java/net/http/HttpRequest, class java/net/http/HttpResponse, int ]
+        frame_type = 255 /* full_frame */
+          offset_delta = 17
+          locals = [ class net/anubis/client/webhook/WebhookService, class net/anubis/client/webhook/WebhookConfig, class net/anubis/client/webhook/WebhookPayloadBuilder, class com/google/gson/JsonObject, class java/net/http/HttpRequest ]
+          stack = [ class java/lang/Exception ]
+        frame_type = 252 /* append */
+          offset_delta = 15
+          locals = [ class java/lang/Exception ]
+        frame_type = 250 /* chop */
+          offset_delta = 11
+      LineNumberTable:
+        line 21: 0
+        line 25: 6
+        line 22: 9
+        line 23: 11
+        line 24: 23
+        line 27: 25
+        line 28: 38
+        line 29: 50
+        line 30: 56
+        line 31: 67
+        line 34: 74
+        line 35: 88
+        line 36: 97
+        line 37: 113
+        line 40: 115
+        line 46: 130
+        line 41: 133
+        line 42: 135
+        line 43: 143
+        line 45: 149
+        line 48: 161
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            6       3     3 payload   Lcom/google/gson/JsonObject;
+           11      14     4 exception   Ljava/lang/RuntimeException;
+           88      42     5 response   Ljava/net/http/HttpResponse;
+           97      33     6 status   I
+          135      26     5 exception   Ljava/lang/Exception;
+            0     163     0  this   Lnet/anubis/client/webhook/WebhookService;
+            0     163     1 config   Lnet/anubis/client/webhook/WebhookConfig;
+            0     163     2 payloadBuilder   Lnet/anubis/client/webhook/WebhookPayloadBuilder;
+           25     138     3 payload   Lcom/google/gson/JsonObject;
+           74      89     4 request   Ljava/net/http/HttpRequest;
+      LocalVariableTypeTable:
+        Start  Length  Slot  Name   Signature
+           88      42     5 response   Ljava/net/http/HttpResponse<Ljava/lang/Void;>;
+    MethodParameters:
+      Name                           Flags
+      config
+      payloadBuilder
+}
+InnerClasses:
+  public static #10= #7 of #9;            // Builder=class java/net/http/HttpClient$Builder of class java/net/http/HttpClient
+  public static #10= #12 of #14;          // Builder=class java/net/http/HttpRequest$Builder of class java/net/http/HttpRequest
+  public static #17= #16 of #14;          // BodyPublishers=class java/net/http/HttpRequest$BodyPublishers of class java/net/http/HttpRequest
+  public static #20= #19 of #14;          // BodyPublisher=class java/net/http/HttpRequest$BodyPublisher of class java/net/http/HttpRequest
+  public static #25= #22 of #24;          // BodyHandlers=class java/net/http/HttpResponse$BodyHandlers of class java/net/http/HttpResponse
+  public static #28= #27 of #24;          // BodyHandler=class java/net/http/HttpResponse$BodyHandler of class java/net/http/HttpResponse
+SourceFile: "WebhookService.java"
+RuntimeVisibleAnnotations:
+  0: #182(#183=e#184.#185)
+    net.fabricmc.api.Environment(
+      value=Lnet/fabricmc/api/EnvType;.CLIENT
+    )

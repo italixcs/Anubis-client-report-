@@ -1,0 +1,1897 @@
+Classfile analysis-workspace/extracted/run.oEA4CbVx/net/anubis/client/gui/mainmenu/MenuTextures.class
+  Last modified Oct 13, 2026; size 10847 bytes
+  SHA-256 checksum d5f3ee08fac09e330f03ed2890eecfc987e28948014c26048e16a01293c2c267
+  Compiled from "MenuTextures.java"
+final class net.anubis.client.gui.mainmenu.MenuTextures
+  minor version: 0
+  major version: 65
+  flags: (0x0030) ACC_FINAL, ACC_SUPER
+  this_class: #2                          // net/anubis/client/gui/mainmenu/MenuTextures
+  super_class: #4                         // java/lang/Object
+  interfaces: 0, fields: 3, methods: 14, attributes: 5
+Constant pool:
+    #1 = Utf8               net/anubis/client/gui/mainmenu/MenuTextures
+    #2 = Class              #1            // net/anubis/client/gui/mainmenu/MenuTextures
+    #3 = Utf8               java/lang/Object
+    #4 = Class              #3            // java/lang/Object
+    #5 = Utf8               MenuTextures.java
+    #6 = Utf8               net/anubis/client/gui/mainmenu/MenuTextures$Pixels
+    #7 = Class              #6            // net/anubis/client/gui/mainmenu/MenuTextures$Pixels
+    #8 = Utf8               net/anubis/client/gui/ThemeImages$Texture
+    #9 = Class              #8            // net/anubis/client/gui/ThemeImages$Texture
+   #10 = Utf8               net/anubis/client/gui/ThemeImages
+   #11 = Class              #10           // net/anubis/client/gui/ThemeImages
+   #12 = Utf8               Texture
+   #13 = Utf8               Pixels
+   #14 = Utf8               java/lang/invoke/MethodHandles$Lookup
+   #15 = Class              #14           // java/lang/invoke/MethodHandles$Lookup
+   #16 = Utf8               java/lang/invoke/MethodHandles
+   #17 = Class              #16           // java/lang/invoke/MethodHandles
+   #18 = Utf8               Lookup
+   #19 = Utf8               LOGGER
+   #20 = Utf8               Lorg/slf4j/Logger;
+   #21 = Utf8               TEXTURES
+   #22 = Utf8               Ljava/util/Map;
+   #23 = Utf8               Ljava/util/Map<Ljava/lang/String;Lnet/anubis/client/gui/ThemeImages$Texture;>;
+   #24 = Utf8               optimized
+   #25 = Utf8               Z
+   #26 = Utf8               changeProfile
+   #27 = Utf8               ()V
+   #28 = NameAndType        #21:#22       // TEXTURES:Ljava/util/Map;
+   #29 = Fieldref           #2.#28        // net/anubis/client/gui/mainmenu/MenuTextures.TEXTURES:Ljava/util/Map;
+   #30 = Utf8               java/util/Map
+   #31 = Class              #30           // java/util/Map
+   #32 = Utf8               values
+   #33 = Utf8               ()Ljava/util/Collection;
+   #34 = NameAndType        #32:#33       // values:()Ljava/util/Collection;
+   #35 = InterfaceMethodref #31.#34       // java/util/Map.values:()Ljava/util/Collection;
+   #36 = Utf8               get
+   #37 = Utf8               ()Lnet/anubis/client/gui/ThemeImages;
+   #38 = NameAndType        #36:#37       // get:()Lnet/anubis/client/gui/ThemeImages;
+   #39 = Methodref          #11.#38       // net/anubis/client/gui/ThemeImages.get:()Lnet/anubis/client/gui/ThemeImages;
+   #40 = Utf8               java/util/Objects
+   #41 = Class              #40           // java/util/Objects
+   #42 = Utf8               requireNonNull
+   #43 = Utf8               (Ljava/lang/Object;)Ljava/lang/Object;
+   #44 = NameAndType        #42:#43       // requireNonNull:(Ljava/lang/Object;)Ljava/lang/Object;
+   #45 = Methodref          #41.#44       // java/util/Objects.requireNonNull:(Ljava/lang/Object;)Ljava/lang/Object;
+   #46 = Utf8               (Ljava/lang/Object;)V
+   #47 = MethodType         #46           //  (Ljava/lang/Object;)V
+   #48 = Utf8               retireTexture
+   #49 = Utf8               (Lnet/anubis/client/gui/ThemeImages$Texture;)V
+   #50 = NameAndType        #48:#49       // retireTexture:(Lnet/anubis/client/gui/ThemeImages$Texture;)V
+   #51 = Methodref          #11.#50       // net/anubis/client/gui/ThemeImages.retireTexture:(Lnet/anubis/client/gui/ThemeImages$Texture;)V
+   #52 = MethodHandle       5:#51         // REF_invokeVirtual net/anubis/client/gui/ThemeImages.retireTexture:(Lnet/anubis/client/gui/ThemeImages$Texture;)V
+   #53 = MethodType         #49           //  (Lnet/anubis/client/gui/ThemeImages$Texture;)V
+   #54 = Utf8               java/lang/invoke/LambdaMetafactory
+   #55 = Class              #54           // java/lang/invoke/LambdaMetafactory
+   #56 = Utf8               metafactory
+   #57 = Utf8               (Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+   #58 = NameAndType        #56:#57       // metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+   #59 = Methodref          #55.#58       // java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+   #60 = MethodHandle       6:#59         // REF_invokeStatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+   #61 = Utf8               accept
+   #62 = Utf8               (Lnet/anubis/client/gui/ThemeImages;)Ljava/util/function/Consumer;
+   #63 = NameAndType        #61:#62       // accept:(Lnet/anubis/client/gui/ThemeImages;)Ljava/util/function/Consumer;
+   #64 = InvokeDynamic      #0:#63        // #0:accept:(Lnet/anubis/client/gui/ThemeImages;)Ljava/util/function/Consumer;
+   #65 = Utf8               java/util/Collection
+   #66 = Class              #65           // java/util/Collection
+   #67 = Utf8               forEach
+   #68 = Utf8               (Ljava/util/function/Consumer;)V
+   #69 = NameAndType        #67:#68       // forEach:(Ljava/util/function/Consumer;)V
+   #70 = InterfaceMethodref #66.#69       // java/util/Collection.forEach:(Ljava/util/function/Consumer;)V
+   #71 = Utf8               clear
+   #72 = NameAndType        #71:#27       // clear:()V
+   #73 = InterfaceMethodref #31.#72       // java/util/Map.clear:()V
+   #74 = Utf8               optimizedImages
+   #75 = Utf8               ()Z
+   #76 = NameAndType        #74:#75       // optimizedImages:()Z
+   #77 = Methodref          #11.#76       // net/anubis/client/gui/ThemeImages.optimizedImages:()Z
+   #78 = NameAndType        #24:#25       // optimized:Z
+   #79 = Fieldref           #2.#78        // net/anubis/client/gui/mainmenu/MenuTextures.optimized:Z
+   #80 = Utf8               <init>
+   #81 = NameAndType        #80:#27       // "<init>":()V
+   #82 = Methodref          #4.#81        // java/lang/Object."<init>":()V
+   #83 = Utf8               this
+   #84 = Utf8               Lnet/anubis/client/gui/mainmenu/MenuTextures;
+   #85 = Utf8               original
+   #86 = Utf8               (Ljava/lang/String;)Lnet/anubis/client/gui/ThemeImages$Texture;
+   #87 = Utf8               resource
+   #88 = Utf8               java/util/function/UnaryOperator
+   #89 = Class              #88           // java/util/function/UnaryOperator
+   #90 = Utf8               identity
+   #91 = Utf8               ()Ljava/util/function/UnaryOperator;
+   #92 = NameAndType        #90:#91       // identity:()Ljava/util/function/UnaryOperator;
+   #93 = InterfaceMethodref #89.#92       // java/util/function/UnaryOperator.identity:()Ljava/util/function/UnaryOperator;
+   #94 = Utf8               cached
+   #95 = Utf8               (Ljava/lang/String;Ljava/lang/String;Ljava/util/function/UnaryOperator;)Lnet/anubis/client/gui/ThemeImages$Texture;
+   #96 = NameAndType        #94:#95       // cached:(Ljava/lang/String;Ljava/lang/String;Ljava/util/function/UnaryOperator;)Lnet/anubis/client/gui/ThemeImages$Texture;
+   #97 = Methodref          #2.#96        // net/anubis/client/gui/mainmenu/MenuTextures.cached:(Ljava/lang/String;Ljava/lang/String;Ljava/util/function/UnaryOperator;)Lnet/anubis/client/gui/ThemeImages$Texture;
+   #98 = Utf8               Ljava/lang/String;
+   #99 = Utf8               mask
+  #100 = Utf8               \u0001#mask
+  #101 = String             #100          // \u0001#mask
+  #102 = Utf8               java/lang/invoke/StringConcatFactory
+  #103 = Class              #102          // java/lang/invoke/StringConcatFactory
+  #104 = Utf8               makeConcatWithConstants
+  #105 = Utf8               (Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+  #106 = NameAndType        #104:#105     // makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+  #107 = Methodref          #103.#106     // java/lang/invoke/StringConcatFactory.makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+  #108 = MethodHandle       6:#107        // REF_invokeStatic java/lang/invoke/StringConcatFactory.makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+  #109 = Utf8               (Ljava/lang/String;)Ljava/lang/String;
+  #110 = NameAndType        #104:#109     // makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+  #111 = InvokeDynamic      #1:#110       // #1:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+  #112 = MethodType         #43           //  (Ljava/lang/Object;)Ljava/lang/Object;
+  #113 = Utf8               lambda$mask$0
+  #114 = Utf8               (Lnet/anubis/client/gui/mainmenu/MenuTextures$Pixels;)Lnet/anubis/client/gui/mainmenu/MenuTextures$Pixels;
+  #115 = NameAndType        #113:#114     // lambda$mask$0:(Lnet/anubis/client/gui/mainmenu/MenuTextures$Pixels;)Lnet/anubis/client/gui/mainmenu/MenuTextures$Pixels;
+  #116 = Methodref          #2.#115       // net/anubis/client/gui/mainmenu/MenuTextures.lambda$mask$0:(Lnet/anubis/client/gui/mainmenu/MenuTextures$Pixels;)Lnet/anubis/client/gui/mainmenu/MenuTextures$Pixels;
+  #117 = MethodHandle       6:#116        // REF_invokeStatic net/anubis/client/gui/mainmenu/MenuTextures.lambda$mask$0:(Lnet/anubis/client/gui/mainmenu/MenuTextures$Pixels;)Lnet/anubis/client/gui/mainmenu/MenuTextures$Pixels;
+  #118 = MethodType         #114          //  (Lnet/anubis/client/gui/mainmenu/MenuTextures$Pixels;)Lnet/anubis/client/gui/mainmenu/MenuTextures$Pixels;
+  #119 = Utf8               apply
+  #120 = NameAndType        #119:#91      // apply:()Ljava/util/function/UnaryOperator;
+  #121 = InvokeDynamic      #2:#120       // #2:apply:()Ljava/util/function/UnaryOperator;
+  #122 = Utf8               blurred
+  #123 = Utf8               (Ljava/lang/String;I)Lnet/anubis/client/gui/ThemeImages$Texture;
+  #124 = Utf8               radius
+  #125 = Utf8               \u0001#blur\u0001
+  #126 = String             #125          // \u0001#blur\u0001
+  #127 = Utf8               (Ljava/lang/String;I)Ljava/lang/String;
+  #128 = NameAndType        #104:#127     // makeConcatWithConstants:(Ljava/lang/String;I)Ljava/lang/String;
+  #129 = InvokeDynamic      #3:#128       // #3:makeConcatWithConstants:(Ljava/lang/String;I)Ljava/lang/String;
+  #130 = Utf8               lambda$blurred$1
+  #131 = Utf8               (ILnet/anubis/client/gui/mainmenu/MenuTextures$Pixels;)Lnet/anubis/client/gui/mainmenu/MenuTextures$Pixels;
+  #132 = NameAndType        #130:#131     // lambda$blurred$1:(ILnet/anubis/client/gui/mainmenu/MenuTextures$Pixels;)Lnet/anubis/client/gui/mainmenu/MenuTextures$Pixels;
+  #133 = Methodref          #2.#132       // net/anubis/client/gui/mainmenu/MenuTextures.lambda$blurred$1:(ILnet/anubis/client/gui/mainmenu/MenuTextures$Pixels;)Lnet/anubis/client/gui/mainmenu/MenuTextures$Pixels;
+  #134 = MethodHandle       6:#133        // REF_invokeStatic net/anubis/client/gui/mainmenu/MenuTextures.lambda$blurred$1:(ILnet/anubis/client/gui/mainmenu/MenuTextures$Pixels;)Lnet/anubis/client/gui/mainmenu/MenuTextures$Pixels;
+  #135 = Utf8               (I)Ljava/util/function/UnaryOperator;
+  #136 = NameAndType        #119:#135     // apply:(I)Ljava/util/function/UnaryOperator;
+  #137 = InvokeDynamic      #4:#136       // #4:apply:(I)Ljava/util/function/UnaryOperator;
+  #138 = Utf8               I
+  #139 = Utf8               (Ljava/lang/String;Ljava/lang/String;Ljava/util/function/UnaryOperator<Lnet/anubis/client/gui/mainmenu/MenuTextures$Pixels;>;)Lnet/anubis/client/gui/ThemeImages$Texture;
+  #140 = Utf8               key
+  #141 = Utf8               variant
+  #142 = Utf8               java/lang/Throwable
+  #143 = Class              #142          // java/lang/Throwable
+  #144 = Utf8               java/lang/Exception
+  #145 = Class              #144          // java/lang/Exception
+  #146 = NameAndType        #26:#27       // changeProfile:()V
+  #147 = Methodref          #2.#146       // net/anubis/client/gui/mainmenu/MenuTextures.changeProfile:()V
+  #148 = Utf8               containsKey
+  #149 = Utf8               (Ljava/lang/Object;)Z
+  #150 = NameAndType        #148:#149     // containsKey:(Ljava/lang/Object;)Z
+  #151 = InterfaceMethodref #31.#150      // java/util/Map.containsKey:(Ljava/lang/Object;)Z
+  #152 = NameAndType        #36:#43       // get:(Ljava/lang/Object;)Ljava/lang/Object;
+  #153 = InterfaceMethodref #31.#152      // java/util/Map.get:(Ljava/lang/Object;)Ljava/lang/Object;
+  #154 = Utf8               java/lang/Class
+  #155 = Class              #154          // java/lang/Class
+  #156 = Utf8               getResourceAsStream
+  #157 = Utf8               (Ljava/lang/String;)Ljava/io/InputStream;
+  #158 = NameAndType        #156:#157     // getResourceAsStream:(Ljava/lang/String;)Ljava/io/InputStream;
+  #159 = Methodref          #155.#158     // java/lang/Class.getResourceAsStream:(Ljava/lang/String;)Ljava/io/InputStream;
+  #160 = NameAndType        #19:#20       // LOGGER:Lorg/slf4j/Logger;
+  #161 = Fieldref           #2.#160       // net/anubis/client/gui/mainmenu/MenuTextures.LOGGER:Lorg/slf4j/Logger;
+  #162 = Utf8               [Anubis] Missing menu image {}
+  #163 = String             #162          // [Anubis] Missing menu image {}
+  #164 = Utf8               org/slf4j/Logger
+  #165 = Class              #164          // org/slf4j/Logger
+  #166 = Utf8               warn
+  #167 = Utf8               (Ljava/lang/String;Ljava/lang/Object;)V
+  #168 = NameAndType        #166:#167     // warn:(Ljava/lang/String;Ljava/lang/Object;)V
+  #169 = InterfaceMethodref #165.#168     // org/slf4j/Logger.warn:(Ljava/lang/String;Ljava/lang/Object;)V
+  #170 = Utf8               java/io/InputStream
+  #171 = Class              #170          // java/io/InputStream
+  #172 = Utf8               readAllBytes
+  #173 = Utf8               ()[B
+  #174 = NameAndType        #172:#173     // readAllBytes:()[B
+  #175 = Methodref          #171.#174     // java/io/InputStream.readAllBytes:()[B
+  #176 = Utf8               decode
+  #177 = Utf8               ([BLjava/lang/String;)Lnet/anubis/client/gui/mainmenu/MenuTextures$Pixels;
+  #178 = NameAndType        #176:#177     // decode:([BLjava/lang/String;)Lnet/anubis/client/gui/mainmenu/MenuTextures$Pixels;
+  #179 = Methodref          #2.#178       // net/anubis/client/gui/mainmenu/MenuTextures.decode:([BLjava/lang/String;)Lnet/anubis/client/gui/mainmenu/MenuTextures$Pixels;
+  #180 = NameAndType        #119:#43      // apply:(Ljava/lang/Object;)Ljava/lang/Object;
+  #181 = InterfaceMethodref #89.#180      // java/util/function/UnaryOperator.apply:(Ljava/lang/Object;)Ljava/lang/Object;
+  #182 = Utf8               argb
+  #183 = Utf8               ()[I
+  #184 = NameAndType        #182:#183     // argb:()[I
+  #185 = Methodref          #7.#184       // net/anubis/client/gui/mainmenu/MenuTextures$Pixels.argb:()[I
+  #186 = Utf8               width
+  #187 = Utf8               ()I
+  #188 = NameAndType        #186:#187     // width:()I
+  #189 = Methodref          #7.#188       // net/anubis/client/gui/mainmenu/MenuTextures$Pixels.width:()I
+  #190 = Utf8               height
+  #191 = NameAndType        #190:#187     // height:()I
+  #192 = Methodref          #7.#191       // net/anubis/client/gui/mainmenu/MenuTextures$Pixels.height:()I
+  #193 = Utf8               upload
+  #194 = Utf8               ([III)Lnet/anubis/client/gui/ThemeImages$Texture;
+  #195 = NameAndType        #193:#194     // upload:([III)Lnet/anubis/client/gui/ThemeImages$Texture;
+  #196 = Methodref          #2.#195       // net/anubis/client/gui/mainmenu/MenuTextures.upload:([III)Lnet/anubis/client/gui/ThemeImages$Texture;
+  #197 = Utf8               close
+  #198 = NameAndType        #197:#27      // close:()V
+  #199 = Methodref          #171.#198     // java/io/InputStream.close:()V
+  #200 = Utf8               java/lang/String
+  #201 = Class              #200          // java/lang/String
+  #202 = Utf8               addSuppressed
+  #203 = Utf8               (Ljava/lang/Throwable;)V
+  #204 = NameAndType        #202:#203     // addSuppressed:(Ljava/lang/Throwable;)V
+  #205 = Methodref          #143.#204     // java/lang/Throwable.addSuppressed:(Ljava/lang/Throwable;)V
+  #206 = Utf8               [Anubis] Failed to load menu image {}
+  #207 = String             #206          // [Anubis] Failed to load menu image {}
+  #208 = Utf8               (Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
+  #209 = NameAndType        #166:#208     // warn:(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
+  #210 = InterfaceMethodref #165.#209     // org/slf4j/Logger.warn:(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
+  #211 = Utf8               put
+  #212 = Utf8               (Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+  #213 = NameAndType        #211:#212     // put:(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+  #214 = InterfaceMethodref #31.#213      // java/util/Map.put:(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+  #215 = Utf8               p
+  #216 = Utf8               Lnet/anubis/client/gui/mainmenu/MenuTextures$Pixels;
+  #217 = Utf8               in
+  #218 = Utf8               Ljava/io/InputStream;
+  #219 = Utf8               e
+  #220 = Utf8               Ljava/lang/Exception;
+  #221 = Utf8               Ljava/util/function/UnaryOperator<Lnet/anubis/client/gui/mainmenu/MenuTextures$Pixels;>;
+  #222 = Utf8               Ljava/util/function/UnaryOperator;
+  #223 = Utf8               next
+  #224 = Utf8               texture
+  #225 = Utf8               Lnet/anubis/client/gui/ThemeImages$Texture;
+  #226 = Utf8               blur
+  #227 = Utf8               (Lnet/anubis/client/gui/mainmenu/MenuTextures$Pixels;I)Lnet/anubis/client/gui/mainmenu/MenuTextures$Pixels;
+  #228 = Utf8               [F
+  #229 = Class              #228          // "[F"
+  #230 = Float              255.0f
+  #231 = Utf8               box
+  #232 = Utf8               ([FIIIZ)[F
+  #233 = NameAndType        #231:#232     // box:([FIIIZ)[F
+  #234 = Methodref          #2.#233       // net/anubis/client/gui/mainmenu/MenuTextures.box:([FIIIZ)[F
+  #235 = Utf8               [I
+  #236 = Class              #235          // "[I"
+  #237 = Utf8               java/lang/Math
+  #238 = Class              #237          // java/lang/Math
+  #239 = Utf8               min
+  #240 = Utf8               (FF)F
+  #241 = NameAndType        #239:#240     // min:(FF)F
+  #242 = Methodref          #238.#241     // java/lang/Math.min:(FF)F
+  #243 = Utf8               round
+  #244 = Utf8               (F)I
+  #245 = NameAndType        #243:#244     // round:(F)I
+  #246 = Methodref          #238.#245     // java/lang/Math.round:(F)I
+  #247 = Integer            16777215
+  #248 = Utf8               (II[I)V
+  #249 = NameAndType        #80:#248      // "<init>":(II[I)V
+  #250 = Methodref          #7.#249       // net/anubis/client/gui/mainmenu/MenuTextures$Pixels."<init>":(II[I)V
+  #251 = Utf8               x
+  #252 = Utf8               y
+  #253 = Utf8               pass
+  #254 = Utf8               i
+  #255 = Utf8               pad
+  #256 = Utf8               w
+  #257 = Utf8               h
+  #258 = Utf8               alpha
+  #259 = Utf8               out
+  #260 = Utf8               across
+  #261 = Utf8               slidingBox
+  #262 = NameAndType        #261:#232     // slidingBox:([FIIIZ)[F
+  #263 = Methodref          #2.#262       // net/anubis/client/gui/mainmenu/MenuTextures.slidingBox:([FIIIZ)[F
+  #264 = Utf8               sx
+  #265 = Utf8               sy
+  #266 = Utf8               k
+  #267 = Utf8               sum
+  #268 = Utf8               F
+  #269 = Utf8               norm
+  #270 = Utf8               (II)I
+  #271 = NameAndType        #239:#270     // min:(II)I
+  #272 = Methodref          #238.#271     // java/lang/Math.min:(II)I
+  #273 = Utf8               left
+  #274 = Utf8               right
+  #275 = Utf8               D
+  #276 = Utf8               row
+  #277 = Utf8               length
+  #278 = Utf8               rows
+  #279 = Utf8               bytes
+  #280 = Utf8               name
+  #281 = Utf8               org/lwjgl/system/MemoryStack
+  #282 = Class              #281          // org/lwjgl/system/MemoryStack
+  #283 = Utf8               stackPush
+  #284 = Utf8               ()Lorg/lwjgl/system/MemoryStack;
+  #285 = NameAndType        #283:#284     // stackPush:()Lorg/lwjgl/system/MemoryStack;
+  #286 = Methodref          #282.#285     // org/lwjgl/system/MemoryStack.stackPush:()Lorg/lwjgl/system/MemoryStack;
+  #287 = Utf8               org/lwjgl/system/MemoryUtil
+  #288 = Class              #287          // org/lwjgl/system/MemoryUtil
+  #289 = Utf8               memAlloc
+  #290 = Utf8               (I)Ljava/nio/ByteBuffer;
+  #291 = NameAndType        #289:#290     // memAlloc:(I)Ljava/nio/ByteBuffer;
+  #292 = Methodref          #288.#291     // org/lwjgl/system/MemoryUtil.memAlloc:(I)Ljava/nio/ByteBuffer;
+  #293 = Utf8               java/nio/ByteBuffer
+  #294 = Class              #293          // java/nio/ByteBuffer
+  #295 = Utf8               ([B)Ljava/nio/ByteBuffer;
+  #296 = NameAndType        #211:#295     // put:([B)Ljava/nio/ByteBuffer;
+  #297 = Methodref          #294.#296     // java/nio/ByteBuffer.put:([B)Ljava/nio/ByteBuffer;
+  #298 = Utf8               flip
+  #299 = Utf8               ()Ljava/nio/ByteBuffer;
+  #300 = NameAndType        #298:#299     // flip:()Ljava/nio/ByteBuffer;
+  #301 = Methodref          #294.#300     // java/nio/ByteBuffer.flip:()Ljava/nio/ByteBuffer;
+  #302 = Utf8               mallocInt
+  #303 = Utf8               (I)Ljava/nio/IntBuffer;
+  #304 = NameAndType        #302:#303     // mallocInt:(I)Ljava/nio/IntBuffer;
+  #305 = Methodref          #282.#304     // org/lwjgl/system/MemoryStack.mallocInt:(I)Ljava/nio/IntBuffer;
+  #306 = Utf8               org/lwjgl/stb/STBImage
+  #307 = Class              #306          // org/lwjgl/stb/STBImage
+  #308 = Utf8               stbi_load_from_memory
+  #309 = Utf8               (Ljava/nio/ByteBuffer;Ljava/nio/IntBuffer;Ljava/nio/IntBuffer;Ljava/nio/IntBuffer;I)Ljava/nio/ByteBuffer;
+  #310 = NameAndType        #308:#309     // stbi_load_from_memory:(Ljava/nio/ByteBuffer;Ljava/nio/IntBuffer;Ljava/nio/IntBuffer;Ljava/nio/IntBuffer;I)Ljava/nio/ByteBuffer;
+  #311 = Methodref          #307.#310     // org/lwjgl/stb/STBImage.stbi_load_from_memory:(Ljava/nio/ByteBuffer;Ljava/nio/IntBuffer;Ljava/nio/IntBuffer;Ljava/nio/IntBuffer;I)Ljava/nio/ByteBuffer;
+  #312 = Utf8               [Anubis] Can\'t decode {}: {}
+  #313 = String             #312          // [Anubis] Can\'t decode {}: {}
+  #314 = Utf8               stbi_failure_reason
+  #315 = Utf8               ()Ljava/lang/String;
+  #316 = NameAndType        #314:#315     // stbi_failure_reason:()Ljava/lang/String;
+  #317 = Methodref          #307.#316     // org/lwjgl/stb/STBImage.stbi_failure_reason:()Ljava/lang/String;
+  #318 = Methodref          #282.#198     // org/lwjgl/system/MemoryStack.close:()V
+  #319 = Utf8               [B
+  #320 = Class              #319          // "[B"
+  #321 = Utf8               java/nio/IntBuffer
+  #322 = Class              #321          // java/nio/IntBuffer
+  #323 = Utf8               memFree
+  #324 = Utf8               (Ljava/nio/Buffer;)V
+  #325 = NameAndType        #323:#324     // memFree:(Ljava/nio/Buffer;)V
+  #326 = Methodref          #288.#325     // org/lwjgl/system/MemoryUtil.memFree:(Ljava/nio/Buffer;)V
+  #327 = Utf8               stbi_image_free
+  #328 = Utf8               (Ljava/nio/ByteBuffer;)V
+  #329 = NameAndType        #327:#328     // stbi_image_free:(Ljava/nio/ByteBuffer;)V
+  #330 = Methodref          #307.#329     // org/lwjgl/stb/STBImage.stbi_image_free:(Ljava/nio/ByteBuffer;)V
+  #331 = Utf8               (I)I
+  #332 = NameAndType        #36:#331      // get:(I)I
+  #333 = Methodref          #322.#332     // java/nio/IntBuffer.get:(I)I
+  #334 = Utf8               net/anubis/client/gui/ImageDownsampler
+  #335 = Class              #334          // net/anubis/client/gui/ImageDownsampler
+  #336 = Utf8               dimensions
+  #337 = Utf8               (III)[I
+  #338 = NameAndType        #336:#337     // dimensions:(III)[I
+  #339 = Methodref          #335.#338     // net/anubis/client/gui/ImageDownsampler.dimensions:(III)[I
+  #340 = Utf8               rgba
+  #341 = Utf8               (Ljava/nio/ByteBuffer;IILjava/nio/ByteBuffer;II)V
+  #342 = NameAndType        #340:#341     // rgba:(Ljava/nio/ByteBuffer;IILjava/nio/ByteBuffer;II)V
+  #343 = Methodref          #335.#342     // net/anubis/client/gui/ImageDownsampler.rgba:(Ljava/nio/ByteBuffer;IILjava/nio/ByteBuffer;II)V
+  #344 = Utf8               (I)B
+  #345 = NameAndType        #36:#344      // get:(I)B
+  #346 = Methodref          #294.#345     // java/nio/ByteBuffer.get:(I)B
+  #347 = Utf8               size
+  #348 = Utf8               r
+  #349 = Utf8               g
+  #350 = Utf8               b
+  #351 = Utf8               a
+  #352 = Utf8               Ljava/nio/IntBuffer;
+  #353 = Utf8               channels
+  #354 = Utf8               pixels
+  #355 = Utf8               Ljava/nio/ByteBuffer;
+  #356 = Utf8               stack
+  #357 = Utf8               Lorg/lwjgl/system/MemoryStack;
+  #358 = Utf8               file
+  #359 = Utf8               reduced
+  #360 = Utf8               (B)Ljava/nio/ByteBuffer;
+  #361 = NameAndType        #211:#360     // put:(B)Ljava/nio/ByteBuffer;
+  #362 = Methodref          #294.#361     // java/nio/ByteBuffer.put:(B)Ljava/nio/ByteBuffer;
+  #363 = Utf8               fromPixels
+  #364 = Utf8               (Ljava/nio/ByteBuffer;IIZ)Lnet/anubis/client/gui/ThemeImages$Texture;
+  #365 = NameAndType        #363:#364     // fromPixels:(Ljava/nio/ByteBuffer;IIZ)Lnet/anubis/client/gui/ThemeImages$Texture;
+  #366 = Methodref          #11.#365      // net/anubis/client/gui/ThemeImages.fromPixels:(Ljava/nio/ByteBuffer;IIZ)Lnet/anubis/client/gui/ThemeImages$Texture;
+  #367 = Utf8               c
+  #368 = Utf8               buffer
+  #369 = NameAndType        #226:#227     // blur:(Lnet/anubis/client/gui/mainmenu/MenuTextures$Pixels;I)Lnet/anubis/client/gui/mainmenu/MenuTextures$Pixels;
+  #370 = Methodref          #2.#369       // net/anubis/client/gui/mainmenu/MenuTextures.blur:(Lnet/anubis/client/gui/mainmenu/MenuTextures$Pixels;I)Lnet/anubis/client/gui/mainmenu/MenuTextures$Pixels;
+  #371 = Integer            -16777216
+  #372 = Utf8               <clinit>
+  #373 = Utf8               Anubis
+  #374 = String             #373          // Anubis
+  #375 = Utf8               org/slf4j/LoggerFactory
+  #376 = Class              #375          // org/slf4j/LoggerFactory
+  #377 = Utf8               getLogger
+  #378 = Utf8               (Ljava/lang/String;)Lorg/slf4j/Logger;
+  #379 = NameAndType        #377:#378     // getLogger:(Ljava/lang/String;)Lorg/slf4j/Logger;
+  #380 = Methodref          #376.#379     // org/slf4j/LoggerFactory.getLogger:(Ljava/lang/String;)Lorg/slf4j/Logger;
+  #381 = Utf8               java/util/HashMap
+  #382 = Class              #381          // java/util/HashMap
+  #383 = Methodref          #382.#81      // java/util/HashMap."<init>":()V
+  #384 = MethodType         #27           //  ()V
+  #385 = MethodHandle       6:#147        // REF_invokeStatic net/anubis/client/gui/mainmenu/MenuTextures.changeProfile:()V
+  #386 = Utf8               run
+  #387 = Utf8               ()Ljava/lang/Runnable;
+  #388 = NameAndType        #386:#387     // run:()Ljava/lang/Runnable;
+  #389 = InvokeDynamic      #5:#388       // #5:run:()Ljava/lang/Runnable;
+  #390 = Utf8               onImageProfileChange
+  #391 = Utf8               (Ljava/lang/Runnable;)V
+  #392 = NameAndType        #390:#391     // onImageProfileChange:(Ljava/lang/Runnable;)V
+  #393 = Methodref          #11.#392      // net/anubis/client/gui/ThemeImages.onImageProfileChange:(Ljava/lang/Runnable;)V
+  #394 = Utf8               Lnet/fabricmc/api/Environment;
+  #395 = Utf8               value
+  #396 = Utf8               Lnet/fabricmc/api/EnvType;
+  #397 = Utf8               CLIENT
+  #398 = Utf8               Signature
+  #399 = Utf8               Code
+  #400 = Utf8               LineNumberTable
+  #401 = Utf8               LocalVariableTable
+  #402 = Utf8               MethodParameters
+  #403 = Utf8               StackMapTable
+  #404 = Utf8               LocalVariableTypeTable
+  #405 = Utf8               InnerClasses
+  #406 = Utf8               SourceFile
+  #407 = Utf8               RuntimeVisibleAnnotations
+  #408 = Utf8               BootstrapMethods
+  #409 = Utf8               NestMembers
+{
+  private static final org.slf4j.Logger LOGGER;
+    descriptor: Lorg/slf4j/Logger;
+    flags: (0x001a) ACC_PRIVATE, ACC_STATIC, ACC_FINAL
+
+  private static final java.util.Map<java.lang.String, net.anubis.client.gui.ThemeImages$Texture> TEXTURES;
+    descriptor: Ljava/util/Map;
+    flags: (0x001a) ACC_PRIVATE, ACC_STATIC, ACC_FINAL
+    Signature: #23                          // Ljava/util/Map<Ljava/lang/String;Lnet/anubis/client/gui/ThemeImages$Texture;>;
+
+  private static boolean optimized;
+    descriptor: Z
+    flags: (0x000a) ACC_PRIVATE, ACC_STATIC
+
+  private static void changeProfile();
+    descriptor: ()V
+    flags: (0x000a) ACC_PRIVATE, ACC_STATIC
+    Code:
+      stack=3, locals=0, args_size=0
+         0: getstatic     #29                 // Field TEXTURES:Ljava/util/Map;
+         3: invokeinterface #35,  1           // InterfaceMethod java/util/Map.values:()Ljava/util/Collection;
+         8: invokestatic  #39                 // Method net/anubis/client/gui/ThemeImages.get:()Lnet/anubis/client/gui/ThemeImages;
+        11: dup
+        12: invokestatic  #45                 // Method java/util/Objects.requireNonNull:(Ljava/lang/Object;)Ljava/lang/Object;
+        15: pop
+        16: invokedynamic #64,  0             // InvokeDynamic #0:accept:(Lnet/anubis/client/gui/ThemeImages;)Ljava/util/function/Consumer;
+        21: invokeinterface #70,  2           // InterfaceMethod java/util/Collection.forEach:(Ljava/util/function/Consumer;)V
+        26: getstatic     #29                 // Field TEXTURES:Ljava/util/Map;
+        29: invokeinterface #73,  1           // InterfaceMethod java/util/Map.clear:()V
+        34: invokestatic  #39                 // Method net/anubis/client/gui/ThemeImages.get:()Lnet/anubis/client/gui/ThemeImages;
+        37: invokevirtual #77                 // Method net/anubis/client/gui/ThemeImages.optimizedImages:()Z
+        40: putstatic     #79                 // Field optimized:Z
+        43: return
+      LineNumberTable:
+        line 29: 0
+        line 30: 26
+        line 31: 34
+        line 32: 43
+
+  private net.anubis.client.gui.mainmenu.MenuTextures();
+    descriptor: ()V
+    flags: (0x0002) ACC_PRIVATE
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: invokespecial #82                 // Method java/lang/Object."<init>":()V
+         4: return
+      LineNumberTable:
+        line 37: 0
+        line 38: 4
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       5     0  this   Lnet/anubis/client/gui/mainmenu/MenuTextures;
+
+  static net.anubis.client.gui.ThemeImages$Texture original(java.lang.String);
+    descriptor: (Ljava/lang/String;)Lnet/anubis/client/gui/ThemeImages$Texture;
+    flags: (0x0008) ACC_STATIC
+    Code:
+      stack=3, locals=1, args_size=1
+         0: aload_0
+         1: aload_0
+         2: invokestatic  #93                 // InterfaceMethod java/util/function/UnaryOperator.identity:()Ljava/util/function/UnaryOperator;
+         5: invokestatic  #97                 // Method cached:(Ljava/lang/String;Ljava/lang/String;Ljava/util/function/UnaryOperator;)Lnet/anubis/client/gui/ThemeImages$Texture;
+         8: areturn
+      LineNumberTable:
+        line 41: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       9     0 resource   Ljava/lang/String;
+    MethodParameters:
+      Name                           Flags
+      resource
+
+  static net.anubis.client.gui.ThemeImages$Texture mask(java.lang.String);
+    descriptor: (Ljava/lang/String;)Lnet/anubis/client/gui/ThemeImages$Texture;
+    flags: (0x0008) ACC_STATIC
+    Code:
+      stack=3, locals=1, args_size=1
+         0: aload_0
+         1: invokedynamic #111,  0            // InvokeDynamic #1:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+         6: aload_0
+         7: invokedynamic #121,  0            // InvokeDynamic #2:apply:()Ljava/util/function/UnaryOperator;
+        12: invokestatic  #97                 // Method cached:(Ljava/lang/String;Ljava/lang/String;Ljava/util/function/UnaryOperator;)Lnet/anubis/client/gui/ThemeImages$Texture;
+        15: areturn
+      LineNumberTable:
+        line 45: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      16     0 resource   Ljava/lang/String;
+    MethodParameters:
+      Name                           Flags
+      resource
+
+  static net.anubis.client.gui.ThemeImages$Texture blurred(java.lang.String, int);
+    descriptor: (Ljava/lang/String;I)Lnet/anubis/client/gui/ThemeImages$Texture;
+    flags: (0x0008) ACC_STATIC
+    Code:
+      stack=3, locals=2, args_size=2
+         0: aload_0
+         1: iload_1
+         2: invokedynamic #129,  0            // InvokeDynamic #3:makeConcatWithConstants:(Ljava/lang/String;I)Ljava/lang/String;
+         7: aload_0
+         8: iload_1
+         9: invokedynamic #137,  0            // InvokeDynamic #4:apply:(I)Ljava/util/function/UnaryOperator;
+        14: invokestatic  #97                 // Method cached:(Ljava/lang/String;Ljava/lang/String;Ljava/util/function/UnaryOperator;)Lnet/anubis/client/gui/ThemeImages$Texture;
+        17: areturn
+      LineNumberTable:
+        line 53: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      18     0 resource   Ljava/lang/String;
+            0      18     1 radius   I
+    MethodParameters:
+      Name                           Flags
+      resource
+      radius
+
+  private static net.anubis.client.gui.ThemeImages$Texture cached(java.lang.String, java.lang.String, java.util.function.UnaryOperator<net.anubis.client.gui.mainmenu.MenuTextures$Pixels>);
+    descriptor: (Ljava/lang/String;Ljava/lang/String;Ljava/util/function/UnaryOperator;)Lnet/anubis/client/gui/ThemeImages$Texture;
+    flags: (0x000a) ACC_PRIVATE, ACC_STATIC
+    Code:
+      stack=4, locals=8, args_size=3
+         0: invokestatic  #39                 // Method net/anubis/client/gui/ThemeImages.get:()Lnet/anubis/client/gui/ThemeImages;
+         3: invokevirtual #77                 // Method net/anubis/client/gui/ThemeImages.optimizedImages:()Z
+         6: istore_3
+         7: getstatic     #79                 // Field optimized:Z
+        10: iload_3
+        11: if_icmpeq     17
+        14: invokestatic  #147                // Method changeProfile:()V
+        17: getstatic     #29                 // Field TEXTURES:Ljava/util/Map;
+        20: aload_0
+        21: invokeinterface #151,  2          // InterfaceMethod java/util/Map.containsKey:(Ljava/lang/Object;)Z
+        26: ifeq          42
+        29: getstatic     #29                 // Field TEXTURES:Ljava/util/Map;
+        32: aload_0
+        33: invokeinterface #153,  2          // InterfaceMethod java/util/Map.get:(Ljava/lang/Object;)Ljava/lang/Object;
+        38: checkcast     #9                  // class net/anubis/client/gui/ThemeImages$Texture
+        41: areturn
+        42: aconst_null
+        43: astore        4
+        45: ldc           #2                  // class net/anubis/client/gui/mainmenu/MenuTextures
+        47: aload_1
+        48: invokevirtual #159                // Method java/lang/Class.getResourceAsStream:(Ljava/lang/String;)Ljava/io/InputStream;
+        51: astore        5
+        53: aload         5
+        55: ifnonnull     72
+        58: getstatic     #161                // Field LOGGER:Lorg/slf4j/Logger;
+        61: ldc           #163                // String [Anubis] Missing menu image {}
+        63: aload_1
+        64: invokeinterface #169,  3          // InterfaceMethod org/slf4j/Logger.warn:(Ljava/lang/String;Ljava/lang/Object;)V
+        69: goto          121
+        72: aload         5
+        74: invokevirtual #175                // Method java/io/InputStream.readAllBytes:()[B
+        77: aload_1
+        78: invokestatic  #179                // Method decode:([BLjava/lang/String;)Lnet/anubis/client/gui/mainmenu/MenuTextures$Pixels;
+        81: astore        6
+        83: aload         6
+        85: ifnull        121
+        88: aload_2
+        89: aload         6
+        91: invokeinterface #181,  2          // InterfaceMethod java/util/function/UnaryOperator.apply:(Ljava/lang/Object;)Ljava/lang/Object;
+        96: checkcast     #7                  // class net/anubis/client/gui/mainmenu/MenuTextures$Pixels
+        99: astore        6
+       101: aload         6
+       103: invokevirtual #185                // Method net/anubis/client/gui/mainmenu/MenuTextures$Pixels.argb:()[I
+       106: aload         6
+       108: invokevirtual #189                // Method net/anubis/client/gui/mainmenu/MenuTextures$Pixels.width:()I
+       111: aload         6
+       113: invokevirtual #192                // Method net/anubis/client/gui/mainmenu/MenuTextures$Pixels.height:()I
+       116: invokestatic  #196                // Method upload:([III)Lnet/anubis/client/gui/ThemeImages$Texture;
+       119: astore        4
+       121: aload         5
+       123: ifnull        161
+       126: aload         5
+       128: invokevirtual #199                // Method java/io/InputStream.close:()V
+       131: goto          161
+       134: astore        6
+       136: aload         5
+       138: ifnull        158
+       141: aload         5
+       143: invokevirtual #199                // Method java/io/InputStream.close:()V
+       146: goto          158
+       149: astore        7
+       151: aload         6
+       153: aload         7
+       155: invokevirtual #205                // Method java/lang/Throwable.addSuppressed:(Ljava/lang/Throwable;)V
+       158: aload         6
+       160: athrow
+       161: goto          179
+       164: astore        5
+       166: getstatic     #161                // Field LOGGER:Lorg/slf4j/Logger;
+       169: ldc           #207                // String [Anubis] Failed to load menu image {}
+       171: aload_0
+       172: aload         5
+       174: invokeinterface #210,  4          // InterfaceMethod org/slf4j/Logger.warn:(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
+       179: getstatic     #29                 // Field TEXTURES:Ljava/util/Map;
+       182: aload_0
+       183: aload         4
+       185: invokeinterface #214,  3          // InterfaceMethod java/util/Map.put:(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+       190: pop
+       191: aload         4
+       193: areturn
+      Exception table:
+         from    to  target type
+            53   121   134   Class java/lang/Throwable
+           141   146   149   Class java/lang/Throwable
+            45   161   164   Class java/lang/Exception
+      StackMapTable: number_of_entries = 10
+        frame_type = 252 /* append */
+          offset_delta = 17
+          locals = [ int ]
+        frame_type = 24 /* same */
+        frame_type = 253 /* append */
+          offset_delta = 29
+          locals = [ class net/anubis/client/gui/ThemeImages$Texture, class java/io/InputStream ]
+        frame_type = 48 /* same */
+        frame_type = 76 /* same_locals_1_stack_item */
+          stack = [ class java/lang/Throwable ]
+        frame_type = 255 /* full_frame */
+          offset_delta = 14
+          locals = [ class java/lang/String, class java/lang/String, class java/util/function/UnaryOperator, int, class net/anubis/client/gui/ThemeImages$Texture, class java/io/InputStream, class java/lang/Throwable ]
+          stack = [ class java/lang/Throwable ]
+        frame_type = 8 /* same */
+        frame_type = 249 /* chop */
+          offset_delta = 2
+        frame_type = 66 /* same_locals_1_stack_item */
+          stack = [ class java/lang/Exception ]
+        frame_type = 14 /* same */
+      LineNumberTable:
+        line 57: 0
+        line 58: 7
+        line 59: 14
+        line 61: 17
+        line 62: 42
+        line 63: 45
+        line 64: 53
+        line 65: 58
+        line 67: 72
+        line 68: 83
+        line 69: 88
+        line 70: 101
+        line 73: 121
+        line 63: 134
+        line 75: 161
+        line 73: 164
+        line 74: 166
+        line 76: 179
+        line 77: 191
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+           83      38     6     p   Lnet/anubis/client/gui/mainmenu/MenuTextures$Pixels;
+           53     108     5    in   Ljava/io/InputStream;
+          166      13     5     e   Ljava/lang/Exception;
+            0     194     0   key   Ljava/lang/String;
+            0     194     1 resource   Ljava/lang/String;
+            0     194     2 variant   Ljava/util/function/UnaryOperator;
+            7     187     3  next   Z
+           45     149     4 texture   Lnet/anubis/client/gui/ThemeImages$Texture;
+      LocalVariableTypeTable:
+        Start  Length  Slot  Name   Signature
+            0     194     2 variant   Ljava/util/function/UnaryOperator<Lnet/anubis/client/gui/mainmenu/MenuTextures$Pixels;>;
+    Signature: #139                         // (Ljava/lang/String;Ljava/lang/String;Ljava/util/function/UnaryOperator<Lnet/anubis/client/gui/mainmenu/MenuTextures$Pixels;>;)Lnet/anubis/client/gui/ThemeImages$Texture;
+    MethodParameters:
+      Name                           Flags
+      key
+      resource
+      variant
+
+  private static net.anubis.client.gui.mainmenu.MenuTextures$Pixels blur(net.anubis.client.gui.mainmenu.MenuTextures$Pixels, int);
+    descriptor: (Lnet/anubis/client/gui/mainmenu/MenuTextures$Pixels;I)Lnet/anubis/client/gui/mainmenu/MenuTextures$Pixels;
+    flags: (0x000a) ACC_PRIVATE, ACC_STATIC
+    Code:
+      stack=5, locals=8, args_size=2
+         0: iload_1
+         1: iconst_2
+         2: imul
+         3: istore_2
+         4: aload_0
+         5: invokevirtual #189                // Method net/anubis/client/gui/mainmenu/MenuTextures$Pixels.width:()I
+         8: iload_2
+         9: iconst_2
+        10: imul
+        11: iadd
+        12: istore_3
+        13: aload_0
+        14: invokevirtual #192                // Method net/anubis/client/gui/mainmenu/MenuTextures$Pixels.height:()I
+        17: iload_2
+        18: iconst_2
+        19: imul
+        20: iadd
+        21: istore        4
+        23: iload_3
+        24: iload         4
+        26: imul
+        27: newarray       float
+        29: astore        5
+        31: iconst_0
+        32: istore        6
+        34: iload         6
+        36: aload_0
+        37: invokevirtual #192                // Method net/anubis/client/gui/mainmenu/MenuTextures$Pixels.height:()I
+        40: if_icmpge     103
+        43: iconst_0
+        44: istore        7
+        46: iload         7
+        48: aload_0
+        49: invokevirtual #189                // Method net/anubis/client/gui/mainmenu/MenuTextures$Pixels.width:()I
+        52: if_icmpge     97
+        55: aload         5
+        57: iload         6
+        59: iload_2
+        60: iadd
+        61: iload_3
+        62: imul
+        63: iload         7
+        65: iadd
+        66: iload_2
+        67: iadd
+        68: aload_0
+        69: invokevirtual #185                // Method net/anubis/client/gui/mainmenu/MenuTextures$Pixels.argb:()[I
+        72: iload         6
+        74: aload_0
+        75: invokevirtual #189                // Method net/anubis/client/gui/mainmenu/MenuTextures$Pixels.width:()I
+        78: imul
+        79: iload         7
+        81: iadd
+        82: iaload
+        83: bipush        24
+        85: iushr
+        86: i2f
+        87: ldc           #230                // float 255.0f
+        89: fdiv
+        90: fastore
+        91: iinc          7, 1
+        94: goto          46
+        97: iinc          6, 1
+       100: goto          34
+       103: iconst_0
+       104: istore        6
+       106: iload         6
+       108: iconst_3
+       109: if_icmpge     142
+       112: aload         5
+       114: iload_3
+       115: iload         4
+       117: iload_1
+       118: iconst_1
+       119: invokestatic  #234                // Method box:([FIIIZ)[F
+       122: astore        5
+       124: aload         5
+       126: iload_3
+       127: iload         4
+       129: iload_1
+       130: iconst_0
+       131: invokestatic  #234                // Method box:([FIIIZ)[F
+       134: astore        5
+       136: iinc          6, 1
+       139: goto          106
+       142: iload_3
+       143: iload         4
+       145: imul
+       146: newarray       int
+       148: astore        6
+       150: iconst_0
+       151: istore        7
+       153: iload         7
+       155: aload         6
+       157: arraylength
+       158: if_icmpge     193
+       161: aload         6
+       163: iload         7
+       165: fconst_1
+       166: aload         5
+       168: iload         7
+       170: faload
+       171: invokestatic  #242                // Method java/lang/Math.min:(FF)F
+       174: ldc           #230                // float 255.0f
+       176: fmul
+       177: invokestatic  #246                // Method java/lang/Math.round:(F)I
+       180: bipush        24
+       182: ishl
+       183: ldc           #247                // int 16777215
+       185: ior
+       186: iastore
+       187: iinc          7, 1
+       190: goto          153
+       193: new           #7                  // class net/anubis/client/gui/mainmenu/MenuTextures$Pixels
+       196: dup
+       197: iload_3
+       198: iload         4
+       200: aload         6
+       202: invokespecial #250                // Method net/anubis/client/gui/mainmenu/MenuTextures$Pixels."<init>":(II[I)V
+       205: areturn
+      StackMapTable: number_of_entries = 8
+        frame_type = 255 /* full_frame */
+          offset_delta = 34
+          locals = [ class net/anubis/client/gui/mainmenu/MenuTextures$Pixels, int, int, int, int, class "[F", int ]
+          stack = []
+        frame_type = 252 /* append */
+          offset_delta = 11
+          locals = [ int ]
+        frame_type = 250 /* chop */
+          offset_delta = 50
+        frame_type = 250 /* chop */
+          offset_delta = 5
+        frame_type = 252 /* append */
+          offset_delta = 2
+          locals = [ int ]
+        frame_type = 250 /* chop */
+          offset_delta = 35
+        frame_type = 253 /* append */
+          offset_delta = 10
+          locals = [ class "[I", int ]
+        frame_type = 250 /* chop */
+          offset_delta = 39
+      LineNumberTable:
+        line 81: 0
+        line 82: 23
+        line 83: 31
+        line 84: 43
+        line 85: 55
+        line 84: 91
+        line 83: 97
+        line 89: 103
+        line 90: 112
+        line 91: 124
+        line 89: 136
+        line 93: 142
+        line 94: 150
+        line 95: 161
+        line 94: 187
+        line 97: 193
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+           46      51     7     x   I
+           34      69     6     y   I
+          106      36     6  pass   I
+          153      40     7     i   I
+            0     206     0     p   Lnet/anubis/client/gui/mainmenu/MenuTextures$Pixels;
+            0     206     1 radius   I
+            4     202     2   pad   I
+           13     193     3     w   I
+           23     183     4     h   I
+           31     175     5 alpha   [F
+          150      56     6   out   [I
+    MethodParameters:
+      Name                           Flags
+      p
+      radius
+
+  private static float[] box(float[], int, int, int, boolean);
+    descriptor: ([FIIIZ)[F
+    flags: (0x000a) ACC_PRIVATE, ACC_STATIC
+    Code:
+      stack=5, locals=13, args_size=5
+         0: getstatic     #79                 // Field optimized:Z
+         3: ifeq          16
+         6: aload_0
+         7: iload_1
+         8: iload_2
+         9: iload_3
+        10: iload         4
+        12: invokestatic  #263                // Method slidingBox:([FIIIZ)[F
+        15: areturn
+        16: aload_0
+        17: arraylength
+        18: newarray       float
+        20: astore        5
+        22: fconst_1
+        23: iload_3
+        24: iconst_2
+        25: imul
+        26: iconst_1
+        27: iadd
+        28: i2f
+        29: fdiv
+        30: fstore        6
+        32: iconst_0
+        33: istore        7
+        35: iload         7
+        37: iload_2
+        38: if_icmpge     166
+        41: iconst_0
+        42: istore        8
+        44: iload         8
+        46: iload_1
+        47: if_icmpge     160
+        50: fconst_0
+        51: fstore        9
+        53: iload_3
+        54: ineg
+        55: istore        10
+        57: iload         10
+        59: iload_3
+        60: if_icmpgt     139
+        63: iload         4
+        65: ifeq          76
+        68: iload         8
+        70: iload         10
+        72: iadd
+        73: goto          78
+        76: iload         8
+        78: istore        11
+        80: iload         4
+        82: ifeq          90
+        85: iload         7
+        87: goto          95
+        90: iload         7
+        92: iload         10
+        94: iadd
+        95: istore        12
+        97: iload         11
+        99: iflt          133
+       102: iload         12
+       104: iflt          133
+       107: iload         11
+       109: iload_1
+       110: if_icmpge     133
+       113: iload         12
+       115: iload_2
+       116: if_icmpge     133
+       119: fload         9
+       121: aload_0
+       122: iload         12
+       124: iload_1
+       125: imul
+       126: iload         11
+       128: iadd
+       129: faload
+       130: fadd
+       131: fstore        9
+       133: iinc          10, 1
+       136: goto          57
+       139: aload         5
+       141: iload         7
+       143: iload_1
+       144: imul
+       145: iload         8
+       147: iadd
+       148: fload         9
+       150: fload         6
+       152: fmul
+       153: fastore
+       154: iinc          8, 1
+       157: goto          44
+       160: iinc          7, 1
+       163: goto          35
+       166: aload         5
+       168: areturn
+      StackMapTable: number_of_entries = 12
+        frame_type = 16 /* same */
+        frame_type = 254 /* append */
+          offset_delta = 18
+          locals = [ class "[F", float, int ]
+        frame_type = 252 /* append */
+          offset_delta = 8
+          locals = [ int ]
+        frame_type = 253 /* append */
+          offset_delta = 12
+          locals = [ float, int ]
+        frame_type = 18 /* same */
+        frame_type = 65 /* same_locals_1_stack_item */
+          stack = [ int ]
+        frame_type = 252 /* append */
+          offset_delta = 11
+          locals = [ int ]
+        frame_type = 68 /* same_locals_1_stack_item */
+          stack = [ int ]
+        frame_type = 250 /* chop */
+          offset_delta = 37
+        frame_type = 250 /* chop */
+          offset_delta = 5
+        frame_type = 249 /* chop */
+          offset_delta = 20
+        frame_type = 250 /* chop */
+          offset_delta = 5
+      LineNumberTable:
+        line 101: 0
+        line 102: 16
+        line 103: 22
+        line 104: 32
+        line 105: 41
+        line 106: 50
+        line 107: 53
+        line 108: 63
+        line 109: 97
+        line 107: 133
+        line 111: 139
+        line 105: 154
+        line 104: 160
+        line 114: 166
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+           80      53    11    sx   I
+           97      36    12    sy   I
+           57      82    10     k   I
+           53     101     9   sum   F
+           44     116     8     x   I
+           35     131     7     y   I
+            0     169     0    in   [F
+            0     169     1     w   I
+            0     169     2     h   I
+            0     169     3 radius   I
+            0     169     4 across   Z
+           22     147     5   out   [F
+           32     137     6  norm   F
+    MethodParameters:
+      Name                           Flags
+      in
+      w
+      h
+      radius
+      across
+
+  private static float[] slidingBox(float[], int, int, int, boolean);
+    descriptor: ([FIIIZ)[F
+    flags: (0x000a) ACC_PRIVATE, ACC_STATIC
+    Code:
+      stack=5, locals=15, args_size=5
+         0: aload_0
+         1: arraylength
+         2: newarray       float
+         4: astore        5
+         6: iload         4
+         8: ifeq          15
+        11: iload_1
+        12: goto          16
+        15: iload_2
+        16: istore        6
+        18: iload         4
+        20: ifeq          27
+        23: iload_2
+        24: goto          28
+        27: iload_1
+        28: istore        7
+        30: fconst_1
+        31: iload_3
+        32: iconst_2
+        33: imul
+        34: iconst_1
+        35: iadd
+        36: i2f
+        37: fdiv
+        38: fstore        8
+        40: iconst_0
+        41: istore        9
+        43: iload         9
+        45: iload         7
+        47: if_icmpge     244
+        50: dconst_0
+        51: dstore        10
+        53: iconst_0
+        54: istore        12
+        56: iload         12
+        58: iload_3
+        59: iload         6
+        61: iconst_1
+        62: isub
+        63: invokestatic  #272                // Method java/lang/Math.min:(II)I
+        66: if_icmpgt     105
+        69: dload         10
+        71: aload_0
+        72: iload         4
+        74: ifeq          87
+        77: iload         9
+        79: iload_1
+        80: imul
+        81: iload         12
+        83: iadd
+        84: goto          94
+        87: iload         12
+        89: iload_1
+        90: imul
+        91: iload         9
+        93: iadd
+        94: faload
+        95: f2d
+        96: dadd
+        97: dstore        10
+        99: iinc          12, 1
+       102: goto          56
+       105: iconst_0
+       106: istore        12
+       108: iload         12
+       110: iload         6
+       112: if_icmpge     238
+       115: aload         5
+       117: iload         4
+       119: ifeq          132
+       122: iload         9
+       124: iload_1
+       125: imul
+       126: iload         12
+       128: iadd
+       129: goto          139
+       132: iload         12
+       134: iload_1
+       135: imul
+       136: iload         9
+       138: iadd
+       139: dload         10
+       141: d2f
+       142: fload         8
+       144: fmul
+       145: fastore
+       146: iload         12
+       148: iload_3
+       149: isub
+       150: istore        13
+       152: iload         12
+       154: iload_3
+       155: iadd
+       156: iconst_1
+       157: iadd
+       158: istore        14
+       160: iload         13
+       162: iflt          195
+       165: dload         10
+       167: aload_0
+       168: iload         4
+       170: ifeq          183
+       173: iload         9
+       175: iload_1
+       176: imul
+       177: iload         13
+       179: iadd
+       180: goto          190
+       183: iload         13
+       185: iload_1
+       186: imul
+       187: iload         9
+       189: iadd
+       190: faload
+       191: f2d
+       192: dsub
+       193: dstore        10
+       195: iload         14
+       197: iload         6
+       199: if_icmpge     232
+       202: dload         10
+       204: aload_0
+       205: iload         4
+       207: ifeq          220
+       210: iload         9
+       212: iload_1
+       213: imul
+       214: iload         14
+       216: iadd
+       217: goto          227
+       220: iload         14
+       222: iload_1
+       223: imul
+       224: iload         9
+       226: iadd
+       227: faload
+       228: f2d
+       229: dadd
+       230: dstore        10
+       232: iinc          12, 1
+       235: goto          108
+       238: iinc          9, 1
+       241: goto          43
+       244: aload         5
+       246: areturn
+      StackMapTable: number_of_entries = 20
+        frame_type = 252 /* append */
+          offset_delta = 15
+          locals = [ class "[F" ]
+        frame_type = 64 /* same_locals_1_stack_item */
+          stack = [ int ]
+        frame_type = 252 /* append */
+          offset_delta = 10
+          locals = [ int ]
+        frame_type = 64 /* same_locals_1_stack_item */
+          stack = [ int ]
+        frame_type = 254 /* append */
+          offset_delta = 14
+          locals = [ int, float, int ]
+        frame_type = 253 /* append */
+          offset_delta = 12
+          locals = [ double, int ]
+        frame_type = 255 /* full_frame */
+          offset_delta = 30
+          locals = [ class "[F", int, int, int, int, class "[F", int, int, float, int, double, int ]
+          stack = [ double, class "[F" ]
+        frame_type = 255 /* full_frame */
+          offset_delta = 6
+          locals = [ class "[F", int, int, int, int, class "[F", int, int, float, int, double, int ]
+          stack = [ double, class "[F", int ]
+        frame_type = 250 /* chop */
+          offset_delta = 10
+        frame_type = 252 /* append */
+          offset_delta = 2
+          locals = [ int ]
+        frame_type = 87 /* same_locals_1_stack_item */
+          stack = [ class "[F" ]
+        frame_type = 255 /* full_frame */
+          offset_delta = 6
+          locals = [ class "[F", int, int, int, int, class "[F", int, int, float, int, double, int ]
+          stack = [ class "[F", int ]
+        frame_type = 255 /* full_frame */
+          offset_delta = 43
+          locals = [ class "[F", int, int, int, int, class "[F", int, int, float, int, double, int, int, int ]
+          stack = [ double, class "[F" ]
+        frame_type = 255 /* full_frame */
+          offset_delta = 6
+          locals = [ class "[F", int, int, int, int, class "[F", int, int, float, int, double, int, int, int ]
+          stack = [ double, class "[F", int ]
+        frame_type = 4 /* same */
+        frame_type = 255 /* full_frame */
+          offset_delta = 24
+          locals = [ class "[F", int, int, int, int, class "[F", int, int, float, int, double, int, int, int ]
+          stack = [ double, class "[F" ]
+        frame_type = 255 /* full_frame */
+          offset_delta = 6
+          locals = [ class "[F", int, int, int, int, class "[F", int, int, float, int, double, int, int, int ]
+          stack = [ double, class "[F", int ]
+        frame_type = 249 /* chop */
+          offset_delta = 4
+        frame_type = 249 /* chop */
+          offset_delta = 5
+        frame_type = 250 /* chop */
+          offset_delta = 5
+      LineNumberTable:
+        line 118: 0
+        line 119: 6
+        line 120: 30
+        line 121: 40
+        line 122: 50
+        line 123: 53
+        line 124: 105
+        line 125: 115
+        line 126: 146
+        line 127: 160
+        line 128: 195
+        line 124: 232
+        line 121: 238
+        line 131: 244
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+           56      49    12     k   I
+          152      80    13  left   I
+          160      72    14 right   I
+          108     130    12     p   I
+           53     185    10   sum   D
+           43     201     9   row   I
+            0     247     0    in   [F
+            0     247     1     w   I
+            0     247     2     h   I
+            0     247     3 radius   I
+            0     247     4 across   Z
+            6     241     5   out   [F
+           18     229     6 length   I
+           30     217     7  rows   I
+           40     207     8  norm   F
+    MethodParameters:
+      Name                           Flags
+      in
+      w
+      h
+      radius
+      across
+
+  private static net.anubis.client.gui.mainmenu.MenuTextures$Pixels decode(byte[], java.lang.String);
+    descriptor: ([BLjava/lang/String;)Lnet/anubis/client/gui/mainmenu/MenuTextures$Pixels;
+    flags: (0x000a) ACC_PRIVATE, ACC_STATIC
+    Code:
+      stack=7, locals=19, args_size=2
+         0: aconst_null
+         1: astore_2
+         2: aconst_null
+         3: astore_3
+         4: aconst_null
+         5: astore        4
+         7: invokestatic  #286                // Method org/lwjgl/system/MemoryStack.stackPush:()Lorg/lwjgl/system/MemoryStack;
+        10: astore        5
+        12: aload_0
+        13: arraylength
+        14: invokestatic  #292                // Method org/lwjgl/system/MemoryUtil.memAlloc:(I)Ljava/nio/ByteBuffer;
+        17: astore_2
+        18: aload_2
+        19: aload_0
+        20: invokevirtual #297                // Method java/nio/ByteBuffer.put:([B)Ljava/nio/ByteBuffer;
+        23: invokevirtual #301                // Method java/nio/ByteBuffer.flip:()Ljava/nio/ByteBuffer;
+        26: pop
+        27: aload         5
+        29: iconst_1
+        30: invokevirtual #305                // Method org/lwjgl/system/MemoryStack.mallocInt:(I)Ljava/nio/IntBuffer;
+        33: astore        6
+        35: aload         5
+        37: iconst_1
+        38: invokevirtual #305                // Method org/lwjgl/system/MemoryStack.mallocInt:(I)Ljava/nio/IntBuffer;
+        41: astore        7
+        43: aload         5
+        45: iconst_1
+        46: invokevirtual #305                // Method org/lwjgl/system/MemoryStack.mallocInt:(I)Ljava/nio/IntBuffer;
+        49: astore        8
+        51: aload_2
+        52: aload         6
+        54: aload         7
+        56: aload         8
+        58: iconst_4
+        59: invokestatic  #311                // Method org/lwjgl/stb/STBImage.stbi_load_from_memory:(Ljava/nio/ByteBuffer;Ljava/nio/IntBuffer;Ljava/nio/IntBuffer;Ljava/nio/IntBuffer;I)Ljava/nio/ByteBuffer;
+        62: astore_3
+        63: aload_3
+        64: ifnonnull     124
+        67: getstatic     #161                // Field LOGGER:Lorg/slf4j/Logger;
+        70: ldc_w         #313                // String [Anubis] Can\'t decode {}: {}
+        73: aload_1
+        74: invokestatic  #317                // Method org/lwjgl/stb/STBImage.stbi_failure_reason:()Ljava/lang/String;
+        77: invokeinterface #210,  4          // InterfaceMethod org/slf4j/Logger.warn:(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
+        82: aconst_null
+        83: astore        9
+        85: aload         5
+        87: ifnull        95
+        90: aload         5
+        92: invokevirtual #318                // Method org/lwjgl/system/MemoryStack.close:()V
+        95: aload         4
+        97: ifnull        105
+       100: aload         4
+       102: invokestatic  #326                // Method org/lwjgl/system/MemoryUtil.memFree:(Ljava/nio/Buffer;)V
+       105: aload_3
+       106: ifnull        113
+       109: aload_3
+       110: invokestatic  #330                // Method org/lwjgl/stb/STBImage.stbi_image_free:(Ljava/nio/ByteBuffer;)V
+       113: aload_2
+       114: ifnull        121
+       117: aload_2
+       118: invokestatic  #326                // Method org/lwjgl/system/MemoryUtil.memFree:(Ljava/nio/Buffer;)V
+       121: aload         9
+       123: areturn
+       124: aload         6
+       126: iconst_0
+       127: invokevirtual #333                // Method java/nio/IntBuffer.get:(I)I
+       130: istore        9
+       132: aload         7
+       134: iconst_0
+       135: invokevirtual #333                // Method java/nio/IntBuffer.get:(I)I
+       138: istore        10
+       140: getstatic     #79                 // Field optimized:Z
+       143: ifeq          222
+       146: iload         9
+       148: iload         10
+       150: sipush        1536
+       153: invokestatic  #339                // Method net/anubis/client/gui/ImageDownsampler.dimensions:(III)[I
+       156: astore        11
+       158: iload         9
+       160: aload         11
+       162: iconst_0
+       163: iaload
+       164: if_icmpne     176
+       167: iload         10
+       169: aload         11
+       171: iconst_1
+       172: iaload
+       173: if_icmpeq     222
+       176: aload         11
+       178: iconst_0
+       179: iaload
+       180: aload         11
+       182: iconst_1
+       183: iaload
+       184: imul
+       185: iconst_4
+       186: imul
+       187: invokestatic  #292                // Method org/lwjgl/system/MemoryUtil.memAlloc:(I)Ljava/nio/ByteBuffer;
+       190: astore        4
+       192: aload_3
+       193: iload         9
+       195: iload         10
+       197: aload         4
+       199: aload         11
+       201: iconst_0
+       202: iaload
+       203: aload         11
+       205: iconst_1
+       206: iaload
+       207: invokestatic  #343                // Method net/anubis/client/gui/ImageDownsampler.rgba:(Ljava/nio/ByteBuffer;IILjava/nio/ByteBuffer;II)V
+       210: aload         11
+       212: iconst_0
+       213: iaload
+       214: istore        9
+       216: aload         11
+       218: iconst_1
+       219: iaload
+       220: istore        10
+       222: aload         4
+       224: ifnonnull     231
+       227: aload_3
+       228: goto          233
+       231: aload         4
+       233: astore        11
+       235: iload         9
+       237: iload         10
+       239: imul
+       240: newarray       int
+       242: astore        12
+       244: iconst_0
+       245: istore        13
+       247: iload         13
+       249: aload         12
+       251: arraylength
+       252: if_icmpge     352
+       255: aload         11
+       257: iload         13
+       259: iconst_4
+       260: imul
+       261: invokevirtual #346                // Method java/nio/ByteBuffer.get:(I)B
+       264: sipush        255
+       267: iand
+       268: istore        14
+       270: aload         11
+       272: iload         13
+       274: iconst_4
+       275: imul
+       276: iconst_1
+       277: iadd
+       278: invokevirtual #346                // Method java/nio/ByteBuffer.get:(I)B
+       281: sipush        255
+       284: iand
+       285: istore        15
+       287: aload         11
+       289: iload         13
+       291: iconst_4
+       292: imul
+       293: iconst_2
+       294: iadd
+       295: invokevirtual #346                // Method java/nio/ByteBuffer.get:(I)B
+       298: sipush        255
+       301: iand
+       302: istore        16
+       304: aload         11
+       306: iload         13
+       308: iconst_4
+       309: imul
+       310: iconst_3
+       311: iadd
+       312: invokevirtual #346                // Method java/nio/ByteBuffer.get:(I)B
+       315: sipush        255
+       318: iand
+       319: istore        17
+       321: aload         12
+       323: iload         13
+       325: iload         17
+       327: bipush        24
+       329: ishl
+       330: iload         14
+       332: bipush        16
+       334: ishl
+       335: ior
+       336: iload         15
+       338: bipush        8
+       340: ishl
+       341: ior
+       342: iload         16
+       344: ior
+       345: iastore
+       346: iinc          13, 1
+       349: goto          247
+       352: new           #7                  // class net/anubis/client/gui/mainmenu/MenuTextures$Pixels
+       355: dup
+       356: iload         9
+       358: iload         10
+       360: aload         12
+       362: invokespecial #250                // Method net/anubis/client/gui/mainmenu/MenuTextures$Pixels."<init>":(II[I)V
+       365: astore        13
+       367: aload         5
+       369: ifnull        377
+       372: aload         5
+       374: invokevirtual #318                // Method org/lwjgl/system/MemoryStack.close:()V
+       377: aload         4
+       379: ifnull        387
+       382: aload         4
+       384: invokestatic  #326                // Method org/lwjgl/system/MemoryUtil.memFree:(Ljava/nio/Buffer;)V
+       387: aload_3
+       388: ifnull        395
+       391: aload_3
+       392: invokestatic  #330                // Method org/lwjgl/stb/STBImage.stbi_image_free:(Ljava/nio/ByteBuffer;)V
+       395: aload_2
+       396: ifnull        403
+       399: aload_2
+       400: invokestatic  #326                // Method org/lwjgl/system/MemoryUtil.memFree:(Ljava/nio/Buffer;)V
+       403: aload         13
+       405: areturn
+       406: astore        6
+       408: aload         5
+       410: ifnull        430
+       413: aload         5
+       415: invokevirtual #318                // Method org/lwjgl/system/MemoryStack.close:()V
+       418: goto          430
+       421: astore        7
+       423: aload         6
+       425: aload         7
+       427: invokevirtual #205                // Method java/lang/Throwable.addSuppressed:(Ljava/lang/Throwable;)V
+       430: aload         6
+       432: athrow
+       433: astore        18
+       435: aload         4
+       437: ifnull        445
+       440: aload         4
+       442: invokestatic  #326                // Method org/lwjgl/system/MemoryUtil.memFree:(Ljava/nio/Buffer;)V
+       445: aload_3
+       446: ifnull        453
+       449: aload_3
+       450: invokestatic  #330                // Method org/lwjgl/stb/STBImage.stbi_image_free:(Ljava/nio/ByteBuffer;)V
+       453: aload_2
+       454: ifnull        461
+       457: aload_2
+       458: invokestatic  #326                // Method org/lwjgl/system/MemoryUtil.memFree:(Ljava/nio/Buffer;)V
+       461: aload         18
+       463: athrow
+      Exception table:
+         from    to  target type
+            12    85   406   Class java/lang/Throwable
+           124   367   406   Class java/lang/Throwable
+           413   418   421   Class java/lang/Throwable
+             7    95   433   any
+           124   377   433   any
+           406   435   433   any
+      StackMapTable: number_of_entries = 22
+        frame_type = 255 /* full_frame */
+          offset_delta = 95
+          locals = [ class "[B", class java/lang/String, class java/nio/ByteBuffer, class java/nio/ByteBuffer, class java/nio/ByteBuffer, class org/lwjgl/system/MemoryStack, class java/nio/IntBuffer, class java/nio/IntBuffer, class java/nio/IntBuffer, class net/anubis/client/gui/mainmenu/MenuTextures$Pixels ]
+          stack = []
+        frame_type = 9 /* same */
+        frame_type = 7 /* same */
+        frame_type = 7 /* same */
+        frame_type = 250 /* chop */
+          offset_delta = 2
+        frame_type = 254 /* append */
+          offset_delta = 51
+          locals = [ int, int, class "[I" ]
+        frame_type = 250 /* chop */
+          offset_delta = 45
+        frame_type = 8 /* same */
+        frame_type = 65 /* same_locals_1_stack_item */
+          stack = [ class java/nio/ByteBuffer ]
+        frame_type = 254 /* append */
+          offset_delta = 13
+          locals = [ class java/nio/ByteBuffer, class "[I", int ]
+        frame_type = 250 /* chop */
+          offset_delta = 104
+        frame_type = 252 /* append */
+          offset_delta = 24
+          locals = [ class net/anubis/client/gui/mainmenu/MenuTextures$Pixels ]
+        frame_type = 9 /* same */
+        frame_type = 7 /* same */
+        frame_type = 7 /* same */
+        frame_type = 255 /* full_frame */
+          offset_delta = 2
+          locals = [ class "[B", class java/lang/String, class java/nio/ByteBuffer, class java/nio/ByteBuffer, class java/nio/ByteBuffer, class org/lwjgl/system/MemoryStack ]
+          stack = [ class java/lang/Throwable ]
+        frame_type = 255 /* full_frame */
+          offset_delta = 14
+          locals = [ class "[B", class java/lang/String, class java/nio/ByteBuffer, class java/nio/ByteBuffer, class java/nio/ByteBuffer, class org/lwjgl/system/MemoryStack, class java/lang/Throwable ]
+          stack = [ class java/lang/Throwable ]
+        frame_type = 8 /* same */
+        frame_type = 255 /* full_frame */
+          offset_delta = 2
+          locals = [ class "[B", class java/lang/String, class java/nio/ByteBuffer, class java/nio/ByteBuffer, class java/nio/ByteBuffer ]
+          stack = [ class java/lang/Throwable ]
+        frame_type = 255 /* full_frame */
+          offset_delta = 11
+          locals = [ class "[B", class java/lang/String, class java/nio/ByteBuffer, class java/nio/ByteBuffer, class java/nio/ByteBuffer, top, top, top, top, top, top, top, top, top, top, top, top, top, class java/lang/Throwable ]
+          stack = []
+        frame_type = 7 /* same */
+        frame_type = 7 /* same */
+      LineNumberTable:
+        line 135: 0
+        line 136: 2
+        line 137: 4
+        line 138: 7
+        line 139: 12
+        line 140: 18
+        line 141: 27
+        line 142: 51
+        line 143: 63
+        line 144: 67
+        line 145: 82
+        line 165: 85
+        line 166: 95
+        line 167: 105
+        line 168: 113
+        line 145: 121
+        line 147: 124
+        line 148: 140
+        line 149: 146
+        line 150: 158
+        line 151: 176
+        line 152: 192
+        line 153: 210
+        line 154: 216
+        line 157: 222
+        line 158: 235
+        line 159: 244
+        line 160: 255
+        line 161: 287
+        line 162: 321
+        line 159: 346
+        line 164: 352
+        line 165: 367
+        line 166: 377
+        line 167: 387
+        line 168: 395
+        line 164: 403
+        line 138: 406
+        line 166: 433
+        line 167: 445
+        line 168: 453
+        line 169: 461
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+          158      64    11  size   [I
+          270      76    14     r   I
+          287      59    15     g   I
+          304      42    16     b   I
+          321      25    17     a   I
+          247     105    13     i   I
+           35     371     6     w   Ljava/nio/IntBuffer;
+           43     363     7     h   Ljava/nio/IntBuffer;
+           51     355     8 channels   Ljava/nio/IntBuffer;
+          132     274     9 width   I
+          140     266    10 height   I
+          235     171    11 pixels   Ljava/nio/ByteBuffer;
+          244     162    12  argb   [I
+           12     421     5 stack   Lorg/lwjgl/system/MemoryStack;
+            0     464     0 bytes   [B
+            0     464     1  name   Ljava/lang/String;
+            2     462     2  file   Ljava/nio/ByteBuffer;
+            4     460     3  rgba   Ljava/nio/ByteBuffer;
+            7     457     4 reduced   Ljava/nio/ByteBuffer;
+    MethodParameters:
+      Name                           Flags
+      bytes
+      name
+
+  private static net.anubis.client.gui.ThemeImages$Texture upload(int[], int, int);
+    descriptor: ([III)Lnet/anubis/client/gui/ThemeImages$Texture;
+    flags: (0x000a) ACC_PRIVATE, ACC_STATIC
+    Code:
+      stack=4, locals=9, args_size=3
+         0: aload_0
+         1: arraylength
+         2: iconst_4
+         3: imul
+         4: invokestatic  #292                // Method org/lwjgl/system/MemoryUtil.memAlloc:(I)Ljava/nio/ByteBuffer;
+         7: astore_3
+         8: aload_0
+         9: astore        4
+        11: aload         4
+        13: arraylength
+        14: istore        5
+        16: iconst_0
+        17: istore        6
+        19: iload         6
+        21: iload         5
+        23: if_icmpge     74
+        26: aload         4
+        28: iload         6
+        30: iaload
+        31: istore        7
+        33: aload_3
+        34: iload         7
+        36: bipush        16
+        38: ishr
+        39: i2b
+        40: invokevirtual #362                // Method java/nio/ByteBuffer.put:(B)Ljava/nio/ByteBuffer;
+        43: iload         7
+        45: bipush        8
+        47: ishr
+        48: i2b
+        49: invokevirtual #362                // Method java/nio/ByteBuffer.put:(B)Ljava/nio/ByteBuffer;
+        52: iload         7
+        54: i2b
+        55: invokevirtual #362                // Method java/nio/ByteBuffer.put:(B)Ljava/nio/ByteBuffer;
+        58: iload         7
+        60: bipush        24
+        62: iushr
+        63: i2b
+        64: invokevirtual #362                // Method java/nio/ByteBuffer.put:(B)Ljava/nio/ByteBuffer;
+        67: pop
+        68: iinc          6, 1
+        71: goto          19
+        74: aload_3
+        75: invokevirtual #301                // Method java/nio/ByteBuffer.flip:()Ljava/nio/ByteBuffer;
+        78: pop
+        79: aload_3
+        80: iload_1
+        81: iload_2
+        82: iconst_0
+        83: invokestatic  #366                // Method net/anubis/client/gui/ThemeImages.fromPixels:(Ljava/nio/ByteBuffer;IIZ)Lnet/anubis/client/gui/ThemeImages$Texture;
+        86: astore        4
+        88: aload_3
+        89: invokestatic  #326                // Method org/lwjgl/system/MemoryUtil.memFree:(Ljava/nio/Buffer;)V
+        92: aload         4
+        94: areturn
+        95: astore        8
+        97: aload_3
+        98: invokestatic  #326                // Method org/lwjgl/system/MemoryUtil.memFree:(Ljava/nio/Buffer;)V
+       101: aload         8
+       103: athrow
+      Exception table:
+         from    to  target type
+             8    88    95   any
+            95    97    95   any
+      StackMapTable: number_of_entries = 3
+        frame_type = 255 /* full_frame */
+          offset_delta = 19
+          locals = [ class "[I", int, int, class java/nio/ByteBuffer, class "[I", int, int ]
+          stack = []
+        frame_type = 248 /* chop */
+          offset_delta = 54
+        frame_type = 84 /* same_locals_1_stack_item */
+          stack = [ class java/lang/Throwable ]
+      LineNumberTable:
+        line 173: 0
+        line 175: 8
+        line 176: 33
+        line 175: 68
+        line 178: 74
+        line 179: 79
+        line 181: 88
+        line 179: 92
+        line 181: 95
+        line 182: 101
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+           33      35     7     c   I
+            0     104     0  argb   [I
+            0     104     1 width   I
+            0     104     2 height   I
+            8      96     3 buffer   Ljava/nio/ByteBuffer;
+    MethodParameters:
+      Name                           Flags
+      argb
+      width
+      height
+
+  private static net.anubis.client.gui.mainmenu.MenuTextures$Pixels lambda$blurred$1(int, net.anubis.client.gui.mainmenu.MenuTextures$Pixels);
+    descriptor: (ILnet/anubis/client/gui/mainmenu/MenuTextures$Pixels;)Lnet/anubis/client/gui/mainmenu/MenuTextures$Pixels;
+    flags: (0x100a) ACC_PRIVATE, ACC_STATIC, ACC_SYNTHETIC
+    Code:
+      stack=2, locals=2, args_size=2
+         0: aload_1
+         1: iload_0
+         2: invokestatic  #370                // Method blur:(Lnet/anubis/client/gui/mainmenu/MenuTextures$Pixels;I)Lnet/anubis/client/gui/mainmenu/MenuTextures$Pixels;
+         5: areturn
+      LineNumberTable:
+        line 53: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       6     0 radius   I
+            0       6     1     p   Lnet/anubis/client/gui/mainmenu/MenuTextures$Pixels;
+    MethodParameters:
+      Name                           Flags
+      radius
+      p
+
+  private static net.anubis.client.gui.mainmenu.MenuTextures$Pixels lambda$mask$0(net.anubis.client.gui.mainmenu.MenuTextures$Pixels);
+    descriptor: (Lnet/anubis/client/gui/mainmenu/MenuTextures$Pixels;)Lnet/anubis/client/gui/mainmenu/MenuTextures$Pixels;
+    flags: (0x100a) ACC_PRIVATE, ACC_STATIC, ACC_SYNTHETIC
+    Code:
+      stack=5, locals=3, args_size=1
+         0: aload_0
+         1: invokevirtual #185                // Method net/anubis/client/gui/mainmenu/MenuTextures$Pixels.argb:()[I
+         4: arraylength
+         5: newarray       int
+         7: astore_1
+         8: iconst_0
+         9: istore_2
+        10: iload_2
+        11: aload_1
+        12: arraylength
+        13: if_icmpge     38
+        16: aload_1
+        17: iload_2
+        18: aload_0
+        19: invokevirtual #185                // Method net/anubis/client/gui/mainmenu/MenuTextures$Pixels.argb:()[I
+        22: iload_2
+        23: iaload
+        24: ldc_w         #371                // int -16777216
+        27: iand
+        28: ldc           #247                // int 16777215
+        30: ior
+        31: iastore
+        32: iinc          2, 1
+        35: goto          10
+        38: new           #7                  // class net/anubis/client/gui/mainmenu/MenuTextures$Pixels
+        41: dup
+        42: aload_0
+        43: invokevirtual #189                // Method net/anubis/client/gui/mainmenu/MenuTextures$Pixels.width:()I
+        46: aload_0
+        47: invokevirtual #192                // Method net/anubis/client/gui/mainmenu/MenuTextures$Pixels.height:()I
+        50: aload_1
+        51: invokespecial #250                // Method net/anubis/client/gui/mainmenu/MenuTextures$Pixels."<init>":(II[I)V
+        54: areturn
+      StackMapTable: number_of_entries = 2
+        frame_type = 253 /* append */
+          offset_delta = 10
+          locals = [ class "[I", int ]
+        frame_type = 250 /* chop */
+          offset_delta = 27
+      LineNumberTable:
+        line 46: 0
+        line 47: 8
+        line 48: 38
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+           10      28     2     i   I
+            0      55     0     p   Lnet/anubis/client/gui/mainmenu/MenuTextures$Pixels;
+            8      47     1   out   [I
+    MethodParameters:
+      Name                           Flags
+      p
+
+  static {};
+    descriptor: ()V
+    flags: (0x0008) ACC_STATIC
+    Code:
+      stack=2, locals=0, args_size=0
+         0: ldc_w         #374                // String Anubis
+         3: invokestatic  #380                // Method org/slf4j/LoggerFactory.getLogger:(Ljava/lang/String;)Lorg/slf4j/Logger;
+         6: putstatic     #161                // Field LOGGER:Lorg/slf4j/Logger;
+         9: new           #382                // class java/util/HashMap
+        12: dup
+        13: invokespecial #383                // Method java/util/HashMap."<init>":()V
+        16: putstatic     #29                 // Field TEXTURES:Ljava/util/Map;
+        19: invokestatic  #39                 // Method net/anubis/client/gui/ThemeImages.get:()Lnet/anubis/client/gui/ThemeImages;
+        22: invokedynamic #389,  0            // InvokeDynamic #5:run:()Ljava/lang/Runnable;
+        27: invokevirtual #393                // Method net/anubis/client/gui/ThemeImages.onImageProfileChange:(Ljava/lang/Runnable;)V
+        30: return
+      LineNumberTable:
+        line 20: 0
+        line 21: 9
+        line 25: 19
+        line 26: 30
+}
+InnerClasses:
+  public static final #12= #9 of #11;     // Texture=class net/anubis/client/gui/ThemeImages$Texture of class net/anubis/client/gui/ThemeImages
+  private static final #13= #7 of #2;     // Pixels=class net/anubis/client/gui/mainmenu/MenuTextures$Pixels of class net/anubis/client/gui/mainmenu/MenuTextures
+  public static final #18= #15 of #17;    // Lookup=class java/lang/invoke/MethodHandles$Lookup of class java/lang/invoke/MethodHandles
+SourceFile: "MenuTextures.java"
+RuntimeVisibleAnnotations:
+  0: #394(#395=e#396.#397)
+    net.fabricmc.api.Environment(
+      value=Lnet/fabricmc/api/EnvType;.CLIENT
+    )
+BootstrapMethods:
+  0: #60 REF_invokeStatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #47 (Ljava/lang/Object;)V
+      #52 REF_invokeVirtual net/anubis/client/gui/ThemeImages.retireTexture:(Lnet/anubis/client/gui/ThemeImages$Texture;)V
+      #53 (Lnet/anubis/client/gui/ThemeImages$Texture;)V
+  1: #108 REF_invokeStatic java/lang/invoke/StringConcatFactory.makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #101 \u0001#mask
+  2: #60 REF_invokeStatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #112 (Ljava/lang/Object;)Ljava/lang/Object;
+      #117 REF_invokeStatic net/anubis/client/gui/mainmenu/MenuTextures.lambda$mask$0:(Lnet/anubis/client/gui/mainmenu/MenuTextures$Pixels;)Lnet/anubis/client/gui/mainmenu/MenuTextures$Pixels;
+      #118 (Lnet/anubis/client/gui/mainmenu/MenuTextures$Pixels;)Lnet/anubis/client/gui/mainmenu/MenuTextures$Pixels;
+  3: #108 REF_invokeStatic java/lang/invoke/StringConcatFactory.makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #126 \u0001#blur\u0001
+  4: #60 REF_invokeStatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #112 (Ljava/lang/Object;)Ljava/lang/Object;
+      #134 REF_invokeStatic net/anubis/client/gui/mainmenu/MenuTextures.lambda$blurred$1:(ILnet/anubis/client/gui/mainmenu/MenuTextures$Pixels;)Lnet/anubis/client/gui/mainmenu/MenuTextures$Pixels;
+      #118 (Lnet/anubis/client/gui/mainmenu/MenuTextures$Pixels;)Lnet/anubis/client/gui/mainmenu/MenuTextures$Pixels;
+  5: #60 REF_invokeStatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #384 ()V
+      #385 REF_invokeStatic net/anubis/client/gui/mainmenu/MenuTextures.changeProfile:()V
+      #384 ()V
+NestMembers:
+  net/anubis/client/gui/mainmenu/MenuTextures$Pixels

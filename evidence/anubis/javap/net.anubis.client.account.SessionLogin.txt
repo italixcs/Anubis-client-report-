@@ -1,0 +1,230 @@
+Classfile analysis-workspace/extracted/run.oEA4CbVx/net/anubis/client/account/SessionLogin.class
+  Last modified Oct 13, 2026; size 2270 bytes
+  SHA-256 checksum 30b5611907bb827cf54f6f78cdf5de129a5a1086a71fcf16243fc4b471e0b73a
+  Compiled from "SessionLogin.java"
+final class net.anubis.client.account.SessionLogin
+  minor version: 0
+  major version: 65
+  flags: (0x0030) ACC_FINAL, ACC_SUPER
+  this_class: #2                          // net/anubis/client/account/SessionLogin
+  super_class: #4                         // java/lang/Object
+  interfaces: 0, fields: 0, methods: 2, attributes: 4
+Constant pool:
+    #1 = Utf8               net/anubis/client/account/SessionLogin
+    #2 = Class              #1            // net/anubis/client/account/SessionLogin
+    #3 = Utf8               java/lang/Object
+    #4 = Class              #3            // java/lang/Object
+    #5 = Utf8               SessionLogin.java
+    #6 = Utf8               net/anubis/client/account/AuthHttp$Reply
+    #7 = Class              #6            // net/anubis/client/account/AuthHttp$Reply
+    #8 = Utf8               net/anubis/client/account/AuthHttp
+    #9 = Class              #8            // net/anubis/client/account/AuthHttp
+   #10 = Utf8               Reply
+   #11 = Utf8               java/lang/invoke/MethodHandles$Lookup
+   #12 = Class              #11           // java/lang/invoke/MethodHandles$Lookup
+   #13 = Utf8               java/lang/invoke/MethodHandles
+   #14 = Class              #13           // java/lang/invoke/MethodHandles
+   #15 = Utf8               Lookup
+   #16 = Utf8               <init>
+   #17 = Utf8               ()V
+   #18 = NameAndType        #16:#17       // "<init>":()V
+   #19 = Methodref          #4.#18        // java/lang/Object."<init>":()V
+   #20 = Utf8               this
+   #21 = Utf8               Lnet/anubis/client/account/SessionLogin;
+   #22 = Utf8               signIn
+   #23 = Utf8               (Ljava/lang/String;)Lnet/anubis/client/account/Credentials;
+   #24 = Utf8               java/lang/InterruptedException
+   #25 = Class              #24           // java/lang/InterruptedException
+   #26 = Utf8               accessToken
+   #27 = Utf8               https://api.minecraftservices.com/minecraft/profile
+   #28 = String             #27           // https://api.minecraftservices.com/minecraft/profile
+   #29 = Utf8               get
+   #30 = Utf8               (Ljava/lang/String;Ljava/lang/String;)Lnet/anubis/client/account/AuthHttp$Reply;
+   #31 = NameAndType        #29:#30       // get:(Ljava/lang/String;Ljava/lang/String;)Lnet/anubis/client/account/AuthHttp$Reply;
+   #32 = Methodref          #9.#31        // net/anubis/client/account/AuthHttp.get:(Ljava/lang/String;Ljava/lang/String;)Lnet/anubis/client/account/AuthHttp$Reply;
+   #33 = Utf8               status
+   #34 = Utf8               ()I
+   #35 = NameAndType        #33:#34       // status:()I
+   #36 = Methodref          #7.#35        // net/anubis/client/account/AuthHttp$Reply.status:()I
+   #37 = Utf8               net/anubis/client/account/AccountException
+   #38 = Class              #37           // net/anubis/client/account/AccountException
+   #39 = Utf8               This session token is invalid or has expired
+   #40 = String             #39           // This session token is invalid or has expired
+   #41 = Utf8               (Ljava/lang/String;)V
+   #42 = NameAndType        #16:#41       // "<init>":(Ljava/lang/String;)V
+   #43 = Methodref          #38.#42       // net/anubis/client/account/AccountException."<init>":(Ljava/lang/String;)V
+   #44 = Utf8               This token\'s account doesn\'t own Minecraft: Java Edition
+   #45 = String             #44           // This token\'s account doesn\'t own Minecraft: Java Edition
+   #46 = Utf8               name
+   #47 = String             #46           // name
+   #48 = Utf8               text
+   #49 = Utf8               (Ljava/lang/String;)Ljava/lang/String;
+   #50 = NameAndType        #48:#49       // text:(Ljava/lang/String;)Ljava/lang/String;
+   #51 = Methodref          #7.#50        // net/anubis/client/account/AuthHttp$Reply.text:(Ljava/lang/String;)Ljava/lang/String;
+   #52 = Utf8               id
+   #53 = String             #52           // id
+   #54 = Utf8               ok
+   #55 = Utf8               ()Z
+   #56 = NameAndType        #54:#55       // ok:()Z
+   #57 = Methodref          #7.#56        // net/anubis/client/account/AuthHttp$Reply.ok:()Z
+   #58 = Utf8               java/lang/String
+   #59 = Class              #58           // java/lang/String
+   #60 = Utf8               Couldn\'t load the profile for this token (HTTP \u0001)
+   #61 = String             #60           // Couldn\'t load the profile for this token (HTTP \u0001)
+   #62 = Utf8               java/lang/invoke/StringConcatFactory
+   #63 = Class              #62           // java/lang/invoke/StringConcatFactory
+   #64 = Utf8               makeConcatWithConstants
+   #65 = Utf8               (Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+   #66 = NameAndType        #64:#65       // makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+   #67 = Methodref          #63.#66       // java/lang/invoke/StringConcatFactory.makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+   #68 = MethodHandle       6:#67         // REF_invokeStatic java/lang/invoke/StringConcatFactory.makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+   #69 = Utf8               (I)Ljava/lang/String;
+   #70 = NameAndType        #64:#69       // makeConcatWithConstants:(I)Ljava/lang/String;
+   #71 = InvokeDynamic      #0:#70        // #0:makeConcatWithConstants:(I)Ljava/lang/String;
+   #72 = Utf8               net/anubis/client/account/Credentials
+   #73 = Class              #72           // net/anubis/client/account/Credentials
+   #74 = Utf8               com/mojang/util/UndashedUuid
+   #75 = Class              #74           // com/mojang/util/UndashedUuid
+   #76 = Utf8               fromStringLenient
+   #77 = Utf8               (Ljava/lang/String;)Ljava/util/UUID;
+   #78 = NameAndType        #76:#77       // fromStringLenient:(Ljava/lang/String;)Ljava/util/UUID;
+   #79 = Methodref          #75.#78       // com/mojang/util/UndashedUuid.fromStringLenient:(Ljava/lang/String;)Ljava/util/UUID;
+   #80 = Utf8               (Ljava/lang/String;Ljava/util/UUID;Ljava/lang/String;Ljava/lang/String;)V
+   #81 = NameAndType        #16:#80       // "<init>":(Ljava/lang/String;Ljava/util/UUID;Ljava/lang/String;Ljava/lang/String;)V
+   #82 = Methodref          #73.#81       // net/anubis/client/account/Credentials."<init>":(Ljava/lang/String;Ljava/util/UUID;Ljava/lang/String;Ljava/lang/String;)V
+   #83 = Utf8               Ljava/lang/String;
+   #84 = Utf8               profile
+   #85 = Utf8               Lnet/anubis/client/account/AuthHttp$Reply;
+   #86 = Utf8               Lnet/fabricmc/api/Environment;
+   #87 = Utf8               value
+   #88 = Utf8               Lnet/fabricmc/api/EnvType;
+   #89 = Utf8               CLIENT
+   #90 = Utf8               Code
+   #91 = Utf8               LineNumberTable
+   #92 = Utf8               LocalVariableTable
+   #93 = Utf8               StackMapTable
+   #94 = Utf8               Exceptions
+   #95 = Utf8               MethodParameters
+   #96 = Utf8               InnerClasses
+   #97 = Utf8               SourceFile
+   #98 = Utf8               RuntimeVisibleAnnotations
+   #99 = Utf8               BootstrapMethods
+{
+  private net.anubis.client.account.SessionLogin();
+    descriptor: ()V
+    flags: (0x0002) ACC_PRIVATE
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: invokespecial #19                 // Method java/lang/Object."<init>":()V
+         4: return
+      LineNumberTable:
+        line 6: 0
+        line 7: 4
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       5     0  this   Lnet/anubis/client/account/SessionLogin;
+
+  static net.anubis.client.account.Credentials signIn(java.lang.String) throws java.lang.InterruptedException;
+    descriptor: (Ljava/lang/String;)Lnet/anubis/client/account/Credentials;
+    flags: (0x0008) ACC_STATIC
+    Code:
+      stack=6, locals=4, args_size=1
+         0: ldc           #28                 // String https://api.minecraftservices.com/minecraft/profile
+         2: aload_0
+         3: invokestatic  #32                 // Method net/anubis/client/account/AuthHttp.get:(Ljava/lang/String;Ljava/lang/String;)Lnet/anubis/client/account/AuthHttp$Reply;
+         6: astore_1
+         7: aload_1
+         8: invokevirtual #36                 // Method net/anubis/client/account/AuthHttp$Reply.status:()I
+        11: sipush        401
+        14: if_icmpne     27
+        17: new           #38                 // class net/anubis/client/account/AccountException
+        20: dup
+        21: ldc           #40                 // String This session token is invalid or has expired
+        23: invokespecial #43                 // Method net/anubis/client/account/AccountException."<init>":(Ljava/lang/String;)V
+        26: athrow
+        27: aload_1
+        28: invokevirtual #36                 // Method net/anubis/client/account/AuthHttp$Reply.status:()I
+        31: sipush        404
+        34: if_icmpne     47
+        37: new           #38                 // class net/anubis/client/account/AccountException
+        40: dup
+        41: ldc           #45                 // String This token\'s account doesn\'t own Minecraft: Java Edition
+        43: invokespecial #43                 // Method net/anubis/client/account/AccountException."<init>":(Ljava/lang/String;)V
+        46: athrow
+        47: aload_1
+        48: ldc           #47                 // String name
+        50: invokevirtual #51                 // Method net/anubis/client/account/AuthHttp$Reply.text:(Ljava/lang/String;)Ljava/lang/String;
+        53: astore_2
+        54: aload_1
+        55: ldc           #53                 // String id
+        57: invokevirtual #51                 // Method net/anubis/client/account/AuthHttp$Reply.text:(Ljava/lang/String;)Ljava/lang/String;
+        60: astore_3
+        61: aload_1
+        62: invokevirtual #57                 // Method net/anubis/client/account/AuthHttp$Reply.ok:()Z
+        65: ifeq          76
+        68: aload_2
+        69: ifnull        76
+        72: aload_3
+        73: ifnonnull     93
+        76: new           #38                 // class net/anubis/client/account/AccountException
+        79: dup
+        80: aload_1
+        81: invokevirtual #36                 // Method net/anubis/client/account/AuthHttp$Reply.status:()I
+        84: invokedynamic #71,  0             // InvokeDynamic #0:makeConcatWithConstants:(I)Ljava/lang/String;
+        89: invokespecial #43                 // Method net/anubis/client/account/AccountException."<init>":(Ljava/lang/String;)V
+        92: athrow
+        93: new           #73                 // class net/anubis/client/account/Credentials
+        96: dup
+        97: aload_2
+        98: aload_3
+        99: invokestatic  #79                 // Method com/mojang/util/UndashedUuid.fromStringLenient:(Ljava/lang/String;)Ljava/util/UUID;
+       102: aload_0
+       103: aload_0
+       104: invokespecial #82                 // Method net/anubis/client/account/Credentials."<init>":(Ljava/lang/String;Ljava/util/UUID;Ljava/lang/String;Ljava/lang/String;)V
+       107: areturn
+      StackMapTable: number_of_entries = 4
+        frame_type = 252 /* append */
+          offset_delta = 27
+          locals = [ class net/anubis/client/account/AuthHttp$Reply ]
+        frame_type = 19 /* same */
+        frame_type = 253 /* append */
+          offset_delta = 28
+          locals = [ class java/lang/String, class java/lang/String ]
+        frame_type = 16 /* same */
+      LineNumberTable:
+        line 10: 0
+        line 11: 7
+        line 12: 17
+        line 14: 27
+        line 15: 37
+        line 17: 47
+        line 18: 54
+        line 19: 61
+        line 20: 76
+        line 22: 93
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0     108     0 accessToken   Ljava/lang/String;
+            7     101     1 profile   Lnet/anubis/client/account/AuthHttp$Reply;
+           54      54     2  name   Ljava/lang/String;
+           61      47     3    id   Ljava/lang/String;
+    Exceptions:
+      throws java.lang.InterruptedException
+    MethodParameters:
+      Name                           Flags
+      accessToken
+}
+InnerClasses:
+  static final #10= #7 of #9;             // Reply=class net/anubis/client/account/AuthHttp$Reply of class net/anubis/client/account/AuthHttp
+  public static final #15= #12 of #14;    // Lookup=class java/lang/invoke/MethodHandles$Lookup of class java/lang/invoke/MethodHandles
+SourceFile: "SessionLogin.java"
+RuntimeVisibleAnnotations:
+  0: #86(#87=e#88.#89)
+    net.fabricmc.api.Environment(
+      value=Lnet/fabricmc/api/EnvType;.CLIENT
+    )
+BootstrapMethods:
+  0: #68 REF_invokeStatic java/lang/invoke/StringConcatFactory.makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #61 Couldn\'t load the profile for this token (HTTP \u0001)

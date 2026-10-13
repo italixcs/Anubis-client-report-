@@ -1,0 +1,3645 @@
+
+FUNCTION (anonymous namespace)::alreadyLoaded(std::__ndk1::vector<(anonymous namespace)::Mapping, std::__ndk1::allocator<(anonymous namespace)::Mapping> > const&, std::__ndk1::set<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::less<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> > >, std::__ndk1::allocator<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> > > > const&) 0x179fc size=1424
+000179fc  sub      sp, sp, #0xc0
+00017a00  stp      x29, x30, [sp, #0x60]
+00017a04  stp      x28, x27, [sp, #0x70]
+00017a08  stp      x26, x25, [sp, #0x80]
+00017a0c  stp      x24, x23, [sp, #0x90]
+00017a10  stp      x22, x21, [sp, #0xa0]
+00017a14  stp      x20, x19, [sp, #0xb0]
+00017a18  add      x29, sp, #0x60
+00017a1c  str      x0, [sp, #0x18]
+00017a20  mrs      x8, tpidr_el0
+00017a24  mov      x21, x2
+00017a28  str      x8, [sp, #8]
+00017a2c  mov      x22, x1
+00017a30  ldr      x8, [x8, #0x28]
+00017a34  stur     x8, [x29, #-8]
+00017a38  sub      x8, x29, #0x20
+00017a3c  ldr      x19, [x21], #8
+00017a40  add      x8, x8, #8
+00017a44  stp      xzr, xzr, [x29, #-0x18]
+00017a48  cmp      x19, x21
+00017a4c  str      x8, [sp, #0x20]
+00017a50  stur     x8, [x29, #-0x20]
+00017a54  b.ne     #0x17a80
+00017a58  ldp      x25, x8, [x22]
+00017a5c  cmp      x25, x8
+00017a60  str      x8, [sp, #0x10]
+00017a64  b.eq     #0x17c70
+00017a68  add      x8, sp, #0x28
+00017a6c  orr      x27, x8, #1
+00017a70  b        #0x17ad4 ; 
+00017a74  cmp      x8, x21
+00017a78  mov      x19, x8
+00017a7c  b.eq     #0x17a58
+00017a80  ldr      x1, [sp, #0x20]
+00017a84  sub      x0, x29, #0x20
+00017a88  add      x2, x19, #0x20
+00017a8c  add      x3, x19, #0x20
+00017a90  bl       #0x18400 ; _ZNSt6__ndk16__treeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_4lessIS6_EENS4_IS6_EEE30__emplace_hint_unique_key_argsIS6_JRKS6_EEENS_4pairINS_15__tree_iteratorIS6_PNS_11__tree_nodeIS6_PvEElEEbEENS_21__tree_const_iteratorIS6_SJ_lEERKT_DpOT0_
+00017a94  ldr      x9, [x19, #8]
+00017a98  cbz      x9, #0x17aac
+00017a9c  mov      x8, x9
+00017aa0  ldr      x9, [x9]
+00017aa4  cbnz     x9, #0x17a9c
+00017aa8  b        #0x17a74 ; 
+00017aac  ldr      x8, [x19, #0x10]
+00017ab0  ldr      x9, [x8]
+00017ab4  cmp      x9, x19
+00017ab8  mov      x19, x8
+00017abc  b.ne     #0x17aac
+00017ac0  b        #0x17a74 ; 
+00017ac4  ldr      x8, [sp, #0x10]
+00017ac8  add      x25, x25, #0x30
+00017acc  cmp      x25, x8
+00017ad0  b.eq     #0x17c70
+00017ad4  add      x0, x25, #0x18
+00017ad8  mov      w1, #0x2f
+00017adc  mov      x2, #-1
+00017ae0  bl       #0x190f8 ; _ZNKSt6__ndk112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE5rfindEcm
+00017ae4  ldrb     w9, [x25, #0x18]
+00017ae8  ldr      x8, [x25, #0x20]
+00017aec  add      x19, x0, #1
+00017af0  lsr      x10, x9, #1
+00017af4  tst      w9, #1
+00017af8  csel     x8, x10, x8, eq
+00017afc  subs     x22, x8, x19
+00017b00  b.lo     #0x17ea8
+00017b04  ldr      x10, [x25, #0x28]
+00017b08  add      x11, x25, #0x19
+00017b0c  tst      w9, #1
+00017b10  csel     x20, x11, x10, eq
+00017b14  cmn      x22, #8
+00017b18  b.hs     #0x17ec4
+00017b1c  cmp      x22, #0x17
+00017b20  b.hs     #0x17b4c
+00017b24  lsl      w9, w22, #1
+00017b28  cmp      x8, x19
+00017b2c  mov      x23, x27
+00017b30  strb     w9, [sp, #0x28]
+00017b34  b.ne     #0x17b7c
+00017b38  strb     wzr, [x23, x22]
+00017b3c  ldr      x19, [x21]
+00017b40  ldrb     w28, [sp, #0x28]
+00017b44  cbnz     x19, #0x17b9c
+00017b48  b        #0x17c3c ; 
+00017b4c  and      x8, x22, #0xfffffffffffffff8
+00017b50  orr      x9, x22, #7
+00017b54  add      x8, x8, #8
+00017b58  cmp      x9, #0x17
+00017b5c  csel     x8, x8, x9, eq
+00017b60  add      x24, x8, #1
+00017b64  mov      x0, x24
+00017b68  bl       #0x38124 ; _Znwm
+00017b6c  orr      x8, x24, #1
+00017b70  mov      x23, x0
+00017b74  stp      x22, x0, [sp, #0x30]
+00017b78  str      x8, [sp, #0x28]
+00017b7c  add      x1, x20, x19
+00017b80  mov      x0, x23
+00017b84  mov      x2, x22
+00017b88  bl       #0x38350 ; memmove@plt
+00017b8c  strb     wzr, [x23, x22]
+00017b90  ldr      x19, [x21]
+00017b94  ldrb     w28, [sp, #0x28]
+00017b98  cbz      x19, #0x17c3c
+00017b9c  ldp      x9, x10, [sp, #0x30]
+00017ba0  lsr      x8, x28, #1
+00017ba4  tst      w28, #1
+00017ba8  csel     x20, x8, x9, eq
+00017bac  csel     x22, x27, x10, eq
+00017bb0  b        #0x17bbc ; 
+00017bb4  ldr      x19, [x19]
+00017bb8  cbz      x19, #0x17c3c
+00017bbc  ldrb     w8, [x19, #0x20]
+00017bc0  ldp      x9, x11, [x19, #0x28]
+00017bc4  mov      x0, x22
+00017bc8  lsr      x10, x8, #1
+00017bcc  tst      w8, #1
+00017bd0  add      x8, x19, #0x21
+00017bd4  csel     x23, x8, x11, eq
+00017bd8  csel     x26, x10, x9, eq
+00017bdc  mov      x1, x23
+00017be0  cmp      x26, x20
+00017be4  csel     x24, x26, x20, lo
+00017be8  mov      x2, x24
+00017bec  bl       #0x38360 ; memcmp@plt
+00017bf0  cmp      x20, x26
+00017bf4  cset     w8, lo
+00017bf8  cmp      w0, #0
+00017bfc  cset     w9, lt
+00017c00  csel     w8, w8, w9, eq
+00017c04  tbnz     w8, #0, #0x17bb4
+00017c08  mov      x0, x23
+00017c0c  mov      x1, x22
+00017c10  mov      x2, x24
+00017c14  bl       #0x38360 ; memcmp@plt
+00017c18  cmp      x26, x20
+00017c1c  cset     w8, lo
+00017c20  cmp      w0, #0
+00017c24  cset     w9, lt
+00017c28  csel     w8, w8, w9, eq
+00017c2c  cmp      w8, #1
+00017c30  b.ne     #0x17c64
+00017c34  add      x19, x19, #8
+00017c38  b        #0x17bb4 ; 
+00017c3c  mov      w19, #1
+00017c40  tbz      w28, #0, #0x17c4c
+00017c44  ldr      x0, [sp, #0x38]
+00017c48  bl       #0x32b5c ; _ZdlPv
+00017c4c  tbnz     w19, #0, #0x17ac4
+00017c50  sub      x0, x29, #0x20
+00017c54  add      x1, x25, #0x18
+00017c58  add      x2, x25, #0x18
+00017c5c  bl       #0x18c00 ; _ZNSt6__ndk16__treeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_4lessIS6_EENS4_IS6_EEE25__emplace_unique_key_argsIS6_JRKS6_EEENS_4pairINS_15__tree_iteratorIS6_PNS_11__tree_nodeIS6_PvEElEEbEERKT_DpOT0_
+00017c60  b        #0x17ac4 ; 
+00017c64  mov      w19, wzr
+00017c68  tbnz     w28, #0, #0x17c44
+00017c6c  b        #0x17c4c ; 
+00017c70  ldr      x8, [sp, #0x18]
+00017c74  ldur     x27, [x29, #-0x20]
+00017c78  stp      xzr, xzr, [sp, #0x30]
+00017c7c  stp      xzr, xzr, [x8]
+00017c80  str      xzr, [x8, #0x10]
+00017c84  add      x8, sp, #0x28
+00017c88  add      x26, x8, #8
+00017c8c  ldr      x8, [sp, #0x20]
+00017c90  str      x26, [sp, #0x28]
+00017c94  cmp      x27, x8
+00017c98  b.eq     #0x17e5c
+00017c9c  mov      x28, #0x7ffffffffffffff8
+00017ca0  mov      x25, #0x1fffffffffffffff
+00017ca4  b        #0x17cb8 ; 
+00017ca8  ldr      x9, [sp, #0x20]
+00017cac  mov      x27, x8
+00017cb0  cmp      x8, x9
+00017cb4  b.eq     #0x17e54
+00017cb8  ldrb     w8, [x27, #0x20]
+00017cbc  ldr      x9, [x27, #0x30]
+00017cc0  add      x10, x27, #0x21
+00017cc4  tst      w8, #1
+00017cc8  csel     x0, x10, x9, eq
+00017ccc  mov      w1, #6
+00017cd0  bl       #0x38370 ; dlopen@plt
+00017cd4  mov      x21, x0
+00017cd8  cbz      x0, #0x17ddc
+00017cdc  ldr      x8, [sp, #0x30]
+00017ce0  mov      x20, x26
+00017ce4  mov      x19, x26
+00017ce8  cbnz     x8, #0x17cfc
+00017cec  b        #0x17d20 ; 
+00017cf0  ldr      x8, [x19]
+00017cf4  mov      x20, x19
+00017cf8  cbz      x8, #0x17d20
+00017cfc  mov      x19, x8
+00017d00  ldr      x8, [x8, #0x20]
+00017d04  cmp      x21, x8
+00017d08  b.lo     #0x17cf0
+00017d0c  cmp      x8, x21
+00017d10  b.hs     #0x17dd4
+00017d14  ldr      x8, [x19, #8]
+00017d18  cbnz     x8, #0x17cfc
+00017d1c  add      x20, x19, #8
+00017d20  mov      w0, #0x28
+00017d24  bl       #0x38124 ; _Znwm
+00017d28  mov      x1, x0
+00017d2c  str      x21, [x1, #0x20]
+00017d30  ldr      x22, [sp, #0x18]
+00017d34  stp      xzr, xzr, [x1]
+00017d38  str      x19, [x1, #0x10]
+00017d3c  str      x1, [x20]
+00017d40  ldr      x8, [sp, #0x28]
+00017d44  ldr      x8, [x8]
+00017d48  cbz      x8, #0x17d54
+00017d4c  str      x8, [sp, #0x28]
+00017d50  ldr      x1, [x20]
+00017d54  ldr      x0, [sp, #0x30]
+00017d58  bl       #0x18974 ; _ZNSt6__ndk127__tree_balance_after_insertB8ne190000IPNS_16__tree_node_baseIPvEEEEvT_S5_
+00017d5c  ldp      x19, x8, [x22, #8]
+00017d60  ldr      x9, [sp, #0x38]
+00017d64  add      x9, x9, #1
+00017d68  cmp      x19, x8
+00017d6c  str      x9, [sp, #0x38]
+00017d70  b.hs     #0x17d88
+00017d74  str      x21, [x19], #8
+00017d78  str      x19, [x22, #8]
+00017d7c  ldr      x9, [x27, #8]
+00017d80  cbnz     x9, #0x17de4
+00017d84  b        #0x17e3c ; 
+00017d88  ldr      x22, [x22]
+00017d8c  sub      x23, x19, x22
+00017d90  asr      x19, x23, #3
+00017d94  add      x9, x19, #1
+00017d98  lsr      x10, x9, #0x3d
+00017d9c  cbnz     x10, #0x17ee0
+00017da0  sub      x8, x8, x22
+00017da4  asr      x10, x8, #2
+00017da8  cmp      x10, x9
+00017dac  csel     x9, x10, x9, hi
+00017db0  cmp      x8, x28
+00017db4  csel     x20, x9, x25, lo
+00017db8  cbz      x20, #0x17df4
+00017dbc  lsr      x8, x20, #0x3d
+00017dc0  cbnz     x8, #0x17efc
+00017dc4  lsl      x0, x20, #3
+00017dc8  bl       #0x38124 ; _Znwm
+00017dcc  mov      x24, x0
+00017dd0  b        #0x17df8 ; 
+00017dd4  mov      x0, x21
+00017dd8  bl       #0x38330 ; dlclose@plt
+00017ddc  ldr      x9, [x27, #8]
+00017de0  cbz      x9, #0x17e3c
+00017de4  mov      x8, x9
+00017de8  ldr      x9, [x9]
+00017dec  cbnz     x9, #0x17de4
+00017df0  b        #0x17ca8 ; 
+00017df4  mov      x24, xzr
+00017df8  add      x19, x24, x19, lsl #3
+00017dfc  mov      x0, x24
+00017e00  mov      x1, x22
+00017e04  mov      x2, x23
+00017e08  add      x20, x24, x20, lsl #3
+00017e0c  str      x21, [x19], #8
+00017e10  bl       #0x382c0 ; memcpy@plt
+00017e14  ldr      x8, [sp, #0x18]
+00017e18  str      x24, [x8]
+00017e1c  str      x20, [x8, #0x10]
+00017e20  cbz      x22, #0x17e2c
+00017e24  mov      x0, x22
+00017e28  bl       #0x32b5c ; _ZdlPv
+00017e2c  ldr      x22, [sp, #0x18]
+00017e30  str      x19, [x22, #8]
+00017e34  ldr      x9, [x27, #8]
+00017e38  cbnz     x9, #0x17de4
+00017e3c  ldr      x8, [x27, #0x10]
+00017e40  ldr      x9, [x8]
+00017e44  cmp      x9, x27
+00017e48  mov      x27, x8
+00017e4c  b.ne     #0x17e3c
+00017e50  b        #0x17ca8 ; 
+00017e54  ldr      x1, [sp, #0x30]
+00017e58  b        #0x17e60 ; 
+00017e5c  mov      x1, xzr
+00017e60  add      x0, sp, #0x28
+00017e64  bl       #0x18e00 ; _ZNSt6__ndk16__treeIPvNS_4lessIS1_EENS_9allocatorIS1_EEE7destroyEPNS_11__tree_nodeIS1_S1_EE
+00017e68  ldur     x1, [x29, #-0x18]
+00017e6c  sub      x0, x29, #0x20
+00017e70  bl       #0x18b1c ; _ZNSt6__ndk16__treeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_4lessIS6_EENS4_IS6_EEE7destroyEPNS_11__tree_nodeIS6_PvEE
+00017e74  ldr      x8, [sp, #8]
+00017e78  ldr      x8, [x8, #0x28]
+00017e7c  ldur     x9, [x29, #-8]
+00017e80  cmp      x8, x9
+00017e84  b.ne     #0x17f88
+00017e88  ldp      x20, x19, [sp, #0xb0]
+00017e8c  ldp      x22, x21, [sp, #0xa0]
+00017e90  ldp      x24, x23, [sp, #0x90]
+00017e94  ldp      x26, x25, [sp, #0x80]
+00017e98  ldp      x28, x27, [sp, #0x70]
+00017e9c  ldp      x29, x30, [sp, #0x60]
+00017ea0  add      sp, sp, #0xc0
+00017ea4  ret      
+00017ea8  ldr      x8, [sp, #8]
+00017eac  ldr      x8, [x8, #0x28]
+00017eb0  ldur     x9, [x29, #-8]
+00017eb4  cmp      x8, x9
+00017eb8  b.ne     #0x17f88
+00017ebc  add      x0, sp, #0x28
+00017ec0  bl       #0x18b6c ; _ZNKSt6__ndk112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE20__throw_out_of_rangeB8ne190000Ev
+00017ec4  ldr      x8, [sp, #8]
+00017ec8  ldr      x8, [x8, #0x28]
+00017ecc  ldur     x9, [x29, #-8]
+00017ed0  cmp      x8, x9
+00017ed4  b.ne     #0x17f88
+00017ed8  add      x0, sp, #0x28
+00017edc  bl       #0x183ec ; _ZNKSt6__ndk112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE20__throw_length_errorB8ne190000Ev
+00017ee0  ldr      x8, [sp, #8]
+00017ee4  ldr      x8, [x8, #0x28]
+00017ee8  ldur     x9, [x29, #-8]
+00017eec  cmp      x8, x9
+00017ef0  b.ne     #0x17f88
+00017ef4  ldr      x0, [sp, #0x18]
+00017ef8  bl       #0x18dec ; _ZNKSt6__ndk16vectorIPvNS_9allocatorIS1_EEE20__throw_length_errorB8ne190000Ev
+00017efc  ldr      x8, [sp, #8]
+00017f00  ldr      x8, [x8, #0x28]
+00017f04  ldur     x9, [x29, #-8]
+00017f08  cmp      x8, x9
+00017f0c  b.ne     #0x17f88
+00017f10  bl       #0x179c8 ; _ZSt28__throw_bad_array_new_lengthB8ne190000v
+00017f14  b        #0x17f30 ; 
+00017f18  b        #0x17f30 ; 
+00017f1c  b        #0x17f5c ; 
+00017f20  b        #0x17f5c ; 
+00017f24  ldur     x1, [x29, #-0x18]
+00017f28  mov      x20, x0
+00017f2c  b        #0x17f64 ; 
+00017f30  ldr      x1, [sp, #0x30]
+00017f34  mov      x20, x0
+00017f38  add      x0, sp, #0x28
+00017f3c  bl       #0x18e00 ; _ZNSt6__ndk16__treeIPvNS_4lessIS1_EENS_9allocatorIS1_EEE7destroyEPNS_11__tree_nodeIS1_S1_EE
+00017f40  ldr      x8, [sp, #0x18]
+00017f44  ldr      x0, [x8]
+00017f48  cbz      x0, #0x17f60
+00017f4c  ldr      x8, [sp, #0x18]
+00017f50  str      x0, [x8, #8]
+00017f54  bl       #0x32b5c ; _ZdlPv
+00017f58  b        #0x17f60 ; 
+00017f5c  mov      x20, x0
+00017f60  ldur     x1, [x29, #-0x18]
+00017f64  sub      x0, x29, #0x20
+00017f68  bl       #0x18b1c ; _ZNSt6__ndk16__treeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_4lessIS6_EENS4_IS6_EEE7destroyEPNS_11__tree_nodeIS6_PvEE
+00017f6c  ldr      x8, [sp, #8]
+00017f70  ldr      x8, [x8, #0x28]
+00017f74  ldur     x9, [x29, #-8]
+00017f78  cmp      x8, x9
+00017f7c  b.ne     #0x17f88
+00017f80  mov      x0, x20
+00017f84  bl       #0x3439c ; _Unwind_Resume
+00017f88  bl       #0x38340 ; __stack_chk_fail@plt
+
+FUNCTION (anonymous namespace)::validVm(_JavaVM*, _JavaVM*, std::__ndk1::vector<(anonymous namespace)::Mapping, std::__ndk1::allocator<(anonymous namespace)::Mapping> > const&) 0x17f8c size=336
+00017f8c  cbz      x0, #0x17fa0
+00017f90  and      x8, x0, #0xffffffffffffff
+00017f94  and      x9, x1, #0xffffffffffffff
+00017f98  cmp      x8, x9
+00017f9c  b.ne     #0x17fa8
+00017fa0  mov      w0, wzr
+00017fa4  ret      
+00017fa8  cbz      x8, #0x17fa0
+00017fac  cmp      x2, x3
+00017fb0  b.eq     #0x17fa0
+00017fb4  add      x9, x8, #8
+00017fb8  mov      x10, x2
+00017fbc  b        #0x17fcc ; 
+00017fc0  add      x10, x10, #0x30
+00017fc4  cmp      x10, x3
+00017fc8  b.eq     #0x17fa0
+00017fcc  ldr      x11, [x10]
+00017fd0  cmp      x8, x11
+00017fd4  b.lo     #0x17fc0
+00017fd8  ldr      x11, [x10, #8]
+00017fdc  cmp      x9, x11
+00017fe0  b.hi     #0x17fc0
+00017fe4  ldrb     w11, [x10, #0x10]
+00017fe8  cbz      w11, #0x17fc0
+00017fec  ldr      x8, [x0]
+00017ff0  ands     x9, x8, #0xffffffffffffff
+00017ff4  b.eq     #0x17fa0
+00017ff8  add      x10, x9, #0x40
+00017ffc  mov      x11, x2
+00018000  b        #0x18010 ; 
+00018004  add      x11, x11, #0x30
+00018008  cmp      x11, x3
+0001800c  b.eq     #0x17fa0
+00018010  ldr      x12, [x11]
+00018014  cmp      x9, x12
+00018018  b.lo     #0x18004
+0001801c  ldr      x12, [x11, #8]
+00018020  cmp      x10, x12
+00018024  b.hi     #0x18004
+00018028  ldrb     w12, [x11, #0x10]
+0001802c  cbz      w12, #0x18004
+00018030  ldr      x9, [x8, #0x30]
+00018034  ands     x9, x9, #0xffffffffffffff
+00018038  b.eq     #0x17fa0
+0001803c  mov      x10, x2
+00018040  b        #0x18050 ; 
+00018044  add      x10, x10, #0x30
+00018048  cmp      x10, x3
+0001804c  b.eq     #0x17fa0
+00018050  ldr      x11, [x10]
+00018054  cmp      x9, x11
+00018058  b.lo     #0x18044
+0001805c  ldr      x11, [x10, #8]
+00018060  cmp      x9, x11
+00018064  b.hs     #0x18044
+00018068  ldrb     w11, [x10, #0x10]
+0001806c  cbz      w11, #0x18044
+00018070  ldrb     w11, [x10, #0x11]
+00018074  cbz      w11, #0x18044
+00018078  ldr      x9, [x8, #0x20]
+0001807c  ands     x9, x9, #0xffffffffffffff
+00018080  b.eq     #0x17fa0
+00018084  mov      x10, x2
+00018088  b        #0x18098 ; 
+0001808c  add      x10, x10, #0x30
+00018090  cmp      x10, x3
+00018094  b.eq     #0x17fa0
+00018098  ldr      x11, [x10]
+0001809c  cmp      x9, x11
+000180a0  b.lo     #0x1808c
+000180a4  ldr      x11, [x10, #8]
+000180a8  cmp      x9, x11
+000180ac  b.hs     #0x1808c
+000180b0  ldrb     w11, [x10, #0x10]
+000180b4  cbz      w11, #0x1808c
+000180b8  ldrb     w11, [x10, #0x11]
+000180bc  cbz      w11, #0x1808c
+000180c0  ldr      x8, [x8, #0x28]
+000180c4  mov      x0, x2
+000180c8  mov      x1, x3
+000180cc  mov      w3, #1
+000180d0  mov      w4, #1
+000180d4  mov      x2, x8
+000180d8  b        #0x180dc ; _ZN12_GLOBAL__N_16mappedERKNSt6__ndk16vectorINS_7MappingENS0_9allocatorIS2_EEEEPKvmb
+
+FUNCTION (anonymous namespace)::characters(_JNIEnv*, _jstring*) 0x173c0 size=220
+000173c0  stp      x29, x30, [sp, #-0x40]!
+000173c4  stp      x24, x23, [sp, #0x10]
+000173c8  stp      x22, x21, [sp, #0x20]
+000173cc  stp      x20, x19, [sp, #0x30]
+000173d0  mov      x29, sp
+000173d4  ldr      x8, [x1]
+000173d8  mov      x21, x1
+000173dc  mov      x19, x0
+000173e0  mov      x0, x1
+000173e4  mov      x1, x2
+000173e8  mov      x20, x2
+000173ec  ldr      x8, [x8, #0x520]
+000173f0  blr      x8
+000173f4  stp      xzr, xzr, [x19, #8]
+000173f8  str      xzr, [x19]
+000173fc  cbz      w0, #0x17458
+00017400  sxtw     x23, w0
+00017404  tbnz     w23, #0x1f, #0x1746c
+00017408  lsl      x24, x23, #1
+0001740c  mov      x0, x24
+00017410  bl       #0x38124 ; _Znwm
+00017414  add      x8, x0, x23, lsl #1
+00017418  mov      w1, wzr
+0001741c  mov      x2, x24
+00017420  mov      x22, x0
+00017424  str      x0, [x19]
+00017428  str      x8, [x19, #0x10]
+0001742c  bl       #0x38270 ; memset@plt
+00017430  ldr      x8, [x21]
+00017434  add      x9, x22, x24
+00017438  str      x9, [x19, #8]
+0001743c  ldr      x8, [x8, #0x6e0]
+00017440  mov      x0, x21
+00017444  mov      x1, x20
+00017448  mov      w2, wzr
+0001744c  mov      w3, w23
+00017450  mov      x4, x22
+00017454  blr      x8
+00017458  ldp      x20, x19, [sp, #0x30]
+0001745c  ldp      x22, x21, [sp, #0x20]
+00017460  ldp      x24, x23, [sp, #0x10]
+00017464  ldp      x29, x30, [sp], #0x40
+00017468  ret      
+0001746c  mov      x0, x19
+00017470  bl       #0x17934 ; _ZNKSt6__ndk16vectorItNS_9allocatorItEEE20__throw_length_errorB8ne190000Ev
+00017474  mov      x20, x0
+00017478  b        #0x17488 ; 
+0001747c  ldr      x22, [x19]
+00017480  mov      x20, x0
+00017484  cbz      x22, #0x17494
+00017488  mov      x0, x22
+0001748c  str      x22, [x19, #8]
+00017490  bl       #0x32b5c ; _ZdlPv
+00017494  mov      x0, x20
+00017498  bl       #0x3439c ; _Unwind_Resume
+
+FUNCTION (anonymous namespace)::mapped(std::__ndk1::vector<(anonymous namespace)::Mapping, std::__ndk1::allocator<(anonymous namespace)::Mapping> > const&, void const*, unsigned long, bool) 0x180dc size=168
+000180dc  and      x9, x2, #0xffffffffffffff
+000180e0  mov      w8, wzr
+000180e4  cmn      x9, x3
+000180e8  cset     w10, hs
+000180ec  cbz      x9, #0x1817c
+000180f0  tbnz     w10, #0, #0x1817c
+000180f4  cmp      x0, x1
+000180f8  b.eq     #0x1817c
+000180fc  add      x8, x9, x3
+00018100  tbnz     w4, #0, #0x18114
+00018104  b        #0x18150 ; 
+00018108  add      x0, x0, #0x30
+0001810c  cmp      x0, x1
+00018110  b.eq     #0x18178
+00018114  ldr      x10, [x0]
+00018118  cmp      x9, x10
+0001811c  b.lo     #0x18108
+00018120  ldr      x10, [x0, #8]
+00018124  cmp      x8, x10
+00018128  b.hi     #0x18108
+0001812c  ldrb     w10, [x0, #0x10]
+00018130  cbz      w10, #0x18108
+00018134  ldrb     w10, [x0, #0x11]
+00018138  cbz      w10, #0x18108
+0001813c  mov      w0, #1
+00018140  ret      
+00018144  add      x0, x0, #0x30
+00018148  cmp      x0, x1
+0001814c  b.eq     #0x18178
+00018150  ldr      x10, [x0]
+00018154  cmp      x9, x10
+00018158  b.lo     #0x18144
+0001815c  ldr      x10, [x0, #8]
+00018160  cmp      x8, x10
+00018164  b.hi     #0x18144
+00018168  ldrb     w10, [x0, #0x10]
+0001816c  cbz      w10, #0x18144
+00018170  mov      w0, #1
+00018174  ret      
+00018178  mov      w8, wzr
+0001817c  mov      w0, w8
+00018180  ret      
+
+FUNCTION Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen 0x146b0 size=11536
+000146b0  stp      x29, x30, [sp, #-0x60]!
+000146b4  stp      x28, x27, [sp, #0x10]
+000146b8  stp      x26, x25, [sp, #0x20]
+000146bc  stp      x24, x23, [sp, #0x30]
+000146c0  stp      x22, x21, [sp, #0x40]
+000146c4  stp      x20, x19, [sp, #0x50]
+000146c8  mov      x29, sp
+000146cc  sub      sp, sp, #2, lsl #12
+000146d0  sub      sp, sp, #0x130
+000146d4  mrs      x28, tpidr_el0
+000146d8  mov      x19, x0
+000146dc  ldr      x8, [x28, #0x28]
+000146e0  stur     x8, [x29, #-0x18]
+000146e4  cbz      x2, #0x147f0
+000146e8  mov      x20, x3
+000146ec  cbz      x3, #0x147f0
+000146f0  ldr      x8, [x19]
+000146f4  mov      x21, x2
+000146f8  ldr      x8, [x8, #0x520]
+000146fc  mov      x0, x19
+00014700  mov      x1, x2
+00014704  blr      x8
+00014708  mov      w23, w0
+0001470c  stp      xzr, xzr, [sp, #0x50]
+00014710  str      xzr, [sp, #0x60]
+00014714  cbz      w0, #0x14770
+00014718  tbnz     w23, #0x1f, #0x16eb0
+0001471c  sxtw     x25, w23
+00014720  lsl      x24, x25, #1
+00014724  mov      x0, x24
+00014728  bl       #0x38124 ; _Znwm
+0001472c  add      x8, x0, x25, lsl #1
+00014730  mov      w1, wzr
+00014734  mov      x2, x24
+00014738  mov      x22, x0
+0001473c  str      x0, [sp, #0x50]
+00014740  str      x8, [sp, #0x60]
+00014744  bl       #0x38270 ; memset@plt
+00014748  ldr      x8, [x19]
+0001474c  add      x9, x22, x24
+00014750  str      x9, [sp, #0x58]
+00014754  ldr      x8, [x8, #0x6e0]
+00014758  mov      x0, x19
+0001475c  mov      x1, x21
+00014760  mov      w2, wzr
+00014764  mov      w3, w23
+00014768  mov      x4, x22
+0001476c  blr      x8
+00014770  ldr      x8, [x19]
+00014774  ldr      x8, [x8, #0x520]
+00014778  mov      x0, x19
+0001477c  mov      x1, x20
+00014780  blr      x8
+00014784  mov      w22, w0
+00014788  stp      xzr, xzr, [sp, #0x38]
+0001478c  str      xzr, [sp, #0x48]
+00014790  cbz      w0, #0x14820
+00014794  tbnz     w22, #0x1f, #0x16ec8
+00014798  sxtw     x24, w22
+0001479c  lsl      x23, x24, #1
+000147a0  mov      x0, x23
+000147a4  bl       #0x38124 ; _Znwm
+000147a8  add      x8, x0, x24, lsl #1
+000147ac  mov      w1, wzr
+000147b0  mov      x2, x23
+000147b4  mov      x21, x0
+000147b8  str      x0, [sp, #0x38]
+000147bc  str      x8, [sp, #0x48]
+000147c0  bl       #0x38270 ; memset@plt
+000147c4  ldr      x8, [x19]
+000147c8  add      x9, x21, x23
+000147cc  str      x9, [sp, #0x40]
+000147d0  ldr      x8, [x8, #0x6e0]
+000147d4  mov      x0, x19
+000147d8  mov      x1, x20
+000147dc  mov      w2, wzr
+000147e0  mov      w3, w22
+000147e4  mov      x4, x21
+000147e8  blr      x8
+000147ec  b        #0x14824 ; 
+000147f0  ldr      x8, [x19]
+000147f4  ldr      x8, [x8, #0x538]
+000147f8  nop      
+000147fc  adr      x1, #0xa4f6
+00014800  mov      x0, x19
+00014804  blr      x8
+00014808  mov      x20, x0
+0001480c  ldr      x8, [x28, #0x28]
+00014810  ldur     x9, [x29, #-0x18]
+00014814  cmp      x8, x9
+00014818  b.eq     #0x14868
+0001481c  b        #0x17378 ; 
+00014820  mov      x21, xzr
+00014824  ldr      x8, [x19]
+00014828  ldr      x8, [x8, #0x720]
+0001482c  mov      x0, x19
+00014830  blr      x8
+00014834  tst      w0, #0xff
+00014838  b.eq     #0x14890
+0001483c  mov      x20, xzr
+00014840  ldr      x0, [sp, #0x38]
+00014844  cbz      x0, #0x1484c
+00014848  bl       #0x32b5c ; _ZdlPv
+0001484c  ldr      x0, [sp, #0x50]
+00014850  cbz      x0, #0x14858
+00014854  bl       #0x32b5c ; _ZdlPv
+00014858  ldr      x8, [x28, #0x28]
+0001485c  ldur     x9, [x29, #-0x18]
+00014860  cmp      x8, x9
+00014864  b.ne     #0x17378
+00014868  mov      x0, x20
+0001486c  add      sp, sp, #2, lsl #12
+00014870  add      sp, sp, #0x130
+00014874  ldp      x20, x19, [sp, #0x50]
+00014878  ldp      x22, x21, [sp, #0x40]
+0001487c  ldp      x24, x23, [sp, #0x30]
+00014880  ldp      x26, x25, [sp, #0x20]
+00014884  ldp      x28, x27, [sp, #0x10]
+00014888  ldp      x29, x30, [sp], #0x60
+0001488c  ret      
+00014890  adrp     x0, #0x43000
+00014894  add      x0, x0, #0x970
+00014898  bl       #0x1924c ; _ZNSt6__ndk15mutex4lockEv
+0001489c  adrp     x8, #0x43000
+000148a0  ldr      x8, [x8, #0x940]
+000148a4  cbz      x8, #0x14950
+000148a8  adrp     x8, #0x43000
+000148ac  strb     wzr, [sp, #0x120]
+000148b0  add      x20, sp, #0x110
+000148b4  ldr      x0, [x8, #0x948]
+000148b8  stp      x0, xzr, [sp, #0x110]
+000148bc  ldr      x8, [x0]
+000148c0  ldr      x8, [x8, #0x30]
+000148c4  mov      w2, #6
+000148c8  add      x1, x20, #8
+000148cc  movk     w2, #1, lsl #16
+000148d0  blr      x8
+000148d4  cmn      w0, #2
+000148d8  b.ne     #0x14900
+000148dc  ldr      x0, [sp, #0x110]
+000148e0  ldr      x8, [x0]
+000148e4  ldr      x8, [x8, #0x20]
+000148e8  add      x1, x20, #8
+000148ec  mov      x2, xzr
+000148f0  blr      x8
+000148f4  cmp      w0, #0
+000148f8  cset     w8, eq
+000148fc  strb     w8, [sp, #0x120]
+00014900  cbz      w0, #0x149a0
+00014904  ldr      x8, [x19]
+00014908  ldr      x8, [x8, #0x538]
+0001490c  adrp     x1, #0xa000
+00014910  add      x1, x1, #0x700
+00014914  mov      x0, x19
+00014918  blr      x8
+0001491c  mov      x20, x0
+00014920  ldrb     w8, [sp, #0x120]
+00014924  cbz      w8, #0x14938
+00014928  ldr      x0, [sp, #0x110]
+0001492c  ldr      x8, [x0]
+00014930  ldr      x8, [x8, #0x28]
+00014934  blr      x8
+00014938  adrp     x0, #0x43000
+0001493c  add      x0, x0, #0x970
+00014940  bl       #0x19278 ; _ZNSt6__ndk15mutex6unlockEv
+00014944  ldr      x0, [sp, #0x38]
+00014948  cbnz     x0, #0x14848
+0001494c  b        #0x1484c ; 
+00014950  ldr      x8, [x19]
+00014954  str      xzr, [sp, #0x98]
+00014958  ldr      x8, [x8, #0x6d8]
+0001495c  add      x1, sp, #0x98
+00014960  mov      x0, x19
+00014964  blr      x8
+00014968  cbz      w0, #0x14a74
+0001496c  ldr      x8, [x19]
+00014970  ldr      x8, [x8, #0x538]
+00014974  adrp     x1, #0xa000
+00014978  add      x1, x1, #0x611
+0001497c  mov      x0, x19
+00014980  blr      x8
+00014984  mov      x20, x0
+00014988  adrp     x0, #0x43000
+0001498c  add      x0, x0, #0x970
+00014990  bl       #0x19278 ; _ZNSt6__ndk15mutex6unlockEv
+00014994  ldr      x0, [sp, #0x38]
+00014998  cbnz     x0, #0x14848
+0001499c  b        #0x1484c ; 
+000149a0  ldr      x0, [sp, #0x118]
+000149a4  cbz      x0, #0x14904
+000149a8  ldr      x8, [x0]
+000149ac  ldr      x8, [x8, #0x30]
+000149b0  adrp     x1, #0xb000
+000149b4  add      x1, x1, #0xb39
+000149b8  blr      x8
+000149bc  mov      x20, x0
+000149c0  ldr      x0, [sp, #0x118]
+000149c4  ldr      x8, [x0]
+000149c8  ldr      x8, [x8, #0x720]
+000149cc  blr      x8
+000149d0  tst      w0, #0xff
+000149d4  b.eq     #0x149e8
+000149d8  ldr      x0, [sp, #0x118]
+000149dc  ldr      x8, [x0]
+000149e0  ldr      x8, [x8, #0x88]
+000149e4  blr      x8
+000149e8  cbz      x20, #0x14904
+000149ec  ldr      x0, [sp, #0x118]
+000149f0  ldr      x8, [x0]
+000149f4  ldr      x8, [x8, #0xb8]
+000149f8  mov      x1, x20
+000149fc  blr      x8
+00014a00  ldr      x20, [sp, #0x118]
+00014a04  ldp      x8, x9, [sp, #0x38]
+00014a08  nop      
+00014a0c  adr      x23, #0xbdf6
+00014a10  ldr      x10, [x20]
+00014a14  subs     x9, x9, x8
+00014a18  lsr      x2, x9, #1
+00014a1c  ldr      x9, [x10, #0x518]
+00014a20  csel     x1, x23, x8, eq
+00014a24  mov      x0, x20
+00014a28  blr      x9
+00014a2c  ldr      x8, [x20]
+00014a30  mov      x22, x0
+00014a34  ldr      x8, [x8, #0x720]
+00014a38  mov      x0, x20
+00014a3c  blr      x8
+00014a40  tst      w0, #0xff
+00014a44  b.eq     #0x15020
+00014a48  ldr      x8, [x20]
+00014a4c  ldr      x8, [x8, #0x88]
+00014a50  mov      x0, x20
+00014a54  blr      x8
+00014a58  ldr      x8, [x19]
+00014a5c  ldr      x8, [x8, #0x538]
+00014a60  adrp     x1, #0xb000
+00014a64  add      x1, x1, #0x170
+00014a68  mov      x0, x19
+00014a6c  blr      x8
+00014a70  b        #0x1491c ; 
+00014a74  adrp     x0, #0xa000
+00014a78  add      x0, x0, #0x550
+00014a7c  adrp     x1, #0xb000
+00014a80  add      x1, x1, #0x5fe
+00014a84  stp      xzr, xzr, [sp, #0x80]
+00014a88  str      xzr, [sp, #0x90]
+00014a8c  bl       #0x38280 ; fopen@plt
+00014a90  cbz      x0, #0x1496c
+00014a94  mov      x26, x0
+00014a98  add      x0, sp, #0x110
+00014a9c  mov      w1, #0x2000
+00014aa0  mov      x2, x26
+00014aa4  bl       #0x38290 ; fgets@plt
+00014aa8  cbz      x0, #0x150a0
+00014aac  add      x8, sp, #0xd0
+00014ab0  mov      x20, xzr
+00014ab4  mov      x22, xzr
+00014ab8  orr      x27, x8, #1
+00014abc  add      x23, sp, #0xa0
+00014ac0  adrp     x21, #0xa000
+00014ac4  add      x21, x21, #0xc0c
+00014ac8  stp      x26, xzr, [sp, #0x28]
+00014acc  str      x28, [sp, #0x20]
+00014ad0  b        #0x14ae8 ; 
+00014ad4  add      x0, sp, #0x110
+00014ad8  mov      w1, #0x2000
+00014adc  mov      x2, x26
+00014ae0  bl       #0x38290 ; fgets@plt
+00014ae4  cbz      x0, #0x14e30
+00014ae8  add      x0, sp, #0x110
+00014aec  add      x2, sp, #0x68
+00014af0  add      x3, sp, #0xf0
+00014af4  add      x4, sp, #0x108
+00014af8  add      x5, sp, #0xec
+00014afc  mov      x1, x21
+00014b00  str      xzr, [sp, #0x68]
+00014b04  str      xzr, [sp, #0xf0]
+00014b08  strb     wzr, [sp, #0x10c]
+00014b0c  str      wzr, [sp, #0x108]
+00014b10  str      wzr, [sp, #0xec]
+00014b14  bl       #0x382a0 ; sscanf@plt
+00014b18  cmp      w0, #3
+00014b1c  b.ne     #0x14ad4
+00014b20  ldrsw    x21, [sp, #0xec]
+00014b24  add      x8, sp, #0x110
+00014b28  add      x0, x8, x21
+00014b2c  bl       #0x382b0 ; strlen@plt
+00014b30  cmn      x0, #8
+00014b34  b.hs     #0x16ee0
+00014b38  mov      x24, x0
+00014b3c  cmp      x0, #0x17
+00014b40  b.hs     #0x14b58
+00014b44  lsl      w8, w24, #1
+00014b48  mov      x25, x27
+00014b4c  strb     w8, [sp, #0xd0]
+00014b50  cbnz     x24, #0x14b8c
+00014b54  b        #0x14ba0 ; 
+00014b58  and      x8, x24, #0xfffffffffffffff8
+00014b5c  orr      x9, x24, #7
+00014b60  add      x8, x8, #8
+00014b64  cmp      x9, #0x17
+00014b68  csel     x8, x8, x9, eq
+00014b6c  add      x26, x8, #1
+00014b70  mov      x0, x26
+00014b74  bl       #0x38124 ; _Znwm
+00014b78  orr      x8, x26, #1
+00014b7c  ldr      x26, [sp, #0x28]
+00014b80  mov      x25, x0
+00014b84  stp      x24, x0, [sp, #0xd8]
+00014b88  str      x8, [sp, #0xd0]
+00014b8c  add      x8, sp, #0x110
+00014b90  mov      x0, x25
+00014b94  mov      x2, x24
+00014b98  add      x1, x8, x21
+00014b9c  bl       #0x382c0 ; memcpy@plt
+00014ba0  strb     wzr, [x25, x24]
+00014ba4  ldrb     w25, [sp, #0xd0]
+00014ba8  ldr      x2, [sp, #0xd8]
+00014bac  lsr      x8, x25, #1
+00014bb0  tst      w25, #1
+00014bb4  csel     x9, x8, x2, eq
+00014bb8  b        #0x14be0 ; 
+00014bbc  lsl      w8, w9, #1
+00014bc0  mov      x10, x27
+00014bc4  strb     w8, [sp, #0xd0]
+00014bc8  strb     wzr, [x10, x9]
+00014bcc  ldrb     w25, [sp, #0xd0]
+00014bd0  ldr      x2, [sp, #0xd8]
+00014bd4  lsr      x8, x25, #1
+00014bd8  tst      w25, #1
+00014bdc  csel     x9, x8, x2, eq
+00014be0  cset     w8, eq
+00014be4  cbz      x9, #0x14c18
+00014be8  ldr      x10, [sp, #0xe0]
+00014bec  tst      w8, #1
+00014bf0  csel     x11, x27, x10, ne
+00014bf4  add      x11, x11, x9
+00014bf8  ldurb    w11, [x11, #-1]
+00014bfc  cmp      w11, #0xd
+00014c00  ccmp     w11, #0xa, #4, ne
+00014c04  b.ne     #0x14c18
+00014c08  sub      x9, x9, #1
+00014c0c  tbnz     w8, #0, #0x14bbc
+00014c10  str      x9, [sp, #0xd8]
+00014c14  b        #0x14bc8 ; 
+00014c18  ldrb     w10, [sp, #0x108]
+00014c1c  ldr      x9, [sp, #0x68]
+00014c20  ldr      x11, [sp, #0xf0]
+00014c24  ldrb     w12, [sp, #0x10a]
+00014c28  cmp      w10, #0x72
+00014c2c  stp      x9, x11, [sp, #0xa0]
+00014c30  cset     w9, eq
+00014c34  cmp      w12, #0x78
+00014c38  strb     w9, [sp, #0xb0]
+00014c3c  cset     w9, eq
+00014c40  strb     w9, [sp, #0xb1]
+00014c44  tbz      w8, #0, #0x14c60
+00014c48  add      x8, sp, #0xd0
+00014c4c  ldr      q0, [x8]
+00014c50  ldr      x8, [sp, #0xe0]
+00014c54  stur     q0, [x23, #0x18]
+00014c58  stur     x8, [x23, #0x28]
+00014c5c  b        #0x14c6c ; 
+00014c60  ldr      x1, [sp, #0xe0]
+00014c64  add      x0, x23, #0x18
+00014c68  bl       #0x18358 ; _ZNSt6__ndk112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE25__init_copy_ctor_externalEPKcm
+00014c6c  ldr      x8, [sp, #0x30]
+00014c70  cmp      x22, x8
+00014c74  b.hs     #0x14cd0
+00014c78  ldrh     w8, [sp, #0xb0]
+00014c7c  ldr      q0, [sp, #0xa0]
+00014c80  strh     w8, [x22, #0x10]
+00014c84  str      q0, [x22]
+00014c88  ldur     x8, [x23, #0x28]
+00014c8c  ldur     q0, [x23, #0x18]
+00014c90  str      x8, [x22, #0x28]
+00014c94  stur     q0, [x22, #0x18]
+00014c98  add      x22, x22, #0x30
+00014c9c  stp      xzr, xzr, [x23, #0x20]
+00014ca0  stur     xzr, [x23, #0x18]
+00014ca4  ldrb     w8, [sp, #0xb8]
+00014ca8  adrp     x21, #0xa000
+00014cac  add      x21, x21, #0xc0c
+00014cb0  tbz      w8, #0, #0x14cbc
+00014cb4  ldr      x0, [sp, #0xc8]
+00014cb8  bl       #0x32b5c ; _ZdlPv
+00014cbc  ldrb     w8, [sp, #0xd0]
+00014cc0  tbz      w8, #0, #0x14ad4
+00014cc4  ldr      x0, [sp, #0xe0]
+00014cc8  bl       #0x32b5c ; _ZdlPv
+00014ccc  b        #0x14ad4 ; 
+00014cd0  sub      x21, x22, x20
+00014cd4  mov      x10, #-0x5555555555555556
+00014cd8  mov      x11, #0x5555555555555555
+00014cdc  asr      x8, x21, #4
+00014ce0  movk     x10, #0xaaab
+00014ce4  movk     x11, #0x555, lsl #48
+00014ce8  mul      x28, x8, x10
+00014cec  add      x8, x28, #1
+00014cf0  cmp      x8, x11
+00014cf4  b.hi     #0x16f04
+00014cf8  ldr      x9, [sp, #0x30]
+00014cfc  sub      x9, x9, x20
+00014d00  asr      x9, x9, #4
+00014d04  mul      x9, x9, x10
+00014d08  lsl      x10, x9, #1
+00014d0c  cmp      x10, x8
+00014d10  csel     x8, x10, x8, hi
+00014d14  mov      x10, #-0x5555555555555556
+00014d18  movk     x10, #0x2aa, lsl #48
+00014d1c  cmp      x9, x10
+00014d20  csel     x26, x8, x11, lo
+00014d24  mov      x8, #0x5555555555555555
+00014d28  movk     x8, #0x555, lsl #48
+00014d2c  cbz      x26, #0x14d4c
+00014d30  cmp      x26, x8
+00014d34  b.hi     #0x16f28
+00014d38  add      x8, x26, x26, lsl #1
+00014d3c  lsl      x0, x8, #4
+00014d40  bl       #0x38124 ; _Znwm
+00014d44  mov      x24, x0
+00014d48  b        #0x14d50 ; 
+00014d4c  mov      x24, xzr
+00014d50  mov      w8, #0x30
+00014d54  ldr      q0, [sp, #0xa0]
+00014d58  ldur     q1, [x23, #0x18]
+00014d5c  nop      
+00014d60  madd     x25, x28, x8, x24
+00014d64  ldrh     w8, [sp, #0xb0]
+00014d68  ldur     x9, [x23, #0x28]
+00014d6c  cmp      x20, x22
+00014d70  stp      xzr, xzr, [x23, #0x18]
+00014d74  stur     xzr, [x23, #0x28]
+00014d78  sub      x21, x25, x21
+00014d7c  str      q0, [x25]
+00014d80  strh     w8, [x25, #0x10]
+00014d84  stur     q1, [x25, #0x18]
+00014d88  str      x9, [x25, #0x28]
+00014d8c  b.eq     #0x14df8
+00014d90  mov      x8, x20
+00014d94  mov      x9, x21
+00014d98  ldrh     w10, [x8, #0x10]
+00014d9c  ldr      q0, [x8]
+00014da0  strh     w10, [x9, #0x10]
+00014da4  str      q0, [x9]
+00014da8  ldr      x10, [x8, #0x28]
+00014dac  ldur     q0, [x8, #0x18]
+00014db0  str      x10, [x9, #0x28]
+00014db4  stur     q0, [x9, #0x18]
+00014db8  add      x9, x9, #0x30
+00014dbc  stp      xzr, xzr, [x8, #0x20]
+00014dc0  str      xzr, [x8, #0x18]
+00014dc4  add      x8, x8, #0x30
+00014dc8  cmp      x8, x22
+00014dcc  b.ne     #0x14d98
+00014dd0  mov      x28, x20
+00014dd4  b        #0x14de4 ; 
+00014dd8  add      x28, x28, #0x30
+00014ddc  cmp      x28, x22
+00014de0  b.eq     #0x14df8
+00014de4  ldrb     w8, [x28, #0x18]
+00014de8  tbz      w8, #0, #0x14dd8
+00014dec  ldr      x0, [x28, #0x28]
+00014df0  bl       #0x32b5c ; _ZdlPv
+00014df4  b        #0x14dd8 ; 
+00014df8  mov      w8, #0x30
+00014dfc  add      x22, x25, #0x30
+00014e00  madd     x8, x26, x8, x24
+00014e04  str      x8, [sp, #0x30]
+00014e08  cbz      x20, #0x14e14
+00014e0c  mov      x0, x20
+00014e10  bl       #0x32b5c ; _ZdlPv
+00014e14  ldp      x28, x26, [sp, #0x20]
+00014e18  mov      x20, x21
+00014e1c  ldrb     w8, [sp, #0xb8]
+00014e20  adrp     x21, #0xa000
+00014e24  add      x21, x21, #0xc0c
+00014e28  tbnz     w8, #0, #0x14cb4
+00014e2c  b        #0x14cbc ; 
+00014e30  ldr      x8, [sp, #0x30]
+00014e34  mov      x0, x26
+00014e38  str      x20, [sp, #0x80]
+00014e3c  stp      x22, x8, [sp, #0x88]
+00014e40  bl       #0x382d0 ; fclose@plt
+00014e44  cmp      x20, x22
+00014e48  b.eq     #0x15498
+00014e4c  mov      w8, #0x26
+00014e50  adrp     x9, #0xa000
+00014e54  add      x9, x9, #0x516
+00014e58  mov      w10, #0x2e74
+00014e5c  ldr      q0, [x9]
+00014e60  strb     w8, [sp, #0x110]
+00014e64  movk     w10, #0x6f73, lsl #16
+00014e68  mov      w8, #0x1e
+00014e6c  adrp     x9, #0xb000
+00014e70  add      x9, x9, #0xb9f
+00014e74  str      w10, [sp, #0x120]
+00014e78  add      x11, sp, #0xd0
+00014e7c  ldr      x10, [x9]
+00014e80  strb     w8, [sp, #0x128]
+00014e84  ldur     x8, [x9, #7]
+00014e88  adrp     x9, #0xb000
+00014e8c  add      x9, x9, #0xbaf
+00014e90  add      x23, sp, #0x110
+00014e94  stur     x10, [x11, #0x59]
+00014e98  ldr      x10, [x9]
+00014e9c  str      x8, [sp, #0x130]
+00014ea0  mov      w8, #0x1c
+00014ea4  strb     w8, [sp, #0x140]
+00014ea8  ldur     x8, [x9, #6]
+00014eac  stur     x10, [x11, #0x71]
+00014eb0  stur     x8, [x11, #0x77]
+00014eb4  add      x8, sp, #0xd0
+00014eb8  add      x21, x8, #8
+00014ebc  stur     q0, [x11, #0x41]
+00014ec0  strb     wzr, [sp, #0x124]
+00014ec4  strb     wzr, [sp, #0x138]
+00014ec8  strb     wzr, [sp, #0x14f]
+00014ecc  stp      xzr, xzr, [sp, #0xd8]
+00014ed0  str      x21, [sp, #0xd0]
+00014ed4  add      x0, sp, #0xd0
+00014ed8  add      x2, sp, #0x110
+00014edc  add      x3, sp, #0x110
+00014ee0  mov      x1, x21
+00014ee4  bl       #0x18400 ; _ZNSt6__ndk16__treeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_4lessIS6_EENS4_IS6_EEE30__emplace_hint_unique_key_argsIS6_JRKS6_EEENS_4pairINS_15__tree_iteratorIS6_PNS_11__tree_nodeIS6_PvEElEEbEENS_21__tree_const_iteratorIS6_SJ_lEERKT_DpOT0_
+00014ee8  add      x0, sp, #0xd0
+00014eec  add      x2, x23, #0x18
+00014ef0  add      x3, x23, #0x18
+00014ef4  mov      x1, x21
+00014ef8  bl       #0x18400 ; _ZNSt6__ndk16__treeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_4lessIS6_EENS4_IS6_EEE30__emplace_hint_unique_key_argsIS6_JRKS6_EEENS_4pairINS_15__tree_iteratorIS6_PNS_11__tree_nodeIS6_PvEElEEbEENS_21__tree_const_iteratorIS6_SJ_lEERKT_DpOT0_
+00014efc  add      x0, sp, #0xd0
+00014f00  add      x2, x23, #0x30
+00014f04  add      x3, x23, #0x30
+00014f08  mov      x1, x21
+00014f0c  bl       #0x18400 ; _ZNSt6__ndk16__treeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_4lessIS6_EENS4_IS6_EEE30__emplace_hint_unique_key_argsIS6_JRKS6_EEENS_4pairINS_15__tree_iteratorIS6_PNS_11__tree_nodeIS6_PvEElEEbEENS_21__tree_const_iteratorIS6_SJ_lEERKT_DpOT0_
+00014f10  add      x0, sp, #0xa0
+00014f14  add      x1, sp, #0x80
+00014f18  add      x2, sp, #0xd0
+00014f1c  bl       #0x179fc ; _ZN12_GLOBAL__N_113alreadyLoadedERKNSt6__ndk16vectorINS_7MappingENS0_9allocatorIS2_EEEERKNS0_3setINS0_12basic_stringIcNS0_11char_traitsIcEENS3_IcEEEENS0_4lessISD_EENS3_ISD_EEEE
+00014f20  ldr      x1, [sp, #0xd8]
+00014f24  add      x0, sp, #0xd0
+00014f28  bl       #0x18b1c ; _ZNSt6__ndk16__treeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_4lessIS6_EENS4_IS6_EEE7destroyEPNS_11__tree_nodeIS6_PvEE
+00014f2c  ldrb     w8, [sp, #0x140]
+00014f30  tbnz     w8, #0, #0x154a4
+00014f34  ldrb     w8, [sp, #0x128]
+00014f38  tbnz     w8, #0, #0x154b4
+00014f3c  ldrb     w8, [sp, #0x110]
+00014f40  tbz      w8, #0, #0x14f4c
+00014f44  ldr      x0, [sp, #0x120]
+00014f48  bl       #0x32b5c ; _ZdlPv
+00014f4c  mov      w8, #0x12
+00014f50  adrp     x9, #0xb000
+00014f54  add      x9, x9, #0xd0e
+00014f58  ldr      x9, [x9]
+00014f5c  strb     w8, [sp, #0x110]
+00014f60  mov      w8, #0x6f
+00014f64  add      x10, sp, #0xd0
+00014f68  add      x23, sp, #0x110
+00014f6c  strb     wzr, [sp, #0x13b]
+00014f70  sturh    w8, [x10, #0x49]
+00014f74  mov      w8, #0x24
+00014f78  stur     x9, [x10, #0x41]
+00014f7c  adrp     x9, #0xb000
+00014f80  add      x9, x9, #0x364
+00014f84  strb     w8, [sp, #0x128]
+00014f88  mov      w8, #0x6f73
+00014f8c  ldr      q0, [x9]
+00014f90  sturh    w8, [x10, #0x69]
+00014f94  add      x8, sp, #0x68
+00014f98  add      x21, x8, #8
+00014f9c  stur     q0, [x10, #0x59]
+00014fa0  stp      xzr, xzr, [sp, #0x70]
+00014fa4  str      x21, [sp, #0x68]
+00014fa8  add      x0, sp, #0x68
+00014fac  add      x2, sp, #0x110
+00014fb0  add      x3, sp, #0x110
+00014fb4  mov      x1, x21
+00014fb8  bl       #0x18400 ; _ZNSt6__ndk16__treeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_4lessIS6_EENS4_IS6_EEE30__emplace_hint_unique_key_argsIS6_JRKS6_EEENS_4pairINS_15__tree_iteratorIS6_PNS_11__tree_nodeIS6_PvEElEEbEENS_21__tree_const_iteratorIS6_SJ_lEERKT_DpOT0_
+00014fbc  add      x0, sp, #0x68
+00014fc0  add      x2, x23, #0x18
+00014fc4  add      x3, x23, #0x18
+00014fc8  mov      x1, x21
+00014fcc  bl       #0x18400 ; _ZNSt6__ndk16__treeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_4lessIS6_EENS4_IS6_EEE30__emplace_hint_unique_key_argsIS6_JRKS6_EEENS_4pairINS_15__tree_iteratorIS6_PNS_11__tree_nodeIS6_PvEElEEbEENS_21__tree_const_iteratorIS6_SJ_lEERKT_DpOT0_
+00014fd0  add      x0, sp, #0xd0
+00014fd4  add      x1, sp, #0x80
+00014fd8  add      x2, sp, #0x68
+00014fdc  bl       #0x179fc ; _ZN12_GLOBAL__N_113alreadyLoadedERKNSt6__ndk16vectorINS_7MappingENS0_9allocatorIS2_EEEERKNS0_3setINS0_12basic_stringIcNS0_11char_traitsIcEENS3_IcEEEENS0_4lessISD_EENS3_ISD_EEEE
+00014fe0  ldr      x1, [sp, #0x70]
+00014fe4  add      x0, sp, #0x68
+00014fe8  bl       #0x18b1c ; _ZNSt6__ndk16__treeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_4lessIS6_EENS4_IS6_EEE7destroyEPNS_11__tree_nodeIS6_PvEE
+00014fec  ldrb     w8, [sp, #0x128]
+00014ff0  tbnz     w8, #0, #0x154c8
+00014ff4  ldrb     w8, [sp, #0x110]
+00014ff8  tbnz     w8, #0, #0x154d8
+00014ffc  ldp      x24, x8, [sp, #0xa0]
+00015000  stp      xzr, xzr, [sp, #0x68]
+00015004  str      xzr, [sp, #0x78]
+00015008  cmp      x24, x8
+0001500c  str      x8, [sp, #0x10]
+00015010  b.eq     #0x154f8
+00015014  str      xzr, [sp, #0x18]
+00015018  stp      xzr, xzr, [sp, #0x28]
+0001501c  b        #0x150c4 ; 
+00015020  cbz      x22, #0x14a58
+00015024  nop      
+00015028  adr      x8, #0x43940
+0001502c  ldr      x1, [x8]
+00015030  ldp      x2, x3, [x8, #0x10]
+00015034  ldr      x4, [x8, #0x20]
+00015038  mov      x0, x20
+0001503c  mov      x5, x22
+00015040  bl       #0x1749c ; _ZN7_JNIEnv22CallStaticObjectMethodEP7_jclassP10_jmethodIDz
+00015044  ldr      x8, [x20]
+00015048  mov      x21, x0
+0001504c  ldr      x8, [x8, #0xb8]
+00015050  mov      x0, x20
+00015054  mov      x1, x22
+00015058  blr      x8
+0001505c  ldr      x8, [x20]
+00015060  ldr      x8, [x8, #0x720]
+00015064  mov      x0, x20
+00015068  blr      x8
+0001506c  tst      w0, #0xff
+00015070  b.eq     #0x15550
+00015074  ldr      x8, [x20]
+00015078  ldr      x8, [x8, #0x88]
+0001507c  mov      x0, x20
+00015080  blr      x8
+00015084  ldr      x8, [x19]
+00015088  ldr      x8, [x8, #0x538]
+0001508c  adrp     x1, #0xa000
+00015090  add      x1, x1, #0x870
+00015094  mov      x0, x19
+00015098  blr      x8
+0001509c  b        #0x1491c ; 
+000150a0  mov      x0, x26
+000150a4  bl       #0x382d0 ; fclose@plt
+000150a8  b        #0x1496c ; 
+000150ac  str      x23, [x25], #8
+000150b0  str      x25, [sp, #0x70]
+000150b4  ldr      x8, [sp, #0x10]
+000150b8  add      x24, x24, #8
+000150bc  cmp      x24, x8
+000150c0  b.eq     #0x15500
+000150c4  ldr      x26, [x24]
+000150c8  mov      x0, x26
+000150cc  adrp     x1, #0xa000
+000150d0  add      x1, x1, #0x72f
+000150d4  bl       #0x382e0 ; dlsym@plt
+000150d8  ands     x8, x0, #0xffffffffffffff
+000150dc  mov      x27, xzr
+000150e0  b.eq     #0x15128
+000150e4  cmp      x20, x22
+000150e8  b.eq     #0x15128
+000150ec  add      x9, x8, #8
+000150f0  mov      x10, x20
+000150f4  b        #0x15104 ; 
+000150f8  add      x10, x10, #0x30
+000150fc  cmp      x10, x22
+00015100  b.eq     #0x151e8
+00015104  ldr      x11, [x10]
+00015108  cmp      x8, x11
+0001510c  b.lo     #0x150f8
+00015110  ldr      x11, [x10, #8]
+00015114  cmp      x9, x11
+00015118  b.hi     #0x150f8
+0001511c  ldrb     w11, [x10, #0x10]
+00015120  cbz      w11, #0x150f8
+00015124  ldr      x27, [x0]
+00015128  ldr      x1, [sp, #0x98]
+0001512c  mov      x0, x27
+00015130  mov      x2, x20
+00015134  mov      x3, x22
+00015138  bl       #0x17f8c ; _ZN12_GLOBAL__N_17validVmEP7_JavaVMS1_RKNSt6__ndk16vectorINS_7MappingENS2_9allocatorIS4_EEEE
+0001513c  tbz      w0, #0, #0x15204
+00015140  ldp      x8, x10, [sp, #0x28]
+00015144  cmp      x10, x8
+00015148  b.hs     #0x15230
+0001514c  stp      x27, xzr, [x10]
+00015150  add      x9, sp, #0xd0
+00015154  ldr      w8, [sp, #0x110]
+00015158  ldur     w9, [x9, #0x43]
+0001515c  strb     wzr, [x10, #0x10]
+00015160  stur     w8, [x10, #0x11]
+00015164  str      w9, [x10, #0x14]
+00015168  add      x10, x10, #0x18
+0001516c  str      x10, [sp, #0x30]
+00015170  ldp      x20, x22, [sp, #0x80]
+00015174  cmp      x20, x22
+00015178  b.eq     #0x1520c
+0001517c  mov      x0, x26
+00015180  adrp     x1, #0xb000
+00015184  add      x1, x1, #0x86
+00015188  bl       #0x382e0 ; dlsym@plt
+0001518c  ands     x8, x0, #0xffffffffffffff
+00015190  b.eq     #0x153a0
+00015194  add      x9, x8, #8
+00015198  mov      x10, x20
+0001519c  b        #0x151ac ; 
+000151a0  add      x10, x10, #0x30
+000151a4  cmp      x10, x22
+000151a8  b.eq     #0x153a0
+000151ac  ldr      x11, [x10]
+000151b0  cmp      x8, x11
+000151b4  b.lo     #0x151a0
+000151b8  ldr      x11, [x10, #8]
+000151bc  cmp      x9, x11
+000151c0  b.hi     #0x151a0
+000151c4  ldrb     w11, [x10, #0x10]
+000151c8  cbz      w11, #0x151a0
+000151cc  ldr      x28, [x0]
+000151d0  cbz      x28, #0x153a0
+000151d4  ldp      x25, x8, [sp, #0x70]
+000151d8  cmp      x25, x8
+000151dc  b.hs     #0x15310
+000151e0  str      x28, [x25], #8
+000151e4  b        #0x1539c ; 
+000151e8  mov      x27, xzr
+000151ec  ldr      x1, [sp, #0x98]
+000151f0  mov      x0, x27
+000151f4  mov      x2, x20
+000151f8  mov      x3, x22
+000151fc  bl       #0x17f8c ; _ZN12_GLOBAL__N_17validVmEP7_JavaVMS1_RKNSt6__ndk16vectorINS_7MappingENS2_9allocatorIS4_EEEE
+00015200  tbnz     w0, #0, #0x15140
+00015204  cmp      x20, x22
+00015208  b.ne     #0x1517c
+0001520c  mov      x0, x26
+00015210  adrp     x1, #0xb000
+00015214  add      x1, x1, #0x86
+00015218  bl       #0x382e0 ; dlsym@plt
+0001521c  mov      x0, x26
+00015220  adrp     x1, #0xb000
+00015224  add      x1, x1, #0x261
+00015228  bl       #0x382e0 ; dlsym@plt
+0001522c  b        #0x150b4 ; 
+00015230  ldr      x9, [sp, #0x18]
+00015234  mov      x12, #-0x5555555555555556
+00015238  mov      x11, #-0x5555555555555556
+0001523c  movk     x12, #0xaaab
+00015240  movk     x11, #0xaaa, lsl #48
+00015244  sub      x21, x10, x9
+00015248  asr      x8, x21, #3
+0001524c  mul      x20, x8, x12
+00015250  add      x8, x20, #1
+00015254  cmp      x8, x11
+00015258  b.hi     #0x16f4c
+0001525c  ldr      x10, [sp, #0x28]
+00015260  sub      x9, x10, x9
+00015264  asr      x9, x9, #3
+00015268  mul      x9, x9, x12
+0001526c  lsl      x10, x9, #1
+00015270  cmp      x10, x8
+00015274  csel     x8, x10, x8, hi
+00015278  mov      x10, #0x5555555555555555
+0001527c  movk     x10, #0x555, lsl #48
+00015280  cmp      x9, x10
+00015284  csel     x22, x8, x11, lo
+00015288  cbz      x22, #0x152a4
+0001528c  cmp      x22, x11
+00015290  b.hi     #0x16f60
+00015294  add      x8, x22, x22, lsl #1
+00015298  lsl      x0, x8, #3
+0001529c  bl       #0x38124 ; _Znwm
+000152a0  b        #0x152a8 ; 
+000152a4  mov      x0, xzr
+000152a8  mov      x8, #0x5555555555555555
+000152ac  mov      w12, #0x18
+000152b0  mov      x2, x21
+000152b4  movk     x8, #0xd555, lsl #48
+000152b8  madd     x9, x20, x12, x0
+000152bc  smulh    x8, x21, x8
+000152c0  madd     x11, x22, x12, x0
+000152c4  ldr      x22, [sp, #0x18]
+000152c8  stp      x27, xzr, [x9]
+000152cc  mov      x1, x22
+000152d0  strb     wzr, [x9, #0x10]
+000152d4  asr      x10, x8, #2
+000152d8  add      x8, x10, x8, lsr #63
+000152dc  madd     x20, x8, x12, x9
+000152e0  add      x8, x9, #0x18
+000152e4  stp      x11, x8, [sp, #0x28]
+000152e8  mov      x0, x20
+000152ec  bl       #0x382c0 ; memcpy@plt
+000152f0  cbz      x22, #0x152fc
+000152f4  mov      x0, x22
+000152f8  bl       #0x32b5c ; _ZdlPv
+000152fc  str      x20, [sp, #0x18]
+00015300  ldp      x20, x22, [sp, #0x80]
+00015304  cmp      x20, x22
+00015308  b.eq     #0x1520c
+0001530c  b        #0x1517c ; 
+00015310  ldr      x27, [sp, #0x68]
+00015314  sub      x2, x25, x27
+00015318  asr      x25, x2, #3
+0001531c  add      x9, x25, #1
+00015320  lsr      x10, x9, #0x3d
+00015324  cbnz     x10, #0x16f74
+00015328  sub      x8, x8, x27
+0001532c  asr      x10, x8, #2
+00015330  cmp      x10, x9
+00015334  csel     x9, x10, x9, hi
+00015338  mov      x10, #0x7ffffffffffffff8
+0001533c  cmp      x8, x10
+00015340  mov      x8, #0x1fffffffffffffff
+00015344  csel     x23, x9, x8, lo
+00015348  cbz      x23, #0x1536c
+0001534c  lsr      x8, x23, #0x3d
+00015350  str      x2, [sp, #8]
+00015354  cbnz     x8, #0x16f90
+00015358  lsl      x0, x23, #3
+0001535c  bl       #0x38124 ; _Znwm
+00015360  ldr      x2, [sp, #8]
+00015364  mov      x21, x0
+00015368  b        #0x15370 ; 
+0001536c  mov      x21, xzr
+00015370  add      x25, x21, x25, lsl #3
+00015374  mov      x0, x21
+00015378  mov      x1, x27
+0001537c  add      x23, x21, x23, lsl #3
+00015380  str      x28, [x25], #8
+00015384  bl       #0x382c0 ; memcpy@plt
+00015388  str      x21, [sp, #0x68]
+0001538c  str      x23, [sp, #0x78]
+00015390  cbz      x27, #0x1539c
+00015394  mov      x0, x27
+00015398  bl       #0x32b5c ; _ZdlPv
+0001539c  str      x25, [sp, #0x70]
+000153a0  mov      x0, x26
+000153a4  adrp     x1, #0xb000
+000153a8  add      x1, x1, #0x261
+000153ac  bl       #0x382e0 ; dlsym@plt
+000153b0  ldr      x28, [sp, #0x20]
+000153b4  ands     x8, x0, #0xffffffffffffff
+000153b8  b.eq     #0x150b4
+000153bc  add      x9, x8, #8
+000153c0  mov      x10, x20
+000153c4  b        #0x153d4 ; 
+000153c8  add      x10, x10, #0x30
+000153cc  cmp      x10, x22
+000153d0  b.eq     #0x150b4
+000153d4  ldr      x11, [x10]
+000153d8  cmp      x8, x11
+000153dc  b.lo     #0x153c8
+000153e0  ldr      x11, [x10, #8]
+000153e4  cmp      x9, x11
+000153e8  b.hi     #0x153c8
+000153ec  ldrb     w11, [x10, #0x10]
+000153f0  cbz      w11, #0x153c8
+000153f4  ldr      x23, [x0]
+000153f8  cbz      x23, #0x150b4
+000153fc  ldp      x25, x8, [sp, #0x70]
+00015400  cmp      x25, x8
+00015404  b.lo     #0x150ac
+00015408  ldr      x26, [sp, #0x68]
+0001540c  sub      x27, x25, x26
+00015410  asr      x25, x27, #3
+00015414  add      x9, x25, #1
+00015418  lsr      x10, x9, #0x3d
+0001541c  cbnz     x10, #0x16f74
+00015420  sub      x8, x8, x26
+00015424  asr      x10, x8, #2
+00015428  cmp      x10, x9
+0001542c  csel     x9, x10, x9, hi
+00015430  mov      x10, #0x7ffffffffffffff8
+00015434  cmp      x8, x10
+00015438  mov      x8, #0x1fffffffffffffff
+0001543c  csel     x28, x9, x8, lo
+00015440  cbz      x28, #0x1545c
+00015444  lsr      x8, x28, #0x3d
+00015448  cbnz     x8, #0x16f90
+0001544c  lsl      x0, x28, #3
+00015450  bl       #0x38124 ; _Znwm
+00015454  mov      x21, x0
+00015458  b        #0x15460 ; 
+0001545c  mov      x21, xzr
+00015460  add      x25, x21, x25, lsl #3
+00015464  mov      x0, x21
+00015468  mov      x1, x26
+0001546c  mov      x2, x27
+00015470  add      x28, x21, x28, lsl #3
+00015474  str      x23, [x25], #8
+00015478  bl       #0x382c0 ; memcpy@plt
+0001547c  str      x21, [sp, #0x68]
+00015480  str      x28, [sp, #0x78]
+00015484  cbz      x26, #0x15490
+00015488  mov      x0, x26
+0001548c  bl       #0x32b5c ; _ZdlPv
+00015490  ldr      x28, [sp, #0x20]
+00015494  b        #0x150b0 ; 
+00015498  cbz      x20, #0x1496c
+0001549c  mov      w25, wzr
+000154a0  b        #0x16728 ; 
+000154a4  ldr      x0, [sp, #0x150]
+000154a8  bl       #0x32b5c ; _ZdlPv
+000154ac  ldrb     w8, [sp, #0x128]
+000154b0  tbz      w8, #0, #0x14f3c
+000154b4  ldr      x0, [sp, #0x138]
+000154b8  bl       #0x32b5c ; _ZdlPv
+000154bc  ldrb     w8, [sp, #0x110]
+000154c0  tbnz     w8, #0, #0x14f44
+000154c4  b        #0x14f4c ; 
+000154c8  ldr      x0, [sp, #0x138]
+000154cc  bl       #0x32b5c ; _ZdlPv
+000154d0  ldrb     w8, [sp, #0x110]
+000154d4  tbz      w8, #0, #0x14ffc
+000154d8  ldr      x0, [sp, #0x120]
+000154dc  bl       #0x32b5c ; _ZdlPv
+000154e0  ldp      x24, x8, [sp, #0xa0]
+000154e4  stp      xzr, xzr, [sp, #0x68]
+000154e8  str      xzr, [sp, #0x78]
+000154ec  cmp      x24, x8
+000154f0  str      x8, [sp, #0x10]
+000154f4  b.ne     #0x15014
+000154f8  stp      xzr, xzr, [sp, #0x28]
+000154fc  str      xzr, [sp, #0x18]
+00015500  adrp     x0, #0xb000
+00015504  add      x0, x0, #0x19d
+00015508  bl       #0x382f0 ; getenv@plt
+0001550c  cbz      x0, #0x15528
+00015510  ldrb     w8, [x0]
+00015514  cbz      w8, #0x15528
+00015518  mov      x21, x0
+0001551c  bl       #0x382b0 ; strlen@plt
+00015520  cmp      x0, #0x18
+00015524  b.ls     #0x155bc
+00015528  ldr      x24, [sp, #0x18]
+0001552c  ldr      x22, [sp, #0x30]
+00015530  ldp      x20, x26, [sp, #0xd0]
+00015534  cmp      x20, x26
+00015538  b.eq     #0x15664
+0001553c  mov      x27, #-0x5555555555555556
+00015540  adrp     x21, #0xa000
+00015544  add      x21, x21, #0xefe
+00015548  movk     x27, #0xaaab
+0001554c  b        #0x16780 ; 
+00015550  cbz      x21, #0x16764
+00015554  add      x0, sp, #0xa0
+00015558  mov      x1, x20
+0001555c  mov      x2, x21
+00015560  bl       #0x173c0 ; _ZN12_GLOBAL__N_110charactersEP7_JNIEnvP8_jstring
+00015564  ldr      x8, [x20]
+00015568  ldr      x8, [x8, #0xb8]
+0001556c  mov      x0, x20
+00015570  mov      x1, x21
+00015574  blr      x8
+00015578  ldr      x8, [x20]
+0001557c  ldr      x8, [x8, #0x720]
+00015580  mov      x0, x20
+00015584  blr      x8
+00015588  tst      w0, #0xff
+0001558c  b.eq     #0x16d08
+00015590  ldr      x8, [x20]
+00015594  ldr      x8, [x8, #0x88]
+00015598  mov      x0, x20
+0001559c  blr      x8
+000155a0  ldr      x8, [x19]
+000155a4  ldr      x8, [x8, #0x538]
+000155a8  adrp     x1, #0xa000
+000155ac  add      x1, x1, #0x8fd
+000155b0  mov      x0, x19
+000155b4  blr      x8
+000155b8  b        #0x16d28 ; 
+000155bc  str      xzr, [sp, #0x110]
+000155c0  bl       #0x38300 ; __errno@plt
+000155c4  str      wzr, [x0]
+000155c8  mov      x24, x0
+000155cc  mov      x0, x21
+000155d0  ldrb     w8, [x21]
+000155d4  add      x1, sp, #0x110
+000155d8  mov      w2, #0xa
+000155dc  cmp      w8, #0x2d
+000155e0  b.ne     #0x155ec
+000155e4  bl       #0x38310 ; strtoll@plt
+000155e8  b        #0x155f0 ; 
+000155ec  bl       #0x38320 ; strtoull@plt
+000155f0  ldr      w8, [x24]
+000155f4  cbnz     w8, #0x15528
+000155f8  ldr      x8, [sp, #0x110]
+000155fc  cbz      x8, #0x15528
+00015600  ldrb     w8, [x8]
+00015604  cbnz     w8, #0x15528
+00015608  cbz      x0, #0x15528
+0001560c  mov      x23, x0
+00015610  adrp     x0, #0xb000
+00015614  add      x0, x0, #0x6ed
+00015618  bl       #0x382f0 ; getenv@plt
+0001561c  cbz      x0, #0x15528
+00015620  ldrb     w8, [x0]
+00015624  mov      x21, x0
+00015628  cbz      w8, #0x15528
+0001562c  mov      x0, x21
+00015630  bl       #0x382b0 ; strlen@plt
+00015634  cmp      x0, #0x18
+00015638  b.hi     #0x15528
+0001563c  str      xzr, [sp, #0x110]
+00015640  str      wzr, [x24]
+00015644  ldrb     w8, [x21]
+00015648  cmp      w8, #0x2d
+0001564c  b.ne     #0x16d40
+00015650  ldp      x24, x28, [sp, #0x18]
+00015654  ldr      x22, [sp, #0x30]
+00015658  ldp      x20, x26, [sp, #0xd0]
+0001565c  cmp      x20, x26
+00015660  b.ne     #0x1553c
+00015664  cmp      x24, x22
+00015668  b.eq     #0x166a4
+0001566c  mov      w25, wzr
+00015670  add      x26, sp, #0x110
+00015674  mov      x27, x24
+00015678  str      x24, [sp, #0x18]
+0001567c  str      x22, [sp, #0x30]
+00015680  b        #0x15690 ; 
+00015684  add      x27, x27, #0x18
+00015688  cmp      x27, x22
+0001568c  b.eq     #0x166a8
+00015690  strb     wzr, [sp, #0x120]
+00015694  stp      xzr, xzr, [sp, #0x110]
+00015698  ldr      x0, [x27]
+0001569c  str      x0, [sp, #0x110]
+000156a0  ldr      x8, [x0]
+000156a4  ldr      x8, [x8, #0x30]
+000156a8  mov      w2, #6
+000156ac  add      x1, x26, #8
+000156b0  movk     w2, #1, lsl #16
+000156b4  blr      x8
+000156b8  cmn      w0, #2
+000156bc  b.ne     #0x156e4
+000156c0  ldr      x0, [sp, #0x110]
+000156c4  ldr      x8, [x0]
+000156c8  ldr      x8, [x8, #0x20]
+000156cc  add      x1, x26, #8
+000156d0  mov      x2, xzr
+000156d4  blr      x8
+000156d8  cmp      w0, #0
+000156dc  cset     w8, eq
+000156e0  strb     w8, [sp, #0x120]
+000156e4  cbz      w0, #0x15714
+000156e8  mov      w20, #0xc
+000156ec  ldrb     w8, [sp, #0x120]
+000156f0  cbz      w8, #0x15704
+000156f4  ldr      x0, [sp, #0x110]
+000156f8  ldr      x8, [x0]
+000156fc  ldr      x8, [x8, #0x28]
+00015700  blr      x8
+00015704  cmp      w20, #0xc
+00015708  b.eq     #0x15684
+0001570c  cbz      w20, #0x15684
+00015710  b        #0x166a8 ; 
+00015714  ldr      x0, [sp, #0x118]
+00015718  cbz      x0, #0x156e8
+0001571c  ldr      x8, [x0]
+00015720  ldr      x8, [x8, #0x30]
+00015724  adrp     x1, #0xb000
+00015728  add      x1, x1, #0xb39
+0001572c  blr      x8
+00015730  mov      x21, x0
+00015734  ldr      x0, [sp, #0x118]
+00015738  ldr      x8, [x0]
+0001573c  ldr      x8, [x8, #0x720]
+00015740  blr      x8
+00015744  tst      w0, #0xff
+00015748  b.eq     #0x1575c
+0001574c  ldr      x0, [sp, #0x118]
+00015750  ldr      x8, [x0]
+00015754  ldr      x8, [x8, #0x88]
+00015758  blr      x8
+0001575c  cbz      x21, #0x156e8
+00015760  ldr      x0, [sp, #0x118]
+00015764  ldr      x8, [x0]
+00015768  ldr      x8, [x8, #0xb8]
+0001576c  mov      x1, x21
+00015770  blr      x8
+00015774  ldr      x23, [sp, #0x118]
+00015778  ldr      x8, [x23]
+0001577c  ldr      x8, [x8, #0x98]
+00015780  mov      x0, x23
+00015784  mov      w1, #0x40
+00015788  blr      x8
+0001578c  cbz      w0, #0x157bc
+00015790  ldr      x8, [x23]
+00015794  ldr      x8, [x8, #0x720]
+00015798  mov      x0, x23
+0001579c  blr      x8
+000157a0  tst      w0, #0xff
+000157a4  b.eq     #0x156e8
+000157a8  ldr      x8, [x23]
+000157ac  ldr      x8, [x8, #0x88]
+000157b0  mov      x0, x23
+000157b4  blr      x8
+000157b8  b        #0x156e8 ; 
+000157bc  ldrb     w8, [x27, #0x10]
+000157c0  adrp     x28, #0xa000
+000157c4  add      x28, x28, #0xa19
+000157c8  cbz      w8, #0x15818
+000157cc  ldr      x24, [x27, #8]
+000157d0  cbz      x24, #0x15818
+000157d4  ldr      x8, [x23]
+000157d8  ldr      x8, [x8, #0x30]
+000157dc  mov      x0, x23
+000157e0  adrp     x1, #0xa000
+000157e4  add      x1, x1, #0xe0c
+000157e8  blr      x8
+000157ec  ldr      x8, [x23]
+000157f0  mov      x22, x0
+000157f4  ldr      x8, [x8, #0x720]
+000157f8  mov      x0, x23
+000157fc  blr      x8
+00015800  tst      w0, #0xff
+00015804  b.eq     #0x15b08
+00015808  ldr      x8, [x23]
+0001580c  ldr      x8, [x8, #0x88]
+00015810  mov      x0, x23
+00015814  blr      x8
+00015818  ldp      x20, x21, [sp, #0x68]
+0001581c  b        #0x15834 ; 
+00015820  ldr      x8, [x23]
+00015824  ldr      x8, [x8, #0x88]
+00015828  mov      x0, x23
+0001582c  blr      x8
+00015830  add      x20, x20, #8
+00015834  cmp      x20, x21
+00015838  b.eq     #0x15904
+0001583c  ldr      x24, [x20]
+00015840  cbz      x24, #0x15830
+00015844  ldr      x8, [x23]
+00015848  ldr      x8, [x8, #0x30]
+0001584c  mov      x0, x23
+00015850  mov      x1, x28
+00015854  blr      x8
+00015858  ldr      x8, [x23]
+0001585c  mov      x22, x0
+00015860  ldr      x8, [x8, #0x720]
+00015864  mov      x0, x23
+00015868  blr      x8
+0001586c  tst      w0, #0xff
+00015870  b.ne     #0x15820
+00015874  cbz      x22, #0x15830
+00015878  ldr      x8, [x23]
+0001587c  ldr      x8, [x8, #0x108]
+00015880  mov      x0, x23
+00015884  mov      x1, x22
+00015888  adrp     x2, #0xb000
+0001588c  add      x2, x2, #0x94d
+00015890  adrp     x3, #0xb000
+00015894  add      x3, x3, #0x4bd
+00015898  blr      x8
+0001589c  mov      x2, x0
+000158a0  cbz      x0, #0x158b8
+000158a4  mov      x0, x23
+000158a8  mov      x1, x24
+000158ac  bl       #0x18220 ; _ZN7_JNIEnv16CallObjectMethodEP8_jobjectP10_jmethodIDz
+000158b0  mov      x24, x0
+000158b4  b        #0x158bc ; 
+000158b8  mov      x24, xzr
+000158bc  ldr      x8, [x23]
+000158c0  ldr      x8, [x8, #0x720]
+000158c4  mov      x0, x23
+000158c8  blr      x8
+000158cc  tst      w0, #0xff
+000158d0  b.eq     #0x158e8
+000158d4  ldr      x8, [x23]
+000158d8  ldr      x8, [x8, #0x88]
+000158dc  mov      x0, x23
+000158e0  blr      x8
+000158e4  mov      x24, xzr
+000158e8  ldr      x8, [x23]
+000158ec  ldr      x8, [x8, #0xb8]
+000158f0  mov      x0, x23
+000158f4  mov      x1, x22
+000158f8  blr      x8
+000158fc  cbz      x24, #0x15830
+00015900  b        #0x15bb4 ; 
+00015904  ldr      x8, [x23]
+00015908  ldr      x8, [x8, #0x30]
+0001590c  mov      x0, x23
+00015910  adrp     x1, #0xb000
+00015914  add      x1, x1, #0x2c5
+00015918  blr      x8
+0001591c  ldr      x8, [x23]
+00015920  mov      x22, x0
+00015924  ldr      x8, [x8, #0x720]
+00015928  mov      x0, x23
+0001592c  blr      x8
+00015930  tst      w0, #0xff
+00015934  b.eq     #0x159a4
+00015938  ldr      x8, [x23]
+0001593c  ldr      x8, [x8, #0x88]
+00015940  mov      x0, x23
+00015944  blr      x8
+00015948  ldr      x8, [x23]
+0001594c  ldr      x8, [x8, #0x720]
+00015950  mov      x0, x23
+00015954  blr      x8
+00015958  tst      w0, #0xff
+0001595c  b.eq     #0x15970
+00015960  ldr      x8, [x23]
+00015964  ldr      x8, [x8, #0x88]
+00015968  mov      x0, x23
+0001596c  blr      x8
+00015970  ldr      x8, [x23]
+00015974  ldr      x8, [x8, #0xa0]
+00015978  mov      x0, x23
+0001597c  mov      x1, xzr
+00015980  blr      x8
+00015984  ldp      x24, x28, [sp, #0x18]
+00015988  tst      w25, #1
+0001598c  mov      w8, #0xb
+00015990  ldr      x22, [sp, #0x30]
+00015994  csel     w20, w8, wzr, ne
+00015998  ldrb     w8, [sp, #0x120]
+0001599c  cbnz     w8, #0x156f4
+000159a0  b        #0x15704 ; 
+000159a4  cbz      x22, #0x15948
+000159a8  ldr      x8, [x23]
+000159ac  ldr      x8, [x8, #0x388]
+000159b0  mov      x0, x23
+000159b4  mov      x1, x22
+000159b8  adrp     x2, #0xb000
+000159bc  add      x2, x2, #0xd18
+000159c0  adrp     x3, #0xa000
+000159c4  add      x3, x3, #0x589
+000159c8  blr      x8
+000159cc  ldr      x8, [x23]
+000159d0  mov      x24, x0
+000159d4  ldr      x8, [x8, #0x720]
+000159d8  mov      x0, x23
+000159dc  blr      x8
+000159e0  tst      w0, #0xff
+000159e4  b.ne     #0x15938
+000159e8  cbz      x24, #0x15948
+000159ec  ldr      x8, [x23]
+000159f0  ldr      x8, [x8, #0x108]
+000159f4  mov      x0, x23
+000159f8  mov      x1, x22
+000159fc  adrp     x2, #0xa000
+00015a00  add      x2, x2, #0xf14
+00015a04  adrp     x3, #0xa000
+00015a08  add      x3, x3, #0x933
+00015a0c  blr      x8
+00015a10  ldr      x8, [x23]
+00015a14  mov      x20, x0
+00015a18  ldr      x8, [x8, #0x720]
+00015a1c  mov      x0, x23
+00015a20  blr      x8
+00015a24  tst      w0, #0xff
+00015a28  b.ne     #0x15938
+00015a2c  cbz      x20, #0x15948
+00015a30  mov      x0, x23
+00015a34  mov      x1, x22
+00015a38  mov      x2, x24
+00015a3c  bl       #0x1749c ; _ZN7_JNIEnv22CallStaticObjectMethodEP7_jclassP10_jmethodIDz
+00015a40  ldr      x8, [x23]
+00015a44  mov      x21, x0
+00015a48  ldr      x8, [x8, #0x720]
+00015a4c  mov      x0, x23
+00015a50  blr      x8
+00015a54  tst      w0, #0xff
+00015a58  b.ne     #0x15938
+00015a5c  cbz      x21, #0x15948
+00015a60  mov      x0, x23
+00015a64  mov      x1, x21
+00015a68  mov      x2, x20
+00015a6c  bl       #0x18220 ; _ZN7_JNIEnv16CallObjectMethodEP8_jobjectP10_jmethodIDz
+00015a70  ldr      x8, [x23]
+00015a74  mov      x22, x0
+00015a78  ldr      x8, [x8, #0x720]
+00015a7c  mov      x0, x23
+00015a80  blr      x8
+00015a84  tst      w0, #0xff
+00015a88  b.ne     #0x15938
+00015a8c  cbz      x22, #0x15948
+00015a90  ldr      x8, [x23]
+00015a94  ldr      x8, [x8, #0x30]
+00015a98  mov      x0, x23
+00015a9c  adrp     x1, #0xa000
+00015aa0  add      x1, x1, #0x465
+00015aa4  blr      x8
+00015aa8  ldr      x8, [x23]
+00015aac  mov      x21, x0
+00015ab0  ldr      x8, [x8, #0x720]
+00015ab4  mov      x0, x23
+00015ab8  blr      x8
+00015abc  tst      w0, #0xff
+00015ac0  b.ne     #0x15938
+00015ac4  cbz      x21, #0x15948
+00015ac8  ldr      x8, [x23]
+00015acc  ldr      x8, [x8, #0x108]
+00015ad0  mov      x0, x23
+00015ad4  mov      x1, x21
+00015ad8  adrp     x2, #0xa000
+00015adc  add      x2, x2, #0x3b0
+00015ae0  adrp     x3, #0xb000
+00015ae4  add      x3, x3, #0x4bd
+00015ae8  blr      x8
+00015aec  mov      x2, x0
+00015af0  cbz      x0, #0x16094
+00015af4  mov      x0, x23
+00015af8  mov      x1, x22
+00015afc  bl       #0x18220 ; _ZN7_JNIEnv16CallObjectMethodEP8_jobjectP10_jmethodIDz
+00015b00  mov      x24, x0
+00015b04  b        #0x16098 ; 
+00015b08  cbz      x22, #0x15818
+00015b0c  ldr      x8, [x23]
+00015b10  ldr      x8, [x8, #0x100]
+00015b14  mov      x0, x23
+00015b18  mov      x1, x24
+00015b1c  mov      x2, x22
+00015b20  blr      x8
+00015b24  tst      w0, #0xff
+00015b28  b.eq     #0x15b6c
+00015b2c  ldr      x8, [x23]
+00015b30  ldr      x8, [x8, #0x108]
+00015b34  mov      x0, x23
+00015b38  mov      x1, x22
+00015b3c  adrp     x2, #0xb000
+00015b40  add      x2, x2, #0x94d
+00015b44  adrp     x3, #0xb000
+00015b48  add      x3, x3, #0x4bd
+00015b4c  blr      x8
+00015b50  mov      x2, x0
+00015b54  cbz      x0, #0x15b6c
+00015b58  mov      x0, x23
+00015b5c  mov      x1, x24
+00015b60  bl       #0x18220 ; _ZN7_JNIEnv16CallObjectMethodEP8_jobjectP10_jmethodIDz
+00015b64  mov      x24, x0
+00015b68  b        #0x15b70 ; 
+00015b6c  mov      x24, xzr
+00015b70  ldr      x8, [x23]
+00015b74  ldr      x8, [x8, #0x720]
+00015b78  mov      x0, x23
+00015b7c  blr      x8
+00015b80  tst      w0, #0xff
+00015b84  b.eq     #0x15b9c
+00015b88  ldr      x8, [x23]
+00015b8c  ldr      x8, [x8, #0x88]
+00015b90  mov      x0, x23
+00015b94  blr      x8
+00015b98  mov      x24, xzr
+00015b9c  ldr      x8, [x23]
+00015ba0  ldr      x8, [x8, #0xb8]
+00015ba4  mov      x0, x23
+00015ba8  mov      x1, x22
+00015bac  blr      x8
+00015bb0  cbz      x24, #0x15818
+00015bb4  ldr      x8, [x23]
+00015bb8  ldr      x8, [x8, #0x30]
+00015bbc  mov      x0, x23
+00015bc0  adrp     x1, #0xa000
+00015bc4  add      x1, x1, #0xfb1
+00015bc8  blr      x8
+00015bcc  ldr      x8, [x23]
+00015bd0  mov      x28, x0
+00015bd4  ldr      x8, [x8, #0x720]
+00015bd8  mov      x0, x23
+00015bdc  blr      x8
+00015be0  tst      w0, #0xff
+00015be4  b.eq     #0x15c00
+00015be8  ldr      x8, [x23]
+00015bec  ldr      x8, [x8, #0x88]
+00015bf0  mov      x0, x23
+00015bf4  blr      x8
+00015bf8  str      xzr, [sp, #0x28]
+00015bfc  b        #0x15c2c ; 
+00015c00  cbz      x28, #0x15bf8
+00015c04  ldr      x8, [x23]
+00015c08  ldr      x8, [x8, #0x108]
+00015c0c  mov      x0, x23
+00015c10  mov      x1, x28
+00015c14  adrp     x2, #0xb000
+00015c18  add      x2, x2, #0x4b6
+00015c1c  adrp     x3, #0xb000
+00015c20  add      x3, x3, #0x274
+00015c24  blr      x8
+00015c28  str      x0, [sp, #0x28]
+00015c2c  ldr      x8, [x23]
+00015c30  ldr      x8, [x8, #0x720]
+00015c34  mov      x0, x23
+00015c38  blr      x8
+00015c3c  tst      w0, #0xff
+00015c40  b.eq     #0x15c58
+00015c44  ldr      x8, [x23]
+00015c48  ldr      x8, [x8, #0x88]
+00015c4c  mov      x0, x23
+00015c50  blr      x8
+00015c54  b        #0x15948 ; 
+00015c58  ldr      x8, [sp, #0x28]
+00015c5c  cbz      x8, #0x15948
+00015c60  ldp      x21, x20, [sp, #0x50]
+00015c64  nop      
+00015c68  adr      x9, #0xbdf6
+00015c6c  ldr      x8, [x23]
+00015c70  subs     x22, x20, x21
+00015c74  ldr      x8, [x8, #0x518]
+00015c78  csel     x1, x9, x21, eq
+00015c7c  lsr      x2, x22, #1
+00015c80  mov      x0, x23
+00015c84  blr      x8
+00015c88  str      x0, [sp, #0x10]
+00015c8c  cmp      x21, x20
+00015c90  stp      xzr, xzr, [sp, #0xf0]
+00015c94  str      xzr, [sp, #0x100]
+00015c98  b.eq     #0x15ce4
+00015c9c  tbnz     x22, #0x3f, #0x16fd8
+00015ca0  mov      x0, x22
+00015ca4  bl       #0x38124 ; _Znwm
+00015ca8  add      x8, x0, x22
+00015cac  mov      x1, x21
+00015cb0  mov      x2, x22
+00015cb4  mov      x20, x0
+00015cb8  str      x0, [sp, #0xf0]
+00015cbc  str      x8, [sp, #0x100]
+00015cc0  bl       #0x382c0 ; memcpy@plt
+00015cc4  add      x8, x20, x22
+00015cc8  ldurh    w9, [x8, #-2]
+00015ccc  cmp      w9, #0x2f
+00015cd0  b.eq     #0x15cec
+00015cd4  subs     x22, x22, #2
+00015cd8  b.ne     #0x15cc4
+00015cdc  mov      x8, x20
+00015ce0  b        #0x15cec ; 
+00015ce4  mov      x20, xzr
+00015ce8  mov      x8, xzr
+00015cec  sub      x9, x8, x20
+00015cf0  cmp      x9, #2
+00015cf4  mov      x9, #-2
+00015cf8  csel     x9, x9, xzr, hi
+00015cfc  add      x21, x8, x9
+00015d00  str      x21, [sp, #0xf8]
+00015d04  ldr      x8, [x23]
+00015d08  ldr      x8, [x8, #0x720]
+00015d0c  mov      x0, x23
+00015d10  blr      x8
+00015d14  tst      w0, #0xff
+00015d18  b.eq     #0x15d34
+00015d1c  ldr      x8, [x23]
+00015d20  ldr      x8, [x8, #0x88]
+00015d24  mov      x0, x23
+00015d28  blr      x8
+00015d2c  mov      x21, xzr
+00015d30  b        #0x15d5c ; 
+00015d34  ldr      x8, [x23]
+00015d38  subs     x9, x21, x20
+00015d3c  lsr      x2, x9, #1
+00015d40  nop      
+00015d44  adr      x9, #0xbdf6
+00015d48  ldr      x8, [x8, #0x518]
+00015d4c  csel     x1, x9, x20, eq
+00015d50  mov      x0, x23
+00015d54  blr      x8
+00015d58  mov      x21, x0
+00015d5c  ldr      x8, [x23]
+00015d60  ldr      x8, [x8, #0x720]
+00015d64  mov      x0, x23
+00015d68  blr      x8
+00015d6c  tst      w0, #0xff
+00015d70  b.eq     #0x15d8c
+00015d74  ldr      x8, [x23]
+00015d78  ldr      x8, [x8, #0x88]
+00015d7c  mov      x0, x23
+00015d80  blr      x8
+00015d84  mov      x20, xzr
+00015d88  b        #0x15dc0 ; 
+00015d8c  ldr      x8, [sp, #0x10]
+00015d90  mov      x20, xzr
+00015d94  cbz      x8, #0x15dc0
+00015d98  cbz      x21, #0x15dc0
+00015d9c  ldr      x2, [sp, #0x28]
+00015da0  ldr      x3, [sp, #0x10]
+00015da4  mov      x0, x23
+00015da8  mov      x1, x28
+00015dac  mov      x4, x21
+00015db0  mov      x5, xzr
+00015db4  mov      x6, x24
+00015db8  bl       #0x18184 ; _ZN7_JNIEnv9NewObjectEP7_jclassP10_jmethodIDz
+00015dbc  mov      x20, x0
+00015dc0  ldr      x8, [x23]
+00015dc4  ldr      x8, [x8, #0x720]
+00015dc8  mov      x0, x23
+00015dcc  blr      x8
+00015dd0  tst      w0, #0xff
+00015dd4  b.eq     #0x15df8
+00015dd8  ldr      x8, [x23]
+00015ddc  ldr      x8, [x8, #0x88]
+00015de0  mov      x0, x23
+00015de4  blr      x8
+00015de8  ldr      x0, [sp, #0xf0]
+00015dec  cbz      x0, #0x15948
+00015df0  bl       #0x32b5c ; _ZdlPv
+00015df4  b        #0x15948 ; 
+00015df8  cbz      x20, #0x15de8
+00015dfc  ldr      x8, [x23]
+00015e00  ldr      x8, [x8, #0x30]
+00015e04  mov      x0, x23
+00015e08  adrp     x1, #0xb000
+00015e0c  add      x1, x1, #0x700
+00015e10  blr      x8
+00015e14  ldr      x8, [x23]
+00015e18  mov      x21, x0
+00015e1c  ldr      x8, [x8, #0x720]
+00015e20  mov      x0, x23
+00015e24  blr      x8
+00015e28  tst      w0, #0xff
+00015e2c  b.eq     #0x15e48
+00015e30  ldr      x8, [x23]
+00015e34  ldr      x8, [x8, #0x88]
+00015e38  mov      x0, x23
+00015e3c  blr      x8
+00015e40  mov      x22, xzr
+00015e44  b        #0x15e74 ; 
+00015e48  cbz      x21, #0x15e40
+00015e4c  ldr      x8, [x23]
+00015e50  ldr      x8, [x8, #0x108]
+00015e54  mov      x0, x23
+00015e58  mov      x1, x21
+00015e5c  adrp     x2, #0xb000
+00015e60  add      x2, x2, #0x85c
+00015e64  adrp     x3, #0xa000
+00015e68  add      x3, x3, #0x52a
+00015e6c  blr      x8
+00015e70  mov      x22, x0
+00015e74  ldr      x8, [x23]
+00015e78  ldr      x8, [x8, #0x720]
+00015e7c  mov      x0, x23
+00015e80  blr      x8
+00015e84  tst      w0, #0xff
+00015e88  b.eq     #0x15ea4
+00015e8c  ldr      x8, [x23]
+00015e90  ldr      x8, [x8, #0x88]
+00015e94  mov      x0, x23
+00015e98  blr      x8
+00015e9c  mov      x21, xzr
+00015ea0  b        #0x15ec4 ; 
+00015ea4  cbz      x22, #0x15e9c
+00015ea8  ldr      x8, [x23]
+00015eac  ldr      x8, [x8, #0x538]
+00015eb0  mov      x0, x23
+00015eb4  adrp     x1, #0xa000
+00015eb8  add      x1, x1, #0x440
+00015ebc  blr      x8
+00015ec0  mov      x21, x0
+00015ec4  ldr      x8, [x23]
+00015ec8  ldr      x8, [x8, #0x720]
+00015ecc  mov      x0, x23
+00015ed0  blr      x8
+00015ed4  tst      w0, #0xff
+00015ed8  b.eq     #0x15ef4
+00015edc  ldr      x8, [x23]
+00015ee0  ldr      x8, [x8, #0x88]
+00015ee4  mov      x0, x23
+00015ee8  blr      x8
+00015eec  mov      x22, xzr
+00015ef0  b        #0x15f10 ; 
+00015ef4  cbz      x21, #0x15eec
+00015ef8  mov      x0, x23
+00015efc  mov      x1, x20
+00015f00  mov      x2, x22
+00015f04  mov      x3, x21
+00015f08  bl       #0x18220 ; _ZN7_JNIEnv16CallObjectMethodEP8_jobjectP10_jmethodIDz
+00015f0c  mov      x22, x0
+00015f10  ldr      x8, [x23]
+00015f14  ldr      x8, [x8, #0x720]
+00015f18  mov      x0, x23
+00015f1c  blr      x8
+00015f20  tst      w0, #0xff
+00015f24  b.eq     #0x15f3c
+00015f28  ldr      x8, [x23]
+00015f2c  ldr      x8, [x8, #0x88]
+00015f30  mov      x0, x23
+00015f34  blr      x8
+00015f38  b        #0x15de8 ; 
+00015f3c  cbz      x22, #0x15de8
+00015f40  ldr      x8, [x23]
+00015f44  ldr      x8, [x8, #0x388]
+00015f48  mov      x0, x23
+00015f4c  mov      x1, x22
+00015f50  adrp     x2, #0xa000
+00015f54  add      x2, x2, #0xd5f
+00015f58  adrp     x3, #0xa000
+00015f5c  add      x3, x3, #0x9c9
+00015f60  blr      x8
+00015f64  str      x0, [sp, #0x28]
+00015f68  ldr      x8, [x23]
+00015f6c  ldr      x8, [x8, #0x720]
+00015f70  mov      x0, x23
+00015f74  blr      x8
+00015f78  tst      w0, #0xff
+00015f7c  b.eq     #0x15fa4
+00015f80  ldr      x8, [x23]
+00015f84  ldr      x8, [x8, #0x88]
+00015f88  mov      x0, x23
+00015f8c  blr      x8
+00015f90  ldr      x8, [sp, #0x28]
+00015f94  mov      x20, xzr
+00015f98  cmp      x8, #0
+00015f9c  cset     w21, ne
+00015fa0  b        #0x15fe4 ; 
+00015fa4  ldr      x8, [sp, #0x28]
+00015fa8  cbz      x8, #0x15fdc
+00015fac  ldr      x8, [x23]
+00015fb0  ldr      x8, [x8, #0x388]
+00015fb4  mov      x0, x23
+00015fb8  mov      x1, x22
+00015fbc  adrp     x2, #0xa000
+00015fc0  add      x2, x2, #0x659
+00015fc4  adrp     x3, #0xb000
+00015fc8  add      x3, x3, #0x937
+00015fcc  blr      x8
+00015fd0  mov      x20, x0
+00015fd4  mov      w21, #1
+00015fd8  b        #0x15fe4 ; 
+00015fdc  mov      w21, wzr
+00015fe0  mov      x20, xzr
+00015fe4  ldr      x8, [x23]
+00015fe8  ldr      x8, [x8, #0x720]
+00015fec  mov      x0, x23
+00015ff0  blr      x8
+00015ff4  tst      w0, #0xff
+00015ff8  b.eq     #0x16010
+00015ffc  ldr      x8, [x23]
+00016000  ldr      x8, [x8, #0x88]
+00016004  mov      x0, x23
+00016008  blr      x8
+0001600c  b        #0x15de8 ; 
+00016010  cmp      x20, #0
+00016014  eor      w8, w21, #1
+00016018  csinc    w8, w8, wzr, ne
+0001601c  tbnz     w8, #0, #0x15de8
+00016020  ldr      x8, [x23]
+00016024  ldr      x8, [x8, #0xa8]
+00016028  mov      x0, x23
+0001602c  mov      x1, x22
+00016030  blr      x8
+00016034  ldr      x8, [x23]
+00016038  mov      x22, x0
+0001603c  ldr      x8, [x8, #0x720]
+00016040  mov      x0, x23
+00016044  blr      x8
+00016048  tst      w0, #0xff
+0001604c  b.eq     #0x16070
+00016050  ldr      x8, [x23]
+00016054  ldr      x8, [x8, #0x88]
+00016058  mov      x0, x23
+0001605c  blr      x8
+00016060  cmp      x22, #0
+00016064  str      xzr, [sp, #0x10]
+00016068  cset     w21, ne
+0001606c  b        #0x16520 ; 
+00016070  cbz      x22, #0x16518
+00016074  ldr      x8, [x23]
+00016078  ldr      x8, [x8, #0xa8]
+0001607c  mov      x0, x23
+00016080  mov      x1, x24
+00016084  blr      x8
+00016088  str      x0, [sp, #0x10]
+0001608c  mov      w21, #1
+00016090  b        #0x16520 ; 
+00016094  mov      x24, xzr
+00016098  ldr      x8, [x23]
+0001609c  ldr      x8, [x8, #0x720]
+000160a0  mov      x0, x23
+000160a4  blr      x8
+000160a8  tst      w0, #0xff
+000160ac  b.ne     #0x15938
+000160b0  cbz      x24, #0x15948
+000160b4  ldr      x8, [x23]
+000160b8  ldr      x8, [x8, #0x30]
+000160bc  mov      x0, x23
+000160c0  adrp     x1, #0xb000
+000160c4  add      x1, x1, #0x700
+000160c8  blr      x8
+000160cc  ldr      x8, [x23]
+000160d0  mov      x21, x0
+000160d4  ldr      x8, [x8, #0x720]
+000160d8  mov      x0, x23
+000160dc  blr      x8
+000160e0  tst      w0, #0xff
+000160e4  b.ne     #0x15938
+000160e8  cbz      x21, #0x15948
+000160ec  ldr      x8, [x23]
+000160f0  ldr      x8, [x8, #0x108]
+000160f4  mov      x0, x23
+000160f8  mov      x1, x21
+000160fc  adrp     x2, #0xb000
+00016100  add      x2, x2, #0x85c
+00016104  adrp     x3, #0xa000
+00016108  add      x3, x3, #0x52a
+0001610c  blr      x8
+00016110  ldr      x8, [x23]
+00016114  mov      x20, x0
+00016118  ldr      x8, [x8, #0x720]
+0001611c  mov      x0, x23
+00016120  blr      x8
+00016124  tst      w0, #0xff
+00016128  b.ne     #0x15938
+0001612c  cbz      x20, #0x15948
+00016130  ldr      x8, [x23]
+00016134  ldr      x8, [x8, #0x538]
+00016138  mov      x0, x23
+0001613c  adrp     x1, #0xb000
+00016140  add      x1, x1, #0x95c
+00016144  blr      x8
+00016148  mov      x21, x0
+0001614c  mov      x0, x23
+00016150  mov      x1, x24
+00016154  mov      x2, x20
+00016158  mov      x3, x21
+0001615c  bl       #0x18220 ; _ZN7_JNIEnv16CallObjectMethodEP8_jobjectP10_jmethodIDz
+00016160  ldr      x8, [x23]
+00016164  mov      x22, x0
+00016168  ldr      x8, [x8, #0xb8]
+0001616c  mov      x0, x23
+00016170  mov      x1, x21
+00016174  blr      x8
+00016178  ldr      x8, [x23]
+0001617c  ldr      x8, [x8, #0x720]
+00016180  mov      x0, x23
+00016184  blr      x8
+00016188  tst      w0, #0xff
+0001618c  b.eq     #0x16650
+00016190  ldr      x8, [x23]
+00016194  ldr      x8, [x8, #0x88]
+00016198  mov      x0, x23
+0001619c  blr      x8
+000161a0  ldr      x8, [x23]
+000161a4  ldr      x8, [x8, #0x538]
+000161a8  mov      x0, x23
+000161ac  adrp     x1, #0xb000
+000161b0  add      x1, x1, #0x4d7
+000161b4  blr      x8
+000161b8  mov      x21, x0
+000161bc  mov      x0, x23
+000161c0  mov      x1, x24
+000161c4  mov      x2, x20
+000161c8  mov      x3, x21
+000161cc  bl       #0x18220 ; _ZN7_JNIEnv16CallObjectMethodEP8_jobjectP10_jmethodIDz
+000161d0  ldr      x8, [x23]
+000161d4  mov      x22, x0
+000161d8  ldr      x8, [x8, #0xb8]
+000161dc  mov      x0, x23
+000161e0  mov      x1, x21
+000161e4  blr      x8
+000161e8  ldr      x8, [x23]
+000161ec  ldr      x8, [x8, #0x720]
+000161f0  mov      x0, x23
+000161f4  blr      x8
+000161f8  tst      w0, #0xff
+000161fc  b.eq     #0x16658
+00016200  ldr      x8, [x23]
+00016204  ldr      x8, [x8, #0x88]
+00016208  mov      x0, x23
+0001620c  blr      x8
+00016210  ldr      x8, [x23]
+00016214  ldr      x8, [x8, #0x538]
+00016218  mov      x0, x23
+0001621c  adrp     x1, #0xa000
+00016220  add      x1, x1, #0xfce
+00016224  blr      x8
+00016228  mov      x21, x0
+0001622c  mov      x0, x23
+00016230  mov      x1, x24
+00016234  mov      x2, x20
+00016238  mov      x3, x21
+0001623c  bl       #0x18220 ; _ZN7_JNIEnv16CallObjectMethodEP8_jobjectP10_jmethodIDz
+00016240  ldr      x8, [x23]
+00016244  mov      x22, x0
+00016248  ldr      x8, [x8, #0xb8]
+0001624c  mov      x0, x23
+00016250  mov      x1, x21
+00016254  blr      x8
+00016258  ldr      x8, [x23]
+0001625c  ldr      x8, [x8, #0x720]
+00016260  mov      x0, x23
+00016264  blr      x8
+00016268  tst      w0, #0xff
+0001626c  b.eq     #0x16660
+00016270  ldr      x8, [x23]
+00016274  ldr      x8, [x8, #0x88]
+00016278  mov      x0, x23
+0001627c  blr      x8
+00016280  ldr      x8, [x23]
+00016284  ldr      x8, [x8, #0x538]
+00016288  mov      x0, x23
+0001628c  adrp     x1, #0xb000
+00016290  add      x1, x1, #0xc05
+00016294  blr      x8
+00016298  mov      x21, x0
+0001629c  mov      x0, x23
+000162a0  mov      x1, x24
+000162a4  mov      x2, x20
+000162a8  mov      x3, x21
+000162ac  bl       #0x18220 ; _ZN7_JNIEnv16CallObjectMethodEP8_jobjectP10_jmethodIDz
+000162b0  ldr      x8, [x23]
+000162b4  mov      x22, x0
+000162b8  ldr      x8, [x8, #0xb8]
+000162bc  mov      x0, x23
+000162c0  mov      x1, x21
+000162c4  blr      x8
+000162c8  ldr      x8, [x23]
+000162cc  ldr      x8, [x8, #0x720]
+000162d0  mov      x0, x23
+000162d4  blr      x8
+000162d8  tst      w0, #0xff
+000162dc  b.eq     #0x16668
+000162e0  ldr      x8, [x23]
+000162e4  ldr      x8, [x8, #0x88]
+000162e8  mov      x0, x23
+000162ec  blr      x8
+000162f0  ldr      x8, [x23]
+000162f4  ldr      x8, [x8, #0x538]
+000162f8  mov      x0, x23
+000162fc  adrp     x1, #0xb000
+00016300  add      x1, x1, #0x4f8
+00016304  blr      x8
+00016308  mov      x21, x0
+0001630c  mov      x0, x23
+00016310  mov      x1, x24
+00016314  mov      x2, x20
+00016318  mov      x3, x21
+0001631c  bl       #0x18220 ; _ZN7_JNIEnv16CallObjectMethodEP8_jobjectP10_jmethodIDz
+00016320  ldr      x8, [x23]
+00016324  mov      x22, x0
+00016328  ldr      x8, [x8, #0xb8]
+0001632c  mov      x0, x23
+00016330  mov      x1, x21
+00016334  blr      x8
+00016338  ldr      x8, [x23]
+0001633c  ldr      x8, [x8, #0x720]
+00016340  mov      x0, x23
+00016344  blr      x8
+00016348  tst      w0, #0xff
+0001634c  b.eq     #0x16670
+00016350  ldr      x8, [x23]
+00016354  ldr      x8, [x8, #0x88]
+00016358  mov      x0, x23
+0001635c  blr      x8
+00016360  ldr      x8, [x23]
+00016364  ldr      x8, [x8, #0x538]
+00016368  mov      x0, x23
+0001636c  adrp     x1, #0xa000
+00016370  add      x1, x1, #0xf1e
+00016374  blr      x8
+00016378  mov      x21, x0
+0001637c  mov      x0, x23
+00016380  mov      x1, x24
+00016384  mov      x2, x20
+00016388  mov      x3, x21
+0001638c  bl       #0x18220 ; _ZN7_JNIEnv16CallObjectMethodEP8_jobjectP10_jmethodIDz
+00016390  ldr      x8, [x23]
+00016394  mov      x22, x0
+00016398  ldr      x8, [x8, #0xb8]
+0001639c  mov      x0, x23
+000163a0  mov      x1, x21
+000163a4  blr      x8
+000163a8  ldr      x8, [x23]
+000163ac  ldr      x8, [x8, #0x720]
+000163b0  mov      x0, x23
+000163b4  blr      x8
+000163b8  tst      w0, #0xff
+000163bc  b.eq     #0x16678
+000163c0  ldr      x8, [x23]
+000163c4  ldr      x8, [x8, #0x88]
+000163c8  mov      x0, x23
+000163cc  blr      x8
+000163d0  ldr      x8, [x23]
+000163d4  ldr      x8, [x8, #0x538]
+000163d8  mov      x0, x23
+000163dc  adrp     x1, #0xb000
+000163e0  add      x1, x1, #0x377
+000163e4  blr      x8
+000163e8  mov      x21, x0
+000163ec  mov      x0, x23
+000163f0  mov      x1, x24
+000163f4  mov      x2, x20
+000163f8  mov      x3, x21
+000163fc  bl       #0x18220 ; _ZN7_JNIEnv16CallObjectMethodEP8_jobjectP10_jmethodIDz
+00016400  ldr      x8, [x23]
+00016404  mov      x22, x0
+00016408  ldr      x8, [x8, #0xb8]
+0001640c  mov      x0, x23
+00016410  mov      x1, x21
+00016414  blr      x8
+00016418  ldr      x8, [x23]
+0001641c  ldr      x8, [x8, #0x720]
+00016420  mov      x0, x23
+00016424  blr      x8
+00016428  tst      w0, #0xff
+0001642c  b.eq     #0x16680
+00016430  ldr      x8, [x23]
+00016434  ldr      x8, [x8, #0x88]
+00016438  mov      x0, x23
+0001643c  blr      x8
+00016440  ldr      x8, [x23]
+00016444  ldr      x8, [x8, #0x538]
+00016448  mov      x0, x23
+0001644c  adrp     x1, #0xa000
+00016450  add      x1, x1, #0xb38
+00016454  blr      x8
+00016458  mov      x21, x0
+0001645c  mov      x0, x23
+00016460  mov      x1, x24
+00016464  mov      x2, x20
+00016468  mov      x3, x21
+0001646c  bl       #0x18220 ; _ZN7_JNIEnv16CallObjectMethodEP8_jobjectP10_jmethodIDz
+00016470  ldr      x8, [x23]
+00016474  mov      x22, x0
+00016478  ldr      x8, [x8, #0xb8]
+0001647c  mov      x0, x23
+00016480  mov      x1, x21
+00016484  blr      x8
+00016488  ldr      x8, [x23]
+0001648c  ldr      x8, [x8, #0x720]
+00016490  mov      x0, x23
+00016494  blr      x8
+00016498  tst      w0, #0xff
+0001649c  b.eq     #0x16688
+000164a0  ldr      x8, [x23]
+000164a4  ldr      x8, [x8, #0x88]
+000164a8  mov      x0, x23
+000164ac  blr      x8
+000164b0  ldr      x8, [x23]
+000164b4  ldr      x8, [x8, #0x538]
+000164b8  mov      x0, x23
+000164bc  adrp     x1, #0xb000
+000164c0  add      x1, x1, #0xb06
+000164c4  blr      x8
+000164c8  mov      x21, x0
+000164cc  mov      x0, x23
+000164d0  mov      x1, x24
+000164d4  mov      x2, x20
+000164d8  mov      x3, x21
+000164dc  bl       #0x18220 ; _ZN7_JNIEnv16CallObjectMethodEP8_jobjectP10_jmethodIDz
+000164e0  ldr      x8, [x23]
+000164e4  mov      x22, x0
+000164e8  ldr      x8, [x8, #0xb8]
+000164ec  mov      x0, x23
+000164f0  mov      x1, x21
+000164f4  blr      x8
+000164f8  ldr      x8, [x23]
+000164fc  ldr      x8, [x8, #0x720]
+00016500  mov      x0, x23
+00016504  blr      x8
+00016508  tst      w0, #0xff
+0001650c  b.ne     #0x15938
+00016510  cbnz     x22, #0x1668c
+00016514  b        #0x15948 ; 
+00016518  mov      w21, wzr
+0001651c  str      xzr, [sp, #0x10]
+00016520  ldr      x8, [x23]
+00016524  ldr      x8, [x8, #0x720]
+00016528  mov      x0, x23
+0001652c  blr      x8
+00016530  tst      w0, #0xff
+00016534  b.eq     #0x1655c
+00016538  ldr      x8, [x23]
+0001653c  ldr      x8, [x8, #0x88]
+00016540  mov      x0, x23
+00016544  blr      x8
+00016548  ldr      x8, [sp, #0x10]
+0001654c  mov      x24, xzr
+00016550  cmp      x8, #0
+00016554  cset     w28, ne
+00016558  b        #0x16598 ; 
+0001655c  ldr      x8, [sp, #0x10]
+00016560  cbz      x8, #0x16584
+00016564  ldr      x1, [x27, #8]
+00016568  cbz      x1, #0x16590
+0001656c  ldr      x8, [x23]
+00016570  ldr      x8, [x8, #0xa8]
+00016574  mov      x0, x23
+00016578  blr      x8
+0001657c  mov      x24, x0
+00016580  b        #0x16594 ; 
+00016584  mov      w28, wzr
+00016588  mov      x24, xzr
+0001658c  b        #0x16598 ; 
+00016590  mov      x24, xzr
+00016594  mov      w28, #1
+00016598  ldr      x8, [x23]
+0001659c  ldr      x8, [x8, #0x720]
+000165a0  mov      x0, x23
+000165a4  blr      x8
+000165a8  tst      w0, #0xff
+000165ac  b.eq     #0x165c4
+000165b0  ldr      x8, [x23]
+000165b4  ldr      x8, [x8, #0x88]
+000165b8  mov      x0, x23
+000165bc  blr      x8
+000165c0  b        #0x165dc ; 
+000165c4  and      w8, w21, w28
+000165c8  cmp      w8, #1
+000165cc  b.ne     #0x165dc
+000165d0  cbnz     x24, #0x16628
+000165d4  ldr      x8, [x27, #8]
+000165d8  cbz      x8, #0x16628
+000165dc  cbz      w21, #0x165f4
+000165e0  ldr      x8, [x23]
+000165e4  ldr      x8, [x8, #0xb0]
+000165e8  mov      x0, x23
+000165ec  mov      x1, x22
+000165f0  blr      x8
+000165f4  cbz      w28, #0x1660c
+000165f8  ldr      x8, [x23]
+000165fc  ldr      x8, [x8, #0xb0]
+00016600  ldr      x1, [sp, #0x10]
+00016604  mov      x0, x23
+00016608  blr      x8
+0001660c  cbz      x24, #0x15de8
+00016610  ldr      x8, [x23]
+00016614  ldr      x8, [x8, #0xb0]
+00016618  mov      x0, x23
+0001661c  mov      x1, x24
+00016620  blr      x8
+00016624  b        #0x15de8 ; 
+00016628  ldr      x8, [x27]
+0001662c  nop      
+00016630  adr      x9, #0x43940
+00016634  ldr      x10, [sp, #0x10]
+00016638  stp      x24, x20, [x9, #0x20]
+0001663c  mov      w25, #1
+00016640  stp      x22, x8, [x9]
+00016644  ldr      x8, [sp, #0x28]
+00016648  stp      x8, x10, [x9, #0x10]
+0001664c  b        #0x15de8 ; 
+00016650  cbnz     x22, #0x1668c
+00016654  b        #0x161a0 ; 
+00016658  cbnz     x22, #0x1668c
+0001665c  b        #0x16210 ; 
+00016660  cbnz     x22, #0x1668c
+00016664  b        #0x16280 ; 
+00016668  cbnz     x22, #0x1668c
+0001666c  b        #0x162f0 ; 
+00016670  cbnz     x22, #0x1668c
+00016674  b        #0x16360 ; 
+00016678  cbnz     x22, #0x1668c
+0001667c  b        #0x163d0 ; 
+00016680  cbnz     x22, #0x1668c
+00016684  b        #0x16440 ; 
+00016688  cbz      x22, #0x164b0
+0001668c  ldr      x8, [x23]
+00016690  ldr      x8, [x8, #0xb8]
+00016694  mov      x0, x23
+00016698  mov      x1, x22
+0001669c  blr      x8
+000166a0  b        #0x15bb4 ; 
+000166a4  mov      w25, wzr
+000166a8  ldp      x20, x21, [sp, #0xd0]
+000166ac  cmp      x20, x21
+000166b0  b.eq     #0x166c8
+000166b4  ldr      x0, [x20]
+000166b8  bl       #0x38330 ; dlclose@plt
+000166bc  add      x20, x20, #8
+000166c0  cmp      x20, x21
+000166c4  b.ne     #0x166b4
+000166c8  ldp      x20, x21, [sp, #0xa0]
+000166cc  cmp      x20, x21
+000166d0  b.eq     #0x166e8
+000166d4  ldr      x0, [x20]
+000166d8  bl       #0x38330 ; dlclose@plt
+000166dc  add      x20, x20, #8
+000166e0  cmp      x20, x21
+000166e4  b.ne     #0x166d4
+000166e8  cbz      x24, #0x166f4
+000166ec  mov      x0, x24
+000166f0  bl       #0x32b5c ; _ZdlPv
+000166f4  ldr      x0, [sp, #0x68]
+000166f8  cbz      x0, #0x16700
+000166fc  bl       #0x32b5c ; _ZdlPv
+00016700  ldr      x0, [sp, #0xd0]
+00016704  cbz      x0, #0x16710
+00016708  str      x0, [sp, #0xd8]
+0001670c  bl       #0x32b5c ; _ZdlPv
+00016710  ldr      x0, [sp, #0xa0]
+00016714  cbz      x0, #0x16720
+00016718  str      x0, [sp, #0xa8]
+0001671c  bl       #0x32b5c ; _ZdlPv
+00016720  ldr      x20, [sp, #0x80]
+00016724  cbz      x20, #0x1675c
+00016728  ldr      x21, [sp, #0x88]
+0001672c  b        #0x16734 ; 
+00016730  sub      x21, x21, #0x30
+00016734  cmp      x21, x20
+00016738  b.eq     #0x16750
+0001673c  ldurb    w8, [x21, #-0x18]
+00016740  tbz      w8, #0, #0x16730
+00016744  ldur     x0, [x21, #-8]
+00016748  bl       #0x32b5c ; _ZdlPv
+0001674c  b        #0x16730 ; 
+00016750  mov      x0, x20
+00016754  str      x20, [sp, #0x88]
+00016758  bl       #0x32b5c ; _ZdlPv
+0001675c  tbnz     w25, #0, #0x148a8
+00016760  b        #0x1496c ; 
+00016764  mov      x20, xzr
+00016768  b        #0x14920 ; 
+0001676c  ldr      x24, [sp, #0x18]
+00016770  mov      x22, x23
+00016774  add      x20, x20, #8
+00016778  cmp      x20, x26
+0001677c  b.eq     #0x15664
+00016780  ldr      x0, [x20]
+00016784  mov      x1, x21
+00016788  bl       #0x382e0 ; dlsym@plt
+0001678c  ands     x8, x0, #0xffffffffffffff
+00016790  b.eq     #0x16774
+00016794  ldp      x9, x10, [sp, #0x80]
+00016798  b        #0x167a0 ; 
+0001679c  add      x9, x9, #0x30
+000167a0  cmp      x9, x10
+000167a4  b.eq     #0x16774
+000167a8  ldr      x11, [x9]
+000167ac  cmp      x8, x11
+000167b0  b.lo     #0x1679c
+000167b4  ldr      x11, [x9, #8]
+000167b8  cmp      x8, x11
+000167bc  b.hs     #0x1679c
+000167c0  ldrb     w11, [x9, #0x10]
+000167c4  cbz      w11, #0x1679c
+000167c8  ldrb     w11, [x9, #0x11]
+000167cc  cbz      w11, #0x1679c
+000167d0  movi     v0.2d, #0000000000000000
+000167d4  add      x8, sp, #0xd0
+000167d8  str      wzr, [sp, #0x108]
+000167dc  stp      q0, q0, [x8, #0x40]
+000167e0  mov      x8, x0
+000167e4  add      x0, sp, #0x110
+000167e8  add      x2, sp, #0x108
+000167ec  mov      w1, #4
+000167f0  blr      x8
+000167f4  cbnz     w0, #0x16774
+000167f8  ldr      w25, [sp, #0x108]
+000167fc  cmp      w25, #0
+00016800  b.le     #0x16774
+00016804  mov      x23, x22
+00016808  ldr      x22, [sp, #0x110]
+0001680c  ldr      x1, [sp, #0x98]
+00016810  ldp      x2, x3, [sp, #0x80]
+00016814  str      x24, [sp, #0x18]
+00016818  mov      x0, x22
+0001681c  bl       #0x17f8c ; _ZN12_GLOBAL__N_17validVmEP7_JavaVMS1_RKNSt6__ndk16vectorINS_7MappingENS2_9allocatorIS4_EEEE
+00016820  tbz      w0, #0, #0x1685c
+00016824  ldr      x8, [sp, #0x28]
+00016828  mov      x10, x23
+0001682c  cmp      x23, x8
+00016830  b.hs     #0x16868
+00016834  stp      x22, xzr, [x10]
+00016838  add      x9, sp, #0xd0
+0001683c  ldr      x24, [sp, #0x18]
+00016840  ldr      w8, [sp, #0xf0]
+00016844  ldur     w9, [x9, #0x23]
+00016848  add      x22, x10, #0x18
+0001684c  strb     wzr, [x10, #0x10]
+00016850  stur     w8, [x10, #0x11]
+00016854  str      w9, [x10, #0x14]
+00016858  b        #0x16944 ; 
+0001685c  ldr      x24, [sp, #0x18]
+00016860  mov      x22, x23
+00016864  b        #0x16944 ; 
+00016868  ldr      x9, [sp, #0x18]
+0001686c  mov      x11, #-0x5555555555555556
+00016870  movk     x11, #0xaaa, lsl #48
+00016874  sub      x23, x10, x9
+00016878  asr      x8, x23, #3
+0001687c  mul      x24, x8, x27
+00016880  add      x8, x24, #1
+00016884  cmp      x8, x11
+00016888  b.hi     #0x16fa8
+0001688c  ldr      x10, [sp, #0x28]
+00016890  sub      x9, x10, x9
+00016894  asr      x9, x9, #3
+00016898  mul      x9, x9, x27
+0001689c  lsl      x10, x9, #1
+000168a0  cmp      x10, x8
+000168a4  csel     x8, x10, x8, hi
+000168a8  mov      x10, #0x5555555555555555
+000168ac  movk     x10, #0x555, lsl #48
+000168b0  cmp      x9, x10
+000168b4  csel     x28, x8, x11, lo
+000168b8  cbz      x28, #0x168d4
+000168bc  cmp      x28, x11
+000168c0  b.hi     #0x16fc0
+000168c4  add      x8, x28, x28, lsl #1
+000168c8  lsl      x0, x8, #3
+000168cc  bl       #0x38124 ; _Znwm
+000168d0  b        #0x168d8 ; 
+000168d4  mov      x0, xzr
+000168d8  mov      x8, #0x5555555555555555
+000168dc  mov      w12, #0x18
+000168e0  mov      x2, x23
+000168e4  movk     x8, #0xd555, lsl #48
+000168e8  madd     x9, x24, x12, x0
+000168ec  smulh    x8, x23, x8
+000168f0  madd     x11, x28, x12, x0
+000168f4  stp      x22, xzr, [x9]
+000168f8  ldr      x22, [sp, #0x18]
+000168fc  add      x27, x9, #0x18
+00016900  strb     wzr, [x9, #0x10]
+00016904  asr      x10, x8, #2
+00016908  mov      x1, x22
+0001690c  add      x8, x10, x8, lsr #63
+00016910  str      x11, [sp, #0x28]
+00016914  nop      
+00016918  madd     x24, x8, x12, x9
+0001691c  mov      x0, x24
+00016920  bl       #0x382c0 ; memcpy@plt
+00016924  cbz      x22, #0x16934
+00016928  mov      x0, x22
+0001692c  bl       #0x32b5c ; _ZdlPv
+00016930  ldr      w25, [sp, #0x108]
+00016934  ldr      x28, [sp, #0x20]
+00016938  mov      x22, x27
+0001693c  mov      x27, #-0x5555555555555556
+00016940  movk     x27, #0xaaab
+00016944  cmp      w25, #2
+00016948  b.lt     #0x16774
+0001694c  mov      x23, x22
+00016950  ldr      x22, [sp, #0x118]
+00016954  ldr      x1, [sp, #0x98]
+00016958  ldp      x2, x3, [sp, #0x80]
+0001695c  str      x24, [sp, #0x18]
+00016960  mov      x0, x22
+00016964  bl       #0x17f8c ; _ZN12_GLOBAL__N_17validVmEP7_JavaVMS1_RKNSt6__ndk16vectorINS_7MappingENS2_9allocatorIS4_EEEE
+00016968  tbz      w0, #0, #0x169a4
+0001696c  ldr      x8, [sp, #0x28]
+00016970  mov      x10, x23
+00016974  cmp      x23, x8
+00016978  b.hs     #0x169b0
+0001697c  stp      x22, xzr, [x10]
+00016980  add      x9, sp, #0xd0
+00016984  ldr      x24, [sp, #0x18]
+00016988  ldr      w8, [sp, #0xf0]
+0001698c  ldur     w9, [x9, #0x23]
+00016990  add      x22, x10, #0x18
+00016994  strb     wzr, [x10, #0x10]
+00016998  stur     w8, [x10, #0x11]
+0001699c  str      w9, [x10, #0x14]
+000169a0  b        #0x16a8c ; 
+000169a4  ldr      x24, [sp, #0x18]
+000169a8  mov      x22, x23
+000169ac  b        #0x16a8c ; 
+000169b0  ldr      x9, [sp, #0x18]
+000169b4  mov      x11, #-0x5555555555555556
+000169b8  movk     x11, #0xaaa, lsl #48
+000169bc  sub      x23, x10, x9
+000169c0  asr      x8, x23, #3
+000169c4  mul      x24, x8, x27
+000169c8  add      x8, x24, #1
+000169cc  cmp      x8, x11
+000169d0  b.hi     #0x16fa8
+000169d4  ldr      x10, [sp, #0x28]
+000169d8  sub      x9, x10, x9
+000169dc  asr      x9, x9, #3
+000169e0  mul      x9, x9, x27
+000169e4  lsl      x10, x9, #1
+000169e8  cmp      x10, x8
+000169ec  csel     x8, x10, x8, hi
+000169f0  mov      x10, #0x5555555555555555
+000169f4  movk     x10, #0x555, lsl #48
+000169f8  cmp      x9, x10
+000169fc  csel     x28, x8, x11, lo
+00016a00  cbz      x28, #0x16a1c
+00016a04  cmp      x28, x11
+00016a08  b.hi     #0x16fc0
+00016a0c  add      x8, x28, x28, lsl #1
+00016a10  lsl      x0, x8, #3
+00016a14  bl       #0x38124 ; _Znwm
+00016a18  b        #0x16a20 ; 
+00016a1c  mov      x0, xzr
+00016a20  mov      x8, #0x5555555555555555
+00016a24  mov      w12, #0x18
+00016a28  mov      x2, x23
+00016a2c  movk     x8, #0xd555, lsl #48
+00016a30  madd     x9, x24, x12, x0
+00016a34  smulh    x8, x23, x8
+00016a38  madd     x11, x28, x12, x0
+00016a3c  stp      x22, xzr, [x9]
+00016a40  ldr      x22, [sp, #0x18]
+00016a44  add      x27, x9, #0x18
+00016a48  strb     wzr, [x9, #0x10]
+00016a4c  asr      x10, x8, #2
+00016a50  mov      x1, x22
+00016a54  add      x8, x10, x8, lsr #63
+00016a58  str      x11, [sp, #0x28]
+00016a5c  nop      
+00016a60  madd     x24, x8, x12, x9
+00016a64  mov      x0, x24
+00016a68  bl       #0x382c0 ; memcpy@plt
+00016a6c  cbz      x22, #0x16a7c
+00016a70  mov      x0, x22
+00016a74  bl       #0x32b5c ; _ZdlPv
+00016a78  ldr      w25, [sp, #0x108]
+00016a7c  ldr      x28, [sp, #0x20]
+00016a80  mov      x22, x27
+00016a84  mov      x27, #-0x5555555555555556
+00016a88  movk     x27, #0xaaab
+00016a8c  cmp      w25, #3
+00016a90  b.lt     #0x16774
+00016a94  mov      x23, x22
+00016a98  ldr      x22, [sp, #0x120]
+00016a9c  ldr      x1, [sp, #0x98]
+00016aa0  ldp      x2, x3, [sp, #0x80]
+00016aa4  str      x24, [sp, #0x18]
+00016aa8  mov      x0, x22
+00016aac  bl       #0x17f8c ; _ZN12_GLOBAL__N_17validVmEP7_JavaVMS1_RKNSt6__ndk16vectorINS_7MappingENS2_9allocatorIS4_EEEE
+00016ab0  tbz      w0, #0, #0x16aec
+00016ab4  ldr      x8, [sp, #0x28]
+00016ab8  mov      x10, x23
+00016abc  cmp      x23, x8
+00016ac0  b.hs     #0x16af8
+00016ac4  stp      x22, xzr, [x10]
+00016ac8  add      x9, sp, #0xd0
+00016acc  ldr      x24, [sp, #0x18]
+00016ad0  ldr      w8, [sp, #0xf0]
+00016ad4  ldur     w9, [x9, #0x23]
+00016ad8  add      x22, x10, #0x18
+00016adc  strb     wzr, [x10, #0x10]
+00016ae0  stur     w8, [x10, #0x11]
+00016ae4  str      w9, [x10, #0x14]
+00016ae8  b        #0x16bd4 ; 
+00016aec  ldr      x24, [sp, #0x18]
+00016af0  mov      x22, x23
+00016af4  b        #0x16bd4 ; 
+00016af8  ldr      x9, [sp, #0x18]
+00016afc  mov      x11, #-0x5555555555555556
+00016b00  movk     x11, #0xaaa, lsl #48
+00016b04  sub      x23, x10, x9
+00016b08  asr      x8, x23, #3
+00016b0c  mul      x24, x8, x27
+00016b10  add      x8, x24, #1
+00016b14  cmp      x8, x11
+00016b18  b.hi     #0x16fa8
+00016b1c  ldr      x10, [sp, #0x28]
+00016b20  sub      x9, x10, x9
+00016b24  asr      x9, x9, #3
+00016b28  mul      x9, x9, x27
+00016b2c  lsl      x10, x9, #1
+00016b30  cmp      x10, x8
+00016b34  csel     x8, x10, x8, hi
+00016b38  mov      x10, #0x5555555555555555
+00016b3c  movk     x10, #0x555, lsl #48
+00016b40  cmp      x9, x10
+00016b44  csel     x28, x8, x11, lo
+00016b48  cbz      x28, #0x16b64
+00016b4c  cmp      x28, x11
+00016b50  b.hi     #0x16fc0
+00016b54  add      x8, x28, x28, lsl #1
+00016b58  lsl      x0, x8, #3
+00016b5c  bl       #0x38124 ; _Znwm
+00016b60  b        #0x16b68 ; 
+00016b64  mov      x0, xzr
+00016b68  mov      x8, #0x5555555555555555
+00016b6c  mov      w12, #0x18
+00016b70  mov      x2, x23
+00016b74  movk     x8, #0xd555, lsl #48
+00016b78  madd     x9, x24, x12, x0
+00016b7c  smulh    x8, x23, x8
+00016b80  madd     x11, x28, x12, x0
+00016b84  stp      x22, xzr, [x9]
+00016b88  ldr      x22, [sp, #0x18]
+00016b8c  add      x27, x9, #0x18
+00016b90  strb     wzr, [x9, #0x10]
+00016b94  asr      x10, x8, #2
+00016b98  mov      x1, x22
+00016b9c  add      x8, x10, x8, lsr #63
+00016ba0  str      x11, [sp, #0x28]
+00016ba4  nop      
+00016ba8  madd     x24, x8, x12, x9
+00016bac  mov      x0, x24
+00016bb0  bl       #0x382c0 ; memcpy@plt
+00016bb4  cbz      x22, #0x16bc4
+00016bb8  mov      x0, x22
+00016bbc  bl       #0x32b5c ; _ZdlPv
+00016bc0  ldr      w25, [sp, #0x108]
+00016bc4  ldr      x28, [sp, #0x20]
+00016bc8  mov      x22, x27
+00016bcc  mov      x27, #-0x5555555555555556
+00016bd0  movk     x27, #0xaaab
+00016bd4  cmp      w25, #4
+00016bd8  b.lt     #0x16774
+00016bdc  mov      x23, x22
+00016be0  ldr      x22, [sp, #0x128]
+00016be4  ldr      x1, [sp, #0x98]
+00016be8  ldp      x2, x3, [sp, #0x80]
+00016bec  str      x24, [sp, #0x18]
+00016bf0  mov      x0, x22
+00016bf4  bl       #0x17f8c ; _ZN12_GLOBAL__N_17validVmEP7_JavaVMS1_RKNSt6__ndk16vectorINS_7MappingENS2_9allocatorIS4_EEEE
+00016bf8  tbz      w0, #0, #0x1676c
+00016bfc  ldr      x8, [sp, #0x28]
+00016c00  mov      x10, x23
+00016c04  cmp      x23, x8
+00016c08  b.hs     #0x16c34
+00016c0c  stp      x22, xzr, [x10]
+00016c10  add      x9, sp, #0xd0
+00016c14  ldr      x24, [sp, #0x18]
+00016c18  ldr      w8, [sp, #0xf0]
+00016c1c  ldur     w9, [x9, #0x23]
+00016c20  add      x22, x10, #0x18
+00016c24  strb     wzr, [x10, #0x10]
+00016c28  stur     w8, [x10, #0x11]
+00016c2c  str      w9, [x10, #0x14]
+00016c30  b        #0x16774 ; 
+00016c34  ldr      x9, [sp, #0x18]
+00016c38  mov      x11, #-0x5555555555555556
+00016c3c  movk     x11, #0xaaa, lsl #48
+00016c40  sub      x23, x10, x9
+00016c44  asr      x8, x23, #3
+00016c48  mul      x24, x8, x27
+00016c4c  add      x8, x24, #1
+00016c50  cmp      x8, x11
+00016c54  b.hi     #0x16fa8
+00016c58  ldr      x10, [sp, #0x28]
+00016c5c  sub      x9, x10, x9
+00016c60  asr      x9, x9, #3
+00016c64  mul      x9, x9, x27
+00016c68  lsl      x10, x9, #1
+00016c6c  cmp      x10, x8
+00016c70  csel     x8, x10, x8, hi
+00016c74  mov      x10, #0x5555555555555555
+00016c78  movk     x10, #0x555, lsl #48
+00016c7c  cmp      x9, x10
+00016c80  csel     x25, x8, x11, lo
+00016c84  cbz      x25, #0x16ca4
+00016c88  cmp      x25, x11
+00016c8c  b.hi     #0x16fc0
+00016c90  add      x8, x25, x25, lsl #1
+00016c94  lsl      x0, x8, #3
+00016c98  bl       #0x38124 ; _Znwm
+00016c9c  ldr      x28, [sp, #0x20]
+00016ca0  b        #0x16ca8 ; 
+00016ca4  mov      x0, xzr
+00016ca8  mov      x8, #0x5555555555555555
+00016cac  mov      w12, #0x18
+00016cb0  mov      x2, x23
+00016cb4  movk     x8, #0xd555, lsl #48
+00016cb8  madd     x9, x24, x12, x0
+00016cbc  smulh    x8, x23, x8
+00016cc0  madd     x11, x25, x12, x0
+00016cc4  stp      x22, xzr, [x9]
+00016cc8  ldr      x22, [sp, #0x18]
+00016ccc  add      x25, x9, #0x18
+00016cd0  strb     wzr, [x9, #0x10]
+00016cd4  asr      x10, x8, #2
+00016cd8  mov      x1, x22
+00016cdc  add      x8, x10, x8, lsr #63
+00016ce0  str      x11, [sp, #0x28]
+00016ce4  nop      
+00016ce8  madd     x24, x8, x12, x9
+00016cec  mov      x0, x24
+00016cf0  bl       #0x382c0 ; memcpy@plt
+00016cf4  cbz      x22, #0x16d00
+00016cf8  mov      x0, x22
+00016cfc  bl       #0x32b5c ; _ZdlPv
+00016d00  mov      x22, x25
+00016d04  b        #0x16774 ; 
+00016d08  ldp      x8, x9, [sp, #0xa0]
+00016d0c  ldr      x10, [x19]
+00016d10  subs     x9, x9, x8
+00016d14  lsr      x2, x9, #1
+00016d18  ldr      x9, [x10, #0x518]
+00016d1c  csel     x1, x23, x8, eq
+00016d20  mov      x0, x19
+00016d24  blr      x9
+00016d28  mov      x20, x0
+00016d2c  ldr      x0, [sp, #0xa0]
+00016d30  cbz      x0, #0x14920
+00016d34  str      x0, [sp, #0xa8]
+00016d38  bl       #0x32b5c ; _ZdlPv
+00016d3c  b        #0x14920 ; 
+00016d40  add      x1, sp, #0x110
+00016d44  mov      x0, x21
+00016d48  mov      w2, #0x10
+00016d4c  bl       #0x38320 ; strtoull@plt
+00016d50  ldr      w8, [x24]
+00016d54  cbnz     w8, #0x15650
+00016d58  ldr      x8, [sp, #0x110]
+00016d5c  cbz      x8, #0x15650
+00016d60  ldrb     w8, [x8]
+00016d64  cbnz     w8, #0x15650
+00016d68  mov      x24, x0
+00016d6c  cbz      x0, #0x15650
+00016d70  ldr      x1, [sp, #0x98]
+00016d74  mov      x0, x23
+00016d78  mov      x2, x20
+00016d7c  mov      x3, x22
+00016d80  bl       #0x17f8c ; _ZN12_GLOBAL__N_17validVmEP7_JavaVMS1_RKNSt6__ndk16vectorINS_7MappingENS2_9allocatorIS4_EEEE
+00016d84  tbz      w0, #0, #0x15650
+00016d88  ldp      x9, x8, [sp, #0x28]
+00016d8c  cmp      x8, x9
+00016d90  b.hs     #0x16dc0
+00016d94  ldr      x10, [sp, #0x30]
+00016d98  mov      w8, #1
+00016d9c  stp      x23, x24, [x10]
+00016da0  add      x23, x10, #0x18
+00016da4  strb     w8, [x10, #0x10]
+00016da8  add      x8, sp, #0xd0
+00016dac  ldr      w9, [sp, #0x110]
+00016db0  ldur     w8, [x8, #0x43]
+00016db4  stur     w9, [x10, #0x11]
+00016db8  str      w8, [x10, #0x14]
+00016dbc  b        #0x16e98 ; 
+00016dc0  ldr      x8, [sp, #0x18]
+00016dc4  ldr      x9, [sp, #0x30]
+00016dc8  mov      x10, #-0x5555555555555556
+00016dcc  movk     x10, #0xaaa, lsl #48
+00016dd0  sub      x21, x9, x8
+00016dd4  mov      x9, #-0x5555555555555556
+00016dd8  asr      x8, x21, #3
+00016ddc  movk     x9, #0xaaab
+00016de0  mul      x20, x8, x9
+00016de4  add      x8, x20, #1
+00016de8  cmp      x8, x10
+00016dec  b.hi     #0x16ff4
+00016df0  ldr      x10, [sp, #0x18]
+00016df4  ldr      x11, [sp, #0x28]
+00016df8  sub      x10, x11, x10
+00016dfc  asr      x10, x10, #3
+00016e00  mul      x9, x10, x9
+00016e04  lsl      x10, x9, #1
+00016e08  cmp      x10, x8
+00016e0c  csel     x8, x10, x8, hi
+00016e10  mov      x10, #0x5555555555555555
+00016e14  movk     x10, #0x555, lsl #48
+00016e18  cmp      x9, x10
+00016e1c  mov      x9, #-0x5555555555555556
+00016e20  movk     x9, #0xaaa, lsl #48
+00016e24  csel     x22, x8, x9, lo
+00016e28  cbz      x22, #0x16e4c
+00016e2c  mov      x8, #-0x5555555555555556
+00016e30  movk     x8, #0xaaa, lsl #48
+00016e34  cmp      x22, x8
+00016e38  b.hi     #0x1700c
+00016e3c  add      x8, x22, x22, lsl #1
+00016e40  lsl      x0, x8, #3
+00016e44  bl       #0x38124 ; _Znwm
+00016e48  b        #0x16e50 ; 
+00016e4c  mov      x0, xzr
+00016e50  mov      w8, #0x18
+00016e54  mov      x2, x21
+00016e58  madd     x9, x20, x8, x0
+00016e5c  madd     x8, x22, x8, x0
+00016e60  ldr      x22, [sp, #0x18]
+00016e64  mov      x1, x22
+00016e68  sub      x20, x9, x21
+00016e6c  stp      x23, x24, [x9]
+00016e70  add      x23, x9, #0x18
+00016e74  mov      x0, x20
+00016e78  str      x8, [sp, #0x28]
+00016e7c  mov      w8, #1
+00016e80  strb     w8, [x9, #0x10]
+00016e84  bl       #0x382c0 ; memcpy@plt
+00016e88  cbz      x22, #0x16e94
+00016e8c  ldr      x0, [sp, #0x18]
+00016e90  bl       #0x32b5c ; _ZdlPv
+00016e94  str      x20, [sp, #0x18]
+00016e98  ldp      x24, x28, [sp, #0x18]
+00016e9c  mov      x22, x23
+00016ea0  ldp      x20, x26, [sp, #0xd0]
+00016ea4  cmp      x20, x26
+00016ea8  b.ne     #0x1553c
+00016eac  b        #0x15664 ; 
+00016eb0  ldr      x8, [x28, #0x28]
+00016eb4  ldur     x9, [x29, #-0x18]
+00016eb8  cmp      x8, x9
+00016ebc  b.ne     #0x17378
+00016ec0  add      x0, sp, #0x50
+00016ec4  bl       #0x17934 ; _ZNKSt6__ndk16vectorItNS_9allocatorItEEE20__throw_length_errorB8ne190000Ev
+00016ec8  ldr      x8, [x28, #0x28]
+00016ecc  ldur     x9, [x29, #-0x18]
+00016ed0  cmp      x8, x9
+00016ed4  b.ne     #0x17378
+00016ed8  add      x0, sp, #0x38
+00016edc  bl       #0x17934 ; _ZNKSt6__ndk16vectorItNS_9allocatorItEEE20__throw_length_errorB8ne190000Ev
+00016ee0  ldr      x8, [sp, #0x30]
+00016ee4  str      x20, [sp, #0x80]
+00016ee8  stp      x22, x8, [sp, #0x88]
+00016eec  ldr      x8, [x28, #0x28]
+00016ef0  ldur     x9, [x29, #-0x18]
+00016ef4  cmp      x8, x9
+00016ef8  b.ne     #0x17378
+00016efc  add      x0, sp, #0xd0
+00016f00  bl       #0x183ec ; _ZNKSt6__ndk112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE20__throw_length_errorB8ne190000Ev
+00016f04  ldr      x8, [sp, #0x30]
+00016f08  str      x20, [sp, #0x80]
+00016f0c  stp      x22, x8, [sp, #0x88]
+00016f10  ldr      x8, [sp, #0x20]
+00016f14  ldr      x8, [x8, #0x28]
+00016f18  ldur     x9, [x29, #-0x18]
+00016f1c  cmp      x8, x9
+00016f20  b.ne     #0x17378
+00016f24  bl       #0x18344 ; _ZNKSt6__ndk16vectorIN12_GLOBAL__N_17MappingENS_9allocatorIS2_EEE20__throw_length_errorB8ne190000Ev
+00016f28  ldr      x8, [sp, #0x30]
+00016f2c  str      x20, [sp, #0x80]
+00016f30  stp      x22, x8, [sp, #0x88]
+00016f34  ldr      x8, [sp, #0x20]
+00016f38  ldr      x8, [x8, #0x28]
+00016f3c  ldur     x9, [x29, #-0x18]
+00016f40  cmp      x8, x9
+00016f44  b.ne     #0x17378
+00016f48  bl       #0x179c8 ; _ZSt28__throw_bad_array_new_lengthB8ne190000v
+00016f4c  ldr      x8, [x28, #0x28]
+00016f50  ldur     x9, [x29, #-0x18]
+00016f54  cmp      x8, x9
+00016f58  b.ne     #0x17378
+00016f5c  bl       #0x18e44 ; _ZNKSt6__ndk16vectorIN12_GLOBAL__N_19CandidateENS_9allocatorIS2_EEE20__throw_length_errorB8ne190000Ev
+00016f60  ldr      x8, [x28, #0x28]
+00016f64  ldur     x9, [x29, #-0x18]
+00016f68  cmp      x8, x9
+00016f6c  b.ne     #0x17378
+00016f70  bl       #0x179c8 ; _ZSt28__throw_bad_array_new_lengthB8ne190000v
+00016f74  ldr      x8, [sp, #0x20]
+00016f78  ldr      x8, [x8, #0x28]
+00016f7c  ldur     x9, [x29, #-0x18]
+00016f80  cmp      x8, x9
+00016f84  b.ne     #0x17378
+00016f88  add      x0, sp, #0x68
+00016f8c  bl       #0x18e58 ; _ZNKSt6__ndk16vectorIP7_jclassNS_9allocatorIS2_EEE20__throw_length_errorB8ne190000Ev
+00016f90  ldr      x8, [sp, #0x20]
+00016f94  ldr      x8, [x8, #0x28]
+00016f98  ldur     x9, [x29, #-0x18]
+00016f9c  cmp      x8, x9
+00016fa0  b.ne     #0x17378
+00016fa4  bl       #0x179c8 ; _ZSt28__throw_bad_array_new_lengthB8ne190000v
+00016fa8  ldr      x8, [sp, #0x20]
+00016fac  ldr      x8, [x8, #0x28]
+00016fb0  ldur     x9, [x29, #-0x18]
+00016fb4  cmp      x8, x9
+00016fb8  b.ne     #0x17378
+00016fbc  bl       #0x18e44 ; _ZNKSt6__ndk16vectorIN12_GLOBAL__N_19CandidateENS_9allocatorIS2_EEE20__throw_length_errorB8ne190000Ev
+00016fc0  ldr      x8, [sp, #0x20]
+00016fc4  ldr      x8, [x8, #0x28]
+00016fc8  ldur     x9, [x29, #-0x18]
+00016fcc  cmp      x8, x9
+00016fd0  b.ne     #0x17378
+00016fd4  bl       #0x179c8 ; _ZSt28__throw_bad_array_new_lengthB8ne190000v
+00016fd8  ldr      x8, [sp, #0x20]
+00016fdc  ldr      x8, [x8, #0x28]
+00016fe0  ldur     x9, [x29, #-0x18]
+00016fe4  cmp      x8, x9
+00016fe8  b.ne     #0x17378
+00016fec  add      x0, sp, #0xf0
+00016ff0  bl       #0x17934 ; _ZNKSt6__ndk16vectorItNS_9allocatorItEEE20__throw_length_errorB8ne190000Ev
+00016ff4  ldr      x8, [sp, #0x20]
+00016ff8  ldr      x8, [x8, #0x28]
+00016ffc  ldur     x9, [x29, #-0x18]
+00017000  cmp      x8, x9
+00017004  b.ne     #0x17378
+00017008  bl       #0x18e44 ; _ZNKSt6__ndk16vectorIN12_GLOBAL__N_19CandidateENS_9allocatorIS2_EEE20__throw_length_errorB8ne190000Ev
+0001700c  ldr      x8, [sp, #0x20]
+00017010  ldr      x8, [x8, #0x28]
+00017014  ldur     x9, [x29, #-0x18]
+00017018  cmp      x8, x9
+0001701c  b.ne     #0x17378
+00017020  bl       #0x179c8 ; _ZSt28__throw_bad_array_new_lengthB8ne190000v
+00017024  b        #0x17074 ; 
+00017028  b        #0x17074 ; 
+0001702c  b        #0x171e4 ; 
+00017030  b        #0x17074 ; 
+00017034  b        #0x17074 ; 
+00017038  b        #0x17074 ; 
+0001703c  b        #0x17074 ; 
+00017040  b        #0x17074 ; 
+00017044  b        #0x17074 ; 
+00017048  ldr      x8, [sp, #0xf0]
+0001704c  mov      x23, x0
+00017050  cbz      x8, #0x1720c
+00017054  mov      x0, x8
+00017058  str      x8, [sp, #0xf8]
+0001705c  bl       #0x32b5c ; _ZdlPv
+00017060  b        #0x1720c ; 
+00017064  b        #0x17208 ; 
+00017068  b        #0x17074 ; 
+0001706c  b        #0x17208 ; 
+00017070  b        #0x17074 ; 
+00017074  mov      x23, x0
+00017078  ldr      x0, [sp, #0xf0]
+0001707c  cbz      x0, #0x1720c
+00017080  bl       #0x32b5c ; _ZdlPv
+00017084  b        #0x1720c ; 
+00017088  b        #0x17208 ; 
+0001708c  b        #0x172a0 ; 
+00017090  b        #0x171e4 ; 
+00017094  b        #0x17208 ; 
+00017098  ldr      x8, [sp, #0xa0]
+0001709c  mov      x23, x0
+000170a0  str      x28, [sp, #0x20]
+000170a4  cbz      x8, #0x172a8
+000170a8  mov      x0, x8
+000170ac  str      x8, [sp, #0xa8]
+000170b0  bl       #0x32b5c ; _ZdlPv
+000170b4  b        #0x172a8 ; 
+000170b8  b        #0x171e4 ; 
+000170bc  b        #0x170c4 ; 
+000170c0  b        #0x17100 ; 
+000170c4  ldr      x1, [sp, #0x70]
+000170c8  mov      x23, x0
+000170cc  add      x0, sp, #0x68
+000170d0  bl       #0x18b1c ; _ZNSt6__ndk16__treeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_4lessIS6_EENS4_IS6_EEE7destroyEPNS_11__tree_nodeIS6_PvEE
+000170d4  ldrb     w8, [sp, #0x128]
+000170d8  tbz      w8, #0, #0x170e4
+000170dc  ldr      x0, [sp, #0x138]
+000170e0  bl       #0x32b5c ; _ZdlPv
+000170e4  ldrb     w8, [sp, #0x110]
+000170e8  tbz      w8, #0, #0x17254
+000170ec  ldr      x0, [sp, #0x120]
+000170f0  b        #0x17250 ; 
+000170f4  b        #0x171bc ; 
+000170f8  b        #0x171e4 ; 
+000170fc  b        #0x172a0 ; 
+00017100  ldr      x1, [sp, #0xd8]
+00017104  mov      x23, x0
+00017108  add      x0, sp, #0xd0
+0001710c  bl       #0x18b1c ; _ZNSt6__ndk16__treeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_4lessIS6_EENS4_IS6_EEE7destroyEPNS_11__tree_nodeIS6_PvEE
+00017110  ldrb     w8, [sp, #0x140]
+00017114  tbnz     w8, #0, #0x1712c
+00017118  ldrb     w8, [sp, #0x128]
+0001711c  tbnz     w8, #0, #0x1713c
+00017120  ldrb     w8, [sp, #0x110]
+00017124  tbnz     w8, #0, #0x1714c
+00017128  b        #0x17264 ; 
+0001712c  ldr      x0, [sp, #0x150]
+00017130  bl       #0x32b5c ; _ZdlPv
+00017134  ldrb     w8, [sp, #0x128]
+00017138  tbz      w8, #0, #0x17120
+0001713c  ldr      x0, [sp, #0x138]
+00017140  bl       #0x32b5c ; _ZdlPv
+00017144  ldrb     w8, [sp, #0x110]
+00017148  tbz      w8, #0, #0x17264
+0001714c  ldr      x0, [sp, #0x120]
+00017150  b        #0x17260 ; 
+00017154  b        #0x171e4 ; 
+00017158  b        #0x17208 ; 
+0001715c  b        #0x17208 ; 
+00017160  ldr      x8, [sp, #0x30]
+00017164  mov      x23, x0
+00017168  str      x20, [sp, #0x80]
+0001716c  stp      x22, x8, [sp, #0x88]
+00017170  b        #0x171c8 ; 
+00017174  b        #0x171e4 ; 
+00017178  bl       #0x17538 ; __clang_call_terminate
+0001717c  b        #0x172a0 ; 
+00017180  bl       #0x17538 ; __clang_call_terminate
+00017184  ldr      x8, [sp, #0x30]
+00017188  mov      x23, x0
+0001718c  str      x20, [sp, #0x80]
+00017190  stp      x22, x8, [sp, #0x88]
+00017194  b        #0x171d8 ; 
+00017198  ldr      x8, [sp, #0x30]
+0001719c  mov      x23, x0
+000171a0  str      x20, [sp, #0x80]
+000171a4  stp      x22, x8, [sp, #0x88]
+000171a8  b        #0x17264 ; 
+000171ac  b        #0x171bc ; 
+000171b0  b        #0x171bc ; 
+000171b4  b        #0x171e4 ; 
+000171b8  b        #0x171e4 ; 
+000171bc  str      x24, [sp, #0x18]
+000171c0  b        #0x171e4 ; 
+000171c4  mov      x23, x0
+000171c8  ldrb     w8, [sp, #0xb8]
+000171cc  tbz      w8, #0, #0x171d8
+000171d0  ldr      x0, [sp, #0xc8]
+000171d4  bl       #0x32b5c ; _ZdlPv
+000171d8  tbz      w25, #0, #0x17264
+000171dc  ldr      x0, [sp, #0xe0]
+000171e0  b        #0x17260 ; 
+000171e4  mov      x23, x0
+000171e8  b        #0x17224 ; 
+000171ec  mov      x23, x0
+000171f0  str      x28, [sp, #0x20]
+000171f4  b        #0x1726c ; 
+000171f8  mov      x23, x0
+000171fc  b        #0x17264 ; 
+00017200  b        #0x17208 ; 
+00017204  b        #0x172c8 ; 
+00017208  mov      x23, x0
+0001720c  ldrb     w8, [sp, #0x120]
+00017210  cbz      w8, #0x17224
+00017214  ldr      x0, [sp, #0x110]
+00017218  ldr      x8, [x0]
+0001721c  ldr      x8, [x8, #0x28]
+00017220  blr      x8
+00017224  ldr      x8, [sp, #0x18]
+00017228  cbz      x8, #0x17234
+0001722c  ldr      x0, [sp, #0x18]
+00017230  bl       #0x32b5c ; _ZdlPv
+00017234  ldr      x0, [sp, #0x68]
+00017238  cbz      x0, #0x17244
+0001723c  str      x0, [sp, #0x70]
+00017240  bl       #0x32b5c ; _ZdlPv
+00017244  ldr      x0, [sp, #0xd0]
+00017248  cbz      x0, #0x17254
+0001724c  str      x0, [sp, #0xd8]
+00017250  bl       #0x32b5c ; _ZdlPv
+00017254  ldr      x0, [sp, #0xa0]
+00017258  cbz      x0, #0x17264
+0001725c  str      x0, [sp, #0xa8]
+00017260  bl       #0x32b5c ; _ZdlPv
+00017264  add      x0, sp, #0x80
+00017268  bl       #0x182bc ; _ZNSt6__ndk16vectorIN12_GLOBAL__N_17MappingENS_9allocatorIS2_EEED2B8ne190000Ev
+0001726c  adrp     x0, #0x43000
+00017270  add      x0, x0, #0x970
+00017274  bl       #0x19278 ; _ZNSt6__ndk15mutex6unlockEv
+00017278  ldr      x21, [sp, #0x38]
+0001727c  cbnz     x21, #0x17304
+00017280  b        #0x17310 ; 
+00017284  bl       #0x17538 ; __clang_call_terminate
+00017288  mov      x23, x0
+0001728c  str      x28, [sp, #0x20]
+00017290  b        #0x17304 ; 
+00017294  str      x28, [sp, #0x20]
+00017298  mov      x23, x0
+0001729c  b        #0x173b4 ; 
+000172a0  mov      x23, x0
+000172a4  str      x28, [sp, #0x20]
+000172a8  ldrb     w8, [sp, #0x120]
+000172ac  cbz      w8, #0x1726c
+000172b0  ldr      x0, [sp, #0x110]
+000172b4  ldr      x8, [x0]
+000172b8  ldr      x8, [x8, #0x28]
+000172bc  blr      x8
+000172c0  b        #0x1726c ; 
+000172c4  bl       #0x17538 ; __clang_call_terminate
+000172c8  mov      x23, x0
+000172cc  str      x28, [sp, #0x20]
+000172d0  cbnz     x21, #0x17304
+000172d4  b        #0x17310 ; 
+000172d8  str      x28, [sp, #0x20]
+000172dc  mov      x23, x0
+000172e0  b        #0x17310 ; 
+000172e4  b        #0x172e8 ; 
+000172e8  str      x28, [sp, #0x20]
+000172ec  mov      x23, x0
+000172f0  b        #0x1731c ; 
+000172f4  ldr      x21, [sp, #0x38]
+000172f8  mov      x23, x0
+000172fc  str      x28, [sp, #0x20]
+00017300  cbz      x21, #0x17310
+00017304  mov      x0, x21
+00017308  str      x21, [sp, #0x40]
+0001730c  bl       #0x32b5c ; _ZdlPv
+00017310  ldr      x0, [sp, #0x50]
+00017314  cbz      x0, #0x1731c
+00017318  bl       #0x32b5c ; _ZdlPv
+0001731c  mov      x0, x23
+00017320  bl       #0x32be4 ; __cxa_begin_catch
+00017324  ldr      x8, [x19]
+00017328  ldr      x8, [x8, #0x720]
+0001732c  mov      x0, x19
+00017330  blr      x8
+00017334  tst      w0, #0xff
+00017338  b.eq     #0x17344
+0001733c  mov      x20, xzr
+00017340  b        #0x17360 ; 
+00017344  ldr      x8, [x19]
+00017348  ldr      x8, [x8, #0x538]
+0001734c  adrp     x1, #0xb000
+00017350  add      x1, x1, #0x6ad
+00017354  mov      x0, x19
+00017358  blr      x8
+0001735c  mov      x20, x0
+00017360  bl       #0x32dfc ; __cxa_end_catch
+00017364  ldr      x28, [sp, #0x20]
+00017368  ldr      x8, [x28, #0x28]
+0001736c  ldur     x9, [x29, #-0x18]
+00017370  cmp      x8, x9
+00017374  b.eq     #0x14868
+00017378  bl       #0x38340 ; __stack_chk_fail@plt
+0001737c  mov      x19, x0
+00017380  bl       #0x32dfc ; __cxa_end_catch
+00017384  ldr      x8, [sp, #0x20]
+00017388  ldr      x8, [x8, #0x28]
+0001738c  ldur     x9, [x29, #-0x18]
+00017390  cmp      x8, x9
+00017394  b.ne     #0x17378
+00017398  mov      x0, x19
+0001739c  bl       #0x3439c ; _Unwind_Resume
+000173a0  bl       #0x17538 ; __clang_call_terminate
+000173a4  ldr      x22, [sp, #0x50]
+000173a8  mov      x23, x0
+000173ac  str      x28, [sp, #0x20]
+000173b0  cbz      x22, #0x1731c
+000173b4  str      x22, [sp, #0x58]
+000173b8  mov      x0, x22
+000173bc  b        #0x17318 ; 
+
+FUNCTION Java_net_anubis_client_gui_AndroidSystemPicker_nativeCancel 0x17548 size=848
+00017548  sub      sp, sp, #0x90
+0001754c  stp      x29, x30, [sp, #0x40]
+00017550  str      x25, [sp, #0x50]
+00017554  stp      x24, x23, [sp, #0x60]
+00017558  stp      x22, x21, [sp, #0x70]
+0001755c  stp      x20, x19, [sp, #0x80]
+00017560  add      x29, sp, #0x40
+00017564  mrs      x24, tpidr_el0
+00017568  ldr      x8, [x24, #0x28]
+0001756c  stur     x8, [x29, #-8]
+00017570  cbz      x2, #0x176c4
+00017574  ldr      x8, [x0]
+00017578  mov      x21, x2
+0001757c  mov      x20, x0
+00017580  ldr      x8, [x8, #0x520]
+00017584  mov      x1, x2
+00017588  blr      x8
+0001758c  mov      w22, w0
+00017590  stp      xzr, xzr, [sp, #8]
+00017594  str      xzr, [sp, #0x18]
+00017598  cbz      w0, #0x175f8
+0001759c  tbnz     w22, #0x1f, #0x177f0
+000175a0  sxtw     x25, w22
+000175a4  lsl      x23, x25, #1
+000175a8  mov      x0, x23
+000175ac  bl       #0x38124 ; _Znwm
+000175b0  add      x8, x0, x25, lsl #1
+000175b4  mov      w1, wzr
+000175b8  mov      x2, x23
+000175bc  mov      x19, x0
+000175c0  str      x0, [sp, #8]
+000175c4  str      x8, [sp, #0x18]
+000175c8  bl       #0x38270 ; memset@plt
+000175cc  ldr      x8, [x20]
+000175d0  add      x23, x19, x23
+000175d4  str      x23, [sp, #0x10]
+000175d8  ldr      x8, [x8, #0x6e0]
+000175dc  mov      x0, x20
+000175e0  mov      x1, x21
+000175e4  mov      w2, wzr
+000175e8  mov      w3, w22
+000175ec  mov      x4, x19
+000175f0  blr      x8
+000175f4  b        #0x17600 ; 
+000175f8  mov      x23, xzr
+000175fc  mov      x19, xzr
+00017600  ldr      x8, [x20]
+00017604  ldr      x8, [x8, #0x720]
+00017608  mov      x0, x20
+0001760c  blr      x8
+00017610  tst      w0, #0xff
+00017614  b.ne     #0x176b8
+00017618  adrp     x0, #0x43000
+0001761c  add      x0, x0, #0x970
+00017620  bl       #0x1924c ; _ZNSt6__ndk15mutex4lockEv
+00017624  nop      
+00017628  adr      x22, #0x43940
+0001762c  ldr      x0, [x22, #8]
+00017630  cbz      x0, #0x176ac
+00017634  ldr      x8, [x22]
+00017638  cbz      x8, #0x176ac
+0001763c  strb     wzr, [sp, #0x30]
+00017640  add      x20, sp, #0x20
+00017644  str      xzr, [sp, #0x28]
+00017648  ldr      x8, [x0]
+0001764c  str      x0, [sp, #0x20]
+00017650  ldr      x8, [x8, #0x30]
+00017654  mov      w2, #6
+00017658  add      x1, x20, #8
+0001765c  movk     w2, #1, lsl #16
+00017660  blr      x8
+00017664  cmn      w0, #2
+00017668  b.ne     #0x17690
+0001766c  ldr      x0, [sp, #0x20]
+00017670  ldr      x8, [x0]
+00017674  ldr      x8, [x8, #0x20]
+00017678  add      x1, x20, #8
+0001767c  mov      x2, xzr
+00017680  blr      x8
+00017684  cmp      w0, #0
+00017688  cset     w8, eq
+0001768c  strb     w8, [sp, #0x30]
+00017690  cbz      w0, #0x176f0
+00017694  ldrb     w8, [sp, #0x30]
+00017698  cbz      w8, #0x176ac
+0001769c  ldr      x0, [sp, #0x20]
+000176a0  ldr      x8, [x0]
+000176a4  ldr      x8, [x8, #0x28]
+000176a8  blr      x8
+000176ac  adrp     x0, #0x43000
+000176b0  add      x0, x0, #0x970
+000176b4  bl       #0x19278 ; _ZNSt6__ndk15mutex6unlockEv
+000176b8  cbz      x19, #0x176c4
+000176bc  mov      x0, x19
+000176c0  bl       #0x32b5c ; _ZdlPv
+000176c4  ldr      x8, [x24, #0x28]
+000176c8  ldur     x9, [x29, #-8]
+000176cc  cmp      x8, x9
+000176d0  b.ne     #0x17894
+000176d4  ldp      x20, x19, [sp, #0x80]
+000176d8  ldr      x25, [sp, #0x50]
+000176dc  ldp      x22, x21, [sp, #0x70]
+000176e0  ldp      x24, x23, [sp, #0x60]
+000176e4  ldp      x29, x30, [sp, #0x40]
+000176e8  add      sp, sp, #0x90
+000176ec  ret      
+000176f0  ldr      x0, [sp, #0x28]
+000176f4  cbz      x0, #0x17694
+000176f8  ldr      x8, [x0]
+000176fc  ldr      x8, [x8, #0x30]
+00017700  adrp     x1, #0xb000
+00017704  add      x1, x1, #0xb39
+00017708  blr      x8
+0001770c  mov      x20, x0
+00017710  ldr      x0, [sp, #0x28]
+00017714  ldr      x8, [x0]
+00017718  ldr      x8, [x8, #0x720]
+0001771c  blr      x8
+00017720  tst      w0, #0xff
+00017724  b.eq     #0x17738
+00017728  ldr      x0, [sp, #0x28]
+0001772c  ldr      x8, [x0]
+00017730  ldr      x8, [x8, #0x88]
+00017734  blr      x8
+00017738  cbz      x20, #0x17694
+0001773c  ldr      x0, [sp, #0x28]
+00017740  ldr      x8, [x0]
+00017744  ldr      x8, [x8, #0xb8]
+00017748  mov      x1, x20
+0001774c  blr      x8
+00017750  ldr      x20, [sp, #0x28]
+00017754  subs     x9, x23, x19
+00017758  lsr      x2, x9, #1
+0001775c  nop      
+00017760  adr      x9, #0xbdf6
+00017764  ldr      x8, [x20]
+00017768  csel     x1, x9, x19, eq
+0001776c  ldr      x8, [x8, #0x518]
+00017770  mov      x0, x20
+00017774  blr      x8
+00017778  ldr      x8, [x20]
+0001777c  mov      x21, x0
+00017780  ldr      x8, [x8, #0x720]
+00017784  mov      x0, x20
+00017788  blr      x8
+0001778c  tst      w0, #0xff
+00017790  b.eq     #0x177a8
+00017794  ldr      x8, [x20]
+00017798  ldr      x8, [x8, #0x88]
+0001779c  mov      x0, x20
+000177a0  blr      x8
+000177a4  b        #0x17694 ; 
+000177a8  cbz      x21, #0x17694
+000177ac  ldr      x1, [x22]
+000177b0  ldr      x2, [x22, #0x28]
+000177b4  mov      x0, x20
+000177b8  mov      x3, x21
+000177bc  bl       #0x17898 ; _ZN7_JNIEnv20CallStaticVoidMethodEP7_jclassP10_jmethodIDz
+000177c0  ldr      x8, [x20]
+000177c4  ldr      x8, [x8, #0xb8]
+000177c8  mov      x0, x20
+000177cc  mov      x1, x21
+000177d0  blr      x8
+000177d4  ldr      x8, [x20]
+000177d8  ldr      x8, [x8, #0x720]
+000177dc  mov      x0, x20
+000177e0  blr      x8
+000177e4  tst      w0, #0xff
+000177e8  b.ne     #0x17794
+000177ec  b        #0x17694 ; 
+000177f0  ldr      x8, [x24, #0x28]
+000177f4  ldur     x9, [x29, #-8]
+000177f8  cmp      x8, x9
+000177fc  b.ne     #0x17894
+00017800  add      x0, sp, #8
+00017804  bl       #0x17934 ; _ZNKSt6__ndk16vectorItNS_9allocatorItEEE20__throw_length_errorB8ne190000Ev
+00017808  b        #0x17814 ; 
+0001780c  bl       #0x17538 ; __clang_call_terminate
+00017810  b        #0x1784c ; 
+00017814  ldrb     w8, [sp, #0x30]
+00017818  mov      x20, x0
+0001781c  cbz      w8, #0x17830
+00017820  ldr      x0, [sp, #0x20]
+00017824  ldr      x8, [x0]
+00017828  ldr      x8, [x8, #0x28]
+0001782c  blr      x8
+00017830  adrp     x0, #0x43000
+00017834  add      x0, x0, #0x970
+00017838  bl       #0x19278 ; _ZNSt6__ndk15mutex6unlockEv
+0001783c  b        #0x17850 ; 
+00017840  bl       #0x17538 ; __clang_call_terminate
+00017844  mov      x20, x0
+00017848  b        #0x1786c ; 
+0001784c  mov      x20, x0
+00017850  cbnz     x19, #0x17870
+00017854  b        #0x17878 ; 
+00017858  mov      x20, x0
+0001785c  b        #0x17878 ; 
+00017860  ldr      x19, [sp, #8]
+00017864  mov      x20, x0
+00017868  cbz      x19, #0x17878
+0001786c  str      x19, [sp, #0x10]
+00017870  mov      x0, x19
+00017874  bl       #0x32b5c ; _ZdlPv
+00017878  mov      x0, x20
+0001787c  bl       #0x32be4 ; __cxa_begin_catch
+00017880  bl       #0x32dfc ; __cxa_end_catch
+00017884  ldr      x8, [x24, #0x28]
+00017888  ldur     x9, [x29, #-8]
+0001788c  cmp      x8, x9
+00017890  b.eq     #0x176d4
+00017894  bl       #0x38340 ; __stack_chk_fail@plt

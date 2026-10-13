@@ -1,0 +1,11 @@
+# Keep target binaries and real account/config secrets out of a report repository.
+*.jar
+*.class
+*.dex
+*.dll
+*.so
+*.dylib
+accounts.json
+proxies.json
+input/
+downloads/

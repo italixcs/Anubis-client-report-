@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 480" role="img" aria-labelledby="title desc">
+  <title id="title">Anubis Beta 0.9.9.1 — static account-security review</title>
+  <desc id="desc">No account or session-token stealing path identified. Plaintext saved tokens are a confirmed local exposure. The review is static only and applies to one artifact hash.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0c1726"/><stop offset="1" stop-color="#172b3b"/></linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#f5d58c"/><stop offset="1" stop-color="#cf9c43"/></linearGradient>
+  </defs>
+  <rect width="1280" height="480" rx="22" fill="url(#background)"/>
+  <path d="M950 0H1280V480H1090L890 280Z" fill="#ffffff" opacity=".025"/>
+  <path d="M1120 89L1210 121V218C1210 273 1172 310 1120 334C1068 310 1030 273 1030 218V121Z" fill="#192f3d" stroke="#d7b46b" stroke-width="2"/>
+  <path d="M1087 204L1110 227L1154 178" fill="none" stroke="#d7b46b" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="52" y="56" fill="#d7b46b" font-size="16" letter-spacing="3">INDEPENDENT ARTIFACT REVIEW · 13 OCT 2026</text>
+    <text x="48" y="144" fill="#f6f7fa" font-size="78" font-weight="700" letter-spacing="2">ANUBIS</text>
+    <text x="52" y="190" fill="#e0e6ec" font-size="29">Account &amp; session-token security</text>
+    <text x="52" y="226" fill="#9fb2c4" font-size="19">Beta 0.9.9.1 · Fabric · Minecraft 1.21.11</text>
+    <rect x="52" y="263" width="914" height="83" rx="12" fill="#122b2a" stroke="#2d5b4e"/>
+    <circle cx="77" cy="287" r="5" fill="#a3d4bd"/>
+    <text x="95" y="294" fill="#d7efdf" font-size="23" font-weight="700">No token-stealing path identified</text>
+    <text x="76" y="325" fill="#c4d2d5" font-size="17">Confirmed concern: saved login tokens are stored in plaintext.</text>
+    <rect x="52" y="372" width="145" height="31" rx="6" fill="#24384b"/>
+    <rect x="210" y="372" width="206" height="31" rx="6" fill="#24384b"/>
+    <rect x="429" y="372" width="192" height="31" rx="6" fill="#24384b"/>
+    <text x="72" y="393" fill="#dce4ee" font-size="13" letter-spacing="1">STATIC ONLY</text>
+    <text x="230" y="393" fill="#dce4ee" font-size="13" letter-spacing="1">EVIDENCE + BYTECODE</text>
+    <text x="449" y="393" fill="#dce4ee" font-size="13" letter-spacing="1">EXACT-HASH SCOPE</text>
+    <text x="52" y="446" fill="#8fa6b9" font-size="15">No target execution. No invented safe percentage. Native and indirect-code limits remain.</text>
+  </g>
+  <rect x="52" y="76" width="106" height="3" rx="1.5" fill="url(#gold)"/>
+</svg>

@@ -1,0 +1,1005 @@
+Classfile analysis-workspace/extracted/run.oEA4CbVx/net/anubis/client/gui/HudEmblem.class
+  Last modified Oct 13, 2026; size 5178 bytes
+  SHA-256 checksum e62139997bbb2c9c82bb1b17e5ef733e90c85ce8c83addfa78478a8f04b5b49d
+  Compiled from "HudEmblem.java"
+final class net.anubis.client.gui.HudEmblem
+  minor version: 0
+  major version: 65
+  flags: (0x0030) ACC_FINAL, ACC_SUPER
+  this_class: #2                          // net/anubis/client/gui/HudEmblem
+  super_class: #4                         // java/lang/Object
+  interfaces: 0, fields: 10, methods: 5, attributes: 3
+Constant pool:
+    #1 = Utf8               net/anubis/client/gui/HudEmblem
+    #2 = Class              #1            // net/anubis/client/gui/HudEmblem
+    #3 = Utf8               java/lang/Object
+    #4 = Class              #3            // java/lang/Object
+    #5 = Utf8               HudEmblem.java
+    #6 = Utf8               net/anubis/client/gui/ThemeImages$Texture
+    #7 = Class              #6            // net/anubis/client/gui/ThemeImages$Texture
+    #8 = Utf8               net/anubis/client/gui/ThemeImages
+    #9 = Class              #8            // net/anubis/client/gui/ThemeImages
+   #10 = Utf8               Texture
+   #11 = Utf8               LOGGER
+   #12 = Utf8               Lorg/slf4j/Logger;
+   #13 = Utf8               SOURCE
+   #14 = Utf8               Ljava/lang/String;
+   #15 = Utf8               /assets/anubis/textures/gui/hud_emblem.png
+   #16 = String             #15           // /assets/anubis/textures/gui/hud_emblem.png
+   #17 = Utf8               INK_GAMMA
+   #18 = Utf8               F
+   #19 = Float              0.65f
+   #20 = Utf8               INK_GAIN
+   #21 = Float              1.35f
+   #22 = Utf8               ink
+   #23 = Utf8               [F
+   #24 = Utf8               inkW
+   #25 = Utf8               I
+   #26 = Utf8               inkH
+   #27 = Utf8               missing
+   #28 = Utf8               Z
+   #29 = Utf8               sized
+   #30 = Utf8               Lnet/anubis/client/gui/ThemeImages$Texture;
+   #31 = Utf8               sizedHeight
+   #32 = Utf8               <init>
+   #33 = Utf8               ()V
+   #34 = NameAndType        #32:#33       // "<init>":()V
+   #35 = Methodref          #4.#34        // java/lang/Object."<init>":()V
+   #36 = Utf8               this
+   #37 = Utf8               Lnet/anubis/client/gui/HudEmblem;
+   #38 = Utf8               forHeight
+   #39 = Utf8               (I)Lnet/anubis/client/gui/ThemeImages$Texture;
+   #40 = Utf8               height
+   #41 = NameAndType        #27:#28       // missing:Z
+   #42 = Fieldref           #2.#41        // net/anubis/client/gui/HudEmblem.missing:Z
+   #43 = NameAndType        #31:#25       // sizedHeight:I
+   #44 = Fieldref           #2.#43        // net/anubis/client/gui/HudEmblem.sizedHeight:I
+   #45 = NameAndType        #29:#30       // sized:Lnet/anubis/client/gui/ThemeImages$Texture;
+   #46 = Fieldref           #2.#45        // net/anubis/client/gui/HudEmblem.sized:Lnet/anubis/client/gui/ThemeImages$Texture;
+   #47 = NameAndType        #22:#23       // ink:[F
+   #48 = Fieldref           #2.#47        // net/anubis/client/gui/HudEmblem.ink:[F
+   #49 = Utf8               load
+   #50 = Utf8               ()Z
+   #51 = NameAndType        #49:#50       // load:()Z
+   #52 = Methodref          #2.#51        // net/anubis/client/gui/HudEmblem.load:()Z
+   #53 = NameAndType        #24:#25       // inkW:I
+   #54 = Fieldref           #2.#53        // net/anubis/client/gui/HudEmblem.inkW:I
+   #55 = NameAndType        #26:#25       // inkH:I
+   #56 = Fieldref           #2.#55        // net/anubis/client/gui/HudEmblem.inkH:I
+   #57 = Utf8               java/lang/Math
+   #58 = Class              #57           // java/lang/Math
+   #59 = Utf8               round
+   #60 = Utf8               (F)I
+   #61 = NameAndType        #59:#60       // round:(F)I
+   #62 = Methodref          #58.#61       // java/lang/Math.round:(F)I
+   #63 = Utf8               max
+   #64 = Utf8               (II)I
+   #65 = NameAndType        #63:#64       // max:(II)I
+   #66 = Methodref          #58.#65       // java/lang/Math.max:(II)I
+   #67 = Utf8               org/lwjgl/system/MemoryUtil
+   #68 = Class              #67           // org/lwjgl/system/MemoryUtil
+   #69 = Utf8               memAlloc
+   #70 = Utf8               (I)Ljava/nio/ByteBuffer;
+   #71 = NameAndType        #69:#70       // memAlloc:(I)Ljava/nio/ByteBuffer;
+   #72 = Methodref          #68.#71       // org/lwjgl/system/MemoryUtil.memAlloc:(I)Ljava/nio/ByteBuffer;
+   #73 = Utf8               java/nio/ByteBuffer
+   #74 = Class              #73           // java/nio/ByteBuffer
+   #75 = Utf8               coverage
+   #76 = Utf8               (IIII)F
+   #77 = NameAndType        #75:#76       // coverage:(IIII)F
+   #78 = Methodref          #2.#77        // net/anubis/client/gui/HudEmblem.coverage:(IIII)F
+   #79 = Double             0.6499999761581421d
+   #81 = Utf8               pow
+   #82 = Utf8               (DD)D
+   #83 = NameAndType        #81:#82       // pow:(DD)D
+   #84 = Methodref          #58.#83       // java/lang/Math.pow:(DD)D
+   #85 = Utf8               min
+   #86 = Utf8               (FF)F
+   #87 = NameAndType        #85:#86       // min:(FF)F
+   #88 = Methodref          #58.#87       // java/lang/Math.min:(FF)F
+   #89 = Utf8               put
+   #90 = Utf8               (B)Ljava/nio/ByteBuffer;
+   #91 = NameAndType        #89:#90       // put:(B)Ljava/nio/ByteBuffer;
+   #92 = Methodref          #74.#91       // java/nio/ByteBuffer.put:(B)Ljava/nio/ByteBuffer;
+   #93 = Float              255.0f
+   #94 = Utf8               flip
+   #95 = Utf8               ()Ljava/nio/ByteBuffer;
+   #96 = NameAndType        #94:#95       // flip:()Ljava/nio/ByteBuffer;
+   #97 = Methodref          #74.#96       // java/nio/ByteBuffer.flip:()Ljava/nio/ByteBuffer;
+   #98 = Utf8               id
+   #99 = Utf8               ()I
+  #100 = NameAndType        #98:#99       // id:()I
+  #101 = Methodref          #7.#100       // net/anubis/client/gui/ThemeImages$Texture.id:()I
+  #102 = Utf8               org/lwjgl/opengl/GL11
+  #103 = Class              #102          // org/lwjgl/opengl/GL11
+  #104 = Utf8               glDeleteTextures
+  #105 = Utf8               (I)V
+  #106 = NameAndType        #104:#105     // glDeleteTextures:(I)V
+  #107 = Methodref          #103.#106     // org/lwjgl/opengl/GL11.glDeleteTextures:(I)V
+  #108 = Utf8               fromPixels
+  #109 = Utf8               (Ljava/nio/ByteBuffer;IIZ)Lnet/anubis/client/gui/ThemeImages$Texture;
+  #110 = NameAndType        #108:#109     // fromPixels:(Ljava/nio/ByteBuffer;IIZ)Lnet/anubis/client/gui/ThemeImages$Texture;
+  #111 = Methodref          #9.#110       // net/anubis/client/gui/ThemeImages.fromPixels:(Ljava/nio/ByteBuffer;IIZ)Lnet/anubis/client/gui/ThemeImages$Texture;
+  #112 = Utf8               memFree
+  #113 = Utf8               (Ljava/nio/Buffer;)V
+  #114 = NameAndType        #112:#113     // memFree:(Ljava/nio/Buffer;)V
+  #115 = Methodref          #68.#114      // org/lwjgl/system/MemoryUtil.memFree:(Ljava/nio/Buffer;)V
+  #116 = Utf8               java/lang/Throwable
+  #117 = Class              #116          // java/lang/Throwable
+  #118 = Utf8               a
+  #119 = Utf8               x
+  #120 = Utf8               y
+  #121 = Utf8               width
+  #122 = Utf8               rgba
+  #123 = Utf8               Ljava/nio/ByteBuffer;
+  #124 = Utf8               ceil
+  #125 = Utf8               (D)D
+  #126 = NameAndType        #124:#125     // ceil:(D)D
+  #127 = Methodref          #58.#126      // java/lang/Math.ceil:(D)D
+  #128 = NameAndType        #85:#64       // min:(II)I
+  #129 = Methodref          #58.#128      // java/lang/Math.min:(II)I
+  #130 = NameAndType        #63:#86       // max:(FF)F
+  #131 = Methodref          #58.#130      // java/lang/Math.max:(FF)F
+  #132 = Utf8               wx
+  #133 = Utf8               weight
+  #134 = Utf8               sx
+  #135 = Utf8               wy
+  #136 = Utf8               sy
+  #137 = Utf8               x0
+  #138 = Utf8               x1
+  #139 = Utf8               y0
+  #140 = Utf8               y1
+  #141 = Utf8               sum
+  #142 = Utf8               area
+  #143 = Utf8               java/io/IOException
+  #144 = Class              #143          // java/io/IOException
+  #145 = Utf8               java/lang/Class
+  #146 = Class              #145          // java/lang/Class
+  #147 = Utf8               getResourceAsStream
+  #148 = Utf8               (Ljava/lang/String;)Ljava/io/InputStream;
+  #149 = NameAndType        #147:#148     // getResourceAsStream:(Ljava/lang/String;)Ljava/io/InputStream;
+  #150 = Methodref          #146.#149     // java/lang/Class.getResourceAsStream:(Ljava/lang/String;)Ljava/io/InputStream;
+  #151 = NameAndType        #11:#12       // LOGGER:Lorg/slf4j/Logger;
+  #152 = Fieldref           #2.#151       // net/anubis/client/gui/HudEmblem.LOGGER:Lorg/slf4j/Logger;
+  #153 = Utf8               [Anubis] Missing texture {}
+  #154 = String             #153          // [Anubis] Missing texture {}
+  #155 = Utf8               org/slf4j/Logger
+  #156 = Class              #155          // org/slf4j/Logger
+  #157 = Utf8               warn
+  #158 = Utf8               (Ljava/lang/String;Ljava/lang/Object;)V
+  #159 = NameAndType        #157:#158     // warn:(Ljava/lang/String;Ljava/lang/Object;)V
+  #160 = InterfaceMethodref #156.#159     // org/slf4j/Logger.warn:(Ljava/lang/String;Ljava/lang/Object;)V
+  #161 = Utf8               java/io/InputStream
+  #162 = Class              #161          // java/io/InputStream
+  #163 = Utf8               close
+  #164 = NameAndType        #163:#33      // close:()V
+  #165 = Methodref          #162.#164     // java/io/InputStream.close:()V
+  #166 = Utf8               readAllBytes
+  #167 = Utf8               ()[B
+  #168 = NameAndType        #166:#167     // readAllBytes:()[B
+  #169 = Methodref          #162.#168     // java/io/InputStream.readAllBytes:()[B
+  #170 = Utf8               addSuppressed
+  #171 = Utf8               (Ljava/lang/Throwable;)V
+  #172 = NameAndType        #170:#171     // addSuppressed:(Ljava/lang/Throwable;)V
+  #173 = Methodref          #117.#172     // java/lang/Throwable.addSuppressed:(Ljava/lang/Throwable;)V
+  #174 = Utf8               [B
+  #175 = Class              #174          // "[B"
+  #176 = Utf8               [Anubis] Failed to read {}
+  #177 = String             #176          // [Anubis] Failed to read {}
+  #178 = Utf8               (Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
+  #179 = NameAndType        #157:#178     // warn:(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
+  #180 = InterfaceMethodref #156.#179     // org/slf4j/Logger.warn:(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
+  #181 = Utf8               org/lwjgl/system/MemoryStack
+  #182 = Class              #181          // org/lwjgl/system/MemoryStack
+  #183 = Utf8               stackPush
+  #184 = Utf8               ()Lorg/lwjgl/system/MemoryStack;
+  #185 = NameAndType        #183:#184     // stackPush:()Lorg/lwjgl/system/MemoryStack;
+  #186 = Methodref          #182.#185     // org/lwjgl/system/MemoryStack.stackPush:()Lorg/lwjgl/system/MemoryStack;
+  #187 = Utf8               ([B)Ljava/nio/ByteBuffer;
+  #188 = NameAndType        #89:#187      // put:([B)Ljava/nio/ByteBuffer;
+  #189 = Methodref          #74.#188      // java/nio/ByteBuffer.put:([B)Ljava/nio/ByteBuffer;
+  #190 = Utf8               mallocInt
+  #191 = Utf8               (I)Ljava/nio/IntBuffer;
+  #192 = NameAndType        #190:#191     // mallocInt:(I)Ljava/nio/IntBuffer;
+  #193 = Methodref          #182.#192     // org/lwjgl/system/MemoryStack.mallocInt:(I)Ljava/nio/IntBuffer;
+  #194 = Utf8               org/lwjgl/stb/STBImage
+  #195 = Class              #194          // org/lwjgl/stb/STBImage
+  #196 = Utf8               stbi_load_from_memory
+  #197 = Utf8               (Ljava/nio/ByteBuffer;Ljava/nio/IntBuffer;Ljava/nio/IntBuffer;Ljava/nio/IntBuffer;I)Ljava/nio/ByteBuffer;
+  #198 = NameAndType        #196:#197     // stbi_load_from_memory:(Ljava/nio/ByteBuffer;Ljava/nio/IntBuffer;Ljava/nio/IntBuffer;Ljava/nio/IntBuffer;I)Ljava/nio/ByteBuffer;
+  #199 = Methodref          #195.#198     // org/lwjgl/stb/STBImage.stbi_load_from_memory:(Ljava/nio/ByteBuffer;Ljava/nio/IntBuffer;Ljava/nio/IntBuffer;Ljava/nio/IntBuffer;I)Ljava/nio/ByteBuffer;
+  #200 = Utf8               [Anubis] Can\'t decode {}: {}
+  #201 = String             #200          // [Anubis] Can\'t decode {}: {}
+  #202 = Utf8               stbi_failure_reason
+  #203 = Utf8               ()Ljava/lang/String;
+  #204 = NameAndType        #202:#203     // stbi_failure_reason:()Ljava/lang/String;
+  #205 = Methodref          #195.#204     // org/lwjgl/stb/STBImage.stbi_failure_reason:()Ljava/lang/String;
+  #206 = Methodref          #182.#164     // org/lwjgl/system/MemoryStack.close:()V
+  #207 = Utf8               java/nio/IntBuffer
+  #208 = Class              #207          // java/nio/IntBuffer
+  #209 = Utf8               stbi_image_free
+  #210 = Utf8               (Ljava/nio/ByteBuffer;)V
+  #211 = NameAndType        #209:#210     // stbi_image_free:(Ljava/nio/ByteBuffer;)V
+  #212 = Methodref          #195.#211     // org/lwjgl/stb/STBImage.stbi_image_free:(Ljava/nio/ByteBuffer;)V
+  #213 = Utf8               get
+  #214 = Utf8               (I)I
+  #215 = NameAndType        #213:#214     // get:(I)I
+  #216 = Methodref          #208.#215     // java/nio/IntBuffer.get:(I)I
+  #217 = Utf8               (I)B
+  #218 = NameAndType        #213:#217     // get:(I)B
+  #219 = Methodref          #74.#218      // java/nio/ByteBuffer.get:(I)B
+  #220 = Utf8               bytes
+  #221 = Utf8               in
+  #222 = Utf8               Ljava/io/InputStream;
+  #223 = Utf8               e
+  #224 = Utf8               Ljava/io/IOException;
+  #225 = Utf8               i
+  #226 = Utf8               w
+  #227 = Utf8               Ljava/nio/IntBuffer;
+  #228 = Utf8               h
+  #229 = Utf8               channels
+  #230 = Utf8               stack
+  #231 = Utf8               Lorg/lwjgl/system/MemoryStack;
+  #232 = Utf8               file
+  #233 = Utf8               pixels
+  #234 = Utf8               <clinit>
+  #235 = Utf8               Anubis
+  #236 = String             #235          // Anubis
+  #237 = Utf8               org/slf4j/LoggerFactory
+  #238 = Class              #237          // org/slf4j/LoggerFactory
+  #239 = Utf8               getLogger
+  #240 = Utf8               (Ljava/lang/String;)Lorg/slf4j/Logger;
+  #241 = NameAndType        #239:#240     // getLogger:(Ljava/lang/String;)Lorg/slf4j/Logger;
+  #242 = Methodref          #238.#241     // org/slf4j/LoggerFactory.getLogger:(Ljava/lang/String;)Lorg/slf4j/Logger;
+  #243 = Utf8               Lnet/fabricmc/api/Environment;
+  #244 = Utf8               value
+  #245 = Utf8               Lnet/fabricmc/api/EnvType;
+  #246 = Utf8               CLIENT
+  #247 = Utf8               ConstantValue
+  #248 = Utf8               Code
+  #249 = Utf8               LineNumberTable
+  #250 = Utf8               LocalVariableTable
+  #251 = Utf8               StackMapTable
+  #252 = Utf8               MethodParameters
+  #253 = Utf8               InnerClasses
+  #254 = Utf8               SourceFile
+  #255 = Utf8               RuntimeVisibleAnnotations
+{
+  private static final org.slf4j.Logger LOGGER;
+    descriptor: Lorg/slf4j/Logger;
+    flags: (0x001a) ACC_PRIVATE, ACC_STATIC, ACC_FINAL
+
+  private static final java.lang.String SOURCE;
+    descriptor: Ljava/lang/String;
+    flags: (0x001a) ACC_PRIVATE, ACC_STATIC, ACC_FINAL
+    ConstantValue: String /assets/anubis/textures/gui/hud_emblem.png
+
+  private static final float INK_GAMMA;
+    descriptor: F
+    flags: (0x001a) ACC_PRIVATE, ACC_STATIC, ACC_FINAL
+    ConstantValue: float 0.65f
+
+  private static final float INK_GAIN;
+    descriptor: F
+    flags: (0x001a) ACC_PRIVATE, ACC_STATIC, ACC_FINAL
+    ConstantValue: float 1.35f
+
+  private static float[] ink;
+    descriptor: [F
+    flags: (0x000a) ACC_PRIVATE, ACC_STATIC
+
+  private static int inkW;
+    descriptor: I
+    flags: (0x000a) ACC_PRIVATE, ACC_STATIC
+
+  private static int inkH;
+    descriptor: I
+    flags: (0x000a) ACC_PRIVATE, ACC_STATIC
+
+  private static boolean missing;
+    descriptor: Z
+    flags: (0x000a) ACC_PRIVATE, ACC_STATIC
+
+  private static net.anubis.client.gui.ThemeImages$Texture sized;
+    descriptor: Lnet/anubis/client/gui/ThemeImages$Texture;
+    flags: (0x000a) ACC_PRIVATE, ACC_STATIC
+
+  private static int sizedHeight;
+    descriptor: I
+    flags: (0x000a) ACC_PRIVATE, ACC_STATIC
+
+  private net.anubis.client.gui.HudEmblem();
+    descriptor: ()V
+    flags: (0x0002) ACC_PRIVATE
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: invokespecial #35                 // Method java/lang/Object."<init>":()V
+         4: return
+      LineNumberTable:
+        line 28: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       5     0  this   Lnet/anubis/client/gui/HudEmblem;
+
+  static net.anubis.client.gui.ThemeImages$Texture forHeight(int);
+    descriptor: (I)Lnet/anubis/client/gui/ThemeImages$Texture;
+    flags: (0x0008) ACC_STATIC
+    Code:
+      stack=5, locals=7, args_size=1
+         0: iload_0
+         1: iconst_4
+         2: if_icmplt     11
+         5: getstatic     #42                 // Field missing:Z
+         8: ifeq          13
+        11: aconst_null
+        12: areturn
+        13: iload_0
+        14: getstatic     #44                 // Field sizedHeight:I
+        17: if_icmpne     30
+        20: getstatic     #46                 // Field sized:Lnet/anubis/client/gui/ThemeImages$Texture;
+        23: ifnull        30
+        26: getstatic     #46                 // Field sized:Lnet/anubis/client/gui/ThemeImages$Texture;
+        29: areturn
+        30: getstatic     #48                 // Field ink:[F
+        33: ifnonnull     48
+        36: invokestatic  #52                 // Method load:()Z
+        39: ifne          48
+        42: iconst_1
+        43: putstatic     #42                 // Field missing:Z
+        46: aconst_null
+        47: areturn
+        48: iconst_1
+        49: getstatic     #54                 // Field inkW:I
+        52: i2f
+        53: iload_0
+        54: i2f
+        55: fmul
+        56: getstatic     #56                 // Field inkH:I
+        59: i2f
+        60: fdiv
+        61: invokestatic  #62                 // Method java/lang/Math.round:(F)I
+        64: invokestatic  #66                 // Method java/lang/Math.max:(II)I
+        67: istore_1
+        68: iload_1
+        69: iload_0
+        70: imul
+        71: iconst_4
+        72: imul
+        73: invokestatic  #72                 // Method org/lwjgl/system/MemoryUtil.memAlloc:(I)Ljava/nio/ByteBuffer;
+        76: astore_2
+        77: iconst_0
+        78: istore_3
+        79: iload_3
+        80: iload_0
+        81: if_icmpge     160
+        84: iconst_0
+        85: istore        4
+        87: iload         4
+        89: iload_1
+        90: if_icmpge     154
+        93: iload         4
+        95: iload_3
+        96: iload_1
+        97: iload_0
+        98: invokestatic  #78                 // Method coverage:(IIII)F
+       101: fstore        5
+       103: fconst_1
+       104: fload         5
+       106: f2d
+       107: ldc2_w        #79                 // double 0.6499999761581421d
+       110: invokestatic  #84                 // Method java/lang/Math.pow:(DD)D
+       113: d2f
+       114: ldc           #21                 // float 1.35f
+       116: fmul
+       117: invokestatic  #88                 // Method java/lang/Math.min:(FF)F
+       120: fstore        5
+       122: aload_2
+       123: iconst_m1
+       124: invokevirtual #92                 // Method java/nio/ByteBuffer.put:(B)Ljava/nio/ByteBuffer;
+       127: iconst_m1
+       128: invokevirtual #92                 // Method java/nio/ByteBuffer.put:(B)Ljava/nio/ByteBuffer;
+       131: iconst_m1
+       132: invokevirtual #92                 // Method java/nio/ByteBuffer.put:(B)Ljava/nio/ByteBuffer;
+       135: fload         5
+       137: ldc           #93                 // float 255.0f
+       139: fmul
+       140: invokestatic  #62                 // Method java/lang/Math.round:(F)I
+       143: i2b
+       144: invokevirtual #92                 // Method java/nio/ByteBuffer.put:(B)Ljava/nio/ByteBuffer;
+       147: pop
+       148: iinc          4, 1
+       151: goto          87
+       154: iinc          3, 1
+       157: goto          79
+       160: aload_2
+       161: invokevirtual #97                 // Method java/nio/ByteBuffer.flip:()Ljava/nio/ByteBuffer;
+       164: pop
+       165: getstatic     #46                 // Field sized:Lnet/anubis/client/gui/ThemeImages$Texture;
+       168: ifnull        180
+       171: getstatic     #46                 // Field sized:Lnet/anubis/client/gui/ThemeImages$Texture;
+       174: invokevirtual #101                // Method net/anubis/client/gui/ThemeImages$Texture.id:()I
+       177: invokestatic  #107                // Method org/lwjgl/opengl/GL11.glDeleteTextures:(I)V
+       180: aload_2
+       181: iload_1
+       182: iload_0
+       183: iconst_0
+       184: invokestatic  #111                // Method net/anubis/client/gui/ThemeImages.fromPixels:(Ljava/nio/ByteBuffer;IIZ)Lnet/anubis/client/gui/ThemeImages$Texture;
+       187: putstatic     #46                 // Field sized:Lnet/anubis/client/gui/ThemeImages$Texture;
+       190: iload_0
+       191: putstatic     #44                 // Field sizedHeight:I
+       194: getstatic     #46                 // Field sized:Lnet/anubis/client/gui/ThemeImages$Texture;
+       197: astore_3
+       198: aload_2
+       199: invokestatic  #115                // Method org/lwjgl/system/MemoryUtil.memFree:(Ljava/nio/Buffer;)V
+       202: aload_3
+       203: areturn
+       204: astore        6
+       206: aload_2
+       207: invokestatic  #115                // Method org/lwjgl/system/MemoryUtil.memFree:(Ljava/nio/Buffer;)V
+       210: aload         6
+       212: athrow
+      Exception table:
+         from    to  target type
+            77   198   204   any
+           204   206   204   any
+      StackMapTable: number_of_entries = 10
+        frame_type = 11 /* same */
+        frame_type = 1 /* same */
+        frame_type = 16 /* same */
+        frame_type = 17 /* same */
+        frame_type = 254 /* append */
+          offset_delta = 30
+          locals = [ int, class java/nio/ByteBuffer, int ]
+        frame_type = 252 /* append */
+          offset_delta = 7
+          locals = [ int ]
+        frame_type = 250 /* chop */
+          offset_delta = 66
+        frame_type = 250 /* chop */
+          offset_delta = 5
+        frame_type = 19 /* same */
+        frame_type = 87 /* same_locals_1_stack_item */
+          stack = [ class java/lang/Throwable ]
+      LineNumberTable:
+        line 31: 0
+        line 32: 13
+        line 33: 30
+        line 34: 42
+        line 35: 46
+        line 37: 48
+        line 38: 68
+        line 40: 77
+        line 41: 84
+        line 42: 93
+        line 43: 103
+        line 44: 122
+        line 41: 148
+        line 40: 154
+        line 47: 160
+        line 48: 165
+        line 49: 180
+        line 50: 190
+        line 51: 194
+        line 53: 198
+        line 51: 202
+        line 53: 204
+        line 54: 210
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+          103      45     5     a   F
+           87      67     4     x   I
+           79      81     3     y   I
+            0     213     0 height   I
+           68     145     1 width   I
+           77     136     2  rgba   Ljava/nio/ByteBuffer;
+    MethodParameters:
+      Name                           Flags
+      height
+
+  private static float coverage(int, int, int, int);
+    descriptor: (IIII)F
+    flags: (0x000a) ACC_PRIVATE, ACC_STATIC
+    Code:
+      stack=4, locals=15, args_size=4
+         0: iload_0
+         1: i2f
+         2: getstatic     #54                 // Field inkW:I
+         5: i2f
+         6: fmul
+         7: iload_2
+         8: i2f
+         9: fdiv
+        10: fstore        4
+        12: iload_0
+        13: iconst_1
+        14: iadd
+        15: i2f
+        16: getstatic     #54                 // Field inkW:I
+        19: i2f
+        20: fmul
+        21: iload_2
+        22: i2f
+        23: fdiv
+        24: fstore        5
+        26: iload_1
+        27: i2f
+        28: getstatic     #56                 // Field inkH:I
+        31: i2f
+        32: fmul
+        33: iload_3
+        34: i2f
+        35: fdiv
+        36: fstore        6
+        38: iload_1
+        39: iconst_1
+        40: iadd
+        41: i2f
+        42: getstatic     #56                 // Field inkH:I
+        45: i2f
+        46: fmul
+        47: iload_3
+        48: i2f
+        49: fdiv
+        50: fstore        7
+        52: fconst_0
+        53: fstore        8
+        55: fconst_0
+        56: fstore        9
+        58: fload         6
+        60: f2i
+        61: istore        10
+        63: iload         10
+        65: getstatic     #56                 // Field inkH:I
+        68: fload         7
+        70: f2d
+        71: invokestatic  #127                // Method java/lang/Math.ceil:(D)D
+        74: d2i
+        75: invokestatic  #129                // Method java/lang/Math.min:(II)I
+        78: if_icmpge     193
+        81: fload         7
+        83: iload         10
+        85: iconst_1
+        86: iadd
+        87: i2f
+        88: invokestatic  #88                 // Method java/lang/Math.min:(FF)F
+        91: fload         6
+        93: iload         10
+        95: i2f
+        96: invokestatic  #131                // Method java/lang/Math.max:(FF)F
+        99: fsub
+       100: fstore        11
+       102: fload         4
+       104: f2i
+       105: istore        12
+       107: iload         12
+       109: getstatic     #54                 // Field inkW:I
+       112: fload         5
+       114: f2d
+       115: invokestatic  #127                // Method java/lang/Math.ceil:(D)D
+       118: d2i
+       119: invokestatic  #129                // Method java/lang/Math.min:(II)I
+       122: if_icmpge     187
+       125: fload         5
+       127: iload         12
+       129: iconst_1
+       130: iadd
+       131: i2f
+       132: invokestatic  #88                 // Method java/lang/Math.min:(FF)F
+       135: fload         4
+       137: iload         12
+       139: i2f
+       140: invokestatic  #131                // Method java/lang/Math.max:(FF)F
+       143: fsub
+       144: fstore        13
+       146: fload         13
+       148: fload         11
+       150: fmul
+       151: fstore        14
+       153: fload         8
+       155: getstatic     #48                 // Field ink:[F
+       158: iload         10
+       160: getstatic     #54                 // Field inkW:I
+       163: imul
+       164: iload         12
+       166: iadd
+       167: faload
+       168: fload         14
+       170: fmul
+       171: fadd
+       172: fstore        8
+       174: fload         9
+       176: fload         14
+       178: fadd
+       179: fstore        9
+       181: iinc          12, 1
+       184: goto          107
+       187: iinc          10, 1
+       190: goto          63
+       193: fload         9
+       195: fconst_0
+       196: fcmpl
+       197: ifle          208
+       200: fload         8
+       202: fload         9
+       204: fdiv
+       205: goto          209
+       208: fconst_0
+       209: freturn
+      StackMapTable: number_of_entries = 6
+        frame_type = 255 /* full_frame */
+          offset_delta = 63
+          locals = [ int, int, int, int, float, float, float, float, float, float, int ]
+          stack = []
+        frame_type = 253 /* append */
+          offset_delta = 43
+          locals = [ float, int ]
+        frame_type = 249 /* chop */
+          offset_delta = 79
+        frame_type = 250 /* chop */
+          offset_delta = 5
+        frame_type = 14 /* same */
+        frame_type = 64 /* same_locals_1_stack_item */
+          stack = [ float ]
+      LineNumberTable:
+        line 58: 0
+        line 59: 26
+        line 60: 52
+        line 61: 58
+        line 62: 81
+        line 63: 102
+        line 64: 125
+        line 65: 146
+        line 66: 153
+        line 67: 174
+        line 63: 181
+        line 61: 187
+        line 70: 193
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+          146      35    13    wx   F
+          153      28    14 weight   F
+          107      80    12    sx   I
+          102      85    11    wy   F
+           63     130    10    sy   I
+            0     210     0     x   I
+            0     210     1     y   I
+            0     210     2 width   I
+            0     210     3 height   I
+           12     198     4    x0   F
+           26     184     5    x1   F
+           38     172     6    y0   F
+           52     158     7    y1   F
+           55     155     8   sum   F
+           58     152     9  area   F
+    MethodParameters:
+      Name                           Flags
+      x
+      y
+      width
+      height
+
+  private static boolean load();
+    descriptor: ()Z
+    flags: (0x000a) ACC_PRIVATE, ACC_STATIC
+    Code:
+      stack=5, locals=9, args_size=0
+         0: ldc           #2                  // class net/anubis/client/gui/HudEmblem
+         2: ldc           #16                 // String /assets/anubis/textures/gui/hud_emblem.png
+         4: invokevirtual #150                // Method java/lang/Class.getResourceAsStream:(Ljava/lang/String;)Ljava/io/InputStream;
+         7: astore_1
+         8: aload_1
+         9: ifnonnull     36
+        12: getstatic     #152                // Field LOGGER:Lorg/slf4j/Logger;
+        15: ldc           #154                // String [Anubis] Missing texture {}
+        17: ldc           #16                 // String /assets/anubis/textures/gui/hud_emblem.png
+        19: invokeinterface #160,  3          // InterfaceMethod org/slf4j/Logger.warn:(Ljava/lang/String;Ljava/lang/Object;)V
+        24: iconst_0
+        25: istore_2
+        26: aload_1
+        27: ifnull        34
+        30: aload_1
+        31: invokevirtual #165                // Method java/io/InputStream.close:()V
+        34: iload_2
+        35: ireturn
+        36: aload_1
+        37: invokevirtual #169                // Method java/io/InputStream.readAllBytes:()[B
+        40: astore_0
+        41: aload_1
+        42: ifnull        72
+        45: aload_1
+        46: invokevirtual #165                // Method java/io/InputStream.close:()V
+        49: goto          72
+        52: astore_2
+        53: aload_1
+        54: ifnull        70
+        57: aload_1
+        58: invokevirtual #165                // Method java/io/InputStream.close:()V
+        61: goto          70
+        64: astore_3
+        65: aload_2
+        66: aload_3
+        67: invokevirtual #173                // Method java/lang/Throwable.addSuppressed:(Ljava/lang/Throwable;)V
+        70: aload_2
+        71: athrow
+        72: goto          91
+        75: astore_1
+        76: getstatic     #152                // Field LOGGER:Lorg/slf4j/Logger;
+        79: ldc           #177                // String [Anubis] Failed to read {}
+        81: ldc           #16                 // String /assets/anubis/textures/gui/hud_emblem.png
+        83: aload_1
+        84: invokeinterface #180,  4          // InterfaceMethod org/slf4j/Logger.warn:(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
+        89: iconst_0
+        90: ireturn
+        91: aload_0
+        92: arraylength
+        93: invokestatic  #72                 // Method org/lwjgl/system/MemoryUtil.memAlloc:(I)Ljava/nio/ByteBuffer;
+        96: astore_1
+        97: aconst_null
+        98: astore_2
+        99: invokestatic  #186                // Method org/lwjgl/system/MemoryStack.stackPush:()Lorg/lwjgl/system/MemoryStack;
+       102: astore_3
+       103: aload_1
+       104: aload_0
+       105: invokevirtual #189                // Method java/nio/ByteBuffer.put:([B)Ljava/nio/ByteBuffer;
+       108: invokevirtual #97                 // Method java/nio/ByteBuffer.flip:()Ljava/nio/ByteBuffer;
+       111: pop
+       112: aload_3
+       113: iconst_1
+       114: invokevirtual #193                // Method org/lwjgl/system/MemoryStack.mallocInt:(I)Ljava/nio/IntBuffer;
+       117: astore        4
+       119: aload_3
+       120: iconst_1
+       121: invokevirtual #193                // Method org/lwjgl/system/MemoryStack.mallocInt:(I)Ljava/nio/IntBuffer;
+       124: astore        5
+       126: aload_3
+       127: iconst_1
+       128: invokevirtual #193                // Method org/lwjgl/system/MemoryStack.mallocInt:(I)Ljava/nio/IntBuffer;
+       131: astore        6
+       133: aload_1
+       134: aload         4
+       136: aload         5
+       138: aload         6
+       140: iconst_4
+       141: invokestatic  #199                // Method org/lwjgl/stb/STBImage.stbi_load_from_memory:(Ljava/nio/ByteBuffer;Ljava/nio/IntBuffer;Ljava/nio/IntBuffer;Ljava/nio/IntBuffer;I)Ljava/nio/ByteBuffer;
+       144: astore_2
+       145: aload_2
+       146: ifnonnull     190
+       149: getstatic     #152                // Field LOGGER:Lorg/slf4j/Logger;
+       152: ldc           #201                // String [Anubis] Can\'t decode {}: {}
+       154: ldc           #16                 // String /assets/anubis/textures/gui/hud_emblem.png
+       156: invokestatic  #205                // Method org/lwjgl/stb/STBImage.stbi_failure_reason:()Ljava/lang/String;
+       159: invokeinterface #180,  4          // InterfaceMethod org/slf4j/Logger.warn:(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
+       164: iconst_0
+       165: istore        7
+       167: aload_3
+       168: ifnull        175
+       171: aload_3
+       172: invokevirtual #206                // Method org/lwjgl/system/MemoryStack.close:()V
+       175: aload_2
+       176: ifnull        183
+       179: aload_2
+       180: invokestatic  #212                // Method org/lwjgl/stb/STBImage.stbi_image_free:(Ljava/nio/ByteBuffer;)V
+       183: aload_1
+       184: invokestatic  #115                // Method org/lwjgl/system/MemoryUtil.memFree:(Ljava/nio/Buffer;)V
+       187: iload         7
+       189: ireturn
+       190: aload         4
+       192: iconst_0
+       193: invokevirtual #216                // Method java/nio/IntBuffer.get:(I)I
+       196: putstatic     #54                 // Field inkW:I
+       199: aload         5
+       201: iconst_0
+       202: invokevirtual #216                // Method java/nio/IntBuffer.get:(I)I
+       205: putstatic     #56                 // Field inkH:I
+       208: getstatic     #54                 // Field inkW:I
+       211: getstatic     #56                 // Field inkH:I
+       214: imul
+       215: newarray       float
+       217: putstatic     #48                 // Field ink:[F
+       220: iconst_0
+       221: istore        7
+       223: iload         7
+       225: getstatic     #48                 // Field ink:[F
+       228: arraylength
+       229: if_icmpge     262
+       232: getstatic     #48                 // Field ink:[F
+       235: iload         7
+       237: aload_2
+       238: iload         7
+       240: iconst_4
+       241: imul
+       242: iconst_3
+       243: iadd
+       244: invokevirtual #219                // Method java/nio/ByteBuffer.get:(I)B
+       247: sipush        255
+       250: iand
+       251: i2f
+       252: ldc           #93                 // float 255.0f
+       254: fdiv
+       255: fastore
+       256: iinc          7, 1
+       259: goto          223
+       262: iconst_1
+       263: istore        7
+       265: aload_3
+       266: ifnull        273
+       269: aload_3
+       270: invokevirtual #206                // Method org/lwjgl/system/MemoryStack.close:()V
+       273: aload_2
+       274: ifnull        281
+       277: aload_2
+       278: invokestatic  #212                // Method org/lwjgl/stb/STBImage.stbi_image_free:(Ljava/nio/ByteBuffer;)V
+       281: aload_1
+       282: invokestatic  #115                // Method org/lwjgl/system/MemoryUtil.memFree:(Ljava/nio/Buffer;)V
+       285: iload         7
+       287: ireturn
+       288: astore        4
+       290: aload_3
+       291: ifnull        310
+       294: aload_3
+       295: invokevirtual #206                // Method org/lwjgl/system/MemoryStack.close:()V
+       298: goto          310
+       301: astore        5
+       303: aload         4
+       305: aload         5
+       307: invokevirtual #173                // Method java/lang/Throwable.addSuppressed:(Ljava/lang/Throwable;)V
+       310: aload         4
+       312: athrow
+       313: astore        8
+       315: aload_2
+       316: ifnull        323
+       319: aload_2
+       320: invokestatic  #212                // Method org/lwjgl/stb/STBImage.stbi_image_free:(Ljava/nio/ByteBuffer;)V
+       323: aload_1
+       324: invokestatic  #115                // Method org/lwjgl/system/MemoryUtil.memFree:(Ljava/nio/Buffer;)V
+       327: aload         8
+       329: athrow
+      Exception table:
+         from    to  target type
+             8    26    52   Class java/lang/Throwable
+            36    41    52   Class java/lang/Throwable
+            57    61    64   Class java/lang/Throwable
+             0    34    75   Class java/io/IOException
+            36    72    75   Class java/io/IOException
+           103   167   288   Class java/lang/Throwable
+           190   265   288   Class java/lang/Throwable
+           294   298   301   Class java/lang/Throwable
+            99   175   313   any
+           190   273   313   any
+           288   315   313   any
+      StackMapTable: number_of_entries = 20
+        frame_type = 254 /* append */
+          offset_delta = 34
+          locals = [ top, class java/io/InputStream, int ]
+        frame_type = 250 /* chop */
+          offset_delta = 1
+        frame_type = 79 /* same_locals_1_stack_item */
+          stack = [ class java/lang/Throwable ]
+        frame_type = 255 /* full_frame */
+          offset_delta = 11
+          locals = [ top, class java/io/InputStream, class java/lang/Throwable ]
+          stack = [ class java/lang/Throwable ]
+        frame_type = 5 /* same */
+        frame_type = 255 /* full_frame */
+          offset_delta = 1
+          locals = [ class "[B" ]
+          stack = []
+        frame_type = 255 /* full_frame */
+          offset_delta = 2
+          locals = []
+          stack = [ class java/io/IOException ]
+        frame_type = 252 /* append */
+          offset_delta = 15
+          locals = [ class "[B" ]
+        frame_type = 255 /* full_frame */
+          offset_delta = 83
+          locals = [ class "[B", class java/nio/ByteBuffer, class java/nio/ByteBuffer, class org/lwjgl/system/MemoryStack, class java/nio/IntBuffer, class java/nio/IntBuffer, class java/nio/IntBuffer, int ]
+          stack = []
+        frame_type = 7 /* same */
+        frame_type = 250 /* chop */
+          offset_delta = 6
+        frame_type = 252 /* append */
+          offset_delta = 32
+          locals = [ int ]
+        frame_type = 250 /* chop */
+          offset_delta = 38
+        frame_type = 252 /* append */
+          offset_delta = 10
+          locals = [ int ]
+        frame_type = 7 /* same */
+        frame_type = 255 /* full_frame */
+          offset_delta = 6
+          locals = [ class "[B", class java/nio/ByteBuffer, class java/nio/ByteBuffer, class org/lwjgl/system/MemoryStack ]
+          stack = [ class java/lang/Throwable ]
+        frame_type = 255 /* full_frame */
+          offset_delta = 12
+          locals = [ class "[B", class java/nio/ByteBuffer, class java/nio/ByteBuffer, class org/lwjgl/system/MemoryStack, class java/lang/Throwable ]
+          stack = [ class java/lang/Throwable ]
+        frame_type = 8 /* same */
+        frame_type = 255 /* full_frame */
+          offset_delta = 2
+          locals = [ class "[B", class java/nio/ByteBuffer, class java/nio/ByteBuffer ]
+          stack = [ class java/lang/Throwable ]
+        frame_type = 255 /* full_frame */
+          offset_delta = 9
+          locals = [ class "[B", class java/nio/ByteBuffer, class java/nio/ByteBuffer, top, top, top, top, top, class java/lang/Throwable ]
+          stack = []
+      LineNumberTable:
+        line 75: 0
+        line 76: 8
+        line 77: 12
+        line 78: 24
+        line 81: 26
+        line 78: 34
+        line 80: 36
+        line 81: 41
+        line 75: 52
+        line 84: 72
+        line 81: 75
+        line 82: 76
+        line 83: 89
+        line 85: 91
+        line 86: 97
+        line 87: 99
+        line 88: 103
+        line 89: 112
+        line 90: 133
+        line 91: 145
+        line 92: 149
+        line 93: 164
+        line 100: 167
+        line 101: 175
+        line 102: 183
+        line 93: 187
+        line 95: 190
+        line 96: 199
+        line 97: 208
+        line 98: 220
+        line 99: 262
+        line 100: 265
+        line 101: 273
+        line 102: 281
+        line 99: 285
+        line 87: 288
+        line 101: 313
+        line 102: 323
+        line 103: 327
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+           41      11     0 bytes   [B
+            8      64     1    in   Ljava/io/InputStream;
+           72       3     0 bytes   [B
+           76      15     1     e   Ljava/io/IOException;
+          223      39     7     i   I
+          119     169     4     w   Ljava/nio/IntBuffer;
+          126     162     5     h   Ljava/nio/IntBuffer;
+          133     155     6 channels   Ljava/nio/IntBuffer;
+          103     210     3 stack   Lorg/lwjgl/system/MemoryStack;
+           91     239     0 bytes   [B
+           97     233     1  file   Ljava/nio/ByteBuffer;
+           99     231     2 pixels   Ljava/nio/ByteBuffer;
+
+  static {};
+    descriptor: ()V
+    flags: (0x0008) ACC_STATIC
+    Code:
+      stack=1, locals=0, args_size=0
+         0: ldc           #236                // String Anubis
+         2: invokestatic  #242                // Method org/slf4j/LoggerFactory.getLogger:(Ljava/lang/String;)Lorg/slf4j/Logger;
+         5: putstatic     #152                // Field LOGGER:Lorg/slf4j/Logger;
+         8: iconst_m1
+         9: putstatic     #44                 // Field sizedHeight:I
+        12: return
+      LineNumberTable:
+        line 17: 0
+        line 26: 8
+}
+InnerClasses:
+  public static final #10= #7 of #9;      // Texture=class net/anubis/client/gui/ThemeImages$Texture of class net/anubis/client/gui/ThemeImages
+SourceFile: "HudEmblem.java"
+RuntimeVisibleAnnotations:
+  0: #243(#244=e#245.#246)
+    net.fabricmc.api.Environment(
+      value=Lnet/fabricmc/api/EnvType;.CLIENT
+    )

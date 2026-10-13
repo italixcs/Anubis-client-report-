@@ -1,0 +1,967 @@
+Classfile analysis-workspace/extracted/run.oEA4CbVx/net/anubis/client/proxy/ProxyChecker.class
+  Last modified Oct 13, 2026; size 8313 bytes
+  SHA-256 checksum c9f21392cf4cda8ef041ca00319f15c0641ef5681fb367ab811ef5fbec9c77a2
+  Compiled from "ProxyChecker.java"
+public final class net.anubis.client.proxy.ProxyChecker
+  minor version: 0
+  major version: 65
+  flags: (0x0031) ACC_PUBLIC, ACC_FINAL, ACC_SUPER
+  this_class: #2                          // net/anubis/client/proxy/ProxyChecker
+  super_class: #4                         // java/lang/Object
+  interfaces: 0, fields: 8, methods: 12, attributes: 5
+Constant pool:
+    #1 = Utf8               net/anubis/client/proxy/ProxyChecker
+    #2 = Class              #1            // net/anubis/client/proxy/ProxyChecker
+    #3 = Utf8               java/lang/Object
+    #4 = Class              #3            // java/lang/Object
+    #5 = Utf8               ProxyChecker.java
+    #6 = Utf8               net/anubis/client/proxy/ProxyChecker$1
+    #7 = Class              #6            // net/anubis/client/proxy/ProxyChecker$1
+    #8 = Utf8               net/anubis/client/proxy/ProxyChecker$1$1
+    #9 = Class              #8            // net/anubis/client/proxy/ProxyChecker$1$1
+   #10 = Utf8               java/util/concurrent/ConcurrentHashMap$KeySetView
+   #11 = Class              #10           // java/util/concurrent/ConcurrentHashMap$KeySetView
+   #12 = Utf8               java/util/concurrent/ConcurrentHashMap
+   #13 = Class              #12           // java/util/concurrent/ConcurrentHashMap
+   #14 = Utf8               KeySetView
+   #15 = Utf8               java/lang/invoke/MethodHandles$Lookup
+   #16 = Class              #15           // java/lang/invoke/MethodHandles$Lookup
+   #17 = Utf8               java/lang/invoke/MethodHandles
+   #18 = Class              #17           // java/lang/invoke/MethodHandles
+   #19 = Utf8               Lookup
+   #20 = Utf8               TARGET
+   #21 = Utf8               Ljava/net/InetSocketAddress;
+   #22 = Utf8               TIMEOUT_MS
+   #23 = Utf8               I
+   #24 = Integer            8000
+   #25 = Utf8               IN_FLIGHT
+   #26 = Integer            32
+   #27 = Utf8               INSTANCE
+   #28 = Utf8               Lnet/anubis/client/proxy/ProxyChecker;
+   #29 = Utf8               checking
+   #30 = Utf8               Ljava/util/Set;
+   #31 = Utf8               Ljava/util/Set<Lnet/anubis/client/proxy/Proxy;>;
+   #32 = Utf8               queue
+   #33 = Utf8               Ljava/util/Deque;
+   #34 = Utf8               Ljava/util/Deque<Lnet/anubis/client/proxy/Proxy;>;
+   #35 = Utf8               running
+   #36 = Utf8               group
+   #37 = Utf8               Lio/netty/channel/EventLoopGroup;
+   #38 = Utf8               <init>
+   #39 = Utf8               ()V
+   #40 = NameAndType        #38:#39       // "<init>":()V
+   #41 = Methodref          #4.#40        // java/lang/Object."<init>":()V
+   #42 = Utf8               newKeySet
+   #43 = Utf8               ()Ljava/util/concurrent/ConcurrentHashMap$KeySetView;
+   #44 = NameAndType        #42:#43       // newKeySet:()Ljava/util/concurrent/ConcurrentHashMap$KeySetView;
+   #45 = Methodref          #13.#44       // java/util/concurrent/ConcurrentHashMap.newKeySet:()Ljava/util/concurrent/ConcurrentHashMap$KeySetView;
+   #46 = NameAndType        #29:#30       // checking:Ljava/util/Set;
+   #47 = Fieldref           #2.#46        // net/anubis/client/proxy/ProxyChecker.checking:Ljava/util/Set;
+   #48 = Utf8               java/util/ArrayDeque
+   #49 = Class              #48           // java/util/ArrayDeque
+   #50 = Methodref          #49.#40       // java/util/ArrayDeque."<init>":()V
+   #51 = NameAndType        #32:#33       // queue:Ljava/util/Deque;
+   #52 = Fieldref           #2.#51        // net/anubis/client/proxy/ProxyChecker.queue:Ljava/util/Deque;
+   #53 = Utf8               this
+   #54 = Utf8               get
+   #55 = Utf8               ()Lnet/anubis/client/proxy/ProxyChecker;
+   #56 = NameAndType        #27:#28       // INSTANCE:Lnet/anubis/client/proxy/ProxyChecker;
+   #57 = Fieldref           #2.#56        // net/anubis/client/proxy/ProxyChecker.INSTANCE:Lnet/anubis/client/proxy/ProxyChecker;
+   #58 = Utf8               check
+   #59 = Utf8               (Ljava/util/Collection;)V
+   #60 = Utf8               (Ljava/util/Collection<Lnet/anubis/client/proxy/Proxy;>;)V
+   #61 = Utf8               proxies
+   #62 = Utf8               java/util/Collection
+   #63 = Class              #62           // java/util/Collection
+   #64 = Utf8               iterator
+   #65 = Utf8               ()Ljava/util/Iterator;
+   #66 = NameAndType        #64:#65       // iterator:()Ljava/util/Iterator;
+   #67 = InterfaceMethodref #63.#66       // java/util/Collection.iterator:()Ljava/util/Iterator;
+   #68 = Utf8               java/util/Iterator
+   #69 = Class              #68           // java/util/Iterator
+   #70 = Utf8               hasNext
+   #71 = Utf8               ()Z
+   #72 = NameAndType        #70:#71       // hasNext:()Z
+   #73 = InterfaceMethodref #69.#72       // java/util/Iterator.hasNext:()Z
+   #74 = Utf8               next
+   #75 = Utf8               ()Ljava/lang/Object;
+   #76 = NameAndType        #74:#75       // next:()Ljava/lang/Object;
+   #77 = InterfaceMethodref #69.#76       // java/util/Iterator.next:()Ljava/lang/Object;
+   #78 = Utf8               net/anubis/client/proxy/Proxy
+   #79 = Class              #78           // net/anubis/client/proxy/Proxy
+   #80 = Utf8               java/util/Set
+   #81 = Class              #80           // java/util/Set
+   #82 = Utf8               add
+   #83 = Utf8               (Ljava/lang/Object;)Z
+   #84 = NameAndType        #82:#83       // add:(Ljava/lang/Object;)Z
+   #85 = InterfaceMethodref #81.#84       // java/util/Set.add:(Ljava/lang/Object;)Z
+   #86 = Utf8               java/util/Deque
+   #87 = Class              #86           // java/util/Deque
+   #88 = InterfaceMethodref #87.#84       // java/util/Deque.add:(Ljava/lang/Object;)Z
+   #89 = Utf8               pump
+   #90 = NameAndType        #89:#39       // pump:()V
+   #91 = Methodref          #2.#90        // net/anubis/client/proxy/ProxyChecker.pump:()V
+   #92 = Utf8               proxy
+   #93 = Utf8               Lnet/anubis/client/proxy/Proxy;
+   #94 = Utf8               Ljava/util/Collection<Lnet/anubis/client/proxy/Proxy;>;
+   #95 = Utf8               Ljava/util/Collection;
+   #96 = Utf8               isChecking
+   #97 = Utf8               (Lnet/anubis/client/proxy/Proxy;)Z
+   #98 = Utf8               contains
+   #99 = NameAndType        #98:#83       // contains:(Ljava/lang/Object;)Z
+  #100 = InterfaceMethodref #81.#99       // java/util/Set.contains:(Ljava/lang/Object;)Z
+  #101 = Utf8               pending
+  #102 = Utf8               ()I
+  #103 = Utf8               size
+  #104 = NameAndType        #103:#102     // size:()I
+  #105 = InterfaceMethodref #81.#104      // java/util/Set.size:()I
+  #106 = NameAndType        #36:#37       // group:Lio/netty/channel/EventLoopGroup;
+  #107 = Fieldref           #2.#106       // net/anubis/client/proxy/ProxyChecker.group:Lio/netty/channel/EventLoopGroup;
+  #108 = Utf8               io/netty/channel/MultiThreadIoEventLoopGroup
+  #109 = Class              #108          // io/netty/channel/MultiThreadIoEventLoopGroup
+  #110 = Utf8               io/netty/util/concurrent/DefaultThreadFactory
+  #111 = Class              #110          // io/netty/util/concurrent/DefaultThreadFactory
+  #112 = Utf8               Anubis proxy check
+  #113 = String             #112          // Anubis proxy check
+  #114 = Utf8               (Ljava/lang/String;Z)V
+  #115 = NameAndType        #38:#114      // "<init>":(Ljava/lang/String;Z)V
+  #116 = Methodref          #111.#115     // io/netty/util/concurrent/DefaultThreadFactory."<init>":(Ljava/lang/String;Z)V
+  #117 = Utf8               io/netty/channel/nio/NioIoHandler
+  #118 = Class              #117          // io/netty/channel/nio/NioIoHandler
+  #119 = Utf8               newFactory
+  #120 = Utf8               ()Lio/netty/channel/IoHandlerFactory;
+  #121 = NameAndType        #119:#120     // newFactory:()Lio/netty/channel/IoHandlerFactory;
+  #122 = Methodref          #118.#121     // io/netty/channel/nio/NioIoHandler.newFactory:()Lio/netty/channel/IoHandlerFactory;
+  #123 = Utf8               (ILjava/util/concurrent/ThreadFactory;Lio/netty/channel/IoHandlerFactory;)V
+  #124 = NameAndType        #38:#123      // "<init>":(ILjava/util/concurrent/ThreadFactory;Lio/netty/channel/IoHandlerFactory;)V
+  #125 = Methodref          #109.#124     // io/netty/channel/MultiThreadIoEventLoopGroup."<init>":(ILjava/util/concurrent/ThreadFactory;Lio/netty/channel/IoHandlerFactory;)V
+  #126 = NameAndType        #35:#23       // running:I
+  #127 = Fieldref           #2.#126       // net/anubis/client/proxy/ProxyChecker.running:I
+  #128 = Utf8               isEmpty
+  #129 = NameAndType        #128:#71      // isEmpty:()Z
+  #130 = InterfaceMethodref #87.#129      // java/util/Deque.isEmpty:()Z
+  #131 = Utf8               poll
+  #132 = NameAndType        #131:#75      // poll:()Ljava/lang/Object;
+  #133 = InterfaceMethodref #87.#132      // java/util/Deque.poll:()Ljava/lang/Object;
+  #134 = MethodType         #39           //  ()V
+  #135 = Utf8               lambda$pump$0
+  #136 = Utf8               (Lnet/anubis/client/proxy/Proxy;)V
+  #137 = NameAndType        #135:#136     // lambda$pump$0:(Lnet/anubis/client/proxy/Proxy;)V
+  #138 = Methodref          #2.#137       // net/anubis/client/proxy/ProxyChecker.lambda$pump$0:(Lnet/anubis/client/proxy/Proxy;)V
+  #139 = MethodHandle       5:#138        // REF_invokeVirtual net/anubis/client/proxy/ProxyChecker.lambda$pump$0:(Lnet/anubis/client/proxy/Proxy;)V
+  #140 = Utf8               java/lang/invoke/LambdaMetafactory
+  #141 = Class              #140          // java/lang/invoke/LambdaMetafactory
+  #142 = Utf8               metafactory
+  #143 = Utf8               (Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+  #144 = NameAndType        #142:#143     // metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+  #145 = Methodref          #141.#144     // java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+  #146 = MethodHandle       6:#145        // REF_invokeStatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+  #147 = Utf8               run
+  #148 = Utf8               (Lnet/anubis/client/proxy/ProxyChecker;Lnet/anubis/client/proxy/Proxy;)Ljava/lang/Runnable;
+  #149 = NameAndType        #147:#148     // run:(Lnet/anubis/client/proxy/ProxyChecker;Lnet/anubis/client/proxy/Proxy;)Ljava/lang/Runnable;
+  #150 = InvokeDynamic      #0:#149       // #0:run:(Lnet/anubis/client/proxy/ProxyChecker;Lnet/anubis/client/proxy/Proxy;)Ljava/lang/Runnable;
+  #151 = Utf8               io/netty/channel/EventLoopGroup
+  #152 = Class              #151          // io/netty/channel/EventLoopGroup
+  #153 = Utf8               execute
+  #154 = Utf8               (Ljava/lang/Runnable;)V
+  #155 = NameAndType        #153:#154     // execute:(Ljava/lang/Runnable;)V
+  #156 = InterfaceMethodref #152.#155     // io/netty/channel/EventLoopGroup.execute:(Ljava/lang/Runnable;)V
+  #157 = Utf8               start
+  #158 = Utf8               java/lang/RuntimeException
+  #159 = Class              #158          // java/lang/RuntimeException
+  #160 = Utf8               java/util/concurrent/atomic/AtomicBoolean
+  #161 = Class              #160          // java/util/concurrent/atomic/AtomicBoolean
+  #162 = Methodref          #161.#40      // java/util/concurrent/atomic/AtomicBoolean."<init>":()V
+  #163 = Utf8               isValid
+  #164 = NameAndType        #163:#71      // isValid:()Z
+  #165 = Methodref          #79.#164      // net/anubis/client/proxy/Proxy.isValid:()Z
+  #166 = Utf8               finish
+  #167 = Utf8               (Lnet/anubis/client/proxy/Proxy;ILjava/util/concurrent/atomic/AtomicBoolean;)V
+  #168 = NameAndType        #166:#167     // finish:(Lnet/anubis/client/proxy/Proxy;ILjava/util/concurrent/atomic/AtomicBoolean;)V
+  #169 = Methodref          #2.#168       // net/anubis/client/proxy/ProxyChecker.finish:(Lnet/anubis/client/proxy/Proxy;ILjava/util/concurrent/atomic/AtomicBoolean;)V
+  #170 = Utf8               net/anubis/client/proxy/ProxyRouting
+  #171 = Class              #170          // net/anubis/client/proxy/ProxyRouting
+  #172 = Utf8               handler
+  #173 = Utf8               (Lnet/anubis/client/proxy/Proxy;)Lio/netty/handler/proxy/ProxyHandler;
+  #174 = NameAndType        #172:#173     // handler:(Lnet/anubis/client/proxy/Proxy;)Lio/netty/handler/proxy/ProxyHandler;
+  #175 = Methodref          #171.#174     // net/anubis/client/proxy/ProxyRouting.handler:(Lnet/anubis/client/proxy/Proxy;)Lio/netty/handler/proxy/ProxyHandler;
+  #176 = Utf8               io/netty/handler/proxy/ProxyHandler
+  #177 = Class              #176          // io/netty/handler/proxy/ProxyHandler
+  #178 = Long               8000l
+  #180 = Utf8               setConnectTimeoutMillis
+  #181 = Utf8               (J)V
+  #182 = NameAndType        #180:#181     // setConnectTimeoutMillis:(J)V
+  #183 = Methodref          #177.#182     // io/netty/handler/proxy/ProxyHandler.setConnectTimeoutMillis:(J)V
+  #184 = Utf8               java/lang/System
+  #185 = Class              #184          // java/lang/System
+  #186 = Utf8               nanoTime
+  #187 = Utf8               ()J
+  #188 = NameAndType        #186:#187     // nanoTime:()J
+  #189 = Methodref          #185.#188     // java/lang/System.nanoTime:()J
+  #190 = Utf8               io/netty/bootstrap/Bootstrap
+  #191 = Class              #190          // io/netty/bootstrap/Bootstrap
+  #192 = Methodref          #191.#40      // io/netty/bootstrap/Bootstrap."<init>":()V
+  #193 = Utf8               (Lio/netty/channel/EventLoopGroup;)Lio/netty/bootstrap/AbstractBootstrap;
+  #194 = NameAndType        #36:#193      // group:(Lio/netty/channel/EventLoopGroup;)Lio/netty/bootstrap/AbstractBootstrap;
+  #195 = Methodref          #191.#194     // io/netty/bootstrap/Bootstrap.group:(Lio/netty/channel/EventLoopGroup;)Lio/netty/bootstrap/AbstractBootstrap;
+  #196 = Utf8               io/netty/channel/socket/nio/NioSocketChannel
+  #197 = Class              #196          // io/netty/channel/socket/nio/NioSocketChannel
+  #198 = Utf8               channel
+  #199 = Utf8               (Ljava/lang/Class;)Lio/netty/bootstrap/AbstractBootstrap;
+  #200 = NameAndType        #198:#199     // channel:(Ljava/lang/Class;)Lio/netty/bootstrap/AbstractBootstrap;
+  #201 = Methodref          #191.#200     // io/netty/bootstrap/Bootstrap.channel:(Ljava/lang/Class;)Lio/netty/bootstrap/AbstractBootstrap;
+  #202 = Utf8               io/netty/channel/ChannelOption
+  #203 = Class              #202          // io/netty/channel/ChannelOption
+  #204 = Utf8               CONNECT_TIMEOUT_MILLIS
+  #205 = Utf8               Lio/netty/channel/ChannelOption;
+  #206 = NameAndType        #204:#205     // CONNECT_TIMEOUT_MILLIS:Lio/netty/channel/ChannelOption;
+  #207 = Fieldref           #203.#206     // io/netty/channel/ChannelOption.CONNECT_TIMEOUT_MILLIS:Lio/netty/channel/ChannelOption;
+  #208 = Utf8               java/lang/Integer
+  #209 = Class              #208          // java/lang/Integer
+  #210 = Utf8               valueOf
+  #211 = Utf8               (I)Ljava/lang/Integer;
+  #212 = NameAndType        #210:#211     // valueOf:(I)Ljava/lang/Integer;
+  #213 = Methodref          #209.#212     // java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+  #214 = Utf8               option
+  #215 = Utf8               (Lio/netty/channel/ChannelOption;Ljava/lang/Object;)Lio/netty/bootstrap/AbstractBootstrap;
+  #216 = NameAndType        #214:#215     // option:(Lio/netty/channel/ChannelOption;Ljava/lang/Object;)Lio/netty/bootstrap/AbstractBootstrap;
+  #217 = Methodref          #191.#216     // io/netty/bootstrap/Bootstrap.option:(Lio/netty/channel/ChannelOption;Ljava/lang/Object;)Lio/netty/bootstrap/AbstractBootstrap;
+  #218 = Utf8               (Lnet/anubis/client/proxy/ProxyChecker;Lio/netty/handler/proxy/ProxyHandler;)V
+  #219 = NameAndType        #38:#218      // "<init>":(Lnet/anubis/client/proxy/ProxyChecker;Lio/netty/handler/proxy/ProxyHandler;)V
+  #220 = Methodref          #7.#219       // net/anubis/client/proxy/ProxyChecker$1."<init>":(Lnet/anubis/client/proxy/ProxyChecker;Lio/netty/handler/proxy/ProxyHandler;)V
+  #221 = Utf8               (Lio/netty/channel/ChannelHandler;)Lio/netty/bootstrap/AbstractBootstrap;
+  #222 = NameAndType        #172:#221     // handler:(Lio/netty/channel/ChannelHandler;)Lio/netty/bootstrap/AbstractBootstrap;
+  #223 = Methodref          #191.#222     // io/netty/bootstrap/Bootstrap.handler:(Lio/netty/channel/ChannelHandler;)Lio/netty/bootstrap/AbstractBootstrap;
+  #224 = NameAndType        #20:#21       // TARGET:Ljava/net/InetSocketAddress;
+  #225 = Fieldref           #2.#224       // net/anubis/client/proxy/ProxyChecker.TARGET:Ljava/net/InetSocketAddress;
+  #226 = Utf8               connect
+  #227 = Utf8               (Ljava/net/SocketAddress;)Lio/netty/channel/ChannelFuture;
+  #228 = NameAndType        #226:#227     // connect:(Ljava/net/SocketAddress;)Lio/netty/channel/ChannelFuture;
+  #229 = Methodref          #191.#228     // io/netty/bootstrap/Bootstrap.connect:(Ljava/net/SocketAddress;)Lio/netty/channel/ChannelFuture;
+  #230 = Utf8               (Lio/netty/util/concurrent/Future;)V
+  #231 = MethodType         #230          //  (Lio/netty/util/concurrent/Future;)V
+  #232 = Utf8               lambda$start$1
+  #233 = Utf8               (Lnet/anubis/client/proxy/Proxy;Ljava/util/concurrent/atomic/AtomicBoolean;Lio/netty/util/concurrent/Future;)V
+  #234 = NameAndType        #232:#233     // lambda$start$1:(Lnet/anubis/client/proxy/Proxy;Ljava/util/concurrent/atomic/AtomicBoolean;Lio/netty/util/concurrent/Future;)V
+  #235 = Methodref          #2.#234       // net/anubis/client/proxy/ProxyChecker.lambda$start$1:(Lnet/anubis/client/proxy/Proxy;Ljava/util/concurrent/atomic/AtomicBoolean;Lio/netty/util/concurrent/Future;)V
+  #236 = MethodHandle       5:#235        // REF_invokeVirtual net/anubis/client/proxy/ProxyChecker.lambda$start$1:(Lnet/anubis/client/proxy/Proxy;Ljava/util/concurrent/atomic/AtomicBoolean;Lio/netty/util/concurrent/Future;)V
+  #237 = Utf8               operationComplete
+  #238 = Utf8               (Lnet/anubis/client/proxy/ProxyChecker;Lnet/anubis/client/proxy/Proxy;Ljava/util/concurrent/atomic/AtomicBoolean;)Lio/netty/util/concurrent/GenericFutureListener;
+  #239 = NameAndType        #237:#238     // operationComplete:(Lnet/anubis/client/proxy/ProxyChecker;Lnet/anubis/client/proxy/Proxy;Ljava/util/concurrent/atomic/AtomicBoolean;)Lio/netty/util/concurrent/GenericFutureListener;
+  #240 = InvokeDynamic      #1:#239       // #1:operationComplete:(Lnet/anubis/client/proxy/ProxyChecker;Lnet/anubis/client/proxy/Proxy;Ljava/util/concurrent/atomic/AtomicBoolean;)Lio/netty/util/concurrent/GenericFutureListener;
+  #241 = Utf8               io/netty/channel/ChannelFuture
+  #242 = Class              #241          // io/netty/channel/ChannelFuture
+  #243 = Utf8               addListener
+  #244 = Utf8               (Lio/netty/util/concurrent/GenericFutureListener;)Lio/netty/channel/ChannelFuture;
+  #245 = NameAndType        #243:#244     // addListener:(Lio/netty/util/concurrent/GenericFutureListener;)Lio/netty/channel/ChannelFuture;
+  #246 = InterfaceMethodref #242.#245     // io/netty/channel/ChannelFuture.addListener:(Lio/netty/util/concurrent/GenericFutureListener;)Lio/netty/channel/ChannelFuture;
+  #247 = Utf8               connectFuture
+  #248 = Utf8               ()Lio/netty/util/concurrent/Future;
+  #249 = NameAndType        #247:#248     // connectFuture:()Lio/netty/util/concurrent/Future;
+  #250 = Methodref          #177.#249     // io/netty/handler/proxy/ProxyHandler.connectFuture:()Lio/netty/util/concurrent/Future;
+  #251 = Utf8               lambda$start$2
+  #252 = Utf8               (JLnet/anubis/client/proxy/Proxy;Ljava/util/concurrent/atomic/AtomicBoolean;Lio/netty/channel/ChannelFuture;Lio/netty/util/concurrent/Future;)V
+  #253 = NameAndType        #251:#252     // lambda$start$2:(JLnet/anubis/client/proxy/Proxy;Ljava/util/concurrent/atomic/AtomicBoolean;Lio/netty/channel/ChannelFuture;Lio/netty/util/concurrent/Future;)V
+  #254 = Methodref          #2.#253       // net/anubis/client/proxy/ProxyChecker.lambda$start$2:(JLnet/anubis/client/proxy/Proxy;Ljava/util/concurrent/atomic/AtomicBoolean;Lio/netty/channel/ChannelFuture;Lio/netty/util/concurrent/Future;)V
+  #255 = MethodHandle       5:#254        // REF_invokeVirtual net/anubis/client/proxy/ProxyChecker.lambda$start$2:(JLnet/anubis/client/proxy/Proxy;Ljava/util/concurrent/atomic/AtomicBoolean;Lio/netty/channel/ChannelFuture;Lio/netty/util/concurrent/Future;)V
+  #256 = Utf8               (Lnet/anubis/client/proxy/ProxyChecker;JLnet/anubis/client/proxy/Proxy;Ljava/util/concurrent/atomic/AtomicBoolean;Lio/netty/channel/ChannelFuture;)Lio/netty/util/concurrent/GenericFutureListener;
+  #257 = NameAndType        #237:#256     // operationComplete:(Lnet/anubis/client/proxy/ProxyChecker;JLnet/anubis/client/proxy/Proxy;Ljava/util/concurrent/atomic/AtomicBoolean;Lio/netty/channel/ChannelFuture;)Lio/netty/util/concurrent/GenericFutureListener;
+  #258 = InvokeDynamic      #2:#257       // #2:operationComplete:(Lnet/anubis/client/proxy/ProxyChecker;JLnet/anubis/client/proxy/Proxy;Ljava/util/concurrent/atomic/AtomicBoolean;Lio/netty/channel/ChannelFuture;)Lio/netty/util/concurrent/GenericFutureListener;
+  #259 = Utf8               io/netty/util/concurrent/Future
+  #260 = Class              #259          // io/netty/util/concurrent/Future
+  #261 = Utf8               (Lio/netty/util/concurrent/GenericFutureListener;)Lio/netty/util/concurrent/Future;
+  #262 = NameAndType        #243:#261     // addListener:(Lio/netty/util/concurrent/GenericFutureListener;)Lio/netty/util/concurrent/Future;
+  #263 = InterfaceMethodref #260.#262     // io/netty/util/concurrent/Future.addListener:(Lio/netty/util/concurrent/GenericFutureListener;)Lio/netty/util/concurrent/Future;
+  #264 = Utf8               Lio/netty/handler/proxy/ProxyHandler;
+  #265 = Utf8               unresolvable
+  #266 = Utf8               Ljava/lang/RuntimeException;
+  #267 = Utf8               done
+  #268 = Utf8               Ljava/util/concurrent/atomic/AtomicBoolean;
+  #269 = Utf8               started
+  #270 = Utf8               J
+  #271 = Utf8               Lio/netty/channel/ChannelFuture;
+  #272 = Utf8               ping
+  #273 = Utf8               compareAndSet
+  #274 = Utf8               (ZZ)Z
+  #275 = NameAndType        #273:#274     // compareAndSet:(ZZ)Z
+  #276 = Methodref          #161.#275     // java/util/concurrent/atomic/AtomicBoolean.compareAndSet:(ZZ)Z
+  #277 = NameAndType        #272:#23      // ping:I
+  #278 = Fieldref           #79.#277      // net/anubis/client/proxy/Proxy.ping:I
+  #279 = Utf8               remove
+  #280 = NameAndType        #279:#83      // remove:(Ljava/lang/Object;)Z
+  #281 = InterfaceMethodref #81.#280      // java/util/Set.remove:(Ljava/lang/Object;)Z
+  #282 = Utf8               java/lang/Throwable
+  #283 = Class              #282          // java/lang/Throwable
+  #284 = Utf8               net/anubis/client/proxy/Proxies
+  #285 = Class              #284          // net/anubis/client/proxy/Proxies
+  #286 = Utf8               ()Lnet/anubis/client/proxy/Proxies;
+  #287 = NameAndType        #54:#286      // get:()Lnet/anubis/client/proxy/Proxies;
+  #288 = Methodref          #285.#287     // net/anubis/client/proxy/Proxies.get:()Lnet/anubis/client/proxy/Proxies;
+  #289 = Utf8               checked
+  #290 = NameAndType        #289:#39      // checked:()V
+  #291 = Methodref          #285.#290     // net/anubis/client/proxy/Proxies.checked:()V
+  #292 = Utf8               last
+  #293 = Utf8               Z
+  #294 = Utf8               java/lang/Exception
+  #295 = Class              #294          // java/lang/Exception
+  #296 = Utf8               future
+  #297 = Long               1000000l
+  #299 = Utf8               isSuccess
+  #300 = NameAndType        #299:#71      // isSuccess:()Z
+  #301 = InterfaceMethodref #260.#300     // io/netty/util/concurrent/Future.isSuccess:()Z
+  #302 = Utf8               ()Lio/netty/channel/Channel;
+  #303 = NameAndType        #198:#302     // channel:()Lio/netty/channel/Channel;
+  #304 = InterfaceMethodref #242.#303     // io/netty/channel/ChannelFuture.channel:()Lio/netty/channel/Channel;
+  #305 = Utf8               io/netty/channel/Channel
+  #306 = Class              #305          // io/netty/channel/Channel
+  #307 = Utf8               close
+  #308 = Utf8               ()Lio/netty/channel/ChannelFuture;
+  #309 = NameAndType        #307:#308     // close:()Lio/netty/channel/ChannelFuture;
+  #310 = InterfaceMethodref #306.#309     // io/netty/channel/Channel.close:()Lio/netty/channel/ChannelFuture;
+  #311 = Utf8               Lio/netty/util/concurrent/Future;
+  #312 = Utf8               ms
+  #313 = NameAndType        #157:#136     // start:(Lnet/anubis/client/proxy/Proxy;)V
+  #314 = Methodref          #2.#313       // net/anubis/client/proxy/ProxyChecker.start:(Lnet/anubis/client/proxy/Proxy;)V
+  #315 = Utf8               <clinit>
+  #316 = Utf8               java/net/InetSocketAddress
+  #317 = Class              #316          // java/net/InetSocketAddress
+  #318 = Utf8               1.1.1.1
+  #319 = String             #318          // 1.1.1.1
+  #320 = Utf8               com/google/common/net/InetAddresses
+  #321 = Class              #320          // com/google/common/net/InetAddresses
+  #322 = Utf8               forString
+  #323 = Utf8               (Ljava/lang/String;)Ljava/net/InetAddress;
+  #324 = NameAndType        #322:#323     // forString:(Ljava/lang/String;)Ljava/net/InetAddress;
+  #325 = Methodref          #321.#324     // com/google/common/net/InetAddresses.forString:(Ljava/lang/String;)Ljava/net/InetAddress;
+  #326 = Utf8               (Ljava/net/InetAddress;I)V
+  #327 = NameAndType        #38:#326      // "<init>":(Ljava/net/InetAddress;I)V
+  #328 = Methodref          #317.#327     // java/net/InetSocketAddress."<init>":(Ljava/net/InetAddress;I)V
+  #329 = Methodref          #2.#40        // net/anubis/client/proxy/ProxyChecker."<init>":()V
+  #330 = Utf8               Lnet/fabricmc/api/Environment;
+  #331 = Utf8               value
+  #332 = Utf8               Lnet/fabricmc/api/EnvType;
+  #333 = Utf8               CLIENT
+  #334 = Utf8               ConstantValue
+  #335 = Utf8               Signature
+  #336 = Utf8               Code
+  #337 = Utf8               LineNumberTable
+  #338 = Utf8               LocalVariableTable
+  #339 = Utf8               StackMapTable
+  #340 = Utf8               LocalVariableTypeTable
+  #341 = Utf8               MethodParameters
+  #342 = Utf8               Exceptions
+  #343 = Utf8               InnerClasses
+  #344 = Utf8               SourceFile
+  #345 = Utf8               RuntimeVisibleAnnotations
+  #346 = Utf8               BootstrapMethods
+  #347 = Utf8               NestMembers
+{
+  private static final java.net.InetSocketAddress TARGET;
+    descriptor: Ljava/net/InetSocketAddress;
+    flags: (0x001a) ACC_PRIVATE, ACC_STATIC, ACC_FINAL
+
+  private static final int TIMEOUT_MS;
+    descriptor: I
+    flags: (0x001a) ACC_PRIVATE, ACC_STATIC, ACC_FINAL
+    ConstantValue: int 8000
+
+  private static final int IN_FLIGHT;
+    descriptor: I
+    flags: (0x001a) ACC_PRIVATE, ACC_STATIC, ACC_FINAL
+    ConstantValue: int 32
+
+  private static final net.anubis.client.proxy.ProxyChecker INSTANCE;
+    descriptor: Lnet/anubis/client/proxy/ProxyChecker;
+    flags: (0x001a) ACC_PRIVATE, ACC_STATIC, ACC_FINAL
+
+  private final java.util.Set<net.anubis.client.proxy.Proxy> checking;
+    descriptor: Ljava/util/Set;
+    flags: (0x0012) ACC_PRIVATE, ACC_FINAL
+    Signature: #31                          // Ljava/util/Set<Lnet/anubis/client/proxy/Proxy;>;
+
+  private final java.util.Deque<net.anubis.client.proxy.Proxy> queue;
+    descriptor: Ljava/util/Deque;
+    flags: (0x0012) ACC_PRIVATE, ACC_FINAL
+    Signature: #34                          // Ljava/util/Deque<Lnet/anubis/client/proxy/Proxy;>;
+
+  private int running;
+    descriptor: I
+    flags: (0x0002) ACC_PRIVATE
+
+  private io.netty.channel.EventLoopGroup group;
+    descriptor: Lio/netty/channel/EventLoopGroup;
+    flags: (0x0002) ACC_PRIVATE
+
+  private net.anubis.client.proxy.ProxyChecker();
+    descriptor: ()V
+    flags: (0x0002) ACC_PRIVATE
+    Code:
+      stack=3, locals=1, args_size=1
+         0: aload_0
+         1: invokespecial #41                 // Method java/lang/Object."<init>":()V
+         4: aload_0
+         5: invokestatic  #45                 // Method java/util/concurrent/ConcurrentHashMap.newKeySet:()Ljava/util/concurrent/ConcurrentHashMap$KeySetView;
+         8: putfield      #47                 // Field checking:Ljava/util/Set;
+        11: aload_0
+        12: new           #49                 // class java/util/ArrayDeque
+        15: dup
+        16: invokespecial #50                 // Method java/util/ArrayDeque."<init>":()V
+        19: putfield      #52                 // Field queue:Ljava/util/Deque;
+        22: return
+      LineNumberTable:
+        line 38: 0
+        line 32: 4
+        line 34: 11
+        line 39: 22
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      23     0  this   Lnet/anubis/client/proxy/ProxyChecker;
+
+  public static net.anubis.client.proxy.ProxyChecker get();
+    descriptor: ()Lnet/anubis/client/proxy/ProxyChecker;
+    flags: (0x0009) ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=1, locals=0, args_size=0
+         0: getstatic     #57                 // Field INSTANCE:Lnet/anubis/client/proxy/ProxyChecker;
+         3: areturn
+      LineNumberTable:
+        line 42: 0
+
+  public synchronized void check(java.util.Collection<net.anubis.client.proxy.Proxy>);
+    descriptor: (Ljava/util/Collection;)V
+    flags: (0x0021) ACC_PUBLIC, ACC_SYNCHRONIZED
+    Code:
+      stack=2, locals=4, args_size=2
+         0: aload_1
+         1: invokeinterface #67,  1           // InterfaceMethod java/util/Collection.iterator:()Ljava/util/Iterator;
+         6: astore_2
+         7: aload_2
+         8: invokeinterface #73,  1           // InterfaceMethod java/util/Iterator.hasNext:()Z
+        13: ifeq          53
+        16: aload_2
+        17: invokeinterface #77,  1           // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+        22: checkcast     #79                 // class net/anubis/client/proxy/Proxy
+        25: astore_3
+        26: aload_0
+        27: getfield      #47                 // Field checking:Ljava/util/Set;
+        30: aload_3
+        31: invokeinterface #85,  2           // InterfaceMethod java/util/Set.add:(Ljava/lang/Object;)Z
+        36: ifeq          50
+        39: aload_0
+        40: getfield      #52                 // Field queue:Ljava/util/Deque;
+        43: aload_3
+        44: invokeinterface #88,  2           // InterfaceMethod java/util/Deque.add:(Ljava/lang/Object;)Z
+        49: pop
+        50: goto          7
+        53: aload_0
+        54: invokevirtual #91                 // Method pump:()V
+        57: return
+      StackMapTable: number_of_entries = 3
+        frame_type = 252 /* append */
+          offset_delta = 7
+          locals = [ class java/util/Iterator ]
+        frame_type = 42 /* same */
+        frame_type = 250 /* chop */
+          offset_delta = 2
+      LineNumberTable:
+        line 46: 0
+        line 47: 26
+        line 48: 50
+        line 49: 53
+        line 50: 57
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+           26      24     3 proxy   Lnet/anubis/client/proxy/Proxy;
+            0      58     0  this   Lnet/anubis/client/proxy/ProxyChecker;
+            0      58     1 proxies   Ljava/util/Collection;
+      LocalVariableTypeTable:
+        Start  Length  Slot  Name   Signature
+            0      58     1 proxies   Ljava/util/Collection<Lnet/anubis/client/proxy/Proxy;>;
+    Signature: #60                          // (Ljava/util/Collection<Lnet/anubis/client/proxy/Proxy;>;)V
+    MethodParameters:
+      Name                           Flags
+      proxies
+
+  public boolean isChecking(net.anubis.client.proxy.Proxy);
+    descriptor: (Lnet/anubis/client/proxy/Proxy;)Z
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=2, locals=2, args_size=2
+         0: aload_0
+         1: getfield      #47                 // Field checking:Ljava/util/Set;
+         4: aload_1
+         5: invokeinterface #100,  2          // InterfaceMethod java/util/Set.contains:(Ljava/lang/Object;)Z
+        10: ireturn
+      LineNumberTable:
+        line 53: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      11     0  this   Lnet/anubis/client/proxy/ProxyChecker;
+            0      11     1 proxy   Lnet/anubis/client/proxy/Proxy;
+    MethodParameters:
+      Name                           Flags
+      proxy
+
+  public int pending();
+    descriptor: ()I
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: getfield      #47                 // Field checking:Ljava/util/Set;
+         4: invokeinterface #105,  1          // InterfaceMethod java/util/Set.size:()I
+         9: ireturn
+      LineNumberTable:
+        line 57: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      10     0  this   Lnet/anubis/client/proxy/ProxyChecker;
+
+  private synchronized void pump();
+    descriptor: ()V
+    flags: (0x0022) ACC_PRIVATE, ACC_SYNCHRONIZED
+    Code:
+      stack=8, locals=2, args_size=1
+         0: aload_0
+         1: getfield      #107                // Field group:Lio/netty/channel/EventLoopGroup;
+         4: ifnonnull     32
+         7: aload_0
+         8: new           #109                // class io/netty/channel/MultiThreadIoEventLoopGroup
+        11: dup
+        12: iconst_2
+        13: new           #111                // class io/netty/util/concurrent/DefaultThreadFactory
+        16: dup
+        17: ldc           #113                // String Anubis proxy check
+        19: iconst_1
+        20: invokespecial #116                // Method io/netty/util/concurrent/DefaultThreadFactory."<init>":(Ljava/lang/String;Z)V
+        23: invokestatic  #122                // Method io/netty/channel/nio/NioIoHandler.newFactory:()Lio/netty/channel/IoHandlerFactory;
+        26: invokespecial #125                // Method io/netty/channel/MultiThreadIoEventLoopGroup."<init>":(ILjava/util/concurrent/ThreadFactory;Lio/netty/channel/IoHandlerFactory;)V
+        29: putfield      #107                // Field group:Lio/netty/channel/EventLoopGroup;
+        32: aload_0
+        33: getfield      #127                // Field running:I
+        36: bipush        32
+        38: if_icmpge     95
+        41: aload_0
+        42: getfield      #52                 // Field queue:Ljava/util/Deque;
+        45: invokeinterface #130,  1          // InterfaceMethod java/util/Deque.isEmpty:()Z
+        50: ifne          95
+        53: aload_0
+        54: getfield      #52                 // Field queue:Ljava/util/Deque;
+        57: invokeinterface #133,  1          // InterfaceMethod java/util/Deque.poll:()Ljava/lang/Object;
+        62: checkcast     #79                 // class net/anubis/client/proxy/Proxy
+        65: astore_1
+        66: aload_0
+        67: dup
+        68: getfield      #127                // Field running:I
+        71: iconst_1
+        72: iadd
+        73: putfield      #127                // Field running:I
+        76: aload_0
+        77: getfield      #107                // Field group:Lio/netty/channel/EventLoopGroup;
+        80: aload_0
+        81: aload_1
+        82: invokedynamic #150,  0            // InvokeDynamic #0:run:(Lnet/anubis/client/proxy/ProxyChecker;Lnet/anubis/client/proxy/Proxy;)Ljava/lang/Runnable;
+        87: invokeinterface #156,  2          // InterfaceMethod io/netty/channel/EventLoopGroup.execute:(Ljava/lang/Runnable;)V
+        92: goto          32
+        95: return
+      StackMapTable: number_of_entries = 2
+        frame_type = 32 /* same */
+        frame_type = 62 /* same */
+      LineNumberTable:
+        line 61: 0
+        line 62: 32
+        line 63: 53
+        line 64: 66
+        line 66: 76
+        line 67: 92
+        line 68: 95
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+           66      26     1 proxy   Lnet/anubis/client/proxy/Proxy;
+            0      96     0  this   Lnet/anubis/client/proxy/ProxyChecker;
+
+  private void start(net.anubis.client.proxy.Proxy);
+    descriptor: (Lnet/anubis/client/proxy/Proxy;)V
+    flags: (0x0002) ACC_PRIVATE
+    Code:
+      stack=7, locals=7, args_size=2
+         0: new           #161                // class java/util/concurrent/atomic/AtomicBoolean
+         3: dup
+         4: invokespecial #162                // Method java/util/concurrent/atomic/AtomicBoolean."<init>":()V
+         7: astore_2
+         8: aload_1
+         9: invokevirtual #165                // Method net/anubis/client/proxy/Proxy.isValid:()Z
+        12: ifne          23
+        15: aload_0
+        16: aload_1
+        17: iconst_m1
+        18: aload_2
+        19: invokevirtual #169                // Method finish:(Lnet/anubis/client/proxy/Proxy;ILjava/util/concurrent/atomic/AtomicBoolean;)V
+        22: return
+        23: aload_1
+        24: invokestatic  #175                // Method net/anubis/client/proxy/ProxyRouting.handler:(Lnet/anubis/client/proxy/Proxy;)Lio/netty/handler/proxy/ProxyHandler;
+        27: astore_3
+        28: goto          41
+        31: astore        4
+        33: aload_0
+        34: aload_1
+        35: iconst_m1
+        36: aload_2
+        37: invokevirtual #169                // Method finish:(Lnet/anubis/client/proxy/Proxy;ILjava/util/concurrent/atomic/AtomicBoolean;)V
+        40: return
+        41: aload_3
+        42: ldc2_w        #178                // long 8000l
+        45: invokevirtual #183                // Method io/netty/handler/proxy/ProxyHandler.setConnectTimeoutMillis:(J)V
+        48: invokestatic  #189                // Method java/lang/System.nanoTime:()J
+        51: lstore        4
+        53: new           #191                // class io/netty/bootstrap/Bootstrap
+        56: dup
+        57: invokespecial #192                // Method io/netty/bootstrap/Bootstrap."<init>":()V
+        60: aload_0
+        61: getfield      #107                // Field group:Lio/netty/channel/EventLoopGroup;
+        64: invokevirtual #195                // Method io/netty/bootstrap/Bootstrap.group:(Lio/netty/channel/EventLoopGroup;)Lio/netty/bootstrap/AbstractBootstrap;
+        67: checkcast     #191                // class io/netty/bootstrap/Bootstrap
+        70: ldc           #197                // class io/netty/channel/socket/nio/NioSocketChannel
+        72: invokevirtual #201                // Method io/netty/bootstrap/Bootstrap.channel:(Ljava/lang/Class;)Lio/netty/bootstrap/AbstractBootstrap;
+        75: checkcast     #191                // class io/netty/bootstrap/Bootstrap
+        78: getstatic     #207                // Field io/netty/channel/ChannelOption.CONNECT_TIMEOUT_MILLIS:Lio/netty/channel/ChannelOption;
+        81: sipush        8000
+        84: invokestatic  #213                // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+        87: invokevirtual #217                // Method io/netty/bootstrap/Bootstrap.option:(Lio/netty/channel/ChannelOption;Ljava/lang/Object;)Lio/netty/bootstrap/AbstractBootstrap;
+        90: checkcast     #191                // class io/netty/bootstrap/Bootstrap
+        93: new           #7                  // class net/anubis/client/proxy/ProxyChecker$1
+        96: dup
+        97: aload_0
+        98: aload_3
+        99: invokespecial #220                // Method net/anubis/client/proxy/ProxyChecker$1."<init>":(Lnet/anubis/client/proxy/ProxyChecker;Lio/netty/handler/proxy/ProxyHandler;)V
+       102: invokevirtual #223                // Method io/netty/bootstrap/Bootstrap.handler:(Lio/netty/channel/ChannelHandler;)Lio/netty/bootstrap/AbstractBootstrap;
+       105: checkcast     #191                // class io/netty/bootstrap/Bootstrap
+       108: getstatic     #225                // Field TARGET:Ljava/net/InetSocketAddress;
+       111: invokevirtual #229                // Method io/netty/bootstrap/Bootstrap.connect:(Ljava/net/SocketAddress;)Lio/netty/channel/ChannelFuture;
+       114: astore        6
+       116: aload         6
+       118: aload_0
+       119: aload_1
+       120: aload_2
+       121: invokedynamic #240,  0            // InvokeDynamic #1:operationComplete:(Lnet/anubis/client/proxy/ProxyChecker;Lnet/anubis/client/proxy/Proxy;Ljava/util/concurrent/atomic/AtomicBoolean;)Lio/netty/util/concurrent/GenericFutureListener;
+       126: invokeinterface #246,  2          // InterfaceMethod io/netty/channel/ChannelFuture.addListener:(Lio/netty/util/concurrent/GenericFutureListener;)Lio/netty/channel/ChannelFuture;
+       131: pop
+       132: aload_3
+       133: invokevirtual #250                // Method io/netty/handler/proxy/ProxyHandler.connectFuture:()Lio/netty/util/concurrent/Future;
+       136: aload_0
+       137: lload         4
+       139: aload_1
+       140: aload_2
+       141: aload         6
+       143: invokedynamic #258,  0            // InvokeDynamic #2:operationComplete:(Lnet/anubis/client/proxy/ProxyChecker;JLnet/anubis/client/proxy/Proxy;Ljava/util/concurrent/atomic/AtomicBoolean;Lio/netty/channel/ChannelFuture;)Lio/netty/util/concurrent/GenericFutureListener;
+       148: invokeinterface #263,  2          // InterfaceMethod io/netty/util/concurrent/Future.addListener:(Lio/netty/util/concurrent/GenericFutureListener;)Lio/netty/util/concurrent/Future;
+       153: pop
+       154: return
+      Exception table:
+         from    to  target type
+            23    28    31   Class java/lang/RuntimeException
+      StackMapTable: number_of_entries = 3
+        frame_type = 252 /* append */
+          offset_delta = 23
+          locals = [ class java/util/concurrent/atomic/AtomicBoolean ]
+        frame_type = 71 /* same_locals_1_stack_item */
+          stack = [ class java/lang/RuntimeException ]
+        frame_type = 252 /* append */
+          offset_delta = 9
+          locals = [ class io/netty/handler/proxy/ProxyHandler ]
+      LineNumberTable:
+        line 71: 0
+        line 72: 8
+        line 73: 15
+        line 74: 22
+        line 78: 23
+        line 82: 28
+        line 79: 31
+        line 80: 33
+        line 81: 40
+        line 83: 41
+        line 84: 48
+        line 85: 53
+        line 86: 64
+        line 87: 72
+        line 88: 84
+        line 89: 102
+        line 100: 111
+        line 101: 116
+        line 104: 132
+        line 109: 154
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+           28       3     3 handler   Lio/netty/handler/proxy/ProxyHandler;
+           33       8     4 unresolvable   Ljava/lang/RuntimeException;
+            0     155     0  this   Lnet/anubis/client/proxy/ProxyChecker;
+            0     155     1 proxy   Lnet/anubis/client/proxy/Proxy;
+            8     147     2  done   Ljava/util/concurrent/atomic/AtomicBoolean;
+           41     114     3 handler   Lio/netty/handler/proxy/ProxyHandler;
+           53     102     4 started   J
+          116      39     6 connect   Lio/netty/channel/ChannelFuture;
+    MethodParameters:
+      Name                           Flags
+      proxy
+
+  private void finish(net.anubis.client.proxy.Proxy, int, java.util.concurrent.atomic.AtomicBoolean);
+    descriptor: (Lnet/anubis/client/proxy/Proxy;ILjava/util/concurrent/atomic/AtomicBoolean;)V
+    flags: (0x0002) ACC_PRIVATE
+    Code:
+      stack=3, locals=7, args_size=4
+         0: aload_3
+         1: iconst_0
+         2: iconst_1
+         3: invokevirtual #276                // Method java/util/concurrent/atomic/AtomicBoolean.compareAndSet:(ZZ)Z
+         6: ifne          10
+         9: return
+        10: aload_1
+        11: iload_2
+        12: putfield      #278                // Field net/anubis/client/proxy/Proxy.ping:I
+        15: aload_0
+        16: getfield      #47                 // Field checking:Ljava/util/Set;
+        19: aload_1
+        20: invokeinterface #281,  2          // InterfaceMethod java/util/Set.remove:(Ljava/lang/Object;)Z
+        25: pop
+        26: aload_0
+        27: dup
+        28: astore        5
+        30: monitorenter
+        31: aload_0
+        32: dup
+        33: getfield      #127                // Field running:I
+        36: iconst_1
+        37: isub
+        38: putfield      #127                // Field running:I
+        41: aload_0
+        42: getfield      #127                // Field running:I
+        45: ifne          64
+        48: aload_0
+        49: getfield      #52                 // Field queue:Ljava/util/Deque;
+        52: invokeinterface #130,  1          // InterfaceMethod java/util/Deque.isEmpty:()Z
+        57: ifeq          64
+        60: iconst_1
+        61: goto          65
+        64: iconst_0
+        65: istore        4
+        67: aload_0
+        68: invokevirtual #91                 // Method pump:()V
+        71: aload         5
+        73: monitorexit
+        74: goto          85
+        77: astore        6
+        79: aload         5
+        81: monitorexit
+        82: aload         6
+        84: athrow
+        85: iload         4
+        87: ifeq          96
+        90: invokestatic  #288                // Method net/anubis/client/proxy/Proxies.get:()Lnet/anubis/client/proxy/Proxies;
+        93: invokevirtual #291                // Method net/anubis/client/proxy/Proxies.checked:()V
+        96: return
+      Exception table:
+         from    to  target type
+            31    74    77   any
+            77    82    77   any
+      StackMapTable: number_of_entries = 6
+        frame_type = 10 /* same */
+        frame_type = 253 /* append */
+          offset_delta = 53
+          locals = [ top, class java/lang/Object ]
+        frame_type = 64 /* same_locals_1_stack_item */
+          stack = [ int ]
+        frame_type = 75 /* same_locals_1_stack_item */
+          stack = [ class java/lang/Throwable ]
+        frame_type = 255 /* full_frame */
+          offset_delta = 7
+          locals = [ class net/anubis/client/proxy/ProxyChecker, class net/anubis/client/proxy/Proxy, int, class java/util/concurrent/atomic/AtomicBoolean, int ]
+          stack = []
+        frame_type = 10 /* same */
+      LineNumberTable:
+        line 112: 0
+        line 113: 10
+        line 114: 15
+        line 116: 26
+        line 117: 31
+        line 118: 41
+        line 119: 67
+        line 120: 71
+        line 121: 85
+        line 122: 96
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+           67      10     4  last   Z
+            0      97     0  this   Lnet/anubis/client/proxy/ProxyChecker;
+            0      97     1 proxy   Lnet/anubis/client/proxy/Proxy;
+            0      97     2  ping   I
+            0      97     3  done   Ljava/util/concurrent/atomic/AtomicBoolean;
+           85      12     4  last   Z
+    MethodParameters:
+      Name                           Flags
+      proxy
+      ping
+      done
+
+  private void lambda$start$2(long, net.anubis.client.proxy.Proxy, java.util.concurrent.atomic.AtomicBoolean, io.netty.channel.ChannelFuture, io.netty.util.concurrent.Future) throws java.lang.Exception;
+    descriptor: (JLnet/anubis/client/proxy/Proxy;Ljava/util/concurrent/atomic/AtomicBoolean;Lio/netty/channel/ChannelFuture;Lio/netty/util/concurrent/Future;)V
+    flags: (0x1002) ACC_PRIVATE, ACC_SYNTHETIC
+    Code:
+      stack=4, locals=8, args_size=6
+         0: invokestatic  #189                // Method java/lang/System.nanoTime:()J
+         3: lload_1
+         4: lsub
+         5: ldc2_w        #297                // long 1000000l
+         8: ldiv
+         9: l2i
+        10: istore        7
+        12: aload_0
+        13: aload_3
+        14: aload         6
+        16: invokeinterface #301,  1          // InterfaceMethod io/netty/util/concurrent/Future.isSuccess:()Z
+        21: ifeq          29
+        24: iload         7
+        26: goto          30
+        29: iconst_m1
+        30: aload         4
+        32: invokevirtual #169                // Method finish:(Lnet/anubis/client/proxy/Proxy;ILjava/util/concurrent/atomic/AtomicBoolean;)V
+        35: aload         5
+        37: invokeinterface #304,  1          // InterfaceMethod io/netty/channel/ChannelFuture.channel:()Lio/netty/channel/Channel;
+        42: invokeinterface #310,  1          // InterfaceMethod io/netty/channel/Channel.close:()Lio/netty/channel/ChannelFuture;
+        47: pop
+        48: return
+      StackMapTable: number_of_entries = 2
+        frame_type = 255 /* full_frame */
+          offset_delta = 29
+          locals = [ class net/anubis/client/proxy/ProxyChecker, long, class net/anubis/client/proxy/Proxy, class java/util/concurrent/atomic/AtomicBoolean, class io/netty/channel/ChannelFuture, class io/netty/util/concurrent/Future, int ]
+          stack = [ class net/anubis/client/proxy/ProxyChecker, class net/anubis/client/proxy/Proxy ]
+        frame_type = 255 /* full_frame */
+          offset_delta = 0
+          locals = [ class net/anubis/client/proxy/ProxyChecker, long, class net/anubis/client/proxy/Proxy, class java/util/concurrent/atomic/AtomicBoolean, class io/netty/channel/ChannelFuture, class io/netty/util/concurrent/Future, int ]
+          stack = [ class net/anubis/client/proxy/ProxyChecker, class net/anubis/client/proxy/Proxy, int ]
+      LineNumberTable:
+        line 105: 0
+        line 106: 12
+        line 107: 35
+        line 108: 48
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      49     0  this   Lnet/anubis/client/proxy/ProxyChecker;
+            0      49     1 started   J
+            0      49     3 proxy   Lnet/anubis/client/proxy/Proxy;
+            0      49     4  done   Ljava/util/concurrent/atomic/AtomicBoolean;
+            0      49     5 connect   Lio/netty/channel/ChannelFuture;
+            0      49     6 future   Lio/netty/util/concurrent/Future;
+           12      37     7    ms   I
+    Exceptions:
+      throws java.lang.Exception
+    MethodParameters:
+      Name                           Flags
+      started
+      proxy
+      done
+      connect
+      future
+
+  private void lambda$start$1(net.anubis.client.proxy.Proxy, java.util.concurrent.atomic.AtomicBoolean, io.netty.util.concurrent.Future) throws java.lang.Exception;
+    descriptor: (Lnet/anubis/client/proxy/Proxy;Ljava/util/concurrent/atomic/AtomicBoolean;Lio/netty/util/concurrent/Future;)V
+    flags: (0x1002) ACC_PRIVATE, ACC_SYNTHETIC
+    Code:
+      stack=4, locals=4, args_size=4
+         0: aload_3
+         1: invokeinterface #301,  1          // InterfaceMethod io/netty/util/concurrent/Future.isSuccess:()Z
+         6: ifne          16
+         9: aload_0
+        10: aload_1
+        11: iconst_m1
+        12: aload_2
+        13: invokevirtual #169                // Method finish:(Lnet/anubis/client/proxy/Proxy;ILjava/util/concurrent/atomic/AtomicBoolean;)V
+        16: return
+      StackMapTable: number_of_entries = 1
+        frame_type = 16 /* same */
+      LineNumberTable:
+        line 102: 0
+        line 103: 16
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      17     0  this   Lnet/anubis/client/proxy/ProxyChecker;
+            0      17     1 proxy   Lnet/anubis/client/proxy/Proxy;
+            0      17     2  done   Ljava/util/concurrent/atomic/AtomicBoolean;
+            0      17     3 future   Lio/netty/util/concurrent/Future;
+    Exceptions:
+      throws java.lang.Exception
+    MethodParameters:
+      Name                           Flags
+      proxy
+      done
+      future
+
+  private void lambda$pump$0(net.anubis.client.proxy.Proxy);
+    descriptor: (Lnet/anubis/client/proxy/Proxy;)V
+    flags: (0x1002) ACC_PRIVATE, ACC_SYNTHETIC
+    Code:
+      stack=2, locals=2, args_size=2
+         0: aload_0
+         1: aload_1
+         2: invokevirtual #314                // Method start:(Lnet/anubis/client/proxy/Proxy;)V
+         5: return
+      LineNumberTable:
+        line 66: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       6     0  this   Lnet/anubis/client/proxy/ProxyChecker;
+            0       6     1 proxy   Lnet/anubis/client/proxy/Proxy;
+    MethodParameters:
+      Name                           Flags
+      proxy
+
+  static {};
+    descriptor: ()V
+    flags: (0x0008) ACC_STATIC
+    Code:
+      stack=4, locals=0, args_size=0
+         0: new           #317                // class java/net/InetSocketAddress
+         3: dup
+         4: ldc_w         #319                // String 1.1.1.1
+         7: invokestatic  #325                // Method com/google/common/net/InetAddresses.forString:(Ljava/lang/String;)Ljava/net/InetAddress;
+        10: sipush        443
+        13: invokespecial #328                // Method java/net/InetSocketAddress."<init>":(Ljava/net/InetAddress;I)V
+        16: putstatic     #225                // Field TARGET:Ljava/net/InetSocketAddress;
+        19: new           #2                  // class net/anubis/client/proxy/ProxyChecker
+        22: dup
+        23: invokespecial #329                // Method "<init>":()V
+        26: putstatic     #57                 // Field INSTANCE:Lnet/anubis/client/proxy/ProxyChecker;
+        29: return
+      LineNumberTable:
+        line 27: 0
+        line 30: 19
+}
+InnerClasses:
+  public static final #14= #11 of #13;    // KeySetView=class java/util/concurrent/ConcurrentHashMap$KeySetView of class java/util/concurrent/ConcurrentHashMap
+  #7;                                     // class net/anubis/client/proxy/ProxyChecker$1
+  #9;                                     // class net/anubis/client/proxy/ProxyChecker$1$1
+  public static final #19= #16 of #18;    // Lookup=class java/lang/invoke/MethodHandles$Lookup of class java/lang/invoke/MethodHandles
+SourceFile: "ProxyChecker.java"
+RuntimeVisibleAnnotations:
+  0: #330(#331=e#332.#333)
+    net.fabricmc.api.Environment(
+      value=Lnet/fabricmc/api/EnvType;.CLIENT
+    )
+BootstrapMethods:
+  0: #146 REF_invokeStatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #134 ()V
+      #139 REF_invokeVirtual net/anubis/client/proxy/ProxyChecker.lambda$pump$0:(Lnet/anubis/client/proxy/Proxy;)V
+      #134 ()V
+  1: #146 REF_invokeStatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #231 (Lio/netty/util/concurrent/Future;)V
+      #236 REF_invokeVirtual net/anubis/client/proxy/ProxyChecker.lambda$start$1:(Lnet/anubis/client/proxy/Proxy;Ljava/util/concurrent/atomic/AtomicBoolean;Lio/netty/util/concurrent/Future;)V
+      #231 (Lio/netty/util/concurrent/Future;)V
+  2: #146 REF_invokeStatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #231 (Lio/netty/util/concurrent/Future;)V
+      #255 REF_invokeVirtual net/anubis/client/proxy/ProxyChecker.lambda$start$2:(JLnet/anubis/client/proxy/Proxy;Ljava/util/concurrent/atomic/AtomicBoolean;Lio/netty/channel/ChannelFuture;Lio/netty/util/concurrent/Future;)V
+      #231 (Lio/netty/util/concurrent/Future;)V
+NestMembers:
+  net/anubis/client/proxy/ProxyChecker$1
+  net/anubis/client/proxy/ProxyChecker$1$1

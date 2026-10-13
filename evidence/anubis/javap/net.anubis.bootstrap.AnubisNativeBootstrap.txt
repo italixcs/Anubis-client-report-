@@ -1,0 +1,65 @@
+Classfile analysis-workspace/extracted/run.oEA4CbVx/net/anubis/bootstrap/AnubisNativeBootstrap.class
+  Last modified Oct 13, 2026; size 521 bytes
+  SHA-256 checksum dc670ec533ca3506e242e562376fc7b8e12cd45ee8e197a5028cedfb6a5e08da
+  Compiled from "AnubisNativeBootstrap.java"
+public final class net.anubis.bootstrap.AnubisNativeBootstrap implements net.fabricmc.loader.api.entrypoint.PreLaunchEntrypoint
+  minor version: 0
+  major version: 65
+  flags: (0x0031) ACC_PUBLIC, ACC_FINAL, ACC_SUPER
+  this_class: #2                          // net/anubis/bootstrap/AnubisNativeBootstrap
+  super_class: #4                         // java/lang/Object
+  interfaces: 1, fields: 0, methods: 2, attributes: 1
+Constant pool:
+   #1 = Utf8               net/anubis/bootstrap/AnubisNativeBootstrap
+   #2 = Class              #1             // net/anubis/bootstrap/AnubisNativeBootstrap
+   #3 = Utf8               java/lang/Object
+   #4 = Class              #3             // java/lang/Object
+   #5 = Utf8               net/fabricmc/loader/api/entrypoint/PreLaunchEntrypoint
+   #6 = Class              #5             // net/fabricmc/loader/api/entrypoint/PreLaunchEntrypoint
+   #7 = Utf8               AnubisNativeBootstrap.java
+   #8 = Utf8               <init>
+   #9 = Utf8               ()V
+  #10 = NameAndType        #8:#9          // "<init>":()V
+  #11 = Methodref          #4.#10         // java/lang/Object."<init>":()V
+  #12 = Utf8               this
+  #13 = Utf8               Lnet/anubis/bootstrap/AnubisNativeBootstrap;
+  #14 = Utf8               onPreLaunch
+  #15 = Utf8               imgui/AnubisAndroidNative
+  #16 = Class              #15            // imgui/AnubisAndroidNative
+  #17 = Utf8               prepare
+  #18 = NameAndType        #17:#9         // prepare:()V
+  #19 = Methodref          #16.#18        // imgui/AnubisAndroidNative.prepare:()V
+  #20 = Utf8               Code
+  #21 = Utf8               LineNumberTable
+  #22 = Utf8               LocalVariableTable
+  #23 = Utf8               SourceFile
+{
+  public net.anubis.bootstrap.AnubisNativeBootstrap();
+    descriptor: ()V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: invokespecial #11                 // Method java/lang/Object."<init>":()V
+         4: return
+      LineNumberTable:
+        line 6: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       5     0  this   Lnet/anubis/bootstrap/AnubisNativeBootstrap;
+
+  public void onPreLaunch();
+    descriptor: ()V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=0, locals=1, args_size=1
+         0: invokestatic  #19                 // Method imgui/AnubisAndroidNative.prepare:()V
+         3: return
+      LineNumberTable:
+        line 9: 0
+        line 10: 3
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       4     0  this   Lnet/anubis/bootstrap/AnubisNativeBootstrap;
+}
+SourceFile: "AnubisNativeBootstrap.java"

@@ -1,0 +1,217 @@
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/util/playerbypass/ProtectedChunkStore.java:134:            bucket = new Bucket(this.directory().resolve(name), server, dimension);
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/util/playerbypass/ProtectedChunkStore.java:240:        Files.createDirectories(bucket.file.getParent(), new FileAttribute[0]);
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/util/playerbypass/ProtectedChunkStore.java:242:        try (JsonWriter json = new JsonWriter((Writer)Files.newBufferedWriter(tmp, new OpenOption[0]));){
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/util/playerbypass/ProtectedChunkStore.java:256:            Files.move(tmp, bucket.file, StandardCopyOption.REPLACE_EXISTING, StandardCopyOption.ATOMIC_MOVE);
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/util/playerbypass/ProtectedChunkStore.java:259:            Files.move(tmp, bucket.file, StandardCopyOption.REPLACE_EXISTING);
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/util/playerbypass/ProtectedChunkStore.java:264:        if (!Files.isRegularFile(bucket.file, new LinkOption[0])) {
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/util/playerbypass/ProtectedChunkStore.java:268:        try (JsonReader json = new JsonReader((Reader)Files.newBufferedReader(bucket.file));){
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/util/playerbypass/ProtectedChunkStore.java:269:            long maxChunks = Files.size(bucket.file) / 4L;
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/util/playerbypass/ProtectedChunkStore.java:349:        return FabricLoader.getInstance().getConfigDir().resolve("anubis").resolve("playerbypass-protected");
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/config/ModuleCodes.java:69:            ClientModule owner = id.isEmpty() ? null : ModuleRegistry.resolve(id);
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/gui/FileDialogs.java:61:        if (folder == null || !Files.isDirectory(folder, new LinkOption[0])) {
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/gui/FileDialogs.java:64:        return fileName == null ? String.valueOf(folder) + File.separator : folder.resolve(fileName).toString();
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/gui/FileDialogs.java:69:            Path home = Path.of(System.getProperty("user.home", "."), new String[0]);
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/gui/FileDialogs.java:70:            Path downloads = home.resolve("Downloads");
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/gui/FileDialogs.java:71:            return Files.isDirectory(downloads, new LinkOption[0]) ? downloads : home;
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/gui/FileDialogs.java:74:            return Path.of(".", new String[0]).toAbsolutePath();
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/gui/FileDialogs.java:99:                path = Path.of(result, new String[0]).toAbsolutePath();
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/gui/ThemeImages.java:235:            texture = ThemeImages.upload(ThemeStore.backgroundsDir().resolve(fileName), this.optimized ? 2048 : 8192);
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/gui/ThemeImages.java:256:                texture = ThemeImages.upload(ThemeStore.backgroundsDir().resolve(fileName), 384);
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/gui/ThemeImages.java:278:        if (source == null || !Files.isRegularFile(source, new LinkOption[0]) || !ThemeImages.isImage(source)) {
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/gui/ThemeImages.java:283:            Files.createDirectories(dir, new FileAttribute[0]);
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/gui/ThemeImages.java:288:            Files.copy(source, dir.resolve(name), new CopyOption[0]);
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/gui/ThemeImages.java:304:            Files.deleteIfExists(ThemeStore.backgroundsDir().resolve(fileName));
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/gui/ThemeImages.java:351:                    this.pendingImport = Path.of(result, new String[0]);
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/gui/ThemeImages.java:380:        GifAnimation animation = cache.computeIfAbsent(fileName, name -> GifAnimation.load(ThemeStore.backgroundsDir().resolve((String)name), poster, this.optimized));
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/gui/ThemeImages.java:434:            if (!Files.isDirectory(dir, new LinkOption[0])) {
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/gui/ThemeImages.java:437:            Stream<Path> stream = Files.list(dir);
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/gui/ThemeImages.java:439:                list = stream.filter(x$0 -> Files.isRegularFile(x$0, new LinkOption[0])).filter(ThemeImages::isImage).map(path -> path.getFileName().toString()).sorted(String.CASE_INSENSITIVE_ORDER).toList();
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/gui/ThemeImages.java:470:        while (Files.exists(dir.resolve((String)candidate), new LinkOption[0])) {
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/gui/ThemeImages.java:478:        if (!Files.isRegularFile(path, new LinkOption[0])) {
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/gui/ThemeImages.java:482:            return ThemeImages.decode(Files.readAllBytes(path), path.getFileName().toString(), false, maxSide);
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/gui/mainmenu/ConnectionsPanel.java:631:                        this.importFrom(Path.of(path, new String[0]));
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/gui/mainmenu/ConnectionsPanel.java:642:            this.imported(Proxies.get().importText(Files.readString(file)), "No proxies found in " + String.valueOf(file.getFileName()));
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/gui/mainmenu/MenuContext.java:154:            mc.execute(() -> class_156.method_668().method_60932(FabricLoader.getInstance().getGameDir().resolve("mods")));
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/config/ModuleConfigStore.java:92:        Path path = this.configPath();
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/config/ModuleConfigStore.java:93:        if (!Files.isRegularFile(path, new LinkOption[0])) {
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/config/ModuleConfigStore.java:96:        try (BufferedReader reader = Files.newBufferedReader(path);){
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/config/ModuleConfigStore.java:105:            if (!this.readOnly && version < 3 && !Files.exists(backup = path.resolveSibling(String.valueOf(path.getFileName()) + ".v" + version + ".bak"), new LinkOption[0])) {
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/config/ModuleConfigStore.java:106:                Files.copy(path, backup, new CopyOption[0]);
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/config/ModuleConfigStore.java:128:                if (!Boolean.TRUE.equals(entry.getValue()) || (module = ModuleRegistry.resolve(entry.getKey())) == null || !module.persistEnabled()) continue;
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/config/ModuleConfigStore.java:145:        Path path = this.configPath();
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/config/ModuleConfigStore.java:147:            Files.createDirectories(path.getParent(), new FileAttribute[0]);
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/config/ModuleConfigStore.java:149:            try (BufferedWriter writer = Files.newBufferedWriter(tmp, new OpenOption[0]);){
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/config/ModuleConfigStore.java:153:                Files.move(tmp, path, StandardCopyOption.REPLACE_EXISTING, StandardCopyOption.ATOMIC_MOVE);
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/config/ModuleConfigStore.java:156:                Files.move(tmp, path, StandardCopyOption.REPLACE_EXISTING);
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/config/ModuleConfigStore.java:436:            ClientModule module = ModuleRegistry.resolve(name);
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/config/ModuleConfigStore.java:438:                module = ModuleRegistry.resolve(moduleEntry.get("name").getAsString());
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/config/ModuleConfigStore.java:470:    private Path configPath() {
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/config/ModuleConfigStore.java:471:        return FabricLoader.getInstance().getConfigDir().resolve("anubis").resolve("modules.json");
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/config/ConfigProfiles.java:117:        return FabricLoader.getInstance().getConfigDir().resolve("anubis").resolve("profiles").toAbsolutePath().normalize();
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/config/ConfigProfiles.java:152:        if (Files.exists(this.file(wanted), new LinkOption[0])) {
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/config/ConfigProfiles.java:193:            Files.deleteIfExists(this.file(profile.name()));
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/config/ConfigProfiles.java:229:                    Files.move(from, step, StandardCopyOption.REPLACE_EXISTING);
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/config/ConfigProfiles.java:231:                        Files.move(step, to, new CopyOption[0]);
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/config/ConfigProfiles.java:235:                        Files.move(step, from, StandardCopyOption.REPLACE_EXISTING);
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/config/ConfigProfiles.java:239:                Files.move(from, to, new CopyOption[0]);
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/config/ConfigProfiles.java:301:            Files.writeString(target, (CharSequence)GSON.toJson((JsonElement)shared), StandardCharsets.UTF_8, new OpenOption[0]);
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/config/ConfigProfiles.java:316:            if (!Files.isRegularFile(source, new LinkOption[0])) {
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/config/ConfigProfiles.java:319:            if (Files.size(source) > 0x400000L) {
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/config/ConfigProfiles.java:322:            text = Files.readString(source, StandardCharsets.UTF_8);
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/config/ConfigProfiles.java:649:            if (Files.size(path) > 0x2000000L) {
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/config/ConfigProfiles.java:652:            BufferedReader reader = Files.newBufferedReader(path, StandardCharsets.UTF_8);
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/config/ConfigProfiles.java:694:            Files.createDirectories(path.getParent(), new FileAttribute[0]);
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/config/ConfigProfiles.java:696:            try (BufferedWriter writer = Files.newBufferedWriter(tmp, StandardCharsets.UTF_8, new OpenOption[0]);){
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/config/ConfigProfiles.java:700:                Files.move(tmp, path, StandardCopyOption.REPLACE_EXISTING, StandardCopyOption.ATOMIC_MOVE);
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/config/ConfigProfiles.java:703:                Files.move(tmp, path, StandardCopyOption.REPLACE_EXISTING);
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/config/ConfigProfiles.java:719:        if (!dir.equals((path = dir.resolve(name + EXTENSION).normalize()).getParent())) {
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/config/ConfigProfiles.java:742:        return this.find(name) != null || Files.exists(this.directory().resolve(name + EXTENSION), new LinkOption[0]);
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/config/ConfigProfiles.java:769:        if (!Files.isDirectory(dir, new LinkOption[0])) {
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/config/ConfigProfiles.java:775:        try (DirectoryStream<Path> files = Files.newDirectoryStream(dir, "*.json");){
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/config/ConfigProfiles.java:779:                if (!ConfigProfiles.isValidName(name) || !Files.isRegularFile(file, new LinkOption[0]) || !seen.add(name.toLowerCase(Locale.ROOT))) continue;
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/config/ConfigProfiles.java:800:        Path marker = dir.resolve(UPGRADED_MARKER);
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/config/ConfigProfiles.java:802:            if (Files.exists(marker, new LinkOption[0])) {
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/config/ConfigProfiles.java:805:            Files.createDirectories(dir, new FileAttribute[0]);
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/config/ConfigProfiles.java:806:            try (DirectoryStream<Path> files = Files.newDirectoryStream(dir, "*.json");){
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/config/ConfigProfiles.java:810:                    if (!ConfigProfiles.isValidName(name) || !Files.isRegularFile(file, new LinkOption[0]) || Files.size(file) > 0x2000000L) continue;
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/config/ConfigProfiles.java:814:            Files.writeString(marker, (CharSequence)"Profiles here were moved to format 2.\n", StandardCharsets.UTF_8, new OpenOption[0]);
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/config/ConfigProfiles.java:830:        Path marker = dir.resolve(PRESETS_MARKER);
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/config/ConfigProfiles.java:833:            if (Files.isRegularFile(marker, new LinkOption[0])) {
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/config/ConfigProfiles.java:834:                for (String line : Files.readAllLines(marker, StandardCharsets.UTF_8)) {
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/config/ConfigProfiles.java:848:                    if (!Files.exists(path, new LinkOption[0]) && !contents.data.isEmpty()) {
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/config/ConfigProfiles.java:860:            Files.createDirectories(dir, new FileAttribute[0]);
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/config/ConfigProfiles.java:861:            Files.write(marker, installed, StandardCharsets.UTF_8, new OpenOption[0]);
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/config/ConfigProfiles.java:871:            try (BufferedReader reader = Files.newBufferedReader(file, StandardCharsets.UTF_8);){
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/config/ConfigProfiles.java:892:            BasicFileAttributes attributes = Files.readAttributes(file, BasicFileAttributes.class, new LinkOption[0]);
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/config/ConfigProfiles.java:911:        try (JsonReader reader = new JsonReader((Reader)Files.newBufferedReader(file, StandardCharsets.UTF_8));){
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/config/HudTheme.java:228:        Path path = this.configPath();
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/config/HudTheme.java:229:        if (!Files.isRegularFile(path, new LinkOption[0])) {
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/config/HudTheme.java:232:        try (BufferedReader reader = Files.newBufferedReader(path);){
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/config/HudTheme.java:258:        Path path = this.configPath();
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/config/HudTheme.java:260:            Files.createDirectories(path.getParent(), new FileAttribute[0]);
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/config/HudTheme.java:262:            try (BufferedWriter writer = Files.newBufferedWriter(tmp, new OpenOption[0]);){
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/config/HudTheme.java:266:                Files.move(tmp, path, StandardCopyOption.REPLACE_EXISTING, StandardCopyOption.ATOMIC_MOVE);
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/config/HudTheme.java:269:                Files.move(tmp, path, StandardCopyOption.REPLACE_EXISTING);
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/config/HudTheme.java:299:    private Path configPath() {
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/config/HudTheme.java:300:        return FabricLoader.getInstance().getConfigDir().resolve("anubis").resolve("hud_theme.json");
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/gui/BlockIcons.java:158:            icon = BlockIcons.resolve(sheet, block);
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/gui/BlockIcons.java:196:    private static Icon resolve(Sheet sheet, class_2248 block) {
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/gui/ItemPickerEditor.java:243:            class_1792 item = ItemEnchants.resolve(raw);
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/gui/ItemPickerEditor.java:311:        class_1792 other = otherChosen ? ItemEnchants.resolve(value) : null;
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/gui/ItemPickerEditor.java:355:        class_1792 item = ItemEnchants.resolve(preset.icon());
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/gui/ItemPickerEditor.java:458:            class_1792 item = ItemEnchants.resolve(value);
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/gui/ItemPickerEditor.java:619:                class_1792 current = ItemEnchants.resolve(this.itemTarget.get());
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/gui/ItemPickerEditor.java:651:        class_1792 previous = ItemEnchants.resolve(setting.get());
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/gui/ItemPickerEditor.java:668:            if (ItemEnchants.resolve(value) != item) continue;
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/gui/ItemPickerEditor.java:752:                class_1792 item = ItemEnchants.resolve(value);
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/gui/ItemPickerEditor.java:785:                class_1792 item = ItemEnchants.resolve(value);
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/gui/ItemPickerEditor.java:798:        this.enchantItem = setting.enchantItem() == null ? null : ItemEnchants.resolve(setting.enchantItem().get());
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/gui/CooldownTray.java:129:                slot.item = CooldownTray.resolve(player, slot.group);
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/gui/CooldownTray.java:201:    private static class_1792 resolve(class_746 player, class_2960 group) {
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/gui/PanelStateStore.java:82:        Path path = this.configPath();
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/gui/PanelStateStore.java:83:        if (!Files.isRegularFile(path, new LinkOption[0])) {
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/gui/PanelStateStore.java:87:        try (BufferedReader reader = Files.newBufferedReader(path);){
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/gui/PanelStateStore.java:122:        Path path = this.configPath();
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/gui/PanelStateStore.java:124:            Files.createDirectories(path.getParent(), new FileAttribute[0]);
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/gui/PanelStateStore.java:126:            try (BufferedWriter writer = Files.newBufferedWriter(tmp, new OpenOption[0]);){
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/gui/PanelStateStore.java:130:                Files.move(tmp, path, StandardCopyOption.REPLACE_EXISTING, StandardCopyOption.ATOMIC_MOVE);
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/gui/PanelStateStore.java:133:                Files.move(tmp, path, StandardCopyOption.REPLACE_EXISTING);
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/gui/PanelStateStore.java:147:    private Path configPath() {
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/gui/PanelStateStore.java:148:        return FabricLoader.getInstance().getConfigDir().resolve("anubis").resolve("clickgui.json");
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/gui/GifAnimation.java:137:            GifDecoder gif = GifDecoder.open(Files.readAllBytes(path));
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/gui/ClickGuiRenderer.java:799:        if (ini == null || !Files.isRegularFile(Path.of(ini, new String[0]), new LinkOption[0])) {
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/gui/ClickGuiRenderer.java:805:            for (String line : Files.readAllLines(Path.of(ini, new String[0]))) {
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/gui/ClickGuiRenderer.java:1489:            Files.createDirectories(dir, new FileAttribute[0]);
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/gui/HudLayoutStore.java:248:        Path path = HudLayoutStore.configPath();
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/gui/HudLayoutStore.java:250:            Files.createDirectories(path.getParent(), new FileAttribute[0]);
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/gui/HudLayoutStore.java:252:            try (BufferedWriter writer = Files.newBufferedWriter(tmp, new OpenOption[0]);){
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/gui/HudLayoutStore.java:256:                Files.move(tmp, path, StandardCopyOption.REPLACE_EXISTING, StandardCopyOption.ATOMIC_MOVE);
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/gui/HudLayoutStore.java:259:                Files.move(tmp, path, StandardCopyOption.REPLACE_EXISTING);
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/gui/HudLayoutStore.java:273:        Path path = HudLayoutStore.configPath();
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/gui/HudLayoutStore.java:274:        if (!Files.isRegularFile(path, new LinkOption[0])) {
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/gui/HudLayoutStore.java:277:        try (BufferedReader reader = Files.newBufferedReader(path);){
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/gui/HudLayoutStore.java:511:    private static Path configPath() {
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/gui/HudLayoutStore.java:512:        return FabricLoader.getInstance().getConfigDir().resolve("anubis").resolve("hud.json");
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/gui/AndroidSystemPicker.java:84:            String failure = AndroidSystemPicker.nativeOpen(runtime.resolve("classes.dex").toString(), directory.toString());
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/gui/AndroidSystemPicker.java:227:        if (!Files.isDirectory(directory, LinkOption.NOFOLLOW_LINKS)) {
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/gui/AndroidSystemPicker.java:230:        Path status = directory.resolve("result.txt");
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/gui/AndroidSystemPicker.java:231:        if (!Files.exists(status, LinkOption.NOFOLLOW_LINKS)) {
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/gui/AndroidSystemPicker.java:234:        if (!Files.isRegularFile(status, LinkOption.NOFOLLOW_LINKS)) {
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/gui/AndroidSystemPicker.java:238:        try (InputStream stream = Files.newInputStream(status, LinkOption.NOFOLLOW_LINKS);){
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/gui/AndroidSystemPicker.java:268:        Path selected = directory.resolve(value);
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/gui/AndroidSystemPicker.java:269:        if (!Files.isRegularFile(selected, LinkOption.NOFOLLOW_LINKS) || !Files.isReadable(selected)) {
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/gui/AndroidSystemPicker.java:272:        long size = Files.size(selected);
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/gui/AndroidSystemPicker.java:321:                AndroidSystemPicker.extract("classes.dex", directory.resolve("classes.dex"), true);
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/gui/AndroidSystemPicker.java:322:                AndroidSystemPicker.extract("arm64-v8a/libanubis_picker.so", directory.resolve("libanubis_picker.so"), false);
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/gui/AndroidSystemPicker.java:323:                System.load(directory.resolve("libanubis_picker.so").toString());
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/gui/AndroidSystemPicker.java:336:        return Files.createTempDirectory(parent, prefix, PosixFilePermissions.asFileAttribute(PosixFilePermissions.fromString("rwx------")));
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/gui/AndroidSystemPicker.java:344:            try (OutputStream stream = Files.newOutputStream(output, StandardOpenOption.CREATE_NEW, StandardOpenOption.WRITE);){
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/gui/AndroidSystemPicker.java:346:                Files.setPosixFilePermissions(output, PosixFilePermissions.fromString(dex ? "r--------" : "r-x------"));
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/gui/AndroidSystemPicker.java:357:        if (directory == null || !Files.isDirectory(directory, LinkOption.NOFOLLOW_LINKS)) {
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/gui/AndroidSystemPicker.java:360:        try (DirectoryStream<Path> entries = Files.newDirectoryStream(directory);){
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/gui/AndroidSystemPicker.java:362:                if (Files.isDirectory(entry, LinkOption.NOFOLLOW_LINKS)) continue;
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/gui/AndroidSystemPicker.java:363:                Files.deleteIfExists(entry);
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/gui/AndroidSystemPicker.java:370:            Files.deleteIfExists(directory);
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/gui/ItemIcons.java:274:        if (!ItemIcons.resolve(stack)) {
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/gui/ItemIcons.java:331:    private static boolean resolve(class_1799 stack) {
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/gui/ItemIcons.java:335:        if (MODEL.resolve(stack)) {
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/gui/ItemLook.java:53:    public boolean resolve(class_1799 stack) {
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/util/spotify/LyricsService.java:109:        Path cacheDir = LyricsService.defaultCacheDir();
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/util/spotify/LyricsService.java:134:                    this.worker.execute(() -> this.resolve(key, query));
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/util/spotify/LyricsService.java:186:    private void resolve(String key, LyricsQuery query) {
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/util/spotify/LyricsService.java:299:        URI uri = LRCLIB.resolve(pathAndQuery);
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/util/spotify/LyricsService.java:451:    private static Path defaultCacheDir() {
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/util/spotify/LyricsService.java:453:            return FabricLoader.getInstance().getConfigDir().resolve("anubis").resolve("lyrics-cache");
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/config/FriendStore.java:119:        Path path = this.configPath();
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/config/FriendStore.java:120:        if (!Files.isRegularFile(path, new LinkOption[0])) {
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/config/FriendStore.java:123:        try (BufferedReader reader = Files.newBufferedReader(path);){
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/config/FriendStore.java:159:        Path path = this.configPath();
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/config/FriendStore.java:161:            Files.createDirectories(path.getParent(), new FileAttribute[0]);
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/config/FriendStore.java:163:            try (BufferedWriter writer = Files.newBufferedWriter(tmp, new OpenOption[0]);){
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/config/FriendStore.java:167:                Files.move(tmp, path, StandardCopyOption.REPLACE_EXISTING, StandardCopyOption.ATOMIC_MOVE);
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/config/FriendStore.java:170:                Files.move(tmp, path, StandardCopyOption.REPLACE_EXISTING);
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/config/FriendStore.java:184:    private Path configPath() {
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/config/FriendStore.java:185:        return FabricLoader.getInstance().getConfigDir().resolve("anubis").resolve("friends.json");
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/module/impl/render/character/CharacterModule.java:122:            Files.createDirectories(dir, new FileAttribute[0]);
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/module/impl/render/character/CharacterModule.java:187:        WornCharacter worn = module == null ? null : module.resolve(state);
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/module/impl/render/character/CharacterModule.java:288:    private WornCharacter resolve(class_10055 state) {
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/util/spotify/LyricsDiskCache.java:60:            if (Files.size(file) > 524288L) {
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/util/spotify/LyricsDiskCache.java:63:            JsonElement root = JsonParser.parseString((String)Files.readString(file, StandardCharsets.UTF_8));
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/util/spotify/LyricsDiskCache.java:97:            Files.createDirectories(this.dir, new FileAttribute[0]);
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/util/spotify/LyricsDiskCache.java:98:            Files.writeString(tmp, (CharSequence)object.toString(), StandardCharsets.UTF_8, new OpenOption[0]);
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/util/spotify/LyricsDiskCache.java:100:                Files.move(tmp, file, StandardCopyOption.REPLACE_EXISTING, StandardCopyOption.ATOMIC_MOVE);
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/util/spotify/LyricsDiskCache.java:103:                Files.move(tmp, file, StandardCopyOption.REPLACE_EXISTING);
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/util/spotify/LyricsDiskCache.java:112:        if (!Files.isDirectory(this.dir, new LinkOption[0])) {
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/util/spotify/LyricsDiskCache.java:117:        try (DirectoryStream<Path> files = Files.newDirectoryStream(this.dir);){
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/util/spotify/LyricsDiskCache.java:125:                if (!name.endsWith(SUFFIX) || !KEY.matcher(name.substring(0, name.length() - SUFFIX.length())).matches() || !(attributes = Files.readAttributes(file, BasicFileAttributes.class, new LinkOption[0])).isRegularFile()) continue;
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/util/spotify/LyricsDiskCache.java:147:        return key != null && KEY.matcher(key).matches() ? this.dir.resolve(key + SUFFIX) : null;
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/util/spotify/LyricsDiskCache.java:152:            Files.deleteIfExists(file);
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/util/spotify/LyricsDiskCache.java:162:            Files.setLastModifiedTime(file, FileTime.fromMillis(System.currentTimeMillis()));
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/config/ThemeStore.java:131:        return FabricLoader.getInstance().getConfigDir().resolve("anubis").resolve("backgrounds");
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/config/ThemeStore.java:191:        Path path = this.configPath();
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/config/ThemeStore.java:192:        if (!Files.isRegularFile(path, new LinkOption[0])) {
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/config/ThemeStore.java:195:        try (BufferedReader reader = Files.newBufferedReader(path);){
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/config/ThemeStore.java:237:        Path path = this.configPath();
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/config/ThemeStore.java:239:            Files.createDirectories(path.getParent(), new FileAttribute[0]);
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/config/ThemeStore.java:241:            try (BufferedWriter writer = Files.newBufferedWriter(tmp, new OpenOption[0]);){
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/config/ThemeStore.java:245:                Files.move(tmp, path, StandardCopyOption.REPLACE_EXISTING, StandardCopyOption.ATOMIC_MOVE);
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/config/ThemeStore.java:248:                Files.move(tmp, path, StandardCopyOption.REPLACE_EXISTING);
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/config/ThemeStore.java:278:    private Path configPath() {
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/config/ThemeStore.java:279:        return FabricLoader.getInstance().getConfigDir().resolve("anubis").resolve("theme.json");
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/module/impl/render/character/CustomCharacters.java:48:        return FabricLoader.getInstance().getConfigDir().resolve("anubis").resolve("characters");
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/module/impl/render/character/CustomCharacters.java:52:        return CustomCharacters.folder().resolve(".baked");
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/module/impl/render/character/CustomCharacters.java:57:        try (DirectoryStream<Path> dir = Files.newDirectoryStream(CustomCharacters.folder(), "*.{glb,GLB}");){
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/module/impl/render/character/CustomCharacters.java:59:                if (!Files.isRegularFile(file, new LinkOption[0])) continue;
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/module/impl/render/character/CustomCharacters.java:73:                String stamp = name + Files.size(file) + Files.getLastModifiedTime(file, new LinkOption[0]).toMillis() + "3";
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/module/impl/render/character/CustomCharacters.java:92:        try (DirectoryStream<Path> dir = Files.newDirectoryStream(CustomCharacters.cache(), "*.anc");){
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/module/impl/render/character/CustomCharacters.java:96:                Files.deleteIfExists(file);
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/module/impl/render/character/CustomCharacters.java:105:        Path baked = CustomCharacters.cache().resolve(id + ".anc");
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/module/impl/render/character/CustomCharacters.java:106:        if (Files.exists(baked, new LinkOption[0])) {
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/module/impl/render/character/CustomCharacters.java:107:            return Files.newInputStream(baked, new OpenOption[0]);
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/module/impl/render/character/CustomCharacters.java:109:        if (Files.size(file) > 0x10000000L) {
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/module/impl/render/character/CustomCharacters.java:115:        CharacterBake.Result result = CharacterBake.bake(Files.readAllBytes(file), new CharacterBake.Options(), CustomCharacters::decode);
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/module/impl/render/character/CustomCharacters.java:120:        Files.createDirectories(CustomCharacters.cache(), new FileAttribute[0]);
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/module/impl/render/character/CustomCharacters.java:121:        Path temp = CustomCharacters.cache().resolve(id + ".tmp");
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/module/impl/render/character/CustomCharacters.java:122:        Files.write(temp, result.data(), new OpenOption[0]);
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/module/impl/render/character/CustomCharacters.java:123:        Files.move(temp, baked, StandardCopyOption.REPLACE_EXISTING);
+analysis-workspace/cfr/run.oEA4CbVx/net/anubis/client/module/impl/render/character/kit/BakedDesign.java:32:                throw new FileNotFoundException(resource);

@@ -1,0 +1,828 @@
+Classfile analysis-workspace/extracted/run.oEA4CbVx/net/anubis/client/module/impl/misc/DiscordPresenceModule$Link.class
+  Last modified Oct 13, 2026; size 5574 bytes
+  SHA-256 checksum 6cdd9a0daf0212f014159a360ef73b65bf13f4a6f750462c99ed44b22616bf6b
+  Compiled from "DiscordPresenceModule.java"
+final class net.anubis.client.module.impl.misc.DiscordPresenceModule$Link implements java.lang.Runnable
+  minor version: 0
+  major version: 65
+  flags: (0x0030) ACC_FINAL, ACC_SUPER
+  this_class: #2                          // net/anubis/client/module/impl/misc/DiscordPresenceModule$Link
+  super_class: #4                         // java/lang/Object
+  interfaces: 1, fields: 9, methods: 12, attributes: 5
+Constant pool:
+    #1 = Utf8               net/anubis/client/module/impl/misc/DiscordPresenceModule$Link
+    #2 = Class              #1            // net/anubis/client/module/impl/misc/DiscordPresenceModule$Link
+    #3 = Utf8               java/lang/Object
+    #4 = Class              #3            // java/lang/Object
+    #5 = Utf8               java/lang/Runnable
+    #6 = Class              #5            // java/lang/Runnable
+    #7 = Utf8               DiscordPresenceModule.java
+    #8 = Utf8               net/anubis/client/module/impl/misc/DiscordPresenceModule
+    #9 = Class              #8            // net/anubis/client/module/impl/misc/DiscordPresenceModule
+   #10 = Utf8               Link
+   #11 = Utf8               net/anubis/client/module/impl/misc/DiscordPresenceModule$Card
+   #12 = Class              #11           // net/anubis/client/module/impl/misc/DiscordPresenceModule$Card
+   #13 = Utf8               Card
+   #14 = Utf8               net/anubis/client/discord/DiscordIpc$RefusedException
+   #15 = Class              #14           // net/anubis/client/discord/DiscordIpc$RefusedException
+   #16 = Utf8               net/anubis/client/discord/DiscordIpc
+   #17 = Class              #16           // net/anubis/client/discord/DiscordIpc
+   #18 = Utf8               RefusedException
+   #19 = Utf8               java/lang/invoke/MethodHandles$Lookup
+   #20 = Class              #19           // java/lang/invoke/MethodHandles$Lookup
+   #21 = Utf8               java/lang/invoke/MethodHandles
+   #22 = Class              #21           // java/lang/invoke/MethodHandles
+   #23 = Utf8               Lookup
+   #24 = Utf8               thread
+   #25 = Utf8               Ljava/lang/Thread;
+   #26 = Utf8               running
+   #27 = Utf8               Z
+   #28 = Utf8               previous
+   #29 = Utf8               ipc
+   #30 = Utf8               Lnet/anubis/client/discord/DiscordIpc;
+   #31 = Utf8               sent
+   #32 = Utf8               Lnet/anubis/client/module/impl/misc/DiscordPresenceModule$Card;
+   #33 = Utf8               sentAt
+   #34 = Utf8               J
+   #35 = Utf8               retryMs
+   #36 = Utf8               lastProblem
+   #37 = Utf8               Ljava/lang/String;
+   #38 = Utf8               this$0
+   #39 = Utf8               Lnet/anubis/client/module/impl/misc/DiscordPresenceModule;
+   #40 = Utf8               <init>
+   #41 = Utf8               (Lnet/anubis/client/module/impl/misc/DiscordPresenceModule;Lnet/anubis/client/module/impl/misc/DiscordPresenceModule$Link;)V
+   #42 = NameAndType        #38:#39       // this$0:Lnet/anubis/client/module/impl/misc/DiscordPresenceModule;
+   #43 = Fieldref           #2.#42        // net/anubis/client/module/impl/misc/DiscordPresenceModule$Link.this$0:Lnet/anubis/client/module/impl/misc/DiscordPresenceModule;
+   #44 = Utf8               ()V
+   #45 = NameAndType        #40:#44       // "<init>":()V
+   #46 = Methodref          #4.#45        // java/lang/Object."<init>":()V
+   #47 = Utf8               java/lang/Thread
+   #48 = Class              #47           // java/lang/Thread
+   #49 = Utf8               Anubis Discord Presence
+   #50 = String             #49           // Anubis Discord Presence
+   #51 = Utf8               (Ljava/lang/Runnable;Ljava/lang/String;)V
+   #52 = NameAndType        #40:#51       // "<init>":(Ljava/lang/Runnable;Ljava/lang/String;)V
+   #53 = Methodref          #48.#52       // java/lang/Thread."<init>":(Ljava/lang/Runnable;Ljava/lang/String;)V
+   #54 = NameAndType        #24:#25       // thread:Ljava/lang/Thread;
+   #55 = Fieldref           #2.#54        // net/anubis/client/module/impl/misc/DiscordPresenceModule$Link.thread:Ljava/lang/Thread;
+   #56 = NameAndType        #26:#27       // running:Z
+   #57 = Fieldref           #2.#56        // net/anubis/client/module/impl/misc/DiscordPresenceModule$Link.running:Z
+   #58 = Long               5000l
+   #60 = NameAndType        #35:#34       // retryMs:J
+   #61 = Fieldref           #2.#60        // net/anubis/client/module/impl/misc/DiscordPresenceModule$Link.retryMs:J
+   #62 = NameAndType        #28:#25       // previous:Ljava/lang/Thread;
+   #63 = Fieldref           #2.#62        // net/anubis/client/module/impl/misc/DiscordPresenceModule$Link.previous:Ljava/lang/Thread;
+   #64 = Utf8               setDaemon
+   #65 = Utf8               (Z)V
+   #66 = NameAndType        #64:#65       // setDaemon:(Z)V
+   #67 = Methodref          #48.#66       // java/lang/Thread.setDaemon:(Z)V
+   #68 = Utf8               this
+   #69 = Utf8               Lnet/anubis/client/module/impl/misc/DiscordPresenceModule$Link;
+   #70 = Utf8               start
+   #71 = NameAndType        #70:#44       // start:()V
+   #72 = Methodref          #48.#71       // java/lang/Thread.start:()V
+   #73 = Utf8               wake
+   #74 = Utf8               java/util/concurrent/locks/LockSupport
+   #75 = Class              #74           // java/util/concurrent/locks/LockSupport
+   #76 = Utf8               unpark
+   #77 = Utf8               (Ljava/lang/Thread;)V
+   #78 = NameAndType        #76:#77       // unpark:(Ljava/lang/Thread;)V
+   #79 = Methodref          #75.#78       // java/util/concurrent/locks/LockSupport.unpark:(Ljava/lang/Thread;)V
+   #80 = Utf8               stop
+   #81 = Utf8               run
+   #82 = Utf8               java/io/IOException
+   #83 = Class              #82           // java/io/IOException
+   #84 = Utf8               awaitPrevious
+   #85 = NameAndType        #84:#44       // awaitPrevious:()V
+   #86 = Methodref          #2.#85        // net/anubis/client/module/impl/misc/DiscordPresenceModule$Link.awaitPrevious:()V
+   #87 = NameAndType        #29:#30       // ipc:Lnet/anubis/client/discord/DiscordIpc;
+   #88 = Fieldref           #2.#87        // net/anubis/client/module/impl/misc/DiscordPresenceModule$Link.ipc:Lnet/anubis/client/discord/DiscordIpc;
+   #89 = Utf8               connect
+   #90 = Utf8               ()Z
+   #91 = NameAndType        #89:#90       // connect:()Z
+   #92 = Methodref          #2.#91        // net/anubis/client/module/impl/misc/DiscordPresenceModule$Link.connect:()Z
+   #93 = Utf8               pause
+   #94 = Utf8               (J)V
+   #95 = NameAndType        #93:#94       // pause:(J)V
+   #96 = Methodref          #2.#95        // net/anubis/client/module/impl/misc/DiscordPresenceModule$Link.pause:(J)V
+   #97 = Long               2l
+   #99 = Long               30000l
+  #101 = Utf8               java/lang/Math
+  #102 = Class              #101          // java/lang/Math
+  #103 = Utf8               min
+  #104 = Utf8               (JJ)J
+  #105 = NameAndType        #103:#104     // min:(JJ)J
+  #106 = Methodref          #102.#105     // java/lang/Math.min:(JJ)J
+  #107 = Utf8               poll
+  #108 = NameAndType        #107:#44      // poll:()V
+  #109 = Methodref          #17.#108      // net/anubis/client/discord/DiscordIpc.poll:()V
+  #110 = Utf8               card
+  #111 = NameAndType        #110:#32      // card:Lnet/anubis/client/module/impl/misc/DiscordPresenceModule$Card;
+  #112 = Fieldref           #9.#111       // net/anubis/client/module/impl/misc/DiscordPresenceModule.card:Lnet/anubis/client/module/impl/misc/DiscordPresenceModule$Card;
+  #113 = Utf8               java/lang/System
+  #114 = Class              #113          // java/lang/System
+  #115 = Utf8               currentTimeMillis
+  #116 = Utf8               ()J
+  #117 = NameAndType        #115:#116     // currentTimeMillis:()J
+  #118 = Methodref          #114.#117     // java/lang/System.currentTimeMillis:()J
+  #119 = NameAndType        #33:#34       // sentAt:J
+  #120 = Fieldref           #2.#119       // net/anubis/client/module/impl/misc/DiscordPresenceModule$Link.sentAt:J
+  #121 = NameAndType        #31:#32       // sent:Lnet/anubis/client/module/impl/misc/DiscordPresenceModule$Card;
+  #122 = Fieldref           #2.#121       // net/anubis/client/module/impl/misc/DiscordPresenceModule$Link.sent:Lnet/anubis/client/module/impl/misc/DiscordPresenceModule$Card;
+  #123 = Utf8               equals
+  #124 = Utf8               (Ljava/lang/Object;)Z
+  #125 = NameAndType        #123:#124     // equals:(Ljava/lang/Object;)Z
+  #126 = Methodref          #12.#125      // net/anubis/client/module/impl/misc/DiscordPresenceModule$Card.equals:(Ljava/lang/Object;)Z
+  #127 = Long               60000l
+  #129 = Long               4000l
+  #131 = Utf8               send
+  #132 = Utf8               (Lnet/anubis/client/module/impl/misc/DiscordPresenceModule$Card;)V
+  #133 = NameAndType        #131:#132     // send:(Lnet/anubis/client/module/impl/misc/DiscordPresenceModule$Card;)V
+  #134 = Methodref          #2.#133       // net/anubis/client/module/impl/misc/DiscordPresenceModule$Link.send:(Lnet/anubis/client/module/impl/misc/DiscordPresenceModule$Card;)V
+  #135 = Utf8               lost Discord
+  #136 = String             #135          // lost Discord
+  #137 = Utf8               report
+  #138 = Utf8               (Ljava/lang/String;Ljava/lang/Exception;)V
+  #139 = NameAndType        #137:#138     // report:(Ljava/lang/String;Ljava/lang/Exception;)V
+  #140 = Methodref          #2.#139       // net/anubis/client/module/impl/misc/DiscordPresenceModule$Link.report:(Ljava/lang/String;Ljava/lang/Exception;)V
+  #141 = Utf8               hangUp
+  #142 = NameAndType        #141:#44      // hangUp:()V
+  #143 = Methodref          #2.#142       // net/anubis/client/module/impl/misc/DiscordPresenceModule$Link.hangUp:()V
+  #144 = Long               1000l
+  #146 = Utf8               clear
+  #147 = NameAndType        #146:#44      // clear:()V
+  #148 = Methodref          #2.#147       // net/anubis/client/module/impl/misc/DiscordPresenceModule$Link.clear:()V
+  #149 = Utf8               next
+  #150 = Utf8               since
+  #151 = Utf8               lost
+  #152 = Utf8               Ljava/io/IOException;
+  #153 = Utf8               java/lang/InterruptedException
+  #154 = Class              #153          // java/lang/InterruptedException
+  #155 = Utf8               join
+  #156 = NameAndType        #155:#44      // join:()V
+  #157 = Methodref          #48.#156      // java/lang/Thread.join:()V
+  #158 = Utf8               interrupted
+  #159 = Utf8               Ljava/lang/InterruptedException;
+  #160 = Utf8               1553391775840866314
+  #161 = String             #160          // 1553391775840866314
+  #162 = Utf8               (Ljava/lang/String;)Lnet/anubis/client/discord/DiscordIpc;
+  #163 = NameAndType        #89:#162      // connect:(Ljava/lang/String;)Lnet/anubis/client/discord/DiscordIpc;
+  #164 = Methodref          #17.#163      // net/anubis/client/discord/DiscordIpc.connect:(Ljava/lang/String;)Lnet/anubis/client/discord/DiscordIpc;
+  #165 = Utf8               could not connect
+  #166 = String             #165          // could not connect
+  #167 = Utf8               LOGGER
+  #168 = Utf8               Lorg/slf4j/Logger;
+  #169 = NameAndType        #167:#168     // LOGGER:Lorg/slf4j/Logger;
+  #170 = Fieldref           #9.#169       // net/anubis/client/module/impl/misc/DiscordPresenceModule.LOGGER:Lorg/slf4j/Logger;
+  #171 = Utf8               [Anubis] Discord Presence: connected to Discord
+  #172 = String             #171          // [Anubis] Discord Presence: connected to Discord
+  #173 = Utf8               org/slf4j/Logger
+  #174 = Class              #173          // org/slf4j/Logger
+  #175 = Utf8               info
+  #176 = Utf8               (Ljava/lang/String;)V
+  #177 = NameAndType        #175:#176     // info:(Ljava/lang/String;)V
+  #178 = InterfaceMethodref #174.#177     // org/slf4j/Logger.info:(Ljava/lang/String;)V
+  #179 = NameAndType        #36:#37       // lastProblem:Ljava/lang/String;
+  #180 = Fieldref           #2.#179       // net/anubis/client/module/impl/misc/DiscordPresenceModule$Link.lastProblem:Ljava/lang/String;
+  #181 = Utf8               failure
+  #182 = Utf8               activity
+  #183 = Utf8               (Lnet/anubis/client/module/impl/misc/DiscordPresenceModule$Card;)Lcom/google/gson/JsonObject;
+  #184 = NameAndType        #182:#183     // activity:(Lnet/anubis/client/module/impl/misc/DiscordPresenceModule$Card;)Lcom/google/gson/JsonObject;
+  #185 = Methodref          #9.#184       // net/anubis/client/module/impl/misc/DiscordPresenceModule.activity:(Lnet/anubis/client/module/impl/misc/DiscordPresenceModule$Card;)Lcom/google/gson/JsonObject;
+  #186 = Utf8               setActivity
+  #187 = Utf8               (Lcom/google/gson/JsonObject;)V
+  #188 = NameAndType        #186:#187     // setActivity:(Lcom/google/gson/JsonObject;)V
+  #189 = Methodref          #17.#188      // net/anubis/client/discord/DiscordIpc.setActivity:(Lcom/google/gson/JsonObject;)V
+  #190 = Utf8               Discord refused the card
+  #191 = String             #190          // Discord refused the card
+  #192 = Utf8               refused
+  #193 = Utf8               Lnet/anubis/client/discord/DiscordIpc$RefusedException;
+  #194 = Utf8               java/lang/Exception
+  #195 = Class              #194          // java/lang/Exception
+  #196 = Utf8               close
+  #197 = NameAndType        #196:#44      // close:()V
+  #198 = Methodref          #17.#197      // net/anubis/client/discord/DiscordIpc.close:()V
+  #199 = Utf8               millis
+  #200 = Utf8               java/util/concurrent/TimeUnit
+  #201 = Class              #200          // java/util/concurrent/TimeUnit
+  #202 = Utf8               MILLISECONDS
+  #203 = Utf8               Ljava/util/concurrent/TimeUnit;
+  #204 = NameAndType        #202:#203     // MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+  #205 = Fieldref           #201.#204     // java/util/concurrent/TimeUnit.MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+  #206 = Utf8               toNanos
+  #207 = Utf8               (J)J
+  #208 = NameAndType        #206:#207     // toNanos:(J)J
+  #209 = Methodref          #201.#208     // java/util/concurrent/TimeUnit.toNanos:(J)J
+  #210 = Utf8               parkNanos
+  #211 = NameAndType        #210:#94      // parkNanos:(J)V
+  #212 = Methodref          #75.#211      // java/util/concurrent/locks/LockSupport.parkNanos:(J)V
+  #213 = Utf8               what
+  #214 = Utf8               problem
+  #215 = Utf8               java/lang/String
+  #216 = Class              #215          // java/lang/String
+  #217 = Utf8               valueOf
+  #218 = Utf8               (Ljava/lang/Object;)Ljava/lang/String;
+  #219 = NameAndType        #217:#218     // valueOf:(Ljava/lang/Object;)Ljava/lang/String;
+  #220 = Methodref          #216.#219     // java/lang/String.valueOf:(Ljava/lang/Object;)Ljava/lang/String;
+  #221 = Utf8               \u0001 (\u0001)
+  #222 = String             #221          // \u0001 (\u0001)
+  #223 = Utf8               java/lang/invoke/StringConcatFactory
+  #224 = Class              #223          // java/lang/invoke/StringConcatFactory
+  #225 = Utf8               makeConcatWithConstants
+  #226 = Utf8               (Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+  #227 = NameAndType        #225:#226     // makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+  #228 = Methodref          #224.#227     // java/lang/invoke/StringConcatFactory.makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+  #229 = MethodHandle       6:#228        // REF_invokeStatic java/lang/invoke/StringConcatFactory.makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+  #230 = Utf8               (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+  #231 = NameAndType        #225:#230     // makeConcatWithConstants:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+  #232 = InvokeDynamic      #0:#231       // #0:makeConcatWithConstants:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+  #233 = Methodref          #216.#125     // java/lang/String.equals:(Ljava/lang/Object;)Z
+  #234 = Utf8               [Anubis] Discord Presence: {}
+  #235 = String             #234          // [Anubis] Discord Presence: {}
+  #236 = Utf8               warn
+  #237 = Utf8               (Ljava/lang/String;Ljava/lang/Object;)V
+  #238 = NameAndType        #236:#237     // warn:(Ljava/lang/String;Ljava/lang/Object;)V
+  #239 = InterfaceMethodref #174.#238     // org/slf4j/Logger.warn:(Ljava/lang/String;Ljava/lang/Object;)V
+  #240 = Utf8               Ljava/lang/Exception;
+  #241 = Utf8               line
+  #242 = Utf8               Lnet/fabricmc/api/Environment;
+  #243 = Utf8               value
+  #244 = Utf8               Lnet/fabricmc/api/EnvType;
+  #245 = Utf8               CLIENT
+  #246 = Utf8               Code
+  #247 = Utf8               StackMapTable
+  #248 = Utf8               LineNumberTable
+  #249 = Utf8               LocalVariableTable
+  #250 = Utf8               MethodParameters
+  #251 = Utf8               Exceptions
+  #252 = Utf8               InnerClasses
+  #253 = Utf8               SourceFile
+  #254 = Utf8               RuntimeVisibleAnnotations
+  #255 = Utf8               BootstrapMethods
+  #256 = Utf8               NestHost
+{
+  private final java.lang.Thread thread;
+    descriptor: Ljava/lang/Thread;
+    flags: (0x0012) ACC_PRIVATE, ACC_FINAL
+
+  private volatile boolean running;
+    descriptor: Z
+    flags: (0x0042) ACC_PRIVATE, ACC_VOLATILE
+
+  private java.lang.Thread previous;
+    descriptor: Ljava/lang/Thread;
+    flags: (0x0002) ACC_PRIVATE
+
+  private net.anubis.client.discord.DiscordIpc ipc;
+    descriptor: Lnet/anubis/client/discord/DiscordIpc;
+    flags: (0x0002) ACC_PRIVATE
+
+  private net.anubis.client.module.impl.misc.DiscordPresenceModule$Card sent;
+    descriptor: Lnet/anubis/client/module/impl/misc/DiscordPresenceModule$Card;
+    flags: (0x0002) ACC_PRIVATE
+
+  private long sentAt;
+    descriptor: J
+    flags: (0x0002) ACC_PRIVATE
+
+  private long retryMs;
+    descriptor: J
+    flags: (0x0002) ACC_PRIVATE
+
+  private java.lang.String lastProblem;
+    descriptor: Ljava/lang/String;
+    flags: (0x0002) ACC_PRIVATE
+
+  final net.anubis.client.module.impl.misc.DiscordPresenceModule this$0;
+    descriptor: Lnet/anubis/client/module/impl/misc/DiscordPresenceModule;
+    flags: (0x1010) ACC_FINAL, ACC_SYNTHETIC
+
+  net.anubis.client.module.impl.misc.DiscordPresenceModule$Link(net.anubis.client.module.impl.misc.DiscordPresenceModule, net.anubis.client.module.impl.misc.DiscordPresenceModule$Link);
+    descriptor: (Lnet/anubis/client/module/impl/misc/DiscordPresenceModule;Lnet/anubis/client/module/impl/misc/DiscordPresenceModule$Link;)V
+    flags: (0x0000)
+    Code:
+      stack=5, locals=3, args_size=3
+         0: aload_0
+         1: aload_1
+         2: putfield      #43                 // Field this$0:Lnet/anubis/client/module/impl/misc/DiscordPresenceModule;
+         5: aload_0
+         6: invokespecial #46                 // Method java/lang/Object."<init>":()V
+         9: aload_0
+        10: new           #48                 // class java/lang/Thread
+        13: dup
+        14: aload_0
+        15: ldc           #50                 // String Anubis Discord Presence
+        17: invokespecial #53                 // Method java/lang/Thread."<init>":(Ljava/lang/Runnable;Ljava/lang/String;)V
+        20: putfield      #55                 // Field thread:Ljava/lang/Thread;
+        23: aload_0
+        24: iconst_1
+        25: putfield      #57                 // Field running:Z
+        28: aload_0
+        29: ldc2_w        #58                 // long 5000l
+        32: putfield      #61                 // Field retryMs:J
+        35: aload_0
+        36: aload_2
+        37: ifnull        47
+        40: aload_2
+        41: getfield      #55                 // Field thread:Ljava/lang/Thread;
+        44: goto          48
+        47: aconst_null
+        48: putfield      #63                 // Field previous:Ljava/lang/Thread;
+        51: aload_0
+        52: getfield      #55                 // Field thread:Ljava/lang/Thread;
+        55: iconst_1
+        56: invokevirtual #67                 // Method java/lang/Thread.setDaemon:(Z)V
+        59: return
+      StackMapTable: number_of_entries = 2
+        frame_type = 255 /* full_frame */
+          offset_delta = 47
+          locals = [ class net/anubis/client/module/impl/misc/DiscordPresenceModule$Link, class net/anubis/client/module/impl/misc/DiscordPresenceModule, class net/anubis/client/module/impl/misc/DiscordPresenceModule$Link ]
+          stack = [ class net/anubis/client/module/impl/misc/DiscordPresenceModule$Link ]
+        frame_type = 255 /* full_frame */
+          offset_delta = 0
+          locals = [ class net/anubis/client/module/impl/misc/DiscordPresenceModule$Link, class net/anubis/client/module/impl/misc/DiscordPresenceModule, class net/anubis/client/module/impl/misc/DiscordPresenceModule$Link ]
+          stack = [ class net/anubis/client/module/impl/misc/DiscordPresenceModule$Link, class java/lang/Thread ]
+      LineNumberTable:
+        line 179: 0
+        line 167: 9
+        line 168: 23
+        line 175: 28
+        line 180: 35
+        line 181: 51
+        line 182: 59
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      60     0  this   Lnet/anubis/client/module/impl/misc/DiscordPresenceModule$Link;
+            0      60     2 previous   Lnet/anubis/client/module/impl/misc/DiscordPresenceModule$Link;
+    MethodParameters:
+      Name                           Flags
+      <no name>                      final synthetic
+      previous
+
+  void start();
+    descriptor: ()V
+    flags: (0x0000)
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: getfield      #55                 // Field thread:Ljava/lang/Thread;
+         4: invokevirtual #72                 // Method java/lang/Thread.start:()V
+         7: return
+      LineNumberTable:
+        line 185: 0
+        line 186: 7
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       8     0  this   Lnet/anubis/client/module/impl/misc/DiscordPresenceModule$Link;
+
+  void wake();
+    descriptor: ()V
+    flags: (0x0000)
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: getfield      #55                 // Field thread:Ljava/lang/Thread;
+         4: invokestatic  #79                 // Method java/util/concurrent/locks/LockSupport.unpark:(Ljava/lang/Thread;)V
+         7: return
+      LineNumberTable:
+        line 189: 0
+        line 190: 7
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       8     0  this   Lnet/anubis/client/module/impl/misc/DiscordPresenceModule$Link;
+
+  void stop();
+    descriptor: ()V
+    flags: (0x0000)
+    Code:
+      stack=2, locals=1, args_size=1
+         0: aload_0
+         1: iconst_0
+         2: putfield      #57                 // Field running:Z
+         5: aload_0
+         6: getfield      #55                 // Field thread:Ljava/lang/Thread;
+         9: invokestatic  #79                 // Method java/util/concurrent/locks/LockSupport.unpark:(Ljava/lang/Thread;)V
+        12: return
+      LineNumberTable:
+        line 193: 0
+        line 194: 5
+        line 195: 12
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      13     0  this   Lnet/anubis/client/module/impl/misc/DiscordPresenceModule$Link;
+
+  public void run();
+    descriptor: ()V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=5, locals=4, args_size=1
+         0: aload_0
+         1: invokevirtual #86                 // Method awaitPrevious:()V
+         4: aload_0
+         5: getfield      #57                 // Field running:Z
+         8: ifeq          143
+        11: aload_0
+        12: getfield      #88                 // Field ipc:Lnet/anubis/client/discord/DiscordIpc;
+        15: ifnonnull     54
+        18: aload_0
+        19: invokevirtual #92                 // Method connect:()Z
+        22: ifne          54
+        25: aload_0
+        26: aload_0
+        27: getfield      #61                 // Field retryMs:J
+        30: invokevirtual #96                 // Method pause:(J)V
+        33: aload_0
+        34: aload_0
+        35: getfield      #61                 // Field retryMs:J
+        38: ldc2_w        #97                 // long 2l
+        41: lmul
+        42: ldc2_w        #99                 // long 30000l
+        45: invokestatic  #106                // Method java/lang/Math.min:(JJ)J
+        48: putfield      #61                 // Field retryMs:J
+        51: goto          4
+        54: aload_0
+        55: getfield      #88                 // Field ipc:Lnet/anubis/client/discord/DiscordIpc;
+        58: invokevirtual #109                // Method net/anubis/client/discord/DiscordIpc.poll:()V
+        61: aload_0
+        62: getfield      #43                 // Field this$0:Lnet/anubis/client/module/impl/misc/DiscordPresenceModule;
+        65: getfield      #112                // Field net/anubis/client/module/impl/misc/DiscordPresenceModule.card:Lnet/anubis/client/module/impl/misc/DiscordPresenceModule$Card;
+        68: astore_1
+        69: invokestatic  #118                // Method java/lang/System.currentTimeMillis:()J
+        72: aload_0
+        73: getfield      #120                // Field sentAt:J
+        76: lsub
+        77: lstore_2
+        78: aload_0
+        79: getfield      #122                // Field sent:Lnet/anubis/client/module/impl/misc/DiscordPresenceModule$Card;
+        82: ifnull        110
+        85: lload_2
+        86: aload_1
+        87: aload_0
+        88: getfield      #122                // Field sent:Lnet/anubis/client/module/impl/misc/DiscordPresenceModule$Card;
+        91: invokevirtual #126                // Method net/anubis/client/module/impl/misc/DiscordPresenceModule$Card.equals:(Ljava/lang/Object;)Z
+        94: ifeq          103
+        97: ldc2_w        #127                // long 60000l
+       100: goto          106
+       103: ldc2_w        #129                // long 4000l
+       106: lcmp
+       107: iflt          115
+       110: aload_0
+       111: aload_1
+       112: invokevirtual #134                // Method send:(Lnet/anubis/client/module/impl/misc/DiscordPresenceModule$Card;)V
+       115: goto          133
+       118: astore_1
+       119: aload_0
+       120: ldc           #136                // String lost Discord
+       122: aload_1
+       123: invokevirtual #140                // Method report:(Ljava/lang/String;Ljava/lang/Exception;)V
+       126: aload_0
+       127: invokevirtual #143                // Method hangUp:()V
+       130: goto          4
+       133: aload_0
+       134: ldc2_w        #144                // long 1000l
+       137: invokevirtual #96                 // Method pause:(J)V
+       140: goto          4
+       143: aload_0
+       144: getfield      #88                 // Field ipc:Lnet/anubis/client/discord/DiscordIpc;
+       147: ifnull        154
+       150: aload_0
+       151: invokevirtual #148                // Method clear:()V
+       154: return
+      Exception table:
+         from    to  target type
+            54   115   118   Class java/io/IOException
+      StackMapTable: number_of_entries = 10
+        frame_type = 4 /* same */
+        frame_type = 49 /* same */
+        frame_type = 255 /* full_frame */
+          offset_delta = 48
+          locals = [ class net/anubis/client/module/impl/misc/DiscordPresenceModule$Link, class net/anubis/client/module/impl/misc/DiscordPresenceModule$Card, long ]
+          stack = [ long ]
+        frame_type = 255 /* full_frame */
+          offset_delta = 2
+          locals = [ class net/anubis/client/module/impl/misc/DiscordPresenceModule$Link, class net/anubis/client/module/impl/misc/DiscordPresenceModule$Card, long ]
+          stack = [ long, long ]
+        frame_type = 3 /* same */
+        frame_type = 249 /* chop */
+          offset_delta = 4
+        frame_type = 66 /* same_locals_1_stack_item */
+          stack = [ class java/io/IOException ]
+        frame_type = 14 /* same */
+        frame_type = 9 /* same */
+        frame_type = 10 /* same */
+      LineNumberTable:
+        line 199: 0
+        line 200: 4
+        line 201: 11
+        line 202: 25
+        line 203: 33
+        line 204: 51
+        line 207: 54
+        line 208: 61
+        line 209: 69
+        line 210: 78
+        line 215: 115
+        line 211: 118
+        line 212: 119
+        line 213: 126
+        line 214: 130
+        line 216: 133
+        line 218: 143
+        line 219: 154
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+           69      46     1  next   Lnet/anubis/client/module/impl/misc/DiscordPresenceModule$Card;
+           78      37     2 since   J
+          119      14     1  lost   Ljava/io/IOException;
+            0     155     0  this   Lnet/anubis/client/module/impl/misc/DiscordPresenceModule$Link;
+
+  private void awaitPrevious();
+    descriptor: ()V
+    flags: (0x0002) ACC_PRIVATE
+    Code:
+      stack=2, locals=2, args_size=1
+         0: aload_0
+         1: getfield      #63                 // Field previous:Ljava/lang/Thread;
+         4: ifnonnull     8
+         7: return
+         8: aload_0
+         9: getfield      #63                 // Field previous:Ljava/lang/Thread;
+        12: invokevirtual #157                // Method java/lang/Thread.join:()V
+        15: goto          24
+        18: astore_1
+        19: aload_0
+        20: iconst_0
+        21: putfield      #57                 // Field running:Z
+        24: aload_0
+        25: aconst_null
+        26: putfield      #63                 // Field previous:Ljava/lang/Thread;
+        29: return
+      Exception table:
+         from    to  target type
+             8    15    18   Class java/lang/InterruptedException
+      StackMapTable: number_of_entries = 3
+        frame_type = 8 /* same */
+        frame_type = 73 /* same_locals_1_stack_item */
+          stack = [ class java/lang/InterruptedException ]
+        frame_type = 5 /* same */
+      LineNumberTable:
+        line 222: 0
+        line 224: 8
+        line 227: 15
+        line 225: 18
+        line 226: 19
+        line 228: 24
+        line 229: 29
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+           19       5     1 interrupted   Ljava/lang/InterruptedException;
+            0      30     0  this   Lnet/anubis/client/module/impl/misc/DiscordPresenceModule$Link;
+
+  private boolean connect();
+    descriptor: ()Z
+    flags: (0x0002) ACC_PRIVATE
+    Code:
+      stack=3, locals=2, args_size=1
+         0: aload_0
+         1: ldc           #161                // String 1553391775840866314
+         3: invokestatic  #164                // Method net/anubis/client/discord/DiscordIpc.connect:(Ljava/lang/String;)Lnet/anubis/client/discord/DiscordIpc;
+         6: putfield      #88                 // Field ipc:Lnet/anubis/client/discord/DiscordIpc;
+         9: goto          22
+        12: astore_1
+        13: aload_0
+        14: ldc           #166                // String could not connect
+        16: aload_1
+        17: invokevirtual #140                // Method report:(Ljava/lang/String;Ljava/lang/Exception;)V
+        20: iconst_0
+        21: ireturn
+        22: aload_0
+        23: getfield      #88                 // Field ipc:Lnet/anubis/client/discord/DiscordIpc;
+        26: ifnonnull     31
+        29: iconst_0
+        30: ireturn
+        31: getstatic     #170                // Field net/anubis/client/module/impl/misc/DiscordPresenceModule.LOGGER:Lorg/slf4j/Logger;
+        34: ldc           #172                // String [Anubis] Discord Presence: connected to Discord
+        36: invokeinterface #178,  2          // InterfaceMethod org/slf4j/Logger.info:(Ljava/lang/String;)V
+        41: aload_0
+        42: ldc2_w        #58                 // long 5000l
+        45: putfield      #61                 // Field retryMs:J
+        48: aload_0
+        49: aconst_null
+        50: putfield      #180                // Field lastProblem:Ljava/lang/String;
+        53: aload_0
+        54: aconst_null
+        55: putfield      #122                // Field sent:Lnet/anubis/client/module/impl/misc/DiscordPresenceModule$Card;
+        58: iconst_1
+        59: ireturn
+      Exception table:
+         from    to  target type
+             0     9    12   Class java/io/IOException
+      StackMapTable: number_of_entries = 3
+        frame_type = 76 /* same_locals_1_stack_item */
+          stack = [ class java/io/IOException ]
+        frame_type = 9 /* same */
+        frame_type = 8 /* same */
+      LineNumberTable:
+        line 233: 0
+        line 237: 9
+        line 234: 12
+        line 235: 13
+        line 236: 20
+        line 238: 22
+        line 239: 31
+        line 240: 41
+        line 241: 48
+        line 242: 53
+        line 243: 58
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+           13       9     1 failure   Ljava/io/IOException;
+            0      60     0  this   Lnet/anubis/client/module/impl/misc/DiscordPresenceModule$Link;
+
+  private void send(net.anubis.client.module.impl.misc.DiscordPresenceModule$Card) throws java.io.IOException;
+    descriptor: (Lnet/anubis/client/module/impl/misc/DiscordPresenceModule$Card;)V
+    flags: (0x0002) ACC_PRIVATE
+    Code:
+      stack=3, locals=3, args_size=2
+         0: aload_0
+         1: getfield      #88                 // Field ipc:Lnet/anubis/client/discord/DiscordIpc;
+         4: aload_1
+         5: invokestatic  #185                // Method net/anubis/client/module/impl/misc/DiscordPresenceModule.activity:(Lnet/anubis/client/module/impl/misc/DiscordPresenceModule$Card;)Lcom/google/gson/JsonObject;
+         8: invokevirtual #189                // Method net/anubis/client/discord/DiscordIpc.setActivity:(Lcom/google/gson/JsonObject;)V
+        11: goto          22
+        14: astore_2
+        15: aload_0
+        16: ldc           #191                // String Discord refused the card
+        18: aload_2
+        19: invokevirtual #140                // Method report:(Ljava/lang/String;Ljava/lang/Exception;)V
+        22: aload_0
+        23: aload_1
+        24: putfield      #122                // Field sent:Lnet/anubis/client/module/impl/misc/DiscordPresenceModule$Card;
+        27: aload_0
+        28: invokestatic  #118                // Method java/lang/System.currentTimeMillis:()J
+        31: putfield      #120                // Field sentAt:J
+        34: return
+      Exception table:
+         from    to  target type
+             0    11    14   Class net/anubis/client/discord/DiscordIpc$RefusedException
+      StackMapTable: number_of_entries = 2
+        frame_type = 78 /* same_locals_1_stack_item */
+          stack = [ class net/anubis/client/discord/DiscordIpc$RefusedException ]
+        frame_type = 7 /* same */
+      LineNumberTable:
+        line 248: 0
+        line 251: 11
+        line 249: 14
+        line 250: 15
+        line 252: 22
+        line 253: 27
+        line 254: 34
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+           15       7     2 refused   Lnet/anubis/client/discord/DiscordIpc$RefusedException;
+            0      35     0  this   Lnet/anubis/client/module/impl/misc/DiscordPresenceModule$Link;
+            0      35     1  next   Lnet/anubis/client/module/impl/misc/DiscordPresenceModule$Card;
+    Exceptions:
+      throws java.io.IOException
+    MethodParameters:
+      Name                           Flags
+      next
+
+  private void clear();
+    descriptor: ()V
+    flags: (0x0002) ACC_PRIVATE
+    Code:
+      stack=2, locals=2, args_size=1
+         0: aload_0
+         1: getfield      #88                 // Field ipc:Lnet/anubis/client/discord/DiscordIpc;
+         4: aconst_null
+         5: invokevirtual #189                // Method net/anubis/client/discord/DiscordIpc.setActivity:(Lcom/google/gson/JsonObject;)V
+         8: goto          12
+        11: astore_1
+        12: aload_0
+        13: invokevirtual #143                // Method hangUp:()V
+        16: return
+      Exception table:
+         from    to  target type
+             0     8    11   Class java/io/IOException
+             0     8    11   Class net/anubis/client/discord/DiscordIpc$RefusedException
+      StackMapTable: number_of_entries = 2
+        frame_type = 75 /* same_locals_1_stack_item */
+          stack = [ class java/lang/Exception ]
+        frame_type = 0 /* same */
+      LineNumberTable:
+        line 258: 0
+        line 260: 8
+        line 259: 11
+        line 261: 12
+        line 262: 16
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      17     0  this   Lnet/anubis/client/module/impl/misc/DiscordPresenceModule$Link;
+
+  private void hangUp();
+    descriptor: ()V
+    flags: (0x0002) ACC_PRIVATE
+    Code:
+      stack=2, locals=1, args_size=1
+         0: aload_0
+         1: getfield      #88                 // Field ipc:Lnet/anubis/client/discord/DiscordIpc;
+         4: invokevirtual #198                // Method net/anubis/client/discord/DiscordIpc.close:()V
+         7: aload_0
+         8: aconst_null
+         9: putfield      #88                 // Field ipc:Lnet/anubis/client/discord/DiscordIpc;
+        12: aload_0
+        13: aconst_null
+        14: putfield      #122                // Field sent:Lnet/anubis/client/module/impl/misc/DiscordPresenceModule$Card;
+        17: return
+      LineNumberTable:
+        line 265: 0
+        line 266: 7
+        line 267: 12
+        line 268: 17
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      18     0  this   Lnet/anubis/client/module/impl/misc/DiscordPresenceModule$Link;
+
+  private void pause(long);
+    descriptor: (J)V
+    flags: (0x0002) ACC_PRIVATE
+    Code:
+      stack=3, locals=3, args_size=2
+         0: getstatic     #205                // Field java/util/concurrent/TimeUnit.MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+         3: lload_1
+         4: invokevirtual #209                // Method java/util/concurrent/TimeUnit.toNanos:(J)J
+         7: invokestatic  #212                // Method java/util/concurrent/locks/LockSupport.parkNanos:(J)V
+        10: return
+      LineNumberTable:
+        line 271: 0
+        line 272: 10
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      11     0  this   Lnet/anubis/client/module/impl/misc/DiscordPresenceModule$Link;
+            0      11     1 millis   J
+    MethodParameters:
+      Name                           Flags
+      millis
+
+  private void report(java.lang.String, java.lang.Exception);
+    descriptor: (Ljava/lang/String;Ljava/lang/Exception;)V
+    flags: (0x0002) ACC_PRIVATE
+    Code:
+      stack=3, locals=4, args_size=3
+         0: aload_1
+         1: aload_2
+         2: invokestatic  #220                // Method java/lang/String.valueOf:(Ljava/lang/Object;)Ljava/lang/String;
+         5: invokedynamic #232,  0            // InvokeDynamic #0:makeConcatWithConstants:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+        10: astore_3
+        11: aload_3
+        12: aload_0
+        13: getfield      #180                // Field lastProblem:Ljava/lang/String;
+        16: invokevirtual #233                // Method java/lang/String.equals:(Ljava/lang/Object;)Z
+        19: ifeq          23
+        22: return
+        23: aload_0
+        24: aload_3
+        25: putfield      #180                // Field lastProblem:Ljava/lang/String;
+        28: getstatic     #170                // Field net/anubis/client/module/impl/misc/DiscordPresenceModule.LOGGER:Lorg/slf4j/Logger;
+        31: ldc           #235                // String [Anubis] Discord Presence: {}
+        33: aload_3
+        34: invokeinterface #239,  3          // InterfaceMethod org/slf4j/Logger.warn:(Ljava/lang/String;Ljava/lang/Object;)V
+        39: return
+      StackMapTable: number_of_entries = 1
+        frame_type = 252 /* append */
+          offset_delta = 23
+          locals = [ class java/lang/String ]
+      LineNumberTable:
+        line 275: 0
+        line 276: 11
+        line 277: 23
+        line 278: 28
+        line 279: 39
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      40     0  this   Lnet/anubis/client/module/impl/misc/DiscordPresenceModule$Link;
+            0      40     1  what   Ljava/lang/String;
+            0      40     2 problem   Ljava/lang/Exception;
+           11      29     3  line   Ljava/lang/String;
+    MethodParameters:
+      Name                           Flags
+      what
+      problem
+}
+InnerClasses:
+  private final #10= #2 of #9;            // Link=class net/anubis/client/module/impl/misc/DiscordPresenceModule$Link of class net/anubis/client/module/impl/misc/DiscordPresenceModule
+  private static final #13= #12 of #9;    // Card=class net/anubis/client/module/impl/misc/DiscordPresenceModule$Card of class net/anubis/client/module/impl/misc/DiscordPresenceModule
+  public static final #18= #15 of #17;    // RefusedException=class net/anubis/client/discord/DiscordIpc$RefusedException of class net/anubis/client/discord/DiscordIpc
+  public static final #23= #20 of #22;    // Lookup=class java/lang/invoke/MethodHandles$Lookup of class java/lang/invoke/MethodHandles
+SourceFile: "DiscordPresenceModule.java"
+RuntimeVisibleAnnotations:
+  0: #242(#243=e#244.#245)
+    net.fabricmc.api.Environment(
+      value=Lnet/fabricmc/api/EnvType;.CLIENT
+    )
+BootstrapMethods:
+  0: #229 REF_invokeStatic java/lang/invoke/StringConcatFactory.makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #222 \u0001 (\u0001)
+NestHost: class net/anubis/client/module/impl/misc/DiscordPresenceModule

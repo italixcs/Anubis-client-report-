@@ -1,0 +1,1268 @@
+Classfile analysis-workspace/extracted/run.oEA4CbVx/net/anubis/client/util/spotify/SpotifyWindow.class
+  Last modified Oct 13, 2026; size 8410 bytes
+  SHA-256 checksum 85af09ee66cb6898ccc318d065b3bd56520ee1b815345480cca99250bb4cb199
+  Compiled from "SpotifyWindow.java"
+public final class net.anubis.client.util.spotify.SpotifyWindow
+  minor version: 0
+  major version: 65
+  flags: (0x0031) ACC_PUBLIC, ACC_FINAL, ACC_SUPER
+  this_class: #2                          // net/anubis/client/util/spotify/SpotifyWindow
+  super_class: #4                         // java/lang/Object
+  interfaces: 0, fields: 21, methods: 11, attributes: 5
+Constant pool:
+    #1 = Utf8               net/anubis/client/util/spotify/SpotifyWindow
+    #2 = Class              #1            // net/anubis/client/util/spotify/SpotifyWindow
+    #3 = Utf8               java/lang/Object
+    #4 = Class              #3            // java/lang/Object
+    #5 = Utf8               SpotifyWindow.java
+    #6 = Utf8               net/anubis/client/util/spotify/SpotifyWindow$MediaKey
+    #7 = Class              #6            // net/anubis/client/util/spotify/SpotifyWindow$MediaKey
+    #8 = Utf8               com/sun/jna/platform/win32/WinUser$WNDENUMPROC
+    #9 = Class              #8            // com/sun/jna/platform/win32/WinUser$WNDENUMPROC
+   #10 = Utf8               com/sun/jna/platform/win32/WinUser
+   #11 = Class              #10           // com/sun/jna/platform/win32/WinUser
+   #12 = Utf8               WNDENUMPROC
+   #13 = Utf8               com/sun/jna/platform/win32/WinDef$HWND
+   #14 = Class              #13           // com/sun/jna/platform/win32/WinDef$HWND
+   #15 = Utf8               com/sun/jna/platform/win32/WinDef
+   #16 = Class              #15           // com/sun/jna/platform/win32/WinDef
+   #17 = Utf8               HWND
+   #18 = Utf8               MediaKey
+   #19 = Utf8               com/sun/jna/platform/win32/WinNT$HANDLE
+   #20 = Class              #19           // com/sun/jna/platform/win32/WinNT$HANDLE
+   #21 = Utf8               com/sun/jna/platform/win32/WinNT
+   #22 = Class              #21           // com/sun/jna/platform/win32/WinNT
+   #23 = Utf8               HANDLE
+   #24 = Utf8               com/sun/jna/platform/win32/WinUser$INPUT
+   #25 = Class              #24           // com/sun/jna/platform/win32/WinUser$INPUT
+   #26 = Utf8               INPUT
+   #27 = Utf8               com/sun/jna/platform/win32/WinDef$DWORD
+   #28 = Class              #27           // com/sun/jna/platform/win32/WinDef$DWORD
+   #29 = Utf8               DWORD
+   #30 = Utf8               com/sun/jna/platform/win32/WinUser$INPUT$INPUT_UNION
+   #31 = Class              #30           // com/sun/jna/platform/win32/WinUser$INPUT$INPUT_UNION
+   #32 = Utf8               INPUT_UNION
+   #33 = Utf8               com/sun/jna/platform/win32/WinUser$KEYBDINPUT
+   #34 = Class              #33           // com/sun/jna/platform/win32/WinUser$KEYBDINPUT
+   #35 = Utf8               KEYBDINPUT
+   #36 = Utf8               com/sun/jna/platform/win32/WinDef$WORD
+   #37 = Class              #36           // com/sun/jna/platform/win32/WinDef$WORD
+   #38 = Utf8               WORD
+   #39 = Utf8               java/lang/invoke/MethodHandles$Lookup
+   #40 = Class              #39           // java/lang/invoke/MethodHandles$Lookup
+   #41 = Utf8               java/lang/invoke/MethodHandles
+   #42 = Class              #41           // java/lang/invoke/MethodHandles
+   #43 = Utf8               Lookup
+   #44 = Utf8               EXECUTABLE
+   #45 = Utf8               Ljava/lang/String;
+   #46 = Utf8               spotify.exe
+   #47 = String             #46           // spotify.exe
+   #48 = Utf8               MAIN_CLASS
+   #49 = Utf8               Chrome_WidgetWin_0
+   #50 = String             #49           // Chrome_WidgetWin_0
+   #51 = Utf8               CLASS_FAMILY
+   #52 = Utf8               Chrome_WidgetWin
+   #53 = String             #52           // Chrome_WidgetWin
+   #54 = Utf8               PID_CACHE_MS
+   #55 = Utf8               J
+   #56 = Long               30000l
+   #58 = Utf8               PID_CACHE_MAX
+   #59 = Utf8               I
+   #60 = Integer            512
+   #61 = Utf8               RECHECK_MS
+   #62 = Long               10000l
+   #64 = Utf8               TRACK_SEPARATOR
+   #65 = Utf8                -
+   #66 = String             #65           //  -
+   #67 = Utf8               KEYEVENTF_EXTENDEDKEY
+   #68 = Integer            1
+   #69 = Utf8               KEYEVENTF_KEYUP
+   #70 = Integer            2
+   #71 = Utf8               textBuffer
+   #72 = Utf8               [C
+   #73 = Utf8               classBuffer
+   #74 = Utf8               pathBuffer
+   #75 = Utf8               pidOut
+   #76 = Utf8               Lcom/sun/jna/ptr/IntByReference;
+   #77 = Utf8               sizeInOut
+   #78 = Utf8               spotifyPids
+   #79 = Utf8               Ljava/util/Map;
+   #80 = Utf8               Ljava/util/Map<Ljava/lang/Integer;Ljava/lang/Boolean;>;
+   #81 = Utf8               pidCacheSince
+   #82 = Utf8               window
+   #83 = Utf8               Lcom/sun/jna/platform/win32/WinDef$HWND;
+   #84 = Utf8               foundAt
+   #85 = Utf8               best
+   #86 = Utf8               bestScore
+   #87 = Utf8               finder
+   #88 = Utf8               Lcom/sun/jna/platform/win32/WinUser$WNDENUMPROC;
+   #89 = Utf8               <init>
+   #90 = Utf8               ()V
+   #91 = NameAndType        #89:#90       // "<init>":()V
+   #92 = Methodref          #4.#91        // java/lang/Object."<init>":()V
+   #93 = NameAndType        #71:#72       // textBuffer:[C
+   #94 = Fieldref           #2.#93        // net/anubis/client/util/spotify/SpotifyWindow.textBuffer:[C
+   #95 = NameAndType        #73:#72       // classBuffer:[C
+   #96 = Fieldref           #2.#95        // net/anubis/client/util/spotify/SpotifyWindow.classBuffer:[C
+   #97 = NameAndType        #74:#72       // pathBuffer:[C
+   #98 = Fieldref           #2.#97        // net/anubis/client/util/spotify/SpotifyWindow.pathBuffer:[C
+   #99 = Utf8               com/sun/jna/ptr/IntByReference
+  #100 = Class              #99           // com/sun/jna/ptr/IntByReference
+  #101 = Methodref          #100.#91      // com/sun/jna/ptr/IntByReference."<init>":()V
+  #102 = NameAndType        #75:#76       // pidOut:Lcom/sun/jna/ptr/IntByReference;
+  #103 = Fieldref           #2.#102       // net/anubis/client/util/spotify/SpotifyWindow.pidOut:Lcom/sun/jna/ptr/IntByReference;
+  #104 = NameAndType        #77:#76       // sizeInOut:Lcom/sun/jna/ptr/IntByReference;
+  #105 = Fieldref           #2.#104       // net/anubis/client/util/spotify/SpotifyWindow.sizeInOut:Lcom/sun/jna/ptr/IntByReference;
+  #106 = Utf8               java/util/HashMap
+  #107 = Class              #106          // java/util/HashMap
+  #108 = Methodref          #107.#91      // java/util/HashMap."<init>":()V
+  #109 = NameAndType        #78:#79       // spotifyPids:Ljava/util/Map;
+  #110 = Fieldref           #2.#109       // net/anubis/client/util/spotify/SpotifyWindow.spotifyPids:Ljava/util/Map;
+  #111 = Utf8               (Lcom/sun/jna/platform/win32/WinDef$HWND;Lcom/sun/jna/Pointer;)Z
+  #112 = MethodType         #111          //  (Lcom/sun/jna/platform/win32/WinDef$HWND;Lcom/sun/jna/Pointer;)Z
+  #113 = Utf8               consider
+  #114 = NameAndType        #113:#111     // consider:(Lcom/sun/jna/platform/win32/WinDef$HWND;Lcom/sun/jna/Pointer;)Z
+  #115 = Methodref          #2.#114       // net/anubis/client/util/spotify/SpotifyWindow.consider:(Lcom/sun/jna/platform/win32/WinDef$HWND;Lcom/sun/jna/Pointer;)Z
+  #116 = MethodHandle       5:#115        // REF_invokeVirtual net/anubis/client/util/spotify/SpotifyWindow.consider:(Lcom/sun/jna/platform/win32/WinDef$HWND;Lcom/sun/jna/Pointer;)Z
+  #117 = Utf8               java/lang/invoke/LambdaMetafactory
+  #118 = Class              #117          // java/lang/invoke/LambdaMetafactory
+  #119 = Utf8               metafactory
+  #120 = Utf8               (Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+  #121 = NameAndType        #119:#120     // metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+  #122 = Methodref          #118.#121     // java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+  #123 = MethodHandle       6:#122        // REF_invokeStatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+  #124 = Utf8               callback
+  #125 = Utf8               (Lnet/anubis/client/util/spotify/SpotifyWindow;)Lcom/sun/jna/platform/win32/WinUser$WNDENUMPROC;
+  #126 = NameAndType        #124:#125     // callback:(Lnet/anubis/client/util/spotify/SpotifyWindow;)Lcom/sun/jna/platform/win32/WinUser$WNDENUMPROC;
+  #127 = InvokeDynamic      #0:#126       // #0:callback:(Lnet/anubis/client/util/spotify/SpotifyWindow;)Lcom/sun/jna/platform/win32/WinUser$WNDENUMPROC;
+  #128 = NameAndType        #87:#88       // finder:Lcom/sun/jna/platform/win32/WinUser$WNDENUMPROC;
+  #129 = Fieldref           #2.#128       // net/anubis/client/util/spotify/SpotifyWindow.finder:Lcom/sun/jna/platform/win32/WinUser$WNDENUMPROC;
+  #130 = Utf8               this
+  #131 = Utf8               Lnet/anubis/client/util/spotify/SpotifyWindow;
+  #132 = Utf8               readTitle
+  #133 = Utf8               ()Ljava/lang/String;
+  #134 = Utf8               java/lang/System
+  #135 = Class              #134          // java/lang/System
+  #136 = Utf8               currentTimeMillis
+  #137 = Utf8               ()J
+  #138 = NameAndType        #136:#137     // currentTimeMillis:()J
+  #139 = Methodref          #135.#138     // java/lang/System.currentTimeMillis:()J
+  #140 = NameAndType        #82:#83       // window:Lcom/sun/jna/platform/win32/WinDef$HWND;
+  #141 = Fieldref           #2.#140       // net/anubis/client/util/spotify/SpotifyWindow.window:Lcom/sun/jna/platform/win32/WinDef$HWND;
+  #142 = Utf8               com/sun/jna/platform/win32/User32
+  #143 = Class              #142          // com/sun/jna/platform/win32/User32
+  #144 = Utf8               INSTANCE
+  #145 = Utf8               Lcom/sun/jna/platform/win32/User32;
+  #146 = NameAndType        #144:#145     // INSTANCE:Lcom/sun/jna/platform/win32/User32;
+  #147 = Fieldref           #143.#146     // com/sun/jna/platform/win32/User32.INSTANCE:Lcom/sun/jna/platform/win32/User32;
+  #148 = Utf8               IsWindow
+  #149 = Utf8               (Lcom/sun/jna/platform/win32/WinDef$HWND;)Z
+  #150 = NameAndType        #148:#149     // IsWindow:(Lcom/sun/jna/platform/win32/WinDef$HWND;)Z
+  #151 = InterfaceMethodref #143.#150     // com/sun/jna/platform/win32/User32.IsWindow:(Lcom/sun/jna/platform/win32/WinDef$HWND;)Z
+  #152 = Utf8               processOf
+  #153 = Utf8               (Lcom/sun/jna/platform/win32/WinDef$HWND;)I
+  #154 = NameAndType        #152:#153     // processOf:(Lcom/sun/jna/platform/win32/WinDef$HWND;)I
+  #155 = Methodref          #2.#154       // net/anubis/client/util/spotify/SpotifyWindow.processOf:(Lcom/sun/jna/platform/win32/WinDef$HWND;)I
+  #156 = Utf8               isSpotify
+  #157 = Utf8               (I)Z
+  #158 = NameAndType        #156:#157     // isSpotify:(I)Z
+  #159 = Methodref          #2.#158       // net/anubis/client/util/spotify/SpotifyWindow.isSpotify:(I)Z
+  #160 = Utf8               text
+  #161 = Utf8               (Lcom/sun/jna/platform/win32/WinDef$HWND;)Ljava/lang/String;
+  #162 = NameAndType        #160:#161     // text:(Lcom/sun/jna/platform/win32/WinDef$HWND;)Ljava/lang/String;
+  #163 = Methodref          #2.#162       // net/anubis/client/util/spotify/SpotifyWindow.text:(Lcom/sun/jna/platform/win32/WinDef$HWND;)Ljava/lang/String;
+  #164 = Utf8               java/lang/String
+  #165 = Class              #164          // java/lang/String
+  #166 = Utf8               contains
+  #167 = Utf8               (Ljava/lang/CharSequence;)Z
+  #168 = NameAndType        #166:#167     // contains:(Ljava/lang/CharSequence;)Z
+  #169 = Methodref          #165.#168     // java/lang/String.contains:(Ljava/lang/CharSequence;)Z
+  #170 = Utf8               isEmpty
+  #171 = Utf8               ()Z
+  #172 = NameAndType        #170:#171     // isEmpty:()Z
+  #173 = Methodref          #165.#172     // java/lang/String.isEmpty:()Z
+  #174 = NameAndType        #84:#55       // foundAt:J
+  #175 = Fieldref           #2.#174       // net/anubis/client/util/spotify/SpotifyWindow.foundAt:J
+  #176 = Utf8               find
+  #177 = Utf8               ()Lcom/sun/jna/platform/win32/WinDef$HWND;
+  #178 = NameAndType        #176:#177     // find:()Lcom/sun/jna/platform/win32/WinDef$HWND;
+  #179 = Methodref          #2.#178       // net/anubis/client/util/spotify/SpotifyWindow.find:()Lcom/sun/jna/platform/win32/WinDef$HWND;
+  #180 = Utf8               title
+  #181 = Utf8               now
+  #182 = Utf8               tap
+  #183 = Utf8               (Lnet/anubis/client/util/spotify/SpotifyWindow$MediaKey;)V
+  #184 = Utf8               key
+  #185 = Utf8               virtualKey
+  #186 = NameAndType        #185:#59      // virtualKey:I
+  #187 = Fieldref           #7.#186       // net/anubis/client/util/spotify/SpotifyWindow$MediaKey.virtualKey:I
+  #188 = Utf8               send
+  #189 = Utf8               (II)V
+  #190 = NameAndType        #188:#189     // send:(II)V
+  #191 = Methodref          #2.#190       // net/anubis/client/util/spotify/SpotifyWindow.send:(II)V
+  #192 = Utf8               Lnet/anubis/client/util/spotify/SpotifyWindow$MediaKey;
+  #193 = NameAndType        #81:#55       // pidCacheSince:J
+  #194 = Fieldref           #2.#193       // net/anubis/client/util/spotify/SpotifyWindow.pidCacheSince:J
+  #195 = Utf8               java/util/Map
+  #196 = Class              #195          // java/util/Map
+  #197 = Utf8               size
+  #198 = Utf8               ()I
+  #199 = NameAndType        #197:#198     // size:()I
+  #200 = InterfaceMethodref #196.#199     // java/util/Map.size:()I
+  #201 = Utf8               clear
+  #202 = NameAndType        #201:#90      // clear:()V
+  #203 = InterfaceMethodref #196.#202     // java/util/Map.clear:()V
+  #204 = NameAndType        #85:#83       // best:Lcom/sun/jna/platform/win32/WinDef$HWND;
+  #205 = Fieldref           #2.#204       // net/anubis/client/util/spotify/SpotifyWindow.best:Lcom/sun/jna/platform/win32/WinDef$HWND;
+  #206 = NameAndType        #86:#59       // bestScore:I
+  #207 = Fieldref           #2.#206       // net/anubis/client/util/spotify/SpotifyWindow.bestScore:I
+  #208 = Utf8               com/sun/jna/Pointer
+  #209 = Class              #208          // com/sun/jna/Pointer
+  #210 = Utf8               NULL
+  #211 = Utf8               Lcom/sun/jna/Pointer;
+  #212 = NameAndType        #210:#211     // NULL:Lcom/sun/jna/Pointer;
+  #213 = Fieldref           #209.#212     // com/sun/jna/Pointer.NULL:Lcom/sun/jna/Pointer;
+  #214 = Utf8               EnumWindows
+  #215 = Utf8               (Lcom/sun/jna/platform/win32/WinUser$WNDENUMPROC;Lcom/sun/jna/Pointer;)Z
+  #216 = NameAndType        #214:#215     // EnumWindows:(Lcom/sun/jna/platform/win32/WinUser$WNDENUMPROC;Lcom/sun/jna/Pointer;)Z
+  #217 = InterfaceMethodref #143.#216     // com/sun/jna/platform/win32/User32.EnumWindows:(Lcom/sun/jna/platform/win32/WinUser$WNDENUMPROC;Lcom/sun/jna/Pointer;)Z
+  #218 = Utf8               found
+  #219 = Utf8               hwnd
+  #220 = Utf8               data
+  #221 = Utf8               Default IME
+  #222 = String             #221          // Default IME
+  #223 = Utf8               equals
+  #224 = Utf8               (Ljava/lang/Object;)Z
+  #225 = NameAndType        #223:#224     // equals:(Ljava/lang/Object;)Z
+  #226 = Methodref          #165.#225     // java/lang/String.equals:(Ljava/lang/Object;)Z
+  #227 = Utf8               MSCTFIME UI
+  #228 = String             #227          // MSCTFIME UI
+  #229 = Utf8               GDI+ Window
+  #230 = String             #229          // GDI+ Window
+  #231 = Utf8               startsWith
+  #232 = Utf8               (Ljava/lang/String;)Z
+  #233 = NameAndType        #231:#232     // startsWith:(Ljava/lang/String;)Z
+  #234 = Methodref          #165.#233     // java/lang/String.startsWith:(Ljava/lang/String;)Z
+  #235 = Utf8               className
+  #236 = NameAndType        #235:#161     // className:(Lcom/sun/jna/platform/win32/WinDef$HWND;)Ljava/lang/String;
+  #237 = Methodref          #2.#236       // net/anubis/client/util/spotify/SpotifyWindow.className:(Lcom/sun/jna/platform/win32/WinDef$HWND;)Ljava/lang/String;
+  #238 = Utf8               Spotify
+  #239 = String             #238          // Spotify
+  #240 = Utf8               IsWindowVisible
+  #241 = NameAndType        #240:#149     // IsWindowVisible:(Lcom/sun/jna/platform/win32/WinDef$HWND;)Z
+  #242 = InterfaceMethodref #143.#241     // com/sun/jna/platform/win32/User32.IsWindowVisible:(Lcom/sun/jna/platform/win32/WinDef$HWND;)Z
+  #243 = Utf8               windowClass
+  #244 = Utf8               score
+  #245 = Utf8               GetWindowThreadProcessId
+  #246 = Utf8               (Lcom/sun/jna/platform/win32/WinDef$HWND;Lcom/sun/jna/ptr/IntByReference;)I
+  #247 = NameAndType        #245:#246     // GetWindowThreadProcessId:(Lcom/sun/jna/platform/win32/WinDef$HWND;Lcom/sun/jna/ptr/IntByReference;)I
+  #248 = InterfaceMethodref #143.#247     // com/sun/jna/platform/win32/User32.GetWindowThreadProcessId:(Lcom/sun/jna/platform/win32/WinDef$HWND;Lcom/sun/jna/ptr/IntByReference;)I
+  #249 = Utf8               getValue
+  #250 = NameAndType        #249:#198     // getValue:()I
+  #251 = Methodref          #100.#250     // com/sun/jna/ptr/IntByReference.getValue:()I
+  #252 = Utf8               pid
+  #253 = Utf8               java/lang/Integer
+  #254 = Class              #253          // java/lang/Integer
+  #255 = Utf8               valueOf
+  #256 = Utf8               (I)Ljava/lang/Integer;
+  #257 = NameAndType        #255:#256     // valueOf:(I)Ljava/lang/Integer;
+  #258 = Methodref          #254.#257     // java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+  #259 = Utf8               get
+  #260 = Utf8               (Ljava/lang/Object;)Ljava/lang/Object;
+  #261 = NameAndType        #259:#260     // get:(Ljava/lang/Object;)Ljava/lang/Object;
+  #262 = InterfaceMethodref #196.#261     // java/util/Map.get:(Ljava/lang/Object;)Ljava/lang/Object;
+  #263 = Utf8               java/lang/Boolean
+  #264 = Class              #263          // java/lang/Boolean
+  #265 = Utf8               booleanValue
+  #266 = NameAndType        #265:#171     // booleanValue:()Z
+  #267 = Methodref          #264.#266     // java/lang/Boolean.booleanValue:()Z
+  #268 = Utf8               imageName
+  #269 = Utf8               (I)Ljava/lang/String;
+  #270 = NameAndType        #268:#269     // imageName:(I)Ljava/lang/String;
+  #271 = Methodref          #2.#270       // net/anubis/client/util/spotify/SpotifyWindow.imageName:(I)Ljava/lang/String;
+  #272 = Utf8               (Z)Ljava/lang/Boolean;
+  #273 = NameAndType        #255:#272     // valueOf:(Z)Ljava/lang/Boolean;
+  #274 = Methodref          #264.#273     // java/lang/Boolean.valueOf:(Z)Ljava/lang/Boolean;
+  #275 = Utf8               put
+  #276 = Utf8               (Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+  #277 = NameAndType        #275:#276     // put:(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+  #278 = InterfaceMethodref #196.#277     // java/util/Map.put:(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+  #279 = Utf8               cached
+  #280 = Utf8               Ljava/lang/Boolean;
+  #281 = Utf8               spotify
+  #282 = Utf8               Z
+  #283 = Utf8               com/sun/jna/platform/win32/Kernel32
+  #284 = Class              #283          // com/sun/jna/platform/win32/Kernel32
+  #285 = Utf8               Lcom/sun/jna/platform/win32/Kernel32;
+  #286 = NameAndType        #144:#285     // INSTANCE:Lcom/sun/jna/platform/win32/Kernel32;
+  #287 = Fieldref           #284.#286     // com/sun/jna/platform/win32/Kernel32.INSTANCE:Lcom/sun/jna/platform/win32/Kernel32;
+  #288 = Utf8               OpenProcess
+  #289 = Utf8               (IZI)Lcom/sun/jna/platform/win32/WinNT$HANDLE;
+  #290 = NameAndType        #288:#289     // OpenProcess:(IZI)Lcom/sun/jna/platform/win32/WinNT$HANDLE;
+  #291 = InterfaceMethodref #284.#290     // com/sun/jna/platform/win32/Kernel32.OpenProcess:(IZI)Lcom/sun/jna/platform/win32/WinNT$HANDLE;
+  #292 = Utf8
+  #293 = String             #292          //
+  #294 = Utf8               setValue
+  #295 = Utf8               (I)V
+  #296 = NameAndType        #294:#295     // setValue:(I)V
+  #297 = Methodref          #100.#296     // com/sun/jna/ptr/IntByReference.setValue:(I)V
+  #298 = Utf8               QueryFullProcessImageName
+  #299 = Utf8               (Lcom/sun/jna/platform/win32/WinNT$HANDLE;I[CLcom/sun/jna/ptr/IntByReference;)Z
+  #300 = NameAndType        #298:#299     // QueryFullProcessImageName:(Lcom/sun/jna/platform/win32/WinNT$HANDLE;I[CLcom/sun/jna/ptr/IntByReference;)Z
+  #301 = InterfaceMethodref #284.#300     // com/sun/jna/platform/win32/Kernel32.QueryFullProcessImageName:(Lcom/sun/jna/platform/win32/WinNT$HANDLE;I[CLcom/sun/jna/ptr/IntByReference;)Z
+  #302 = Utf8               CloseHandle
+  #303 = Utf8               (Lcom/sun/jna/platform/win32/WinNT$HANDLE;)Z
+  #304 = NameAndType        #302:#303     // CloseHandle:(Lcom/sun/jna/platform/win32/WinNT$HANDLE;)Z
+  #305 = InterfaceMethodref #284.#304     // com/sun/jna/platform/win32/Kernel32.CloseHandle:(Lcom/sun/jna/platform/win32/WinNT$HANDLE;)Z
+  #306 = Utf8               java/lang/Math
+  #307 = Class              #306          // java/lang/Math
+  #308 = Utf8               min
+  #309 = Utf8               (II)I
+  #310 = NameAndType        #308:#309     // min:(II)I
+  #311 = Methodref          #307.#310     // java/lang/Math.min:(II)I
+  #312 = Utf8               ([CII)V
+  #313 = NameAndType        #89:#312      // "<init>":([CII)V
+  #314 = Methodref          #165.#313     // java/lang/String."<init>":([CII)V
+  #315 = Utf8               lastIndexOf
+  #316 = Utf8               (I)I
+  #317 = NameAndType        #315:#316     // lastIndexOf:(I)I
+  #318 = Methodref          #165.#317     // java/lang/String.lastIndexOf:(I)I
+  #319 = Utf8               substring
+  #320 = NameAndType        #319:#269     // substring:(I)Ljava/lang/String;
+  #321 = Methodref          #165.#320     // java/lang/String.substring:(I)Ljava/lang/String;
+  #322 = Utf8               java/util/Locale
+  #323 = Class              #322          // java/util/Locale
+  #324 = Utf8               ROOT
+  #325 = Utf8               Ljava/util/Locale;
+  #326 = NameAndType        #324:#325     // ROOT:Ljava/util/Locale;
+  #327 = Fieldref           #323.#326     // java/util/Locale.ROOT:Ljava/util/Locale;
+  #328 = Utf8               toLowerCase
+  #329 = Utf8               (Ljava/util/Locale;)Ljava/lang/String;
+  #330 = NameAndType        #328:#329     // toLowerCase:(Ljava/util/Locale;)Ljava/lang/String;
+  #331 = Methodref          #165.#330     // java/lang/String.toLowerCase:(Ljava/util/Locale;)Ljava/lang/String;
+  #332 = Utf8               java/lang/Throwable
+  #333 = Class              #332          // java/lang/Throwable
+  #334 = Utf8               path
+  #335 = Utf8               slash
+  #336 = Utf8               process
+  #337 = Utf8               Lcom/sun/jna/platform/win32/WinNT$HANDLE;
+  #338 = Utf8               GetWindowText
+  #339 = Utf8               (Lcom/sun/jna/platform/win32/WinDef$HWND;[CI)I
+  #340 = NameAndType        #338:#339     // GetWindowText:(Lcom/sun/jna/platform/win32/WinDef$HWND;[CI)I
+  #341 = InterfaceMethodref #143.#340     // com/sun/jna/platform/win32/User32.GetWindowText:(Lcom/sun/jna/platform/win32/WinDef$HWND;[CI)I
+  #342 = Utf8               length
+  #343 = Utf8               GetClassName
+  #344 = NameAndType        #343:#339     // GetClassName:(Lcom/sun/jna/platform/win32/WinDef$HWND;[CI)I
+  #345 = InterfaceMethodref #143.#344     // com/sun/jna/platform/win32/User32.GetClassName:(Lcom/sun/jna/platform/win32/WinDef$HWND;[CI)I
+  #346 = Utf8               flags
+  #347 = Methodref          #25.#91       // com/sun/jna/platform/win32/WinUser$INPUT."<init>":()V
+  #348 = Utf8               (J)V
+  #349 = NameAndType        #89:#348      // "<init>":(J)V
+  #350 = Methodref          #28.#349      // com/sun/jna/platform/win32/WinDef$DWORD."<init>":(J)V
+  #351 = Utf8               type
+  #352 = Utf8               Lcom/sun/jna/platform/win32/WinDef$DWORD;
+  #353 = NameAndType        #351:#352     // type:Lcom/sun/jna/platform/win32/WinDef$DWORD;
+  #354 = Fieldref           #25.#353      // com/sun/jna/platform/win32/WinUser$INPUT.type:Lcom/sun/jna/platform/win32/WinDef$DWORD;
+  #355 = Utf8               input
+  #356 = Utf8               Lcom/sun/jna/platform/win32/WinUser$INPUT$INPUT_UNION;
+  #357 = NameAndType        #355:#356     // input:Lcom/sun/jna/platform/win32/WinUser$INPUT$INPUT_UNION;
+  #358 = Fieldref           #25.#357      // com/sun/jna/platform/win32/WinUser$INPUT.input:Lcom/sun/jna/platform/win32/WinUser$INPUT$INPUT_UNION;
+  #359 = Utf8               ki
+  #360 = String             #359          // ki
+  #361 = Utf8               setType
+  #362 = Utf8               (Ljava/lang/String;)V
+  #363 = NameAndType        #361:#362     // setType:(Ljava/lang/String;)V
+  #364 = Methodref          #31.#363      // com/sun/jna/platform/win32/WinUser$INPUT$INPUT_UNION.setType:(Ljava/lang/String;)V
+  #365 = Utf8               Lcom/sun/jna/platform/win32/WinUser$KEYBDINPUT;
+  #366 = NameAndType        #359:#365     // ki:Lcom/sun/jna/platform/win32/WinUser$KEYBDINPUT;
+  #367 = Fieldref           #31.#366      // com/sun/jna/platform/win32/WinUser$INPUT$INPUT_UNION.ki:Lcom/sun/jna/platform/win32/WinUser$KEYBDINPUT;
+  #368 = Methodref          #37.#349      // com/sun/jna/platform/win32/WinDef$WORD."<init>":(J)V
+  #369 = Utf8               wVk
+  #370 = Utf8               Lcom/sun/jna/platform/win32/WinDef$WORD;
+  #371 = NameAndType        #369:#370     // wVk:Lcom/sun/jna/platform/win32/WinDef$WORD;
+  #372 = Fieldref           #34.#371      // com/sun/jna/platform/win32/WinUser$KEYBDINPUT.wVk:Lcom/sun/jna/platform/win32/WinDef$WORD;
+  #373 = Utf8               wScan
+  #374 = NameAndType        #373:#370     // wScan:Lcom/sun/jna/platform/win32/WinDef$WORD;
+  #375 = Fieldref           #34.#374      // com/sun/jna/platform/win32/WinUser$KEYBDINPUT.wScan:Lcom/sun/jna/platform/win32/WinDef$WORD;
+  #376 = Utf8               dwFlags
+  #377 = NameAndType        #376:#352     // dwFlags:Lcom/sun/jna/platform/win32/WinDef$DWORD;
+  #378 = Fieldref           #34.#377      // com/sun/jna/platform/win32/WinUser$KEYBDINPUT.dwFlags:Lcom/sun/jna/platform/win32/WinDef$DWORD;
+  #379 = Utf8               time
+  #380 = NameAndType        #379:#352     // time:Lcom/sun/jna/platform/win32/WinDef$DWORD;
+  #381 = Fieldref           #34.#380      // com/sun/jna/platform/win32/WinUser$KEYBDINPUT.time:Lcom/sun/jna/platform/win32/WinDef$DWORD;
+  #382 = Methodref          #25.#199      // com/sun/jna/platform/win32/WinUser$INPUT.size:()I
+  #383 = Utf8               SendInput
+  #384 = Utf8               (Lcom/sun/jna/platform/win32/WinDef$DWORD;[Lcom/sun/jna/platform/win32/WinUser$INPUT;I)Lcom/sun/jna/platform/win32/WinDef$DWORD;
+  #385 = NameAndType        #383:#384     // SendInput:(Lcom/sun/jna/platform/win32/WinDef$DWORD;[Lcom/sun/jna/platform/win32/WinUser$INPUT;I)Lcom/sun/jna/platform/win32/WinDef$DWORD;
+  #386 = InterfaceMethodref #143.#385     // com/sun/jna/platform/win32/User32.SendInput:(Lcom/sun/jna/platform/win32/WinDef$DWORD;[Lcom/sun/jna/platform/win32/WinUser$INPUT;I)Lcom/sun/jna/platform/win32/WinDef$DWORD;
+  #387 = Utf8               Lcom/sun/jna/platform/win32/WinUser$INPUT;
+  #388 = Utf8               Lnet/fabricmc/api/Environment;
+  #389 = Utf8               value
+  #390 = Utf8               Lnet/fabricmc/api/EnvType;
+  #391 = Utf8               CLIENT
+  #392 = Utf8               ConstantValue
+  #393 = Utf8               Signature
+  #394 = Utf8               Code
+  #395 = Utf8               LineNumberTable
+  #396 = Utf8               LocalVariableTable
+  #397 = Utf8               StackMapTable
+  #398 = Utf8               MethodParameters
+  #399 = Utf8               InnerClasses
+  #400 = Utf8               SourceFile
+  #401 = Utf8               RuntimeVisibleAnnotations
+  #402 = Utf8               BootstrapMethods
+  #403 = Utf8               NestMembers
+{
+  private static final java.lang.String EXECUTABLE;
+    descriptor: Ljava/lang/String;
+    flags: (0x001a) ACC_PRIVATE, ACC_STATIC, ACC_FINAL
+    ConstantValue: String spotify.exe
+
+  private static final java.lang.String MAIN_CLASS;
+    descriptor: Ljava/lang/String;
+    flags: (0x001a) ACC_PRIVATE, ACC_STATIC, ACC_FINAL
+    ConstantValue: String Chrome_WidgetWin_0
+
+  private static final java.lang.String CLASS_FAMILY;
+    descriptor: Ljava/lang/String;
+    flags: (0x001a) ACC_PRIVATE, ACC_STATIC, ACC_FINAL
+    ConstantValue: String Chrome_WidgetWin
+
+  private static final long PID_CACHE_MS;
+    descriptor: J
+    flags: (0x001a) ACC_PRIVATE, ACC_STATIC, ACC_FINAL
+    ConstantValue: long 30000l
+
+  private static final int PID_CACHE_MAX;
+    descriptor: I
+    flags: (0x001a) ACC_PRIVATE, ACC_STATIC, ACC_FINAL
+    ConstantValue: int 512
+
+  private static final long RECHECK_MS;
+    descriptor: J
+    flags: (0x001a) ACC_PRIVATE, ACC_STATIC, ACC_FINAL
+    ConstantValue: long 10000l
+
+  private static final java.lang.String TRACK_SEPARATOR;
+    descriptor: Ljava/lang/String;
+    flags: (0x001a) ACC_PRIVATE, ACC_STATIC, ACC_FINAL
+    ConstantValue: String  -
+
+  private static final int KEYEVENTF_EXTENDEDKEY;
+    descriptor: I
+    flags: (0x001a) ACC_PRIVATE, ACC_STATIC, ACC_FINAL
+    ConstantValue: int 1
+
+  private static final int KEYEVENTF_KEYUP;
+    descriptor: I
+    flags: (0x001a) ACC_PRIVATE, ACC_STATIC, ACC_FINAL
+    ConstantValue: int 2
+
+  private final char[] textBuffer;
+    descriptor: [C
+    flags: (0x0012) ACC_PRIVATE, ACC_FINAL
+
+  private final char[] classBuffer;
+    descriptor: [C
+    flags: (0x0012) ACC_PRIVATE, ACC_FINAL
+
+  private final char[] pathBuffer;
+    descriptor: [C
+    flags: (0x0012) ACC_PRIVATE, ACC_FINAL
+
+  private final com.sun.jna.ptr.IntByReference pidOut;
+    descriptor: Lcom/sun/jna/ptr/IntByReference;
+    flags: (0x0012) ACC_PRIVATE, ACC_FINAL
+
+  private final com.sun.jna.ptr.IntByReference sizeInOut;
+    descriptor: Lcom/sun/jna/ptr/IntByReference;
+    flags: (0x0012) ACC_PRIVATE, ACC_FINAL
+
+  private final java.util.Map<java.lang.Integer, java.lang.Boolean> spotifyPids;
+    descriptor: Ljava/util/Map;
+    flags: (0x0012) ACC_PRIVATE, ACC_FINAL
+    Signature: #80                          // Ljava/util/Map<Ljava/lang/Integer;Ljava/lang/Boolean;>;
+
+  private long pidCacheSince;
+    descriptor: J
+    flags: (0x0002) ACC_PRIVATE
+
+  private com.sun.jna.platform.win32.WinDef$HWND window;
+    descriptor: Lcom/sun/jna/platform/win32/WinDef$HWND;
+    flags: (0x0002) ACC_PRIVATE
+
+  private long foundAt;
+    descriptor: J
+    flags: (0x0002) ACC_PRIVATE
+
+  private com.sun.jna.platform.win32.WinDef$HWND best;
+    descriptor: Lcom/sun/jna/platform/win32/WinDef$HWND;
+    flags: (0x0002) ACC_PRIVATE
+
+  private int bestScore;
+    descriptor: I
+    flags: (0x0002) ACC_PRIVATE
+
+  private final com.sun.jna.platform.win32.WinUser$WNDENUMPROC finder;
+    descriptor: Lcom/sun/jna/platform/win32/WinUser$WNDENUMPROC;
+    flags: (0x0012) ACC_PRIVATE, ACC_FINAL
+
+  public net.anubis.client.util.spotify.SpotifyWindow();
+    descriptor: ()V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=3, locals=1, args_size=1
+         0: aload_0
+         1: invokespecial #92                 // Method java/lang/Object."<init>":()V
+         4: aload_0
+         5: sipush        512
+         8: newarray       char
+        10: putfield      #94                 // Field textBuffer:[C
+        13: aload_0
+        14: bipush        64
+        16: newarray       char
+        18: putfield      #96                 // Field classBuffer:[C
+        21: aload_0
+        22: sipush        1024
+        25: newarray       char
+        27: putfield      #98                 // Field pathBuffer:[C
+        30: aload_0
+        31: new           #100                // class com/sun/jna/ptr/IntByReference
+        34: dup
+        35: invokespecial #101                // Method com/sun/jna/ptr/IntByReference."<init>":()V
+        38: putfield      #103                // Field pidOut:Lcom/sun/jna/ptr/IntByReference;
+        41: aload_0
+        42: new           #100                // class com/sun/jna/ptr/IntByReference
+        45: dup
+        46: invokespecial #101                // Method com/sun/jna/ptr/IntByReference."<init>":()V
+        49: putfield      #105                // Field sizeInOut:Lcom/sun/jna/ptr/IntByReference;
+        52: aload_0
+        53: new           #107                // class java/util/HashMap
+        56: dup
+        57: invokespecial #108                // Method java/util/HashMap."<init>":()V
+        60: putfield      #110                // Field spotifyPids:Ljava/util/Map;
+        63: aload_0
+        64: aload_0
+        65: invokedynamic #127,  0            // InvokeDynamic #0:callback:(Lnet/anubis/client/util/spotify/SpotifyWindow;)Lcom/sun/jna/platform/win32/WinUser$WNDENUMPROC;
+        70: putfield      #129                // Field finder:Lcom/sun/jna/platform/win32/WinUser$WNDENUMPROC;
+        73: return
+      LineNumberTable:
+        line 15: 0
+        line 41: 4
+        line 42: 13
+        line 43: 21
+        line 44: 30
+        line 45: 41
+        line 46: 52
+        line 54: 63
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      74     0  this   Lnet/anubis/client/util/spotify/SpotifyWindow;
+
+  public java.lang.String readTitle();
+    descriptor: ()Ljava/lang/String;
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=4, locals=4, args_size=1
+         0: invokestatic  #139                // Method java/lang/System.currentTimeMillis:()J
+         3: lstore_1
+         4: aload_0
+         5: getfield      #141                // Field window:Lcom/sun/jna/platform/win32/WinDef$HWND;
+         8: ifnull        81
+        11: getstatic     #147                // Field com/sun/jna/platform/win32/User32.INSTANCE:Lcom/sun/jna/platform/win32/User32;
+        14: aload_0
+        15: getfield      #141                // Field window:Lcom/sun/jna/platform/win32/WinDef$HWND;
+        18: invokeinterface #151,  2          // InterfaceMethod com/sun/jna/platform/win32/User32.IsWindow:(Lcom/sun/jna/platform/win32/WinDef$HWND;)Z
+        23: ifeq          81
+        26: aload_0
+        27: aload_0
+        28: aload_0
+        29: getfield      #141                // Field window:Lcom/sun/jna/platform/win32/WinDef$HWND;
+        32: invokevirtual #155                // Method processOf:(Lcom/sun/jna/platform/win32/WinDef$HWND;)I
+        35: invokevirtual #159                // Method isSpotify:(I)Z
+        38: ifeq          81
+        41: aload_0
+        42: aload_0
+        43: getfield      #141                // Field window:Lcom/sun/jna/platform/win32/WinDef$HWND;
+        46: invokevirtual #163                // Method text:(Lcom/sun/jna/platform/win32/WinDef$HWND;)Ljava/lang/String;
+        49: astore_3
+        50: aload_3
+        51: ldc           #66                 // String  -
+        53: invokevirtual #169                // Method java/lang/String.contains:(Ljava/lang/CharSequence;)Z
+        56: ifne          79
+        59: aload_3
+        60: invokevirtual #173                // Method java/lang/String.isEmpty:()Z
+        63: ifne          81
+        66: lload_1
+        67: aload_0
+        68: getfield      #175                // Field foundAt:J
+        71: lsub
+        72: ldc2_w        #62                 // long 10000l
+        75: lcmp
+        76: ifge          81
+        79: aload_3
+        80: areturn
+        81: aload_0
+        82: aload_0
+        83: invokevirtual #179                // Method find:()Lcom/sun/jna/platform/win32/WinDef$HWND;
+        86: putfield      #141                // Field window:Lcom/sun/jna/platform/win32/WinDef$HWND;
+        89: aload_0
+        90: lload_1
+        91: putfield      #175                // Field foundAt:J
+        94: aload_0
+        95: getfield      #141                // Field window:Lcom/sun/jna/platform/win32/WinDef$HWND;
+        98: ifnonnull     105
+       101: aconst_null
+       102: goto          113
+       105: aload_0
+       106: aload_0
+       107: getfield      #141                // Field window:Lcom/sun/jna/platform/win32/WinDef$HWND;
+       110: invokevirtual #163                // Method text:(Lcom/sun/jna/platform/win32/WinDef$HWND;)Ljava/lang/String;
+       113: areturn
+      StackMapTable: number_of_entries = 4
+        frame_type = 253 /* append */
+          offset_delta = 79
+          locals = [ long, class java/lang/String ]
+        frame_type = 250 /* chop */
+          offset_delta = 1
+        frame_type = 23 /* same */
+        frame_type = 71 /* same_locals_1_stack_item */
+          stack = [ class java/lang/String ]
+      LineNumberTable:
+        line 57: 0
+        line 58: 4
+        line 59: 41
+        line 60: 50
+        line 62: 81
+        line 63: 89
+        line 64: 94
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+           50      31     3 title   Ljava/lang/String;
+            0     114     0  this   Lnet/anubis/client/util/spotify/SpotifyWindow;
+            4     110     1   now   J
+
+  public static void tap(net.anubis.client.util.spotify.SpotifyWindow$MediaKey);
+    descriptor: (Lnet/anubis/client/util/spotify/SpotifyWindow$MediaKey;)V
+    flags: (0x0009) ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=2, locals=1, args_size=1
+         0: aload_0
+         1: getfield      #187                // Field net/anubis/client/util/spotify/SpotifyWindow$MediaKey.virtualKey:I
+         4: iconst_1
+         5: invokestatic  #191                // Method send:(II)V
+         8: aload_0
+         9: getfield      #187                // Field net/anubis/client/util/spotify/SpotifyWindow$MediaKey.virtualKey:I
+        12: iconst_3
+        13: invokestatic  #191                // Method send:(II)V
+        16: return
+      LineNumberTable:
+        line 68: 0
+        line 69: 8
+        line 70: 16
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      17     0   key   Lnet/anubis/client/util/spotify/SpotifyWindow$MediaKey;
+    MethodParameters:
+      Name                           Flags
+      key
+
+  private com.sun.jna.platform.win32.WinDef$HWND find();
+    descriptor: ()Lcom/sun/jna/platform/win32/WinDef$HWND;
+    flags: (0x0002) ACC_PRIVATE
+    Code:
+      stack=4, locals=4, args_size=1
+         0: invokestatic  #139                // Method java/lang/System.currentTimeMillis:()J
+         3: lstore_1
+         4: lload_1
+         5: aload_0
+         6: getfield      #194                // Field pidCacheSince:J
+         9: lsub
+        10: ldc2_w        #56                 // long 30000l
+        13: lcmp
+        14: ifgt          32
+        17: aload_0
+        18: getfield      #110                // Field spotifyPids:Ljava/util/Map;
+        21: invokeinterface #200,  1          // InterfaceMethod java/util/Map.size:()I
+        26: sipush        512
+        29: if_icmple     46
+        32: aload_0
+        33: getfield      #110                // Field spotifyPids:Ljava/util/Map;
+        36: invokeinterface #203,  1          // InterfaceMethod java/util/Map.clear:()V
+        41: aload_0
+        42: lload_1
+        43: putfield      #194                // Field pidCacheSince:J
+        46: aload_0
+        47: aconst_null
+        48: putfield      #205                // Field best:Lcom/sun/jna/platform/win32/WinDef$HWND;
+        51: aload_0
+        52: iconst_0
+        53: putfield      #207                // Field bestScore:I
+        56: getstatic     #147                // Field com/sun/jna/platform/win32/User32.INSTANCE:Lcom/sun/jna/platform/win32/User32;
+        59: aload_0
+        60: getfield      #129                // Field finder:Lcom/sun/jna/platform/win32/WinUser$WNDENUMPROC;
+        63: getstatic     #213                // Field com/sun/jna/Pointer.NULL:Lcom/sun/jna/Pointer;
+        66: invokeinterface #217,  3          // InterfaceMethod com/sun/jna/platform/win32/User32.EnumWindows:(Lcom/sun/jna/platform/win32/WinUser$WNDENUMPROC;Lcom/sun/jna/Pointer;)Z
+        71: pop
+        72: aload_0
+        73: getfield      #205                // Field best:Lcom/sun/jna/platform/win32/WinDef$HWND;
+        76: astore_3
+        77: aload_0
+        78: aconst_null
+        79: putfield      #205                // Field best:Lcom/sun/jna/platform/win32/WinDef$HWND;
+        82: aload_3
+        83: areturn
+      StackMapTable: number_of_entries = 2
+        frame_type = 252 /* append */
+          offset_delta = 32
+          locals = [ long ]
+        frame_type = 13 /* same */
+      LineNumberTable:
+        line 73: 0
+        line 74: 4
+        line 75: 32
+        line 76: 41
+        line 78: 46
+        line 79: 51
+        line 80: 56
+        line 81: 72
+        line 82: 77
+        line 83: 82
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      84     0  this   Lnet/anubis/client/util/spotify/SpotifyWindow;
+            4      80     1   now   J
+           77       7     3 found   Lcom/sun/jna/platform/win32/WinDef$HWND;
+
+  private boolean consider(com.sun.jna.platform.win32.WinDef$HWND, com.sun.jna.Pointer);
+    descriptor: (Lcom/sun/jna/platform/win32/WinDef$HWND;Lcom/sun/jna/Pointer;)Z
+    flags: (0x0002) ACC_PRIVATE
+    Code:
+      stack=3, locals=6, args_size=3
+         0: aload_0
+         1: aload_0
+         2: aload_1
+         3: invokevirtual #155                // Method processOf:(Lcom/sun/jna/platform/win32/WinDef$HWND;)I
+         6: invokevirtual #159                // Method isSpotify:(I)Z
+         9: ifne          14
+        12: iconst_1
+        13: ireturn
+        14: aload_0
+        15: aload_1
+        16: invokevirtual #163                // Method text:(Lcom/sun/jna/platform/win32/WinDef$HWND;)Ljava/lang/String;
+        19: astore_3
+        20: aload_3
+        21: invokevirtual #173                // Method java/lang/String.isEmpty:()Z
+        24: ifne          54
+        27: aload_3
+        28: ldc           #222                // String Default IME
+        30: invokevirtual #226                // Method java/lang/String.equals:(Ljava/lang/Object;)Z
+        33: ifne          54
+        36: aload_3
+        37: ldc           #228                // String MSCTFIME UI
+        39: invokevirtual #226                // Method java/lang/String.equals:(Ljava/lang/Object;)Z
+        42: ifne          54
+        45: aload_3
+        46: ldc           #230                // String GDI+ Window
+        48: invokevirtual #234                // Method java/lang/String.startsWith:(Ljava/lang/String;)Z
+        51: ifeq          56
+        54: iconst_1
+        55: ireturn
+        56: aload_0
+        57: aload_1
+        58: invokevirtual #237                // Method className:(Lcom/sun/jna/platform/win32/WinDef$HWND;)Ljava/lang/String;
+        61: astore        4
+        63: iconst_1
+        64: istore        5
+        66: aload         4
+        68: ldc           #50                 // String Chrome_WidgetWin_0
+        70: invokevirtual #226                // Method java/lang/String.equals:(Ljava/lang/Object;)Z
+        73: ifeq          82
+        76: iinc          5, 4
+        79: goto          95
+        82: aload         4
+        84: ldc           #53                 // String Chrome_WidgetWin
+        86: invokevirtual #234                // Method java/lang/String.startsWith:(Ljava/lang/String;)Z
+        89: ifeq          95
+        92: iinc          5, 2
+        95: aload_3
+        96: ldc           #66                 // String  -
+        98: invokevirtual #169                // Method java/lang/String.contains:(Ljava/lang/CharSequence;)Z
+       101: ifeq          110
+       104: iinc          5, 3
+       107: goto          122
+       110: aload_3
+       111: ldc           #239                // String Spotify
+       113: invokevirtual #234                // Method java/lang/String.startsWith:(Ljava/lang/String;)Z
+       116: ifeq          122
+       119: iinc          5, 1
+       122: getstatic     #147                // Field com/sun/jna/platform/win32/User32.INSTANCE:Lcom/sun/jna/platform/win32/User32;
+       125: aload_1
+       126: invokeinterface #242,  2          // InterfaceMethod com/sun/jna/platform/win32/User32.IsWindowVisible:(Lcom/sun/jna/platform/win32/WinDef$HWND;)Z
+       131: ifeq          137
+       134: iinc          5, 1
+       137: iload         5
+       139: aload_0
+       140: getfield      #207                // Field bestScore:I
+       143: if_icmple     157
+       146: aload_0
+       147: iload         5
+       149: putfield      #207                // Field bestScore:I
+       152: aload_0
+       153: aload_1
+       154: putfield      #205                // Field best:Lcom/sun/jna/platform/win32/WinDef$HWND;
+       157: iconst_1
+       158: ireturn
+      StackMapTable: number_of_entries = 9
+        frame_type = 14 /* same */
+        frame_type = 252 /* append */
+          offset_delta = 39
+          locals = [ class java/lang/String ]
+        frame_type = 1 /* same */
+        frame_type = 253 /* append */
+          offset_delta = 25
+          locals = [ class java/lang/String, int ]
+        frame_type = 12 /* same */
+        frame_type = 14 /* same */
+        frame_type = 11 /* same */
+        frame_type = 14 /* same */
+        frame_type = 19 /* same */
+      LineNumberTable:
+        line 87: 0
+        line 88: 14
+        line 89: 20
+        line 90: 48
+        line 91: 54
+        line 93: 56
+        line 94: 63
+        line 95: 66
+        line 96: 82
+        line 98: 95
+        line 99: 110
+        line 100: 122
+        line 101: 137
+        line 102: 146
+        line 103: 152
+        line 105: 157
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0     159     0  this   Lnet/anubis/client/util/spotify/SpotifyWindow;
+            0     159     1  hwnd   Lcom/sun/jna/platform/win32/WinDef$HWND;
+            0     159     2  data   Lcom/sun/jna/Pointer;
+           20     139     3 title   Ljava/lang/String;
+           63      96     4 windowClass   Ljava/lang/String;
+           66      93     5 score   I
+    MethodParameters:
+      Name                           Flags
+      hwnd
+      data
+
+  private int processOf(com.sun.jna.platform.win32.WinDef$HWND);
+    descriptor: (Lcom/sun/jna/platform/win32/WinDef$HWND;)I
+    flags: (0x0002) ACC_PRIVATE
+    Code:
+      stack=3, locals=2, args_size=2
+         0: getstatic     #147                // Field com/sun/jna/platform/win32/User32.INSTANCE:Lcom/sun/jna/platform/win32/User32;
+         3: aload_1
+         4: aload_0
+         5: getfield      #103                // Field pidOut:Lcom/sun/jna/ptr/IntByReference;
+         8: invokeinterface #248,  3          // InterfaceMethod com/sun/jna/platform/win32/User32.GetWindowThreadProcessId:(Lcom/sun/jna/platform/win32/WinDef$HWND;Lcom/sun/jna/ptr/IntByReference;)I
+        13: pop
+        14: aload_0
+        15: getfield      #103                // Field pidOut:Lcom/sun/jna/ptr/IntByReference;
+        18: invokevirtual #251                // Method com/sun/jna/ptr/IntByReference.getValue:()I
+        21: ireturn
+      LineNumberTable:
+        line 109: 0
+        line 110: 14
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      22     0  this   Lnet/anubis/client/util/spotify/SpotifyWindow;
+            0      22     1  hwnd   Lcom/sun/jna/platform/win32/WinDef$HWND;
+    MethodParameters:
+      Name                           Flags
+      hwnd
+
+  private boolean isSpotify(int);
+    descriptor: (I)Z
+    flags: (0x0002) ACC_PRIVATE
+    Code:
+      stack=3, locals=4, args_size=2
+         0: iload_1
+         1: ifgt          6
+         4: iconst_0
+         5: ireturn
+         6: aload_0
+         7: getfield      #110                // Field spotifyPids:Ljava/util/Map;
+        10: iload_1
+        11: invokestatic  #258                // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+        14: invokeinterface #262,  2          // InterfaceMethod java/util/Map.get:(Ljava/lang/Object;)Ljava/lang/Object;
+        19: checkcast     #264                // class java/lang/Boolean
+        22: astore_2
+        23: aload_2
+        24: ifnull        32
+        27: aload_2
+        28: invokevirtual #267                // Method java/lang/Boolean.booleanValue:()Z
+        31: ireturn
+        32: ldc           #47                 // String spotify.exe
+        34: aload_0
+        35: iload_1
+        36: invokevirtual #271                // Method imageName:(I)Ljava/lang/String;
+        39: invokevirtual #226                // Method java/lang/String.equals:(Ljava/lang/Object;)Z
+        42: istore_3
+        43: aload_0
+        44: getfield      #110                // Field spotifyPids:Ljava/util/Map;
+        47: iload_1
+        48: invokestatic  #258                // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+        51: iload_3
+        52: invokestatic  #274                // Method java/lang/Boolean.valueOf:(Z)Ljava/lang/Boolean;
+        55: invokeinterface #278,  3          // InterfaceMethod java/util/Map.put:(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+        60: pop
+        61: iload_3
+        62: ireturn
+      StackMapTable: number_of_entries = 2
+        frame_type = 6 /* same */
+        frame_type = 252 /* append */
+          offset_delta = 25
+          locals = [ class java/lang/Boolean ]
+      LineNumberTable:
+        line 114: 0
+        line 115: 6
+        line 116: 23
+        line 117: 32
+        line 118: 43
+        line 119: 61
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      63     0  this   Lnet/anubis/client/util/spotify/SpotifyWindow;
+            0      63     1   pid   I
+           23      40     2 cached   Ljava/lang/Boolean;
+           43      20     3 spotify   Z
+    MethodParameters:
+      Name                           Flags
+      pid
+
+  private java.lang.String imageName(int);
+    descriptor: (I)Ljava/lang/String;
+    flags: (0x0002) ACC_PRIVATE
+    Code:
+      stack=6, locals=7, args_size=2
+         0: getstatic     #287                // Field com/sun/jna/platform/win32/Kernel32.INSTANCE:Lcom/sun/jna/platform/win32/Kernel32;
+         3: sipush        4096
+         6: iconst_0
+         7: iload_1
+         8: invokeinterface #291,  4          // InterfaceMethod com/sun/jna/platform/win32/Kernel32.OpenProcess:(IZI)Lcom/sun/jna/platform/win32/WinNT$HANDLE;
+        13: astore_2
+        14: aload_2
+        15: ifnonnull     22
+        18: ldc_w         #293                // String
+        21: areturn
+        22: aload_0
+        23: getfield      #105                // Field sizeInOut:Lcom/sun/jna/ptr/IntByReference;
+        26: aload_0
+        27: getfield      #98                 // Field pathBuffer:[C
+        30: arraylength
+        31: invokevirtual #297                // Method com/sun/jna/ptr/IntByReference.setValue:(I)V
+        34: getstatic     #287                // Field com/sun/jna/platform/win32/Kernel32.INSTANCE:Lcom/sun/jna/platform/win32/Kernel32;
+        37: aload_2
+        38: iconst_0
+        39: aload_0
+        40: getfield      #98                 // Field pathBuffer:[C
+        43: aload_0
+        44: getfield      #105                // Field sizeInOut:Lcom/sun/jna/ptr/IntByReference;
+        47: invokeinterface #301,  5          // InterfaceMethod com/sun/jna/platform/win32/Kernel32.QueryFullProcessImageName:(Lcom/sun/jna/platform/win32/WinNT$HANDLE;I[CLcom/sun/jna/ptr/IntByReference;)Z
+        52: ifne          71
+        55: ldc_w         #293                // String
+        58: astore_3
+        59: getstatic     #287                // Field com/sun/jna/platform/win32/Kernel32.INSTANCE:Lcom/sun/jna/platform/win32/Kernel32;
+        62: aload_2
+        63: invokeinterface #305,  2          // InterfaceMethod com/sun/jna/platform/win32/Kernel32.CloseHandle:(Lcom/sun/jna/platform/win32/WinNT$HANDLE;)Z
+        68: pop
+        69: aload_3
+        70: areturn
+        71: new           #165                // class java/lang/String
+        74: dup
+        75: aload_0
+        76: getfield      #98                 // Field pathBuffer:[C
+        79: iconst_0
+        80: aload_0
+        81: getfield      #105                // Field sizeInOut:Lcom/sun/jna/ptr/IntByReference;
+        84: invokevirtual #251                // Method com/sun/jna/ptr/IntByReference.getValue:()I
+        87: aload_0
+        88: getfield      #98                 // Field pathBuffer:[C
+        91: arraylength
+        92: invokestatic  #311                // Method java/lang/Math.min:(II)I
+        95: invokespecial #314                // Method java/lang/String."<init>":([CII)V
+        98: astore_3
+        99: aload_3
+       100: bipush        92
+       102: invokevirtual #318                // Method java/lang/String.lastIndexOf:(I)I
+       105: istore        4
+       107: aload_3
+       108: iload         4
+       110: iconst_1
+       111: iadd
+       112: invokevirtual #321                // Method java/lang/String.substring:(I)Ljava/lang/String;
+       115: getstatic     #327                // Field java/util/Locale.ROOT:Ljava/util/Locale;
+       118: invokevirtual #331                // Method java/lang/String.toLowerCase:(Ljava/util/Locale;)Ljava/lang/String;
+       121: astore        5
+       123: getstatic     #287                // Field com/sun/jna/platform/win32/Kernel32.INSTANCE:Lcom/sun/jna/platform/win32/Kernel32;
+       126: aload_2
+       127: invokeinterface #305,  2          // InterfaceMethod com/sun/jna/platform/win32/Kernel32.CloseHandle:(Lcom/sun/jna/platform/win32/WinNT$HANDLE;)Z
+       132: pop
+       133: aload         5
+       135: areturn
+       136: astore        6
+       138: getstatic     #287                // Field com/sun/jna/platform/win32/Kernel32.INSTANCE:Lcom/sun/jna/platform/win32/Kernel32;
+       141: aload_2
+       142: invokeinterface #305,  2          // InterfaceMethod com/sun/jna/platform/win32/Kernel32.CloseHandle:(Lcom/sun/jna/platform/win32/WinNT$HANDLE;)Z
+       147: pop
+       148: aload         6
+       150: athrow
+      Exception table:
+         from    to  target type
+            22    59   136   any
+            71   123   136   any
+           136   138   136   any
+      StackMapTable: number_of_entries = 3
+        frame_type = 252 /* append */
+          offset_delta = 22
+          locals = [ class com/sun/jna/platform/win32/WinNT$HANDLE ]
+        frame_type = 48 /* same */
+        frame_type = 247 /* same_locals_1_stack_item_frame_extended */
+          offset_delta = 64
+          stack = [ class java/lang/Throwable ]
+      LineNumberTable:
+        line 123: 0
+        line 124: 14
+        line 126: 22
+        line 127: 34
+        line 132: 59
+        line 127: 69
+        line 128: 71
+        line 129: 99
+        line 130: 107
+        line 132: 123
+        line 130: 133
+        line 132: 136
+        line 133: 148
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+           99      37     3  path   Ljava/lang/String;
+          107      29     4 slash   I
+            0     151     0  this   Lnet/anubis/client/util/spotify/SpotifyWindow;
+            0     151     1   pid   I
+           14     137     2 process   Lcom/sun/jna/platform/win32/WinNT$HANDLE;
+    MethodParameters:
+      Name                           Flags
+      pid
+
+  private java.lang.String text(com.sun.jna.platform.win32.WinDef$HWND);
+    descriptor: (Lcom/sun/jna/platform/win32/WinDef$HWND;)Ljava/lang/String;
+    flags: (0x0002) ACC_PRIVATE
+    Code:
+      stack=6, locals=3, args_size=2
+         0: getstatic     #147                // Field com/sun/jna/platform/win32/User32.INSTANCE:Lcom/sun/jna/platform/win32/User32;
+         3: aload_1
+         4: aload_0
+         5: getfield      #94                 // Field textBuffer:[C
+         8: aload_0
+         9: getfield      #94                 // Field textBuffer:[C
+        12: arraylength
+        13: invokeinterface #341,  4          // InterfaceMethod com/sun/jna/platform/win32/User32.GetWindowText:(Lcom/sun/jna/platform/win32/WinDef$HWND;[CI)I
+        18: istore_2
+        19: iload_2
+        20: ifgt          29
+        23: ldc_w         #293                // String
+        26: goto          50
+        29: new           #165                // class java/lang/String
+        32: dup
+        33: aload_0
+        34: getfield      #94                 // Field textBuffer:[C
+        37: iconst_0
+        38: iload_2
+        39: aload_0
+        40: getfield      #94                 // Field textBuffer:[C
+        43: arraylength
+        44: invokestatic  #311                // Method java/lang/Math.min:(II)I
+        47: invokespecial #314                // Method java/lang/String."<init>":([CII)V
+        50: areturn
+      StackMapTable: number_of_entries = 2
+        frame_type = 252 /* append */
+          offset_delta = 29
+          locals = [ int ]
+        frame_type = 84 /* same_locals_1_stack_item */
+          stack = [ class java/lang/String ]
+      LineNumberTable:
+        line 137: 0
+        line 138: 19
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      51     0  this   Lnet/anubis/client/util/spotify/SpotifyWindow;
+            0      51     1  hwnd   Lcom/sun/jna/platform/win32/WinDef$HWND;
+           19      32     2 length   I
+    MethodParameters:
+      Name                           Flags
+      hwnd
+
+  private java.lang.String className(com.sun.jna.platform.win32.WinDef$HWND);
+    descriptor: (Lcom/sun/jna/platform/win32/WinDef$HWND;)Ljava/lang/String;
+    flags: (0x0002) ACC_PRIVATE
+    Code:
+      stack=6, locals=3, args_size=2
+         0: getstatic     #147                // Field com/sun/jna/platform/win32/User32.INSTANCE:Lcom/sun/jna/platform/win32/User32;
+         3: aload_1
+         4: aload_0
+         5: getfield      #96                 // Field classBuffer:[C
+         8: aload_0
+         9: getfield      #96                 // Field classBuffer:[C
+        12: arraylength
+        13: invokeinterface #345,  4          // InterfaceMethod com/sun/jna/platform/win32/User32.GetClassName:(Lcom/sun/jna/platform/win32/WinDef$HWND;[CI)I
+        18: istore_2
+        19: iload_2
+        20: ifgt          29
+        23: ldc_w         #293                // String
+        26: goto          50
+        29: new           #165                // class java/lang/String
+        32: dup
+        33: aload_0
+        34: getfield      #96                 // Field classBuffer:[C
+        37: iconst_0
+        38: iload_2
+        39: aload_0
+        40: getfield      #96                 // Field classBuffer:[C
+        43: arraylength
+        44: invokestatic  #311                // Method java/lang/Math.min:(II)I
+        47: invokespecial #314                // Method java/lang/String."<init>":([CII)V
+        50: areturn
+      StackMapTable: number_of_entries = 2
+        frame_type = 252 /* append */
+          offset_delta = 29
+          locals = [ int ]
+        frame_type = 84 /* same_locals_1_stack_item */
+          stack = [ class java/lang/String ]
+      LineNumberTable:
+        line 142: 0
+        line 143: 19
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      51     0  this   Lnet/anubis/client/util/spotify/SpotifyWindow;
+            0      51     1  hwnd   Lcom/sun/jna/platform/win32/WinDef$HWND;
+           19      32     2 length   I
+    MethodParameters:
+      Name                           Flags
+      hwnd
+
+  private static void send(int, int);
+    descriptor: (II)V
+    flags: (0x000a) ACC_PRIVATE, ACC_STATIC
+    Code:
+      stack=6, locals=3, args_size=2
+         0: new           #25                 // class com/sun/jna/platform/win32/WinUser$INPUT
+         3: dup
+         4: invokespecial #347                // Method com/sun/jna/platform/win32/WinUser$INPUT."<init>":()V
+         7: astore_2
+         8: aload_2
+         9: new           #28                 // class com/sun/jna/platform/win32/WinDef$DWORD
+        12: dup
+        13: lconst_1
+        14: invokespecial #350                // Method com/sun/jna/platform/win32/WinDef$DWORD."<init>":(J)V
+        17: putfield      #354                // Field com/sun/jna/platform/win32/WinUser$INPUT.type:Lcom/sun/jna/platform/win32/WinDef$DWORD;
+        20: aload_2
+        21: getfield      #358                // Field com/sun/jna/platform/win32/WinUser$INPUT.input:Lcom/sun/jna/platform/win32/WinUser$INPUT$INPUT_UNION;
+        24: ldc_w         #360                // String ki
+        27: invokevirtual #364                // Method com/sun/jna/platform/win32/WinUser$INPUT$INPUT_UNION.setType:(Ljava/lang/String;)V
+        30: aload_2
+        31: getfield      #358                // Field com/sun/jna/platform/win32/WinUser$INPUT.input:Lcom/sun/jna/platform/win32/WinUser$INPUT$INPUT_UNION;
+        34: getfield      #367                // Field com/sun/jna/platform/win32/WinUser$INPUT$INPUT_UNION.ki:Lcom/sun/jna/platform/win32/WinUser$KEYBDINPUT;
+        37: new           #37                 // class com/sun/jna/platform/win32/WinDef$WORD
+        40: dup
+        41: iload_0
+        42: i2l
+        43: invokespecial #368                // Method com/sun/jna/platform/win32/WinDef$WORD."<init>":(J)V
+        46: putfield      #372                // Field com/sun/jna/platform/win32/WinUser$KEYBDINPUT.wVk:Lcom/sun/jna/platform/win32/WinDef$WORD;
+        49: aload_2
+        50: getfield      #358                // Field com/sun/jna/platform/win32/WinUser$INPUT.input:Lcom/sun/jna/platform/win32/WinUser$INPUT$INPUT_UNION;
+        53: getfield      #367                // Field com/sun/jna/platform/win32/WinUser$INPUT$INPUT_UNION.ki:Lcom/sun/jna/platform/win32/WinUser$KEYBDINPUT;
+        56: new           #37                 // class com/sun/jna/platform/win32/WinDef$WORD
+        59: dup
+        60: lconst_0
+        61: invokespecial #368                // Method com/sun/jna/platform/win32/WinDef$WORD."<init>":(J)V
+        64: putfield      #375                // Field com/sun/jna/platform/win32/WinUser$KEYBDINPUT.wScan:Lcom/sun/jna/platform/win32/WinDef$WORD;
+        67: aload_2
+        68: getfield      #358                // Field com/sun/jna/platform/win32/WinUser$INPUT.input:Lcom/sun/jna/platform/win32/WinUser$INPUT$INPUT_UNION;
+        71: getfield      #367                // Field com/sun/jna/platform/win32/WinUser$INPUT$INPUT_UNION.ki:Lcom/sun/jna/platform/win32/WinUser$KEYBDINPUT;
+        74: new           #28                 // class com/sun/jna/platform/win32/WinDef$DWORD
+        77: dup
+        78: iload_1
+        79: i2l
+        80: invokespecial #350                // Method com/sun/jna/platform/win32/WinDef$DWORD."<init>":(J)V
+        83: putfield      #378                // Field com/sun/jna/platform/win32/WinUser$KEYBDINPUT.dwFlags:Lcom/sun/jna/platform/win32/WinDef$DWORD;
+        86: aload_2
+        87: getfield      #358                // Field com/sun/jna/platform/win32/WinUser$INPUT.input:Lcom/sun/jna/platform/win32/WinUser$INPUT$INPUT_UNION;
+        90: getfield      #367                // Field com/sun/jna/platform/win32/WinUser$INPUT$INPUT_UNION.ki:Lcom/sun/jna/platform/win32/WinUser$KEYBDINPUT;
+        93: new           #28                 // class com/sun/jna/platform/win32/WinDef$DWORD
+        96: dup
+        97: lconst_0
+        98: invokespecial #350                // Method com/sun/jna/platform/win32/WinDef$DWORD."<init>":(J)V
+       101: putfield      #381                // Field com/sun/jna/platform/win32/WinUser$KEYBDINPUT.time:Lcom/sun/jna/platform/win32/WinDef$DWORD;
+       104: getstatic     #147                // Field com/sun/jna/platform/win32/User32.INSTANCE:Lcom/sun/jna/platform/win32/User32;
+       107: new           #28                 // class com/sun/jna/platform/win32/WinDef$DWORD
+       110: dup
+       111: lconst_1
+       112: invokespecial #350                // Method com/sun/jna/platform/win32/WinDef$DWORD."<init>":(J)V
+       115: iconst_1
+       116: anewarray     #25                 // class com/sun/jna/platform/win32/WinUser$INPUT
+       119: dup
+       120: iconst_0
+       121: aload_2
+       122: aastore
+       123: aload_2
+       124: invokevirtual #382                // Method com/sun/jna/platform/win32/WinUser$INPUT.size:()I
+       127: invokeinterface #386,  4          // InterfaceMethod com/sun/jna/platform/win32/User32.SendInput:(Lcom/sun/jna/platform/win32/WinDef$DWORD;[Lcom/sun/jna/platform/win32/WinUser$INPUT;I)Lcom/sun/jna/platform/win32/WinDef$DWORD;
+       132: pop
+       133: return
+      LineNumberTable:
+        line 147: 0
+        line 148: 8
+        line 149: 20
+        line 150: 30
+        line 151: 49
+        line 152: 67
+        line 153: 86
+        line 154: 104
+        line 155: 133
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0     134     0 virtualKey   I
+            0     134     1 flags   I
+            8     126     2 input   Lcom/sun/jna/platform/win32/WinUser$INPUT;
+    MethodParameters:
+      Name                           Flags
+      virtualKey
+      flags
+}
+InnerClasses:
+  public static #12= #9 of #11;           // WNDENUMPROC=class com/sun/jna/platform/win32/WinUser$WNDENUMPROC of class com/sun/jna/platform/win32/WinUser
+  public static #17= #14 of #16;          // HWND=class com/sun/jna/platform/win32/WinDef$HWND of class com/sun/jna/platform/win32/WinDef
+  public static final #18= #7 of #2;      // MediaKey=class net/anubis/client/util/spotify/SpotifyWindow$MediaKey of class net/anubis/client/util/spotify/SpotifyWindow
+  public static #23= #20 of #22;          // HANDLE=class com/sun/jna/platform/win32/WinNT$HANDLE of class com/sun/jna/platform/win32/WinNT
+  public static #26= #25 of #11;          // INPUT=class com/sun/jna/platform/win32/WinUser$INPUT of class com/sun/jna/platform/win32/WinUser
+  public static #29= #28 of #16;          // DWORD=class com/sun/jna/platform/win32/WinDef$DWORD of class com/sun/jna/platform/win32/WinDef
+  public static #32= #31 of #25;          // INPUT_UNION=class com/sun/jna/platform/win32/WinUser$INPUT$INPUT_UNION of class com/sun/jna/platform/win32/WinUser$INPUT
+  public static #35= #34 of #11;          // KEYBDINPUT=class com/sun/jna/platform/win32/WinUser$KEYBDINPUT of class com/sun/jna/platform/win32/WinUser
+  public static #38= #37 of #16;          // WORD=class com/sun/jna/platform/win32/WinDef$WORD of class com/sun/jna/platform/win32/WinDef
+  public static final #43= #40 of #42;    // Lookup=class java/lang/invoke/MethodHandles$Lookup of class java/lang/invoke/MethodHandles
+SourceFile: "SpotifyWindow.java"
+RuntimeVisibleAnnotations:
+  0: #388(#389=e#390.#391)
+    net.fabricmc.api.Environment(
+      value=Lnet/fabricmc/api/EnvType;.CLIENT
+    )
+BootstrapMethods:
+  0: #123 REF_invokeStatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #112 (Lcom/sun/jna/platform/win32/WinDef$HWND;Lcom/sun/jna/Pointer;)Z
+      #116 REF_invokeVirtual net/anubis/client/util/spotify/SpotifyWindow.consider:(Lcom/sun/jna/platform/win32/WinDef$HWND;Lcom/sun/jna/Pointer;)Z
+      #112 (Lcom/sun/jna/platform/win32/WinDef$HWND;Lcom/sun/jna/Pointer;)Z
+NestMembers:
+  net/anubis/client/util/spotify/SpotifyWindow$MediaKey

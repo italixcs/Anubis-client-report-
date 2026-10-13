@@ -1,0 +1,1196 @@
+[
+  {
+    "function": "(anonymous namespace)::alreadyLoaded(std::__ndk1::vector<(anonymous namespace)::Mapping, std::__ndk1::allocator<(anonymous namespace)::Mapping> > const&, std::__ndk1::set<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::less<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> > >, std::__ndk1::allocator<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> > > > const&)",
+    "offset": "0x17a90",
+    "target": "0x18400",
+    "symbol": "_ZNSt6__ndk16__treeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_4lessIS6_EENS4_IS6_EEE30__emplace_hint_unique_key_argsIS6_JRKS6_EEENS_4pairINS_15__tree_iteratorIS6_PNS_11__tree_nodeIS6_PvEElEEbEENS_21__tree_const_iteratorIS6_SJ_lEERKT_DpOT0_"
+  },
+  {
+    "function": "(anonymous namespace)::alreadyLoaded(std::__ndk1::vector<(anonymous namespace)::Mapping, std::__ndk1::allocator<(anonymous namespace)::Mapping> > const&, std::__ndk1::set<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::less<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> > >, std::__ndk1::allocator<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> > > > const&)",
+    "offset": "0x17ae0",
+    "target": "0x190f8",
+    "symbol": "_ZNKSt6__ndk112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE5rfindEcm"
+  },
+  {
+    "function": "(anonymous namespace)::alreadyLoaded(std::__ndk1::vector<(anonymous namespace)::Mapping, std::__ndk1::allocator<(anonymous namespace)::Mapping> > const&, std::__ndk1::set<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::less<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> > >, std::__ndk1::allocator<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> > > > const&)",
+    "offset": "0x17b68",
+    "target": "0x38124",
+    "symbol": "_Znwm"
+  },
+  {
+    "function": "(anonymous namespace)::alreadyLoaded(std::__ndk1::vector<(anonymous namespace)::Mapping, std::__ndk1::allocator<(anonymous namespace)::Mapping> > const&, std::__ndk1::set<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::less<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> > >, std::__ndk1::allocator<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> > > > const&)",
+    "offset": "0x17b88",
+    "target": "0x38350",
+    "symbol": "memmove@plt"
+  },
+  {
+    "function": "(anonymous namespace)::alreadyLoaded(std::__ndk1::vector<(anonymous namespace)::Mapping, std::__ndk1::allocator<(anonymous namespace)::Mapping> > const&, std::__ndk1::set<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::less<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> > >, std::__ndk1::allocator<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> > > > const&)",
+    "offset": "0x17bec",
+    "target": "0x38360",
+    "symbol": "memcmp@plt"
+  },
+  {
+    "function": "(anonymous namespace)::alreadyLoaded(std::__ndk1::vector<(anonymous namespace)::Mapping, std::__ndk1::allocator<(anonymous namespace)::Mapping> > const&, std::__ndk1::set<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::less<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> > >, std::__ndk1::allocator<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> > > > const&)",
+    "offset": "0x17c14",
+    "target": "0x38360",
+    "symbol": "memcmp@plt"
+  },
+  {
+    "function": "(anonymous namespace)::alreadyLoaded(std::__ndk1::vector<(anonymous namespace)::Mapping, std::__ndk1::allocator<(anonymous namespace)::Mapping> > const&, std::__ndk1::set<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::less<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> > >, std::__ndk1::allocator<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> > > > const&)",
+    "offset": "0x17c48",
+    "target": "0x32b5c",
+    "symbol": "_ZdlPv"
+  },
+  {
+    "function": "(anonymous namespace)::alreadyLoaded(std::__ndk1::vector<(anonymous namespace)::Mapping, std::__ndk1::allocator<(anonymous namespace)::Mapping> > const&, std::__ndk1::set<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::less<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> > >, std::__ndk1::allocator<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> > > > const&)",
+    "offset": "0x17c5c",
+    "target": "0x18c00",
+    "symbol": "_ZNSt6__ndk16__treeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_4lessIS6_EENS4_IS6_EEE25__emplace_unique_key_argsIS6_JRKS6_EEENS_4pairINS_15__tree_iteratorIS6_PNS_11__tree_nodeIS6_PvEElEEbEERKT_DpOT0_"
+  },
+  {
+    "function": "(anonymous namespace)::alreadyLoaded(std::__ndk1::vector<(anonymous namespace)::Mapping, std::__ndk1::allocator<(anonymous namespace)::Mapping> > const&, std::__ndk1::set<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::less<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> > >, std::__ndk1::allocator<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> > > > const&)",
+    "offset": "0x17cd0",
+    "target": "0x38370",
+    "symbol": "dlopen@plt"
+  },
+  {
+    "function": "(anonymous namespace)::alreadyLoaded(std::__ndk1::vector<(anonymous namespace)::Mapping, std::__ndk1::allocator<(anonymous namespace)::Mapping> > const&, std::__ndk1::set<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::less<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> > >, std::__ndk1::allocator<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> > > > const&)",
+    "offset": "0x17d24",
+    "target": "0x38124",
+    "symbol": "_Znwm"
+  },
+  {
+    "function": "(anonymous namespace)::alreadyLoaded(std::__ndk1::vector<(anonymous namespace)::Mapping, std::__ndk1::allocator<(anonymous namespace)::Mapping> > const&, std::__ndk1::set<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::less<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> > >, std::__ndk1::allocator<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> > > > const&)",
+    "offset": "0x17d58",
+    "target": "0x18974",
+    "symbol": "_ZNSt6__ndk127__tree_balance_after_insertB8ne190000IPNS_16__tree_node_baseIPvEEEEvT_S5_"
+  },
+  {
+    "function": "(anonymous namespace)::alreadyLoaded(std::__ndk1::vector<(anonymous namespace)::Mapping, std::__ndk1::allocator<(anonymous namespace)::Mapping> > const&, std::__ndk1::set<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::less<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> > >, std::__ndk1::allocator<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> > > > const&)",
+    "offset": "0x17dc8",
+    "target": "0x38124",
+    "symbol": "_Znwm"
+  },
+  {
+    "function": "(anonymous namespace)::alreadyLoaded(std::__ndk1::vector<(anonymous namespace)::Mapping, std::__ndk1::allocator<(anonymous namespace)::Mapping> > const&, std::__ndk1::set<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::less<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> > >, std::__ndk1::allocator<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> > > > const&)",
+    "offset": "0x17dd8",
+    "target": "0x38330",
+    "symbol": "dlclose@plt"
+  },
+  {
+    "function": "(anonymous namespace)::alreadyLoaded(std::__ndk1::vector<(anonymous namespace)::Mapping, std::__ndk1::allocator<(anonymous namespace)::Mapping> > const&, std::__ndk1::set<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::less<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> > >, std::__ndk1::allocator<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> > > > const&)",
+    "offset": "0x17e10",
+    "target": "0x382c0",
+    "symbol": "memcpy@plt"
+  },
+  {
+    "function": "(anonymous namespace)::alreadyLoaded(std::__ndk1::vector<(anonymous namespace)::Mapping, std::__ndk1::allocator<(anonymous namespace)::Mapping> > const&, std::__ndk1::set<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::less<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> > >, std::__ndk1::allocator<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> > > > const&)",
+    "offset": "0x17e28",
+    "target": "0x32b5c",
+    "symbol": "_ZdlPv"
+  },
+  {
+    "function": "(anonymous namespace)::alreadyLoaded(std::__ndk1::vector<(anonymous namespace)::Mapping, std::__ndk1::allocator<(anonymous namespace)::Mapping> > const&, std::__ndk1::set<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::less<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> > >, std::__ndk1::allocator<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> > > > const&)",
+    "offset": "0x17e64",
+    "target": "0x18e00",
+    "symbol": "_ZNSt6__ndk16__treeIPvNS_4lessIS1_EENS_9allocatorIS1_EEE7destroyEPNS_11__tree_nodeIS1_S1_EE"
+  },
+  {
+    "function": "(anonymous namespace)::alreadyLoaded(std::__ndk1::vector<(anonymous namespace)::Mapping, std::__ndk1::allocator<(anonymous namespace)::Mapping> > const&, std::__ndk1::set<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::less<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> > >, std::__ndk1::allocator<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> > > > const&)",
+    "offset": "0x17e70",
+    "target": "0x18b1c",
+    "symbol": "_ZNSt6__ndk16__treeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_4lessIS6_EENS4_IS6_EEE7destroyEPNS_11__tree_nodeIS6_PvEE"
+  },
+  {
+    "function": "(anonymous namespace)::alreadyLoaded(std::__ndk1::vector<(anonymous namespace)::Mapping, std::__ndk1::allocator<(anonymous namespace)::Mapping> > const&, std::__ndk1::set<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::less<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> > >, std::__ndk1::allocator<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> > > > const&)",
+    "offset": "0x17ec0",
+    "target": "0x18b6c",
+    "symbol": "_ZNKSt6__ndk112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE20__throw_out_of_rangeB8ne190000Ev"
+  },
+  {
+    "function": "(anonymous namespace)::alreadyLoaded(std::__ndk1::vector<(anonymous namespace)::Mapping, std::__ndk1::allocator<(anonymous namespace)::Mapping> > const&, std::__ndk1::set<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::less<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> > >, std::__ndk1::allocator<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> > > > const&)",
+    "offset": "0x17edc",
+    "target": "0x183ec",
+    "symbol": "_ZNKSt6__ndk112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE20__throw_length_errorB8ne190000Ev"
+  },
+  {
+    "function": "(anonymous namespace)::alreadyLoaded(std::__ndk1::vector<(anonymous namespace)::Mapping, std::__ndk1::allocator<(anonymous namespace)::Mapping> > const&, std::__ndk1::set<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::less<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> > >, std::__ndk1::allocator<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> > > > const&)",
+    "offset": "0x17ef8",
+    "target": "0x18dec",
+    "symbol": "_ZNKSt6__ndk16vectorIPvNS_9allocatorIS1_EEE20__throw_length_errorB8ne190000Ev"
+  },
+  {
+    "function": "(anonymous namespace)::alreadyLoaded(std::__ndk1::vector<(anonymous namespace)::Mapping, std::__ndk1::allocator<(anonymous namespace)::Mapping> > const&, std::__ndk1::set<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::less<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> > >, std::__ndk1::allocator<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> > > > const&)",
+    "offset": "0x17f10",
+    "target": "0x179c8",
+    "symbol": "_ZSt28__throw_bad_array_new_lengthB8ne190000v"
+  },
+  {
+    "function": "(anonymous namespace)::alreadyLoaded(std::__ndk1::vector<(anonymous namespace)::Mapping, std::__ndk1::allocator<(anonymous namespace)::Mapping> > const&, std::__ndk1::set<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::less<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> > >, std::__ndk1::allocator<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> > > > const&)",
+    "offset": "0x17f3c",
+    "target": "0x18e00",
+    "symbol": "_ZNSt6__ndk16__treeIPvNS_4lessIS1_EENS_9allocatorIS1_EEE7destroyEPNS_11__tree_nodeIS1_S1_EE"
+  },
+  {
+    "function": "(anonymous namespace)::alreadyLoaded(std::__ndk1::vector<(anonymous namespace)::Mapping, std::__ndk1::allocator<(anonymous namespace)::Mapping> > const&, std::__ndk1::set<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::less<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> > >, std::__ndk1::allocator<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> > > > const&)",
+    "offset": "0x17f54",
+    "target": "0x32b5c",
+    "symbol": "_ZdlPv"
+  },
+  {
+    "function": "(anonymous namespace)::alreadyLoaded(std::__ndk1::vector<(anonymous namespace)::Mapping, std::__ndk1::allocator<(anonymous namespace)::Mapping> > const&, std::__ndk1::set<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::less<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> > >, std::__ndk1::allocator<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> > > > const&)",
+    "offset": "0x17f68",
+    "target": "0x18b1c",
+    "symbol": "_ZNSt6__ndk16__treeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_4lessIS6_EENS4_IS6_EEE7destroyEPNS_11__tree_nodeIS6_PvEE"
+  },
+  {
+    "function": "(anonymous namespace)::alreadyLoaded(std::__ndk1::vector<(anonymous namespace)::Mapping, std::__ndk1::allocator<(anonymous namespace)::Mapping> > const&, std::__ndk1::set<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::less<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> > >, std::__ndk1::allocator<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> > > > const&)",
+    "offset": "0x17f84",
+    "target": "0x3439c",
+    "symbol": "_Unwind_Resume"
+  },
+  {
+    "function": "(anonymous namespace)::alreadyLoaded(std::__ndk1::vector<(anonymous namespace)::Mapping, std::__ndk1::allocator<(anonymous namespace)::Mapping> > const&, std::__ndk1::set<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::less<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> > >, std::__ndk1::allocator<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> > > > const&)",
+    "offset": "0x17f88",
+    "target": "0x38340",
+    "symbol": "__stack_chk_fail@plt"
+  },
+  {
+    "function": "(anonymous namespace)::characters(_JNIEnv*, _jstring*)",
+    "offset": "0x17410",
+    "target": "0x38124",
+    "symbol": "_Znwm"
+  },
+  {
+    "function": "(anonymous namespace)::characters(_JNIEnv*, _jstring*)",
+    "offset": "0x1742c",
+    "target": "0x38270",
+    "symbol": "memset@plt"
+  },
+  {
+    "function": "(anonymous namespace)::characters(_JNIEnv*, _jstring*)",
+    "offset": "0x17470",
+    "target": "0x17934",
+    "symbol": "_ZNKSt6__ndk16vectorItNS_9allocatorItEEE20__throw_length_errorB8ne190000Ev"
+  },
+  {
+    "function": "(anonymous namespace)::characters(_JNIEnv*, _jstring*)",
+    "offset": "0x17490",
+    "target": "0x32b5c",
+    "symbol": "_ZdlPv"
+  },
+  {
+    "function": "(anonymous namespace)::characters(_JNIEnv*, _jstring*)",
+    "offset": "0x17498",
+    "target": "0x3439c",
+    "symbol": "_Unwind_Resume"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x14728",
+    "target": "0x38124",
+    "symbol": "_Znwm"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x14744",
+    "target": "0x38270",
+    "symbol": "memset@plt"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x147a4",
+    "target": "0x38124",
+    "symbol": "_Znwm"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x147c0",
+    "target": "0x38270",
+    "symbol": "memset@plt"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x14848",
+    "target": "0x32b5c",
+    "symbol": "_ZdlPv"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x14854",
+    "target": "0x32b5c",
+    "symbol": "_ZdlPv"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x14898",
+    "target": "0x1924c",
+    "symbol": "_ZNSt6__ndk15mutex4lockEv"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x14940",
+    "target": "0x19278",
+    "symbol": "_ZNSt6__ndk15mutex6unlockEv"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x14990",
+    "target": "0x19278",
+    "symbol": "_ZNSt6__ndk15mutex6unlockEv"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x14a8c",
+    "target": "0x38280",
+    "symbol": "fopen@plt"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x14aa4",
+    "target": "0x38290",
+    "symbol": "fgets@plt"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x14ae0",
+    "target": "0x38290",
+    "symbol": "fgets@plt"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x14b14",
+    "target": "0x382a0",
+    "symbol": "sscanf@plt"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x14b2c",
+    "target": "0x382b0",
+    "symbol": "strlen@plt"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x14b74",
+    "target": "0x38124",
+    "symbol": "_Znwm"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x14b9c",
+    "target": "0x382c0",
+    "symbol": "memcpy@plt"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x14c68",
+    "target": "0x18358",
+    "symbol": "_ZNSt6__ndk112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE25__init_copy_ctor_externalEPKcm"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x14cb8",
+    "target": "0x32b5c",
+    "symbol": "_ZdlPv"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x14cc8",
+    "target": "0x32b5c",
+    "symbol": "_ZdlPv"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x14d40",
+    "target": "0x38124",
+    "symbol": "_Znwm"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x14df0",
+    "target": "0x32b5c",
+    "symbol": "_ZdlPv"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x14e10",
+    "target": "0x32b5c",
+    "symbol": "_ZdlPv"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x14e40",
+    "target": "0x382d0",
+    "symbol": "fclose@plt"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x14ee4",
+    "target": "0x18400",
+    "symbol": "_ZNSt6__ndk16__treeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_4lessIS6_EENS4_IS6_EEE30__emplace_hint_unique_key_argsIS6_JRKS6_EEENS_4pairINS_15__tree_iteratorIS6_PNS_11__tree_nodeIS6_PvEElEEbEENS_21__tree_const_iteratorIS6_SJ_lEERKT_DpOT0_"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x14ef8",
+    "target": "0x18400",
+    "symbol": "_ZNSt6__ndk16__treeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_4lessIS6_EENS4_IS6_EEE30__emplace_hint_unique_key_argsIS6_JRKS6_EEENS_4pairINS_15__tree_iteratorIS6_PNS_11__tree_nodeIS6_PvEElEEbEENS_21__tree_const_iteratorIS6_SJ_lEERKT_DpOT0_"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x14f0c",
+    "target": "0x18400",
+    "symbol": "_ZNSt6__ndk16__treeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_4lessIS6_EENS4_IS6_EEE30__emplace_hint_unique_key_argsIS6_JRKS6_EEENS_4pairINS_15__tree_iteratorIS6_PNS_11__tree_nodeIS6_PvEElEEbEENS_21__tree_const_iteratorIS6_SJ_lEERKT_DpOT0_"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x14f1c",
+    "target": "0x179fc",
+    "symbol": "_ZN12_GLOBAL__N_113alreadyLoadedERKNSt6__ndk16vectorINS_7MappingENS0_9allocatorIS2_EEEERKNS0_3setINS0_12basic_stringIcNS0_11char_traitsIcEENS3_IcEEEENS0_4lessISD_EENS3_ISD_EEEE"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x14f28",
+    "target": "0x18b1c",
+    "symbol": "_ZNSt6__ndk16__treeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_4lessIS6_EENS4_IS6_EEE7destroyEPNS_11__tree_nodeIS6_PvEE"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x14f48",
+    "target": "0x32b5c",
+    "symbol": "_ZdlPv"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x14fb8",
+    "target": "0x18400",
+    "symbol": "_ZNSt6__ndk16__treeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_4lessIS6_EENS4_IS6_EEE30__emplace_hint_unique_key_argsIS6_JRKS6_EEENS_4pairINS_15__tree_iteratorIS6_PNS_11__tree_nodeIS6_PvEElEEbEENS_21__tree_const_iteratorIS6_SJ_lEERKT_DpOT0_"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x14fcc",
+    "target": "0x18400",
+    "symbol": "_ZNSt6__ndk16__treeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_4lessIS6_EENS4_IS6_EEE30__emplace_hint_unique_key_argsIS6_JRKS6_EEENS_4pairINS_15__tree_iteratorIS6_PNS_11__tree_nodeIS6_PvEElEEbEENS_21__tree_const_iteratorIS6_SJ_lEERKT_DpOT0_"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x14fdc",
+    "target": "0x179fc",
+    "symbol": "_ZN12_GLOBAL__N_113alreadyLoadedERKNSt6__ndk16vectorINS_7MappingENS0_9allocatorIS2_EEEERKNS0_3setINS0_12basic_stringIcNS0_11char_traitsIcEENS3_IcEEEENS0_4lessISD_EENS3_ISD_EEEE"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x14fe8",
+    "target": "0x18b1c",
+    "symbol": "_ZNSt6__ndk16__treeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_4lessIS6_EENS4_IS6_EEE7destroyEPNS_11__tree_nodeIS6_PvEE"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x15040",
+    "target": "0x1749c",
+    "symbol": "_ZN7_JNIEnv22CallStaticObjectMethodEP7_jclassP10_jmethodIDz"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x150a4",
+    "target": "0x382d0",
+    "symbol": "fclose@plt"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x150d4",
+    "target": "0x382e0",
+    "symbol": "dlsym@plt"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x15138",
+    "target": "0x17f8c",
+    "symbol": "_ZN12_GLOBAL__N_17validVmEP7_JavaVMS1_RKNSt6__ndk16vectorINS_7MappingENS2_9allocatorIS4_EEEE"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x15188",
+    "target": "0x382e0",
+    "symbol": "dlsym@plt"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x151fc",
+    "target": "0x17f8c",
+    "symbol": "_ZN12_GLOBAL__N_17validVmEP7_JavaVMS1_RKNSt6__ndk16vectorINS_7MappingENS2_9allocatorIS4_EEEE"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x15218",
+    "target": "0x382e0",
+    "symbol": "dlsym@plt"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x15228",
+    "target": "0x382e0",
+    "symbol": "dlsym@plt"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x1529c",
+    "target": "0x38124",
+    "symbol": "_Znwm"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x152ec",
+    "target": "0x382c0",
+    "symbol": "memcpy@plt"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x152f8",
+    "target": "0x32b5c",
+    "symbol": "_ZdlPv"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x1535c",
+    "target": "0x38124",
+    "symbol": "_Znwm"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x15384",
+    "target": "0x382c0",
+    "symbol": "memcpy@plt"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x15398",
+    "target": "0x32b5c",
+    "symbol": "_ZdlPv"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x153ac",
+    "target": "0x382e0",
+    "symbol": "dlsym@plt"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x15450",
+    "target": "0x38124",
+    "symbol": "_Znwm"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x15478",
+    "target": "0x382c0",
+    "symbol": "memcpy@plt"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x1548c",
+    "target": "0x32b5c",
+    "symbol": "_ZdlPv"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x154a8",
+    "target": "0x32b5c",
+    "symbol": "_ZdlPv"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x154b8",
+    "target": "0x32b5c",
+    "symbol": "_ZdlPv"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x154cc",
+    "target": "0x32b5c",
+    "symbol": "_ZdlPv"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x154dc",
+    "target": "0x32b5c",
+    "symbol": "_ZdlPv"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x15508",
+    "target": "0x382f0",
+    "symbol": "getenv@plt"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x1551c",
+    "target": "0x382b0",
+    "symbol": "strlen@plt"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x15560",
+    "target": "0x173c0",
+    "symbol": "_ZN12_GLOBAL__N_110charactersEP7_JNIEnvP8_jstring"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x155c0",
+    "target": "0x38300",
+    "symbol": "__errno@plt"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x155e4",
+    "target": "0x38310",
+    "symbol": "strtoll@plt"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x155ec",
+    "target": "0x38320",
+    "symbol": "strtoull@plt"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x15618",
+    "target": "0x382f0",
+    "symbol": "getenv@plt"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x15630",
+    "target": "0x382b0",
+    "symbol": "strlen@plt"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x158ac",
+    "target": "0x18220",
+    "symbol": "_ZN7_JNIEnv16CallObjectMethodEP8_jobjectP10_jmethodIDz"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x15a3c",
+    "target": "0x1749c",
+    "symbol": "_ZN7_JNIEnv22CallStaticObjectMethodEP7_jclassP10_jmethodIDz"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x15a6c",
+    "target": "0x18220",
+    "symbol": "_ZN7_JNIEnv16CallObjectMethodEP8_jobjectP10_jmethodIDz"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x15afc",
+    "target": "0x18220",
+    "symbol": "_ZN7_JNIEnv16CallObjectMethodEP8_jobjectP10_jmethodIDz"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x15b60",
+    "target": "0x18220",
+    "symbol": "_ZN7_JNIEnv16CallObjectMethodEP8_jobjectP10_jmethodIDz"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x15ca4",
+    "target": "0x38124",
+    "symbol": "_Znwm"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x15cc0",
+    "target": "0x382c0",
+    "symbol": "memcpy@plt"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x15db8",
+    "target": "0x18184",
+    "symbol": "_ZN7_JNIEnv9NewObjectEP7_jclassP10_jmethodIDz"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x15df0",
+    "target": "0x32b5c",
+    "symbol": "_ZdlPv"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x15f08",
+    "target": "0x18220",
+    "symbol": "_ZN7_JNIEnv16CallObjectMethodEP8_jobjectP10_jmethodIDz"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x1615c",
+    "target": "0x18220",
+    "symbol": "_ZN7_JNIEnv16CallObjectMethodEP8_jobjectP10_jmethodIDz"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x161cc",
+    "target": "0x18220",
+    "symbol": "_ZN7_JNIEnv16CallObjectMethodEP8_jobjectP10_jmethodIDz"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x1623c",
+    "target": "0x18220",
+    "symbol": "_ZN7_JNIEnv16CallObjectMethodEP8_jobjectP10_jmethodIDz"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x162ac",
+    "target": "0x18220",
+    "symbol": "_ZN7_JNIEnv16CallObjectMethodEP8_jobjectP10_jmethodIDz"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x1631c",
+    "target": "0x18220",
+    "symbol": "_ZN7_JNIEnv16CallObjectMethodEP8_jobjectP10_jmethodIDz"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x1638c",
+    "target": "0x18220",
+    "symbol": "_ZN7_JNIEnv16CallObjectMethodEP8_jobjectP10_jmethodIDz"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x163fc",
+    "target": "0x18220",
+    "symbol": "_ZN7_JNIEnv16CallObjectMethodEP8_jobjectP10_jmethodIDz"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x1646c",
+    "target": "0x18220",
+    "symbol": "_ZN7_JNIEnv16CallObjectMethodEP8_jobjectP10_jmethodIDz"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x164dc",
+    "target": "0x18220",
+    "symbol": "_ZN7_JNIEnv16CallObjectMethodEP8_jobjectP10_jmethodIDz"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x166b8",
+    "target": "0x38330",
+    "symbol": "dlclose@plt"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x166d8",
+    "target": "0x38330",
+    "symbol": "dlclose@plt"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x166f0",
+    "target": "0x32b5c",
+    "symbol": "_ZdlPv"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x166fc",
+    "target": "0x32b5c",
+    "symbol": "_ZdlPv"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x1670c",
+    "target": "0x32b5c",
+    "symbol": "_ZdlPv"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x1671c",
+    "target": "0x32b5c",
+    "symbol": "_ZdlPv"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x16748",
+    "target": "0x32b5c",
+    "symbol": "_ZdlPv"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x16758",
+    "target": "0x32b5c",
+    "symbol": "_ZdlPv"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x16788",
+    "target": "0x382e0",
+    "symbol": "dlsym@plt"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x1681c",
+    "target": "0x17f8c",
+    "symbol": "_ZN12_GLOBAL__N_17validVmEP7_JavaVMS1_RKNSt6__ndk16vectorINS_7MappingENS2_9allocatorIS4_EEEE"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x168cc",
+    "target": "0x38124",
+    "symbol": "_Znwm"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x16920",
+    "target": "0x382c0",
+    "symbol": "memcpy@plt"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x1692c",
+    "target": "0x32b5c",
+    "symbol": "_ZdlPv"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x16964",
+    "target": "0x17f8c",
+    "symbol": "_ZN12_GLOBAL__N_17validVmEP7_JavaVMS1_RKNSt6__ndk16vectorINS_7MappingENS2_9allocatorIS4_EEEE"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x16a14",
+    "target": "0x38124",
+    "symbol": "_Znwm"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x16a68",
+    "target": "0x382c0",
+    "symbol": "memcpy@plt"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x16a74",
+    "target": "0x32b5c",
+    "symbol": "_ZdlPv"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x16aac",
+    "target": "0x17f8c",
+    "symbol": "_ZN12_GLOBAL__N_17validVmEP7_JavaVMS1_RKNSt6__ndk16vectorINS_7MappingENS2_9allocatorIS4_EEEE"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x16b5c",
+    "target": "0x38124",
+    "symbol": "_Znwm"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x16bb0",
+    "target": "0x382c0",
+    "symbol": "memcpy@plt"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x16bbc",
+    "target": "0x32b5c",
+    "symbol": "_ZdlPv"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x16bf4",
+    "target": "0x17f8c",
+    "symbol": "_ZN12_GLOBAL__N_17validVmEP7_JavaVMS1_RKNSt6__ndk16vectorINS_7MappingENS2_9allocatorIS4_EEEE"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x16c98",
+    "target": "0x38124",
+    "symbol": "_Znwm"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x16cf0",
+    "target": "0x382c0",
+    "symbol": "memcpy@plt"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x16cfc",
+    "target": "0x32b5c",
+    "symbol": "_ZdlPv"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x16d38",
+    "target": "0x32b5c",
+    "symbol": "_ZdlPv"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x16d4c",
+    "target": "0x38320",
+    "symbol": "strtoull@plt"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x16d80",
+    "target": "0x17f8c",
+    "symbol": "_ZN12_GLOBAL__N_17validVmEP7_JavaVMS1_RKNSt6__ndk16vectorINS_7MappingENS2_9allocatorIS4_EEEE"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x16e44",
+    "target": "0x38124",
+    "symbol": "_Znwm"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x16e84",
+    "target": "0x382c0",
+    "symbol": "memcpy@plt"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x16e90",
+    "target": "0x32b5c",
+    "symbol": "_ZdlPv"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x16ec4",
+    "target": "0x17934",
+    "symbol": "_ZNKSt6__ndk16vectorItNS_9allocatorItEEE20__throw_length_errorB8ne190000Ev"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x16edc",
+    "target": "0x17934",
+    "symbol": "_ZNKSt6__ndk16vectorItNS_9allocatorItEEE20__throw_length_errorB8ne190000Ev"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x16f00",
+    "target": "0x183ec",
+    "symbol": "_ZNKSt6__ndk112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE20__throw_length_errorB8ne190000Ev"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x16f24",
+    "target": "0x18344",
+    "symbol": "_ZNKSt6__ndk16vectorIN12_GLOBAL__N_17MappingENS_9allocatorIS2_EEE20__throw_length_errorB8ne190000Ev"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x16f48",
+    "target": "0x179c8",
+    "symbol": "_ZSt28__throw_bad_array_new_lengthB8ne190000v"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x16f5c",
+    "target": "0x18e44",
+    "symbol": "_ZNKSt6__ndk16vectorIN12_GLOBAL__N_19CandidateENS_9allocatorIS2_EEE20__throw_length_errorB8ne190000Ev"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x16f70",
+    "target": "0x179c8",
+    "symbol": "_ZSt28__throw_bad_array_new_lengthB8ne190000v"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x16f8c",
+    "target": "0x18e58",
+    "symbol": "_ZNKSt6__ndk16vectorIP7_jclassNS_9allocatorIS2_EEE20__throw_length_errorB8ne190000Ev"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x16fa4",
+    "target": "0x179c8",
+    "symbol": "_ZSt28__throw_bad_array_new_lengthB8ne190000v"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x16fbc",
+    "target": "0x18e44",
+    "symbol": "_ZNKSt6__ndk16vectorIN12_GLOBAL__N_19CandidateENS_9allocatorIS2_EEE20__throw_length_errorB8ne190000Ev"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x16fd4",
+    "target": "0x179c8",
+    "symbol": "_ZSt28__throw_bad_array_new_lengthB8ne190000v"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x16ff0",
+    "target": "0x17934",
+    "symbol": "_ZNKSt6__ndk16vectorItNS_9allocatorItEEE20__throw_length_errorB8ne190000Ev"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x17008",
+    "target": "0x18e44",
+    "symbol": "_ZNKSt6__ndk16vectorIN12_GLOBAL__N_19CandidateENS_9allocatorIS2_EEE20__throw_length_errorB8ne190000Ev"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x17020",
+    "target": "0x179c8",
+    "symbol": "_ZSt28__throw_bad_array_new_lengthB8ne190000v"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x1705c",
+    "target": "0x32b5c",
+    "symbol": "_ZdlPv"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x17080",
+    "target": "0x32b5c",
+    "symbol": "_ZdlPv"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x170b0",
+    "target": "0x32b5c",
+    "symbol": "_ZdlPv"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x170d0",
+    "target": "0x18b1c",
+    "symbol": "_ZNSt6__ndk16__treeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_4lessIS6_EENS4_IS6_EEE7destroyEPNS_11__tree_nodeIS6_PvEE"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x170e0",
+    "target": "0x32b5c",
+    "symbol": "_ZdlPv"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x1710c",
+    "target": "0x18b1c",
+    "symbol": "_ZNSt6__ndk16__treeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_4lessIS6_EENS4_IS6_EEE7destroyEPNS_11__tree_nodeIS6_PvEE"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x17130",
+    "target": "0x32b5c",
+    "symbol": "_ZdlPv"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x17140",
+    "target": "0x32b5c",
+    "symbol": "_ZdlPv"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x17178",
+    "target": "0x17538",
+    "symbol": "__clang_call_terminate"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x17180",
+    "target": "0x17538",
+    "symbol": "__clang_call_terminate"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x171d4",
+    "target": "0x32b5c",
+    "symbol": "_ZdlPv"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x17230",
+    "target": "0x32b5c",
+    "symbol": "_ZdlPv"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x17240",
+    "target": "0x32b5c",
+    "symbol": "_ZdlPv"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x17250",
+    "target": "0x32b5c",
+    "symbol": "_ZdlPv"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x17260",
+    "target": "0x32b5c",
+    "symbol": "_ZdlPv"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x17268",
+    "target": "0x182bc",
+    "symbol": "_ZNSt6__ndk16vectorIN12_GLOBAL__N_17MappingENS_9allocatorIS2_EEED2B8ne190000Ev"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x17274",
+    "target": "0x19278",
+    "symbol": "_ZNSt6__ndk15mutex6unlockEv"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x17284",
+    "target": "0x17538",
+    "symbol": "__clang_call_terminate"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x172c4",
+    "target": "0x17538",
+    "symbol": "__clang_call_terminate"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x1730c",
+    "target": "0x32b5c",
+    "symbol": "_ZdlPv"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x17318",
+    "target": "0x32b5c",
+    "symbol": "_ZdlPv"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x17320",
+    "target": "0x32be4",
+    "symbol": "__cxa_begin_catch"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x17360",
+    "target": "0x32dfc",
+    "symbol": "__cxa_end_catch"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x17378",
+    "target": "0x38340",
+    "symbol": "__stack_chk_fail@plt"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x17380",
+    "target": "0x32dfc",
+    "symbol": "__cxa_end_catch"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x1739c",
+    "target": "0x3439c",
+    "symbol": "_Unwind_Resume"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeOpen",
+    "offset": "0x173a0",
+    "target": "0x17538",
+    "symbol": "__clang_call_terminate"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeCancel",
+    "offset": "0x175ac",
+    "target": "0x38124",
+    "symbol": "_Znwm"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeCancel",
+    "offset": "0x175c8",
+    "target": "0x38270",
+    "symbol": "memset@plt"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeCancel",
+    "offset": "0x17620",
+    "target": "0x1924c",
+    "symbol": "_ZNSt6__ndk15mutex4lockEv"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeCancel",
+    "offset": "0x176b4",
+    "target": "0x19278",
+    "symbol": "_ZNSt6__ndk15mutex6unlockEv"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeCancel",
+    "offset": "0x176c0",
+    "target": "0x32b5c",
+    "symbol": "_ZdlPv"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeCancel",
+    "offset": "0x177bc",
+    "target": "0x17898",
+    "symbol": "_ZN7_JNIEnv20CallStaticVoidMethodEP7_jclassP10_jmethodIDz"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeCancel",
+    "offset": "0x17804",
+    "target": "0x17934",
+    "symbol": "_ZNKSt6__ndk16vectorItNS_9allocatorItEEE20__throw_length_errorB8ne190000Ev"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeCancel",
+    "offset": "0x1780c",
+    "target": "0x17538",
+    "symbol": "__clang_call_terminate"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeCancel",
+    "offset": "0x17838",
+    "target": "0x19278",
+    "symbol": "_ZNSt6__ndk15mutex6unlockEv"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeCancel",
+    "offset": "0x17840",
+    "target": "0x17538",
+    "symbol": "__clang_call_terminate"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeCancel",
+    "offset": "0x17874",
+    "target": "0x32b5c",
+    "symbol": "_ZdlPv"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeCancel",
+    "offset": "0x1787c",
+    "target": "0x32be4",
+    "symbol": "__cxa_begin_catch"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeCancel",
+    "offset": "0x17880",
+    "target": "0x32dfc",
+    "symbol": "__cxa_end_catch"
+  },
+  {
+    "function": "Java_net_anubis_client_gui_AndroidSystemPicker_nativeCancel",
+    "offset": "0x17894",
+    "target": "0x38340",
+    "symbol": "__stack_chk_fail@plt"
+  }
+]

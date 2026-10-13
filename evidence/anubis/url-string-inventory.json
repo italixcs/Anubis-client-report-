@@ -1,0 +1,92 @@
+[
+  {
+    "scope": "outer",
+    "class": "net/anubis/client/account/MicrosoftLogin",
+    "value": "https://login.live.com/oauth20_connect.srf"
+  },
+  {
+    "scope": "outer",
+    "class": "net/anubis/client/account/MicrosoftLogin",
+    "value": "https://login.live.com/oauth20_token.srf"
+  },
+  {
+    "scope": "outer",
+    "class": "net/anubis/client/account/MicrosoftLogin",
+    "value": "https://device.auth.xboxlive.com/device/authenticate"
+  },
+  {
+    "scope": "outer",
+    "class": "net/anubis/client/account/MicrosoftLogin",
+    "value": "https://sisu.xboxlive.com/authorize"
+  },
+  {
+    "scope": "outer",
+    "class": "net/anubis/client/account/MicrosoftLogin",
+    "value": "https://api.minecraftservices.com/launcher/login"
+  },
+  {
+    "scope": "outer",
+    "class": "net/anubis/client/account/MicrosoftLogin",
+    "value": "https://api.minecraftservices.com/minecraft/profile"
+  },
+  {
+    "scope": "outer",
+    "class": "net/anubis/client/account/MicrosoftLogin",
+    "value": "rp://api.minecraftservices.com/"
+  },
+  {
+    "scope": "outer",
+    "class": "net/anubis/client/account/MicrosoftLogin",
+    "value": "http://auth.xboxlive.com"
+  },
+  {
+    "scope": "outer",
+    "class": "net/anubis/client/account/SessionLogin",
+    "value": "https://api.minecraftservices.com/minecraft/profile"
+  },
+  {
+    "scope": "outer",
+    "class": "net/anubis/client/addon/AnubisAddon$GithubRepo",
+    "value": "https://github.com/"
+  },
+  {
+    "scope": "outer",
+    "class": "net/anubis/client/gui/mainmenu/CommunityPopup",
+    "value": "https://discord.gg/anubis"
+  },
+  {
+    "scope": "outer",
+    "class": "net/anubis/client/module/impl/misc/DiscordPresenceModule",
+    "value": "https://discord.gg/anubis"
+  },
+  {
+    "scope": "outer",
+    "class": "net/anubis/client/module/impl/misc/SkinChangeModule",
+    "value": "https://api.mojang.com/users/profiles/minecraft/"
+  },
+  {
+    "scope": "outer",
+    "class": "net/anubis/client/module/impl/misc/SkinChangeModule",
+    "value": "https://sessionserver.mojang.com/session/minecraft/profile/"
+  },
+  {
+    "scope": "outer",
+    "class": "net/anubis/client/util/spotify/LyricsService",
+    "value": "https://github.com/4ldenz/Anubis-client"
+  },
+  {
+    "scope": "outer",
+    "class": "net/anubis/client/util/spotify/LyricsService",
+    "value": "https://github.com/4ldenz/Anubis-client)"
+  },
+  {
+    "scope": "outer",
+    "class": "net/anubis/client/util/spotify/LyricsService",
+    "value": "https://lrclib.net/"
+  },
+  {
+    "scope": "outer",
+    "class": "net/anubis/client/webhook/WebhookConfig",
+    "value": "https://i.imgur.com/W3cTqvc.png"
+  }
+]

@@ -1,0 +1,124 @@
+{
+  "schemaVersion": 1,
+  "id": "anubisplus",
+  "version": "0.9.9.1+mc1.21.11",
+  "name": "Anubis",
+  "description": "Anubis is a standalone client utility mod focused on overlays, quality-of-life tooling, and advanced visual debugging.",
+  "authors": [
+    "4ldenz"
+  ],
+  "contact": {
+    "homepage": "https://github.com/4ldenz/Anubis-client",
+    "sources": "https://github.com/4ldenz/Anubis-client",
+    "issues": "https://github.com/4ldenz/Anubis-client/issues"
+  },
+  "license": "GPL-3.0-only",
+  "icon": "assets/anubis/icons/icon_128.png",
+  "environment": "client",
+  "mixins": [
+    "anubis.mixins.json",
+    {
+      "config": "anubis.indigo.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "entrypoints": {
+    "preLaunch": [
+      "net.anubis.bootstrap.AnubisNativeBootstrap"
+    ],
+    "client": [
+      "net.anubis.client.AnubisClientMod"
+    ]
+  },
+  "custom": {
+    "modmenu": {
+      "links": {}
+    }
+  },
+  "depends": {
+    "fabricloader": "\u003e\u003d0.16.0",
+    "minecraft": "~1.21.11",
+    "java": "\u003e\u003d21",
+    "fabric-key-binding-api-v1": "*",
+    "fabric-lifecycle-events-v1": "*",
+    "fabric-rendering-fluids-v1": "\u003e\u003d2.0.0",
+    "fabric-resource-loader-v0": "*",
+    "fabric-screen-api-v1": "*"
+  },
+  "suggests": {
+    "anubis-jsmacros": "*"
+  },
+  "breaks": {
+    "embeddium": "*",
+    "optifabric": "*",
+    "canvas": "*",
+    "vulkanmod": "*",
+    "optimalaim": "\u003c2.0.0",
+    "sodium-blendingregistry": "*",
+    "ocrenderfix_sodium": "*",
+    "betterfpsdist": "\u003c\u003d1.21-4.5",
+    "bobby": "\u003c5.2.4",
+    "chunksfadein": "\u003c2.0.2-1.21.2",
+    "cull-less-leaves": "\u003c\u003d1.3.0",
+    "cullleaves": "\u003c\u003d3.4.0-fabric",
+    "custom_hud": "\u003c3.4.2",
+    "farsight": "\u003c\u003d1.21-4.3",
+    "iceberg": "\u003c1.2.7",
+    "movingelevators": "\u003c\u003d1.4.7",
+    "notenoughcrashes": "\u003c4.4.8",
+    "noxesium": "\u003c2.3.3",
+    "reeses-sodium-options": "\u003c2.0.2",
+    "fabric-api": "\u003c0.140.0",
+    "sodium-extra": "\u003c0.8.0",
+    "audio_engine_tweaks": "\u003c1.2.12",
+    "sspb": "\u003c6.0.0",
+    "moreculling": "\u003c1.6.0-beta.2",
+    "simply-no-shading": "\u003c7.6.2",
+    "betterend": "\u003c\u003d21.0.11",
+    "enchanteds_sodium_options": "\u003c1.0.1"
+  },
+  "jars": [
+    {
+      "file": "META-INF/jars/fabric-api-base-1.0.5+4ebb5c083e.jar"
+    },
+    {
+      "file": "META-INF/jars/fabric-key-binding-api-v1-1.1.7+4fc5413f3e.jar"
+    },
+    {
+      "file": "META-INF/jars/fabric-lifecycle-events-v1-2.6.15+4ebb5c083e.jar"
+    },
+    {
+      "file": "META-INF/jars/fabric-rendering-fluids-v1-3.1.43+4ebb5c083e.jar"
+    },
+    {
+      "file": "META-INF/jars/fabric-resource-loader-v0-3.3.4+4fc5413f3e.jar"
+    },
+    {
+      "file": "META-INF/jars/fabric-resource-loader-v1-1.0.10+78c8b4663e.jar"
+    },
+    {
+      "file": "META-INF/jars/fabric-screen-api-v1-3.1.7+4ebb5c083e.jar"
+    },
+    {
+      "file": "META-INF/jars/imgui-java-binding-1.90.0.jar"
+    },
+    {
+      "file": "META-INF/jars/imgui-java-lwjgl3-1.90.0.jar"
+    },
+    {
+      "file": "META-INF/jars/imgui-java-natives-linux-1.90.0.jar"
+    },
+    {
+      "file": "META-INF/jars/imgui-java-natives-macos-1.90.0.jar"
+    },
+    {
+      "file": "META-INF/jars/imgui-java-natives-windows-1.90.0.jar"
+    },
+    {
+      "file": "META-INF/jars/netty-codec-socks-4.2.7.Final.jar"
+    },
+    {
+      "file": "META-INF/jars/netty-handler-proxy-4.2.7.Final.jar"
+    }
+  ]
+}

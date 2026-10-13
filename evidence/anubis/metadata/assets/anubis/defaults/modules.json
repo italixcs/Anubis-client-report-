@@ -1,0 +1,473 @@
+{
+  "version": 3,
+  "modules": {
+    "aim-assist": {
+      "settings": {
+        "range": 3.2,
+        "fov": 90.0,
+        "speed": 10.0
+      }
+    },
+    "triggerbot": {
+      "settings": {
+        "reaction": 0.0
+      }
+    },
+    "kill-aura": {
+      "settings": {
+        "crits": "Off"
+      }
+    },
+    "mace": {
+      "settings": {
+        "min-fall": 4.0
+      }
+    },
+    "w-tap-recode": {
+      "settings": {
+        "mode": "S Tap"
+      }
+    },
+    "friend-guard": {
+      "enabled": true
+    },
+    "auto-clicker": {
+      "settings": {
+        "randomization": 0.0
+      }
+    },
+    "auto-relog": {
+      "settings": {
+        "y-level": -3.0,
+        "delay": 1.0
+      }
+    },
+    "air-stuck": {
+      "keybind": 90
+    },
+    "player-bypass": {
+      "settings": {
+        "opacity": 255.0
+      }
+    },
+    "netherite-finder": {
+      "settings": {
+        "notifications": true
+      }
+    },
+    "render-distance-toggle": {
+      "keybind": 66,
+      "settings": {
+        "low-distance": 4.0
+      }
+    },
+    "trident-util": {
+      "settings": {
+        "scale": 0.1
+      }
+    },
+    "quantum": {
+      "settings": {
+        "advanced-debug": true,
+        "render": false
+      }
+    },
+    "amethyst-bypass": {
+      "settings": {
+        "method": "Light",
+        "min-cells": 100.0
+      }
+    },
+    "freecam": {
+      "keybind": 85,
+      "settings": {
+        "toggle-message": false,
+        "speed": 2.9
+      }
+    },
+    "name-protect": {
+      "settings": {
+        "others": "Same Label"
+      }
+    },
+    "no-inv-leak": {
+      "settings": {
+        "style": "Random",
+        "stream-only": true
+      }
+    },
+    "weather-notifier": {
+      "enabled": true
+    },
+    "boat-fly": {
+      "settings": {
+        "speed": 50.0
+      }
+    },
+    "speed": {
+      "settings": {
+        "mode": "Strafe",
+        "strafe-speed": 3.0,
+        "timer": 10.0
+      }
+    },
+    "trident-boost": {
+      "settings": {
+        "boost": 1.0
+      }
+    },
+    "slow-swing": {
+      "settings": {
+        "speed": 0.15
+      }
+    },
+    "swing-animation": {
+      "enabled": true
+    },
+    "weapon-inspect": {
+      "enabled": true,
+      "settings": {
+        "key": 67,
+        "skin": "Katana",
+        "trail-length": 0.35
+      }
+    },
+    "hand-pose": {
+      "enabled": true
+    },
+    "hand-aura": {
+      "enabled": true,
+      "settings": {
+        "aura": 100.0,
+        "reach": 20.0
+      }
+    },
+    "sus-chunk-finder": {
+      "settings": {
+        "packet-sensitivity": 2.0,
+        "tracers": false
+      }
+    },
+    "chunk-scanner": {
+      "settings": {
+        "stack-height": 3.0,
+        "tracers": false
+      }
+    },
+    "block-entity-debug": {
+      "keybind": 46,
+      "settings": {
+        "detection": "Below Zero",
+        "block-colors": {
+          "changes": {
+            "sculk_catalyst": "1 FFFFFFFF 0 FFFFFFFF",
+            "sculk_sensor": "1 FFFFFFFF 0 FFFFFFFF",
+            "trial_spawner": "1 FFFFFFFF 0 FFFFFFFF",
+            "vault": "1 FFFFFFFF 0 FFFFFFFF"
+          }
+        }
+      }
+    },
+    "fullbright": {
+      "enabled": true,
+      "settings": {
+        "gamma": 16.0
+      }
+    },
+    "esp": {
+      "settings": {
+        "mobs": false,
+        "mob-color": {
+          "r": 1.0,
+          "g": 0.2,
+          "b": 0.2,
+          "a": 1.0
+        },
+        "animal-color": {
+          "r": 0.2,
+          "g": 1.0,
+          "b": 0.4,
+          "a": 1.0
+        }
+      }
+    },
+    "glow-esp": {
+      "enabled": true,
+      "settings": {
+        "player-color": {
+          "r": 0.9098039,
+          "g": 0.7529412,
+          "b": 0.49019608,
+          "a": 1.0
+        },
+        "friend-color": {
+          "r": 0.23921569,
+          "g": 0.43529412,
+          "b": 0.9019608,
+          "a": 1.0
+        },
+        "passive-color": {
+          "r": 0.54901963,
+          "g": 0.76862746,
+          "b": 0.41568628,
+          "a": 1.0
+        },
+        "item-color": {
+          "r": 0.23529412,
+          "g": 0.76862746,
+          "b": 0.69803923,
+          "a": 1.0
+        },
+        "crystal-color": {
+          "r": 0.7058824,
+          "g": 0.4862745,
+          "b": 0.9411765,
+          "a": 1.0
+        },
+        "target-color": {
+          "r": 1.0,
+          "g": 0.47843137,
+          "b": 0.101960786,
+          "a": 1.0
+        }
+      }
+    },
+    "nametags": {
+      "enabled": true
+    },
+    "spawner-nametags": {
+      "settings": {
+        "activation-radius": false
+      }
+    },
+    "block-esp": {
+      "settings": {
+        "tracers": true,
+        "block-colors": {
+          "changes": {
+            "shulker_box": "1 FFFF0000 1 FFFF0000"
+          }
+        }
+      }
+    },
+    "block-overlay": {
+      "enabled": true,
+      "settings": {
+        "color": {
+          "r": 0.22745089,
+          "g": 0.8761339,
+          "b": 0.9490196,
+          "a": 1.0
+        }
+      }
+    },
+    "storage-esp": {
+      "settings": {
+        "tracers": true,
+        "chest-color": {
+          "r": 0.0,
+          "g": 0.5499703,
+          "b": 0.6117647,
+          "a": 1.0
+        },
+        "chest-tracers": true,
+        "chest-tracer-color": {
+          "r": 0.0,
+          "g": 0.4917054,
+          "b": 0.7413019,
+          "a": 1.0
+        }
+      }
+    },
+    "freelook": {
+      "keybind": 96,
+      "settings": {
+        "mode": "Camera"
+      }
+    },
+    "pearl-trajectory": {
+      "settings": {
+        "color": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        }
+      }
+    },
+    "trajectories": {
+      "settings": {
+        "hit-color": {
+          "r": 0.8509804,
+          "g": 0.2784314,
+          "b": 0.18431373,
+          "a": 1.0
+        }
+      }
+    },
+    "xray": {
+      "keybind": 88,
+      "settings": {
+        "blocks": {
+          "changes": {
+            "gold_ore": "0",
+            "deepslate_gold_ore": "0",
+            "coal_ore": "0",
+            "deepslate_coal_ore": "0",
+            "nether_gold_ore": "0",
+            "lapis_ore": "0",
+            "deepslate_lapis_ore": "0",
+            "diamond_ore": "0",
+            "deepslate_diamond_ore": "0",
+            "emerald_ore": "0",
+            "deepslate_emerald_ore": "0",
+            "nether_quartz_ore": "0",
+            "ancient_debris": "0",
+            "copper_ore": "0",
+            "deepslate_copper_ore": "0"
+          }
+        }
+      }
+    },
+    "custom-fov": {
+      "enabled": true,
+      "settings": {
+        "fov": 126.0
+      }
+    },
+    "zoom": {
+      "keybind": 67,
+      "holdMode": true
+    },
+    "custom-crosshair": {
+      "enabled": true,
+      "settings": {
+        "style": "T",
+        "color-mode": "Accent",
+        "color": {
+          "r": 0.9865321,
+          "g": 1.0,
+          "b": 0.0,
+          "a": 1.0
+        }
+      }
+    },
+    "custom-glint": {
+      "enabled": true,
+      "settings": {
+        "speed": 4.0
+      }
+    },
+    "hit-particles": {
+      "enabled": true,
+      "settings": {
+        "type": "Magic Crit",
+        "spread": 3.0
+      }
+    },
+    "target-esp": {
+      "enabled": true,
+      "settings": {
+        "style": "Horus Halo"
+      }
+    },
+    "totem-spirit": {
+      "enabled": true
+    },
+    "particles": {
+      "enabled": true
+    },
+    "motion-blur": {
+      "enabled": true,
+      "settings": {
+        "strength": 15.0
+      }
+    },
+    "atmosphere": {
+      "enabled": true,
+      "settings": {
+        "theme": "Frost",
+        "sky-shader": "Northern Lights",
+        "sky-shader-speed": 1.8,
+        "sky-shader-effect": 2.0
+      }
+    },
+    "color-grading": {
+      "enabled": true,
+      "settings": {
+        "vibrance": 26.0,
+        "contrast": 19.0
+      }
+    },
+    "jump-circles": {
+      "enabled": true
+    },
+    "character-3d": {
+      "enabled": true,
+      "settings": {
+        "toggle-message": false,
+        "character": "Tung Tung Tung Sahur",
+        "friends": true,
+        "detail": "High"
+      }
+    },
+    "floating-relics": {
+      "enabled": true,
+      "settings": {
+        "symbols": "Larp"
+      }
+    },
+    "time-changer": {
+      "settings": {
+        "time": 20000.0
+      }
+    },
+    "spotify-hud": {
+      "enabled": true,
+      "settings": {
+        "card-width": 345.0,
+        "title-color": {
+          "r": 0.9882155,
+          "g": 0.9882155,
+          "b": 0.9882155,
+          "a": 1.0
+        },
+        "lyrics-color": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        },
+        "upcoming-lyrics-color": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        },
+        "highlight-color": {
+          "r": 0.043771148,
+          "g": 1.0,
+          "b": 0.0,
+          "a": 1.0
+        }
+      }
+    },
+    "region-map": {
+      "enabled": true,
+      "settings": {
+        "show-coordinates": false
+      }
+    },
+    "radar": {
+      "enabled": true
+    },
+    "hotkeys": {
+      "enabled": true
+    },
+    "tracers": {
+      "settings": {
+        "animals": true
+      }
+    }
+  }
+}

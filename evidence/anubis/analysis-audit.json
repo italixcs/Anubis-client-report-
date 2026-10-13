@@ -1,0 +1,17 @@
+{
+  "target_executed": false,
+  "minecraft_launched": false,
+  "uploaded_classes_loaded": false,
+  "embedded_binaries_executed": false,
+  "original_hash_matches_snapshot": true,
+  "report_sections": 26,
+  "declared_anubis_mixins_inventoried": 147,
+  "hooks_inventoried": 298,
+  "nested_jars_inspected": 14,
+  "selected_javap_disassemblies": 30,
+  "maven_content_comparisons": 7,
+  "cfr_method_reconstruction_failures": 6,
+  "jadx_method_placeholders": 25,
+  "report_local_links_valid": true,
+  "analysis_notes": "Decompiler failures preserved and supplemented by complementary sources and bytecode; negative malware conclusion limited by native/indirect code."
+}

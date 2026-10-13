@@ -1,0 +1,2407 @@
+[
+  {
+    "class": "imgui/AnubisAndroidNative",
+    "method": "prepare",
+    "descriptor": "(Ljava/util/Properties;Ljava/util/Map;ZLimgui/AnubisAndroidNative$NativeSource;)V",
+    "calls": [
+      {
+        "owner": "java/nio/file/Files",
+        "name": "copy",
+        "descriptor": "(Ljava/io/InputStream;Ljava/nio/file/Path;[Ljava/nio/file/CopyOption;)J",
+        "tag": 10,
+        "offset": 252,
+        "opcode": 184
+      },
+      {
+        "owner": "java/nio/file/Files",
+        "name": "getFileStore",
+        "descriptor": "(Ljava/nio/file/Path;)Ljava/nio/file/FileStore;",
+        "tag": 10,
+        "offset": 303,
+        "opcode": 184
+      },
+      {
+        "owner": "java/nio/file/Files",
+        "name": "setPosixFilePermissions",
+        "descriptor": "(Ljava/nio/file/Path;Ljava/util/Set;)Ljava/nio/file/Path;",
+        "tag": 10,
+        "offset": 321,
+        "opcode": 184
+      },
+      {
+        "owner": "java/io/File",
+        "name": "deleteOnExit",
+        "descriptor": "()V",
+        "tag": 10,
+        "offset": 332,
+        "opcode": 182
+      },
+      {
+        "owner": "java/io/File",
+        "name": "deleteOnExit",
+        "descriptor": "()V",
+        "tag": 10,
+        "offset": 342,
+        "opcode": 182
+      },
+      {
+        "owner": "java/nio/file/Files",
+        "name": "deleteIfExists",
+        "descriptor": "(Ljava/nio/file/Path;)Z",
+        "tag": 10,
+        "offset": 366,
+        "opcode": 184
+      },
+      {
+        "owner": "java/nio/file/Files",
+        "name": "deleteIfExists",
+        "descriptor": "(Ljava/nio/file/Path;)Z",
+        "tag": 10,
+        "offset": 372,
+        "opcode": 184
+      }
+    ],
+    "strings": [
+      "os.arch",
+      "aarch64",
+      "arm64",
+      "arm64-v8a",
+      "32",
+      "sun.arch.data.model",
+      "imgui.library.name",
+      "libimgui-java64.so",
+      "imgui.library.path",
+      "imgui.library.name",
+      "imgui.library.path",
+      "Bundled Android ARM64 native is missing: /io/imgui/java/native-bin/android-arm64/libimgui-java64.so",
+      "posix",
+      "r-x------",
+      "imgui.library.path"
+    ]
+  },
+  {
+    "class": "imgui/AnubisAndroidNative",
+    "method": "androidFilesystem",
+    "descriptor": "()Z",
+    "calls": [
+      {
+        "owner": "java/nio/file/Files",
+        "name": "exists",
+        "descriptor": "(Ljava/nio/file/Path;[Ljava/nio/file/LinkOption;)Z",
+        "tag": 10,
+        "offset": 14,
+        "opcode": 184
+      },
+      {
+        "owner": "java/nio/file/Files",
+        "name": "exists",
+        "descriptor": "(Ljava/nio/file/Path;[Ljava/nio/file/LinkOption;)Z",
+        "tag": 10,
+        "offset": 34,
+        "opcode": 184
+      },
+      {
+        "owner": "java/nio/file/Files",
+        "name": "isDirectory",
+        "descriptor": "(Ljava/nio/file/Path;[Ljava/nio/file/LinkOption;)Z",
+        "tag": 10,
+        "offset": 54,
+        "opcode": 184
+      }
+    ],
+    "strings": [
+      "/system/bin/linker64",
+      "/system/bin/linker",
+      "/system/etc"
+    ]
+  },
+  {
+    "class": "imgui/AnubisAndroidNative",
+    "method": "createPrivateDirectory",
+    "descriptor": "(Ljava/util/List;)Ljava/nio/file/Path;",
+    "calls": [
+      {
+        "owner": "java/nio/file/Files",
+        "name": "createDirectories",
+        "descriptor": "(Ljava/nio/file/Path;[Ljava/nio/file/attribute/FileAttribute;)Ljava/nio/file/Path;",
+        "tag": 10,
+        "offset": 66,
+        "opcode": 184
+      },
+      {
+        "owner": "java/nio/file/Files",
+        "name": "getFileStore",
+        "descriptor": "(Ljava/nio/file/Path;)Ljava/nio/file/FileStore;",
+        "tag": 10,
+        "offset": 110,
+        "opcode": 184
+      },
+      {
+        "owner": "java/nio/file/Files",
+        "name": "createTempDirectory",
+        "descriptor": "(Ljava/nio/file/Path;Ljava/lang/String;[Ljava/nio/file/attribute/FileAttribute;)Ljava/nio/file/Path;",
+        "tag": 10,
+        "offset": 142,
+        "opcode": 184
+      },
+      {
+        "owner": "java/nio/file/Files",
+        "name": "createTempDirectory",
+        "descriptor": "(Ljava/nio/file/Path;Ljava/lang/String;[Ljava/nio/file/attribute/FileAttribute;)Ljava/nio/file/Path;",
+        "tag": 10,
+        "offset": 155,
+        "opcode": 184
+      }
+    ],
+    "strings": [
+      "No writable internal native cache. Use the launcher's private MOD_ANDROID_RUNTIME, TMPDIR or -Djava.io.tmpdir; shared storage cannot load .so files.",
+      "posix",
+      "anubis-imgui-arm64-",
+      "rwx------",
+      "anubis-imgui-arm64-"
+    ]
+  },
+  {
+    "class": "imgui/AnubisAndroidNative",
+    "method": "findNamedOverride",
+    "descriptor": "(Ljava/lang/String;Ljava/util/Properties;)Ljava/nio/file/Path;",
+    "calls": [
+      {
+        "owner": "java/nio/file/Files",
+        "name": "isRegularFile",
+        "descriptor": "(Ljava/nio/file/Path;[Ljava/nio/file/LinkOption;)Z",
+        "tag": 10,
+        "offset": 92,
+        "opcode": 184
+      },
+      {
+        "owner": "java/nio/file/Files",
+        "name": "isRegularFile",
+        "descriptor": "(Ljava/nio/file/Path;[Ljava/nio/file/LinkOption;)Z",
+        "tag": 10,
+        "offset": 117,
+        "opcode": 184
+      }
+    ],
+    "strings": [
+      "java.library.path",
+      ""
+    ]
+  },
+  {
+    "class": "imgui/AnubisAndroidNative",
+    "method": "validateArm64",
+    "descriptor": "(Ljava/nio/file/Path;)V",
+    "calls": [
+      {
+        "owner": "java/nio/file/Files",
+        "name": "newInputStream",
+        "descriptor": "(Ljava/nio/file/Path;[Ljava/nio/file/OpenOption;)Ljava/io/InputStream;",
+        "tag": 10,
+        "offset": 10,
+        "opcode": 184
+      }
+    ],
+    "strings": []
+  },
+  {
+    "class": "imgui/AnubisAndroidNative",
+    "method": "lambda$prepare$1",
+    "descriptor": "(Ljava/nio/file/Path;)Ljava/io/InputStream;",
+    "calls": [
+      {
+        "owner": "java/nio/file/Files",
+        "name": "newInputStream",
+        "descriptor": "(Ljava/nio/file/Path;[Ljava/nio/file/OpenOption;)Ljava/io/InputStream;",
+        "tag": 10,
+        "offset": 5,
+        "opcode": 184
+      }
+    ],
+    "strings": []
+  },
+  {
+    "class": "net/anubis/client/account/Accounts",
+    "method": "load",
+    "descriptor": "()V",
+    "calls": [
+      {
+        "owner": "java/nio/file/Files",
+        "name": "isRegularFile",
+        "descriptor": "(Ljava/nio/file/Path;[Ljava/nio/file/LinkOption;)Z",
+        "tag": 10,
+        "offset": 22,
+        "opcode": 184
+      },
+      {
+        "owner": "java/nio/file/Files",
+        "name": "newBufferedReader",
+        "descriptor": "(Ljava/nio/file/Path;)Ljava/io/BufferedReader;",
+        "tag": 10,
+        "offset": 30,
+        "opcode": 184
+      }
+    ],
+    "strings": [
+      "version",
+      "version",
+      "[Anubis] Account list version {} is newer than supported {}; skipping load",
+      "accounts",
+      "accounts",
+      "accounts",
+      "[Anubis] Failed to load the account list; preserving the file"
+    ]
+  },
+  {
+    "class": "net/anubis/client/account/Accounts",
+    "method": "save",
+    "descriptor": "()V",
+    "calls": [
+      {
+        "owner": "java/nio/file/Files",
+        "name": "createDirectories",
+        "descriptor": "(Ljava/nio/file/Path;[Ljava/nio/file/attribute/FileAttribute;)Ljava/nio/file/Path;",
+        "tag": 10,
+        "offset": 184,
+        "opcode": 184
+      },
+      {
+        "owner": "java/nio/file/Files",
+        "name": "newBufferedWriter",
+        "descriptor": "(Ljava/nio/file/Path;[Ljava/nio/file/OpenOption;)Ljava/io/BufferedWriter;",
+        "tag": 10,
+        "offset": 218,
+        "opcode": 184
+      },
+      {
+        "owner": "java/nio/file/Files",
+        "name": "move",
+        "descriptor": "(Ljava/nio/file/Path;Ljava/nio/file/Path;[Ljava/nio/file/CopyOption;)Ljava/nio/file/Path;",
+        "tag": 10,
+        "offset": 291,
+        "opcode": 184
+      },
+      {
+        "owner": "java/nio/file/Files",
+        "name": "move",
+        "descriptor": "(Ljava/nio/file/Path;Ljava/nio/file/Path;[Ljava/nio/file/CopyOption;)Ljava/nio/file/Path;",
+        "tag": 10,
+        "offset": 313,
+        "opcode": 184
+      }
+    ],
+    "strings": [
+      "version",
+      "id",
+      "type",
+      "name",
+      "uuid",
+      "token",
+      "accounts",
+      "[Anubis] Failed to save the account list"
+    ]
+  },
+  {
+    "class": "net/anubis/client/account/GameSession",
+    "method": "apply",
+    "descriptor": "(Lnet/anubis/client/account/GameSession$Prepared;)V",
+    "calls": [
+      {
+        "owner": "java/io/File",
+        "name": "toPath",
+        "descriptor": "()Ljava/nio/file/Path;",
+        "tag": 10,
+        "offset": 99,
+        "opcode": 182
+      }
+    ],
+    "strings": []
+  },
+  {
+    "class": "net/anubis/client/config/ConfigProfiles",
+    "method": "create",
+    "descriptor": "(Ljava/lang/String;)Ljava/lang/String;",
+    "calls": [
+      {
+        "owner": "java/nio/file/Files",
+        "name": "exists",
+        "descriptor": "(Ljava/nio/file/Path;[Ljava/nio/file/LinkOption;)Z",
+        "tag": 10,
+        "offset": 67,
+        "opcode": 184
+      }
+    ],
+    "strings": [
+      "",
+      "Use 1-32 letters, digits, spaces, _ - ( )"
+    ]
+  },
+  {
+    "class": "net/anubis/client/config/ConfigProfiles",
+    "method": "delete",
+    "descriptor": "(Ljava/lang/String;)V",
+    "calls": [
+      {
+        "owner": "java/nio/file/Files",
+        "name": "deleteIfExists",
+        "descriptor": "(Ljava/nio/file/Path;)Z",
+        "tag": 10,
+        "offset": 14,
+        "opcode": 184
+      }
+    ],
+    "strings": [
+      "[Anubis] Failed to delete profile '{}'"
+    ]
+  },
+  {
+    "class": "net/anubis/client/config/ConfigProfiles",
+    "method": "rename",
+    "descriptor": "(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;",
+    "calls": [
+      {
+        "owner": "java/nio/file/Files",
+        "name": "move",
+        "descriptor": "(Ljava/nio/file/Path;Ljava/nio/file/Path;[Ljava/nio/file/CopyOption;)Ljava/nio/file/Path;",
+        "tag": 10,
+        "offset": 172,
+        "opcode": 184
+      },
+      {
+        "owner": "java/nio/file/Files",
+        "name": "move",
+        "descriptor": "(Ljava/nio/file/Path;Ljava/nio/file/Path;[Ljava/nio/file/CopyOption;)Ljava/nio/file/Path;",
+        "tag": 10,
+        "offset": 184,
+        "opcode": 184
+      },
+      {
+        "owner": "java/nio/file/Files",
+        "name": "move",
+        "descriptor": "(Ljava/nio/file/Path;Ljava/nio/file/Path;[Ljava/nio/file/CopyOption;)Ljava/nio/file/Path;",
+        "tag": 10,
+        "offset": 207,
+        "opcode": 184
+      },
+      {
+        "owner": "java/nio/file/Files",
+        "name": "move",
+        "descriptor": "(Ljava/nio/file/Path;Ljava/nio/file/Path;[Ljava/nio/file/CopyOption;)Ljava/nio/file/Path;",
+        "tag": 10,
+        "offset": 225,
+        "opcode": 184
+      }
+    ],
+    "strings": [
+      "",
+      "Use 1-32 letters, digits, spaces, _ - ( )",
+      "[Anubis] Failed to rename profile '{}' to '{}'"
+    ]
+  },
+  {
+    "class": "net/anubis/client/config/ConfigProfiles",
+    "method": "exportTo",
+    "descriptor": "(Ljava/lang/String;Ljava/nio/file/Path;)V",
+    "calls": [
+      {
+        "owner": "java/nio/file/Files",
+        "name": "writeString",
+        "descriptor": "(Ljava/nio/file/Path;Ljava/lang/CharSequence;Ljava/nio/charset/Charset;[Ljava/nio/file/OpenOption;)Ljava/nio/file/Path;",
+        "tag": 10,
+        "offset": 21,
+        "opcode": 184
+      }
+    ],
+    "strings": [
+      "[Anubis] Failed to export profile '{}' to {}"
+    ]
+  },
+  {
+    "class": "net/anubis/client/config/ConfigProfiles",
+    "method": "importFile",
+    "descriptor": "(Ljava/nio/file/Path;)Ljava/lang/String;",
+    "calls": [
+      {
+        "owner": "java/nio/file/Files",
+        "name": "isRegularFile",
+        "descriptor": "(Ljava/nio/file/Path;[Ljava/nio/file/LinkOption;)Z",
+        "tag": 10,
+        "offset": 5,
+        "opcode": 184
+      },
+      {
+        "owner": "java/nio/file/Files",
+        "name": "size",
+        "descriptor": "(Ljava/nio/file/Path;)J",
+        "tag": 10,
+        "offset": 23,
+        "opcode": 184
+      },
+      {
+        "owner": "java/nio/file/Files",
+        "name": "readString",
+        "descriptor": "(Ljava/nio/file/Path;Ljava/nio/charset/Charset;)Ljava/lang/String;",
+        "tag": 10,
+        "offset": 48,
+        "opcode": 184
+      }
+    ],
+    "strings": [
+      "That file doesn't exist",
+      "That file is too large to be a profile",
+      "That file isn't an Anubis profile"
+    ]
+  },
+  {
+    "class": "net/anubis/client/config/ConfigProfiles",
+    "method": "read",
+    "descriptor": "(Ljava/lang/String;)Lnet/anubis/client/config/ConfigProfiles$Contents;",
+    "calls": [
+      {
+        "owner": "java/nio/file/Files",
+        "name": "size",
+        "descriptor": "(Ljava/nio/file/Path;)J",
+        "tag": 10,
+        "offset": 7,
+        "opcode": 184
+      },
+      {
+        "owner": "java/nio/file/Files",
+        "name": "newBufferedReader",
+        "descriptor": "(Ljava/nio/file/Path;Ljava/nio/charset/Charset;)Ljava/io/BufferedReader;",
+        "tag": 10,
+        "offset": 35,
+        "opcode": 184
+      }
+    ],
+    "strings": [
+      "[Anubis] Failed to read profile '{}'"
+    ]
+  },
+  {
+    "class": "net/anubis/client/config/ConfigProfiles",
+    "method": "write",
+    "descriptor": "(Ljava/lang/String;Lnet/anubis/client/config/ConfigProfiles$Contents;)V",
+    "calls": [
+      {
+        "owner": "java/nio/file/Files",
+        "name": "createDirectories",
+        "descriptor": "(Ljava/nio/file/Path;[Ljava/nio/file/attribute/FileAttribute;)Ljava/nio/file/Path;",
+        "tag": 10,
+        "offset": 108,
+        "opcode": 184
+      },
+      {
+        "owner": "java/nio/file/Files",
+        "name": "newBufferedWriter",
+        "descriptor": "(Ljava/nio/file/Path;Ljava/nio/charset/Charset;[Ljava/nio/file/OpenOption;)Ljava/io/BufferedWriter;",
+        "tag": 10,
+        "offset": 136,
+        "opcode": 184
+      },
+      {
+        "owner": "java/nio/file/Files",
+        "name": "move",
+        "descriptor": "(Ljava/nio/file/Path;Ljava/nio/file/Path;[Ljava/nio/file/CopyOption;)Ljava/nio/file/Path;",
+        "tag": 10,
+        "offset": 210,
+        "opcode": 184
+      },
+      {
+        "owner": "java/nio/file/Files",
+        "name": "move",
+        "descriptor": "(Ljava/nio/file/Path;Ljava/nio/file/Path;[Ljava/nio/file/CopyOption;)Ljava/nio/file/Path;",
+        "tag": 10,
+        "offset": 233,
+        "opcode": 184
+      }
+    ],
+    "strings": [
+      "anubisProfile",
+      "loadOnJoin",
+      "data",
+      "[Anubis] Failed to save profile '{}'"
+    ]
+  },
+  {
+    "class": "net/anubis/client/config/ConfigProfiles",
+    "method": "taken",
+    "descriptor": "(Ljava/lang/String;)Z",
+    "calls": [
+      {
+        "owner": "java/nio/file/Files",
+        "name": "exists",
+        "descriptor": "(Ljava/nio/file/Path;[Ljava/nio/file/LinkOption;)Z",
+        "tag": 10,
+        "offset": 27,
+        "opcode": 184
+      }
+    ],
+    "strings": []
+  },
+  {
+    "class": "net/anubis/client/config/ConfigProfiles",
+    "method": "scan",
+    "descriptor": "()Ljava/util/List;",
+    "calls": [
+      {
+        "owner": "java/nio/file/Files",
+        "name": "isDirectory",
+        "descriptor": "(Ljava/nio/file/Path;[Ljava/nio/file/LinkOption;)Z",
+        "tag": 10,
+        "offset": 20,
+        "opcode": 184
+      },
+      {
+        "owner": "java/nio/file/Files",
+        "name": "newDirectoryStream",
+        "descriptor": "(Ljava/nio/file/Path;Ljava/lang/String;)Ljava/nio/file/DirectoryStream;",
+        "tag": 10,
+        "offset": 59,
+        "opcode": 184
+      },
+      {
+        "owner": "java/nio/file/Files",
+        "name": "isRegularFile",
+        "descriptor": "(Ljava/nio/file/Path;[Ljava/nio/file/LinkOption;)Z",
+        "tag": 10,
+        "offset": 142,
+        "opcode": 184
+      }
+    ],
+    "strings": [
+      "*.json",
+      ".json",
+      "[Anubis] Failed to list profiles"
+    ]
+  },
+  {
+    "class": "net/anubis/client/config/ConfigProfiles",
+    "method": "upgradeLocalProfiles",
+    "descriptor": "(Ljava/nio/file/Path;)V",
+    "calls": [
+      {
+        "owner": "java/nio/file/Files",
+        "name": "exists",
+        "descriptor": "(Ljava/nio/file/Path;[Ljava/nio/file/LinkOption;)Z",
+        "tag": 10,
+        "offset": 27,
+        "opcode": 184
+      },
+      {
+        "owner": "java/nio/file/Files",
+        "name": "createDirectories",
+        "descriptor": "(Ljava/nio/file/Path;[Ljava/nio/file/attribute/FileAttribute;)Ljava/nio/file/Path;",
+        "tag": 10,
+        "offset": 39,
+        "opcode": 184
+      },
+      {
+        "owner": "java/nio/file/Files",
+        "name": "newDirectoryStream",
+        "descriptor": "(Ljava/nio/file/Path;Ljava/lang/String;)Ljava/nio/file/DirectoryStream;",
+        "tag": 10,
+        "offset": 47,
+        "opcode": 184
+      },
+      {
+        "owner": "java/nio/file/Files",
+        "name": "isRegularFile",
+        "descriptor": "(Ljava/nio/file/Path;[Ljava/nio/file/LinkOption;)Z",
+        "tag": 10,
+        "offset": 128,
+        "opcode": 184
+      },
+      {
+        "owner": "java/nio/file/Files",
+        "name": "size",
+        "descriptor": "(Ljava/nio/file/Path;)J",
+        "tag": 10,
+        "offset": 136,
+        "opcode": 184
+      },
+      {
+        "owner": "java/nio/file/Files",
+        "name": "writeString",
+        "descriptor": "(Ljava/nio/file/Path;Ljava/lang/CharSequence;Ljava/nio/charset/Charset;[Ljava/nio/file/OpenOption;)Ljava/nio/file/Path;",
+        "tag": 10,
+        "offset": 211,
+        "opcode": 184
+      }
+    ],
+    "strings": [
+      ".format2",
+      "*.json",
+      ".json",
+      "Profiles here were moved to format 2.\n",
+      "[Anubis] Failed to move old profiles to the current format"
+    ]
+  },
+  {
+    "class": "net/anubis/client/config/ConfigProfiles",
+    "method": "installPresets",
+    "descriptor": "(Ljava/nio/file/Path;)V",
+    "calls": [
+      {
+        "owner": "java/nio/file/Files",
+        "name": "isRegularFile",
+        "descriptor": "(Ljava/nio/file/Path;[Ljava/nio/file/LinkOption;)Z",
+        "tag": 10,
+        "offset": 50,
+        "opcode": 184
+      },
+      {
+        "owner": "java/nio/file/Files",
+        "name": "readAllLines",
+        "descriptor": "(Ljava/nio/file/Path;Ljava/nio/charset/Charset;)Ljava/util/List;",
+        "tag": 10,
+        "offset": 60,
+        "opcode": 184
+      },
+      {
+        "owner": "java/nio/file/Files",
+        "name": "exists",
+        "descriptor": "(Ljava/nio/file/Path;[Ljava/nio/file/LinkOption;)Z",
+        "tag": 10,
+        "offset": 249,
+        "opcode": 184
+      },
+      {
+        "owner": "java/nio/file/Files",
+        "name": "createDirectories",
+        "descriptor": "(Ljava/nio/file/Path;[Ljava/nio/file/attribute/FileAttribute;)Ljava/nio/file/Path;",
+        "tag": 10,
+        "offset": 330,
+        "opcode": 184
+      },
+      {
+        "owner": "java/nio/file/Files",
+        "name": "write",
+        "descriptor": "(Ljava/nio/file/Path;Ljava/lang/Iterable;Ljava/nio/charset/Charset;[Ljava/nio/file/OpenOption;)Ljava/nio/file/Path;",
+        "tag": 10,
+        "offset": 344,
+        "opcode": 184
+      }
+    ],
+    "strings": [
+      ".presets",
+      "name",
+      "That profile is damaged",
+      "[Anubis] Could not add the bundled profile '{}': {}",
+      "[Anubis] Failed to add the bundled profiles"
+    ]
+  },
+  {
+    "class": "net/anubis/client/config/ConfigProfiles",
+    "method": "upgrade",
+    "descriptor": "(Ljava/lang/String;Ljava/nio/file/Path;)V",
+    "calls": [
+      {
+        "owner": "java/nio/file/Files",
+        "name": "newBufferedReader",
+        "descriptor": "(Ljava/nio/file/Path;Ljava/nio/charset/Charset;)Ljava/io/BufferedReader;",
+        "tag": 10,
+        "offset": 4,
+        "opcode": 184
+      }
+    ],
+    "strings": [
+      "anubisProfile",
+      "[Anubis] Moved profile '{}' to the current format",
+      "[Anubis] Could not move profile '{}' to the current format"
+    ]
+  },
+  {
+    "class": "net/anubis/client/config/ConfigProfiles",
+    "method": "header",
+    "descriptor": "(Ljava/lang/String;Ljava/nio/file/Path;)Lnet/anubis/client/config/ConfigProfiles$Profile;",
+    "calls": [
+      {
+        "owner": "java/nio/file/Files",
+        "name": "readAttributes",
+        "descriptor": "(Ljava/nio/file/Path;Ljava/lang/Class;[Ljava/nio/file/LinkOption;)Ljava/nio/file/attribute/BasicFileAttributes;",
+        "tag": 10,
+        "offset": 8,
+        "opcode": 184
+      }
+    ],
+    "strings": []
+  },
+  {
+    "class": "net/anubis/client/config/ConfigProfiles",
+    "method": "readHeader",
+    "descriptor": "(Ljava/lang/String;Ljava/nio/file/Path;)Lnet/anubis/client/config/ConfigProfiles$Profile;",
+    "calls": [
+      {
+        "owner": "java/nio/file/Files",
+        "name": "newBufferedReader",
+        "descriptor": "(Ljava/nio/file/Path;Ljava/nio/charset/Charset;)Ljava/io/BufferedReader;",
+        "tag": 10,
+        "offset": 28,
+        "opcode": 184
+      }
+    ],
+    "strings": [
+      "anubisProfile",
+      "loadOnJoin",
+      "data",
+      "modules",
+      "[Anubis] Failed to read profile '{}'"
+    ]
+  },
+  {
+    "class": "net/anubis/client/config/FriendStore",
+    "method": "load",
+    "descriptor": "()V",
+    "calls": [
+      {
+        "owner": "java/nio/file/Files",
+        "name": "isRegularFile",
+        "descriptor": "(Ljava/nio/file/Path;[Ljava/nio/file/LinkOption;)Z",
+        "tag": 10,
+        "offset": 32,
+        "opcode": 184
+      },
+      {
+        "owner": "java/nio/file/Files",
+        "name": "newBufferedReader",
+        "descriptor": "(Ljava/nio/file/Path;)Ljava/io/BufferedReader;",
+        "tag": 10,
+        "offset": 40,
+        "opcode": 184
+      }
+    ],
+    "strings": [
+      "version",
+      "version",
+      "[Anubis] Friend list version {} is newer than supported {}; skipping load",
+      "friends",
+      "friends",
+      "friends",
+      "[Anubis] Failed to load friend list; preserving the file"
+    ]
+  },
+  {
+    "class": "net/anubis/client/config/FriendStore",
+    "method": "save",
+    "descriptor": "()V",
+    "calls": [
+      {
+        "owner": "java/nio/file/Files",
+        "name": "createDirectories",
+        "descriptor": "(Ljava/nio/file/Path;[Ljava/nio/file/attribute/FileAttribute;)Ljava/nio/file/Path;",
+        "tag": 10,
+        "offset": 100,
+        "opcode": 184
+      },
+      {
+        "owner": "java/nio/file/Files",
+        "name": "newBufferedWriter",
+        "descriptor": "(Ljava/nio/file/Path;[Ljava/nio/file/OpenOption;)Ljava/io/BufferedWriter;",
+        "tag": 10,
+        "offset": 134,
+        "opcode": 184
+      },
+      {
+        "owner": "java/nio/file/Files",
+        "name": "move",
+        "descriptor": "(Ljava/nio/file/Path;Ljava/nio/file/Path;[Ljava/nio/file/CopyOption;)Ljava/nio/file/Path;",
+        "tag": 10,
+        "offset": 207,
+        "opcode": 184
+      },
+      {
+        "owner": "java/nio/file/Files",
+        "name": "move",
+        "descriptor": "(Ljava/nio/file/Path;Ljava/nio/file/Path;[Ljava/nio/file/CopyOption;)Ljava/nio/file/Path;",
+        "tag": 10,
+        "offset": 229,
+        "opcode": 184
+      }
+    ],
+    "strings": [
+      "version",
+      "friends",
+      "[Anubis] Failed to save friend list"
+    ]
+  },
+  {
+    "class": "net/anubis/client/config/HudTheme",
+    "method": "load",
+    "descriptor": "()V",
+    "calls": [
+      {
+        "owner": "java/nio/file/Files",
+        "name": "isRegularFile",
+        "descriptor": "(Ljava/nio/file/Path;[Ljava/nio/file/LinkOption;)Z",
+        "tag": 10,
+        "offset": 23,
+        "opcode": 184
+      },
+      {
+        "owner": "java/nio/file/Files",
+        "name": "newBufferedReader",
+        "descriptor": "(Ljava/nio/file/Path;)Ljava/io/BufferedReader;",
+        "tag": 10,
+        "offset": 31,
+        "opcode": 184
+      }
+    ],
+    "strings": [
+      "version",
+      "version",
+      "[Anubis] HUD theme version {} is newer than supported {}; skipping load",
+      "values",
+      "values",
+      "values",
+      "[Anubis] Failed to load HUD theme; preserving the file"
+    ]
+  },
+  {
+    "class": "net/anubis/client/config/HudTheme",
+    "method": "save",
+    "descriptor": "()V",
+    "calls": [
+      {
+        "owner": "java/nio/file/Files",
+        "name": "createDirectories",
+        "descriptor": "(Ljava/nio/file/Path;[Ljava/nio/file/attribute/FileAttribute;)Ljava/nio/file/Path;",
+        "tag": 10,
+        "offset": 61,
+        "opcode": 184
+      },
+      {
+        "owner": "java/nio/file/Files",
+        "name": "newBufferedWriter",
+        "descriptor": "(Ljava/nio/file/Path;[Ljava/nio/file/OpenOption;)Ljava/io/BufferedWriter;",
+        "tag": 10,
+        "offset": 93,
+        "opcode": 184
+      },
+      {
+        "owner": "java/nio/file/Files",
+        "name": "move",
+        "descriptor": "(Ljava/nio/file/Path;Ljava/nio/file/Path;[Ljava/nio/file/CopyOption;)Ljava/nio/file/Path;",
+        "tag": 10,
+        "offset": 165,
+        "opcode": 184
+      },
+      {
+        "owner": "java/nio/file/Files",
+        "name": "move",
+        "descriptor": "(Ljava/nio/file/Path;Ljava/nio/file/Path;[Ljava/nio/file/CopyOption;)Ljava/nio/file/Path;",
+        "tag": 10,
+        "offset": 186,
+        "opcode": 184
+      }
+    ],
+    "strings": [
+      "version",
+      "values",
+      "[Anubis] Failed to save HUD theme"
+    ]
+  },
+  {
+    "class": "net/anubis/client/config/ModuleConfigStore",
+    "method": "readConfig",
+    "descriptor": "()V",
+    "calls": [
+      {
+        "owner": "java/nio/file/Files",
+        "name": "isRegularFile",
+        "descriptor": "(Ljava/nio/file/Path;[Ljava/nio/file/LinkOption;)Z",
+        "tag": 10,
+        "offset": 10,
+        "opcode": 184
+      },
+      {
+        "owner": "java/nio/file/Files",
+        "name": "newBufferedReader",
+        "descriptor": "(Ljava/nio/file/Path;)Ljava/io/BufferedReader;",
+        "tag": 10,
+        "offset": 18,
+        "opcode": 184
+      },
+      {
+        "owner": "java/nio/file/Files",
+        "name": "exists",
+        "descriptor": "(Ljava/nio/file/Path;[Ljava/nio/file/LinkOption;)Z",
+        "tag": 10,
+        "offset": 136,
+        "opcode": 184
+      },
+      {
+        "owner": "java/nio/file/Files",
+        "name": "copy",
+        "descriptor": "(Ljava/nio/file/Path;Ljava/nio/file/Path;[Ljava/nio/file/CopyOption;)Ljava/nio/file/Path;",
+        "tag": 10,
+        "offset": 149,
+        "opcode": 184
+      }
+    ],
+    "strings": [
+      "activeProfile",
+      "activeProfile",
+      "activeProfile",
+      "version",
+      "version",
+      "[Anubis] Failed to load module config; preserving the file"
+    ]
+  },
+  {
+    "class": "net/anubis/client/config/ModuleConfigStore",
+    "method": "save",
+    "descriptor": "()V",
+    "calls": [
+      {
+        "owner": "java/nio/file/Files",
+        "name": "createDirectories",
+        "descriptor": "(Ljava/nio/file/Path;[Ljava/nio/file/attribute/FileAttribute;)Ljava/nio/file/Path;",
+        "tag": 10,
+        "offset": 55,
+        "opcode": 184
+      },
+      {
+        "owner": "java/nio/file/Files",
+        "name": "newBufferedWriter",
+        "descriptor": "(Ljava/nio/file/Path;[Ljava/nio/file/OpenOption;)Ljava/io/BufferedWriter;",
+        "tag": 10,
+        "offset": 91,
+        "opcode": 184
+      },
+      {
+        "owner": "java/nio/file/Files",
+        "name": "move",
+        "descriptor": "(Ljava/nio/file/Path;Ljava/nio/file/Path;[Ljava/nio/file/CopyOption;)Ljava/nio/file/Path;",
+        "tag": 10,
+        "offset": 165,
+        "opcode": 184
+      },
+      {
+        "owner": "java/nio/file/Files",
+        "name": "move",
+        "descriptor": "(Ljava/nio/file/Path;Ljava/nio/file/Path;[Ljava/nio/file/CopyOption;)Ljava/nio/file/Path;",
+        "tag": 10,
+        "offset": 188,
+        "opcode": 184
+      }
+    ],
+    "strings": [
+      "activeProfile",
+      "[Anubis] Failed to save module config"
+    ]
+  },
+  {
+    "class": "net/anubis/client/config/ThemeStore",
+    "method": "load",
+    "descriptor": "()V",
+    "calls": [
+      {
+        "owner": "java/nio/file/Files",
+        "name": "isRegularFile",
+        "descriptor": "(Ljava/nio/file/Path;[Ljava/nio/file/LinkOption;)Z",
+        "tag": 10,
+        "offset": 23,
+        "opcode": 184
+      },
+      {
+        "owner": "java/nio/file/Files",
+        "name": "newBufferedReader",
+        "descriptor": "(Ljava/nio/file/Path;)Ljava/io/BufferedReader;",
+        "tag": 10,
+        "offset": 31,
+        "opcode": 184
+      }
+    ],
+    "strings": [
+      "version",
+      "version",
+      "[Anubis] Theme version {} is newer than supported {}; skipping load",
+      "values",
+      "values",
+      "values",
+      "[Anubis] Failed to load theme; preserving the file"
+    ]
+  },
+  {
+    "class": "net/anubis/client/config/ThemeStore",
+    "method": "save",
+    "descriptor": "()V",
+    "calls": [
+      {
+        "owner": "java/nio/file/Files",
+        "name": "createDirectories",
+        "descriptor": "(Ljava/nio/file/Path;[Ljava/nio/file/attribute/FileAttribute;)Ljava/nio/file/Path;",
+        "tag": 10,
+        "offset": 64,
+        "opcode": 184
+      },
+      {
+        "owner": "java/nio/file/Files",
+        "name": "newBufferedWriter",
+        "descriptor": "(Ljava/nio/file/Path;[Ljava/nio/file/OpenOption;)Ljava/io/BufferedWriter;",
+        "tag": 10,
+        "offset": 96,
+        "opcode": 184
+      },
+      {
+        "owner": "java/nio/file/Files",
+        "name": "move",
+        "descriptor": "(Ljava/nio/file/Path;Ljava/nio/file/Path;[Ljava/nio/file/CopyOption;)Ljava/nio/file/Path;",
+        "tag": 10,
+        "offset": 168,
+        "opcode": 184
+      },
+      {
+        "owner": "java/nio/file/Files",
+        "name": "move",
+        "descriptor": "(Ljava/nio/file/Path;Ljava/nio/file/Path;[Ljava/nio/file/CopyOption;)Ljava/nio/file/Path;",
+        "tag": 10,
+        "offset": 189,
+        "opcode": 184
+      }
+    ],
+    "strings": [
+      "version",
+      "values",
+      "[Anubis] Failed to save theme"
+    ]
+  },
+  {
+    "class": "net/anubis/client/discord/DiscordIpc$WindowsPipe",
+    "method": "readWaiting",
+    "descriptor": "(Ljava/nio/ByteBuffer;)I",
+    "calls": [
+      {
+        "owner": "java/io/RandomAccessFile",
+        "name": "length",
+        "descriptor": "()J",
+        "tag": 10,
+        "offset": 4,
+        "opcode": 182
+      },
+      {
+        "owner": "java/io/RandomAccessFile",
+        "name": "read",
+        "descriptor": "([BII)I",
+        "tag": 10,
+        "offset": 43,
+        "opcode": 182
+      }
+    ],
+    "strings": [
+      "Discord hung up"
+    ]
+  },
+  {
+    "class": "net/anubis/client/discord/DiscordIpc$WindowsPipe",
+    "method": "write",
+    "descriptor": "(Ljava/nio/ByteBuffer;J)V",
+    "calls": [
+      {
+        "owner": "java/io/RandomAccessFile",
+        "name": "write",
+        "descriptor": "([BII)V",
+        "tag": 10,
+        "offset": 21,
+        "opcode": 182
+      }
+    ],
+    "strings": []
+  },
+  {
+    "class": "net/anubis/client/discord/DiscordIpc$WindowsPipe",
+    "method": "close",
+    "descriptor": "()V",
+    "calls": [
+      {
+        "owner": "java/io/RandomAccessFile",
+        "name": "close",
+        "descriptor": "()V",
+        "tag": 10,
+        "offset": 4,
+        "opcode": 182
+      }
+    ],
+    "strings": []
+  },
+  {
+    "class": "net/anubis/client/discord/DiscordIpc",
+    "method": "openWindowsPipe",
+    "descriptor": "()Lnet/anubis/client/discord/DiscordIpc$Pipe;",
+    "calls": [
+      {
+        "owner": "java/io/RandomAccessFile",
+        "name": "<init>",
+        "descriptor": "(Ljava/lang/String;Ljava/lang/String;)V",
+        "tag": 10,
+        "offset": 25,
+        "opcode": 183
+      }
+    ],
+    "strings": [
+      "rw"
+    ]
+  },
+  {
+    "class": "net/anubis/client/discord/DiscordIpc",
+    "method": "openUnixSocket",
+    "descriptor": "()Lnet/anubis/client/discord/DiscordIpc$Pipe;",
+    "calls": [
+      {
+        "owner": "java/nio/file/Files",
+        "name": "exists",
+        "descriptor": "(Ljava/nio/file/Path;[Ljava/nio/file/LinkOption;)Z",
+        "tag": 10,
+        "offset": 54,
+        "opcode": 184
+      }
+    ],
+    "strings": []
+  },
+  {
+    "class": "net/anubis/client/discord/DiscordIpc",
+    "method": "addSubfolders",
+    "descriptor": "(Ljava/util/Set;Ljava/nio/file/Path;Ljava/lang/String;)V",
+    "calls": [
+      {
+        "owner": "java/nio/file/Files",
+        "name": "isDirectory",
+        "descriptor": "(Ljava/nio/file/Path;[Ljava/nio/file/LinkOption;)Z",
+        "tag": 10,
+        "offset": 5,
+        "opcode": 184
+      },
+      {
+        "owner": "java/nio/file/Files",
+        "name": "newDirectoryStream",
+        "descriptor": "(Ljava/nio/file/Path;Ljava/lang/String;)Ljava/nio/file/DirectoryStream;",
+        "tag": 10,
+        "offset": 14,
+        "opcode": 184
+      },
+      {
+        "owner": "java/nio/file/Files",
+        "name": "isDirectory",
+        "descriptor": "(Ljava/nio/file/Path;[Ljava/nio/file/LinkOption;)Z",
+        "tag": 10,
+        "offset": 54,
+        "opcode": 184
+      }
+    ],
+    "strings": []
+  },
+  {
+    "class": "net/anubis/client/gui/AndroidSystemPicker",
+    "method": "readResult",
+    "descriptor": "(Ljava/nio/file/Path;)Lnet/anubis/client/gui/AndroidSystemPicker$Result;",
+    "calls": [
+      {
+        "owner": "java/nio/file/Files",
+        "name": "isDirectory",
+        "descriptor": "(Ljava/nio/file/Path;[Ljava/nio/file/LinkOption;)Z",
+        "tag": 10,
+        "offset": 11,
+        "opcode": 184
+      },
+      {
+        "owner": "java/nio/file/Files",
+        "name": "exists",
+        "descriptor": "(Ljava/nio/file/Path;[Ljava/nio/file/LinkOption;)Z",
+        "tag": 10,
+        "offset": 49,
+        "opcode": 184
+      },
+      {
+        "owner": "java/nio/file/Files",
+        "name": "isRegularFile",
+        "descriptor": "(Ljava/nio/file/Path;[Ljava/nio/file/LinkOption;)Z",
+        "tag": 10,
+        "offset": 78,
+        "opcode": 184
+      },
+      {
+        "owner": "java/nio/file/Files",
+        "name": "newInputStream",
+        "descriptor": "(Ljava/nio/file/Path;[Ljava/nio/file/OpenOption;)Ljava/io/InputStream;",
+        "tag": 10,
+        "offset": 114,
+        "opcode": 184
+      },
+      {
+        "owner": "java/nio/file/Files",
+        "name": "isRegularFile",
+        "descriptor": "(Ljava/nio/file/Path;[Ljava/nio/file/LinkOption;)Z",
+        "tag": 10,
+        "offset": 537,
+        "opcode": 184
+      },
+      {
+        "owner": "java/nio/file/Files",
+        "name": "isReadable",
+        "descriptor": "(Ljava/nio/file/Path;)Z",
+        "tag": 10,
+        "offset": 545,
+        "opcode": 184
+      },
+      {
+        "owner": "java/nio/file/Files",
+        "name": "size",
+        "descriptor": "(Ljava/nio/file/Path;)J",
+        "tag": 10,
+        "offset": 564,
+        "opcode": 184
+      }
+    ],
+    "strings": [
+      "Invalid selection directory.",
+      "result.txt",
+      "pending",
+      "Invalid image selection result.",
+      "Image selection result is too large.",
+      "\\r?\\n",
+      "",
+      "",
+      "Invalid image selection result.",
+      "cancel",
+      "error",
+      "ok",
+      ".",
+      "..",
+      "Invalid image selection result.",
+      ".png",
+      ".jpg",
+      ".jpeg",
+      ".gif",
+      "Choose a PNG, JPG or GIF image.",
+      "The selected image could not be read.",
+      "Choose an image smaller than 64 MiB.",
+      "ok"
+    ]
+  },
+  {
+    "class": "net/anubis/client/gui/AndroidSystemPicker",
+    "method": "privateSubdirectory",
+    "descriptor": "(Ljava/nio/file/Path;Ljava/lang/String;)Ljava/nio/file/Path;",
+    "calls": [
+      {
+        "owner": "java/nio/file/Files",
+        "name": "createTempDirectory",
+        "descriptor": "(Ljava/nio/file/Path;Ljava/lang/String;[Ljava/nio/file/attribute/FileAttribute;)Ljava/nio/file/Path;",
+        "tag": 10,
+        "offset": 18,
+        "opcode": 184
+      }
+    ],
+    "strings": [
+      "rwx------"
+    ]
+  },
+  {
+    "class": "net/anubis/client/gui/AndroidSystemPicker",
+    "method": "extract",
+    "descriptor": "(Ljava/lang/String;Ljava/nio/file/Path;Z)V",
+    "calls": [
+      {
+        "owner": "java/nio/file/Files",
+        "name": "newOutputStream",
+        "descriptor": "(Ljava/nio/file/Path;[Ljava/nio/file/OpenOption;)Ljava/io/OutputStream;",
+        "tag": 10,
+        "offset": 44,
+        "opcode": 184
+      },
+      {
+        "owner": "java/nio/file/Files",
+        "name": "setPosixFilePermissions",
+        "descriptor": "(Ljava/nio/file/Path;Ljava/util/Set;)Ljava/nio/file/Path;",
+        "tag": 10,
+        "offset": 66,
+        "opcode": 184
+      },
+      {
+        "owner": "java/io/File",
+        "name": "deleteOnExit",
+        "descriptor": "()V",
+        "tag": 10,
+        "offset": 185,
+        "opcode": 182
+      }
+    ],
+    "strings": [
+      "Android image picker resource is missing.",
+      "r--------",
+      "r-x------"
+    ]
+  },
+  {
+    "class": "net/anubis/client/gui/AndroidSystemPicker",
+    "method": "cleanup",
+    "descriptor": "(Ljava/nio/file/Path;)V",
+    "calls": [
+      {
+        "owner": "java/nio/file/Files",
+        "name": "isDirectory",
+        "descriptor": "(Ljava/nio/file/Path;[Ljava/nio/file/LinkOption;)Z",
+        "tag": 10,
+        "offset": 15,
+        "opcode": 184
+      },
+      {
+        "owner": "java/nio/file/Files",
+        "name": "newDirectoryStream",
+        "descriptor": "(Ljava/nio/file/Path;)Ljava/nio/file/DirectoryStream;",
+        "tag": 10,
+        "offset": 23,
+        "opcode": 184
+      },
+      {
+        "owner": "java/nio/file/Files",
+        "name": "isDirectory",
+        "descriptor": "(Ljava/nio/file/Path;[Ljava/nio/file/LinkOption;)Z",
+        "tag": 10,
+        "offset": 64,
+        "opcode": 184
+      },
+      {
+        "owner": "java/nio/file/Files",
+        "name": "deleteIfExists",
+        "descriptor": "(Ljava/nio/file/Path;)Z",
+        "tag": 10,
+        "offset": 71,
+        "opcode": 184
+      },
+      {
+        "owner": "java/nio/file/Files",
+        "name": "deleteIfExists",
+        "descriptor": "(Ljava/nio/file/Path;)Z",
+        "tag": 10,
+        "offset": 118,
+        "opcode": 184
+      }
+    ],
+    "strings": []
+  },
+  {
+    "class": "net/anubis/client/gui/ClickGuiRenderer",
+    "method": "savedPanelSpots",
+    "descriptor": "()Ljava/util/Map;",
+    "calls": [
+      {
+        "owner": "java/nio/file/Files",
+        "name": "isRegularFile",
+        "descriptor": "(Ljava/nio/file/Path;[Ljava/nio/file/LinkOption;)Z",
+        "tag": 10,
+        "offset": 31,
+        "opcode": 184
+      },
+      {
+        "owner": "java/nio/file/Files",
+        "name": "readAllLines",
+        "descriptor": "(Ljava/nio/file/Path;)Ljava/util/List;",
+        "tag": 10,
+        "offset": 53,
+        "opcode": 184
+      }
+    ],
+    "strings": [
+      "[Window][",
+      "[",
+      "]",
+      "Pos=",
+      ","
+    ]
+  },
+  {
+    "class": "net/anubis/client/gui/ClickGuiRenderer",
+    "method": "openProfilesFolder",
+    "descriptor": "(Lnet/anubis/client/config/ConfigProfiles;)V",
+    "calls": [
+      {
+        "owner": "java/nio/file/Files",
+        "name": "createDirectories",
+        "descriptor": "(Ljava/nio/file/Path;[Ljava/nio/file/attribute/FileAttribute;)Ljava/nio/file/Path;",
+        "tag": 10,
+        "offset": 10,
+        "opcode": 184
+      }
+    ],
+    "strings": [
+      "Could not open the profiles folder"
+    ]
+  },
+  {
+    "class": "net/anubis/client/gui/FileDialogs",
+    "method": "startIn",
+    "descriptor": "(Ljava/lang/String;)Ljava/lang/String;",
+    "calls": [
+      {
+        "owner": "java/nio/file/Files",
+        "name": "isDirectory",
+        "descriptor": "(Ljava/nio/file/Path;[Ljava/nio/file/LinkOption;)Z",
+        "tag": 10,
+        "offset": 13,
+        "opcode": 184
+      }
+    ],
+    "strings": []
+  },
+  {
+    "class": "net/anubis/client/gui/FileDialogs",
+    "method": "defaultFolder",
+    "descriptor": "()Ljava/nio/file/Path;",
+    "calls": [
+      {
+        "owner": "java/nio/file/Files",
+        "name": "isDirectory",
+        "descriptor": "(Ljava/nio/file/Path;[Ljava/nio/file/LinkOption;)Z",
+        "tag": 10,
+        "offset": 29,
+        "opcode": 184
+      }
+    ],
+    "strings": [
+      "user.home",
+      ".",
+      "Downloads",
+      "."
+    ]
+  },
+  {
+    "class": "net/anubis/client/gui/GifAnimation",
+    "method": "decode",
+    "descriptor": "(Ljava/nio/file/Path;)V",
+    "calls": [
+      {
+        "owner": "java/nio/file/Files",
+        "name": "readAllBytes",
+        "descriptor": "(Ljava/nio/file/Path;)[B",
+        "tag": 10,
+        "offset": 14,
+        "opcode": 184
+      }
+    ],
+    "strings": [
+      "[Anubis] {} has {} frames; only the first {} will play",
+      "[Anubis] {} ({}x{}, {} frames) plays at {}x{} to keep its memory use down",
+      "[Anubis] Failed to load {}"
+    ]
+  },
+  {
+    "class": "net/anubis/client/gui/HudLayoutStore",
+    "method": "save",
+    "descriptor": "()V",
+    "calls": [
+      {
+        "owner": "java/nio/file/Files",
+        "name": "createDirectories",
+        "descriptor": "(Ljava/nio/file/Path;[Ljava/nio/file/attribute/FileAttribute;)Ljava/nio/file/Path;",
+        "tag": 10,
+        "offset": 23,
+        "opcode": 184
+      },
+      {
+        "owner": "java/nio/file/Files",
+        "name": "newBufferedWriter",
+        "descriptor": "(Ljava/nio/file/Path;[Ljava/nio/file/OpenOption;)Ljava/io/BufferedWriter;",
+        "tag": 10,
+        "offset": 55,
+        "opcode": 184
+      },
+      {
+        "owner": "java/nio/file/Files",
+        "name": "move",
+        "descriptor": "(Ljava/nio/file/Path;Ljava/nio/file/Path;[Ljava/nio/file/CopyOption;)Ljava/nio/file/Path;",
+        "tag": 10,
+        "offset": 127,
+        "opcode": 184
+      },
+      {
+        "owner": "java/nio/file/Files",
+        "name": "move",
+        "descriptor": "(Ljava/nio/file/Path;Ljava/nio/file/Path;[Ljava/nio/file/CopyOption;)Ljava/nio/file/Path;",
+        "tag": 10,
+        "offset": 148,
+        "opcode": 184
+      }
+    ],
+    "strings": [
+      "[Anubis] Failed to save HUD layout config"
+    ]
+  },
+  {
+    "class": "net/anubis/client/gui/HudLayoutStore",
+    "method": "loadIfNeeded",
+    "descriptor": "()V",
+    "calls": [
+      {
+        "owner": "java/nio/file/Files",
+        "name": "isRegularFile",
+        "descriptor": "(Ljava/nio/file/Path;[Ljava/nio/file/LinkOption;)Z",
+        "tag": 10,
+        "offset": 26,
+        "opcode": 184
+      },
+      {
+        "owner": "java/nio/file/Files",
+        "name": "newBufferedReader",
+        "descriptor": "(Ljava/nio/file/Path;)Ljava/io/BufferedReader;",
+        "tag": 10,
+        "offset": 34,
+        "opcode": 184
+      }
+    ],
+    "strings": [
+      "[Anubis] Failed to load HUD layout config; using defaults"
+    ]
+  },
+  {
+    "class": "net/anubis/client/gui/PanelStateStore",
+    "method": "load",
+    "descriptor": "()V",
+    "calls": [
+      {
+        "owner": "java/nio/file/Files",
+        "name": "isRegularFile",
+        "descriptor": "(Ljava/nio/file/Path;[Ljava/nio/file/LinkOption;)Z",
+        "tag": 10,
+        "offset": 32,
+        "opcode": 184
+      },
+      {
+        "owner": "java/nio/file/Files",
+        "name": "newBufferedReader",
+        "descriptor": "(Ljava/nio/file/Path;)Ljava/io/BufferedReader;",
+        "tag": 10,
+        "offset": 53,
+        "opcode": 184
+      }
+    ],
+    "strings": [
+      "version",
+      "version",
+      "[Anubis] ClickGUI state version {} is newer than supported {}; skipping load",
+      "collapsed",
+      "collapsed",
+      "collapsed",
+      "[Anubis] Failed to load the ClickGUI state; preserving the file"
+    ]
+  },
+  {
+    "class": "net/anubis/client/gui/PanelStateStore",
+    "method": "save",
+    "descriptor": "()V",
+    "calls": [
+      {
+        "owner": "java/nio/file/Files",
+        "name": "createDirectories",
+        "descriptor": "(Ljava/nio/file/Path;[Ljava/nio/file/attribute/FileAttribute;)Ljava/nio/file/Path;",
+        "tag": 10,
+        "offset": 95,
+        "opcode": 184
+      },
+      {
+        "owner": "java/nio/file/Files",
+        "name": "newBufferedWriter",
+        "descriptor": "(Ljava/nio/file/Path;[Ljava/nio/file/OpenOption;)Ljava/io/BufferedWriter;",
+        "tag": 10,
+        "offset": 129,
+        "opcode": 184
+      },
+      {
+        "owner": "java/nio/file/Files",
+        "name": "move",
+        "descriptor": "(Ljava/nio/file/Path;Ljava/nio/file/Path;[Ljava/nio/file/CopyOption;)Ljava/nio/file/Path;",
+        "tag": 10,
+        "offset": 202,
+        "opcode": 184
+      },
+      {
+        "owner": "java/nio/file/Files",
+        "name": "move",
+        "descriptor": "(Ljava/nio/file/Path;Ljava/nio/file/Path;[Ljava/nio/file/CopyOption;)Ljava/nio/file/Path;",
+        "tag": 10,
+        "offset": 224,
+        "opcode": 184
+      }
+    ],
+    "strings": [
+      "version",
+      "collapsed",
+      "[Anubis] Failed to save the ClickGUI state"
+    ]
+  },
+  {
+    "class": "net/anubis/client/gui/ThemeImages",
+    "method": "importFile",
+    "descriptor": "(Ljava/nio/file/Path;)Ljava/lang/String;",
+    "calls": [
+      {
+        "owner": "java/nio/file/Files",
+        "name": "isRegularFile",
+        "descriptor": "(Ljava/nio/file/Path;[Ljava/nio/file/LinkOption;)Z",
+        "tag": 10,
+        "offset": 9,
+        "opcode": 184
+      },
+      {
+        "owner": "java/nio/file/Files",
+        "name": "createDirectories",
+        "descriptor": "(Ljava/nio/file/Path;[Ljava/nio/file/attribute/FileAttribute;)Ljava/nio/file/Path;",
+        "tag": 10,
+        "offset": 33,
+        "opcode": 184
+      },
+      {
+        "owner": "java/nio/file/Files",
+        "name": "copy",
+        "descriptor": "(Ljava/nio/file/Path;Ljava/nio/file/Path;[Ljava/nio/file/CopyOption;)Ljava/nio/file/Path;",
+        "tag": 10,
+        "offset": 112,
+        "opcode": 184
+      }
+    ],
+    "strings": [
+      "[Anubis] Failed to import header image {}"
+    ]
+  },
+  {
+    "class": "net/anubis/client/gui/ThemeImages",
+    "method": "delete",
+    "descriptor": "(Ljava/lang/String;)Z",
+    "calls": [
+      {
+        "owner": "java/nio/file/Files",
+        "name": "deleteIfExists",
+        "descriptor": "(Ljava/nio/file/Path;)Z",
+        "tag": 10,
+        "offset": 28,
+        "opcode": 184
+      }
+    ],
+    "strings": [
+      "[Anubis] Failed to delete header image {}",
+      "t:",
+      "p:",
+      "a:",
+      "g:",
+      "",
+      "None"
+    ]
+  },
+  {
+    "class": "net/anubis/client/gui/ThemeImages",
+    "method": "scan",
+    "descriptor": "()Ljava/util/List;",
+    "calls": [
+      {
+        "owner": "java/nio/file/Files",
+        "name": "isDirectory",
+        "descriptor": "(Ljava/nio/file/Path;[Ljava/nio/file/LinkOption;)Z",
+        "tag": 10,
+        "offset": 9,
+        "opcode": 184
+      },
+      {
+        "owner": "java/nio/file/Files",
+        "name": "list",
+        "descriptor": "(Ljava/nio/file/Path;)Ljava/util/stream/Stream;",
+        "tag": 10,
+        "offset": 20,
+        "opcode": 184
+      }
+    ],
+    "strings": []
+  },
+  {
+    "class": "net/anubis/client/gui/ThemeImages",
+    "method": "uniqueName",
+    "descriptor": "(Ljava/nio/file/Path;Ljava/lang/String;)Ljava/lang/String;",
+    "calls": [
+      {
+        "owner": "java/nio/file/Files",
+        "name": "exists",
+        "descriptor": "(Ljava/nio/file/Path;[Ljava/nio/file/LinkOption;)Z",
+        "tag": 10,
+        "offset": 69,
+        "opcode": 184
+      }
+    ],
+    "strings": [
+      "[^A-Za-z0-9._-]",
+      "_",
+      ""
+    ]
+  },
+  {
+    "class": "net/anubis/client/gui/ThemeImages",
+    "method": "upload",
+    "descriptor": "(Ljava/nio/file/Path;I)Lnet/anubis/client/gui/ThemeImages$Texture;",
+    "calls": [
+      {
+        "owner": "java/nio/file/Files",
+        "name": "isRegularFile",
+        "descriptor": "(Ljava/nio/file/Path;[Ljava/nio/file/LinkOption;)Z",
+        "tag": 10,
+        "offset": 5,
+        "opcode": 184
+      },
+      {
+        "owner": "java/nio/file/Files",
+        "name": "readAllBytes",
+        "descriptor": "(Ljava/nio/file/Path;)[B",
+        "tag": 10,
+        "offset": 14,
+        "opcode": 184
+      }
+    ],
+    "strings": [
+      "[Anubis] Failed to load {}"
+    ]
+  },
+  {
+    "class": "net/anubis/client/gui/ThemeImages",
+    "method": "lambda$scan$7",
+    "descriptor": "(Ljava/nio/file/Path;)Z",
+    "calls": [
+      {
+        "owner": "java/nio/file/Files",
+        "name": "isRegularFile",
+        "descriptor": "(Ljava/nio/file/Path;[Ljava/nio/file/LinkOption;)Z",
+        "tag": 10,
+        "offset": 5,
+        "opcode": 184
+      }
+    ],
+    "strings": []
+  },
+  {
+    "class": "net/anubis/client/gui/mainmenu/ConnectionsPanel",
+    "method": "importFrom",
+    "descriptor": "(Ljava/nio/file/Path;)V",
+    "calls": [
+      {
+        "owner": "java/nio/file/Files",
+        "name": "readString",
+        "descriptor": "(Ljava/nio/file/Path;)Ljava/lang/String;",
+        "tag": 10,
+        "offset": 5,
+        "opcode": 184
+      }
+    ],
+    "strings": []
+  },
+  {
+    "class": "net/anubis/client/imgui/ImGuiManager",
+    "method": "iniPath",
+    "descriptor": "()Ljava/lang/String;",
+    "calls": [
+      {
+        "owner": "java/nio/file/Files",
+        "name": "createDirectories",
+        "descriptor": "(Ljava/nio/file/Path;[Ljava/nio/file/attribute/FileAttribute;)Ljava/nio/file/Path;",
+        "tag": 10,
+        "offset": 22,
+        "opcode": 184
+      }
+    ],
+    "strings": [
+      "anubis",
+      "gui.ini"
+    ]
+  },
+  {
+    "class": "net/anubis/client/module/impl/misc/SkinChangeModule",
+    "method": "lambda$loadFromUsername$5",
+    "descriptor": "(Ljava/lang/String;Lnet/minecraft/class_310;Z)V",
+    "calls": [
+      {
+        "owner": "java/io/File",
+        "name": "toPath",
+        "descriptor": "()Ljava/nio/file/Path;",
+        "tag": 10,
+        "offset": 80,
+        "opcode": 182
+      },
+      {
+        "owner": "java/nio/file/Files",
+        "name": "createDirectories",
+        "descriptor": "(Ljava/nio/file/Path;[Ljava/nio/file/attribute/FileAttribute;)Ljava/nio/file/Path;",
+        "tag": 10,
+        "offset": 99,
+        "opcode": 184
+      }
+    ],
+    "strings": [
+      "anubis",
+      "skin/self",
+      "anubis",
+      "skin/others",
+      "cache/anubis_skins",
+      "self_",
+      "others_"
+    ]
+  },
+  {
+    "class": "net/anubis/client/module/impl/render/character/CharacterModule",
+    "method": "openFolder",
+    "descriptor": "()V",
+    "calls": [
+      {
+        "owner": "java/nio/file/Files",
+        "name": "createDirectories",
+        "descriptor": "(Ljava/nio/file/Path;[Ljava/nio/file/attribute/FileAttribute;)Ljava/nio/file/Path;",
+        "tag": 10,
+        "offset": 9,
+        "opcode": 184
+      }
+    ],
+    "strings": [
+      "Couldn't create "
+    ]
+  },
+  {
+    "class": "net/anubis/client/module/impl/render/character/CustomCharacters",
+    "method": "scan",
+    "descriptor": "()Ljava/util/List;",
+    "calls": [
+      {
+        "owner": "java/nio/file/Files",
+        "name": "newDirectoryStream",
+        "descriptor": "(Ljava/nio/file/Path;Ljava/lang/String;)Ljava/nio/file/DirectoryStream;",
+        "tag": 10,
+        "offset": 13,
+        "opcode": 184
+      },
+      {
+        "owner": "java/nio/file/Files",
+        "name": "isRegularFile",
+        "descriptor": "(Ljava/nio/file/Path;[Ljava/nio/file/LinkOption;)Z",
+        "tag": 10,
+        "offset": 48,
+        "opcode": 184
+      },
+      {
+        "owner": "java/nio/file/Files",
+        "name": "size",
+        "descriptor": "(Ljava/nio/file/Path;)J",
+        "tag": 10,
+        "offset": 191,
+        "opcode": 184
+      },
+      {
+        "owner": "java/nio/file/Files",
+        "name": "getLastModifiedTime",
+        "descriptor": "(Ljava/nio/file/Path;[Ljava/nio/file/LinkOption;)Ljava/nio/file/attribute/FileTime;",
+        "tag": 10,
+        "offset": 200,
+        "opcode": 184
+      }
+    ],
+    "strings": [
+      "*.{glb,GLB}",
+      "[Anubis] Skipping custom character {}: {}"
+    ]
+  },
+  {
+    "class": "net/anubis/client/module/impl/render/character/CustomCharacters",
+    "method": "prune",
+    "descriptor": "(Ljava/util/Set;)V",
+    "calls": [
+      {
+        "owner": "java/nio/file/Files",
+        "name": "newDirectoryStream",
+        "descriptor": "(Ljava/nio/file/Path;Ljava/lang/String;)Ljava/nio/file/DirectoryStream;",
+        "tag": 10,
+        "offset": 6,
+        "opcode": 184
+      },
+      {
+        "owner": "java/nio/file/Files",
+        "name": "deleteIfExists",
+        "descriptor": "(Ljava/nio/file/Path;)Z",
+        "tag": 10,
+        "offset": 70,
+        "opcode": 184
+      }
+    ],
+    "strings": [
+      "*.anc",
+      ".anc",
+      ""
+    ]
+  },
+  {
+    "class": "net/anubis/client/module/impl/render/character/CustomCharacters",
+    "method": "open",
+    "descriptor": "(Ljava/nio/file/Path;Ljava/lang/String;)Ljava/io/InputStream;",
+    "calls": [
+      {
+        "owner": "java/nio/file/Files",
+        "name": "exists",
+        "descriptor": "(Ljava/nio/file/Path;[Ljava/nio/file/LinkOption;)Z",
+        "tag": 10,
+        "offset": 20,
+        "opcode": 184
+      },
+      {
+        "owner": "java/nio/file/Files",
+        "name": "newInputStream",
+        "descriptor": "(Ljava/nio/file/Path;[Ljava/nio/file/OpenOption;)Ljava/io/InputStream;",
+        "tag": 10,
+        "offset": 31,
+        "opcode": 184
+      },
+      {
+        "owner": "java/nio/file/Files",
+        "name": "size",
+        "descriptor": "(Ljava/nio/file/Path;)J",
+        "tag": 10,
+        "offset": 36,
+        "opcode": 184
+      },
+      {
+        "owner": "java/nio/file/Files",
+        "name": "readAllBytes",
+        "descriptor": "(Ljava/nio/file/Path;)[B",
+        "tag": 10,
+        "offset": 79,
+        "opcode": 184
+      },
+      {
+        "owner": "java/nio/file/Files",
+        "name": "createDirectories",
+        "descriptor": "(Ljava/nio/file/Path;[Ljava/nio/file/attribute/FileAttribute;)Ljava/nio/file/Path;",
+        "tag": 10,
+        "offset": 172,
+        "opcode": 184
+      },
+      {
+        "owner": "java/nio/file/Files",
+        "name": "write",
+        "descriptor": "(Ljava/nio/file/Path;[B[Ljava/nio/file/OpenOption;)Ljava/nio/file/Path;",
+        "tag": 10,
+        "offset": 203,
+        "opcode": 184
+      },
+      {
+        "owner": "java/nio/file/Files",
+        "name": "move",
+        "descriptor": "(Ljava/nio/file/Path;Ljava/nio/file/Path;[Ljava/nio/file/CopyOption;)Ljava/nio/file/Path;",
+        "tag": 10,
+        "offset": 220,
+        "opcode": 184
+      }
+    ],
+    "strings": [
+      "the file is larger than 256 MB",
+      "[Anubis] Baked custom character {} in {} ms, moving {}"
+    ]
+  },
+  {
+    "class": "net/anubis/client/module/impl/render/character/kit/BakedDesign",
+    "method": "lambda$builtIn$0",
+    "descriptor": "(Ljava/lang/String;)Ljava/io/InputStream;",
+    "calls": [
+      {
+        "owner": "java/io/FileNotFoundException",
+        "name": "<init>",
+        "descriptor": "(Ljava/lang/String;)V",
+        "tag": 10,
+        "offset": 16,
+        "opcode": 183
+      }
+    ],
+    "strings": []
+  },
+  {
+    "class": "net/anubis/client/proxy/Proxies",
+    "method": "load",
+    "descriptor": "()V",
+    "calls": [
+      {
+        "owner": "java/nio/file/Files",
+        "name": "isRegularFile",
+        "descriptor": "(Ljava/nio/file/Path;[Ljava/nio/file/LinkOption;)Z",
+        "tag": 10,
+        "offset": 25,
+        "opcode": 184
+      },
+      {
+        "owner": "java/nio/file/Files",
+        "name": "newBufferedReader",
+        "descriptor": "(Ljava/nio/file/Path;)Ljava/io/BufferedReader;",
+        "tag": 10,
+        "offset": 32,
+        "opcode": 184
+      }
+    ],
+    "strings": [
+      "version",
+      "[Anubis] Proxy list version {} is newer than supported {}; skipping load",
+      "proxies",
+      "[Anubis] Failed to load the proxy list; starting empty"
+    ]
+  },
+  {
+    "class": "net/anubis/client/proxy/Proxies",
+    "method": "setAside",
+    "descriptor": "(Ljava/nio/file/Path;)V",
+    "calls": [
+      {
+        "owner": "java/nio/file/Files",
+        "name": "move",
+        "descriptor": "(Ljava/nio/file/Path;Ljava/nio/file/Path;[Ljava/nio/file/CopyOption;)Ljava/nio/file/Path;",
+        "tag": 10,
+        "offset": 31,
+        "opcode": 184
+      }
+    ],
+    "strings": [
+      "[Anubis] Couldn't move the broken proxy list aside; not saving proxies this session"
+    ]
+  },
+  {
+    "class": "net/anubis/client/proxy/Proxies",
+    "method": "save",
+    "descriptor": "()V",
+    "calls": [
+      {
+        "owner": "java/nio/file/Files",
+        "name": "createDirectories",
+        "descriptor": "(Ljava/nio/file/Path;[Ljava/nio/file/attribute/FileAttribute;)Ljava/nio/file/Path;",
+        "tag": 10,
+        "offset": 312,
+        "opcode": 184
+      },
+      {
+        "owner": "java/nio/file/Files",
+        "name": "newBufferedWriter",
+        "descriptor": "(Ljava/nio/file/Path;[Ljava/nio/file/OpenOption;)Ljava/io/BufferedWriter;",
+        "tag": 10,
+        "offset": 346,
+        "opcode": 184
+      },
+      {
+        "owner": "java/nio/file/Files",
+        "name": "move",
+        "descriptor": "(Ljava/nio/file/Path;Ljava/nio/file/Path;[Ljava/nio/file/CopyOption;)Ljava/nio/file/Path;",
+        "tag": 10,
+        "offset": 419,
+        "opcode": 184
+      },
+      {
+        "owner": "java/nio/file/Files",
+        "name": "move",
+        "descriptor": "(Ljava/nio/file/Path;Ljava/nio/file/Path;[Ljava/nio/file/CopyOption;)Ljava/nio/file/Path;",
+        "tag": 10,
+        "offset": 441,
+        "opcode": 184
+      }
+    ],
+    "strings": [
+      "version",
+      "name",
+      "",
+      "type",
+      "address",
+      "",
+      "port",
+      "username",
+      "password",
+      "enabled",
+      "ping",
+      "proxies",
+      "[Anubis] Failed to save the proxy list"
+    ]
+  },
+  {
+    "class": "net/anubis/client/util/TranslationGuard",
+    "method": "collect",
+    "descriptor": "(Lnet/fabricmc/loader/api/ModContainer;Ljava/util/Set;Ljava/util/Set;)V",
+    "calls": [
+      {
+        "owner": "java/nio/file/Files",
+        "name": "isDirectory",
+        "descriptor": "(Ljava/nio/file/Path;[Ljava/nio/file/LinkOption;)Z",
+        "tag": 10,
+        "offset": 50,
+        "opcode": 184
+      },
+      {
+        "owner": "java/nio/file/Files",
+        "name": "isDirectory",
+        "descriptor": "(Ljava/nio/file/Path;[Ljava/nio/file/LinkOption;)Z",
+        "tag": 10,
+        "offset": 99,
+        "opcode": 184
+      },
+      {
+        "owner": "java/nio/file/Files",
+        "name": "isDirectory",
+        "descriptor": "(Ljava/nio/file/Path;[Ljava/nio/file/LinkOption;)Z",
+        "tag": 10,
+        "offset": 154,
+        "opcode": 184
+      },
+      {
+        "owner": "java/nio/file/Files",
+        "name": "newBufferedReader",
+        "descriptor": "(Ljava/nio/file/Path;Ljava/nio/charset/Charset;)Ljava/io/BufferedReader;",
+        "tag": 10,
+        "offset": 226,
+        "opcode": 184
+      }
+    ],
+    "strings": [
+      "assets",
+      "/",
+      "",
+      "lang",
+      ".json",
+      "Could not read {}"
+    ]
+  },
+  {
+    "class": "net/anubis/client/util/TranslationGuard",
+    "method": "list",
+    "descriptor": "(Ljava/nio/file/Path;)Ljava/util/List;",
+    "calls": [
+      {
+        "owner": "java/nio/file/Files",
+        "name": "list",
+        "descriptor": "(Ljava/nio/file/Path;)Ljava/util/stream/Stream;",
+        "tag": 10,
+        "offset": 1,
+        "opcode": 184
+      }
+    ],
+    "strings": [
+      "Could not list {}"
+    ]
+  },
+  {
+    "class": "net/anubis/client/util/playerbypass/ProtectedChunkStore",
+    "method": "write",
+    "descriptor": "(Lnet/anubis/client/util/playerbypass/ProtectedChunkStore$Bucket;[J)V",
+    "calls": [
+      {
+        "owner": "java/nio/file/Files",
+        "name": "createDirectories",
+        "descriptor": "(Ljava/nio/file/Path;[Ljava/nio/file/attribute/FileAttribute;)Ljava/nio/file/Path;",
+        "tag": 10,
+        "offset": 13,
+        "opcode": 184
+      },
+      {
+        "owner": "java/nio/file/Files",
+        "name": "newBufferedWriter",
+        "descriptor": "(Ljava/nio/file/Path;[Ljava/nio/file/OpenOption;)Ljava/io/BufferedWriter;",
+        "tag": 10,
+        "offset": 53,
+        "opcode": 184
+      },
+      {
+        "owner": "java/nio/file/Files",
+        "name": "move",
+        "descriptor": "(Ljava/nio/file/Path;Ljava/nio/file/Path;[Ljava/nio/file/CopyOption;)Ljava/nio/file/Path;",
+        "tag": 10,
+        "offset": 242,
+        "opcode": 184
+      },
+      {
+        "owner": "java/nio/file/Files",
+        "name": "move",
+        "descriptor": "(Ljava/nio/file/Path;Ljava/nio/file/Path;[Ljava/nio/file/CopyOption;)Ljava/nio/file/Path;",
+        "tag": 10,
+        "offset": 265,
+        "opcode": 184
+      }
+    ],
+    "strings": [
+      "version",
+      "server",
+      "dimension",
+      "count",
+      "chunks"
+    ]
+  },
+  {
+    "class": "net/anubis/client/util/playerbypass/ProtectedChunkStore",
+    "method": "load",
+    "descriptor": "(Lnet/anubis/client/util/playerbypass/ProtectedChunkStore$Bucket;)V",
+    "calls": [
+      {
+        "owner": "java/nio/file/Files",
+        "name": "isRegularFile",
+        "descriptor": "(Ljava/nio/file/Path;[Ljava/nio/file/LinkOption;)Z",
+        "tag": 10,
+        "offset": 8,
+        "opcode": 184
+      },
+      {
+        "owner": "java/nio/file/Files",
+        "name": "newBufferedReader",
+        "descriptor": "(Ljava/nio/file/Path;)Ljava/io/BufferedReader;",
+        "tag": 10,
+        "offset": 25,
+        "opcode": 184
+      },
+      {
+        "owner": "java/nio/file/Files",
+        "name": "size",
+        "descriptor": "(Ljava/nio/file/Path;)J",
+        "tag": 10,
+        "offset": 36,
+        "opcode": 184
+      }
+    ],
+    "strings": [
+      "version",
+      "count",
+      "chunks",
+      "[Anubis] Failed to load Player Bypass protected chunks from {}; preserving the file",
+      "[Anubis] Player Bypass protected chunks file {} is version {}, newer than supported {}; skipping load"
+    ]
+  },
+  {
+    "class": "net/anubis/client/util/spotify/LyricsDiskCache",
+    "method": "read",
+    "descriptor": "(Ljava/lang/String;)Lnet/anubis/client/util/spotify/LyricsDiskCache$Entry;",
+    "calls": [
+      {
+        "owner": "java/nio/file/Files",
+        "name": "size",
+        "descriptor": "(Ljava/nio/file/Path;)J",
+        "tag": 10,
+        "offset": 13,
+        "opcode": 184
+      },
+      {
+        "owner": "java/nio/file/Files",
+        "name": "readString",
+        "descriptor": "(Ljava/nio/file/Path;Ljava/nio/charset/Charset;)Ljava/lang/String;",
+        "tag": 10,
+        "offset": 29,
+        "opcode": 184
+      }
+    ],
+    "strings": [
+      "format",
+      "fetchedAt",
+      "track",
+      "track"
+    ]
+  },
+  {
+    "class": "net/anubis/client/util/spotify/LyricsDiskCache",
+    "method": "write",
+    "descriptor": "(Ljava/lang/String;Lnet/anubis/client/util/spotify/LrclibTrack;J)V",
+    "calls": [
+      {
+        "owner": "java/nio/file/Files",
+        "name": "createDirectories",
+        "descriptor": "(Ljava/nio/file/Path;[Ljava/nio/file/attribute/FileAttribute;)Ljava/nio/file/Path;",
+        "tag": 10,
+        "offset": 91,
+        "opcode": 184
+      },
+      {
+        "owner": "java/nio/file/Files",
+        "name": "writeString",
+        "descriptor": "(Ljava/nio/file/Path;Ljava/lang/CharSequence;Ljava/nio/charset/Charset;[Ljava/nio/file/OpenOption;)Ljava/nio/file/Path;",
+        "tag": 10,
+        "offset": 109,
+        "opcode": 184
+      },
+      {
+        "owner": "java/nio/file/Files",
+        "name": "move",
+        "descriptor": "(Ljava/nio/file/Path;Ljava/nio/file/Path;[Ljava/nio/file/CopyOption;)Ljava/nio/file/Path;",
+        "tag": 10,
+        "offset": 133,
+        "opcode": 184
+      },
+      {
+        "owner": "java/nio/file/Files",
+        "name": "move",
+        "descriptor": "(Ljava/nio/file/Path;Ljava/nio/file/Path;[Ljava/nio/file/CopyOption;)Ljava/nio/file/Path;",
+        "tag": 10,
+        "offset": 156,
+        "opcode": 184
+      }
+    ],
+    "strings": [
+      "format",
+      "fetchedAt",
+      "track"
+    ]
+  },
+  {
+    "class": "net/anubis/client/util/spotify/LyricsDiskCache",
+    "method": "prune",
+    "descriptor": "()V",
+    "calls": [
+      {
+        "owner": "java/nio/file/Files",
+        "name": "isDirectory",
+        "descriptor": "(Ljava/nio/file/Path;[Ljava/nio/file/LinkOption;)Z",
+        "tag": 10,
+        "offset": 8,
+        "opcode": 184
+      },
+      {
+        "owner": "java/nio/file/Files",
+        "name": "newDirectoryStream",
+        "descriptor": "(Ljava/nio/file/Path;)Ljava/nio/file/DirectoryStream;",
+        "tag": 10,
+        "offset": 29,
+        "opcode": 184
+      },
+      {
+        "owner": "java/nio/file/Files",
+        "name": "readAttributes",
+        "descriptor": "(Ljava/nio/file/Path;Ljava/lang/Class;[Ljava/nio/file/LinkOption;)Ljava/nio/file/attribute/BasicFileAttributes;",
+        "tag": 10,
+        "offset": 150,
+        "opcode": 184
+      }
+    ],
+    "strings": [
+      ".json.tmp",
+      ".json",
+      ".json"
+    ]
+  },
+  {
+    "class": "net/anubis/client/util/spotify/LyricsDiskCache",
+    "method": "delete",
+    "descriptor": "(Ljava/nio/file/Path;)Z",
+    "calls": [
+      {
+        "owner": "java/nio/file/Files",
+        "name": "deleteIfExists",
+        "descriptor": "(Ljava/nio/file/Path;)Z",
+        "tag": 10,
+        "offset": 1,
+        "opcode": 184
+      }
+    ],
+    "strings": []
+  },
+  {
+    "class": "net/anubis/client/util/spotify/LyricsDiskCache",
+    "method": "touch",
+    "descriptor": "(Ljava/nio/file/Path;)V",
+    "calls": [
+      {
+        "owner": "java/nio/file/Files",
+        "name": "setLastModifiedTime",
+        "descriptor": "(Ljava/nio/file/Path;Ljava/nio/file/attribute/FileTime;)Ljava/nio/file/Path;",
+        "tag": 10,
+        "offset": 7,
+        "opcode": 184
+      }
+    ],
+    "strings": []
+  }
+]

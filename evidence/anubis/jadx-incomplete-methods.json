@@ -1,0 +1,152 @@
+[
+  {
+    "file": "analysis-workspace/jadx/run.oEA4CbVx/sources/net/anubis/client/config/ConfigProfiles.java",
+    "methods": [
+      "net.anubis.client.config.ConfigProfiles.parse(com.google.gson.JsonObject, boolean, boolean):net.anubis.client.config.ConfigProfiles$Contents"
+    ]
+  },
+  {
+    "file": "analysis-workspace/jadx/run.oEA4CbVx/sources/net/anubis/client/event/EventBus.java",
+    "methods": [
+      "net.anubis.client.event.EventBus.drainAsync(int, long):int"
+    ]
+  },
+  {
+    "file": "analysis-workspace/jadx/run.oEA4CbVx/sources/net/anubis/client/gui/AndroidSystemPicker.java",
+    "methods": [
+      "net.anubis.client.gui.AndroidSystemPicker.run(net.anubis.client.gui.AndroidSystemPicker$Request):void"
+    ]
+  },
+  {
+    "file": "analysis-workspace/jadx/run.oEA4CbVx/sources/net/anubis/client/gui/ClickGuiRenderer.java",
+    "methods": [
+      "net.anubis.client.gui.ClickGuiRenderer.renderSetting(net.anubis.client.module.ClientModule, net.anubis.client.module.setting.Setting, float, float):void"
+    ]
+  },
+  {
+    "file": "analysis-workspace/jadx/run.oEA4CbVx/sources/net/anubis/client/module/ClientModule.java",
+    "methods": [
+      "net.anubis.client.module.ClientModule.switchTo(boolean):void"
+    ]
+  },
+  {
+    "file": "analysis-workspace/jadx/run.oEA4CbVx/sources/net/anubis/client/module/impl/combat/CrystalAuraModule.java",
+    "methods": [
+      "net.anubis.client.module.impl.combat.CrystalAuraModule.planBase(net.anubis.client.module.impl.combat.CrystalAuraModule$Fight, net.anubis.client.module.impl.combat.CrystalAuraModule$Step, net.minecraft.class_1511):net.anubis.client.module.impl.combat.CrystalAuraModule$Plan"
+    ]
+  },
+  {
+    "file": "analysis-workspace/jadx/run.oEA4CbVx/sources/net/anubis/client/module/impl/donutmacros/OrderDropperModule.java",
+    "methods": [
+      "net.anubis.client.module.impl.donutmacros.OrderDropperModule.drop(net.anubis.client.module.impl.donutmacros.Gui, int, int, long):void"
+    ]
+  },
+  {
+    "file": "analysis-workspace/jadx/run.oEA4CbVx/sources/net/anubis/client/module/impl/misc/DiscordPresenceModule.java",
+    "methods": [
+      "net.anubis.client.module.impl.misc.DiscordPresenceModule.Link.run():void"
+    ]
+  },
+  {
+    "file": "analysis-workspace/jadx/run.oEA4CbVx/sources/net/anubis/client/module/impl/misc/PlayerDetectionModule.java",
+    "methods": [
+      "net.anubis.client.module.impl.misc.PlayerDetectionModule.isValidWebhookUrl(java.lang.String):boolean"
+    ]
+  },
+  {
+    "file": "analysis-workspace/jadx/run.oEA4CbVx/sources/net/anubis/client/module/impl/misc/noinvleak/OverlayArt.java",
+    "methods": [
+      "net.anubis.client.module.impl.misc.noinvleak.OverlayArt.slice(java.lang.String, int, boolean):net.anubis.client.module.impl.misc.noinvleak.OverlayArt$Slice"
+    ]
+  },
+  {
+    "file": "analysis-workspace/jadx/run.oEA4CbVx/sources/net/anubis/client/module/impl/render/ChunkScannerModule.java",
+    "methods": [
+      "net.anubis.client.module.impl.render.ChunkScannerModule.onTick(net.anubis.client.event.impl.TickEvent):void"
+    ]
+  },
+  {
+    "file": "analysis-workspace/jadx/run.oEA4CbVx/sources/net/anubis/client/module/impl/render/CustomCrosshairModule.java",
+    "methods": [
+      "net.anubis.client.module.impl.render.CustomCrosshairModule.updateMotion(net.minecraft.class_310, net.minecraft.class_746, float):void"
+    ]
+  },
+  {
+    "file": "analysis-workspace/jadx/run.oEA4CbVx/sources/net/anubis/client/module/impl/render/HeadCosmeticModule.java",
+    "methods": [
+      "net.anubis.client.module.impl.render.HeadCosmeticModule.isFriend(net.minecraft.class_310, int):boolean"
+    ]
+  },
+  {
+    "file": "analysis-workspace/jadx/run.oEA4CbVx/sources/net/anubis/client/module/impl/render/SusChunkFinderModule.java",
+    "methods": [
+      "net.anubis.client.module.impl.render.SusChunkFinderModule.onTick(net.anubis.client.event.impl.TickEvent):void"
+    ]
+  },
+  {
+    "file": "analysis-workspace/jadx/run.oEA4CbVx/sources/net/anubis/client/module/impl/render/character/CharacterModule.java",
+    "methods": [
+      "net.anubis.client.module.impl.render.character.CharacterModule.isFriend(net.minecraft.class_310, int):boolean"
+    ]
+  },
+  {
+    "file": "analysis-workspace/jadx/run.oEA4CbVx/sources/net/anubis/client/module/impl/render/character/gltf/ShapeCut.java",
+    "methods": [
+      "net.anubis.client.module.impl.render.character.gltf.ShapeCut.find():net.anubis.client.module.impl.render.character.gltf.CharacterBake$Cut"
+    ]
+  },
+  {
+    "file": "analysis-workspace/jadx/run.oEA4CbVx/sources/net/anubis/client/module/impl/render/character/kit/CharacterBuilder.java",
+    "methods": [
+      "net.anubis.client.module.impl.render.character.kit.CharacterBuilder.bury(net.anubis.client.module.impl.render.character.kit.CharacterBuilder$Shaded, net.anubis.client.module.impl.render.character.kit.Mesh, net.anubis.client.module.impl.render.character.kit.Shape, float):net.anubis.client.module.impl.render.character.kit.Mesh"
+    ]
+  },
+  {
+    "file": "analysis-workspace/jadx/run.oEA4CbVx/sources/net/anubis/client/module/setting/ColorSetting.java",
+    "methods": [
+      "net.anubis.client.module.setting.ColorSetting.compact(com.google.gson.JsonElement):com.google.gson.JsonElement"
+    ]
+  },
+  {
+    "file": "analysis-workspace/jadx/run.oEA4CbVx/sources/net/anubis/client/proxy/Proxies.java",
+    "methods": [
+      "net.anubis.client.proxy.Proxies.readEntry(com.google.gson.JsonObject):net.anubis.client.proxy.Proxy"
+    ]
+  },
+  {
+    "file": "analysis-workspace/jadx/run.oEA4CbVx/sources/net/anubis/client/util/PearlTrajectorySimulator.java",
+    "methods": [
+      "net.anubis.client.util.PearlTrajectorySimulator.simulate(net.minecraft.class_1937, net.minecraft.class_243, net.minecraft.class_243, net.minecraft.class_1297, net.minecraft.class_1297):net.anubis.client.util.PearlTrajectorySimulator$SimulationResult"
+    ]
+  },
+  {
+    "file": "analysis-workspace/jadx/run.oEA4CbVx/sources/net/anubis/client/util/StableTopK.java",
+    "methods": [
+      "net.anubis.client.util.StableTopK.offer(java.lang.Object):void"
+    ]
+  },
+  {
+    "file": "analysis-workspace/jadx/run.oEA4CbVx/sources/net/anubis/client/util/antivanish/AntiVanishText.java",
+    "methods": [
+      "net.anubis.client.util.antivanish.AntiVanishText.stripLegacyCodes(java.lang.String):java.lang.String"
+    ]
+  },
+  {
+    "file": "analysis-workspace/jadx/run.oEA4CbVx/sources/net/anubis/client/util/glyph/GlyphSwarm.java",
+    "methods": [
+      "net.anubis.client.util.glyph.GlyphSwarm.draw(net.anubis.client.util.glyph.GlyphCanvas, float, boolean, net.minecraft.class_4604):void"
+    ]
+  },
+  {
+    "file": "analysis-workspace/jadx/run.oEA4CbVx/sources/net/anubis/client/util/spotify/MediaSession.java",
+    "methods": [
+      "net.anubis.client.util.spotify.MediaSession.readThumbnail(com.sun.jna.Pointer):net.anubis.client.util.spotify.MediaSession$Thumbnail"
+    ]
+  },
+  {
+    "file": "analysis-workspace/jadx/run.oEA4CbVx/sources/net/anubis/client/webhook/WebhookConfig.java",
+    "methods": [
+      "net.anubis.client.webhook.WebhookConfig.isValidUrl(java.lang.String):boolean"
+    ]
+  }
+]

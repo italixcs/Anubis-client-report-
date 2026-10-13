@@ -1,0 +1,100 @@
+[
+  {
+    "artifact": "imgui-java-binding-1.90.0.jar",
+    "source": "https://repo.maven.apache.org/maven2/io/github/spair/imgui-java-binding/1.90.0/imgui-java-binding-1.90.0.jar",
+    "download_exit": 0,
+    "published_sha256": "dc24b595bc053e0792998196d1fac482d835b29ec2057c8662634dc919ef7f44",
+    "bundled_sha256": "cb0b539a3621f101280f0d68415921f1f2757688e6d2478f6341bb69416b08f1",
+    "exact_match": false,
+    "added_entries": [
+      "fabric.mod.json"
+    ],
+    "removed_entries": [],
+    "changed_common_entries": [],
+    "identical_common_entries": 167
+  },
+  {
+    "artifact": "imgui-java-lwjgl3-1.90.0.jar",
+    "source": "https://repo.maven.apache.org/maven2/io/github/spair/imgui-java-lwjgl3/1.90.0/imgui-java-lwjgl3-1.90.0.jar",
+    "download_exit": 0,
+    "published_sha256": "7c2a21bdc61cee2311534f298f8d1a148fc1d9292ce96bf6b117413168f95bb9",
+    "bundled_sha256": "2de2e4416f2597ce9c5d831bc5df09ca084531299563962ff95408cb976decab",
+    "exact_match": false,
+    "added_entries": [
+      "fabric.mod.json"
+    ],
+    "removed_entries": [],
+    "changed_common_entries": [],
+    "identical_common_entries": 29
+  },
+  {
+    "artifact": "imgui-java-natives-linux-1.90.0.jar",
+    "source": "https://repo.maven.apache.org/maven2/io/github/spair/imgui-java-natives-linux/1.90.0/imgui-java-natives-linux-1.90.0.jar",
+    "download_exit": 0,
+    "published_sha256": "81af50f73e6d4dab906af72b0c248f681b56e99e7a425c3a45267c2c56e417e0",
+    "bundled_sha256": "bbb87cc609f45a135bf0aeff945d79302bb6f4a89fc981c5c75f9b0aae441b9e",
+    "exact_match": false,
+    "added_entries": [
+      "fabric.mod.json"
+    ],
+    "removed_entries": [],
+    "changed_common_entries": [],
+    "identical_common_entries": 3
+  },
+  {
+    "artifact": "imgui-java-natives-macos-1.90.0.jar",
+    "source": "https://repo.maven.apache.org/maven2/io/github/spair/imgui-java-natives-macos/1.90.0/imgui-java-natives-macos-1.90.0.jar",
+    "download_exit": 0,
+    "published_sha256": "f2ebb6a6002b23a84866f83882f81ddce485e2ce39cae2079ea07d5ad1c85afa",
+    "bundled_sha256": "4dd80adc4d6788dc5bde3f1cdaa81abfc2d75e70574c6a3721330f0ab1fcda2a",
+    "exact_match": false,
+    "added_entries": [
+      "fabric.mod.json"
+    ],
+    "removed_entries": [],
+    "changed_common_entries": [],
+    "identical_common_entries": 3
+  },
+  {
+    "artifact": "imgui-java-natives-windows-1.90.0.jar",
+    "source": "https://repo.maven.apache.org/maven2/io/github/spair/imgui-java-natives-windows/1.90.0/imgui-java-natives-windows-1.90.0.jar",
+    "download_exit": 0,
+    "published_sha256": "edfa450f20763028f71d615b1491e76c7bcc63a812e76e89dd0e5d02b763e0a9",
+    "bundled_sha256": "5cd912c36d51b5b373bcb00ae04fc63bb39843f1973f19ae9fe32ce926d535f2",
+    "exact_match": false,
+    "added_entries": [
+      "fabric.mod.json"
+    ],
+    "removed_entries": [],
+    "changed_common_entries": [],
+    "identical_common_entries": 3
+  },
+  {
+    "artifact": "netty-codec-socks-4.2.7.Final.jar",
+    "source": "https://repo.maven.apache.org/maven2/io/netty/netty-codec-socks/4.2.7.Final/netty-codec-socks-4.2.7.Final.jar",
+    "download_exit": 0,
+    "published_sha256": "a5e245fb9038544d2a9bc8db86efd819aa6adb3be3257a879dafbe1bf78eff33",
+    "bundled_sha256": "264464f6d92b0e08a5fbd710add9749b5c40adaf4758db33ca13a80aa4326695",
+    "exact_match": false,
+    "added_entries": [
+      "fabric.mod.json"
+    ],
+    "removed_entries": [],
+    "changed_common_entries": [],
+    "identical_common_entries": 123
+  },
+  {
+    "artifact": "netty-handler-proxy-4.2.7.Final.jar",
+    "source": "https://repo.maven.apache.org/maven2/io/netty/netty-handler-proxy/4.2.7.Final/netty-handler-proxy-4.2.7.Final.jar",
+    "download_exit": 0,
+    "published_sha256": "8a31f546099256a5b9365213a1a950cc7fd2ceb9827ac63e0506216df6fa72f6",
+    "bundled_sha256": "85627356c91424bb7582d912c241bfcdef97afdbd7ae7465b093d0c307567b9c",
+    "exact_match": false,
+    "added_entries": [
+      "fabric.mod.json"
+    ],
+    "removed_entries": [],
+    "changed_common_entries": [],
+    "identical_common_entries": 19
+  }
+]

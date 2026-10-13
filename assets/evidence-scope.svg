@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 420" role="img" aria-labelledby="title desc">
+  <title id="title">Static evidence coverage</title>
+  <desc id="desc">Indexed 1680 JVM class files and 20878 methods. Inspected 14 nested JARs, 147 declared Anubis mixins, 13 DEX classes and 5 native libraries, with 30 selected javap cross-checks and 7 published-library content comparisons.</desc>
+  <rect width="1280" height="420" rx="20" fill="#102030"/>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="40" y="49" fill="#f1f5fa" font-size="27" font-weight="700">EVIDENCE COVERAGE</text>
+    <text x="40" y="80" fill="#9cb1c4" font-size="17">Structural indexing and targeted manual tracing · no target execution</text>
+    <g fill="#1a3044">
+      <rect x="40" y="111" width="280" height="114" rx="10"/><rect x="346" y="111" width="280" height="114" rx="10"/>
+      <rect x="652" y="111" width="280" height="114" rx="10"/><rect x="958" y="111" width="280" height="114" rx="10"/>
+      <rect x="40" y="244" width="280" height="114" rx="10"/><rect x="346" y="244" width="280" height="114" rx="10"/>
+      <rect x="652" y="244" width="280" height="114" rx="10"/><rect x="958" y="244" width="280" height="114" rx="10"/>
+    </g>
+    <g fill="#e5bc69" font-size="37" font-weight="700">
+      <text x="62" y="163">1,680</text><text x="368" y="163">20,878</text><text x="674" y="163">14</text><text x="980" y="163">147</text>
+      <text x="62" y="296">13</text><text x="368" y="296">5</text><text x="674" y="296">30</text><text x="980" y="296">7</text>
+    </g>
+    <g fill="#bdcddd" font-size="17">
+      <text x="62" y="199">JVM class files indexed</text><text x="368" y="199">Methods indexed</text><text x="674" y="199">Nested JARs inspected</text><text x="980" y="199">Declared Anubis mixins</text>
+      <text x="62" y="332">Android DEX classes</text><text x="368" y="332">Native libraries inspected</text><text x="674" y="332">Selected javap checks</text><text x="980" y="332">Upstream content matches</text>
+    </g>
+    <text x="40" y="391" fill="#95acbf" font-size="15">Counts describe scope, not a probability of safety or proof that every runtime path was resolved.</text>
+  </g>
+</svg>

@@ -1,0 +1,1434 @@
+Classfile analysis-workspace/extracted/run.oEA4CbVx/net/anubis/client/module/impl/render/character/CustomCharacters.class
+  Last modified Oct 13, 2026; size 11075 bytes
+  SHA-256 checksum e35206b3b3f0ca52d8f6a0f27ba5d9a2dbd8cb2acdac23a0aac322fb6daf3ed0
+  Compiled from "CustomCharacters.java"
+final class net.anubis.client.module.impl.render.character.CustomCharacters
+  minor version: 0
+  major version: 65
+  flags: (0x0030) ACC_FINAL, ACC_SUPER
+  this_class: #2                          // net/anubis/client/module/impl/render/character/CustomCharacters
+  super_class: #4                         // java/lang/Object
+  interfaces: 0, fields: 3, methods: 10, attributes: 4
+Constant pool:
+    #1 = Utf8               net/anubis/client/module/impl/render/character/CustomCharacters
+    #2 = Class              #1            // net/anubis/client/module/impl/render/character/CustomCharacters
+    #3 = Utf8               java/lang/Object
+    #4 = Class              #3            // java/lang/Object
+    #5 = Utf8               CustomCharacters.java
+    #6 = Utf8               net/anubis/client/module/impl/render/character/kit/BakedDesign$Source
+    #7 = Class              #6            // net/anubis/client/module/impl/render/character/kit/BakedDesign$Source
+    #8 = Utf8               net/anubis/client/module/impl/render/character/kit/BakedDesign
+    #9 = Class              #8            // net/anubis/client/module/impl/render/character/kit/BakedDesign
+   #10 = Utf8               Source
+   #11 = Utf8               net/anubis/client/module/impl/render/character/gltf/CharacterBake$Options
+   #12 = Class              #11           // net/anubis/client/module/impl/render/character/gltf/CharacterBake$Options
+   #13 = Utf8               net/anubis/client/module/impl/render/character/gltf/CharacterBake
+   #14 = Class              #13           // net/anubis/client/module/impl/render/character/gltf/CharacterBake
+   #15 = Utf8               Options
+   #16 = Utf8               net/anubis/client/module/impl/render/character/gltf/CharacterBake$Result
+   #17 = Class              #16           // net/anubis/client/module/impl/render/character/gltf/CharacterBake$Result
+   #18 = Utf8               Result
+   #19 = Utf8               net/anubis/client/module/impl/render/character/gltf/ImageDecoder$Picture
+   #20 = Class              #19           // net/anubis/client/module/impl/render/character/gltf/ImageDecoder$Picture
+   #21 = Utf8               net/anubis/client/module/impl/render/character/gltf/ImageDecoder
+   #22 = Class              #21           // net/anubis/client/module/impl/render/character/gltf/ImageDecoder
+   #23 = Utf8               Picture
+   #24 = Utf8               java/lang/invoke/MethodHandles$Lookup
+   #25 = Class              #24           // java/lang/invoke/MethodHandles$Lookup
+   #26 = Utf8               java/lang/invoke/MethodHandles
+   #27 = Class              #26           // java/lang/invoke/MethodHandles
+   #28 = Utf8               Lookup
+   #29 = Utf8               LOGGER
+   #30 = Utf8               Lorg/slf4j/Logger;
+   #31 = Utf8               MAX_FILE
+   #32 = Utf8               J
+   #33 = Long               268435456l
+   #35 = Utf8               MAX_TEXTURE
+   #36 = Utf8               I
+   #37 = Integer            8192
+   #38 = Utf8               <init>
+   #39 = Utf8               ()V
+   #40 = NameAndType        #38:#39       // "<init>":()V
+   #41 = Methodref          #4.#40        // java/lang/Object."<init>":()V
+   #42 = Utf8               this
+   #43 = Utf8               Lnet/anubis/client/module/impl/render/character/CustomCharacters;
+   #44 = Utf8               folder
+   #45 = Utf8               ()Ljava/nio/file/Path;
+   #46 = Utf8               net/fabricmc/loader/api/FabricLoader
+   #47 = Class              #46           // net/fabricmc/loader/api/FabricLoader
+   #48 = Utf8               getInstance
+   #49 = Utf8               ()Lnet/fabricmc/loader/api/FabricLoader;
+   #50 = NameAndType        #48:#49       // getInstance:()Lnet/fabricmc/loader/api/FabricLoader;
+   #51 = InterfaceMethodref #47.#50       // net/fabricmc/loader/api/FabricLoader.getInstance:()Lnet/fabricmc/loader/api/FabricLoader;
+   #52 = Utf8               getConfigDir
+   #53 = NameAndType        #52:#45       // getConfigDir:()Ljava/nio/file/Path;
+   #54 = InterfaceMethodref #47.#53       // net/fabricmc/loader/api/FabricLoader.getConfigDir:()Ljava/nio/file/Path;
+   #55 = Utf8               anubis
+   #56 = String             #55           // anubis
+   #57 = Utf8               java/nio/file/Path
+   #58 = Class              #57           // java/nio/file/Path
+   #59 = Utf8               resolve
+   #60 = Utf8               (Ljava/lang/String;)Ljava/nio/file/Path;
+   #61 = NameAndType        #59:#60       // resolve:(Ljava/lang/String;)Ljava/nio/file/Path;
+   #62 = InterfaceMethodref #58.#61       // java/nio/file/Path.resolve:(Ljava/lang/String;)Ljava/nio/file/Path;
+   #63 = Utf8               characters
+   #64 = String             #63           // characters
+   #65 = Utf8               cache
+   #66 = NameAndType        #44:#45       // folder:()Ljava/nio/file/Path;
+   #67 = Methodref          #2.#66        // net/anubis/client/module/impl/render/character/CustomCharacters.folder:()Ljava/nio/file/Path;
+   #68 = Utf8               .baked
+   #69 = String             #68           // .baked
+   #70 = Utf8               scan
+   #71 = Utf8               ()Ljava/util/List;
+   #72 = Utf8               ()Ljava/util/List<Lnet/anubis/client/module/impl/render/character/kit/BakedDesign;>;
+   #73 = Utf8               java/lang/Throwable
+   #74 = Class              #73           // java/lang/Throwable
+   #75 = Utf8               java/io/IOException
+   #76 = Class              #75           // java/io/IOException
+   #77 = Utf8               java/util/ArrayList
+   #78 = Class              #77           // java/util/ArrayList
+   #79 = Methodref          #78.#40       // java/util/ArrayList."<init>":()V
+   #80 = Utf8               *.{glb,GLB}
+   #81 = String             #80           // *.{glb,GLB}
+   #82 = Utf8               java/nio/file/Files
+   #83 = Class              #82           // java/nio/file/Files
+   #84 = Utf8               newDirectoryStream
+   #85 = Utf8               (Ljava/nio/file/Path;Ljava/lang/String;)Ljava/nio/file/DirectoryStream;
+   #86 = NameAndType        #84:#85       // newDirectoryStream:(Ljava/nio/file/Path;Ljava/lang/String;)Ljava/nio/file/DirectoryStream;
+   #87 = Methodref          #83.#86       // java/nio/file/Files.newDirectoryStream:(Ljava/nio/file/Path;Ljava/lang/String;)Ljava/nio/file/DirectoryStream;
+   #88 = Utf8               java/nio/file/DirectoryStream
+   #89 = Class              #88           // java/nio/file/DirectoryStream
+   #90 = Utf8               iterator
+   #91 = Utf8               ()Ljava/util/Iterator;
+   #92 = NameAndType        #90:#91       // iterator:()Ljava/util/Iterator;
+   #93 = InterfaceMethodref #89.#92       // java/nio/file/DirectoryStream.iterator:()Ljava/util/Iterator;
+   #94 = Utf8               java/util/List
+   #95 = Class              #94           // java/util/List
+   #96 = Utf8               java/util/Iterator
+   #97 = Class              #96           // java/util/Iterator
+   #98 = Utf8               hasNext
+   #99 = Utf8               ()Z
+  #100 = NameAndType        #98:#99       // hasNext:()Z
+  #101 = InterfaceMethodref #97.#100      // java/util/Iterator.hasNext:()Z
+  #102 = Utf8               next
+  #103 = Utf8               ()Ljava/lang/Object;
+  #104 = NameAndType        #102:#103     // next:()Ljava/lang/Object;
+  #105 = InterfaceMethodref #97.#104      // java/util/Iterator.next:()Ljava/lang/Object;
+  #106 = Utf8               java/nio/file/LinkOption
+  #107 = Class              #106          // java/nio/file/LinkOption
+  #108 = Utf8               isRegularFile
+  #109 = Utf8               (Ljava/nio/file/Path;[Ljava/nio/file/LinkOption;)Z
+  #110 = NameAndType        #108:#109     // isRegularFile:(Ljava/nio/file/Path;[Ljava/nio/file/LinkOption;)Z
+  #111 = Methodref          #83.#110      // java/nio/file/Files.isRegularFile:(Ljava/nio/file/Path;[Ljava/nio/file/LinkOption;)Z
+  #112 = Utf8               add
+  #113 = Utf8               (Ljava/lang/Object;)Z
+  #114 = NameAndType        #112:#113     // add:(Ljava/lang/Object;)Z
+  #115 = InterfaceMethodref #95.#114      // java/util/List.add:(Ljava/lang/Object;)Z
+  #116 = Utf8               close
+  #117 = NameAndType        #116:#39      // close:()V
+  #118 = InterfaceMethodref #89.#117      // java/nio/file/DirectoryStream.close:()V
+  #119 = Utf8               addSuppressed
+  #120 = Utf8               (Ljava/lang/Throwable;)V
+  #121 = NameAndType        #119:#120     // addSuppressed:(Ljava/lang/Throwable;)V
+  #122 = Methodref          #74.#121      // java/lang/Throwable.addSuppressed:(Ljava/lang/Throwable;)V
+  #123 = Utf8               of
+  #124 = NameAndType        #123:#71      // of:()Ljava/util/List;
+  #125 = InterfaceMethodref #95.#124      // java/util/List.of:()Ljava/util/List;
+  #126 = Utf8               sort
+  #127 = Utf8               (Ljava/util/Comparator;)V
+  #128 = NameAndType        #126:#127     // sort:(Ljava/util/Comparator;)V
+  #129 = InterfaceMethodref #95.#128      // java/util/List.sort:(Ljava/util/Comparator;)V
+  #130 = Utf8               java/util/HashSet
+  #131 = Class              #130          // java/util/HashSet
+  #132 = Methodref          #131.#40      // java/util/HashSet."<init>":()V
+  #133 = InterfaceMethodref #95.#92       // java/util/List.iterator:()Ljava/util/Iterator;
+  #134 = Utf8               java/util/Set
+  #135 = Class              #134          // java/util/Set
+  #136 = Utf8               getFileName
+  #137 = NameAndType        #136:#45      // getFileName:()Ljava/nio/file/Path;
+  #138 = InterfaceMethodref #58.#137      // java/nio/file/Path.getFileName:()Ljava/nio/file/Path;
+  #139 = Utf8               toString
+  #140 = Utf8               ()Ljava/lang/String;
+  #141 = NameAndType        #139:#140     // toString:()Ljava/lang/String;
+  #142 = InterfaceMethodref #58.#141      // java/nio/file/Path.toString:()Ljava/lang/String;
+  #143 = Utf8               java/lang/String
+  #144 = Class              #143          // java/lang/String
+  #145 = Utf8               length
+  #146 = Utf8               ()I
+  #147 = NameAndType        #145:#146     // length:()I
+  #148 = Methodref          #144.#147     // java/lang/String.length:()I
+  #149 = Utf8               substring
+  #150 = Utf8               (II)Ljava/lang/String;
+  #151 = NameAndType        #149:#150     // substring:(II)Ljava/lang/String;
+  #152 = Methodref          #144.#151     // java/lang/String.substring:(II)Ljava/lang/String;
+  #153 = Utf8               size
+  #154 = Utf8               (Ljava/nio/file/Path;)J
+  #155 = NameAndType        #153:#154     // size:(Ljava/nio/file/Path;)J
+  #156 = Methodref          #83.#155      // java/nio/file/Files.size:(Ljava/nio/file/Path;)J
+  #157 = Utf8               getLastModifiedTime
+  #158 = Utf8               (Ljava/nio/file/Path;[Ljava/nio/file/LinkOption;)Ljava/nio/file/attribute/FileTime;
+  #159 = NameAndType        #157:#158     // getLastModifiedTime:(Ljava/nio/file/Path;[Ljava/nio/file/LinkOption;)Ljava/nio/file/attribute/FileTime;
+  #160 = Methodref          #83.#159      // java/nio/file/Files.getLastModifiedTime:(Ljava/nio/file/Path;[Ljava/nio/file/LinkOption;)Ljava/nio/file/attribute/FileTime;
+  #161 = Utf8               java/nio/file/attribute/FileTime
+  #162 = Class              #161          // java/nio/file/attribute/FileTime
+  #163 = Utf8               toMillis
+  #164 = Utf8               ()J
+  #165 = NameAndType        #163:#164     // toMillis:()J
+  #166 = Methodref          #162.#165     // java/nio/file/attribute/FileTime.toMillis:()J
+  #167 = Utf8               \u0001\u0001\u00013
+  #168 = String             #167          // \u0001\u0001\u00013
+  #169 = Utf8               java/lang/invoke/StringConcatFactory
+  #170 = Class              #169          // java/lang/invoke/StringConcatFactory
+  #171 = Utf8               makeConcatWithConstants
+  #172 = Utf8               (Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+  #173 = NameAndType        #171:#172     // makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+  #174 = Methodref          #170.#173     // java/lang/invoke/StringConcatFactory.makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+  #175 = MethodHandle       6:#174        // REF_invokeStatic java/lang/invoke/StringConcatFactory.makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+  #176 = Utf8               (Ljava/lang/String;JJ)Ljava/lang/String;
+  #177 = NameAndType        #171:#176     // makeConcatWithConstants:(Ljava/lang/String;JJ)Ljava/lang/String;
+  #178 = InvokeDynamic      #0:#177       // #0:makeConcatWithConstants:(Ljava/lang/String;JJ)Ljava/lang/String;
+  #179 = Utf8               slug
+  #180 = Utf8               (Ljava/lang/String;)Ljava/lang/String;
+  #181 = NameAndType        #179:#180     // slug:(Ljava/lang/String;)Ljava/lang/String;
+  #182 = Methodref          #2.#181       // net/anubis/client/module/impl/render/character/CustomCharacters.slug:(Ljava/lang/String;)Ljava/lang/String;
+  #183 = Utf8               hashCode
+  #184 = NameAndType        #183:#146     // hashCode:()I
+  #185 = Methodref          #144.#184     // java/lang/String.hashCode:()I
+  #186 = Utf8               java/lang/Integer
+  #187 = Class              #186          // java/lang/Integer
+  #188 = Utf8               toHexString
+  #189 = Utf8               (I)Ljava/lang/String;
+  #190 = NameAndType        #188:#189     // toHexString:(I)Ljava/lang/String;
+  #191 = Methodref          #187.#190     // java/lang/Integer.toHexString:(I)Ljava/lang/String;
+  #192 = Utf8               custom_\u0001_\u0001
+  #193 = String             #192          // custom_\u0001_\u0001
+  #194 = Utf8               (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+  #195 = NameAndType        #171:#194     // makeConcatWithConstants:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+  #196 = InvokeDynamic      #1:#195       // #1:makeConcatWithConstants:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+  #197 = InterfaceMethodref #135.#114     // java/util/Set.add:(Ljava/lang/Object;)Z
+  #198 = Utf8               ()Ljava/io/InputStream;
+  #199 = MethodType         #198          //  ()Ljava/io/InputStream;
+  #200 = Utf8               lambda$scan$0
+  #201 = Utf8               (Ljava/nio/file/Path;Ljava/lang/String;)Ljava/io/InputStream;
+  #202 = NameAndType        #200:#201     // lambda$scan$0:(Ljava/nio/file/Path;Ljava/lang/String;)Ljava/io/InputStream;
+  #203 = Methodref          #2.#202       // net/anubis/client/module/impl/render/character/CustomCharacters.lambda$scan$0:(Ljava/nio/file/Path;Ljava/lang/String;)Ljava/io/InputStream;
+  #204 = MethodHandle       6:#203        // REF_invokeStatic net/anubis/client/module/impl/render/character/CustomCharacters.lambda$scan$0:(Ljava/nio/file/Path;Ljava/lang/String;)Ljava/io/InputStream;
+  #205 = Utf8               java/lang/invoke/LambdaMetafactory
+  #206 = Class              #205          // java/lang/invoke/LambdaMetafactory
+  #207 = Utf8               metafactory
+  #208 = Utf8               (Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+  #209 = NameAndType        #207:#208     // metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+  #210 = Methodref          #206.#209     // java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+  #211 = MethodHandle       6:#210        // REF_invokeStatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+  #212 = Utf8               open
+  #213 = Utf8               (Ljava/nio/file/Path;Ljava/lang/String;)Lnet/anubis/client/module/impl/render/character/kit/BakedDesign$Source;
+  #214 = NameAndType        #212:#213     // open:(Ljava/nio/file/Path;Ljava/lang/String;)Lnet/anubis/client/module/impl/render/character/kit/BakedDesign$Source;
+  #215 = InvokeDynamic      #2:#214       // #2:open:(Ljava/nio/file/Path;Ljava/lang/String;)Lnet/anubis/client/module/impl/render/character/kit/BakedDesign$Source;
+  #216 = Utf8               (Ljava/lang/String;Ljava/lang/String;Lnet/anubis/client/module/impl/render/character/kit/BakedDesign$Source;)V
+  #217 = NameAndType        #38:#216      // "<init>":(Ljava/lang/String;Ljava/lang/String;Lnet/anubis/client/module/impl/render/character/kit/BakedDesign$Source;)V
+  #218 = Methodref          #9.#217       // net/anubis/client/module/impl/render/character/kit/BakedDesign."<init>":(Ljava/lang/String;Ljava/lang/String;Lnet/anubis/client/module/impl/render/character/kit/BakedDesign$Source;)V
+  #219 = NameAndType        #29:#30       // LOGGER:Lorg/slf4j/Logger;
+  #220 = Fieldref           #2.#219       // net/anubis/client/module/impl/render/character/CustomCharacters.LOGGER:Lorg/slf4j/Logger;
+  #221 = Utf8               [Anubis] Skipping custom character {}: {}
+  #222 = String             #221          // [Anubis] Skipping custom character {}: {}
+  #223 = Methodref          #76.#141      // java/io/IOException.toString:()Ljava/lang/String;
+  #224 = Utf8               org/slf4j/Logger
+  #225 = Class              #224          // org/slf4j/Logger
+  #226 = Utf8               warn
+  #227 = Utf8               (Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
+  #228 = NameAndType        #226:#227     // warn:(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
+  #229 = InterfaceMethodref #225.#228     // org/slf4j/Logger.warn:(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
+  #230 = Utf8               prune
+  #231 = Utf8               (Ljava/util/Set;)V
+  #232 = NameAndType        #230:#231     // prune:(Ljava/util/Set;)V
+  #233 = Methodref          #2.#232       // net/anubis/client/module/impl/render/character/CustomCharacters.prune:(Ljava/util/Set;)V
+  #234 = Utf8               file
+  #235 = Utf8               Ljava/nio/file/Path;
+  #236 = Utf8               dir
+  #237 = Utf8               Ljava/nio/file/DirectoryStream<Ljava/nio/file/Path;>;
+  #238 = Utf8               Ljava/nio/file/DirectoryStream;
+  #239 = Utf8               ignored
+  #240 = Utf8               Ljava/io/IOException;
+  #241 = Utf8               stamp
+  #242 = Utf8               Ljava/lang/String;
+  #243 = Utf8               id
+  #244 = Utf8               e
+  #245 = Utf8               name
+  #246 = Utf8               files
+  #247 = Utf8               Ljava/util/List<Ljava/nio/file/Path;>;
+  #248 = Utf8               Ljava/util/List;
+  #249 = Utf8               out
+  #250 = Utf8               Ljava/util/List<Lnet/anubis/client/module/impl/render/character/kit/BakedDesign;>;
+  #251 = Utf8               ids
+  #252 = Utf8               Ljava/util/Set<Ljava/lang/String;>;
+  #253 = Utf8               Ljava/util/Set;
+  #254 = Utf8               java/util/Locale
+  #255 = Class              #254          // java/util/Locale
+  #256 = Utf8               ROOT
+  #257 = Utf8               Ljava/util/Locale;
+  #258 = NameAndType        #256:#257     // ROOT:Ljava/util/Locale;
+  #259 = Fieldref           #255.#258     // java/util/Locale.ROOT:Ljava/util/Locale;
+  #260 = Utf8               toLowerCase
+  #261 = Utf8               (Ljava/util/Locale;)Ljava/lang/String;
+  #262 = NameAndType        #260:#261     // toLowerCase:(Ljava/util/Locale;)Ljava/lang/String;
+  #263 = Methodref          #144.#262     // java/lang/String.toLowerCase:(Ljava/util/Locale;)Ljava/lang/String;
+  #264 = Utf8               [^a-z0-9]+
+  #265 = String             #264          // [^a-z0-9]+
+  #266 = Utf8               _
+  #267 = String             #266          // _
+  #268 = Utf8               replaceAll
+  #269 = NameAndType        #268:#194     // replaceAll:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+  #270 = Methodref          #144.#269     // java/lang/String.replaceAll:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+  #271 = Utf8               ^_+|_+$
+  #272 = String             #271          // ^_+|_+$
+  #273 = Utf8
+  #274 = String             #273          //
+  #275 = Utf8               isEmpty
+  #276 = NameAndType        #275:#99      // isEmpty:()Z
+  #277 = Methodref          #144.#276     // java/lang/String.isEmpty:()Z
+  #278 = Utf8               model
+  #279 = String             #278          // model
+  #280 = Utf8               s
+  #281 = Utf8               (Ljava/util/Set<Ljava/lang/String;>;)V
+  #282 = Utf8               keep
+  #283 = NameAndType        #65:#45       // cache:()Ljava/nio/file/Path;
+  #284 = Methodref          #2.#283       // net/anubis/client/module/impl/render/character/CustomCharacters.cache:()Ljava/nio/file/Path;
+  #285 = Utf8               *.anc
+  #286 = String             #285          // *.anc
+  #287 = Utf8               .anc
+  #288 = String             #287          // .anc
+  #289 = Utf8               replace
+  #290 = Utf8               (Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
+  #291 = NameAndType        #289:#290     // replace:(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
+  #292 = Methodref          #144.#291     // java/lang/String.replace:(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
+  #293 = Utf8               contains
+  #294 = NameAndType        #293:#113     // contains:(Ljava/lang/Object;)Z
+  #295 = InterfaceMethodref #135.#294     // java/util/Set.contains:(Ljava/lang/Object;)Z
+  #296 = Utf8               deleteIfExists
+  #297 = Utf8               (Ljava/nio/file/Path;)Z
+  #298 = NameAndType        #296:#297     // deleteIfExists:(Ljava/nio/file/Path;)Z
+  #299 = Methodref          #83.#298      // java/nio/file/Files.deleteIfExists:(Ljava/nio/file/Path;)Z
+  #300 = Utf8               \u0001.anc
+  #301 = String             #300          // \u0001.anc
+  #302 = NameAndType        #171:#180     // makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+  #303 = InvokeDynamic      #3:#302       // #3:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+  #304 = Utf8               exists
+  #305 = NameAndType        #304:#109     // exists:(Ljava/nio/file/Path;[Ljava/nio/file/LinkOption;)Z
+  #306 = Methodref          #83.#305      // java/nio/file/Files.exists:(Ljava/nio/file/Path;[Ljava/nio/file/LinkOption;)Z
+  #307 = Utf8               java/nio/file/OpenOption
+  #308 = Class              #307          // java/nio/file/OpenOption
+  #309 = Utf8               newInputStream
+  #310 = Utf8               (Ljava/nio/file/Path;[Ljava/nio/file/OpenOption;)Ljava/io/InputStream;
+  #311 = NameAndType        #309:#310     // newInputStream:(Ljava/nio/file/Path;[Ljava/nio/file/OpenOption;)Ljava/io/InputStream;
+  #312 = Methodref          #83.#311      // java/nio/file/Files.newInputStream:(Ljava/nio/file/Path;[Ljava/nio/file/OpenOption;)Ljava/io/InputStream;
+  #313 = Utf8               the file is larger than 256 MB
+  #314 = String             #313          // the file is larger than 256 MB
+  #315 = Utf8               (Ljava/lang/String;)V
+  #316 = NameAndType        #38:#315      // "<init>":(Ljava/lang/String;)V
+  #317 = Methodref          #76.#316      // java/io/IOException."<init>":(Ljava/lang/String;)V
+  #318 = Utf8               net/anubis/client/module/impl/render/character/CharacterModule
+  #319 = Class              #318          // net/anubis/client/module/impl/render/character/CharacterModule
+  #320 = Utf8               baking
+  #321 = NameAndType        #320:#315     // baking:(Ljava/lang/String;)V
+  #322 = Methodref          #319.#321     // net/anubis/client/module/impl/render/character/CharacterModule.baking:(Ljava/lang/String;)V
+  #323 = Utf8               java/lang/System
+  #324 = Class              #323          // java/lang/System
+  #325 = Utf8               nanoTime
+  #326 = NameAndType        #325:#164     // nanoTime:()J
+  #327 = Methodref          #324.#326     // java/lang/System.nanoTime:()J
+  #328 = Utf8               readAllBytes
+  #329 = Utf8               (Ljava/nio/file/Path;)[B
+  #330 = NameAndType        #328:#329     // readAllBytes:(Ljava/nio/file/Path;)[B
+  #331 = Methodref          #83.#330      // java/nio/file/Files.readAllBytes:(Ljava/nio/file/Path;)[B
+  #332 = Methodref          #12.#40       // net/anubis/client/module/impl/render/character/gltf/CharacterBake$Options."<init>":()V
+  #333 = Utf8               ([B)Lnet/anubis/client/module/impl/render/character/gltf/ImageDecoder$Picture;
+  #334 = MethodType         #333          //  ([B)Lnet/anubis/client/module/impl/render/character/gltf/ImageDecoder$Picture;
+  #335 = Utf8               decode
+  #336 = NameAndType        #335:#333     // decode:([B)Lnet/anubis/client/module/impl/render/character/gltf/ImageDecoder$Picture;
+  #337 = Methodref          #2.#336       // net/anubis/client/module/impl/render/character/CustomCharacters.decode:([B)Lnet/anubis/client/module/impl/render/character/gltf/ImageDecoder$Picture;
+  #338 = MethodHandle       6:#337        // REF_invokeStatic net/anubis/client/module/impl/render/character/CustomCharacters.decode:([B)Lnet/anubis/client/module/impl/render/character/gltf/ImageDecoder$Picture;
+  #339 = Utf8               ()Lnet/anubis/client/module/impl/render/character/gltf/ImageDecoder;
+  #340 = NameAndType        #335:#339     // decode:()Lnet/anubis/client/module/impl/render/character/gltf/ImageDecoder;
+  #341 = InvokeDynamic      #4:#340       // #4:decode:()Lnet/anubis/client/module/impl/render/character/gltf/ImageDecoder;
+  #342 = Utf8               bake
+  #343 = Utf8               ([BLnet/anubis/client/module/impl/render/character/gltf/CharacterBake$Options;Lnet/anubis/client/module/impl/render/character/gltf/ImageDecoder;)Lnet/anubis/client/module/impl/render/character/gltf/CharacterBake$Result;
+  #344 = NameAndType        #342:#343     // bake:([BLnet/anubis/client/module/impl/render/character/gltf/CharacterBake$Options;Lnet/anubis/client/module/impl/render/character/gltf/ImageDecoder;)Lnet/anubis/client/module/impl/render/character/gltf/CharacterBake$Result;
+  #345 = Methodref          #14.#344      // net/anubis/client/module/impl/render/character/gltf/CharacterBake.bake:([BLnet/anubis/client/module/impl/render/character/gltf/CharacterBake$Options;Lnet/anubis/client/module/impl/render/character/gltf/ImageDecoder;)Lnet/anubis/client/module/impl/render/character/gltf/CharacterBake$Result;
+  #346 = Utf8               [Anubis] Baked custom character {} in {} ms, moving {}
+  #347 = String             #346          // [Anubis] Baked custom character {} in {} ms, moving {}
+  #348 = Long               1000000l
+  #350 = Utf8               java/lang/Long
+  #351 = Class              #350          // java/lang/Long
+  #352 = Utf8               valueOf
+  #353 = Utf8               (J)Ljava/lang/Long;
+  #354 = NameAndType        #352:#353     // valueOf:(J)Ljava/lang/Long;
+  #355 = Methodref          #351.#354     // java/lang/Long.valueOf:(J)Ljava/lang/Long;
+  #356 = Utf8               limbs
+  #357 = NameAndType        #356:#71      // limbs:()Ljava/util/List;
+  #358 = Methodref          #17.#357      // net/anubis/client/module/impl/render/character/gltf/CharacterBake$Result.limbs:()Ljava/util/List;
+  #359 = Utf8               info
+  #360 = Utf8               (Ljava/lang/String;[Ljava/lang/Object;)V
+  #361 = NameAndType        #359:#360     // info:(Ljava/lang/String;[Ljava/lang/Object;)V
+  #362 = InterfaceMethodref #225.#361     // org/slf4j/Logger.info:(Ljava/lang/String;[Ljava/lang/Object;)V
+  #363 = NameAndType        #153:#146     // size:()I
+  #364 = InterfaceMethodref #95.#363      // java/util/List.size:()I
+  #365 = Utf8               notice
+  #366 = Utf8               (Ljava/lang/String;Ljava/util/List;)V
+  #367 = NameAndType        #365:#366     // notice:(Ljava/lang/String;Ljava/util/List;)V
+  #368 = Methodref          #319.#367     // net/anubis/client/module/impl/render/character/CharacterModule.notice:(Ljava/lang/String;Ljava/util/List;)V
+  #369 = Utf8               java/nio/file/attribute/FileAttribute
+  #370 = Class              #369          // java/nio/file/attribute/FileAttribute
+  #371 = Utf8               createDirectories
+  #372 = Utf8               (Ljava/nio/file/Path;[Ljava/nio/file/attribute/FileAttribute;)Ljava/nio/file/Path;
+  #373 = NameAndType        #371:#372     // createDirectories:(Ljava/nio/file/Path;[Ljava/nio/file/attribute/FileAttribute;)Ljava/nio/file/Path;
+  #374 = Methodref          #83.#373      // java/nio/file/Files.createDirectories:(Ljava/nio/file/Path;[Ljava/nio/file/attribute/FileAttribute;)Ljava/nio/file/Path;
+  #375 = Utf8               \u0001.tmp
+  #376 = String             #375          // \u0001.tmp
+  #377 = InvokeDynamic      #5:#302       // #5:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+  #378 = Utf8               data
+  #379 = Utf8               ()[B
+  #380 = NameAndType        #378:#379     // data:()[B
+  #381 = Methodref          #17.#380      // net/anubis/client/module/impl/render/character/gltf/CharacterBake$Result.data:()[B
+  #382 = Utf8               write
+  #383 = Utf8               (Ljava/nio/file/Path;[B[Ljava/nio/file/OpenOption;)Ljava/nio/file/Path;
+  #384 = NameAndType        #382:#383     // write:(Ljava/nio/file/Path;[B[Ljava/nio/file/OpenOption;)Ljava/nio/file/Path;
+  #385 = Methodref          #83.#384      // java/nio/file/Files.write:(Ljava/nio/file/Path;[B[Ljava/nio/file/OpenOption;)Ljava/nio/file/Path;
+  #386 = Utf8               java/nio/file/CopyOption
+  #387 = Class              #386          // java/nio/file/CopyOption
+  #388 = Utf8               java/nio/file/StandardCopyOption
+  #389 = Class              #388          // java/nio/file/StandardCopyOption
+  #390 = Utf8               REPLACE_EXISTING
+  #391 = Utf8               Ljava/nio/file/StandardCopyOption;
+  #392 = NameAndType        #390:#391     // REPLACE_EXISTING:Ljava/nio/file/StandardCopyOption;
+  #393 = Fieldref           #389.#392     // java/nio/file/StandardCopyOption.REPLACE_EXISTING:Ljava/nio/file/StandardCopyOption;
+  #394 = Utf8               move
+  #395 = Utf8               (Ljava/nio/file/Path;Ljava/nio/file/Path;[Ljava/nio/file/CopyOption;)Ljava/nio/file/Path;
+  #396 = NameAndType        #394:#395     // move:(Ljava/nio/file/Path;Ljava/nio/file/Path;[Ljava/nio/file/CopyOption;)Ljava/nio/file/Path;
+  #397 = Methodref          #83.#396      // java/nio/file/Files.move:(Ljava/nio/file/Path;Ljava/nio/file/Path;[Ljava/nio/file/CopyOption;)Ljava/nio/file/Path;
+  #398 = Utf8               java/io/ByteArrayInputStream
+  #399 = Class              #398          // java/io/ByteArrayInputStream
+  #400 = Utf8               ([B)V
+  #401 = NameAndType        #38:#400      // "<init>":([B)V
+  #402 = Methodref          #399.#401     // java/io/ByteArrayInputStream."<init>":([B)V
+  #403 = Utf8               baked
+  #404 = Utf8               start
+  #405 = Utf8               result
+  #406 = Utf8               Lnet/anubis/client/module/impl/render/character/gltf/CharacterBake$Result;
+  #407 = Utf8               temp
+  #408 = Utf8               org/lwjgl/system/MemoryUtil
+  #409 = Class              #408          // org/lwjgl/system/MemoryUtil
+  #410 = Utf8               memAlloc
+  #411 = Utf8               (I)Ljava/nio/ByteBuffer;
+  #412 = NameAndType        #410:#411     // memAlloc:(I)Ljava/nio/ByteBuffer;
+  #413 = Methodref          #409.#412     // org/lwjgl/system/MemoryUtil.memAlloc:(I)Ljava/nio/ByteBuffer;
+  #414 = Utf8               org/lwjgl/system/MemoryStack
+  #415 = Class              #414          // org/lwjgl/system/MemoryStack
+  #416 = Utf8               stackPush
+  #417 = Utf8               ()Lorg/lwjgl/system/MemoryStack;
+  #418 = NameAndType        #416:#417     // stackPush:()Lorg/lwjgl/system/MemoryStack;
+  #419 = Methodref          #415.#418     // org/lwjgl/system/MemoryStack.stackPush:()Lorg/lwjgl/system/MemoryStack;
+  #420 = Utf8               java/nio/ByteBuffer
+  #421 = Class              #420          // java/nio/ByteBuffer
+  #422 = Utf8               put
+  #423 = Utf8               ([B)Ljava/nio/ByteBuffer;
+  #424 = NameAndType        #422:#423     // put:([B)Ljava/nio/ByteBuffer;
+  #425 = Methodref          #421.#424     // java/nio/ByteBuffer.put:([B)Ljava/nio/ByteBuffer;
+  #426 = Utf8               flip
+  #427 = Utf8               ()Ljava/nio/ByteBuffer;
+  #428 = NameAndType        #426:#427     // flip:()Ljava/nio/ByteBuffer;
+  #429 = Methodref          #421.#428     // java/nio/ByteBuffer.flip:()Ljava/nio/ByteBuffer;
+  #430 = Utf8               mallocInt
+  #431 = Utf8               (I)Ljava/nio/IntBuffer;
+  #432 = NameAndType        #430:#431     // mallocInt:(I)Ljava/nio/IntBuffer;
+  #433 = Methodref          #415.#432     // org/lwjgl/system/MemoryStack.mallocInt:(I)Ljava/nio/IntBuffer;
+  #434 = Utf8               org/lwjgl/stb/STBImage
+  #435 = Class              #434          // org/lwjgl/stb/STBImage
+  #436 = Utf8               stbi_load_from_memory
+  #437 = Utf8               (Ljava/nio/ByteBuffer;Ljava/nio/IntBuffer;Ljava/nio/IntBuffer;Ljava/nio/IntBuffer;I)Ljava/nio/ByteBuffer;
+  #438 = NameAndType        #436:#437     // stbi_load_from_memory:(Ljava/nio/ByteBuffer;Ljava/nio/IntBuffer;Ljava/nio/IntBuffer;Ljava/nio/IntBuffer;I)Ljava/nio/ByteBuffer;
+  #439 = Methodref          #435.#438     // org/lwjgl/stb/STBImage.stbi_load_from_memory:(Ljava/nio/ByteBuffer;Ljava/nio/IntBuffer;Ljava/nio/IntBuffer;Ljava/nio/IntBuffer;I)Ljava/nio/ByteBuffer;
+  #440 = Utf8               stbi_failure_reason
+  #441 = NameAndType        #440:#140     // stbi_failure_reason:()Ljava/lang/String;
+  #442 = Methodref          #435.#441     // org/lwjgl/stb/STBImage.stbi_failure_reason:()Ljava/lang/String;
+  #443 = Utf8               a texture can\'t be read: \u0001
+  #444 = String             #443          // a texture can\'t be read: \u0001
+  #445 = InvokeDynamic      #6:#302       // #6:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+  #446 = Utf8               [B
+  #447 = Class              #446          // "[B"
+  #448 = Utf8               java/nio/IntBuffer
+  #449 = Class              #448          // java/nio/IntBuffer
+  #450 = Utf8               get
+  #451 = Utf8               (I)I
+  #452 = NameAndType        #450:#451     // get:(I)I
+  #453 = Methodref          #449.#452     // java/nio/IntBuffer.get:(I)I
+  #454 = Utf8               a texture is over 8192 px
+  #455 = String             #454          // a texture is over 8192 px
+  #456 = Utf8               [I
+  #457 = Class              #456          // "[I"
+  #458 = Utf8               (I)B
+  #459 = NameAndType        #450:#458     // get:(I)B
+  #460 = Methodref          #421.#459     // java/nio/ByteBuffer.get:(I)B
+  #461 = Utf8               (II[I)V
+  #462 = NameAndType        #38:#461      // "<init>":(II[I)V
+  #463 = Methodref          #20.#462      // net/anubis/client/module/impl/render/character/gltf/ImageDecoder$Picture."<init>":(II[I)V
+  #464 = Utf8               stbi_image_free
+  #465 = Utf8               (Ljava/nio/ByteBuffer;)V
+  #466 = NameAndType        #464:#465     // stbi_image_free:(Ljava/nio/ByteBuffer;)V
+  #467 = Methodref          #435.#466     // org/lwjgl/stb/STBImage.stbi_image_free:(Ljava/nio/ByteBuffer;)V
+  #468 = Methodref          #415.#117     // org/lwjgl/system/MemoryStack.close:()V
+  #469 = Utf8               memFree
+  #470 = Utf8               (Ljava/nio/Buffer;)V
+  #471 = NameAndType        #469:#470     // memFree:(Ljava/nio/Buffer;)V
+  #472 = Methodref          #409.#471     // org/lwjgl/system/MemoryUtil.memFree:(Ljava/nio/Buffer;)V
+  #473 = Utf8               r
+  #474 = Utf8               g
+  #475 = Utf8               b
+  #476 = Utf8               a
+  #477 = Utf8               i
+  #478 = Utf8               width
+  #479 = Utf8               height
+  #480 = Utf8               argb
+  #481 = Utf8               w
+  #482 = Utf8               Ljava/nio/IntBuffer;
+  #483 = Utf8               h
+  #484 = Utf8               channels
+  #485 = Utf8               rgba
+  #486 = Utf8               Ljava/nio/ByteBuffer;
+  #487 = Utf8               stack
+  #488 = Utf8               Lorg/lwjgl/system/MemoryStack;
+  #489 = Utf8               encoded
+  #490 = NameAndType        #212:#201     // open:(Ljava/nio/file/Path;Ljava/lang/String;)Ljava/io/InputStream;
+  #491 = Methodref          #2.#490       // net/anubis/client/module/impl/render/character/CustomCharacters.open:(Ljava/nio/file/Path;Ljava/lang/String;)Ljava/io/InputStream;
+  #492 = Utf8               <clinit>
+  #493 = Utf8               Anubis
+  #494 = String             #493          // Anubis
+  #495 = Utf8               org/slf4j/LoggerFactory
+  #496 = Class              #495          // org/slf4j/LoggerFactory
+  #497 = Utf8               getLogger
+  #498 = Utf8               (Ljava/lang/String;)Lorg/slf4j/Logger;
+  #499 = NameAndType        #497:#498     // getLogger:(Ljava/lang/String;)Lorg/slf4j/Logger;
+  #500 = Methodref          #496.#499     // org/slf4j/LoggerFactory.getLogger:(Ljava/lang/String;)Lorg/slf4j/Logger;
+  #501 = Utf8               Lnet/fabricmc/api/Environment;
+  #502 = Utf8               value
+  #503 = Utf8               Lnet/fabricmc/api/EnvType;
+  #504 = Utf8               CLIENT
+  #505 = Utf8               ConstantValue
+  #506 = Utf8               Code
+  #507 = Utf8               LineNumberTable
+  #508 = Utf8               LocalVariableTable
+  #509 = Utf8               StackMapTable
+  #510 = Utf8               LocalVariableTypeTable
+  #511 = Utf8               Signature
+  #512 = Utf8               MethodParameters
+  #513 = Utf8               Exceptions
+  #514 = Utf8               InnerClasses
+  #515 = Utf8               SourceFile
+  #516 = Utf8               RuntimeVisibleAnnotations
+  #517 = Utf8               BootstrapMethods
+{
+  private static final org.slf4j.Logger LOGGER;
+    descriptor: Lorg/slf4j/Logger;
+    flags: (0x001a) ACC_PRIVATE, ACC_STATIC, ACC_FINAL
+
+  private static final long MAX_FILE;
+    descriptor: J
+    flags: (0x001a) ACC_PRIVATE, ACC_STATIC, ACC_FINAL
+    ConstantValue: long 268435456l
+
+  private static final int MAX_TEXTURE;
+    descriptor: I
+    flags: (0x001a) ACC_PRIVATE, ACC_STATIC, ACC_FINAL
+    ConstantValue: int 8192
+
+  private net.anubis.client.module.impl.render.character.CustomCharacters();
+    descriptor: ()V
+    flags: (0x0002) ACC_PRIVATE
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: invokespecial #41                 // Method java/lang/Object."<init>":()V
+         4: return
+      LineNumberTable:
+        line 35: 0
+        line 36: 4
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       5     0  this   Lnet/anubis/client/module/impl/render/character/CustomCharacters;
+
+  static java.nio.file.Path folder();
+    descriptor: ()Ljava/nio/file/Path;
+    flags: (0x0008) ACC_STATIC
+    Code:
+      stack=2, locals=0, args_size=0
+         0: invokestatic  #51                 // InterfaceMethod net/fabricmc/loader/api/FabricLoader.getInstance:()Lnet/fabricmc/loader/api/FabricLoader;
+         3: invokeinterface #54,  1           // InterfaceMethod net/fabricmc/loader/api/FabricLoader.getConfigDir:()Ljava/nio/file/Path;
+         8: ldc           #56                 // String anubis
+        10: invokeinterface #62,  2           // InterfaceMethod java/nio/file/Path.resolve:(Ljava/lang/String;)Ljava/nio/file/Path;
+        15: ldc           #64                 // String characters
+        17: invokeinterface #62,  2           // InterfaceMethod java/nio/file/Path.resolve:(Ljava/lang/String;)Ljava/nio/file/Path;
+        22: areturn
+      LineNumberTable:
+        line 39: 0
+
+  private static java.nio.file.Path cache();
+    descriptor: ()Ljava/nio/file/Path;
+    flags: (0x000a) ACC_PRIVATE, ACC_STATIC
+    Code:
+      stack=2, locals=0, args_size=0
+         0: invokestatic  #67                 // Method folder:()Ljava/nio/file/Path;
+         3: ldc           #69                 // String .baked
+         5: invokeinterface #62,  2           // InterfaceMethod java/nio/file/Path.resolve:(Ljava/lang/String;)Ljava/nio/file/Path;
+        10: areturn
+      LineNumberTable:
+        line 43: 0
+
+  static java.util.List<net.anubis.client.module.impl.render.character.kit.BakedDesign> scan();
+    descriptor: ()Ljava/util/List;
+    flags: (0x0008) ACC_STATIC
+    Code:
+      stack=7, locals=8, args_size=0
+         0: new           #78                 // class java/util/ArrayList
+         3: dup
+         4: invokespecial #79                 // Method java/util/ArrayList."<init>":()V
+         7: astore_0
+         8: invokestatic  #67                 // Method folder:()Ljava/nio/file/Path;
+        11: ldc           #81                 // String *.{glb,GLB}
+        13: invokestatic  #87                 // Method java/nio/file/Files.newDirectoryStream:(Ljava/nio/file/Path;Ljava/lang/String;)Ljava/nio/file/DirectoryStream;
+        16: astore_1
+        17: aload_1
+        18: invokeinterface #93,  1           // InterfaceMethod java/nio/file/DirectoryStream.iterator:()Ljava/util/Iterator;
+        23: astore_2
+        24: aload_2
+        25: invokeinterface #101,  1          // InterfaceMethod java/util/Iterator.hasNext:()Z
+        30: ifeq          65
+        33: aload_2
+        34: invokeinterface #105,  1          // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+        39: checkcast     #58                 // class java/nio/file/Path
+        42: astore_3
+        43: aload_3
+        44: iconst_0
+        45: anewarray     #107                // class java/nio/file/LinkOption
+        48: invokestatic  #111                // Method java/nio/file/Files.isRegularFile:(Ljava/nio/file/Path;[Ljava/nio/file/LinkOption;)Z
+        51: ifeq          62
+        54: aload_0
+        55: aload_3
+        56: invokeinterface #115,  2          // InterfaceMethod java/util/List.add:(Ljava/lang/Object;)Z
+        61: pop
+        62: goto          24
+        65: aload_1
+        66: ifnull        100
+        69: aload_1
+        70: invokeinterface #118,  1          // InterfaceMethod java/nio/file/DirectoryStream.close:()V
+        75: goto          100
+        78: astore_2
+        79: aload_1
+        80: ifnull        98
+        83: aload_1
+        84: invokeinterface #118,  1          // InterfaceMethod java/nio/file/DirectoryStream.close:()V
+        89: goto          98
+        92: astore_3
+        93: aload_2
+        94: aload_3
+        95: invokevirtual #122                // Method java/lang/Throwable.addSuppressed:(Ljava/lang/Throwable;)V
+        98: aload_2
+        99: athrow
+       100: goto          108
+       103: astore_1
+       104: invokestatic  #125                // InterfaceMethod java/util/List.of:()Ljava/util/List;
+       107: areturn
+       108: aload_0
+       109: aconst_null
+       110: invokeinterface #129,  2          // InterfaceMethod java/util/List.sort:(Ljava/util/Comparator;)V
+       115: new           #78                 // class java/util/ArrayList
+       118: dup
+       119: invokespecial #79                 // Method java/util/ArrayList."<init>":()V
+       122: astore_1
+       123: new           #131                // class java/util/HashSet
+       126: dup
+       127: invokespecial #132                // Method java/util/HashSet."<init>":()V
+       130: astore_2
+       131: aload_0
+       132: invokeinterface #133,  1          // InterfaceMethod java/util/List.iterator:()Ljava/util/Iterator;
+       137: astore_3
+       138: aload_3
+       139: invokeinterface #101,  1          // InterfaceMethod java/util/Iterator.hasNext:()Z
+       144: ifeq          294
+       147: aload_3
+       148: invokeinterface #105,  1          // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+       153: checkcast     #58                 // class java/nio/file/Path
+       156: astore        4
+       158: aload         4
+       160: invokeinterface #138,  1          // InterfaceMethod java/nio/file/Path.getFileName:()Ljava/nio/file/Path;
+       165: invokeinterface #142,  1          // InterfaceMethod java/nio/file/Path.toString:()Ljava/lang/String;
+       170: astore        5
+       172: aload         5
+       174: iconst_0
+       175: aload         5
+       177: invokevirtual #148                // Method java/lang/String.length:()I
+       180: iconst_4
+       181: isub
+       182: invokevirtual #152                // Method java/lang/String.substring:(II)Ljava/lang/String;
+       185: astore        5
+       187: aload         5
+       189: aload         4
+       191: invokestatic  #156                // Method java/nio/file/Files.size:(Ljava/nio/file/Path;)J
+       194: aload         4
+       196: iconst_0
+       197: anewarray     #107                // class java/nio/file/LinkOption
+       200: invokestatic  #160                // Method java/nio/file/Files.getLastModifiedTime:(Ljava/nio/file/Path;[Ljava/nio/file/LinkOption;)Ljava/nio/file/attribute/FileTime;
+       203: invokevirtual #166                // Method java/nio/file/attribute/FileTime.toMillis:()J
+       206: invokedynamic #178,  0            // InvokeDynamic #0:makeConcatWithConstants:(Ljava/lang/String;JJ)Ljava/lang/String;
+       211: astore        6
+       213: aload         5
+       215: invokestatic  #182                // Method slug:(Ljava/lang/String;)Ljava/lang/String;
+       218: aload         6
+       220: invokevirtual #185                // Method java/lang/String.hashCode:()I
+       223: invokestatic  #191                // Method java/lang/Integer.toHexString:(I)Ljava/lang/String;
+       226: invokedynamic #196,  0            // InvokeDynamic #1:makeConcatWithConstants:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+       231: astore        7
+       233: aload_2
+       234: aload         7
+       236: invokeinterface #197,  2          // InterfaceMethod java/util/Set.add:(Ljava/lang/Object;)Z
+       241: pop
+       242: aload_1
+       243: new           #9                  // class net/anubis/client/module/impl/render/character/kit/BakedDesign
+       246: dup
+       247: aload         7
+       249: aload         5
+       251: aload         4
+       253: aload         7
+       255: invokedynamic #215,  0            // InvokeDynamic #2:open:(Ljava/nio/file/Path;Ljava/lang/String;)Lnet/anubis/client/module/impl/render/character/kit/BakedDesign$Source;
+       260: invokespecial #218                // Method net/anubis/client/module/impl/render/character/kit/BakedDesign."<init>":(Ljava/lang/String;Ljava/lang/String;Lnet/anubis/client/module/impl/render/character/kit/BakedDesign$Source;)V
+       263: invokeinterface #115,  2          // InterfaceMethod java/util/List.add:(Ljava/lang/Object;)Z
+       268: pop
+       269: goto          291
+       272: astore        6
+       274: getstatic     #220                // Field LOGGER:Lorg/slf4j/Logger;
+       277: ldc           #222                // String [Anubis] Skipping custom character {}: {}
+       279: aload         4
+       281: aload         6
+       283: invokevirtual #223                // Method java/io/IOException.toString:()Ljava/lang/String;
+       286: invokeinterface #229,  4          // InterfaceMethod org/slf4j/Logger.warn:(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
+       291: goto          138
+       294: aload_2
+       295: invokestatic  #233                // Method prune:(Ljava/util/Set;)V
+       298: aload_1
+       299: areturn
+      Exception table:
+         from    to  target type
+            17    65    78   Class java/lang/Throwable
+            83    89    92   Class java/lang/Throwable
+             8   100   103   Class java/io/IOException
+           187   269   272   Class java/io/IOException
+      StackMapTable: number_of_entries = 13
+        frame_type = 254 /* append */
+          offset_delta = 24
+          locals = [ class java/util/List, class java/nio/file/DirectoryStream, class java/util/Iterator ]
+        frame_type = 37 /* same */
+        frame_type = 250 /* chop */
+          offset_delta = 2
+        frame_type = 76 /* same_locals_1_stack_item */
+          stack = [ class java/lang/Throwable ]
+        frame_type = 255 /* full_frame */
+          offset_delta = 13
+          locals = [ class java/util/List, class java/nio/file/DirectoryStream, class java/lang/Throwable ]
+          stack = [ class java/lang/Throwable ]
+        frame_type = 5 /* same */
+        frame_type = 249 /* chop */
+          offset_delta = 1
+        frame_type = 66 /* same_locals_1_stack_item */
+          stack = [ class java/io/IOException ]
+        frame_type = 4 /* same */
+        frame_type = 254 /* append */
+          offset_delta = 29
+          locals = [ class java/util/List, class java/util/Set, class java/util/Iterator ]
+        frame_type = 255 /* full_frame */
+          offset_delta = 133
+          locals = [ class java/util/List, class java/util/List, class java/util/Set, class java/util/Iterator, class java/nio/file/Path, class java/lang/String ]
+          stack = [ class java/io/IOException ]
+        frame_type = 249 /* chop */
+          offset_delta = 18
+        frame_type = 250 /* chop */
+          offset_delta = 2
+      LineNumberTable:
+        line 47: 0
+        line 48: 8
+        line 49: 17
+        line 50: 65
+        line 48: 78
+        line 52: 100
+        line 50: 103
+        line 51: 104
+        line 53: 108
+        line 54: 115
+        line 55: 123
+        line 56: 131
+        line 57: 158
+        line 58: 172
+        line 60: 187
+        line 61: 213
+        line 62: 233
+        line 63: 242
+        line 66: 269
+        line 64: 272
+        line 65: 274
+        line 67: 291
+        line 68: 294
+        line 69: 298
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+           43      19     3  file   Ljava/nio/file/Path;
+           17      83     1   dir   Ljava/nio/file/DirectoryStream;
+          104       4     1 ignored   Ljava/io/IOException;
+          213      56     6 stamp   Ljava/lang/String;
+          233      36     7    id   Ljava/lang/String;
+          274      17     6     e   Ljava/io/IOException;
+          172     119     5  name   Ljava/lang/String;
+          158     133     4  file   Ljava/nio/file/Path;
+            8     292     0 files   Ljava/util/List;
+          123     177     1   out   Ljava/util/List;
+          131     169     2   ids   Ljava/util/Set;
+      LocalVariableTypeTable:
+        Start  Length  Slot  Name   Signature
+           17      83     1   dir   Ljava/nio/file/DirectoryStream<Ljava/nio/file/Path;>;
+            8     292     0 files   Ljava/util/List<Ljava/nio/file/Path;>;
+          123     177     1   out   Ljava/util/List<Lnet/anubis/client/module/impl/render/character/kit/BakedDesign;>;
+          131     169     2   ids   Ljava/util/Set<Ljava/lang/String;>;
+    Signature: #72                          // ()Ljava/util/List<Lnet/anubis/client/module/impl/render/character/kit/BakedDesign;>;
+
+  private static java.lang.String slug(java.lang.String);
+    descriptor: (Ljava/lang/String;)Ljava/lang/String;
+    flags: (0x000a) ACC_PRIVATE, ACC_STATIC
+    Code:
+      stack=3, locals=2, args_size=1
+         0: aload_0
+         1: getstatic     #259                // Field java/util/Locale.ROOT:Ljava/util/Locale;
+         4: invokevirtual #263                // Method java/lang/String.toLowerCase:(Ljava/util/Locale;)Ljava/lang/String;
+         7: ldc_w         #265                // String [^a-z0-9]+
+        10: ldc_w         #267                // String _
+        13: invokevirtual #270                // Method java/lang/String.replaceAll:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+        16: ldc_w         #272                // String ^_+|_+$
+        19: ldc_w         #274                // String
+        22: invokevirtual #270                // Method java/lang/String.replaceAll:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+        25: astore_1
+        26: aload_1
+        27: invokevirtual #277                // Method java/lang/String.isEmpty:()Z
+        30: ifeq          39
+        33: ldc_w         #279                // String model
+        36: goto          59
+        39: aload_1
+        40: invokevirtual #148                // Method java/lang/String.length:()I
+        43: bipush        32
+        45: if_icmple     58
+        48: aload_1
+        49: iconst_0
+        50: bipush        32
+        52: invokevirtual #152                // Method java/lang/String.substring:(II)Ljava/lang/String;
+        55: goto          59
+        58: aload_1
+        59: areturn
+      StackMapTable: number_of_entries = 3
+        frame_type = 252 /* append */
+          offset_delta = 39
+          locals = [ class java/lang/String ]
+        frame_type = 18 /* same */
+        frame_type = 64 /* same_locals_1_stack_item */
+          stack = [ class java/lang/String ]
+      LineNumberTable:
+        line 73: 0
+        line 74: 26
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      60     0  name   Ljava/lang/String;
+           26      34     1     s   Ljava/lang/String;
+    MethodParameters:
+      Name                           Flags
+      name
+
+  private static void prune(java.util.Set<java.lang.String>);
+    descriptor: (Ljava/util/Set;)V
+    flags: (0x000a) ACC_PRIVATE, ACC_STATIC
+    Code:
+      stack=3, locals=5, args_size=1
+         0: invokestatic  #284                // Method cache:()Ljava/nio/file/Path;
+         3: ldc_w         #286                // String *.anc
+         6: invokestatic  #87                 // Method java/nio/file/Files.newDirectoryStream:(Ljava/nio/file/Path;Ljava/lang/String;)Ljava/nio/file/DirectoryStream;
+         9: astore_1
+        10: aload_1
+        11: invokeinterface #93,  1           // InterfaceMethod java/nio/file/DirectoryStream.iterator:()Ljava/util/Iterator;
+        16: astore_2
+        17: aload_2
+        18: invokeinterface #101,  1          // InterfaceMethod java/util/Iterator.hasNext:()Z
+        23: ifeq          77
+        26: aload_2
+        27: invokeinterface #105,  1          // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+        32: checkcast     #58                 // class java/nio/file/Path
+        35: astore_3
+        36: aload_3
+        37: invokeinterface #138,  1          // InterfaceMethod java/nio/file/Path.getFileName:()Ljava/nio/file/Path;
+        42: invokeinterface #142,  1          // InterfaceMethod java/nio/file/Path.toString:()Ljava/lang/String;
+        47: ldc_w         #288                // String .anc
+        50: ldc_w         #274                // String
+        53: invokevirtual #292                // Method java/lang/String.replace:(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
+        56: astore        4
+        58: aload_0
+        59: aload         4
+        61: invokeinterface #295,  2          // InterfaceMethod java/util/Set.contains:(Ljava/lang/Object;)Z
+        66: ifne          74
+        69: aload_3
+        70: invokestatic  #299                // Method java/nio/file/Files.deleteIfExists:(Ljava/nio/file/Path;)Z
+        73: pop
+        74: goto          17
+        77: aload_1
+        78: ifnull        112
+        81: aload_1
+        82: invokeinterface #118,  1          // InterfaceMethod java/nio/file/DirectoryStream.close:()V
+        87: goto          112
+        90: astore_2
+        91: aload_1
+        92: ifnull        110
+        95: aload_1
+        96: invokeinterface #118,  1          // InterfaceMethod java/nio/file/DirectoryStream.close:()V
+       101: goto          110
+       104: astore_3
+       105: aload_2
+       106: aload_3
+       107: invokevirtual #122                // Method java/lang/Throwable.addSuppressed:(Ljava/lang/Throwable;)V
+       110: aload_2
+       111: athrow
+       112: goto          116
+       115: astore_1
+       116: return
+      Exception table:
+         from    to  target type
+            10    77    90   Class java/lang/Throwable
+            95   101   104   Class java/lang/Throwable
+             0   112   115   Class java/io/IOException
+      StackMapTable: number_of_entries = 9
+        frame_type = 253 /* append */
+          offset_delta = 17
+          locals = [ class java/nio/file/DirectoryStream, class java/util/Iterator ]
+        frame_type = 56 /* same */
+        frame_type = 250 /* chop */
+          offset_delta = 2
+        frame_type = 76 /* same_locals_1_stack_item */
+          stack = [ class java/lang/Throwable ]
+        frame_type = 255 /* full_frame */
+          offset_delta = 13
+          locals = [ class java/util/Set, class java/nio/file/DirectoryStream, class java/lang/Throwable ]
+          stack = [ class java/lang/Throwable ]
+        frame_type = 5 /* same */
+        frame_type = 249 /* chop */
+          offset_delta = 1
+        frame_type = 66 /* same_locals_1_stack_item */
+          stack = [ class java/io/IOException ]
+        frame_type = 0 /* same */
+      LineNumberTable:
+        line 78: 0
+        line 79: 10
+        line 80: 36
+        line 81: 58
+        line 82: 74
+        line 83: 77
+        line 78: 90
+        line 84: 112
+        line 83: 115
+        line 85: 116
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+           58      16     4    id   Ljava/lang/String;
+           36      38     3  file   Ljava/nio/file/Path;
+           10     102     1   dir   Ljava/nio/file/DirectoryStream;
+            0     117     0  keep   Ljava/util/Set;
+      LocalVariableTypeTable:
+        Start  Length  Slot  Name   Signature
+           10     102     1   dir   Ljava/nio/file/DirectoryStream<Ljava/nio/file/Path;>;
+            0     117     0  keep   Ljava/util/Set<Ljava/lang/String;>;
+    Signature: #281                         // (Ljava/util/Set<Ljava/lang/String;>;)V
+    MethodParameters:
+      Name                           Flags
+      keep
+
+  private static synchronized java.io.InputStream open(java.nio.file.Path, java.lang.String) throws java.io.IOException;
+    descriptor: (Ljava/nio/file/Path;Ljava/lang/String;)Ljava/io/InputStream;
+    flags: (0x002a) ACC_PRIVATE, ACC_STATIC, ACC_SYNCHRONIZED
+    Code:
+      stack=9, locals=8, args_size=2
+         0: invokestatic  #284                // Method cache:()Ljava/nio/file/Path;
+         3: aload_1
+         4: invokedynamic #303,  0            // InvokeDynamic #3:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+         9: invokeinterface #62,  2           // InterfaceMethod java/nio/file/Path.resolve:(Ljava/lang/String;)Ljava/nio/file/Path;
+        14: astore_2
+        15: aload_2
+        16: iconst_0
+        17: anewarray     #107                // class java/nio/file/LinkOption
+        20: invokestatic  #306                // Method java/nio/file/Files.exists:(Ljava/nio/file/Path;[Ljava/nio/file/LinkOption;)Z
+        23: ifeq          35
+        26: aload_2
+        27: iconst_0
+        28: anewarray     #308                // class java/nio/file/OpenOption
+        31: invokestatic  #312                // Method java/nio/file/Files.newInputStream:(Ljava/nio/file/Path;[Ljava/nio/file/OpenOption;)Ljava/io/InputStream;
+        34: areturn
+        35: aload_0
+        36: invokestatic  #156                // Method java/nio/file/Files.size:(Ljava/nio/file/Path;)J
+        39: ldc2_w        #33                 // long 268435456l
+        42: lcmp
+        43: ifle          57
+        46: new           #76                 // class java/io/IOException
+        49: dup
+        50: ldc_w         #314                // String the file is larger than 256 MB
+        53: invokespecial #317                // Method java/io/IOException."<init>":(Ljava/lang/String;)V
+        56: athrow
+        57: aload_0
+        58: invokeinterface #138,  1          // InterfaceMethod java/nio/file/Path.getFileName:()Ljava/nio/file/Path;
+        63: invokeinterface #142,  1          // InterfaceMethod java/nio/file/Path.toString:()Ljava/lang/String;
+        68: astore_3
+        69: aload_3
+        70: invokestatic  #322                // Method net/anubis/client/module/impl/render/character/CharacterModule.baking:(Ljava/lang/String;)V
+        73: invokestatic  #327                // Method java/lang/System.nanoTime:()J
+        76: lstore        4
+        78: aload_0
+        79: invokestatic  #331                // Method java/nio/file/Files.readAllBytes:(Ljava/nio/file/Path;)[B
+        82: new           #12                 // class net/anubis/client/module/impl/render/character/gltf/CharacterBake$Options
+        85: dup
+        86: invokespecial #332                // Method net/anubis/client/module/impl/render/character/gltf/CharacterBake$Options."<init>":()V
+        89: invokedynamic #341,  0            // InvokeDynamic #4:decode:()Lnet/anubis/client/module/impl/render/character/gltf/ImageDecoder;
+        94: invokestatic  #345                // Method net/anubis/client/module/impl/render/character/gltf/CharacterBake.bake:([BLnet/anubis/client/module/impl/render/character/gltf/CharacterBake$Options;Lnet/anubis/client/module/impl/render/character/gltf/ImageDecoder;)Lnet/anubis/client/module/impl/render/character/gltf/CharacterBake$Result;
+        97: astore        6
+        99: getstatic     #220                // Field LOGGER:Lorg/slf4j/Logger;
+       102: ldc_w         #347                // String [Anubis] Baked custom character {} in {} ms, moving {}
+       105: iconst_3
+       106: anewarray     #4                  // class java/lang/Object
+       109: dup
+       110: iconst_0
+       111: aload_3
+       112: aastore
+       113: dup
+       114: iconst_1
+       115: invokestatic  #327                // Method java/lang/System.nanoTime:()J
+       118: lload         4
+       120: lsub
+       121: ldc2_w        #348                // long 1000000l
+       124: ldiv
+       125: invokestatic  #355                // Method java/lang/Long.valueOf:(J)Ljava/lang/Long;
+       128: aastore
+       129: dup
+       130: iconst_2
+       131: aload         6
+       133: invokevirtual #358                // Method net/anubis/client/module/impl/render/character/gltf/CharacterBake$Result.limbs:()Ljava/util/List;
+       136: aastore
+       137: invokeinterface #362,  3          // InterfaceMethod org/slf4j/Logger.info:(Ljava/lang/String;[Ljava/lang/Object;)V
+       142: aload         6
+       144: invokevirtual #358                // Method net/anubis/client/module/impl/render/character/gltf/CharacterBake$Result.limbs:()Ljava/util/List;
+       147: invokeinterface #364,  1          // InterfaceMethod java/util/List.size:()I
+       152: iconst_3
+       153: if_icmpge     165
+       156: aload_3
+       157: aload         6
+       159: invokevirtual #358                // Method net/anubis/client/module/impl/render/character/gltf/CharacterBake$Result.limbs:()Ljava/util/List;
+       162: invokestatic  #368                // Method net/anubis/client/module/impl/render/character/CharacterModule.notice:(Ljava/lang/String;Ljava/util/List;)V
+       165: invokestatic  #284                // Method cache:()Ljava/nio/file/Path;
+       168: iconst_0
+       169: anewarray     #370                // class java/nio/file/attribute/FileAttribute
+       172: invokestatic  #374                // Method java/nio/file/Files.createDirectories:(Ljava/nio/file/Path;[Ljava/nio/file/attribute/FileAttribute;)Ljava/nio/file/Path;
+       175: pop
+       176: invokestatic  #284                // Method cache:()Ljava/nio/file/Path;
+       179: aload_1
+       180: invokedynamic #377,  0            // InvokeDynamic #5:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+       185: invokeinterface #62,  2           // InterfaceMethod java/nio/file/Path.resolve:(Ljava/lang/String;)Ljava/nio/file/Path;
+       190: astore        7
+       192: aload         7
+       194: aload         6
+       196: invokevirtual #381                // Method net/anubis/client/module/impl/render/character/gltf/CharacterBake$Result.data:()[B
+       199: iconst_0
+       200: anewarray     #308                // class java/nio/file/OpenOption
+       203: invokestatic  #385                // Method java/nio/file/Files.write:(Ljava/nio/file/Path;[B[Ljava/nio/file/OpenOption;)Ljava/nio/file/Path;
+       206: pop
+       207: aload         7
+       209: aload_2
+       210: iconst_1
+       211: anewarray     #387                // class java/nio/file/CopyOption
+       214: dup
+       215: iconst_0
+       216: getstatic     #393                // Field java/nio/file/StandardCopyOption.REPLACE_EXISTING:Ljava/nio/file/StandardCopyOption;
+       219: aastore
+       220: invokestatic  #397                // Method java/nio/file/Files.move:(Ljava/nio/file/Path;Ljava/nio/file/Path;[Ljava/nio/file/CopyOption;)Ljava/nio/file/Path;
+       223: pop
+       224: new           #399                // class java/io/ByteArrayInputStream
+       227: dup
+       228: aload         6
+       230: invokevirtual #381                // Method net/anubis/client/module/impl/render/character/gltf/CharacterBake$Result.data:()[B
+       233: invokespecial #402                // Method java/io/ByteArrayInputStream."<init>":([B)V
+       236: areturn
+      StackMapTable: number_of_entries = 3
+        frame_type = 252 /* append */
+          offset_delta = 35
+          locals = [ class java/nio/file/Path ]
+        frame_type = 21 /* same */
+        frame_type = 254 /* append */
+          offset_delta = 107
+          locals = [ class java/lang/String, long, class net/anubis/client/module/impl/render/character/gltf/CharacterBake$Result ]
+      LineNumberTable:
+        line 88: 0
+        line 89: 15
+        line 90: 35
+        line 91: 57
+        line 92: 69
+        line 93: 73
+        line 94: 78
+        line 96: 99
+        line 97: 115
+        line 96: 137
+        line 98: 142
+        line 99: 165
+        line 100: 176
+        line 101: 192
+        line 102: 207
+        line 103: 224
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0     237     0  file   Ljava/nio/file/Path;
+            0     237     1    id   Ljava/lang/String;
+           15     222     2 baked   Ljava/nio/file/Path;
+           69     168     3  name   Ljava/lang/String;
+           78     159     4 start   J
+           99     138     6 result   Lnet/anubis/client/module/impl/render/character/gltf/CharacterBake$Result;
+          192      45     7  temp   Ljava/nio/file/Path;
+    Exceptions:
+      throws java.io.IOException
+    MethodParameters:
+      Name                           Flags
+      file
+      id
+
+  private static net.anubis.client.module.impl.render.character.gltf.ImageDecoder$Picture decode(byte[]) throws java.io.IOException;
+    descriptor: ([B)Lnet/anubis/client/module/impl/render/character/gltf/ImageDecoder$Picture;
+    flags: (0x000a) ACC_PRIVATE, ACC_STATIC
+    Code:
+      stack=5, locals=17, args_size=1
+         0: aload_0
+         1: arraylength
+         2: invokestatic  #413                // Method org/lwjgl/system/MemoryUtil.memAlloc:(I)Ljava/nio/ByteBuffer;
+         5: astore_1
+         6: invokestatic  #419                // Method org/lwjgl/system/MemoryStack.stackPush:()Lorg/lwjgl/system/MemoryStack;
+         9: astore_2
+        10: aload_1
+        11: aload_0
+        12: invokevirtual #425                // Method java/nio/ByteBuffer.put:([B)Ljava/nio/ByteBuffer;
+        15: invokevirtual #429                // Method java/nio/ByteBuffer.flip:()Ljava/nio/ByteBuffer;
+        18: pop
+        19: aload_2
+        20: iconst_1
+        21: invokevirtual #433                // Method org/lwjgl/system/MemoryStack.mallocInt:(I)Ljava/nio/IntBuffer;
+        24: astore_3
+        25: aload_2
+        26: iconst_1
+        27: invokevirtual #433                // Method org/lwjgl/system/MemoryStack.mallocInt:(I)Ljava/nio/IntBuffer;
+        30: astore        4
+        32: aload_2
+        33: iconst_1
+        34: invokevirtual #433                // Method org/lwjgl/system/MemoryStack.mallocInt:(I)Ljava/nio/IntBuffer;
+        37: astore        5
+        39: aload_1
+        40: aload_3
+        41: aload         4
+        43: aload         5
+        45: iconst_4
+        46: invokestatic  #439                // Method org/lwjgl/stb/STBImage.stbi_load_from_memory:(Ljava/nio/ByteBuffer;Ljava/nio/IntBuffer;Ljava/nio/IntBuffer;Ljava/nio/IntBuffer;I)Ljava/nio/ByteBuffer;
+        49: astore        6
+        51: aload         6
+        53: ifnonnull     72
+        56: new           #76                 // class java/io/IOException
+        59: dup
+        60: invokestatic  #442                // Method org/lwjgl/stb/STBImage.stbi_failure_reason:()Ljava/lang/String;
+        63: invokedynamic #445,  0            // InvokeDynamic #6:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+        68: invokespecial #317                // Method java/io/IOException."<init>":(Ljava/lang/String;)V
+        71: athrow
+        72: aload_3
+        73: iconst_0
+        74: invokevirtual #453                // Method java/nio/IntBuffer.get:(I)I
+        77: istore        7
+        79: aload         4
+        81: iconst_0
+        82: invokevirtual #453                // Method java/nio/IntBuffer.get:(I)I
+        85: istore        8
+        87: iload         7
+        89: sipush        8192
+        92: if_icmpgt     103
+        95: iload         8
+        97: sipush        8192
+       100: if_icmple     114
+       103: new           #76                 // class java/io/IOException
+       106: dup
+       107: ldc_w         #455                // String a texture is over 8192 px
+       110: invokespecial #317                // Method java/io/IOException."<init>":(Ljava/lang/String;)V
+       113: athrow
+       114: iload         7
+       116: iload         8
+       118: imul
+       119: newarray       int
+       121: astore        9
+       123: iconst_0
+       124: istore        10
+       126: iload         10
+       128: aload         9
+       130: arraylength
+       131: if_icmpge     231
+       134: aload         6
+       136: iload         10
+       138: iconst_4
+       139: imul
+       140: invokevirtual #460                // Method java/nio/ByteBuffer.get:(I)B
+       143: sipush        255
+       146: iand
+       147: istore        11
+       149: aload         6
+       151: iload         10
+       153: iconst_4
+       154: imul
+       155: iconst_1
+       156: iadd
+       157: invokevirtual #460                // Method java/nio/ByteBuffer.get:(I)B
+       160: sipush        255
+       163: iand
+       164: istore        12
+       166: aload         6
+       168: iload         10
+       170: iconst_4
+       171: imul
+       172: iconst_2
+       173: iadd
+       174: invokevirtual #460                // Method java/nio/ByteBuffer.get:(I)B
+       177: sipush        255
+       180: iand
+       181: istore        13
+       183: aload         6
+       185: iload         10
+       187: iconst_4
+       188: imul
+       189: iconst_3
+       190: iadd
+       191: invokevirtual #460                // Method java/nio/ByteBuffer.get:(I)B
+       194: sipush        255
+       197: iand
+       198: istore        14
+       200: aload         9
+       202: iload         10
+       204: iload         14
+       206: bipush        24
+       208: ishl
+       209: iload         11
+       211: bipush        16
+       213: ishl
+       214: ior
+       215: iload         12
+       217: bipush        8
+       219: ishl
+       220: ior
+       221: iload         13
+       223: ior
+       224: iastore
+       225: iinc          10, 1
+       228: goto          126
+       231: new           #20                 // class net/anubis/client/module/impl/render/character/gltf/ImageDecoder$Picture
+       234: dup
+       235: iload         7
+       237: iload         8
+       239: aload         9
+       241: invokespecial #463                // Method net/anubis/client/module/impl/render/character/gltf/ImageDecoder$Picture."<init>":(II[I)V
+       244: astore        10
+       246: aload         6
+       248: invokestatic  #467                // Method org/lwjgl/stb/STBImage.stbi_image_free:(Ljava/nio/ByteBuffer;)V
+       251: aload_2
+       252: ifnull        259
+       255: aload_2
+       256: invokevirtual #468                // Method org/lwjgl/system/MemoryStack.close:()V
+       259: aload_1
+       260: invokestatic  #472                // Method org/lwjgl/system/MemoryUtil.memFree:(Ljava/nio/Buffer;)V
+       263: aload         10
+       265: areturn
+       266: astore        15
+       268: aload         6
+       270: invokestatic  #467                // Method org/lwjgl/stb/STBImage.stbi_image_free:(Ljava/nio/ByteBuffer;)V
+       273: aload         15
+       275: athrow
+       276: astore_3
+       277: aload_2
+       278: ifnull        296
+       281: aload_2
+       282: invokevirtual #468                // Method org/lwjgl/system/MemoryStack.close:()V
+       285: goto          296
+       288: astore        4
+       290: aload_3
+       291: aload         4
+       293: invokevirtual #122                // Method java/lang/Throwable.addSuppressed:(Ljava/lang/Throwable;)V
+       296: aload_3
+       297: athrow
+       298: astore        16
+       300: aload_1
+       301: invokestatic  #472                // Method org/lwjgl/system/MemoryUtil.memFree:(Ljava/nio/Buffer;)V
+       304: aload         16
+       306: athrow
+      Exception table:
+         from    to  target type
+            72   246   266   any
+           266   268   266   any
+            10   251   276   Class java/lang/Throwable
+           266   276   276   Class java/lang/Throwable
+           281   285   288   Class java/lang/Throwable
+             6   259   298   any
+           266   300   298   any
+      StackMapTable: number_of_entries = 11
+        frame_type = 255 /* full_frame */
+          offset_delta = 72
+          locals = [ class "[B", class java/nio/ByteBuffer, class org/lwjgl/system/MemoryStack, class java/nio/IntBuffer, class java/nio/IntBuffer, class java/nio/IntBuffer, class java/nio/ByteBuffer ]
+          stack = []
+        frame_type = 253 /* append */
+          offset_delta = 30
+          locals = [ int, int ]
+        frame_type = 10 /* same */
+        frame_type = 253 /* append */
+          offset_delta = 11
+          locals = [ class "[I", int ]
+        frame_type = 250 /* chop */
+          offset_delta = 104
+        frame_type = 252 /* append */
+          offset_delta = 27
+          locals = [ class net/anubis/client/module/impl/render/character/gltf/ImageDecoder$Picture ]
+        frame_type = 255 /* full_frame */
+          offset_delta = 6
+          locals = [ class "[B", class java/nio/ByteBuffer, class org/lwjgl/system/MemoryStack, class java/nio/IntBuffer, class java/nio/IntBuffer, class java/nio/IntBuffer, class java/nio/ByteBuffer ]
+          stack = [ class java/lang/Throwable ]
+        frame_type = 255 /* full_frame */
+          offset_delta = 9
+          locals = [ class "[B", class java/nio/ByteBuffer, class org/lwjgl/system/MemoryStack ]
+          stack = [ class java/lang/Throwable ]
+        frame_type = 255 /* full_frame */
+          offset_delta = 11
+          locals = [ class "[B", class java/nio/ByteBuffer, class org/lwjgl/system/MemoryStack, class java/lang/Throwable ]
+          stack = [ class java/lang/Throwable ]
+        frame_type = 7 /* same */
+        frame_type = 255 /* full_frame */
+          offset_delta = 1
+          locals = [ class "[B", class java/nio/ByteBuffer ]
+          stack = [ class java/lang/Throwable ]
+      LineNumberTable:
+        line 107: 0
+        line 108: 6
+        line 109: 10
+        line 110: 19
+        line 111: 39
+        line 112: 51
+        line 114: 72
+        line 115: 87
+        line 116: 114
+        line 117: 123
+        line 118: 134
+        line 119: 166
+        line 120: 200
+        line 117: 225
+        line 122: 231
+        line 124: 246
+        line 126: 251
+        line 127: 259
+        line 122: 263
+        line 124: 266
+        line 125: 273
+        line 108: 276
+        line 127: 298
+        line 128: 304
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+          149      76    11     r   I
+          166      59    12     g   I
+          183      42    13     b   I
+          200      25    14     a   I
+          126     105    10     i   I
+           79     187     7 width   I
+           87     179     8 height   I
+          123     143     9  argb   [I
+           25     251     3     w   Ljava/nio/IntBuffer;
+           32     244     4     h   Ljava/nio/IntBuffer;
+           39     237     5 channels   Ljava/nio/IntBuffer;
+           51     225     6  rgba   Ljava/nio/ByteBuffer;
+           10     288     2 stack   Lorg/lwjgl/system/MemoryStack;
+            0     307     0  data   [B
+            6     301     1 encoded   Ljava/nio/ByteBuffer;
+    Exceptions:
+      throws java.io.IOException
+    MethodParameters:
+      Name                           Flags
+      data
+
+  private static java.io.InputStream lambda$scan$0(java.nio.file.Path, java.lang.String) throws java.io.IOException;
+    descriptor: (Ljava/nio/file/Path;Ljava/lang/String;)Ljava/io/InputStream;
+    flags: (0x100a) ACC_PRIVATE, ACC_STATIC, ACC_SYNTHETIC
+    Code:
+      stack=2, locals=2, args_size=2
+         0: aload_0
+         1: aload_1
+         2: invokestatic  #491                // Method open:(Ljava/nio/file/Path;Ljava/lang/String;)Ljava/io/InputStream;
+         5: areturn
+      LineNumberTable:
+        line 63: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       6     0  file   Ljava/nio/file/Path;
+            0       6     1    id   Ljava/lang/String;
+    Exceptions:
+      throws java.io.IOException
+    MethodParameters:
+      Name                           Flags
+      file
+      id
+
+  static {};
+    descriptor: ()V
+    flags: (0x0008) ACC_STATIC
+    Code:
+      stack=1, locals=0, args_size=0
+         0: ldc_w         #494                // String Anubis
+         3: invokestatic  #500                // Method org/slf4j/LoggerFactory.getLogger:(Ljava/lang/String;)Lorg/slf4j/Logger;
+         6: putstatic     #220                // Field LOGGER:Lorg/slf4j/Logger;
+         9: return
+      LineNumberTable:
+        line 31: 0
+}
+InnerClasses:
+  public static #10= #7 of #9;            // Source=class net/anubis/client/module/impl/render/character/kit/BakedDesign$Source of class net/anubis/client/module/impl/render/character/kit/BakedDesign
+  public static final #15= #12 of #14;    // Options=class net/anubis/client/module/impl/render/character/gltf/CharacterBake$Options of class net/anubis/client/module/impl/render/character/gltf/CharacterBake
+  public static final #18= #17 of #14;    // Result=class net/anubis/client/module/impl/render/character/gltf/CharacterBake$Result of class net/anubis/client/module/impl/render/character/gltf/CharacterBake
+  public static final #23= #20 of #22;    // Picture=class net/anubis/client/module/impl/render/character/gltf/ImageDecoder$Picture of class net/anubis/client/module/impl/render/character/gltf/ImageDecoder
+  public static final #28= #25 of #27;    // Lookup=class java/lang/invoke/MethodHandles$Lookup of class java/lang/invoke/MethodHandles
+SourceFile: "CustomCharacters.java"
+RuntimeVisibleAnnotations:
+  0: #501(#502=e#503.#504)
+    net.fabricmc.api.Environment(
+      value=Lnet/fabricmc/api/EnvType;.CLIENT
+    )
+BootstrapMethods:
+  0: #175 REF_invokeStatic java/lang/invoke/StringConcatFactory.makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #168 \u0001\u0001\u00013
+  1: #175 REF_invokeStatic java/lang/invoke/StringConcatFactory.makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #193 custom_\u0001_\u0001
+  2: #211 REF_invokeStatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #199 ()Ljava/io/InputStream;
+      #204 REF_invokeStatic net/anubis/client/module/impl/render/character/CustomCharacters.lambda$scan$0:(Ljava/nio/file/Path;Ljava/lang/String;)Ljava/io/InputStream;
+      #199 ()Ljava/io/InputStream;
+  3: #175 REF_invokeStatic java/lang/invoke/StringConcatFactory.makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #301 \u0001.anc
+  4: #211 REF_invokeStatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #334 ([B)Lnet/anubis/client/module/impl/render/character/gltf/ImageDecoder$Picture;
+      #338 REF_invokeStatic net/anubis/client/module/impl/render/character/CustomCharacters.decode:([B)Lnet/anubis/client/module/impl/render/character/gltf/ImageDecoder$Picture;
+      #334 ([B)Lnet/anubis/client/module/impl/render/character/gltf/ImageDecoder$Picture;
+  5: #175 REF_invokeStatic java/lang/invoke/StringConcatFactory.makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #376 \u0001.tmp
+  6: #175 REF_invokeStatic java/lang/invoke/StringConcatFactory.makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #444 a texture can\'t be read: \u0001

@@ -1,0 +1,2961 @@
+Classfile analysis-workspace/extracted/run.oEA4CbVx/net/anubis/client/module/impl/misc/PlayerDetectionModule.class
+  Last modified Oct 13, 2026; size 20519 bytes
+  SHA-256 checksum ddc56d514c3c4adb005babad0a1619ffeb135e99d3fa5136903b46fb9ee3516a
+  Compiled from "PlayerDetectionModule.java"
+public final class net.anubis.client.module.impl.misc.PlayerDetectionModule extends net.anubis.client.module.ClientModule
+  minor version: 0
+  major version: 65
+  flags: (0x0031) ACC_PUBLIC, ACC_FINAL, ACC_SUPER
+  this_class: #2                          // net/anubis/client/module/impl/misc/PlayerDetectionModule
+  super_class: #4                         // net/anubis/client/module/ClientModule
+  interfaces: 0, fields: 23, methods: 21, attributes: 5
+Constant pool:
+    #1 = Utf8               net/anubis/client/module/impl/misc/PlayerDetectionModule
+    #2 = Class              #1            // net/anubis/client/module/impl/misc/PlayerDetectionModule
+    #3 = Utf8               net/anubis/client/module/ClientModule
+    #4 = Class              #3            // net/anubis/client/module/ClientModule
+    #5 = Utf8               PlayerDetectionModule.java
+    #6 = Utf8               net/anubis/client/module/impl/misc/PlayerDetectionModule$WebhookHolder
+    #7 = Class              #6            // net/anubis/client/module/impl/misc/PlayerDetectionModule$WebhookHolder
+    #8 = Utf8               imgui/type/ImString$InputData
+    #9 = Class              #8            // imgui/type/ImString$InputData
+   #10 = Utf8               imgui/type/ImString
+   #11 = Class              #10           // imgui/type/ImString
+   #12 = Utf8               InputData
+   #13 = Utf8               net/anubis/client/chat/ModuleChat$Body
+   #14 = Class              #13           // net/anubis/client/chat/ModuleChat$Body
+   #15 = Utf8               net/anubis/client/chat/ModuleChat
+   #16 = Class              #15           // net/anubis/client/chat/ModuleChat
+   #17 = Utf8               Body
+   #18 = Utf8               net/minecraft/class_370$class_9037
+   #19 = Class              #18           // net/minecraft/class_370$class_9037
+   #20 = Utf8               net/minecraft/class_370
+   #21 = Class              #20           // net/minecraft/class_370
+   #22 = Utf8               class_9037
+   #23 = Utf8               WebhookHolder
+   #24 = Utf8               java/lang/invoke/MethodHandles$Lookup
+   #25 = Class              #24           // java/lang/invoke/MethodHandles$Lookup
+   #26 = Utf8               java/lang/invoke/MethodHandles
+   #27 = Class              #26           // java/lang/invoke/MethodHandles
+   #28 = Utf8               Lookup
+   #29 = Utf8               LOGGER
+   #30 = Utf8               Lorg/slf4j/Logger;
+   #31 = Utf8               PERMANENT_WHITELIST
+   #32 = Utf8               Ljava/util/Set;
+   #33 = Utf8               Ljava/util/Set<Ljava/lang/String;>;
+   #34 = Utf8               DISCONNECT_DELAY_MS
+   #35 = Utf8               J
+   #36 = Long               500l
+   #38 = Utf8               WEBHOOK_TITLE
+   #39 = Utf8               Ljava/lang/String;
+   #40 = Utf8               🚨 Player Detection Alert
+   #41 = String             #40           // 🚨 Player Detection Alert
+   #42 = Utf8               WEBHOOK_COLOR
+   #43 = Utf8               I
+   #44 = Integer            15158332
+   #45 = Utf8               TOAST_ID
+   #46 = Utf8               Lnet/minecraft/class_370$class_9037;
+   #47 = Utf8               WEBHOOK_EXECUTOR
+   #48 = Utf8               Ljava/util/concurrent/ExecutorService;
+   #49 = Utf8               modulesToToggle
+   #50 = Utf8               Lnet/anubis/client/module/setting/StringSetting;
+   #51 = Utf8               enableDisconnect
+   #52 = Utf8               Lnet/anubis/client/module/setting/BooleanSetting;
+   #53 = Utf8               notificationMode
+   #54 = Utf8               Lnet/anubis/client/module/setting/ModeSetting;
+   #55 = Utf8               toggleOnPlayer
+   #56 = Utf8               userWhitelist
+   #57 = Utf8               enableWebhook
+   #58 = Utf8               webhookUrl
+   #59 = Utf8               selfPing
+   #60 = Utf8               discordId
+   #61 = Utf8               enablePanicPay
+   #62 = Utf8               panicPayTarget
+   #63 = Utf8               panicPayAmount
+   #64 = Utf8               detectedPlayers
+   #65 = Utf8               lastLevel
+   #66 = Utf8               Lnet/minecraft/class_638;
+   #67 = Utf8               whitelistRaw
+   #68 = Utf8               whitelist
+   #69 = Utf8               <init>
+   #70 = Utf8               ()V
+   #71 = Utf8               player-detection
+   #72 = String             #71           // player-detection
+   #73 = Utf8               Player Detection
+   #74 = String             #73           // Player Detection
+   #75 = Utf8               Detects when players are in the world.
+   #76 = String             #75           // Detects when players are in the world.
+   #77 = Utf8               net/anubis/client/module/ModuleCategory
+   #78 = Class              #77           // net/anubis/client/module/ModuleCategory
+   #79 = Utf8               DONUT
+   #80 = Utf8               Lnet/anubis/client/module/ModuleCategory;
+   #81 = NameAndType        #79:#80       // DONUT:Lnet/anubis/client/module/ModuleCategory;
+   #82 = Fieldref           #78.#81       // net/anubis/client/module/ModuleCategory.DONUT:Lnet/anubis/client/module/ModuleCategory;
+   #83 = Utf8               (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lnet/anubis/client/module/ModuleCategory;)V
+   #84 = NameAndType        #69:#83       // "<init>":(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lnet/anubis/client/module/ModuleCategory;)V
+   #85 = Methodref          #4.#84        // net/anubis/client/module/ClientModule."<init>":(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lnet/anubis/client/module/ModuleCategory;)V
+   #86 = Utf8               modules-to-toggle
+   #87 = String             #86           // modules-to-toggle
+   #88 = Utf8               net/anubis/client/module/setting/StringSetting
+   #89 = Class              #88           // net/anubis/client/module/setting/StringSetting
+   #90 = Utf8               Modules To Toggle
+   #91 = String             #90           // Modules To Toggle
+   #92 = Utf8
+   #93 = String             #92           //
+   #94 = Utf8               (Ljava/lang/String;Ljava/lang/String;)V
+   #95 = NameAndType        #69:#94       // "<init>":(Ljava/lang/String;Ljava/lang/String;)V
+   #96 = Methodref          #89.#95       // net/anubis/client/module/setting/StringSetting."<init>":(Ljava/lang/String;Ljava/lang/String;)V
+   #97 = Utf8               addSetting
+   #98 = Utf8               (Ljava/lang/String;Lnet/anubis/client/module/setting/Setting;)Lnet/anubis/client/module/setting/Setting;
+   #99 = NameAndType        #97:#98       // addSetting:(Ljava/lang/String;Lnet/anubis/client/module/setting/Setting;)Lnet/anubis/client/module/setting/Setting;
+  #100 = Methodref          #2.#99        // net/anubis/client/module/impl/misc/PlayerDetectionModule.addSetting:(Ljava/lang/String;Lnet/anubis/client/module/setting/Setting;)Lnet/anubis/client/module/setting/Setting;
+  #101 = NameAndType        #49:#50       // modulesToToggle:Lnet/anubis/client/module/setting/StringSetting;
+  #102 = Fieldref           #2.#101       // net/anubis/client/module/impl/misc/PlayerDetectionModule.modulesToToggle:Lnet/anubis/client/module/setting/StringSetting;
+  #103 = Utf8               disconnect
+  #104 = String             #103          // disconnect
+  #105 = Utf8               net/anubis/client/module/setting/BooleanSetting
+  #106 = Class              #105          // net/anubis/client/module/setting/BooleanSetting
+  #107 = Utf8               Disconnect
+  #108 = String             #107          // Disconnect
+  #109 = Utf8               (Ljava/lang/String;Z)V
+  #110 = NameAndType        #69:#109      // "<init>":(Ljava/lang/String;Z)V
+  #111 = Methodref          #106.#110     // net/anubis/client/module/setting/BooleanSetting."<init>":(Ljava/lang/String;Z)V
+  #112 = NameAndType        #51:#52       // enableDisconnect:Lnet/anubis/client/module/setting/BooleanSetting;
+  #113 = Fieldref           #2.#112       // net/anubis/client/module/impl/misc/PlayerDetectionModule.enableDisconnect:Lnet/anubis/client/module/setting/BooleanSetting;
+  #114 = Utf8               notification-mode
+  #115 = String             #114          // notification-mode
+  #116 = Utf8               net/anubis/client/module/setting/ModeSetting
+  #117 = Class              #116          // net/anubis/client/module/setting/ModeSetting
+  #118 = Utf8               Notification Mode
+  #119 = String             #118          // Notification Mode
+  #120 = Utf8               Both
+  #121 = String             #120          // Both
+  #122 = Utf8               java/lang/String
+  #123 = Class              #122          // java/lang/String
+  #124 = Utf8               Chat
+  #125 = String             #124          // Chat
+  #126 = Utf8               Toast
+  #127 = String             #126          // Toast
+  #128 = Utf8               (Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)V
+  #129 = NameAndType        #69:#128      // "<init>":(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)V
+  #130 = Methodref          #117.#129     // net/anubis/client/module/setting/ModeSetting."<init>":(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)V
+  #131 = NameAndType        #53:#54       // notificationMode:Lnet/anubis/client/module/setting/ModeSetting;
+  #132 = Fieldref           #2.#131       // net/anubis/client/module/impl/misc/PlayerDetectionModule.notificationMode:Lnet/anubis/client/module/setting/ModeSetting;
+  #133 = Utf8               toggle-on-detect
+  #134 = String             #133          // toggle-on-detect
+  #135 = Utf8               Toggle On Detect
+  #136 = String             #135          // Toggle On Detect
+  #137 = NameAndType        #55:#52       // toggleOnPlayer:Lnet/anubis/client/module/setting/BooleanSetting;
+  #138 = Fieldref           #2.#137       // net/anubis/client/module/impl/misc/PlayerDetectionModule.toggleOnPlayer:Lnet/anubis/client/module/setting/BooleanSetting;
+  #139 = Utf8               user-whitelist
+  #140 = String             #139          // user-whitelist
+  #141 = Utf8               User Whitelist
+  #142 = String             #141          // User Whitelist
+  #143 = NameAndType        #56:#50       // userWhitelist:Lnet/anubis/client/module/setting/StringSetting;
+  #144 = Fieldref           #2.#143       // net/anubis/client/module/impl/misc/PlayerDetectionModule.userWhitelist:Lnet/anubis/client/module/setting/StringSetting;
+  #145 = Utf8               webhook
+  #146 = String             #145          // webhook
+  #147 = Utf8               Webhook
+  #148 = String             #147          // Webhook
+  #149 = NameAndType        #57:#52       // enableWebhook:Lnet/anubis/client/module/setting/BooleanSetting;
+  #150 = Fieldref           #2.#149       // net/anubis/client/module/impl/misc/PlayerDetectionModule.enableWebhook:Lnet/anubis/client/module/setting/BooleanSetting;
+  #151 = Utf8               webhook-url
+  #152 = String             #151          // webhook-url
+  #153 = Utf8               Webhook URL
+  #154 = String             #153          // Webhook URL
+  #155 = NameAndType        #58:#50       // webhookUrl:Lnet/anubis/client/module/setting/StringSetting;
+  #156 = Fieldref           #2.#155       // net/anubis/client/module/impl/misc/PlayerDetectionModule.webhookUrl:Lnet/anubis/client/module/setting/StringSetting;
+  #157 = Utf8               self-ping
+  #158 = String             #157          // self-ping
+  #159 = Utf8               Self Ping
+  #160 = String             #159          // Self Ping
+  #161 = NameAndType        #59:#52       // selfPing:Lnet/anubis/client/module/setting/BooleanSetting;
+  #162 = Fieldref           #2.#161       // net/anubis/client/module/impl/misc/PlayerDetectionModule.selfPing:Lnet/anubis/client/module/setting/BooleanSetting;
+  #163 = Utf8               discord-id
+  #164 = String             #163          // discord-id
+  #165 = Utf8               Discord ID
+  #166 = String             #165          // Discord ID
+  #167 = NameAndType        #60:#50       // discordId:Lnet/anubis/client/module/setting/StringSetting;
+  #168 = Fieldref           #2.#167       // net/anubis/client/module/impl/misc/PlayerDetectionModule.discordId:Lnet/anubis/client/module/setting/StringSetting;
+  #169 = Utf8               enable-panic-pay
+  #170 = String             #169          // enable-panic-pay
+  #171 = Utf8               Enable Panic Pay
+  #172 = String             #171          // Enable Panic Pay
+  #173 = NameAndType        #61:#52       // enablePanicPay:Lnet/anubis/client/module/setting/BooleanSetting;
+  #174 = Fieldref           #2.#173       // net/anubis/client/module/impl/misc/PlayerDetectionModule.enablePanicPay:Lnet/anubis/client/module/setting/BooleanSetting;
+  #175 = Utf8               target-player
+  #176 = String             #175          // target-player
+  #177 = Utf8               Target Player
+  #178 = String             #177          // Target Player
+  #179 = NameAndType        #62:#50       // panicPayTarget:Lnet/anubis/client/module/setting/StringSetting;
+  #180 = Fieldref           #2.#179       // net/anubis/client/module/impl/misc/PlayerDetectionModule.panicPayTarget:Lnet/anubis/client/module/setting/StringSetting;
+  #181 = Utf8               amount
+  #182 = String             #181          // amount
+  #183 = Utf8               Amount
+  #184 = String             #183          // Amount
+  #185 = NameAndType        #63:#50       // panicPayAmount:Lnet/anubis/client/module/setting/StringSetting;
+  #186 = Fieldref           #2.#185       // net/anubis/client/module/impl/misc/PlayerDetectionModule.panicPayAmount:Lnet/anubis/client/module/setting/StringSetting;
+  #187 = Utf8               java/util/HashSet
+  #188 = Class              #187          // java/util/HashSet
+  #189 = NameAndType        #69:#70       // "<init>":()V
+  #190 = Methodref          #188.#189     // java/util/HashSet."<init>":()V
+  #191 = NameAndType        #64:#32       // detectedPlayers:Ljava/util/Set;
+  #192 = Fieldref           #2.#191       // net/anubis/client/module/impl/misc/PlayerDetectionModule.detectedPlayers:Ljava/util/Set;
+  #193 = Utf8               java/util/Set
+  #194 = Class              #193          // java/util/Set
+  #195 = Utf8               of
+  #196 = Utf8               ()Ljava/util/Set;
+  #197 = NameAndType        #195:#196     // of:()Ljava/util/Set;
+  #198 = InterfaceMethodref #194.#197     // java/util/Set.of:()Ljava/util/Set;
+  #199 = NameAndType        #68:#32       // whitelist:Ljava/util/Set;
+  #200 = Fieldref           #2.#199       // net/anubis/client/module/impl/misc/PlayerDetectionModule.whitelist:Ljava/util/Set;
+  #201 = Utf8               usesNotifications
+  #202 = Utf8               ()Lnet/anubis/client/module/setting/BooleanSetting;
+  #203 = NameAndType        #201:#202     // usesNotifications:()Lnet/anubis/client/module/setting/BooleanSetting;
+  #204 = Methodref          #2.#203       // net/anubis/client/module/impl/misc/PlayerDetectionModule.usesNotifications:()Lnet/anubis/client/module/setting/BooleanSetting;
+  #205 = Utf8               java/util/Objects
+  #206 = Class              #205          // java/util/Objects
+  #207 = Utf8               requireNonNull
+  #208 = Utf8               (Ljava/lang/Object;)Ljava/lang/Object;
+  #209 = NameAndType        #207:#208     // requireNonNull:(Ljava/lang/Object;)Ljava/lang/Object;
+  #210 = Methodref          #206.#209     // java/util/Objects.requireNonNull:(Ljava/lang/Object;)Ljava/lang/Object;
+  #211 = Utf8               ()Z
+  #212 = MethodType         #211          //  ()Z
+  #213 = Utf8               get
+  #214 = NameAndType        #213:#211     // get:()Z
+  #215 = Methodref          #106.#214     // net/anubis/client/module/setting/BooleanSetting.get:()Z
+  #216 = MethodHandle       5:#215        // REF_invokeVirtual net/anubis/client/module/setting/BooleanSetting.get:()Z
+  #217 = Utf8               java/lang/invoke/LambdaMetafactory
+  #218 = Class              #217          // java/lang/invoke/LambdaMetafactory
+  #219 = Utf8               metafactory
+  #220 = Utf8               (Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+  #221 = NameAndType        #219:#220     // metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+  #222 = Methodref          #218.#221     // java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+  #223 = MethodHandle       6:#222        // REF_invokeStatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+  #224 = Utf8               getAsBoolean
+  #225 = Utf8               (Lnet/anubis/client/module/setting/BooleanSetting;)Ljava/util/function/BooleanSupplier;
+  #226 = NameAndType        #224:#225     // getAsBoolean:(Lnet/anubis/client/module/setting/BooleanSetting;)Ljava/util/function/BooleanSupplier;
+  #227 = InvokeDynamic      #0:#226       // #0:getAsBoolean:(Lnet/anubis/client/module/setting/BooleanSetting;)Ljava/util/function/BooleanSupplier;
+  #228 = Utf8               visibleWhen
+  #229 = Utf8               (Ljava/util/function/BooleanSupplier;)Lnet/anubis/client/module/setting/Setting;
+  #230 = NameAndType        #228:#229     // visibleWhen:(Ljava/util/function/BooleanSupplier;)Lnet/anubis/client/module/setting/Setting;
+  #231 = Methodref          #89.#230      // net/anubis/client/module/setting/StringSetting.visibleWhen:(Ljava/util/function/BooleanSupplier;)Lnet/anubis/client/module/setting/Setting;
+  #232 = Methodref          #106.#230     // net/anubis/client/module/setting/BooleanSetting.visibleWhen:(Ljava/util/function/BooleanSupplier;)Lnet/anubis/client/module/setting/Setting;
+  #233 = Utf8               lambda$new$1
+  #234 = NameAndType        #233:#211     // lambda$new$1:()Z
+  #235 = Methodref          #2.#234       // net/anubis/client/module/impl/misc/PlayerDetectionModule.lambda$new$1:()Z
+  #236 = MethodHandle       5:#235        // REF_invokeVirtual net/anubis/client/module/impl/misc/PlayerDetectionModule.lambda$new$1:()Z
+  #237 = Utf8               (Lnet/anubis/client/module/impl/misc/PlayerDetectionModule;)Ljava/util/function/BooleanSupplier;
+  #238 = NameAndType        #224:#237     // getAsBoolean:(Lnet/anubis/client/module/impl/misc/PlayerDetectionModule;)Ljava/util/function/BooleanSupplier;
+  #239 = InvokeDynamic      #1:#238       // #1:getAsBoolean:(Lnet/anubis/client/module/impl/misc/PlayerDetectionModule;)Ljava/util/function/BooleanSupplier;
+  #240 = Utf8               privateValue
+  #241 = Utf8               ()Lnet/anubis/client/module/setting/Setting;
+  #242 = NameAndType        #240:#241     // privateValue:()Lnet/anubis/client/module/setting/Setting;
+  #243 = Methodref          #89.#242      // net/anubis/client/module/setting/StringSetting.privateValue:()Lnet/anubis/client/module/setting/Setting;
+  #244 = Methodref          #106.#242     // net/anubis/client/module/setting/BooleanSetting.privateValue:()Lnet/anubis/client/module/setting/Setting;
+  #245 = Utf8               getImString
+  #246 = Utf8               ()Limgui/type/ImString;
+  #247 = NameAndType        #245:#246     // getImString:()Limgui/type/ImString;
+  #248 = Methodref          #89.#247      // net/anubis/client/module/setting/StringSetting.getImString:()Limgui/type/ImString;
+  #249 = Utf8               inputData
+  #250 = Utf8               Limgui/type/ImString$InputData;
+  #251 = NameAndType        #249:#250     // inputData:Limgui/type/ImString$InputData;
+  #252 = Fieldref           #11.#251      // imgui/type/ImString.inputData:Limgui/type/ImString$InputData;
+  #253 = Utf8               isResizable
+  #254 = Utf8               Z
+  #255 = NameAndType        #253:#254     // isResizable:Z
+  #256 = Fieldref           #9.#255       // imgui/type/ImString$InputData.isResizable:Z
+  #257 = Utf8               this
+  #258 = Utf8               Lnet/anubis/client/module/impl/misc/PlayerDetectionModule;
+  #259 = Utf8               onEnable
+  #260 = Utf8               clear
+  #261 = NameAndType        #260:#70      // clear:()V
+  #262 = InterfaceMethodref #194.#261     // java/util/Set.clear:()V
+  #263 = NameAndType        #65:#66       // lastLevel:Lnet/minecraft/class_638;
+  #264 = Fieldref           #2.#263       // net/anubis/client/module/impl/misc/PlayerDetectionModule.lastLevel:Lnet/minecraft/class_638;
+  #265 = Utf8               net/anubis/client/event/impl/TickEvent
+  #266 = Class              #265          // net/anubis/client/event/impl/TickEvent
+  #267 = Utf8               TYPE
+  #268 = Utf8               Lnet/anubis/client/event/EventType;
+  #269 = NameAndType        #267:#268     // TYPE:Lnet/anubis/client/event/EventType;
+  #270 = Fieldref           #266.#269     // net/anubis/client/event/impl/TickEvent.TYPE:Lnet/anubis/client/event/EventType;
+  #271 = Utf8               net/anubis/client/event/Stage
+  #272 = Class              #271          // net/anubis/client/event/Stage
+  #273 = Utf8               POST
+  #274 = Utf8               Lnet/anubis/client/event/Stage;
+  #275 = NameAndType        #273:#274     // POST:Lnet/anubis/client/event/Stage;
+  #276 = Fieldref           #272.#275     // net/anubis/client/event/Stage.POST:Lnet/anubis/client/event/Stage;
+  #277 = Utf8               (Ljava/lang/Object;)V
+  #278 = MethodType         #277          //  (Ljava/lang/Object;)V
+  #279 = Utf8               onTick
+  #280 = Utf8               (Lnet/anubis/client/event/impl/TickEvent;)V
+  #281 = NameAndType        #279:#280     // onTick:(Lnet/anubis/client/event/impl/TickEvent;)V
+  #282 = Methodref          #2.#281       // net/anubis/client/module/impl/misc/PlayerDetectionModule.onTick:(Lnet/anubis/client/event/impl/TickEvent;)V
+  #283 = MethodHandle       5:#282        // REF_invokeVirtual net/anubis/client/module/impl/misc/PlayerDetectionModule.onTick:(Lnet/anubis/client/event/impl/TickEvent;)V
+  #284 = MethodType         #280          //  (Lnet/anubis/client/event/impl/TickEvent;)V
+  #285 = Utf8               accept
+  #286 = Utf8               (Lnet/anubis/client/module/impl/misc/PlayerDetectionModule;)Ljava/util/function/Consumer;
+  #287 = NameAndType        #285:#286     // accept:(Lnet/anubis/client/module/impl/misc/PlayerDetectionModule;)Ljava/util/function/Consumer;
+  #288 = InvokeDynamic      #2:#287       // #2:accept:(Lnet/anubis/client/module/impl/misc/PlayerDetectionModule;)Ljava/util/function/Consumer;
+  #289 = Utf8               on
+  #290 = Utf8               (Lnet/anubis/client/event/EventType;Lnet/anubis/client/event/Stage;Ljava/util/function/Consumer;)V
+  #291 = NameAndType        #289:#290     // on:(Lnet/anubis/client/event/EventType;Lnet/anubis/client/event/Stage;Ljava/util/function/Consumer;)V
+  #292 = Methodref          #2.#291       // net/anubis/client/module/impl/misc/PlayerDetectionModule.on:(Lnet/anubis/client/event/EventType;Lnet/anubis/client/event/Stage;Ljava/util/function/Consumer;)V
+  #293 = Utf8               onDisable
+  #294 = Utf8               event
+  #295 = Utf8               net/minecraft/class_310
+  #296 = Class              #295          // net/minecraft/class_310
+  #297 = Utf8               method_1551
+  #298 = Utf8               ()Lnet/minecraft/class_310;
+  #299 = NameAndType        #297:#298     // method_1551:()Lnet/minecraft/class_310;
+  #300 = Methodref          #296.#299     // net/minecraft/class_310.method_1551:()Lnet/minecraft/class_310;
+  #301 = Utf8               field_1724
+  #302 = Utf8               Lnet/minecraft/class_746;
+  #303 = NameAndType        #301:#302     // field_1724:Lnet/minecraft/class_746;
+  #304 = Fieldref           #296.#303     // net/minecraft/class_310.field_1724:Lnet/minecraft/class_746;
+  #305 = Utf8               field_1687
+  #306 = NameAndType        #305:#66      // field_1687:Lnet/minecraft/class_638;
+  #307 = Fieldref           #296.#306     // net/minecraft/class_310.field_1687:Lnet/minecraft/class_638;
+  #308 = Utf8               net/minecraft/class_746
+  #309 = Class              #308          // net/minecraft/class_746
+  #310 = Utf8               net/minecraft/class_638
+  #311 = Class              #310          // net/minecraft/class_638
+  #312 = Utf8               method_7334
+  #313 = Utf8               ()Lcom/mojang/authlib/GameProfile;
+  #314 = NameAndType        #312:#313     // method_7334:()Lcom/mojang/authlib/GameProfile;
+  #315 = Methodref          #309.#314     // net/minecraft/class_746.method_7334:()Lcom/mojang/authlib/GameProfile;
+  #316 = Utf8               com/mojang/authlib/GameProfile
+  #317 = Class              #316          // com/mojang/authlib/GameProfile
+  #318 = Utf8               name
+  #319 = Utf8               ()Ljava/lang/String;
+  #320 = NameAndType        #318:#319     // name:()Ljava/lang/String;
+  #321 = Methodref          #317.#320     // com/mojang/authlib/GameProfile.name:()Ljava/lang/String;
+  #322 = Utf8               method_5667
+  #323 = Utf8               ()Ljava/util/UUID;
+  #324 = NameAndType        #322:#323     // method_5667:()Ljava/util/UUID;
+  #325 = Methodref          #309.#324     // net/minecraft/class_746.method_5667:()Ljava/util/UUID;
+  #326 = NameAndType        #68:#196      // whitelist:()Ljava/util/Set;
+  #327 = Methodref          #2.#326       // net/anubis/client/module/impl/misc/PlayerDetectionModule.whitelist:()Ljava/util/Set;
+  #328 = Utf8               method_18456
+  #329 = Utf8               ()Ljava/util/List;
+  #330 = NameAndType        #328:#329     // method_18456:()Ljava/util/List;
+  #331 = Methodref          #311.#330     // net/minecraft/class_638.method_18456:()Ljava/util/List;
+  #332 = Utf8               java/util/List
+  #333 = Class              #332          // java/util/List
+  #334 = Utf8               iterator
+  #335 = Utf8               ()Ljava/util/Iterator;
+  #336 = NameAndType        #334:#335     // iterator:()Ljava/util/Iterator;
+  #337 = InterfaceMethodref #333.#336     // java/util/List.iterator:()Ljava/util/Iterator;
+  #338 = Utf8               java/util/UUID
+  #339 = Class              #338          // java/util/UUID
+  #340 = Utf8               java/util/Iterator
+  #341 = Class              #340          // java/util/Iterator
+  #342 = Utf8               hasNext
+  #343 = NameAndType        #342:#211     // hasNext:()Z
+  #344 = InterfaceMethodref #341.#343     // java/util/Iterator.hasNext:()Z
+  #345 = Utf8               next
+  #346 = Utf8               ()Ljava/lang/Object;
+  #347 = NameAndType        #345:#346     // next:()Ljava/lang/Object;
+  #348 = InterfaceMethodref #341.#347     // java/util/Iterator.next:()Ljava/lang/Object;
+  #349 = Utf8               net/minecraft/class_742
+  #350 = Class              #349          // net/minecraft/class_742
+  #351 = Methodref          #350.#324     // net/minecraft/class_742.method_5667:()Ljava/util/UUID;
+  #352 = Utf8               equals
+  #353 = Utf8               (Ljava/lang/Object;)Z
+  #354 = NameAndType        #352:#353     // equals:(Ljava/lang/Object;)Z
+  #355 = Methodref          #339.#354     // java/util/UUID.equals:(Ljava/lang/Object;)Z
+  #356 = Methodref          #350.#314     // net/minecraft/class_742.method_7334:()Lcom/mojang/authlib/GameProfile;
+  #357 = Methodref          #123.#354     // java/lang/String.equals:(Ljava/lang/Object;)Z
+  #358 = Utf8               java/util/Locale
+  #359 = Class              #358          // java/util/Locale
+  #360 = Utf8               ROOT
+  #361 = Utf8               Ljava/util/Locale;
+  #362 = NameAndType        #360:#361     // ROOT:Ljava/util/Locale;
+  #363 = Fieldref           #359.#362     // java/util/Locale.ROOT:Ljava/util/Locale;
+  #364 = Utf8               toLowerCase
+  #365 = Utf8               (Ljava/util/Locale;)Ljava/lang/String;
+  #366 = NameAndType        #364:#365     // toLowerCase:(Ljava/util/Locale;)Ljava/lang/String;
+  #367 = Methodref          #123.#366     // java/lang/String.toLowerCase:(Ljava/util/Locale;)Ljava/lang/String;
+  #368 = NameAndType        #31:#32       // PERMANENT_WHITELIST:Ljava/util/Set;
+  #369 = Fieldref           #2.#368       // net/anubis/client/module/impl/misc/PlayerDetectionModule.PERMANENT_WHITELIST:Ljava/util/Set;
+  #370 = Utf8               contains
+  #371 = NameAndType        #370:#353     // contains:(Ljava/lang/Object;)Z
+  #372 = InterfaceMethodref #194.#371     // java/util/Set.contains:(Ljava/lang/Object;)Z
+  #373 = Utf8               java/util/LinkedHashSet
+  #374 = Class              #373          // java/util/LinkedHashSet
+  #375 = Methodref          #374.#189     // java/util/LinkedHashSet."<init>":()V
+  #376 = Utf8               add
+  #377 = NameAndType        #376:#353     // add:(Ljava/lang/Object;)Z
+  #378 = InterfaceMethodref #194.#377     // java/util/Set.add:(Ljava/lang/Object;)Z
+  #379 = InterfaceMethodref #194.#354     // java/util/Set.equals:(Ljava/lang/Object;)Z
+  #380 = Utf8               addAll
+  #381 = Utf8               (Ljava/util/Collection;)Z
+  #382 = NameAndType        #380:#381     // addAll:(Ljava/util/Collection;)Z
+  #383 = InterfaceMethodref #194.#382     // java/util/Set.addAll:(Ljava/util/Collection;)Z
+  #384 = Utf8               handlePlayerDetection
+  #385 = Utf8               (Ljava/util/Set;)V
+  #386 = NameAndType        #384:#385     // handlePlayerDetection:(Ljava/util/Set;)V
+  #387 = Methodref          #2.#386       // net/anubis/client/module/impl/misc/PlayerDetectionModule.handlePlayerDetection:(Ljava/util/Set;)V
+  #388 = Utf8               key
+  #389 = Utf8               player
+  #390 = Utf8               Lnet/minecraft/class_742;
+  #391 = Utf8               Lnet/anubis/client/event/impl/TickEvent;
+  #392 = Utf8               mc
+  #393 = Utf8               Lnet/minecraft/class_310;
+  #394 = Utf8               self
+  #395 = Utf8               level
+  #396 = Utf8               selfName
+  #397 = Utf8               selfId
+  #398 = Utf8               Ljava/util/UUID;
+  #399 = Utf8               ignored
+  #400 = Utf8               current
+  #401 = Utf8               (Ljava/util/Set<Ljava/lang/String;>;)V
+  #402 = Utf8               players
+  #403 = NameAndType        #213:#319     // get:()Ljava/lang/String;
+  #404 = Methodref          #117.#403     // net/anubis/client/module/setting/ModeSetting.get:()Ljava/lang/String;
+  #405 = Utf8               hashCode
+  #406 = Utf8               ()I
+  #407 = NameAndType        #405:#406     // hashCode:()I
+  #408 = Methodref          #123.#407     // java/lang/String.hashCode:()I
+  #409 = Utf8               announceDetection
+  #410 = NameAndType        #409:#385     // announceDetection:(Ljava/util/Set;)V
+  #411 = Methodref          #2.#410       // net/anubis/client/module/impl/misc/PlayerDetectionModule.announceDetection:(Ljava/util/Set;)V
+  #412 = Utf8               showToast
+  #413 = Utf8               (Lnet/minecraft/class_310;)V
+  #414 = NameAndType        #412:#413     // showToast:(Lnet/minecraft/class_310;)V
+  #415 = Methodref          #2.#414       // net/anubis/client/module/impl/misc/PlayerDetectionModule.showToast:(Lnet/minecraft/class_310;)V
+  #416 = Utf8               resolveModulesToToggle
+  #417 = NameAndType        #416:#329     // resolveModulesToToggle:()Ljava/util/List;
+  #418 = Methodref          #2.#417       // net/anubis/client/module/impl/misc/PlayerDetectionModule.resolveModulesToToggle:()Ljava/util/List;
+  #419 = Utf8               toggle
+  #420 = NameAndType        #419:#70      // toggle:()V
+  #421 = Methodref          #4.#420       // net/anubis/client/module/ClientModule.toggle:()V
+  #422 = Utf8               panicPay
+  #423 = NameAndType        #422:#413     // panicPay:(Lnet/minecraft/class_310;)V
+  #424 = Methodref          #2.#423       // net/anubis/client/module/impl/misc/PlayerDetectionModule.panicPay:(Lnet/minecraft/class_310;)V
+  #425 = Utf8               sendWebhookNotification
+  #426 = Utf8               (Lnet/minecraft/class_310;Ljava/util/Set;)V
+  #427 = NameAndType        #425:#426     // sendWebhookNotification:(Lnet/minecraft/class_310;Ljava/util/Set;)V
+  #428 = Methodref          #2.#427       // net/anubis/client/module/impl/misc/PlayerDetectionModule.sendWebhookNotification:(Lnet/minecraft/class_310;Ljava/util/Set;)V
+  #429 = Methodref          #2.#420       // net/anubis/client/module/impl/misc/PlayerDetectionModule.toggle:()V
+  #430 = Utf8               scheduleDisconnect
+  #431 = NameAndType        #430:#426     // scheduleDisconnect:(Lnet/minecraft/class_310;Ljava/util/Set;)V
+  #432 = Methodref          #2.#431       // net/anubis/client/module/impl/misc/PlayerDetectionModule.scheduleDisconnect:(Lnet/minecraft/class_310;Ljava/util/Set;)V
+  #433 = Utf8               module
+  #434 = Utf8               Lnet/anubis/client/module/ClientModule;
+  #435 = Utf8               body
+  #436 = Utf8               ()Lnet/anubis/client/chat/ModuleChat$Body;
+  #437 = NameAndType        #435:#436     // body:()Lnet/anubis/client/chat/ModuleChat$Body;
+  #438 = Methodref          #16.#437      // net/anubis/client/chat/ModuleChat.body:()Lnet/anubis/client/chat/ModuleChat$Body;
+  #439 = Utf8               size
+  #440 = NameAndType        #439:#406     // size:()I
+  #441 = InterfaceMethodref #194.#440     // java/util/Set.size:()I
+  #442 = Utf8               Player detected
+  #443 = String             #442          // Player detected
+  #444 = Utf8               Players detected
+  #445 = String             #444          // Players detected
+  #446 = Utf8               danger
+  #447 = Utf8               (Ljava/lang/String;)Lnet/anubis/client/chat/ModuleChat$Body;
+  #448 = NameAndType        #446:#447     // danger:(Ljava/lang/String;)Lnet/anubis/client/chat/ModuleChat$Body;
+  #449 = Methodref          #14.#448      // net/anubis/client/chat/ModuleChat$Body.danger:(Ljava/lang/String;)Lnet/anubis/client/chat/ModuleChat$Body;
+  #450 = Utf8               :
+  #451 = String             #450          // :
+  #452 = Utf8               text
+  #453 = NameAndType        #452:#447     // text:(Ljava/lang/String;)Lnet/anubis/client/chat/ModuleChat$Body;
+  #454 = Methodref          #14.#453      // net/anubis/client/chat/ModuleChat$Body.text:(Ljava/lang/String;)Lnet/anubis/client/chat/ModuleChat$Body;
+  #455 = Utf8               names
+  #456 = Utf8               (Lnet/anubis/client/chat/ModuleChat$Body;Ljava/util/Collection;)Lnet/anubis/client/chat/ModuleChat$Body;
+  #457 = NameAndType        #455:#456     // names:(Lnet/anubis/client/chat/ModuleChat$Body;Ljava/util/Collection;)Lnet/anubis/client/chat/ModuleChat$Body;
+  #458 = Methodref          #2.#457       // net/anubis/client/module/impl/misc/PlayerDetectionModule.names:(Lnet/anubis/client/chat/ModuleChat$Body;Ljava/util/Collection;)Lnet/anubis/client/chat/ModuleChat$Body;
+  #459 = Utf8               send
+  #460 = Utf8               (Lnet/anubis/client/module/ClientModule;Lnet/anubis/client/chat/ModuleChat$Body;)V
+  #461 = NameAndType        #459:#460     // send:(Lnet/anubis/client/module/ClientModule;Lnet/anubis/client/chat/ModuleChat$Body;)V
+  #462 = Methodref          #16.#461      // net/anubis/client/chat/ModuleChat.send:(Lnet/anubis/client/module/ClientModule;Lnet/anubis/client/chat/ModuleChat$Body;)V
+  #463 = Utf8               (Lnet/anubis/client/chat/ModuleChat$Body;Ljava/util/Collection<Ljava/lang/String;>;)Lnet/anubis/client/chat/ModuleChat$Body;
+  #464 = Utf8               java/util/Collection
+  #465 = Class              #464          // java/util/Collection
+  #466 = InterfaceMethodref #465.#336     // java/util/Collection.iterator:()Ljava/util/Iterator;
+  #467 = Utf8               ,
+  #468 = String             #467          // ,
+  #469 = NameAndType        #318:#447     // name:(Ljava/lang/String;)Lnet/anubis/client/chat/ModuleChat$Body;
+  #470 = Methodref          #14.#469      // net/anubis/client/chat/ModuleChat$Body.name:(Ljava/lang/String;)Lnet/anubis/client/chat/ModuleChat$Body;
+  #471 = Utf8               Lnet/anubis/client/chat/ModuleChat$Body;
+  #472 = Utf8               Ljava/util/Collection<Ljava/lang/String;>;
+  #473 = Utf8               Ljava/util/Collection;
+  #474 = Utf8               first
+  #475 = Utf8               method_1566
+  #476 = Utf8               ()Lnet/minecraft/class_374;
+  #477 = NameAndType        #475:#476     // method_1566:()Lnet/minecraft/class_374;
+  #478 = Methodref          #296.#477     // net/minecraft/class_310.method_1566:()Lnet/minecraft/class_374;
+  #479 = NameAndType        #45:#46       // TOAST_ID:Lnet/minecraft/class_370$class_9037;
+  #480 = Fieldref           #2.#479       // net/anubis/client/module/impl/misc/PlayerDetectionModule.TOAST_ID:Lnet/minecraft/class_370$class_9037;
+  #481 = Methodref          #2.#320       // net/anubis/client/module/impl/misc/PlayerDetectionModule.name:()Ljava/lang/String;
+  #482 = Utf8               net/minecraft/class_2561
+  #483 = Class              #482          // net/minecraft/class_2561
+  #484 = Utf8               method_43470
+  #485 = Utf8               (Ljava/lang/String;)Lnet/minecraft/class_5250;
+  #486 = NameAndType        #484:#485     // method_43470:(Ljava/lang/String;)Lnet/minecraft/class_5250;
+  #487 = InterfaceMethodref #483.#486     // net/minecraft/class_2561.method_43470:(Ljava/lang/String;)Lnet/minecraft/class_5250;
+  #488 = Utf8               Player Detected!
+  #489 = String             #488          // Player Detected!
+  #490 = Utf8               method_1990
+  #491 = Utf8               (Lnet/minecraft/class_374;Lnet/minecraft/class_370$class_9037;Lnet/minecraft/class_2561;Lnet/minecraft/class_2561;)V
+  #492 = NameAndType        #490:#491     // method_1990:(Lnet/minecraft/class_374;Lnet/minecraft/class_370$class_9037;Lnet/minecraft/class_2561;Lnet/minecraft/class_2561;)V
+  #493 = Methodref          #21.#492      // net/minecraft/class_370.method_1990:(Lnet/minecraft/class_374;Lnet/minecraft/class_370$class_9037;Lnet/minecraft/class_2561;Lnet/minecraft/class_2561;)V
+  #494 = Utf8               ()Ljava/util/List<Lnet/anubis/client/module/ClientModule;>;
+  #495 = Methodref          #89.#403      // net/anubis/client/module/setting/StringSetting.get:()Ljava/lang/String;
+  #496 = Utf8               isBlank
+  #497 = NameAndType        #496:#211     // isBlank:()Z
+  #498 = Methodref          #123.#497     // java/lang/String.isBlank:()Z
+  #499 = NameAndType        #195:#329     // of:()Ljava/util/List;
+  #500 = InterfaceMethodref #333.#499     // java/util/List.of:()Ljava/util/List;
+  #501 = Utf8               ,
+  #502 = String             #501          // ,
+  #503 = Utf8               split
+  #504 = Utf8               (Ljava/lang/String;)[Ljava/lang/String;
+  #505 = NameAndType        #503:#504     // split:(Ljava/lang/String;)[Ljava/lang/String;
+  #506 = Methodref          #123.#505     // java/lang/String.split:(Ljava/lang/String;)[Ljava/lang/String;
+  #507 = Utf8               [Ljava/lang/String;
+  #508 = Class              #507          // "[Ljava/lang/String;"
+  #509 = Utf8               trim
+  #510 = NameAndType        #509:#319     // trim:()Ljava/lang/String;
+  #511 = Methodref          #123.#510     // java/lang/String.trim:()Ljava/lang/String;
+  #512 = Utf8               isEmpty
+  #513 = NameAndType        #512:#211     // isEmpty:()Z
+  #514 = Methodref          #123.#513     // java/lang/String.isEmpty:()Z
+  #515 = Utf8               net/anubis/client/config/ModuleConfigStore
+  #516 = Class              #515          // net/anubis/client/config/ModuleConfigStore
+  #517 = Utf8               renamedModuleId
+  #518 = Utf8               (Ljava/lang/String;)Ljava/lang/String;
+  #519 = NameAndType        #517:#518     // renamedModuleId:(Ljava/lang/String;)Ljava/lang/String;
+  #520 = Methodref          #516.#519     // net/anubis/client/config/ModuleConfigStore.renamedModuleId:(Ljava/lang/String;)Ljava/lang/String;
+  #521 = Utf8               net/anubis/client/module/ModuleRegistry
+  #522 = Class              #521          // net/anubis/client/module/ModuleRegistry
+  #523 = Utf8               all
+  #524 = NameAndType        #523:#329     // all:()Ljava/util/List;
+  #525 = Methodref          #522.#524     // net/anubis/client/module/ModuleRegistry.all:()Ljava/util/List;
+  #526 = Utf8               id
+  #527 = NameAndType        #526:#319     // id:()Ljava/lang/String;
+  #528 = Methodref          #4.#527       // net/anubis/client/module/ClientModule.id:()Ljava/lang/String;
+  #529 = Utf8               equalsIgnoreCase
+  #530 = Utf8               (Ljava/lang/String;)Z
+  #531 = NameAndType        #529:#530     // equalsIgnoreCase:(Ljava/lang/String;)Z
+  #532 = Methodref          #123.#531     // java/lang/String.equalsIgnoreCase:(Ljava/lang/String;)Z
+  #533 = Methodref          #4.#320       // net/anubis/client/module/ClientModule.name:()Ljava/lang/String;
+  #534 = Utf8               java/util/ArrayList
+  #535 = Class              #534          // java/util/ArrayList
+  #536 = Utf8               (Ljava/util/Collection;)V
+  #537 = NameAndType        #69:#536      // "<init>":(Ljava/util/Collection;)V
+  #538 = Methodref          #535.#537     // java/util/ArrayList."<init>":(Ljava/util/Collection;)V
+  #539 = Utf8               renamed
+  #540 = Utf8               entry
+  #541 = Utf8               raw
+  #542 = Utf8               resolved
+  #543 = Utf8               Ljava/util/Set<Lnet/anubis/client/module/ClientModule;>;
+  #544 = Utf8               ()Ljava/util/Set<Ljava/lang/String;>;
+  #545 = NameAndType        #67:#39       // whitelistRaw:Ljava/lang/String;
+  #546 = Fieldref           #2.#545       // net/anubis/client/module/impl/misc/PlayerDetectionModule.whitelistRaw:Ljava/lang/String;
+  #547 = Utf8               parsed
+  #548 = Utf8               Panic pay target is
+  #549 = String             #548          // Panic pay target is
+  #550 = Utf8               not set
+  #551 = String             #550          // not set
+  #552 = Utf8               warn
+  #553 = NameAndType        #552:#447     // warn:(Ljava/lang/String;)Lnet/anubis/client/chat/ModuleChat$Body;
+  #554 = Methodref          #14.#553      // net/anubis/client/chat/ModuleChat$Body.warn:(Ljava/lang/String;)Lnet/anubis/client/chat/ModuleChat$Body;
+  #555 = Utf8               Panic pay amount is
+  #556 = String             #555          // Panic pay amount is
+  #557 = Utf8               method_1562
+  #558 = Utf8               ()Lnet/minecraft/class_634;
+  #559 = NameAndType        #557:#558     // method_1562:()Lnet/minecraft/class_634;
+  #560 = Methodref          #296.#559     // net/minecraft/class_310.method_1562:()Lnet/minecraft/class_634;
+  #561 = Utf8               net/minecraft/class_634
+  #562 = Class              #561          // net/minecraft/class_634
+  #563 = Utf8               /pay %s %s
+  #564 = String             #563          // /pay %s %s
+  #565 = Utf8               java/lang/Object
+  #566 = Class              #565          // java/lang/Object
+  #567 = Utf8               format
+  #568 = Utf8               (Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+  #569 = NameAndType        #567:#568     // format:(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+  #570 = Methodref          #123.#569     // java/lang/String.format:(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+  #571 = Utf8               field_1705
+  #572 = Utf8               Lnet/minecraft/class_329;
+  #573 = NameAndType        #571:#572     // field_1705:Lnet/minecraft/class_329;
+  #574 = Fieldref           #296.#573     // net/minecraft/class_310.field_1705:Lnet/minecraft/class_329;
+  #575 = Utf8               net/minecraft/class_329
+  #576 = Class              #575          // net/minecraft/class_329
+  #577 = Utf8               method_1743
+  #578 = Utf8               ()Lnet/minecraft/class_338;
+  #579 = NameAndType        #577:#578     // method_1743:()Lnet/minecraft/class_338;
+  #580 = Methodref          #576.#579     // net/minecraft/class_329.method_1743:()Lnet/minecraft/class_338;
+  #581 = Utf8               net/minecraft/class_338
+  #582 = Class              #581          // net/minecraft/class_338
+  #583 = Utf8               method_1803
+  #584 = Utf8               (Ljava/lang/String;)V
+  #585 = NameAndType        #583:#584     // method_1803:(Ljava/lang/String;)V
+  #586 = Methodref          #582.#585     // net/minecraft/class_338.method_1803:(Ljava/lang/String;)V
+  #587 = Utf8               substring
+  #588 = Utf8               (I)Ljava/lang/String;
+  #589 = NameAndType        #587:#588     // substring:(I)Ljava/lang/String;
+  #590 = Methodref          #123.#589     // java/lang/String.substring:(I)Ljava/lang/String;
+  #591 = Utf8               method_45730
+  #592 = NameAndType        #591:#584     // method_45730:(Ljava/lang/String;)V
+  #593 = Methodref          #562.#592     // net/minecraft/class_634.method_45730:(Ljava/lang/String;)V
+  #594 = Utf8               Panic pay
+  #595 = String             #594          // Panic pay
+  #596 = Utf8               sent
+  #597 = String             #596          // sent
+  #598 = Utf8               good
+  #599 = NameAndType        #598:#447     // good:(Ljava/lang/String;)Lnet/anubis/client/chat/ModuleChat$Body;
+  #600 = Methodref          #14.#599      // net/anubis/client/chat/ModuleChat$Body.good:(Ljava/lang/String;)Lnet/anubis/client/chat/ModuleChat$Body;
+  #601 = Utf8               value
+  #602 = Utf8               (Ljava/lang/Object;)Lnet/anubis/client/chat/ModuleChat$Body;
+  #603 = NameAndType        #601:#602     // value:(Ljava/lang/Object;)Lnet/anubis/client/chat/ModuleChat$Body;
+  #604 = Methodref          #14.#603      // net/anubis/client/chat/ModuleChat$Body.value:(Ljava/lang/Object;)Lnet/anubis/client/chat/ModuleChat$Body;
+  #605 = Utf8                to
+  #606 = String             #605          //  to
+  #607 = Utf8               target
+  #608 = Utf8               connection
+  #609 = Utf8               Lnet/minecraft/class_634;
+  #610 = Utf8               command
+  #611 = Utf8               (Lnet/minecraft/class_310;Ljava/util/Set<Ljava/lang/String;>;)V
+  #612 = Utf8               Webhook URL is
+  #613 = String             #612          // Webhook URL is
+  #614 = Utf8               isValidWebhookUrl
+  #615 = NameAndType        #614:#530     // isValidWebhookUrl:(Ljava/lang/String;)Z
+  #616 = Methodref          #2.#615       // net/anubis/client/module/impl/misc/PlayerDetectionModule.isValidWebhookUrl:(Ljava/lang/String;)Z
+  #617 = Utf8               invalid
+  #618 = String             #617          // invalid
+  #619 = Utf8               method_1558
+  #620 = Utf8               ()Lnet/minecraft/class_642;
+  #621 = NameAndType        #619:#620     // method_1558:()Lnet/minecraft/class_642;
+  #622 = Methodref          #296.#621     // net/minecraft/class_310.method_1558:()Lnet/minecraft/class_642;
+  #623 = Utf8               net/minecraft/class_642
+  #624 = Class              #623          // net/minecraft/class_642
+  #625 = Utf8               field_3752
+  #626 = NameAndType        #625:#39      // field_3752:Ljava/lang/String;
+  #627 = Fieldref           #624.#626     // net/minecraft/class_642.field_3752:Ljava/lang/String;
+  #628 = Utf8               Unknown Server
+  #629 = String             #628          // Unknown Server
+  #630 = Utf8               <@\u0001>
+  #631 = String             #630          // <@\u0001>
+  #632 = Utf8               java/lang/invoke/StringConcatFactory
+  #633 = Class              #632          // java/lang/invoke/StringConcatFactory
+  #634 = Utf8               makeConcatWithConstants
+  #635 = Utf8               (Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+  #636 = NameAndType        #634:#635     // makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+  #637 = Methodref          #633.#636     // java/lang/invoke/StringConcatFactory.makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+  #638 = MethodHandle       6:#637        // REF_invokeStatic java/lang/invoke/StringConcatFactory.makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+  #639 = NameAndType        #634:#518     // makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+  #640 = InvokeDynamic      #3:#639       // #3:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+  #641 = Utf8               java/lang/System
+  #642 = Class              #641          // java/lang/System
+  #643 = Utf8               currentTimeMillis
+  #644 = Utf8               ()J
+  #645 = NameAndType        #643:#644     // currentTimeMillis:()J
+  #646 = Methodref          #642.#645     // java/lang/System.currentTimeMillis:()J
+  #647 = Long               1000l
+  #649 = Utf8               java/lang/StringBuilder
+  #650 = Class              #649          // java/lang/StringBuilder
+  #651 = Utf8               Player(s) detected on server!\n\n
+  #652 = String             #651          // Player(s) detected on server!\n\n
+  #653 = NameAndType        #69:#584      // "<init>":(Ljava/lang/String;)V
+  #654 = Methodref          #650.#653     // java/lang/StringBuilder."<init>":(Ljava/lang/String;)V
+  #655 = Utf8               **Players:**
+  #656 = String             #655          // **Players:**
+  #657 = Utf8               append
+  #658 = Utf8               (Ljava/lang/String;)Ljava/lang/StringBuilder;
+  #659 = NameAndType        #657:#658     // append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+  #660 = Methodref          #650.#659     // java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+  #661 = Utf8               join
+  #662 = Utf8               (Ljava/lang/CharSequence;Ljava/lang/Iterable;)Ljava/lang/String;
+  #663 = NameAndType        #661:#662     // join:(Ljava/lang/CharSequence;Ljava/lang/Iterable;)Ljava/lang/String;
+  #664 = Methodref          #123.#663     // java/lang/String.join:(Ljava/lang/CharSequence;Ljava/lang/Iterable;)Ljava/lang/String;
+  #665 = Utf8               escapeMarkdown
+  #666 = NameAndType        #665:#518     // escapeMarkdown:(Ljava/lang/String;)Ljava/lang/String;
+  #667 = Methodref          #2.#666       // net/anubis/client/module/impl/misc/PlayerDetectionModule.escapeMarkdown:(Ljava/lang/String;)Ljava/lang/String;
+  #668 = Utf8               (C)Ljava/lang/StringBuilder;
+  #669 = NameAndType        #657:#668     // append:(C)Ljava/lang/StringBuilder;
+  #670 = Methodref          #650.#669     // java/lang/StringBuilder.append:(C)Ljava/lang/StringBuilder;
+  #671 = Utf8               **Server:**
+  #672 = String             #671          // **Server:**
+  #673 = Utf8               **Time:** <t:
+  #674 = String             #673          // **Time:** <t:
+  #675 = Utf8               (J)Ljava/lang/StringBuilder;
+  #676 = NameAndType        #657:#675     // append:(J)Ljava/lang/StringBuilder;
+  #677 = Methodref          #650.#676     // java/lang/StringBuilder.append:(J)Ljava/lang/StringBuilder;
+  #678 = Utf8               :R>
+  #679 = String             #678          // :R>
+  #680 = Utf8               \n**Panic Pay:** Activated - Target:
+  #681 = String             #680          // \n**Panic Pay:** Activated - Target:
+  #682 = Utf8               , Amount:
+  #683 = String             #682          // , Amount:
+  #684 = Utf8               net/anubis/client/webhook/WebhookPayloadBuilder
+  #685 = Class              #684          // net/anubis/client/webhook/WebhookPayloadBuilder
+  #686 = Methodref          #685.#189     // net/anubis/client/webhook/WebhookPayloadBuilder."<init>":()V
+  #687 = Utf8               content
+  #688 = Utf8               (Ljava/lang/String;)Lnet/anubis/client/webhook/WebhookPayloadBuilder;
+  #689 = NameAndType        #687:#688     // content:(Ljava/lang/String;)Lnet/anubis/client/webhook/WebhookPayloadBuilder;
+  #690 = Methodref          #685.#689     // net/anubis/client/webhook/WebhookPayloadBuilder.content:(Ljava/lang/String;)Lnet/anubis/client/webhook/WebhookPayloadBuilder;
+  #691 = Utf8               net/anubis/client/webhook/WebhookEmbed
+  #692 = Class              #691          // net/anubis/client/webhook/WebhookEmbed
+  #693 = Utf8               toString
+  #694 = NameAndType        #693:#319     // toString:()Ljava/lang/String;
+  #695 = Methodref          #650.#694     // java/lang/StringBuilder.toString:()Ljava/lang/String;
+  #696 = Utf8               java/lang/Integer
+  #697 = Class              #696          // java/lang/Integer
+  #698 = Utf8               valueOf
+  #699 = Utf8               (I)Ljava/lang/Integer;
+  #700 = NameAndType        #698:#699     // valueOf:(I)Ljava/lang/Integer;
+  #701 = Methodref          #697.#700     // java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+  #702 = Utf8               Sent by Anubis
+  #703 = String             #702          // Sent by Anubis
+  #704 = Utf8               (Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+  #705 = NameAndType        #69:#704      // "<init>":(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+  #706 = Methodref          #692.#705     // net/anubis/client/webhook/WebhookEmbed."<init>":(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+  #707 = Utf8               addEmbed
+  #708 = Utf8               (Lnet/anubis/client/webhook/WebhookEmbed;)Lnet/anubis/client/webhook/WebhookPayloadBuilder;
+  #709 = NameAndType        #707:#708     // addEmbed:(Lnet/anubis/client/webhook/WebhookEmbed;)Lnet/anubis/client/webhook/WebhookPayloadBuilder;
+  #710 = Methodref          #685.#709     // net/anubis/client/webhook/WebhookPayloadBuilder.addEmbed:(Lnet/anubis/client/webhook/WebhookEmbed;)Lnet/anubis/client/webhook/WebhookPayloadBuilder;
+  #711 = Utf8               net/anubis/client/webhook/WebhookConfig
+  #712 = Class              #711          // net/anubis/client/webhook/WebhookConfig
+  #713 = Methodref          #712.#653     // net/anubis/client/webhook/WebhookConfig."<init>":(Ljava/lang/String;)V
+  #714 = NameAndType        #47:#48       // WEBHOOK_EXECUTOR:Ljava/util/concurrent/ExecutorService;
+  #715 = Fieldref           #2.#714       // net/anubis/client/module/impl/misc/PlayerDetectionModule.WEBHOOK_EXECUTOR:Ljava/util/concurrent/ExecutorService;
+  #716 = MethodType         #70           //  ()V
+  #717 = Utf8               lambda$sendWebhookNotification$2
+  #718 = Utf8               (Lnet/anubis/client/webhook/WebhookConfig;Lnet/anubis/client/webhook/WebhookPayloadBuilder;)V
+  #719 = NameAndType        #717:#718     // lambda$sendWebhookNotification$2:(Lnet/anubis/client/webhook/WebhookConfig;Lnet/anubis/client/webhook/WebhookPayloadBuilder;)V
+  #720 = Methodref          #2.#719       // net/anubis/client/module/impl/misc/PlayerDetectionModule.lambda$sendWebhookNotification$2:(Lnet/anubis/client/webhook/WebhookConfig;Lnet/anubis/client/webhook/WebhookPayloadBuilder;)V
+  #721 = MethodHandle       5:#720        // REF_invokeVirtual net/anubis/client/module/impl/misc/PlayerDetectionModule.lambda$sendWebhookNotification$2:(Lnet/anubis/client/webhook/WebhookConfig;Lnet/anubis/client/webhook/WebhookPayloadBuilder;)V
+  #722 = Utf8               run
+  #723 = Utf8               (Lnet/anubis/client/module/impl/misc/PlayerDetectionModule;Lnet/anubis/client/webhook/WebhookConfig;Lnet/anubis/client/webhook/WebhookPayloadBuilder;)Ljava/lang/Runnable;
+  #724 = NameAndType        #722:#723     // run:(Lnet/anubis/client/module/impl/misc/PlayerDetectionModule;Lnet/anubis/client/webhook/WebhookConfig;Lnet/anubis/client/webhook/WebhookPayloadBuilder;)Ljava/lang/Runnable;
+  #725 = InvokeDynamic      #4:#724       // #4:run:(Lnet/anubis/client/module/impl/misc/PlayerDetectionModule;Lnet/anubis/client/webhook/WebhookConfig;Lnet/anubis/client/webhook/WebhookPayloadBuilder;)Ljava/lang/Runnable;
+  #726 = Utf8               java/util/concurrent/ExecutorService
+  #727 = Class              #726          // java/util/concurrent/ExecutorService
+  #728 = Utf8               execute
+  #729 = Utf8               (Ljava/lang/Runnable;)V
+  #730 = NameAndType        #728:#729     // execute:(Ljava/lang/Runnable;)V
+  #731 = InterfaceMethodref #727.#730     // java/util/concurrent/ExecutorService.execute:(Ljava/lang/Runnable;)V
+  #732 = Utf8               url
+  #733 = Utf8               server
+  #734 = Utf8               Lnet/minecraft/class_642;
+  #735 = Utf8               serverName
+  #736 = Utf8               ping
+  #737 = Utf8               unixSeconds
+  #738 = Utf8               description
+  #739 = Utf8               Ljava/lang/StringBuilder;
+  #740 = Utf8               payload
+  #741 = Utf8               Lnet/anubis/client/webhook/WebhookPayloadBuilder;
+  #742 = Utf8               config
+  #743 = Utf8               Lnet/anubis/client/webhook/WebhookConfig;
+  #744 = Utf8               java/net/URISyntaxException
+  #745 = Class              #744          // java/net/URISyntaxException
+  #746 = Utf8               java/net/URI
+  #747 = Class              #746          // java/net/URI
+  #748 = Methodref          #747.#653     // java/net/URI."<init>":(Ljava/lang/String;)V
+  #749 = Utf8               getScheme
+  #750 = NameAndType        #749:#319     // getScheme:()Ljava/lang/String;
+  #751 = Methodref          #747.#750     // java/net/URI.getScheme:()Ljava/lang/String;
+  #752 = Utf8               getHost
+  #753 = NameAndType        #752:#319     // getHost:()Ljava/lang/String;
+  #754 = Methodref          #747.#753     // java/net/URI.getHost:()Ljava/lang/String;
+  #755 = Utf8               https
+  #756 = String             #755          // https
+  #757 = Utf8               http
+  #758 = String             #757          // http
+  #759 = Utf8               uri
+  #760 = Utf8               Ljava/net/URI;
+  #761 = Utf8               scheme
+  #762 = Utf8               e
+  #763 = Utf8               Ljava/net/URISyntaxException;
+  #764 = Utf8               length
+  #765 = NameAndType        #764:#406     // length:()I
+  #766 = Methodref          #123.#765     // java/lang/String.length:()I
+  #767 = Utf8               (I)V
+  #768 = NameAndType        #69:#767      // "<init>":(I)V
+  #769 = Methodref          #650.#768     // java/lang/StringBuilder."<init>":(I)V
+  #770 = Utf8               charAt
+  #771 = Utf8               (I)C
+  #772 = NameAndType        #770:#771     // charAt:(I)C
+  #773 = Methodref          #123.#772     // java/lang/String.charAt:(I)C
+  #774 = Utf8               c
+  #775 = Utf8               C
+  #776 = Utf8               i
+  #777 = Utf8               out
+  #778 = Utf8               method_48296
+  #779 = Utf8               ()Lnet/minecraft/class_2535;
+  #780 = NameAndType        #778:#779     // method_48296:()Lnet/minecraft/class_2535;
+  #781 = Methodref          #562.#780     // net/minecraft/class_634.method_48296:()Lnet/minecraft/class_2535;
+  #782 = Utf8               java/util/concurrent/TimeUnit
+  #783 = Class              #782          // java/util/concurrent/TimeUnit
+  #784 = Utf8               MILLISECONDS
+  #785 = Utf8               Ljava/util/concurrent/TimeUnit;
+  #786 = NameAndType        #784:#785     // MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+  #787 = Fieldref           #783.#786     // java/util/concurrent/TimeUnit.MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+  #788 = Utf8               java/util/concurrent/CompletableFuture
+  #789 = Class              #788          // java/util/concurrent/CompletableFuture
+  #790 = Utf8               delayedExecutor
+  #791 = Utf8               (JLjava/util/concurrent/TimeUnit;Ljava/util/concurrent/Executor;)Ljava/util/concurrent/Executor;
+  #792 = NameAndType        #790:#791     // delayedExecutor:(JLjava/util/concurrent/TimeUnit;Ljava/util/concurrent/Executor;)Ljava/util/concurrent/Executor;
+  #793 = Methodref          #789.#792     // java/util/concurrent/CompletableFuture.delayedExecutor:(JLjava/util/concurrent/TimeUnit;Ljava/util/concurrent/Executor;)Ljava/util/concurrent/Executor;
+  #794 = Utf8               lambda$scheduleDisconnect$3
+  #795 = Utf8               (Lnet/minecraft/class_310;Lnet/minecraft/class_2535;Ljava/util/Set;)V
+  #796 = NameAndType        #794:#795     // lambda$scheduleDisconnect$3:(Lnet/minecraft/class_310;Lnet/minecraft/class_2535;Ljava/util/Set;)V
+  #797 = Methodref          #2.#796       // net/anubis/client/module/impl/misc/PlayerDetectionModule.lambda$scheduleDisconnect$3:(Lnet/minecraft/class_310;Lnet/minecraft/class_2535;Ljava/util/Set;)V
+  #798 = MethodHandle       5:#797        // REF_invokeVirtual net/anubis/client/module/impl/misc/PlayerDetectionModule.lambda$scheduleDisconnect$3:(Lnet/minecraft/class_310;Lnet/minecraft/class_2535;Ljava/util/Set;)V
+  #799 = Utf8               (Lnet/anubis/client/module/impl/misc/PlayerDetectionModule;Lnet/minecraft/class_310;Lnet/minecraft/class_2535;Ljava/util/Set;)Ljava/lang/Runnable;
+  #800 = NameAndType        #722:#799     // run:(Lnet/anubis/client/module/impl/misc/PlayerDetectionModule;Lnet/minecraft/class_310;Lnet/minecraft/class_2535;Ljava/util/Set;)Ljava/lang/Runnable;
+  #801 = InvokeDynamic      #5:#800       // #5:run:(Lnet/anubis/client/module/impl/misc/PlayerDetectionModule;Lnet/minecraft/class_310;Lnet/minecraft/class_2535;Ljava/util/Set;)Ljava/lang/Runnable;
+  #802 = Utf8               java/util/concurrent/Executor
+  #803 = Class              #802          // java/util/concurrent/Executor
+  #804 = InterfaceMethodref #803.#730     // java/util/concurrent/Executor.execute:(Ljava/lang/Runnable;)V
+  #805 = Utf8               listener
+  #806 = Utf8               session
+  #807 = Utf8               Lnet/minecraft/class_2535;
+  #808 = Utf8               disconnectFromServer
+  #809 = Utf8               (Lnet/minecraft/class_310;Lnet/minecraft/class_2535;Ljava/util/Set<Ljava/lang/String;>;)V
+  #810 = Utf8               Player(s) detected: \u0001
+  #811 = String             #810          // Player(s) detected: \u0001
+  #812 = InvokeDynamic      #6:#639       // #6:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+  #813 = Utf8               net/minecraft/class_2535
+  #814 = Class              #813          // net/minecraft/class_2535
+  #815 = Utf8               method_10747
+  #816 = Utf8               (Lnet/minecraft/class_2561;)V
+  #817 = NameAndType        #815:#816     // method_10747:(Lnet/minecraft/class_2561;)V
+  #818 = Methodref          #814.#817     // net/minecraft/class_2535.method_10747:(Lnet/minecraft/class_2561;)V
+  #819 = Utf8               Disconnected
+  #820 = String             #819          // Disconnected
+  #821 = Utf8                from the server (
+  #822 = String             #821          //  from the server (
+  #823 = String             #389          // player
+  #824 = String             #402          // players
+  #825 = Utf8                detected:
+  #826 = String             #825          //  detected:
+  #827 = Utf8               )
+  #828 = String             #827          // )
+  #829 = NameAndType        #808:#795     // disconnectFromServer:(Lnet/minecraft/class_310;Lnet/minecraft/class_2535;Ljava/util/Set;)V
+  #830 = Methodref          #2.#829       // net/anubis/client/module/impl/misc/PlayerDetectionModule.disconnectFromServer:(Lnet/minecraft/class_310;Lnet/minecraft/class_2535;Ljava/util/Set;)V
+  #831 = Utf8               java/lang/RuntimeException
+  #832 = Class              #831          // java/lang/RuntimeException
+  #833 = Utf8               java/lang/LinkageError
+  #834 = Class              #833          // java/lang/LinkageError
+  #835 = Utf8               SERVICE
+  #836 = Utf8               Lnet/anubis/client/webhook/WebhookService;
+  #837 = NameAndType        #835:#836     // SERVICE:Lnet/anubis/client/webhook/WebhookService;
+  #838 = Fieldref           #7.#837       // net/anubis/client/module/impl/misc/PlayerDetectionModule$WebhookHolder.SERVICE:Lnet/anubis/client/webhook/WebhookService;
+  #839 = Utf8               net/anubis/client/webhook/WebhookService
+  #840 = Class              #839          // net/anubis/client/webhook/WebhookService
+  #841 = Utf8               (Lnet/anubis/client/webhook/WebhookConfig;Lnet/anubis/client/webhook/WebhookPayloadBuilder;)Z
+  #842 = NameAndType        #459:#841     // send:(Lnet/anubis/client/webhook/WebhookConfig;Lnet/anubis/client/webhook/WebhookPayloadBuilder;)Z
+  #843 = Methodref          #840.#842     // net/anubis/client/webhook/WebhookService.send:(Lnet/anubis/client/webhook/WebhookConfig;Lnet/anubis/client/webhook/WebhookPayloadBuilder;)Z
+  #844 = Utf8               java/lang/Throwable
+  #845 = Class              #844          // java/lang/Throwable
+  #846 = NameAndType        #29:#30       // LOGGER:Lorg/slf4j/Logger;
+  #847 = Fieldref           #2.#846       // net/anubis/client/module/impl/misc/PlayerDetectionModule.LOGGER:Lorg/slf4j/Logger;
+  #848 = Utf8               [Anubis] Player Detection webhook failed ({})
+  #849 = String             #848          // [Anubis] Player Detection webhook failed ({})
+  #850 = Utf8               getClass
+  #851 = Utf8               ()Ljava/lang/Class;
+  #852 = NameAndType        #850:#851     // getClass:()Ljava/lang/Class;
+  #853 = Methodref          #566.#852     // java/lang/Object.getClass:()Ljava/lang/Class;
+  #854 = Utf8               java/lang/Class
+  #855 = Class              #854          // java/lang/Class
+  #856 = Utf8               getSimpleName
+  #857 = NameAndType        #856:#319     // getSimpleName:()Ljava/lang/String;
+  #858 = Methodref          #855.#857     // java/lang/Class.getSimpleName:()Ljava/lang/String;
+  #859 = Utf8               org/slf4j/Logger
+  #860 = Class              #859          // org/slf4j/Logger
+  #861 = Utf8               (Ljava/lang/String;Ljava/lang/Object;)V
+  #862 = NameAndType        #552:#861     // warn:(Ljava/lang/String;Ljava/lang/Object;)V
+  #863 = InterfaceMethodref #860.#862     // org/slf4j/Logger.warn:(Ljava/lang/String;Ljava/lang/Object;)V
+  #864 = Utf8               Webhook notification
+  #865 = String             #864          // Webhook notification
+  #866 = Utf8               failed
+  #867 = String             #866          // failed
+  #868 = Utf8                (see the log for details)
+  #869 = String             #868          //  (see the log for details)
+  #870 = Utf8               failure
+  #871 = Utf8               Ljava/lang/Throwable;
+  #872 = Utf8               lambda$static$0
+  #873 = Utf8               (Ljava/lang/Runnable;)Ljava/lang/Thread;
+  #874 = Utf8               runnable
+  #875 = Utf8               java/lang/Thread
+  #876 = Class              #875          // java/lang/Thread
+  #877 = Utf8               Anubis-PlayerDetection-Webhook
+  #878 = String             #877          // Anubis-PlayerDetection-Webhook
+  #879 = Utf8               (Ljava/lang/Runnable;Ljava/lang/String;)V
+  #880 = NameAndType        #69:#879      // "<init>":(Ljava/lang/Runnable;Ljava/lang/String;)V
+  #881 = Methodref          #876.#880     // java/lang/Thread."<init>":(Ljava/lang/Runnable;Ljava/lang/String;)V
+  #882 = Utf8               setDaemon
+  #883 = Utf8               (Z)V
+  #884 = NameAndType        #882:#883     // setDaemon:(Z)V
+  #885 = Methodref          #876.#884     // java/lang/Thread.setDaemon:(Z)V
+  #886 = Utf8               Ljava/lang/Runnable;
+  #887 = Utf8               thread
+  #888 = Utf8               Ljava/lang/Thread;
+  #889 = Utf8               <clinit>
+  #890 = Utf8               Anubis
+  #891 = String             #890          // Anubis
+  #892 = Utf8               org/slf4j/LoggerFactory
+  #893 = Class              #892          // org/slf4j/LoggerFactory
+  #894 = Utf8               getLogger
+  #895 = Utf8               (Ljava/lang/String;)Lorg/slf4j/Logger;
+  #896 = NameAndType        #894:#895     // getLogger:(Ljava/lang/String;)Lorg/slf4j/Logger;
+  #897 = Methodref          #893.#896     // org/slf4j/LoggerFactory.getLogger:(Ljava/lang/String;)Lorg/slf4j/Logger;
+  #898 = Utf8               freecamera
+  #899 = String             #898          // freecamera
+  #900 = Utf8               (Ljava/lang/Object;)Ljava/util/Set;
+  #901 = NameAndType        #195:#900     // of:(Ljava/lang/Object;)Ljava/util/Set;
+  #902 = InterfaceMethodref #194.#901     // java/util/Set.of:(Ljava/lang/Object;)Ljava/util/Set;
+  #903 = Methodref          #19.#189      // net/minecraft/class_370$class_9037."<init>":()V
+  #904 = MethodType         #873          //  (Ljava/lang/Runnable;)Ljava/lang/Thread;
+  #905 = NameAndType        #872:#873     // lambda$static$0:(Ljava/lang/Runnable;)Ljava/lang/Thread;
+  #906 = Methodref          #2.#905       // net/anubis/client/module/impl/misc/PlayerDetectionModule.lambda$static$0:(Ljava/lang/Runnable;)Ljava/lang/Thread;
+  #907 = MethodHandle       6:#906        // REF_invokeStatic net/anubis/client/module/impl/misc/PlayerDetectionModule.lambda$static$0:(Ljava/lang/Runnable;)Ljava/lang/Thread;
+  #908 = Utf8               newThread
+  #909 = Utf8               ()Ljava/util/concurrent/ThreadFactory;
+  #910 = NameAndType        #908:#909     // newThread:()Ljava/util/concurrent/ThreadFactory;
+  #911 = InvokeDynamic      #7:#910       // #7:newThread:()Ljava/util/concurrent/ThreadFactory;
+  #912 = Utf8               java/util/concurrent/Executors
+  #913 = Class              #912          // java/util/concurrent/Executors
+  #914 = Utf8               newSingleThreadExecutor
+  #915 = Utf8               (Ljava/util/concurrent/ThreadFactory;)Ljava/util/concurrent/ExecutorService;
+  #916 = NameAndType        #914:#915     // newSingleThreadExecutor:(Ljava/util/concurrent/ThreadFactory;)Ljava/util/concurrent/ExecutorService;
+  #917 = Methodref          #913.#916     // java/util/concurrent/Executors.newSingleThreadExecutor:(Ljava/util/concurrent/ThreadFactory;)Ljava/util/concurrent/ExecutorService;
+  #918 = Utf8               Lnet/fabricmc/api/Environment;
+  #919 = Utf8               Lnet/fabricmc/api/EnvType;
+  #920 = Utf8               CLIENT
+  #921 = Utf8               Signature
+  #922 = Utf8               ConstantValue
+  #923 = Utf8               Code
+  #924 = Utf8               LineNumberTable
+  #925 = Utf8               LocalVariableTable
+  #926 = Utf8               StackMapTable
+  #927 = Utf8               LocalVariableTypeTable
+  #928 = Utf8               MethodParameters
+  #929 = Utf8               InnerClasses
+  #930 = Utf8               SourceFile
+  #931 = Utf8               RuntimeVisibleAnnotations
+  #932 = Utf8               BootstrapMethods
+  #933 = Utf8               NestMembers
+{
+  private static final org.slf4j.Logger LOGGER;
+    descriptor: Lorg/slf4j/Logger;
+    flags: (0x001a) ACC_PRIVATE, ACC_STATIC, ACC_FINAL
+
+  private static final java.util.Set<java.lang.String> PERMANENT_WHITELIST;
+    descriptor: Ljava/util/Set;
+    flags: (0x001a) ACC_PRIVATE, ACC_STATIC, ACC_FINAL
+    Signature: #33                          // Ljava/util/Set<Ljava/lang/String;>;
+
+  private static final long DISCONNECT_DELAY_MS;
+    descriptor: J
+    flags: (0x001a) ACC_PRIVATE, ACC_STATIC, ACC_FINAL
+    ConstantValue: long 500l
+
+  private static final java.lang.String WEBHOOK_TITLE;
+    descriptor: Ljava/lang/String;
+    flags: (0x001a) ACC_PRIVATE, ACC_STATIC, ACC_FINAL
+    ConstantValue: String 🚨 Player Detection Alert
+
+  private static final int WEBHOOK_COLOR;
+    descriptor: I
+    flags: (0x001a) ACC_PRIVATE, ACC_STATIC, ACC_FINAL
+    ConstantValue: int 15158332
+
+  private static final net.minecraft.class_370$class_9037 TOAST_ID;
+    descriptor: Lnet/minecraft/class_370$class_9037;
+    flags: (0x001a) ACC_PRIVATE, ACC_STATIC, ACC_FINAL
+
+  private static final java.util.concurrent.ExecutorService WEBHOOK_EXECUTOR;
+    descriptor: Ljava/util/concurrent/ExecutorService;
+    flags: (0x001a) ACC_PRIVATE, ACC_STATIC, ACC_FINAL
+
+  private final net.anubis.client.module.setting.StringSetting modulesToToggle;
+    descriptor: Lnet/anubis/client/module/setting/StringSetting;
+    flags: (0x0012) ACC_PRIVATE, ACC_FINAL
+
+  private final net.anubis.client.module.setting.BooleanSetting enableDisconnect;
+    descriptor: Lnet/anubis/client/module/setting/BooleanSetting;
+    flags: (0x0012) ACC_PRIVATE, ACC_FINAL
+
+  private final net.anubis.client.module.setting.ModeSetting notificationMode;
+    descriptor: Lnet/anubis/client/module/setting/ModeSetting;
+    flags: (0x0012) ACC_PRIVATE, ACC_FINAL
+
+  private final net.anubis.client.module.setting.BooleanSetting toggleOnPlayer;
+    descriptor: Lnet/anubis/client/module/setting/BooleanSetting;
+    flags: (0x0012) ACC_PRIVATE, ACC_FINAL
+
+  private final net.anubis.client.module.setting.StringSetting userWhitelist;
+    descriptor: Lnet/anubis/client/module/setting/StringSetting;
+    flags: (0x0012) ACC_PRIVATE, ACC_FINAL
+
+  private final net.anubis.client.module.setting.BooleanSetting enableWebhook;
+    descriptor: Lnet/anubis/client/module/setting/BooleanSetting;
+    flags: (0x0012) ACC_PRIVATE, ACC_FINAL
+
+  private final net.anubis.client.module.setting.StringSetting webhookUrl;
+    descriptor: Lnet/anubis/client/module/setting/StringSetting;
+    flags: (0x0012) ACC_PRIVATE, ACC_FINAL
+
+  private final net.anubis.client.module.setting.BooleanSetting selfPing;
+    descriptor: Lnet/anubis/client/module/setting/BooleanSetting;
+    flags: (0x0012) ACC_PRIVATE, ACC_FINAL
+
+  private final net.anubis.client.module.setting.StringSetting discordId;
+    descriptor: Lnet/anubis/client/module/setting/StringSetting;
+    flags: (0x0012) ACC_PRIVATE, ACC_FINAL
+
+  private final net.anubis.client.module.setting.BooleanSetting enablePanicPay;
+    descriptor: Lnet/anubis/client/module/setting/BooleanSetting;
+    flags: (0x0012) ACC_PRIVATE, ACC_FINAL
+
+  private final net.anubis.client.module.setting.StringSetting panicPayTarget;
+    descriptor: Lnet/anubis/client/module/setting/StringSetting;
+    flags: (0x0012) ACC_PRIVATE, ACC_FINAL
+
+  private final net.anubis.client.module.setting.StringSetting panicPayAmount;
+    descriptor: Lnet/anubis/client/module/setting/StringSetting;
+    flags: (0x0012) ACC_PRIVATE, ACC_FINAL
+
+  private final java.util.Set<java.lang.String> detectedPlayers;
+    descriptor: Ljava/util/Set;
+    flags: (0x0012) ACC_PRIVATE, ACC_FINAL
+    Signature: #33                          // Ljava/util/Set<Ljava/lang/String;>;
+
+  private net.minecraft.class_638 lastLevel;
+    descriptor: Lnet/minecraft/class_638;
+    flags: (0x0002) ACC_PRIVATE
+
+  private java.lang.String whitelistRaw;
+    descriptor: Ljava/lang/String;
+    flags: (0x0002) ACC_PRIVATE
+
+  private java.util.Set<java.lang.String> whitelist;
+    descriptor: Ljava/util/Set;
+    flags: (0x0002) ACC_PRIVATE
+    Signature: #33                          // Ljava/util/Set<Ljava/lang/String;>;
+
+  public net.anubis.client.module.impl.misc.PlayerDetectionModule();
+    descriptor: ()V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=11, locals=1, args_size=1
+         0: aload_0
+         1: ldc           #72                 // String player-detection
+         3: ldc           #74                 // String Player Detection
+         5: ldc           #76                 // String Detects when players are in the world.
+         7: getstatic     #82                 // Field net/anubis/client/module/ModuleCategory.DONUT:Lnet/anubis/client/module/ModuleCategory;
+        10: invokespecial #85                 // Method net/anubis/client/module/ClientModule."<init>":(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lnet/anubis/client/module/ModuleCategory;)V
+        13: aload_0
+        14: aload_0
+        15: ldc           #87                 // String modules-to-toggle
+        17: new           #89                 // class net/anubis/client/module/setting/StringSetting
+        20: dup
+        21: ldc           #91                 // String Modules To Toggle
+        23: ldc           #93                 // String
+        25: invokespecial #96                 // Method net/anubis/client/module/setting/StringSetting."<init>":(Ljava/lang/String;Ljava/lang/String;)V
+        28: invokevirtual #100                // Method addSetting:(Ljava/lang/String;Lnet/anubis/client/module/setting/Setting;)Lnet/anubis/client/module/setting/Setting;
+        31: checkcast     #89                 // class net/anubis/client/module/setting/StringSetting
+        34: putfield      #102                // Field modulesToToggle:Lnet/anubis/client/module/setting/StringSetting;
+        37: aload_0
+        38: aload_0
+        39: ldc           #104                // String disconnect
+        41: new           #106                // class net/anubis/client/module/setting/BooleanSetting
+        44: dup
+        45: ldc           #108                // String Disconnect
+        47: iconst_1
+        48: invokespecial #111                // Method net/anubis/client/module/setting/BooleanSetting."<init>":(Ljava/lang/String;Z)V
+        51: invokevirtual #100                // Method addSetting:(Ljava/lang/String;Lnet/anubis/client/module/setting/Setting;)Lnet/anubis/client/module/setting/Setting;
+        54: checkcast     #106                // class net/anubis/client/module/setting/BooleanSetting
+        57: putfield      #113                // Field enableDisconnect:Lnet/anubis/client/module/setting/BooleanSetting;
+        60: aload_0
+        61: aload_0
+        62: ldc           #115                // String notification-mode
+        64: new           #117                // class net/anubis/client/module/setting/ModeSetting
+        67: dup
+        68: ldc           #119                // String Notification Mode
+        70: ldc           #121                // String Both
+        72: iconst_3
+        73: anewarray     #123                // class java/lang/String
+        76: dup
+        77: iconst_0
+        78: ldc           #125                // String Chat
+        80: aastore
+        81: dup
+        82: iconst_1
+        83: ldc           #127                // String Toast
+        85: aastore
+        86: dup
+        87: iconst_2
+        88: ldc           #121                // String Both
+        90: aastore
+        91: invokespecial #130                // Method net/anubis/client/module/setting/ModeSetting."<init>":(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)V
+        94: invokevirtual #100                // Method addSetting:(Ljava/lang/String;Lnet/anubis/client/module/setting/Setting;)Lnet/anubis/client/module/setting/Setting;
+        97: checkcast     #117                // class net/anubis/client/module/setting/ModeSetting
+       100: putfield      #132                // Field notificationMode:Lnet/anubis/client/module/setting/ModeSetting;
+       103: aload_0
+       104: aload_0
+       105: ldc           #134                // String toggle-on-detect
+       107: new           #106                // class net/anubis/client/module/setting/BooleanSetting
+       110: dup
+       111: ldc           #136                // String Toggle On Detect
+       113: iconst_1
+       114: invokespecial #111                // Method net/anubis/client/module/setting/BooleanSetting."<init>":(Ljava/lang/String;Z)V
+       117: invokevirtual #100                // Method addSetting:(Ljava/lang/String;Lnet/anubis/client/module/setting/Setting;)Lnet/anubis/client/module/setting/Setting;
+       120: checkcast     #106                // class net/anubis/client/module/setting/BooleanSetting
+       123: putfield      #138                // Field toggleOnPlayer:Lnet/anubis/client/module/setting/BooleanSetting;
+       126: aload_0
+       127: aload_0
+       128: ldc           #140                // String user-whitelist
+       130: new           #89                 // class net/anubis/client/module/setting/StringSetting
+       133: dup
+       134: ldc           #142                // String User Whitelist
+       136: ldc           #93                 // String
+       138: invokespecial #96                 // Method net/anubis/client/module/setting/StringSetting."<init>":(Ljava/lang/String;Ljava/lang/String;)V
+       141: invokevirtual #100                // Method addSetting:(Ljava/lang/String;Lnet/anubis/client/module/setting/Setting;)Lnet/anubis/client/module/setting/Setting;
+       144: checkcast     #89                 // class net/anubis/client/module/setting/StringSetting
+       147: putfield      #144                // Field userWhitelist:Lnet/anubis/client/module/setting/StringSetting;
+       150: aload_0
+       151: aload_0
+       152: ldc           #146                // String webhook
+       154: new           #106                // class net/anubis/client/module/setting/BooleanSetting
+       157: dup
+       158: ldc           #148                // String Webhook
+       160: iconst_0
+       161: invokespecial #111                // Method net/anubis/client/module/setting/BooleanSetting."<init>":(Ljava/lang/String;Z)V
+       164: invokevirtual #100                // Method addSetting:(Ljava/lang/String;Lnet/anubis/client/module/setting/Setting;)Lnet/anubis/client/module/setting/Setting;
+       167: checkcast     #106                // class net/anubis/client/module/setting/BooleanSetting
+       170: putfield      #150                // Field enableWebhook:Lnet/anubis/client/module/setting/BooleanSetting;
+       173: aload_0
+       174: aload_0
+       175: ldc           #152                // String webhook-url
+       177: new           #89                 // class net/anubis/client/module/setting/StringSetting
+       180: dup
+       181: ldc           #154                // String Webhook URL
+       183: ldc           #93                 // String
+       185: invokespecial #96                 // Method net/anubis/client/module/setting/StringSetting."<init>":(Ljava/lang/String;Ljava/lang/String;)V
+       188: invokevirtual #100                // Method addSetting:(Ljava/lang/String;Lnet/anubis/client/module/setting/Setting;)Lnet/anubis/client/module/setting/Setting;
+       191: checkcast     #89                 // class net/anubis/client/module/setting/StringSetting
+       194: putfield      #156                // Field webhookUrl:Lnet/anubis/client/module/setting/StringSetting;
+       197: aload_0
+       198: aload_0
+       199: ldc           #158                // String self-ping
+       201: new           #106                // class net/anubis/client/module/setting/BooleanSetting
+       204: dup
+       205: ldc           #160                // String Self Ping
+       207: iconst_0
+       208: invokespecial #111                // Method net/anubis/client/module/setting/BooleanSetting."<init>":(Ljava/lang/String;Z)V
+       211: invokevirtual #100                // Method addSetting:(Ljava/lang/String;Lnet/anubis/client/module/setting/Setting;)Lnet/anubis/client/module/setting/Setting;
+       214: checkcast     #106                // class net/anubis/client/module/setting/BooleanSetting
+       217: putfield      #162                // Field selfPing:Lnet/anubis/client/module/setting/BooleanSetting;
+       220: aload_0
+       221: aload_0
+       222: ldc           #164                // String discord-id
+       224: new           #89                 // class net/anubis/client/module/setting/StringSetting
+       227: dup
+       228: ldc           #166                // String Discord ID
+       230: ldc           #93                 // String
+       232: invokespecial #96                 // Method net/anubis/client/module/setting/StringSetting."<init>":(Ljava/lang/String;Ljava/lang/String;)V
+       235: invokevirtual #100                // Method addSetting:(Ljava/lang/String;Lnet/anubis/client/module/setting/Setting;)Lnet/anubis/client/module/setting/Setting;
+       238: checkcast     #89                 // class net/anubis/client/module/setting/StringSetting
+       241: putfield      #168                // Field discordId:Lnet/anubis/client/module/setting/StringSetting;
+       244: aload_0
+       245: aload_0
+       246: ldc           #170                // String enable-panic-pay
+       248: new           #106                // class net/anubis/client/module/setting/BooleanSetting
+       251: dup
+       252: ldc           #172                // String Enable Panic Pay
+       254: iconst_0
+       255: invokespecial #111                // Method net/anubis/client/module/setting/BooleanSetting."<init>":(Ljava/lang/String;Z)V
+       258: invokevirtual #100                // Method addSetting:(Ljava/lang/String;Lnet/anubis/client/module/setting/Setting;)Lnet/anubis/client/module/setting/Setting;
+       261: checkcast     #106                // class net/anubis/client/module/setting/BooleanSetting
+       264: putfield      #174                // Field enablePanicPay:Lnet/anubis/client/module/setting/BooleanSetting;
+       267: aload_0
+       268: aload_0
+       269: ldc           #176                // String target-player
+       271: new           #89                 // class net/anubis/client/module/setting/StringSetting
+       274: dup
+       275: ldc           #178                // String Target Player
+       277: ldc           #93                 // String
+       279: invokespecial #96                 // Method net/anubis/client/module/setting/StringSetting."<init>":(Ljava/lang/String;Ljava/lang/String;)V
+       282: invokevirtual #100                // Method addSetting:(Ljava/lang/String;Lnet/anubis/client/module/setting/Setting;)Lnet/anubis/client/module/setting/Setting;
+       285: checkcast     #89                 // class net/anubis/client/module/setting/StringSetting
+       288: putfield      #180                // Field panicPayTarget:Lnet/anubis/client/module/setting/StringSetting;
+       291: aload_0
+       292: aload_0
+       293: ldc           #182                // String amount
+       295: new           #89                 // class net/anubis/client/module/setting/StringSetting
+       298: dup
+       299: ldc           #184                // String Amount
+       301: ldc           #93                 // String
+       303: invokespecial #96                 // Method net/anubis/client/module/setting/StringSetting."<init>":(Ljava/lang/String;Ljava/lang/String;)V
+       306: invokevirtual #100                // Method addSetting:(Ljava/lang/String;Lnet/anubis/client/module/setting/Setting;)Lnet/anubis/client/module/setting/Setting;
+       309: checkcast     #89                 // class net/anubis/client/module/setting/StringSetting
+       312: putfield      #186                // Field panicPayAmount:Lnet/anubis/client/module/setting/StringSetting;
+       315: aload_0
+       316: new           #188                // class java/util/HashSet
+       319: dup
+       320: invokespecial #190                // Method java/util/HashSet."<init>":()V
+       323: putfield      #192                // Field detectedPlayers:Ljava/util/Set;
+       326: aload_0
+       327: invokestatic  #198                // InterfaceMethod java/util/Set.of:()Ljava/util/Set;
+       330: putfield      #200                // Field whitelist:Ljava/util/Set;
+       333: aload_0
+       334: invokevirtual #204                // Method usesNotifications:()Lnet/anubis/client/module/setting/BooleanSetting;
+       337: pop
+       338: aload_0
+       339: getfield      #156                // Field webhookUrl:Lnet/anubis/client/module/setting/StringSetting;
+       342: aload_0
+       343: getfield      #150                // Field enableWebhook:Lnet/anubis/client/module/setting/BooleanSetting;
+       346: dup
+       347: invokestatic  #210                // Method java/util/Objects.requireNonNull:(Ljava/lang/Object;)Ljava/lang/Object;
+       350: pop
+       351: invokedynamic #227,  0            // InvokeDynamic #0:getAsBoolean:(Lnet/anubis/client/module/setting/BooleanSetting;)Ljava/util/function/BooleanSupplier;
+       356: invokevirtual #231                // Method net/anubis/client/module/setting/StringSetting.visibleWhen:(Ljava/util/function/BooleanSupplier;)Lnet/anubis/client/module/setting/Setting;
+       359: pop
+       360: aload_0
+       361: getfield      #162                // Field selfPing:Lnet/anubis/client/module/setting/BooleanSetting;
+       364: aload_0
+       365: getfield      #150                // Field enableWebhook:Lnet/anubis/client/module/setting/BooleanSetting;
+       368: dup
+       369: invokestatic  #210                // Method java/util/Objects.requireNonNull:(Ljava/lang/Object;)Ljava/lang/Object;
+       372: pop
+       373: invokedynamic #227,  0            // InvokeDynamic #0:getAsBoolean:(Lnet/anubis/client/module/setting/BooleanSetting;)Ljava/util/function/BooleanSupplier;
+       378: invokevirtual #232                // Method net/anubis/client/module/setting/BooleanSetting.visibleWhen:(Ljava/util/function/BooleanSupplier;)Lnet/anubis/client/module/setting/Setting;
+       381: pop
+       382: aload_0
+       383: getfield      #168                // Field discordId:Lnet/anubis/client/module/setting/StringSetting;
+       386: aload_0
+       387: invokedynamic #239,  0            // InvokeDynamic #1:getAsBoolean:(Lnet/anubis/client/module/impl/misc/PlayerDetectionModule;)Ljava/util/function/BooleanSupplier;
+       392: invokevirtual #231                // Method net/anubis/client/module/setting/StringSetting.visibleWhen:(Ljava/util/function/BooleanSupplier;)Lnet/anubis/client/module/setting/Setting;
+       395: pop
+       396: aload_0
+       397: getfield      #180                // Field panicPayTarget:Lnet/anubis/client/module/setting/StringSetting;
+       400: aload_0
+       401: getfield      #174                // Field enablePanicPay:Lnet/anubis/client/module/setting/BooleanSetting;
+       404: dup
+       405: invokestatic  #210                // Method java/util/Objects.requireNonNull:(Ljava/lang/Object;)Ljava/lang/Object;
+       408: pop
+       409: invokedynamic #227,  0            // InvokeDynamic #0:getAsBoolean:(Lnet/anubis/client/module/setting/BooleanSetting;)Ljava/util/function/BooleanSupplier;
+       414: invokevirtual #231                // Method net/anubis/client/module/setting/StringSetting.visibleWhen:(Ljava/util/function/BooleanSupplier;)Lnet/anubis/client/module/setting/Setting;
+       417: pop
+       418: aload_0
+       419: getfield      #186                // Field panicPayAmount:Lnet/anubis/client/module/setting/StringSetting;
+       422: aload_0
+       423: getfield      #174                // Field enablePanicPay:Lnet/anubis/client/module/setting/BooleanSetting;
+       426: dup
+       427: invokestatic  #210                // Method java/util/Objects.requireNonNull:(Ljava/lang/Object;)Ljava/lang/Object;
+       430: pop
+       431: invokedynamic #227,  0            // InvokeDynamic #0:getAsBoolean:(Lnet/anubis/client/module/setting/BooleanSetting;)Ljava/util/function/BooleanSupplier;
+       436: invokevirtual #231                // Method net/anubis/client/module/setting/StringSetting.visibleWhen:(Ljava/util/function/BooleanSupplier;)Lnet/anubis/client/module/setting/Setting;
+       439: pop
+       440: aload_0
+       441: getfield      #156                // Field webhookUrl:Lnet/anubis/client/module/setting/StringSetting;
+       444: invokevirtual #243                // Method net/anubis/client/module/setting/StringSetting.privateValue:()Lnet/anubis/client/module/setting/Setting;
+       447: pop
+       448: aload_0
+       449: getfield      #168                // Field discordId:Lnet/anubis/client/module/setting/StringSetting;
+       452: invokevirtual #243                // Method net/anubis/client/module/setting/StringSetting.privateValue:()Lnet/anubis/client/module/setting/Setting;
+       455: pop
+       456: aload_0
+       457: getfield      #174                // Field enablePanicPay:Lnet/anubis/client/module/setting/BooleanSetting;
+       460: invokevirtual #244                // Method net/anubis/client/module/setting/BooleanSetting.privateValue:()Lnet/anubis/client/module/setting/Setting;
+       463: pop
+       464: aload_0
+       465: getfield      #180                // Field panicPayTarget:Lnet/anubis/client/module/setting/StringSetting;
+       468: invokevirtual #243                // Method net/anubis/client/module/setting/StringSetting.privateValue:()Lnet/anubis/client/module/setting/Setting;
+       471: pop
+       472: aload_0
+       473: getfield      #186                // Field panicPayAmount:Lnet/anubis/client/module/setting/StringSetting;
+       476: invokevirtual #243                // Method net/anubis/client/module/setting/StringSetting.privateValue:()Lnet/anubis/client/module/setting/Setting;
+       479: pop
+       480: aload_0
+       481: getfield      #144                // Field userWhitelist:Lnet/anubis/client/module/setting/StringSetting;
+       484: invokevirtual #243                // Method net/anubis/client/module/setting/StringSetting.privateValue:()Lnet/anubis/client/module/setting/Setting;
+       487: pop
+       488: aload_0
+       489: getfield      #144                // Field userWhitelist:Lnet/anubis/client/module/setting/StringSetting;
+       492: invokevirtual #248                // Method net/anubis/client/module/setting/StringSetting.getImString:()Limgui/type/ImString;
+       495: getfield      #252                // Field imgui/type/ImString.inputData:Limgui/type/ImString$InputData;
+       498: iconst_1
+       499: putfield      #256                // Field imgui/type/ImString$InputData.isResizable:Z
+       502: aload_0
+       503: getfield      #102                // Field modulesToToggle:Lnet/anubis/client/module/setting/StringSetting;
+       506: invokevirtual #248                // Method net/anubis/client/module/setting/StringSetting.getImString:()Limgui/type/ImString;
+       509: getfield      #252                // Field imgui/type/ImString.inputData:Limgui/type/ImString$InputData;
+       512: iconst_1
+       513: putfield      #256                // Field imgui/type/ImString$InputData.isResizable:Z
+       516: return
+      LineNumberTable:
+        line 92: 0
+        line 67: 13
+        line 68: 37
+        line 69: 60
+        line 71: 103
+        line 73: 126
+        line 75: 150
+        line 76: 173
+        line 77: 197
+        line 78: 220
+        line 80: 244
+        line 81: 267
+        line 82: 291
+        line 84: 315
+        line 89: 326
+        line 93: 333
+        line 94: 338
+        line 95: 360
+        line 96: 382
+        line 97: 396
+        line 98: 418
+        line 99: 440
+        line 100: 448
+        line 101: 456
+        line 102: 464
+        line 103: 472
+        line 104: 480
+        line 106: 488
+        line 107: 502
+        line 108: 516
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0     517     0  this   Lnet/anubis/client/module/impl/misc/PlayerDetectionModule;
+
+  protected void onEnable();
+    descriptor: ()V
+    flags: (0x0004) ACC_PROTECTED
+    Code:
+      stack=4, locals=1, args_size=1
+         0: aload_0
+         1: getfield      #192                // Field detectedPlayers:Ljava/util/Set;
+         4: invokeinterface #262,  1          // InterfaceMethod java/util/Set.clear:()V
+         9: aload_0
+        10: aconst_null
+        11: putfield      #264                // Field lastLevel:Lnet/minecraft/class_638;
+        14: aload_0
+        15: getstatic     #270                // Field net/anubis/client/event/impl/TickEvent.TYPE:Lnet/anubis/client/event/EventType;
+        18: getstatic     #276                // Field net/anubis/client/event/Stage.POST:Lnet/anubis/client/event/Stage;
+        21: aload_0
+        22: invokedynamic #288,  0            // InvokeDynamic #2:accept:(Lnet/anubis/client/module/impl/misc/PlayerDetectionModule;)Ljava/util/function/Consumer;
+        27: invokevirtual #292                // Method on:(Lnet/anubis/client/event/EventType;Lnet/anubis/client/event/Stage;Ljava/util/function/Consumer;)V
+        30: return
+      LineNumberTable:
+        line 112: 0
+        line 113: 9
+        line 115: 14
+        line 116: 30
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      31     0  this   Lnet/anubis/client/module/impl/misc/PlayerDetectionModule;
+
+  protected void onDisable();
+    descriptor: ()V
+    flags: (0x0004) ACC_PROTECTED
+    Code:
+      stack=2, locals=1, args_size=1
+         0: aload_0
+         1: getfield      #192                // Field detectedPlayers:Ljava/util/Set;
+         4: invokeinterface #262,  1          // InterfaceMethod java/util/Set.clear:()V
+         9: aload_0
+        10: aconst_null
+        11: putfield      #264                // Field lastLevel:Lnet/minecraft/class_638;
+        14: return
+      LineNumberTable:
+        line 120: 0
+        line 121: 9
+        line 122: 14
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      15     0  this   Lnet/anubis/client/module/impl/misc/PlayerDetectionModule;
+
+  private void onTick(net.anubis.client.event.impl.TickEvent);
+    descriptor: (Lnet/anubis/client/event/impl/TickEvent;)V
+    flags: (0x0002) ACC_PRIVATE
+    Code:
+      stack=2, locals=13, args_size=2
+         0: invokestatic  #300                // Method net/minecraft/class_310.method_1551:()Lnet/minecraft/class_310;
+         3: astore_2
+         4: aload_2
+         5: getfield      #304                // Field net/minecraft/class_310.field_1724:Lnet/minecraft/class_746;
+         8: astore_3
+         9: aload_2
+        10: getfield      #307                // Field net/minecraft/class_310.field_1687:Lnet/minecraft/class_638;
+        13: astore        4
+        15: aload_3
+        16: ifnull        24
+        19: aload         4
+        21: ifnonnull     39
+        24: aload_0
+        25: getfield      #192                // Field detectedPlayers:Ljava/util/Set;
+        28: invokeinterface #262,  1          // InterfaceMethod java/util/Set.clear:()V
+        33: aload_0
+        34: aconst_null
+        35: putfield      #264                // Field lastLevel:Lnet/minecraft/class_638;
+        38: return
+        39: aload         4
+        41: aload_0
+        42: getfield      #264                // Field lastLevel:Lnet/minecraft/class_638;
+        45: if_acmpeq     63
+        48: aload_0
+        49: getfield      #192                // Field detectedPlayers:Ljava/util/Set;
+        52: invokeinterface #262,  1          // InterfaceMethod java/util/Set.clear:()V
+        57: aload_0
+        58: aload         4
+        60: putfield      #264                // Field lastLevel:Lnet/minecraft/class_638;
+        63: aload_3
+        64: invokevirtual #315                // Method net/minecraft/class_746.method_7334:()Lcom/mojang/authlib/GameProfile;
+        67: invokevirtual #321                // Method com/mojang/authlib/GameProfile.name:()Ljava/lang/String;
+        70: astore        5
+        72: aload_3
+        73: invokevirtual #325                // Method net/minecraft/class_746.method_5667:()Ljava/util/UUID;
+        76: astore        6
+        78: aload_0
+        79: invokevirtual #327                // Method whitelist:()Ljava/util/Set;
+        82: astore        7
+        84: aconst_null
+        85: astore        8
+        87: aload         4
+        89: invokevirtual #331                // Method net/minecraft/class_638.method_18456:()Ljava/util/List;
+        92: invokeinterface #337,  1          // InterfaceMethod java/util/List.iterator:()Ljava/util/Iterator;
+        97: astore        9
+        99: aload         9
+       101: invokeinterface #344,  1          // InterfaceMethod java/util/Iterator.hasNext:()Z
+       106: ifeq          236
+       109: aload         9
+       111: invokeinterface #348,  1          // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+       116: checkcast     #350                // class net/minecraft/class_742
+       119: astore        10
+       121: aload         10
+       123: aload_3
+       124: if_acmpeq     99
+       127: aload         6
+       129: aload         10
+       131: invokevirtual #351                // Method net/minecraft/class_742.method_5667:()Ljava/util/UUID;
+       134: invokevirtual #355                // Method java/util/UUID.equals:(Ljava/lang/Object;)Z
+       137: ifeq          143
+       140: goto          99
+       143: aload         10
+       145: invokevirtual #356                // Method net/minecraft/class_742.method_7334:()Lcom/mojang/authlib/GameProfile;
+       148: invokevirtual #321                // Method com/mojang/authlib/GameProfile.name:()Ljava/lang/String;
+       151: astore        11
+       153: aload         11
+       155: ifnull        99
+       158: aload         11
+       160: aload         5
+       162: invokevirtual #357                // Method java/lang/String.equals:(Ljava/lang/Object;)Z
+       165: ifeq          171
+       168: goto          99
+       171: aload         11
+       173: getstatic     #363                // Field java/util/Locale.ROOT:Ljava/util/Locale;
+       176: invokevirtual #367                // Method java/lang/String.toLowerCase:(Ljava/util/Locale;)Ljava/lang/String;
+       179: astore        12
+       181: getstatic     #369                // Field PERMANENT_WHITELIST:Ljava/util/Set;
+       184: aload         12
+       186: invokeinterface #372,  2          // InterfaceMethod java/util/Set.contains:(Ljava/lang/Object;)Z
+       191: ifne          99
+       194: aload         7
+       196: aload         12
+       198: invokeinterface #372,  2          // InterfaceMethod java/util/Set.contains:(Ljava/lang/Object;)Z
+       203: ifeq          209
+       206: goto          99
+       209: aload         8
+       211: ifnonnull     223
+       214: new           #374                // class java/util/LinkedHashSet
+       217: dup
+       218: invokespecial #375                // Method java/util/LinkedHashSet."<init>":()V
+       221: astore        8
+       223: aload         8
+       225: aload         11
+       227: invokeinterface #378,  2          // InterfaceMethod java/util/Set.add:(Ljava/lang/Object;)Z
+       232: pop
+       233: goto          99
+       236: aload         8
+       238: ifnonnull     253
+       241: aload_0
+       242: getfield      #192                // Field detectedPlayers:Ljava/util/Set;
+       245: invokeinterface #262,  1          // InterfaceMethod java/util/Set.clear:()V
+       250: goto          294
+       253: aload         8
+       255: aload_0
+       256: getfield      #192                // Field detectedPlayers:Ljava/util/Set;
+       259: invokeinterface #379,  2          // InterfaceMethod java/util/Set.equals:(Ljava/lang/Object;)Z
+       264: ifne          294
+       267: aload_0
+       268: getfield      #192                // Field detectedPlayers:Ljava/util/Set;
+       271: invokeinterface #262,  1          // InterfaceMethod java/util/Set.clear:()V
+       276: aload_0
+       277: getfield      #192                // Field detectedPlayers:Ljava/util/Set;
+       280: aload         8
+       282: invokeinterface #383,  2          // InterfaceMethod java/util/Set.addAll:(Ljava/util/Collection;)Z
+       287: pop
+       288: aload_0
+       289: aload         8
+       291: invokevirtual #387                // Method handlePlayerDetection:(Ljava/util/Set;)V
+       294: return
+      StackMapTable: number_of_entries = 11
+        frame_type = 254 /* append */
+          offset_delta = 24
+          locals = [ class net/minecraft/class_310, class net/minecraft/class_746, class net/minecraft/class_638 ]
+        frame_type = 14 /* same */
+        frame_type = 23 /* same */
+        frame_type = 255 /* full_frame */
+          offset_delta = 35
+          locals = [ class net/anubis/client/module/impl/misc/PlayerDetectionModule, class net/anubis/client/event/impl/TickEvent, class net/minecraft/class_310, class net/minecraft/class_746, class net/minecraft/class_638, class java/lang/String, class java/util/UUID, class java/util/Set, class java/util/Set, class java/util/Iterator ]
+          stack = []
+        frame_type = 252 /* append */
+          offset_delta = 43
+          locals = [ class net/minecraft/class_742 ]
+        frame_type = 252 /* append */
+          offset_delta = 27
+          locals = [ class java/lang/String ]
+        frame_type = 252 /* append */
+          offset_delta = 37
+          locals = [ class java/lang/String ]
+        frame_type = 13 /* same */
+        frame_type = 255 /* full_frame */
+          offset_delta = 12
+          locals = [ class net/anubis/client/module/impl/misc/PlayerDetectionModule, class net/anubis/client/event/impl/TickEvent, class net/minecraft/class_310, class net/minecraft/class_746, class net/minecraft/class_638, class java/lang/String, class java/util/UUID, class java/util/Set, class java/util/Set ]
+          stack = []
+        frame_type = 16 /* same */
+        frame_type = 40 /* same */
+      LineNumberTable:
+        line 125: 0
+        line 126: 4
+        line 127: 9
+        line 128: 15
+        line 129: 24
+        line 130: 33
+        line 131: 38
+        line 133: 39
+        line 134: 48
+        line 135: 57
+        line 138: 63
+        line 139: 72
+        line 140: 78
+        line 142: 84
+        line 143: 87
+        line 144: 121
+        line 145: 143
+        line 146: 153
+        line 147: 171
+        line 148: 181
+        line 149: 209
+        line 150: 223
+        line 151: 233
+        line 153: 236
+        line 154: 241
+        line 155: 253
+        line 156: 267
+        line 157: 276
+        line 158: 288
+        line 160: 294
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+          153      80    11  name   Ljava/lang/String;
+          181      52    12   key   Ljava/lang/String;
+          121     112    10 player   Lnet/minecraft/class_742;
+            0     295     0  this   Lnet/anubis/client/module/impl/misc/PlayerDetectionModule;
+            0     295     1 event   Lnet/anubis/client/event/impl/TickEvent;
+            4     291     2    mc   Lnet/minecraft/class_310;
+            9     286     3  self   Lnet/minecraft/class_746;
+           15     280     4 level   Lnet/minecraft/class_638;
+           72     223     5 selfName   Ljava/lang/String;
+           78     217     6 selfId   Ljava/util/UUID;
+           84     211     7 ignored   Ljava/util/Set;
+           87     208     8 current   Ljava/util/Set;
+      LocalVariableTypeTable:
+        Start  Length  Slot  Name   Signature
+           84     211     7 ignored   Ljava/util/Set<Ljava/lang/String;>;
+           87     208     8 current   Ljava/util/Set<Ljava/lang/String;>;
+    MethodParameters:
+      Name                           Flags
+      event
+
+  private void handlePlayerDetection(java.util.Set<java.lang.String>);
+    descriptor: (Ljava/util/Set;)V
+    flags: (0x0002) ACC_PRIVATE
+    Code:
+      stack=3, locals=5, args_size=2
+         0: invokestatic  #300                // Method net/minecraft/class_310.method_1551:()Lnet/minecraft/class_310;
+         3: astore_2
+         4: aload_0
+         5: getfield      #132                // Field notificationMode:Lnet/anubis/client/module/setting/ModeSetting;
+         8: invokevirtual #404                // Method net/anubis/client/module/setting/ModeSetting.get:()Ljava/lang/String;
+        11: astore_3
+        12: iconst_m1
+        13: istore        4
+        15: aload_3
+        16: invokevirtual #408                // Method java/lang/String.hashCode:()I
+        19: lookupswitch  { // 2
+                 2099064: 44
+                80979463: 59
+                 default: 71
+            }
+        44: aload_3
+        45: ldc           #125                // String Chat
+        47: invokevirtual #357                // Method java/lang/String.equals:(Ljava/lang/Object;)Z
+        50: ifeq          71
+        53: iconst_0
+        54: istore        4
+        56: goto          71
+        59: aload_3
+        60: ldc           #127                // String Toast
+        62: invokevirtual #357                // Method java/lang/String.equals:(Ljava/lang/Object;)Z
+        65: ifeq          71
+        68: iconst_1
+        69: istore        4
+        71: iload         4
+        73: lookupswitch  { // 2
+                       0: 100
+                       1: 108
+                 default: 116
+            }
+       100: aload_0
+       101: aload_1
+       102: invokevirtual #411                // Method announceDetection:(Ljava/util/Set;)V
+       105: goto          126
+       108: aload_0
+       109: aload_2
+       110: invokevirtual #415                // Method showToast:(Lnet/minecraft/class_310;)V
+       113: goto          126
+       116: aload_0
+       117: aload_1
+       118: invokevirtual #411                // Method announceDetection:(Ljava/util/Set;)V
+       121: aload_0
+       122: aload_2
+       123: invokevirtual #415                // Method showToast:(Lnet/minecraft/class_310;)V
+       126: aload_0
+       127: invokevirtual #418                // Method resolveModulesToToggle:()Ljava/util/List;
+       130: invokeinterface #337,  1          // InterfaceMethod java/util/List.iterator:()Ljava/util/Iterator;
+       135: astore_3
+       136: aload_3
+       137: invokeinterface #344,  1          // InterfaceMethod java/util/Iterator.hasNext:()Z
+       142: ifeq          164
+       145: aload_3
+       146: invokeinterface #348,  1          // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+       151: checkcast     #4                  // class net/anubis/client/module/ClientModule
+       154: astore        4
+       156: aload         4
+       158: invokevirtual #421                // Method net/anubis/client/module/ClientModule.toggle:()V
+       161: goto          136
+       164: aload_0
+       165: getfield      #174                // Field enablePanicPay:Lnet/anubis/client/module/setting/BooleanSetting;
+       168: invokevirtual #215                // Method net/anubis/client/module/setting/BooleanSetting.get:()Z
+       171: ifeq          179
+       174: aload_0
+       175: aload_2
+       176: invokevirtual #424                // Method panicPay:(Lnet/minecraft/class_310;)V
+       179: aload_0
+       180: getfield      #150                // Field enableWebhook:Lnet/anubis/client/module/setting/BooleanSetting;
+       183: invokevirtual #215                // Method net/anubis/client/module/setting/BooleanSetting.get:()Z
+       186: ifeq          195
+       189: aload_0
+       190: aload_2
+       191: aload_1
+       192: invokevirtual #428                // Method sendWebhookNotification:(Lnet/minecraft/class_310;Ljava/util/Set;)V
+       195: aload_0
+       196: getfield      #138                // Field toggleOnPlayer:Lnet/anubis/client/module/setting/BooleanSetting;
+       199: invokevirtual #215                // Method net/anubis/client/module/setting/BooleanSetting.get:()Z
+       202: ifeq          209
+       205: aload_0
+       206: invokevirtual #429                // Method toggle:()V
+       209: aload_0
+       210: getfield      #113                // Field enableDisconnect:Lnet/anubis/client/module/setting/BooleanSetting;
+       213: invokevirtual #215                // Method net/anubis/client/module/setting/BooleanSetting.get:()Z
+       216: ifeq          225
+       219: aload_0
+       220: aload_2
+       221: aload_1
+       222: invokevirtual #432                // Method scheduleDisconnect:(Lnet/minecraft/class_310;Ljava/util/Set;)V
+       225: return
+      StackMapTable: number_of_entries = 13
+        frame_type = 254 /* append */
+          offset_delta = 44
+          locals = [ class net/minecraft/class_310, class java/lang/String, int ]
+        frame_type = 14 /* same */
+        frame_type = 11 /* same */
+        frame_type = 28 /* same */
+        frame_type = 7 /* same */
+        frame_type = 7 /* same */
+        frame_type = 249 /* chop */
+          offset_delta = 9
+        frame_type = 252 /* append */
+          offset_delta = 9
+          locals = [ class java/util/Iterator ]
+        frame_type = 250 /* chop */
+          offset_delta = 27
+        frame_type = 14 /* same */
+        frame_type = 15 /* same */
+        frame_type = 13 /* same */
+        frame_type = 15 /* same */
+      LineNumberTable:
+        line 163: 0
+        line 165: 4
+        line 166: 100
+        line 167: 108
+        line 169: 116
+        line 170: 121
+        line 174: 126
+        line 176: 164
+        line 177: 179
+        line 178: 195
+        line 179: 209
+        line 180: 225
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+          156       5     4 module   Lnet/anubis/client/module/ClientModule;
+            0     226     0  this   Lnet/anubis/client/module/impl/misc/PlayerDetectionModule;
+            0     226     1 players   Ljava/util/Set;
+            4     222     2    mc   Lnet/minecraft/class_310;
+      LocalVariableTypeTable:
+        Start  Length  Slot  Name   Signature
+            0     226     1 players   Ljava/util/Set<Ljava/lang/String;>;
+    Signature: #401                         // (Ljava/util/Set<Ljava/lang/String;>;)V
+    MethodParameters:
+      Name                           Flags
+      players
+
+  private void announceDetection(java.util.Set<java.lang.String>);
+    descriptor: (Ljava/util/Set;)V
+    flags: (0x0002) ACC_PRIVATE
+    Code:
+      stack=4, locals=2, args_size=2
+         0: aload_0
+         1: invokestatic  #438                // Method net/anubis/client/chat/ModuleChat.body:()Lnet/anubis/client/chat/ModuleChat$Body;
+         4: aload_1
+         5: invokeinterface #441,  1          // InterfaceMethod java/util/Set.size:()I
+        10: iconst_1
+        11: if_icmpne     20
+        14: ldc_w         #443                // String Player detected
+        17: goto          23
+        20: ldc_w         #445                // String Players detected
+        23: invokevirtual #449                // Method net/anubis/client/chat/ModuleChat$Body.danger:(Ljava/lang/String;)Lnet/anubis/client/chat/ModuleChat$Body;
+        26: ldc_w         #451                // String :
+        29: invokevirtual #454                // Method net/anubis/client/chat/ModuleChat$Body.text:(Ljava/lang/String;)Lnet/anubis/client/chat/ModuleChat$Body;
+        32: aload_1
+        33: invokestatic  #458                // Method names:(Lnet/anubis/client/chat/ModuleChat$Body;Ljava/util/Collection;)Lnet/anubis/client/chat/ModuleChat$Body;
+        36: invokestatic  #462                // Method net/anubis/client/chat/ModuleChat.send:(Lnet/anubis/client/module/ClientModule;Lnet/anubis/client/chat/ModuleChat$Body;)V
+        39: return
+      StackMapTable: number_of_entries = 2
+        frame_type = 255 /* full_frame */
+          offset_delta = 20
+          locals = [ class net/anubis/client/module/impl/misc/PlayerDetectionModule, class java/util/Set ]
+          stack = [ class net/anubis/client/module/impl/misc/PlayerDetectionModule, class net/anubis/client/chat/ModuleChat$Body ]
+        frame_type = 255 /* full_frame */
+          offset_delta = 2
+          locals = [ class net/anubis/client/module/impl/misc/PlayerDetectionModule, class java/util/Set ]
+          stack = [ class net/anubis/client/module/impl/misc/PlayerDetectionModule, class net/anubis/client/chat/ModuleChat$Body, class java/lang/String ]
+      LineNumberTable:
+        line 183: 0
+        line 184: 4
+        line 183: 33
+        line 185: 39
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      40     0  this   Lnet/anubis/client/module/impl/misc/PlayerDetectionModule;
+            0      40     1 players   Ljava/util/Set;
+      LocalVariableTypeTable:
+        Start  Length  Slot  Name   Signature
+            0      40     1 players   Ljava/util/Set<Ljava/lang/String;>;
+    Signature: #401                         // (Ljava/util/Set<Ljava/lang/String;>;)V
+    MethodParameters:
+      Name                           Flags
+      players
+
+  private static net.anubis.client.chat.ModuleChat$Body names(net.anubis.client.chat.ModuleChat$Body, java.util.Collection<java.lang.String>);
+    descriptor: (Lnet/anubis/client/chat/ModuleChat$Body;Ljava/util/Collection;)Lnet/anubis/client/chat/ModuleChat$Body;
+    flags: (0x000a) ACC_PRIVATE, ACC_STATIC
+    Code:
+      stack=2, locals=5, args_size=2
+         0: iconst_1
+         1: istore_2
+         2: aload_1
+         3: invokeinterface #466,  1          // InterfaceMethod java/util/Collection.iterator:()Ljava/util/Iterator;
+         8: astore_3
+         9: aload_3
+        10: invokeinterface #344,  1          // InterfaceMethod java/util/Iterator.hasNext:()Z
+        15: ifeq          53
+        18: aload_3
+        19: invokeinterface #348,  1          // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+        24: checkcast     #123                // class java/lang/String
+        27: astore        4
+        29: iload_2
+        30: ifne          41
+        33: aload_0
+        34: ldc_w         #468                // String ,
+        37: invokevirtual #454                // Method net/anubis/client/chat/ModuleChat$Body.text:(Ljava/lang/String;)Lnet/anubis/client/chat/ModuleChat$Body;
+        40: pop
+        41: aload_0
+        42: aload         4
+        44: invokevirtual #470                // Method net/anubis/client/chat/ModuleChat$Body.name:(Ljava/lang/String;)Lnet/anubis/client/chat/ModuleChat$Body;
+        47: pop
+        48: iconst_0
+        49: istore_2
+        50: goto          9
+        53: aload_0
+        54: areturn
+      StackMapTable: number_of_entries = 3
+        frame_type = 253 /* append */
+          offset_delta = 9
+          locals = [ int, class java/util/Iterator ]
+        frame_type = 252 /* append */
+          offset_delta = 31
+          locals = [ class java/lang/String ]
+        frame_type = 249 /* chop */
+          offset_delta = 11
+      LineNumberTable:
+        line 188: 0
+        line 189: 2
+        line 190: 29
+        line 191: 41
+        line 192: 48
+        line 193: 50
+        line 194: 53
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+           29      21     4 player   Ljava/lang/String;
+            0      55     0  body   Lnet/anubis/client/chat/ModuleChat$Body;
+            0      55     1 players   Ljava/util/Collection;
+            2      53     2 first   Z
+      LocalVariableTypeTable:
+        Start  Length  Slot  Name   Signature
+            0      55     1 players   Ljava/util/Collection<Ljava/lang/String;>;
+    Signature: #463                         // (Lnet/anubis/client/chat/ModuleChat$Body;Ljava/util/Collection<Ljava/lang/String;>;)Lnet/anubis/client/chat/ModuleChat$Body;
+    MethodParameters:
+      Name                           Flags
+      body
+      players
+
+  private void showToast(net.minecraft.class_310);
+    descriptor: (Lnet/minecraft/class_310;)V
+    flags: (0x0002) ACC_PRIVATE
+    Code:
+      stack=4, locals=2, args_size=2
+         0: aload_1
+         1: invokevirtual #478                // Method net/minecraft/class_310.method_1566:()Lnet/minecraft/class_374;
+         4: getstatic     #480                // Field TOAST_ID:Lnet/minecraft/class_370$class_9037;
+         7: aload_0
+         8: invokevirtual #481                // Method name:()Ljava/lang/String;
+        11: invokestatic  #487                // InterfaceMethod net/minecraft/class_2561.method_43470:(Ljava/lang/String;)Lnet/minecraft/class_5250;
+        14: ldc_w         #489                // String Player Detected!
+        17: invokestatic  #487                // InterfaceMethod net/minecraft/class_2561.method_43470:(Ljava/lang/String;)Lnet/minecraft/class_5250;
+        20: invokestatic  #493                // Method net/minecraft/class_370.method_1990:(Lnet/minecraft/class_374;Lnet/minecraft/class_370$class_9037;Lnet/minecraft/class_2561;Lnet/minecraft/class_2561;)V
+        23: return
+      LineNumberTable:
+        line 198: 0
+        line 199: 8
+        line 198: 20
+        line 200: 23
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      24     0  this   Lnet/anubis/client/module/impl/misc/PlayerDetectionModule;
+            0      24     1    mc   Lnet/minecraft/class_310;
+    MethodParameters:
+      Name                           Flags
+      mc
+
+  private java.util.List<net.anubis.client.module.ClientModule> resolveModulesToToggle();
+    descriptor: ()Ljava/util/List;
+    flags: (0x0002) ACC_PRIVATE
+    Code:
+      stack=3, locals=11, args_size=1
+         0: aload_0
+         1: getfield      #102                // Field modulesToToggle:Lnet/anubis/client/module/setting/StringSetting;
+         4: invokevirtual #495                // Method net/anubis/client/module/setting/StringSetting.get:()Ljava/lang/String;
+         7: astore_1
+         8: aload_1
+         9: invokevirtual #498                // Method java/lang/String.isBlank:()Z
+        12: ifeq          19
+        15: invokestatic  #500                // InterfaceMethod java/util/List.of:()Ljava/util/List;
+        18: areturn
+        19: new           #374                // class java/util/LinkedHashSet
+        22: dup
+        23: invokespecial #375                // Method java/util/LinkedHashSet."<init>":()V
+        26: astore_2
+        27: aload_1
+        28: ldc_w         #502                // String ,
+        31: invokevirtual #506                // Method java/lang/String.split:(Ljava/lang/String;)[Ljava/lang/String;
+        34: astore_3
+        35: aload_3
+        36: arraylength
+        37: istore        4
+        39: iconst_0
+        40: istore        5
+        42: iload         5
+        44: iload         4
+        46: if_icmpge     174
+        49: aload_3
+        50: iload         5
+        52: aaload
+        53: astore        6
+        55: aload         6
+        57: invokevirtual #511                // Method java/lang/String.trim:()Ljava/lang/String;
+        60: astore        7
+        62: aload         7
+        64: invokevirtual #514                // Method java/lang/String.isEmpty:()Z
+        67: ifeq          73
+        70: goto          168
+        73: aload         7
+        75: invokestatic  #520                // Method net/anubis/client/config/ModuleConfigStore.renamedModuleId:(Ljava/lang/String;)Ljava/lang/String;
+        78: astore        8
+        80: aload         8
+        82: ifnull        89
+        85: aload         8
+        87: astore        7
+        89: invokestatic  #525                // Method net/anubis/client/module/ModuleRegistry.all:()Ljava/util/List;
+        92: invokeinterface #337,  1          // InterfaceMethod java/util/List.iterator:()Ljava/util/Iterator;
+        97: astore        9
+        99: aload         9
+       101: invokeinterface #344,  1          // InterfaceMethod java/util/Iterator.hasNext:()Z
+       106: ifeq          168
+       109: aload         9
+       111: invokeinterface #348,  1          // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+       116: checkcast     #4                  // class net/anubis/client/module/ClientModule
+       119: astore        10
+       121: aload         10
+       123: invokevirtual #528                // Method net/anubis/client/module/ClientModule.id:()Ljava/lang/String;
+       126: aload         7
+       128: invokevirtual #532                // Method java/lang/String.equalsIgnoreCase:(Ljava/lang/String;)Z
+       131: ifne          147
+       134: aload         10
+       136: invokevirtual #533                // Method net/anubis/client/module/ClientModule.name:()Ljava/lang/String;
+       139: aload         7
+       141: invokevirtual #532                // Method java/lang/String.equalsIgnoreCase:(Ljava/lang/String;)Z
+       144: ifeq          165
+       147: aload         10
+       149: aload_0
+       150: if_acmpeq     168
+       153: aload_2
+       154: aload         10
+       156: invokeinterface #378,  2          // InterfaceMethod java/util/Set.add:(Ljava/lang/Object;)Z
+       161: pop
+       162: goto          168
+       165: goto          99
+       168: iinc          5, 1
+       171: goto          42
+       174: new           #535                // class java/util/ArrayList
+       177: dup
+       178: aload_2
+       179: invokespecial #538                // Method java/util/ArrayList."<init>":(Ljava/util/Collection;)V
+       182: areturn
+      StackMapTable: number_of_entries = 9
+        frame_type = 252 /* append */
+          offset_delta = 19
+          locals = [ class java/lang/String ]
+        frame_type = 255 /* full_frame */
+          offset_delta = 22
+          locals = [ class net/anubis/client/module/impl/misc/PlayerDetectionModule, class java/lang/String, class java/util/Set, class "[Ljava/lang/String;", int, int ]
+          stack = []
+        frame_type = 253 /* append */
+          offset_delta = 30
+          locals = [ class java/lang/String, class java/lang/String ]
+        frame_type = 252 /* append */
+          offset_delta = 15
+          locals = [ class java/lang/String ]
+        frame_type = 252 /* append */
+          offset_delta = 9
+          locals = [ class java/util/Iterator ]
+        frame_type = 252 /* append */
+          offset_delta = 47
+          locals = [ class net/anubis/client/module/ClientModule ]
+        frame_type = 250 /* chop */
+          offset_delta = 17
+        frame_type = 255 /* full_frame */
+          offset_delta = 2
+          locals = [ class net/anubis/client/module/impl/misc/PlayerDetectionModule, class java/lang/String, class java/util/Set, class "[Ljava/lang/String;", int, int ]
+          stack = []
+        frame_type = 248 /* chop */
+          offset_delta = 5
+      LineNumberTable:
+        line 203: 0
+        line 204: 8
+        line 206: 19
+        line 207: 27
+        line 208: 55
+        line 209: 62
+        line 211: 73
+        line 212: 80
+        line 213: 89
+        line 214: 121
+        line 215: 147
+        line 218: 165
+        line 207: 168
+        line 220: 174
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+          121      44    10 module   Lnet/anubis/client/module/ClientModule;
+           62     106     7   key   Ljava/lang/String;
+           80      88     8 renamed   Ljava/lang/String;
+           55     113     6 entry   Ljava/lang/String;
+            0     183     0  this   Lnet/anubis/client/module/impl/misc/PlayerDetectionModule;
+            8     175     1   raw   Ljava/lang/String;
+           27     156     2 resolved   Ljava/util/Set;
+      LocalVariableTypeTable:
+        Start  Length  Slot  Name   Signature
+           27     156     2 resolved   Ljava/util/Set<Lnet/anubis/client/module/ClientModule;>;
+    Signature: #494                         // ()Ljava/util/List<Lnet/anubis/client/module/ClientModule;>;
+
+  private java.util.Set<java.lang.String> whitelist();
+    descriptor: ()Ljava/util/Set;
+    flags: (0x0002) ACC_PRIVATE
+    Code:
+      stack=3, locals=8, args_size=1
+         0: aload_0
+         1: getfield      #144                // Field userWhitelist:Lnet/anubis/client/module/setting/StringSetting;
+         4: invokevirtual #495                // Method net/anubis/client/module/setting/StringSetting.get:()Ljava/lang/String;
+         7: astore_1
+         8: aload_1
+         9: aload_0
+        10: getfield      #546                // Field whitelistRaw:Ljava/lang/String;
+        13: invokevirtual #357                // Method java/lang/String.equals:(Ljava/lang/Object;)Z
+        16: ifne          101
+        19: new           #188                // class java/util/HashSet
+        22: dup
+        23: invokespecial #190                // Method java/util/HashSet."<init>":()V
+        26: astore_2
+        27: aload_1
+        28: ldc_w         #502                // String ,
+        31: invokevirtual #506                // Method java/lang/String.split:(Ljava/lang/String;)[Ljava/lang/String;
+        34: astore_3
+        35: aload_3
+        36: arraylength
+        37: istore        4
+        39: iconst_0
+        40: istore        5
+        42: iload         5
+        44: iload         4
+        46: if_icmpge     91
+        49: aload_3
+        50: iload         5
+        52: aaload
+        53: astore        6
+        55: aload         6
+        57: invokevirtual #511                // Method java/lang/String.trim:()Ljava/lang/String;
+        60: astore        7
+        62: aload         7
+        64: invokevirtual #514                // Method java/lang/String.isEmpty:()Z
+        67: ifne          85
+        70: aload_2
+        71: aload         7
+        73: getstatic     #363                // Field java/util/Locale.ROOT:Ljava/util/Locale;
+        76: invokevirtual #367                // Method java/lang/String.toLowerCase:(Ljava/util/Locale;)Ljava/lang/String;
+        79: invokeinterface #378,  2          // InterfaceMethod java/util/Set.add:(Ljava/lang/Object;)Z
+        84: pop
+        85: iinc          5, 1
+        88: goto          42
+        91: aload_0
+        92: aload_2
+        93: putfield      #200                // Field whitelist:Ljava/util/Set;
+        96: aload_0
+        97: aload_1
+        98: putfield      #546                // Field whitelistRaw:Ljava/lang/String;
+       101: aload_0
+       102: getfield      #200                // Field whitelist:Ljava/util/Set;
+       105: areturn
+      StackMapTable: number_of_entries = 4
+        frame_type = 255 /* full_frame */
+          offset_delta = 42
+          locals = [ class net/anubis/client/module/impl/misc/PlayerDetectionModule, class java/lang/String, class java/util/Set, class "[Ljava/lang/String;", int, int ]
+          stack = []
+        frame_type = 42 /* same */
+        frame_type = 248 /* chop */
+          offset_delta = 5
+        frame_type = 250 /* chop */
+          offset_delta = 9
+      LineNumberTable:
+        line 224: 0
+        line 225: 8
+        line 226: 19
+        line 227: 27
+        line 228: 55
+        line 229: 62
+        line 227: 85
+        line 231: 91
+        line 232: 96
+        line 234: 101
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+           62      23     7  name   Ljava/lang/String;
+           55      30     6 entry   Ljava/lang/String;
+           27      74     2 parsed   Ljava/util/Set;
+            0     106     0  this   Lnet/anubis/client/module/impl/misc/PlayerDetectionModule;
+            8      98     1   raw   Ljava/lang/String;
+      LocalVariableTypeTable:
+        Start  Length  Slot  Name   Signature
+           27      74     2 parsed   Ljava/util/Set<Ljava/lang/String;>;
+    Signature: #544                         // ()Ljava/util/Set<Ljava/lang/String;>;
+
+  private void panicPay(net.minecraft.class_310);
+    descriptor: (Lnet/minecraft/class_310;)V
+    flags: (0x0002) ACC_PRIVATE
+    Code:
+      stack=5, locals=6, args_size=2
+         0: aload_0
+         1: getfield      #180                // Field panicPayTarget:Lnet/anubis/client/module/setting/StringSetting;
+         4: invokevirtual #495                // Method net/anubis/client/module/setting/StringSetting.get:()Ljava/lang/String;
+         7: invokevirtual #511                // Method java/lang/String.trim:()Ljava/lang/String;
+        10: astore_2
+        11: aload_0
+        12: getfield      #186                // Field panicPayAmount:Lnet/anubis/client/module/setting/StringSetting;
+        15: invokevirtual #495                // Method net/anubis/client/module/setting/StringSetting.get:()Ljava/lang/String;
+        18: invokevirtual #511                // Method java/lang/String.trim:()Ljava/lang/String;
+        21: astore_3
+        22: aload_2
+        23: invokevirtual #514                // Method java/lang/String.isEmpty:()Z
+        26: ifeq          49
+        29: aload_0
+        30: invokestatic  #438                // Method net/anubis/client/chat/ModuleChat.body:()Lnet/anubis/client/chat/ModuleChat$Body;
+        33: ldc_w         #549                // String Panic pay target is
+        36: invokevirtual #454                // Method net/anubis/client/chat/ModuleChat$Body.text:(Ljava/lang/String;)Lnet/anubis/client/chat/ModuleChat$Body;
+        39: ldc_w         #551                // String not set
+        42: invokevirtual #554                // Method net/anubis/client/chat/ModuleChat$Body.warn:(Ljava/lang/String;)Lnet/anubis/client/chat/ModuleChat$Body;
+        45: invokestatic  #462                // Method net/anubis/client/chat/ModuleChat.send:(Lnet/anubis/client/module/ClientModule;Lnet/anubis/client/chat/ModuleChat$Body;)V
+        48: return
+        49: aload_3
+        50: invokevirtual #514                // Method java/lang/String.isEmpty:()Z
+        53: ifeq          76
+        56: aload_0
+        57: invokestatic  #438                // Method net/anubis/client/chat/ModuleChat.body:()Lnet/anubis/client/chat/ModuleChat$Body;
+        60: ldc_w         #556                // String Panic pay amount is
+        63: invokevirtual #454                // Method net/anubis/client/chat/ModuleChat$Body.text:(Ljava/lang/String;)Lnet/anubis/client/chat/ModuleChat$Body;
+        66: ldc_w         #551                // String not set
+        69: invokevirtual #554                // Method net/anubis/client/chat/ModuleChat$Body.warn:(Ljava/lang/String;)Lnet/anubis/client/chat/ModuleChat$Body;
+        72: invokestatic  #462                // Method net/anubis/client/chat/ModuleChat.send:(Lnet/anubis/client/module/ClientModule;Lnet/anubis/client/chat/ModuleChat$Body;)V
+        75: return
+        76: aload_1
+        77: invokevirtual #560                // Method net/minecraft/class_310.method_1562:()Lnet/minecraft/class_634;
+        80: astore        4
+        82: aload         4
+        84: ifnonnull     88
+        87: return
+        88: ldc_w         #564                // String /pay %s %s
+        91: iconst_2
+        92: anewarray     #566                // class java/lang/Object
+        95: dup
+        96: iconst_0
+        97: aload_2
+        98: aastore
+        99: dup
+       100: iconst_1
+       101: aload_3
+       102: aastore
+       103: invokestatic  #570                // Method java/lang/String.format:(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+       106: astore        5
+       108: aload_1
+       109: getfield      #574                // Field net/minecraft/class_310.field_1705:Lnet/minecraft/class_329;
+       112: ifnull        127
+       115: aload_1
+       116: getfield      #574                // Field net/minecraft/class_310.field_1705:Lnet/minecraft/class_329;
+       119: invokevirtual #580                // Method net/minecraft/class_329.method_1743:()Lnet/minecraft/class_338;
+       122: aload         5
+       124: invokevirtual #586                // Method net/minecraft/class_338.method_1803:(Ljava/lang/String;)V
+       127: aload         4
+       129: aload         5
+       131: iconst_1
+       132: invokevirtual #590                // Method java/lang/String.substring:(I)Ljava/lang/String;
+       135: invokevirtual #593                // Method net/minecraft/class_634.method_45730:(Ljava/lang/String;)V
+       138: aload_0
+       139: invokestatic  #438                // Method net/anubis/client/chat/ModuleChat.body:()Lnet/anubis/client/chat/ModuleChat$Body;
+       142: ldc_w         #595                // String Panic pay
+       145: invokevirtual #454                // Method net/anubis/client/chat/ModuleChat$Body.text:(Ljava/lang/String;)Lnet/anubis/client/chat/ModuleChat$Body;
+       148: ldc_w         #597                // String sent
+       151: invokevirtual #600                // Method net/anubis/client/chat/ModuleChat$Body.good:(Ljava/lang/String;)Lnet/anubis/client/chat/ModuleChat$Body;
+       154: ldc_w         #451                // String :
+       157: invokevirtual #454                // Method net/anubis/client/chat/ModuleChat$Body.text:(Ljava/lang/String;)Lnet/anubis/client/chat/ModuleChat$Body;
+       160: aload_3
+       161: invokevirtual #604                // Method net/anubis/client/chat/ModuleChat$Body.value:(Ljava/lang/Object;)Lnet/anubis/client/chat/ModuleChat$Body;
+       164: ldc_w         #606                // String  to
+       167: invokevirtual #454                // Method net/anubis/client/chat/ModuleChat$Body.text:(Ljava/lang/String;)Lnet/anubis/client/chat/ModuleChat$Body;
+       170: aload_2
+       171: invokevirtual #470                // Method net/anubis/client/chat/ModuleChat$Body.name:(Ljava/lang/String;)Lnet/anubis/client/chat/ModuleChat$Body;
+       174: invokestatic  #462                // Method net/anubis/client/chat/ModuleChat.send:(Lnet/anubis/client/module/ClientModule;Lnet/anubis/client/chat/ModuleChat$Body;)V
+       177: return
+      StackMapTable: number_of_entries = 4
+        frame_type = 253 /* append */
+          offset_delta = 49
+          locals = [ class java/lang/String, class java/lang/String ]
+        frame_type = 26 /* same */
+        frame_type = 252 /* append */
+          offset_delta = 11
+          locals = [ class net/minecraft/class_634 ]
+        frame_type = 252 /* append */
+          offset_delta = 38
+          locals = [ class java/lang/String ]
+      LineNumberTable:
+        line 238: 0
+        line 239: 11
+        line 240: 22
+        line 241: 29
+        line 242: 48
+        line 244: 49
+        line 245: 56
+        line 246: 75
+        line 249: 76
+        line 250: 82
+        line 251: 88
+        line 253: 108
+        line 254: 127
+        line 255: 138
+        line 256: 161
+        line 255: 174
+        line 257: 177
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0     178     0  this   Lnet/anubis/client/module/impl/misc/PlayerDetectionModule;
+            0     178     1    mc   Lnet/minecraft/class_310;
+           11     167     2 target   Ljava/lang/String;
+           22     156     3 amount   Ljava/lang/String;
+           82      96     4 connection   Lnet/minecraft/class_634;
+          108      70     5 command   Ljava/lang/String;
+    MethodParameters:
+      Name                           Flags
+      mc
+
+  private void sendWebhookNotification(net.minecraft.class_310, java.util.Set<java.lang.String>);
+    descriptor: (Lnet/minecraft/class_310;Ljava/util/Set;)V
+    flags: (0x0002) ACC_PRIVATE
+    Code:
+      stack=10, locals=15, args_size=3
+         0: aload_0
+         1: getfield      #156                // Field webhookUrl:Lnet/anubis/client/module/setting/StringSetting;
+         4: invokevirtual #495                // Method net/anubis/client/module/setting/StringSetting.get:()Ljava/lang/String;
+         7: invokevirtual #511                // Method java/lang/String.trim:()Ljava/lang/String;
+        10: astore_3
+        11: aload_3
+        12: invokevirtual #514                // Method java/lang/String.isEmpty:()Z
+        15: ifeq          38
+        18: aload_0
+        19: invokestatic  #438                // Method net/anubis/client/chat/ModuleChat.body:()Lnet/anubis/client/chat/ModuleChat$Body;
+        22: ldc_w         #613                // String Webhook URL is
+        25: invokevirtual #454                // Method net/anubis/client/chat/ModuleChat$Body.text:(Ljava/lang/String;)Lnet/anubis/client/chat/ModuleChat$Body;
+        28: ldc_w         #551                // String not set
+        31: invokevirtual #554                // Method net/anubis/client/chat/ModuleChat$Body.warn:(Ljava/lang/String;)Lnet/anubis/client/chat/ModuleChat$Body;
+        34: invokestatic  #462                // Method net/anubis/client/chat/ModuleChat.send:(Lnet/anubis/client/module/ClientModule;Lnet/anubis/client/chat/ModuleChat$Body;)V
+        37: return
+        38: aload_3
+        39: invokestatic  #616                // Method isValidWebhookUrl:(Ljava/lang/String;)Z
+        42: ifne          65
+        45: aload_0
+        46: invokestatic  #438                // Method net/anubis/client/chat/ModuleChat.body:()Lnet/anubis/client/chat/ModuleChat$Body;
+        49: ldc_w         #613                // String Webhook URL is
+        52: invokevirtual #454                // Method net/anubis/client/chat/ModuleChat$Body.text:(Ljava/lang/String;)Lnet/anubis/client/chat/ModuleChat$Body;
+        55: ldc_w         #618                // String invalid
+        58: invokevirtual #449                // Method net/anubis/client/chat/ModuleChat$Body.danger:(Ljava/lang/String;)Lnet/anubis/client/chat/ModuleChat$Body;
+        61: invokestatic  #462                // Method net/anubis/client/chat/ModuleChat.send:(Lnet/anubis/client/module/ClientModule;Lnet/anubis/client/chat/ModuleChat$Body;)V
+        64: return
+        65: aload_1
+        66: invokevirtual #622                // Method net/minecraft/class_310.method_1558:()Lnet/minecraft/class_642;
+        69: astore        4
+        71: aload         4
+        73: ifnull        92
+        76: aload         4
+        78: getfield      #627                // Field net/minecraft/class_642.field_3752:Ljava/lang/String;
+        81: ifnull        92
+        84: aload         4
+        86: getfield      #627                // Field net/minecraft/class_642.field_3752:Ljava/lang/String;
+        89: goto          95
+        92: ldc_w         #629                // String Unknown Server
+        95: astore        5
+        97: aload_0
+        98: getfield      #168                // Field discordId:Lnet/anubis/client/module/setting/StringSetting;
+       101: invokevirtual #495                // Method net/anubis/client/module/setting/StringSetting.get:()Ljava/lang/String;
+       104: invokevirtual #511                // Method java/lang/String.trim:()Ljava/lang/String;
+       107: astore        6
+       109: aload_0
+       110: getfield      #162                // Field selfPing:Lnet/anubis/client/module/setting/BooleanSetting;
+       113: invokevirtual #215                // Method net/anubis/client/module/setting/BooleanSetting.get:()Z
+       116: ifeq          137
+       119: aload         6
+       121: invokevirtual #514                // Method java/lang/String.isEmpty:()Z
+       124: ifne          137
+       127: aload         6
+       129: invokedynamic #640,  0            // InvokeDynamic #3:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+       134: goto          139
+       137: ldc           #93                 // String
+       139: astore        7
+       141: aload_0
+       142: getfield      #180                // Field panicPayTarget:Lnet/anubis/client/module/setting/StringSetting;
+       145: invokevirtual #495                // Method net/anubis/client/module/setting/StringSetting.get:()Ljava/lang/String;
+       148: invokevirtual #511                // Method java/lang/String.trim:()Ljava/lang/String;
+       151: astore        8
+       153: aload_0
+       154: getfield      #186                // Field panicPayAmount:Lnet/anubis/client/module/setting/StringSetting;
+       157: invokevirtual #495                // Method net/anubis/client/module/setting/StringSetting.get:()Ljava/lang/String;
+       160: invokevirtual #511                // Method java/lang/String.trim:()Ljava/lang/String;
+       163: astore        9
+       165: invokestatic  #646                // Method java/lang/System.currentTimeMillis:()J
+       168: ldc2_w        #647                // long 1000l
+       171: ldiv
+       172: lstore        10
+       174: new           #650                // class java/lang/StringBuilder
+       177: dup
+       178: ldc_w         #652                // String Player(s) detected on server!\n\n
+       181: invokespecial #654                // Method java/lang/StringBuilder."<init>":(Ljava/lang/String;)V
+       184: ldc_w         #656                // String **Players:**
+       187: invokevirtual #660                // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+       190: ldc_w         #468                // String ,
+       193: aload_2
+       194: invokestatic  #664                // Method java/lang/String.join:(Ljava/lang/CharSequence;Ljava/lang/Iterable;)Ljava/lang/String;
+       197: invokestatic  #667                // Method escapeMarkdown:(Ljava/lang/String;)Ljava/lang/String;
+       200: invokevirtual #660                // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+       203: bipush        10
+       205: invokevirtual #670                // Method java/lang/StringBuilder.append:(C)Ljava/lang/StringBuilder;
+       208: ldc_w         #672                // String **Server:**
+       211: invokevirtual #660                // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+       214: aload         5
+       216: invokestatic  #667                // Method escapeMarkdown:(Ljava/lang/String;)Ljava/lang/String;
+       219: invokevirtual #660                // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+       222: bipush        10
+       224: invokevirtual #670                // Method java/lang/StringBuilder.append:(C)Ljava/lang/StringBuilder;
+       227: ldc_w         #674                // String **Time:** <t:
+       230: invokevirtual #660                // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+       233: lload         10
+       235: invokevirtual #677                // Method java/lang/StringBuilder.append:(J)Ljava/lang/StringBuilder;
+       238: ldc_w         #679                // String :R>
+       241: invokevirtual #660                // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+       244: astore        12
+       246: aload_0
+       247: getfield      #174                // Field enablePanicPay:Lnet/anubis/client/module/setting/BooleanSetting;
+       250: invokevirtual #215                // Method net/anubis/client/module/setting/BooleanSetting.get:()Z
+       253: ifeq          303
+       256: aload         8
+       258: invokevirtual #514                // Method java/lang/String.isEmpty:()Z
+       261: ifne          303
+       264: aload         9
+       266: invokevirtual #514                // Method java/lang/String.isEmpty:()Z
+       269: ifne          303
+       272: aload         12
+       274: ldc_w         #681                // String \n**Panic Pay:** Activated - Target:
+       277: invokevirtual #660                // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+       280: aload         8
+       282: invokestatic  #667                // Method escapeMarkdown:(Ljava/lang/String;)Ljava/lang/String;
+       285: invokevirtual #660                // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+       288: ldc_w         #683                // String , Amount:
+       291: invokevirtual #660                // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+       294: aload         9
+       296: invokestatic  #667                // Method escapeMarkdown:(Ljava/lang/String;)Ljava/lang/String;
+       299: invokevirtual #660                // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+       302: pop
+       303: new           #685                // class net/anubis/client/webhook/WebhookPayloadBuilder
+       306: dup
+       307: invokespecial #686                // Method net/anubis/client/webhook/WebhookPayloadBuilder."<init>":()V
+       310: aload         7
+       312: invokevirtual #690                // Method net/anubis/client/webhook/WebhookPayloadBuilder.content:(Ljava/lang/String;)Lnet/anubis/client/webhook/WebhookPayloadBuilder;
+       315: new           #692                // class net/anubis/client/webhook/WebhookEmbed
+       318: dup
+       319: ldc           #41                 // String 🚨 Player Detection Alert
+       321: aload         12
+       323: invokevirtual #695                // Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+       326: ldc           #44                 // int 15158332
+       328: invokestatic  #701                // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+       331: aconst_null
+       332: aconst_null
+       333: ldc_w         #703                // String Sent by Anubis
+       336: aconst_null
+       337: invokespecial #706                // Method net/anubis/client/webhook/WebhookEmbed."<init>":(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+       340: invokevirtual #710                // Method net/anubis/client/webhook/WebhookPayloadBuilder.addEmbed:(Lnet/anubis/client/webhook/WebhookEmbed;)Lnet/anubis/client/webhook/WebhookPayloadBuilder;
+       343: astore        13
+       345: new           #712                // class net/anubis/client/webhook/WebhookConfig
+       348: dup
+       349: aload_3
+       350: invokespecial #713                // Method net/anubis/client/webhook/WebhookConfig."<init>":(Ljava/lang/String;)V
+       353: astore        14
+       355: getstatic     #715                // Field WEBHOOK_EXECUTOR:Ljava/util/concurrent/ExecutorService;
+       358: aload_0
+       359: aload         14
+       361: aload         13
+       363: invokedynamic #725,  0            // InvokeDynamic #4:run:(Lnet/anubis/client/module/impl/misc/PlayerDetectionModule;Lnet/anubis/client/webhook/WebhookConfig;Lnet/anubis/client/webhook/WebhookPayloadBuilder;)Ljava/lang/Runnable;
+       368: invokeinterface #731,  2          // InterfaceMethod java/util/concurrent/ExecutorService.execute:(Ljava/lang/Runnable;)V
+       373: return
+      StackMapTable: number_of_entries = 7
+        frame_type = 252 /* append */
+          offset_delta = 38
+          locals = [ class java/lang/String ]
+        frame_type = 26 /* same */
+        frame_type = 252 /* append */
+          offset_delta = 26
+          locals = [ class net/minecraft/class_642 ]
+        frame_type = 66 /* same_locals_1_stack_item */
+          stack = [ class java/lang/String ]
+        frame_type = 253 /* append */
+          offset_delta = 41
+          locals = [ class java/lang/String, class java/lang/String ]
+        frame_type = 65 /* same_locals_1_stack_item */
+          stack = [ class java/lang/String ]
+        frame_type = 255 /* full_frame */
+          offset_delta = 163
+          locals = [ class net/anubis/client/module/impl/misc/PlayerDetectionModule, class net/minecraft/class_310, class java/util/Set, class java/lang/String, class net/minecraft/class_642, class java/lang/String, class java/lang/String, class java/lang/String, class java/lang/String, class java/lang/String, long, class java/lang/StringBuilder ]
+          stack = []
+      LineNumberTable:
+        line 260: 0
+        line 261: 11
+        line 262: 18
+        line 263: 37
+        line 265: 38
+        line 266: 45
+        line 267: 64
+        line 270: 65
+        line 271: 71
+        line 272: 97
+        line 273: 109
+        line 274: 141
+        line 275: 153
+        line 276: 165
+        line 278: 174
+        line 279: 187
+        line 280: 211
+        line 281: 230
+        line 282: 246
+        line 283: 272
+        line 284: 291
+        line 287: 303
+        line 288: 312
+        line 289: 323
+        line 291: 345
+        line 293: 355
+        line 305: 373
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0     374     0  this   Lnet/anubis/client/module/impl/misc/PlayerDetectionModule;
+            0     374     1    mc   Lnet/minecraft/class_310;
+            0     374     2 players   Ljava/util/Set;
+           11     363     3   url   Ljava/lang/String;
+           71     303     4 server   Lnet/minecraft/class_642;
+           97     277     5 serverName   Ljava/lang/String;
+          109     265     6    id   Ljava/lang/String;
+          141     233     7  ping   Ljava/lang/String;
+          153     221     8 target   Ljava/lang/String;
+          165     209     9 amount   Ljava/lang/String;
+          174     200    10 unixSeconds   J
+          246     128    12 description   Ljava/lang/StringBuilder;
+          345      29    13 payload   Lnet/anubis/client/webhook/WebhookPayloadBuilder;
+          355      19    14 config   Lnet/anubis/client/webhook/WebhookConfig;
+      LocalVariableTypeTable:
+        Start  Length  Slot  Name   Signature
+            0     374     2 players   Ljava/util/Set<Ljava/lang/String;>;
+    Signature: #611                         // (Lnet/minecraft/class_310;Ljava/util/Set<Ljava/lang/String;>;)V
+    MethodParameters:
+      Name                           Flags
+      mc
+      players
+
+  private static boolean isValidWebhookUrl(java.lang.String);
+    descriptor: (Ljava/lang/String;)Z
+    flags: (0x000a) ACC_PRIVATE, ACC_STATIC
+    Code:
+      stack=3, locals=3, args_size=1
+         0: new           #747                // class java/net/URI
+         3: dup
+         4: aload_0
+         5: invokespecial #748                // Method java/net/URI."<init>":(Ljava/lang/String;)V
+         8: astore_1
+         9: aload_1
+        10: invokevirtual #751                // Method java/net/URI.getScheme:()Ljava/lang/String;
+        13: astore_2
+        14: aload_1
+        15: invokevirtual #754                // Method java/net/URI.getHost:()Ljava/lang/String;
+        18: ifnull        45
+        21: ldc_w         #756                // String https
+        24: aload_2
+        25: invokevirtual #532                // Method java/lang/String.equalsIgnoreCase:(Ljava/lang/String;)Z
+        28: ifne          41
+        31: ldc_w         #758                // String http
+        34: aload_2
+        35: invokevirtual #532                // Method java/lang/String.equalsIgnoreCase:(Ljava/lang/String;)Z
+        38: ifeq          45
+        41: iconst_1
+        42: goto          46
+        45: iconst_0
+        46: ireturn
+        47: astore_1
+        48: iconst_0
+        49: ireturn
+      Exception table:
+         from    to  target type
+             0    46    47   Class java/net/URISyntaxException
+      StackMapTable: number_of_entries = 4
+        frame_type = 253 /* append */
+          offset_delta = 41
+          locals = [ class java/net/URI, class java/lang/String ]
+        frame_type = 3 /* same */
+        frame_type = 64 /* same_locals_1_stack_item */
+          stack = [ int ]
+        frame_type = 255 /* full_frame */
+          offset_delta = 0
+          locals = [ class java/lang/String ]
+          stack = [ class java/net/URISyntaxException ]
+      LineNumberTable:
+        line 309: 0
+        line 310: 9
+        line 311: 14
+        line 312: 47
+        line 313: 48
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            9      38     1   uri   Ljava/net/URI;
+           14      33     2 scheme   Ljava/lang/String;
+           48       2     1     e   Ljava/net/URISyntaxException;
+            0      50     0   url   Ljava/lang/String;
+    MethodParameters:
+      Name                           Flags
+      url
+
+  private static java.lang.String escapeMarkdown(java.lang.String);
+    descriptor: (Ljava/lang/String;)Ljava/lang/String;
+    flags: (0x000a) ACC_PRIVATE, ACC_STATIC
+    Code:
+      stack=4, locals=4, args_size=1
+         0: new           #650                // class java/lang/StringBuilder
+         3: dup
+         4: aload_0
+         5: invokevirtual #766                // Method java/lang/String.length:()I
+         8: bipush        8
+        10: iadd
+        11: invokespecial #769                // Method java/lang/StringBuilder."<init>":(I)V
+        14: astore_1
+        15: iconst_0
+        16: istore_2
+        17: iload_2
+        18: aload_0
+        19: invokevirtual #766                // Method java/lang/String.length:()I
+        22: if_icmpge     86
+        25: aload_0
+        26: iload_2
+        27: invokevirtual #773                // Method java/lang/String.charAt:(I)C
+        30: istore_3
+        31: iload_3
+        32: bipush        92
+        34: if_icmpeq     67
+        37: iload_3
+        38: bipush        42
+        40: if_icmpeq     67
+        43: iload_3
+        44: bipush        95
+        46: if_icmpeq     67
+        49: iload_3
+        50: bipush        126
+        52: if_icmpeq     67
+        55: iload_3
+        56: bipush        96
+        58: if_icmpeq     67
+        61: iload_3
+        62: bipush        124
+        64: if_icmpne     74
+        67: aload_1
+        68: bipush        92
+        70: invokevirtual #670                // Method java/lang/StringBuilder.append:(C)Ljava/lang/StringBuilder;
+        73: pop
+        74: aload_1
+        75: iload_3
+        76: invokevirtual #670                // Method java/lang/StringBuilder.append:(C)Ljava/lang/StringBuilder;
+        79: pop
+        80: iinc          2, 1
+        83: goto          17
+        86: aload_1
+        87: invokevirtual #695                // Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+        90: areturn
+      StackMapTable: number_of_entries = 4
+        frame_type = 253 /* append */
+          offset_delta = 17
+          locals = [ class java/lang/StringBuilder, int ]
+        frame_type = 252 /* append */
+          offset_delta = 49
+          locals = [ int ]
+        frame_type = 6 /* same */
+        frame_type = 249 /* chop */
+          offset_delta = 11
+      LineNumberTable:
+        line 318: 0
+        line 319: 15
+        line 320: 25
+        line 321: 31
+        line 322: 74
+        line 319: 80
+        line 324: 86
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+           31      49     3     c   C
+           17      69     2     i   I
+            0      91     0  text   Ljava/lang/String;
+           15      76     1   out   Ljava/lang/StringBuilder;
+    MethodParameters:
+      Name                           Flags
+      text
+
+  private void scheduleDisconnect(net.minecraft.class_310, java.util.Set<java.lang.String>);
+    descriptor: (Lnet/minecraft/class_310;Ljava/util/Set;)V
+    flags: (0x0002) ACC_PRIVATE
+    Code:
+      stack=5, locals=5, args_size=3
+         0: aload_1
+         1: invokevirtual #560                // Method net/minecraft/class_310.method_1562:()Lnet/minecraft/class_634;
+         4: astore_3
+         5: aload_3
+         6: ifnonnull     10
+         9: return
+        10: aload_3
+        11: invokevirtual #781                // Method net/minecraft/class_634.method_48296:()Lnet/minecraft/class_2535;
+        14: astore        4
+        16: ldc2_w        #36                 // long 500l
+        19: getstatic     #787                // Field java/util/concurrent/TimeUnit.MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+        22: aload_1
+        23: invokestatic  #793                // Method java/util/concurrent/CompletableFuture.delayedExecutor:(JLjava/util/concurrent/TimeUnit;Ljava/util/concurrent/Executor;)Ljava/util/concurrent/Executor;
+        26: aload_0
+        27: aload_1
+        28: aload         4
+        30: aload_2
+        31: invokedynamic #801,  0            // InvokeDynamic #5:run:(Lnet/anubis/client/module/impl/misc/PlayerDetectionModule;Lnet/minecraft/class_310;Lnet/minecraft/class_2535;Ljava/util/Set;)Ljava/lang/Runnable;
+        36: invokeinterface #804,  2          // InterfaceMethod java/util/concurrent/Executor.execute:(Ljava/lang/Runnable;)V
+        41: return
+      StackMapTable: number_of_entries = 1
+        frame_type = 252 /* append */
+          offset_delta = 10
+          locals = [ class net/minecraft/class_634 ]
+      LineNumberTable:
+        line 328: 0
+        line 329: 5
+        line 330: 10
+        line 331: 16
+        line 332: 36
+        line 333: 41
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      42     0  this   Lnet/anubis/client/module/impl/misc/PlayerDetectionModule;
+            0      42     1    mc   Lnet/minecraft/class_310;
+            0      42     2 players   Ljava/util/Set;
+            5      37     3 listener   Lnet/minecraft/class_634;
+           16      26     4 session   Lnet/minecraft/class_2535;
+      LocalVariableTypeTable:
+        Start  Length  Slot  Name   Signature
+            0      42     2 players   Ljava/util/Set<Ljava/lang/String;>;
+    Signature: #611                         // (Lnet/minecraft/class_310;Ljava/util/Set<Ljava/lang/String;>;)V
+    MethodParameters:
+      Name                           Flags
+      mc
+      players
+
+  private void disconnectFromServer(net.minecraft.class_310, net.minecraft.class_2535, java.util.Set<java.lang.String>);
+    descriptor: (Lnet/minecraft/class_310;Lnet/minecraft/class_2535;Ljava/util/Set;)V
+    flags: (0x0002) ACC_PRIVATE
+    Code:
+      stack=4, locals=5, args_size=4
+         0: aload_1
+         1: invokevirtual #560                // Method net/minecraft/class_310.method_1562:()Lnet/minecraft/class_634;
+         4: astore        4
+         6: aload_1
+         7: getfield      #307                // Field net/minecraft/class_310.field_1687:Lnet/minecraft/class_638;
+        10: ifnull        27
+        13: aload         4
+        15: ifnull        27
+        18: aload         4
+        20: invokevirtual #781                // Method net/minecraft/class_634.method_48296:()Lnet/minecraft/class_2535;
+        23: aload_2
+        24: if_acmpeq     28
+        27: return
+        28: aload_2
+        29: ldc_w         #468                // String ,
+        32: aload_3
+        33: invokestatic  #664                // Method java/lang/String.join:(Ljava/lang/CharSequence;Ljava/lang/Iterable;)Ljava/lang/String;
+        36: invokedynamic #812,  0            // InvokeDynamic #6:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+        41: invokestatic  #487                // InterfaceMethod net/minecraft/class_2561.method_43470:(Ljava/lang/String;)Lnet/minecraft/class_5250;
+        44: invokevirtual #818                // Method net/minecraft/class_2535.method_10747:(Lnet/minecraft/class_2561;)V
+        47: aload_0
+        48: invokestatic  #438                // Method net/anubis/client/chat/ModuleChat.body:()Lnet/anubis/client/chat/ModuleChat$Body;
+        51: ldc_w         #820                // String Disconnected
+        54: invokevirtual #449                // Method net/anubis/client/chat/ModuleChat$Body.danger:(Ljava/lang/String;)Lnet/anubis/client/chat/ModuleChat$Body;
+        57: ldc_w         #822                // String  from the server (
+        60: invokevirtual #454                // Method net/anubis/client/chat/ModuleChat$Body.text:(Ljava/lang/String;)Lnet/anubis/client/chat/ModuleChat$Body;
+        63: aload_3
+        64: invokeinterface #441,  1          // InterfaceMethod java/util/Set.size:()I
+        69: iconst_1
+        70: if_icmpne     79
+        73: ldc_w         #823                // String player
+        76: goto          82
+        79: ldc_w         #824                // String players
+        82: invokevirtual #454                // Method net/anubis/client/chat/ModuleChat$Body.text:(Ljava/lang/String;)Lnet/anubis/client/chat/ModuleChat$Body;
+        85: ldc_w         #826                // String  detected:
+        88: invokevirtual #454                // Method net/anubis/client/chat/ModuleChat$Body.text:(Ljava/lang/String;)Lnet/anubis/client/chat/ModuleChat$Body;
+        91: aload_3
+        92: invokestatic  #458                // Method names:(Lnet/anubis/client/chat/ModuleChat$Body;Ljava/util/Collection;)Lnet/anubis/client/chat/ModuleChat$Body;
+        95: ldc_w         #828                // String )
+        98: invokevirtual #454                // Method net/anubis/client/chat/ModuleChat$Body.text:(Ljava/lang/String;)Lnet/anubis/client/chat/ModuleChat$Body;
+       101: invokestatic  #462                // Method net/anubis/client/chat/ModuleChat.send:(Lnet/anubis/client/module/ClientModule;Lnet/anubis/client/chat/ModuleChat$Body;)V
+       104: return
+      StackMapTable: number_of_entries = 4
+        frame_type = 252 /* append */
+          offset_delta = 27
+          locals = [ class net/minecraft/class_634 ]
+        frame_type = 0 /* same */
+        frame_type = 255 /* full_frame */
+          offset_delta = 50
+          locals = [ class net/anubis/client/module/impl/misc/PlayerDetectionModule, class net/minecraft/class_310, class net/minecraft/class_2535, class java/util/Set, class net/minecraft/class_634 ]
+          stack = [ class net/anubis/client/module/impl/misc/PlayerDetectionModule, class net/anubis/client/chat/ModuleChat$Body ]
+        frame_type = 255 /* full_frame */
+          offset_delta = 2
+          locals = [ class net/anubis/client/module/impl/misc/PlayerDetectionModule, class net/minecraft/class_310, class net/minecraft/class_2535, class java/util/Set, class net/minecraft/class_634 ]
+          stack = [ class net/anubis/client/module/impl/misc/PlayerDetectionModule, class net/anubis/client/chat/ModuleChat$Body, class java/lang/String ]
+      LineNumberTable:
+        line 336: 0
+        line 337: 6
+        line 338: 28
+        line 339: 47
+        line 340: 63
+        line 339: 92
+        line 340: 98
+        line 339: 101
+        line 341: 104
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0     105     0  this   Lnet/anubis/client/module/impl/misc/PlayerDetectionModule;
+            0     105     1    mc   Lnet/minecraft/class_310;
+            0     105     2 session   Lnet/minecraft/class_2535;
+            0     105     3 players   Ljava/util/Set;
+            6      99     4 listener   Lnet/minecraft/class_634;
+      LocalVariableTypeTable:
+        Start  Length  Slot  Name   Signature
+            0     105     3 players   Ljava/util/Set<Ljava/lang/String;>;
+    Signature: #809                         // (Lnet/minecraft/class_310;Lnet/minecraft/class_2535;Ljava/util/Set<Ljava/lang/String;>;)V
+    MethodParameters:
+      Name                           Flags
+      mc
+      session
+      players
+
+  private void lambda$scheduleDisconnect$3(net.minecraft.class_310, net.minecraft.class_2535, java.util.Set);
+    descriptor: (Lnet/minecraft/class_310;Lnet/minecraft/class_2535;Ljava/util/Set;)V
+    flags: (0x1002) ACC_PRIVATE, ACC_SYNTHETIC
+    Code:
+      stack=4, locals=4, args_size=4
+         0: aload_0
+         1: aload_1
+         2: aload_2
+         3: aload_3
+         4: invokevirtual #830                // Method disconnectFromServer:(Lnet/minecraft/class_310;Lnet/minecraft/class_2535;Ljava/util/Set;)V
+         7: return
+      LineNumberTable:
+        line 332: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       8     0  this   Lnet/anubis/client/module/impl/misc/PlayerDetectionModule;
+            0       8     1    mc   Lnet/minecraft/class_310;
+            0       8     2 session   Lnet/minecraft/class_2535;
+            0       8     3 players   Ljava/util/Set;
+    MethodParameters:
+      Name                           Flags
+      mc
+      session
+      players
+
+  private void lambda$sendWebhookNotification$2(net.anubis.client.webhook.WebhookConfig, net.anubis.client.webhook.WebhookPayloadBuilder);
+    descriptor: (Lnet/anubis/client/webhook/WebhookConfig;Lnet/anubis/client/webhook/WebhookPayloadBuilder;)V
+    flags: (0x1002) ACC_PRIVATE, ACC_SYNTHETIC
+    Code:
+      stack=3, locals=5, args_size=3
+         0: getstatic     #838                // Field net/anubis/client/module/impl/misc/PlayerDetectionModule$WebhookHolder.SERVICE:Lnet/anubis/client/webhook/WebhookService;
+         3: aload_1
+         4: aload_2
+         5: invokevirtual #843                // Method net/anubis/client/webhook/WebhookService.send:(Lnet/anubis/client/webhook/WebhookConfig;Lnet/anubis/client/webhook/WebhookPayloadBuilder;)Z
+         8: istore_3
+         9: goto          35
+        12: astore        4
+        14: getstatic     #847                // Field LOGGER:Lorg/slf4j/Logger;
+        17: ldc_w         #849                // String [Anubis] Player Detection webhook failed ({})
+        20: aload         4
+        22: invokevirtual #853                // Method java/lang/Object.getClass:()Ljava/lang/Class;
+        25: invokevirtual #858                // Method java/lang/Class.getSimpleName:()Ljava/lang/String;
+        28: invokeinterface #863,  3          // InterfaceMethod org/slf4j/Logger.warn:(Ljava/lang/String;Ljava/lang/Object;)V
+        33: iconst_0
+        34: istore_3
+        35: aload_0
+        36: iload_3
+        37: ifeq          58
+        40: invokestatic  #438                // Method net/anubis/client/chat/ModuleChat.body:()Lnet/anubis/client/chat/ModuleChat$Body;
+        43: ldc_w         #865                // String Webhook notification
+        46: invokevirtual #454                // Method net/anubis/client/chat/ModuleChat$Body.text:(Ljava/lang/String;)Lnet/anubis/client/chat/ModuleChat$Body;
+        49: ldc_w         #597                // String sent
+        52: invokevirtual #600                // Method net/anubis/client/chat/ModuleChat$Body.good:(Ljava/lang/String;)Lnet/anubis/client/chat/ModuleChat$Body;
+        55: goto          79
+        58: invokestatic  #438                // Method net/anubis/client/chat/ModuleChat.body:()Lnet/anubis/client/chat/ModuleChat$Body;
+        61: ldc_w         #865                // String Webhook notification
+        64: invokevirtual #454                // Method net/anubis/client/chat/ModuleChat$Body.text:(Ljava/lang/String;)Lnet/anubis/client/chat/ModuleChat$Body;
+        67: ldc_w         #867                // String failed
+        70: invokevirtual #449                // Method net/anubis/client/chat/ModuleChat$Body.danger:(Ljava/lang/String;)Lnet/anubis/client/chat/ModuleChat$Body;
+        73: ldc_w         #869                // String  (see the log for details)
+        76: invokevirtual #454                // Method net/anubis/client/chat/ModuleChat$Body.text:(Ljava/lang/String;)Lnet/anubis/client/chat/ModuleChat$Body;
+        79: invokestatic  #462                // Method net/anubis/client/chat/ModuleChat.send:(Lnet/anubis/client/module/ClientModule;Lnet/anubis/client/chat/ModuleChat$Body;)V
+        82: return
+      Exception table:
+         from    to  target type
+             0     9    12   Class java/lang/RuntimeException
+             0     9    12   Class java/lang/LinkageError
+      StackMapTable: number_of_entries = 4
+        frame_type = 76 /* same_locals_1_stack_item */
+          stack = [ class java/lang/Throwable ]
+        frame_type = 252 /* append */
+          offset_delta = 22
+          locals = [ int ]
+        frame_type = 86 /* same_locals_1_stack_item */
+          stack = [ class net/anubis/client/module/impl/misc/PlayerDetectionModule ]
+        frame_type = 255 /* full_frame */
+          offset_delta = 20
+          locals = [ class net/anubis/client/module/impl/misc/PlayerDetectionModule, class net/anubis/client/webhook/WebhookConfig, class net/anubis/client/webhook/WebhookPayloadBuilder, int ]
+          stack = [ class net/anubis/client/module/impl/misc/PlayerDetectionModule, class net/anubis/client/chat/ModuleChat$Body ]
+      LineNumberTable:
+        line 296: 0
+        line 300: 9
+        line 297: 12
+        line 298: 14
+        line 299: 33
+        line 302: 35
+        line 303: 58
+        line 302: 79
+        line 304: 82
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            9       3     3  sent   Z
+           14      21     4 failure   Ljava/lang/Throwable;
+            0      83     0  this   Lnet/anubis/client/module/impl/misc/PlayerDetectionModule;
+            0      83     1 config   Lnet/anubis/client/webhook/WebhookConfig;
+            0      83     2 payload   Lnet/anubis/client/webhook/WebhookPayloadBuilder;
+           35      48     3  sent   Z
+    MethodParameters:
+      Name                           Flags
+      config
+      payload
+
+  private boolean lambda$new$1();
+    descriptor: ()Z
+    flags: (0x1002) ACC_PRIVATE, ACC_SYNTHETIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: getfield      #150                // Field enableWebhook:Lnet/anubis/client/module/setting/BooleanSetting;
+         4: invokevirtual #215                // Method net/anubis/client/module/setting/BooleanSetting.get:()Z
+         7: ifeq          24
+        10: aload_0
+        11: getfield      #162                // Field selfPing:Lnet/anubis/client/module/setting/BooleanSetting;
+        14: invokevirtual #215                // Method net/anubis/client/module/setting/BooleanSetting.get:()Z
+        17: ifeq          24
+        20: iconst_1
+        21: goto          25
+        24: iconst_0
+        25: ireturn
+      StackMapTable: number_of_entries = 2
+        frame_type = 24 /* same */
+        frame_type = 64 /* same_locals_1_stack_item */
+          stack = [ int ]
+      LineNumberTable:
+        line 96: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      26     0  this   Lnet/anubis/client/module/impl/misc/PlayerDetectionModule;
+
+  private static java.lang.Thread lambda$static$0(java.lang.Runnable);
+    descriptor: (Ljava/lang/Runnable;)Ljava/lang/Thread;
+    flags: (0x100a) ACC_PRIVATE, ACC_STATIC, ACC_SYNTHETIC
+    Code:
+      stack=4, locals=2, args_size=1
+         0: new           #876                // class java/lang/Thread
+         3: dup
+         4: aload_0
+         5: ldc_w         #878                // String Anubis-PlayerDetection-Webhook
+         8: invokespecial #881                // Method java/lang/Thread."<init>":(Ljava/lang/Runnable;Ljava/lang/String;)V
+        11: astore_1
+        12: aload_1
+        13: iconst_1
+        14: invokevirtual #885                // Method java/lang/Thread.setDaemon:(Z)V
+        17: aload_1
+        18: areturn
+      LineNumberTable:
+        line 58: 0
+        line 59: 12
+        line 60: 17
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      19     0 runnable   Ljava/lang/Runnable;
+           12       7     1 thread   Ljava/lang/Thread;
+    MethodParameters:
+      Name                           Flags
+      runnable
+
+  static {};
+    descriptor: ()V
+    flags: (0x0008) ACC_STATIC
+    Code:
+      stack=2, locals=0, args_size=0
+         0: ldc_w         #891                // String Anubis
+         3: invokestatic  #897                // Method org/slf4j/LoggerFactory.getLogger:(Ljava/lang/String;)Lorg/slf4j/Logger;
+         6: putstatic     #847                // Field LOGGER:Lorg/slf4j/Logger;
+         9: ldc_w         #899                // String freecamera
+        12: invokestatic  #902                // InterfaceMethod java/util/Set.of:(Ljava/lang/Object;)Ljava/util/Set;
+        15: putstatic     #369                // Field PERMANENT_WHITELIST:Ljava/util/Set;
+        18: new           #19                 // class net/minecraft/class_370$class_9037
+        21: dup
+        22: invokespecial #903                // Method net/minecraft/class_370$class_9037."<init>":()V
+        25: putstatic     #480                // Field TOAST_ID:Lnet/minecraft/class_370$class_9037;
+        28: invokedynamic #911,  0            // InvokeDynamic #7:newThread:()Ljava/util/concurrent/ThreadFactory;
+        33: invokestatic  #917                // Method java/util/concurrent/Executors.newSingleThreadExecutor:(Ljava/util/concurrent/ThreadFactory;)Ljava/util/concurrent/ExecutorService;
+        36: putstatic     #715                // Field WEBHOOK_EXECUTOR:Ljava/util/concurrent/ExecutorService;
+        39: return
+      LineNumberTable:
+        line 46: 0
+        line 48: 9
+        line 55: 18
+        line 57: 28
+}
+InnerClasses:
+  public static final #12= #9 of #11;     // InputData=class imgui/type/ImString$InputData of class imgui/type/ImString
+  public static final #17= #14 of #16;    // Body=class net/anubis/client/chat/ModuleChat$Body of class net/anubis/client/chat/ModuleChat
+  public static #22= #19 of #21;          // class_9037=class net/minecraft/class_370$class_9037 of class net/minecraft/class_370
+  private static final #23= #7 of #2;     // WebhookHolder=class net/anubis/client/module/impl/misc/PlayerDetectionModule$WebhookHolder of class net/anubis/client/module/impl/misc/PlayerDetectionModule
+  public static final #28= #25 of #27;    // Lookup=class java/lang/invoke/MethodHandles$Lookup of class java/lang/invoke/MethodHandles
+SourceFile: "PlayerDetectionModule.java"
+RuntimeVisibleAnnotations:
+  0: #918(#601=e#919.#920)
+    net.fabricmc.api.Environment(
+      value=Lnet/fabricmc/api/EnvType;.CLIENT
+    )
+BootstrapMethods:
+  0: #223 REF_invokeStatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #212 ()Z
+      #216 REF_invokeVirtual net/anubis/client/module/setting/BooleanSetting.get:()Z
+      #212 ()Z
+  1: #223 REF_invokeStatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #212 ()Z
+      #236 REF_invokeVirtual net/anubis/client/module/impl/misc/PlayerDetectionModule.lambda$new$1:()Z
+      #212 ()Z
+  2: #223 REF_invokeStatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #278 (Ljava/lang/Object;)V
+      #283 REF_invokeVirtual net/anubis/client/module/impl/misc/PlayerDetectionModule.onTick:(Lnet/anubis/client/event/impl/TickEvent;)V
+      #284 (Lnet/anubis/client/event/impl/TickEvent;)V
+  3: #638 REF_invokeStatic java/lang/invoke/StringConcatFactory.makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #631 <@\u0001>
+  4: #223 REF_invokeStatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #716 ()V
+      #721 REF_invokeVirtual net/anubis/client/module/impl/misc/PlayerDetectionModule.lambda$sendWebhookNotification$2:(Lnet/anubis/client/webhook/WebhookConfig;Lnet/anubis/client/webhook/WebhookPayloadBuilder;)V
+      #716 ()V
+  5: #223 REF_invokeStatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #716 ()V
+      #798 REF_invokeVirtual net/anubis/client/module/impl/misc/PlayerDetectionModule.lambda$scheduleDisconnect$3:(Lnet/minecraft/class_310;Lnet/minecraft/class_2535;Ljava/util/Set;)V
+      #716 ()V
+  6: #638 REF_invokeStatic java/lang/invoke/StringConcatFactory.makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #811 Player(s) detected: \u0001
+  7: #223 REF_invokeStatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #904 (Ljava/lang/Runnable;)Ljava/lang/Thread;
+      #907 REF_invokeStatic net/anubis/client/module/impl/misc/PlayerDetectionModule.lambda$static$0:(Ljava/lang/Runnable;)Ljava/lang/Thread;
+      #904 (Ljava/lang/Runnable;)Ljava/lang/Thread;
+NestMembers:
+  net/anubis/client/module/impl/misc/PlayerDetectionModule$WebhookHolder

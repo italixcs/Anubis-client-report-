@@ -1,0 +1,1909 @@
+Classfile analysis-workspace/extracted/run.oEA4CbVx/net/anubis/client/discord/DiscordIpc.class
+  Last modified Oct 13, 2026; size 12068 bytes
+  SHA-256 checksum fc9304b73fb025197948f02959709acf69d1b567ab2089781645d06a0cad881d
+  Compiled from "DiscordIpc.java"
+public final class net.anubis.client.discord.DiscordIpc implements java.io.Closeable
+  minor version: 0
+  major version: 65
+  flags: (0x0031) ACC_PUBLIC, ACC_FINAL, ACC_SUPER
+  this_class: #2                          // net/anubis/client/discord/DiscordIpc
+  super_class: #4                         // java/lang/Object
+  interfaces: 1, fields: 16, methods: 18, attributes: 5
+Constant pool:
+    #1 = Utf8               net/anubis/client/discord/DiscordIpc
+    #2 = Class              #1            // net/anubis/client/discord/DiscordIpc
+    #3 = Utf8               java/lang/Object
+    #4 = Class              #3            // java/lang/Object
+    #5 = Utf8               java/io/Closeable
+    #6 = Class              #5            // java/io/Closeable
+    #7 = Utf8               DiscordIpc.java
+    #8 = Utf8               net/anubis/client/discord/DiscordIpc$UnixPipe
+    #9 = Class              #8            // net/anubis/client/discord/DiscordIpc$UnixPipe
+   #10 = Utf8               net/anubis/client/discord/DiscordIpc$WindowsPipe
+   #11 = Class              #10           // net/anubis/client/discord/DiscordIpc$WindowsPipe
+   #12 = Utf8               net/anubis/client/discord/DiscordIpc$Pipe
+   #13 = Class              #12           // net/anubis/client/discord/DiscordIpc$Pipe
+   #14 = Utf8               net/anubis/client/discord/DiscordIpc$Frame
+   #15 = Class              #14           // net/anubis/client/discord/DiscordIpc$Frame
+   #16 = Utf8               net/anubis/client/discord/DiscordIpc$RefusedException
+   #17 = Class              #16           // net/anubis/client/discord/DiscordIpc$RefusedException
+   #18 = Utf8               Pipe
+   #19 = Utf8               Frame
+   #20 = Utf8               RefusedException
+   #21 = Utf8               WindowsPipe
+   #22 = Utf8               UnixPipe
+   #23 = Utf8               java/lang/invoke/MethodHandles$Lookup
+   #24 = Class              #23           // java/lang/invoke/MethodHandles$Lookup
+   #25 = Utf8               java/lang/invoke/MethodHandles
+   #26 = Class              #25           // java/lang/invoke/MethodHandles
+   #27 = Utf8               Lookup
+   #28 = Utf8               OP_HANDSHAKE
+   #29 = Utf8               I
+   #30 = Integer            0
+   #31 = Utf8               OP_FRAME
+   #32 = Integer            1
+   #33 = Utf8               OP_CLOSE
+   #34 = Integer            2
+   #35 = Utf8               OP_PING
+   #36 = Integer            3
+   #37 = Utf8               OP_PONG
+   #38 = Integer            4
+   #39 = Utf8               RPC_VERSION
+   #40 = Utf8               SOCKET_SLOTS
+   #41 = Integer            10
+   #42 = Utf8               UNIX_TEMP_VARIABLES
+   #43 = Utf8               [Ljava/lang/String;
+   #44 = Utf8               WINDOWS
+   #45 = Utf8               Z
+   #46 = Utf8               REPLY_TIMEOUT_NANOS
+   #47 = Utf8               J
+   #48 = Utf8               READ_POLL_NANOS
+   #49 = Utf8               MAX_FRAME_BYTES
+   #50 = Integer            1048576
+   #51 = Utf8               PID
+   #52 = Utf8               GSON
+   #53 = Utf8               Lcom/google/gson/Gson;
+   #54 = Utf8               pipe
+   #55 = Utf8               Lnet/anubis/client/discord/DiscordIpc$Pipe;
+   #56 = Utf8               header
+   #57 = Utf8               Ljava/nio/ByteBuffer;
+   #58 = Utf8               <init>
+   #59 = Utf8               (Lnet/anubis/client/discord/DiscordIpc$Pipe;)V
+   #60 = Utf8               ()V
+   #61 = NameAndType        #58:#60       // "<init>":()V
+   #62 = Methodref          #4.#61        // java/lang/Object."<init>":()V
+   #63 = Utf8               java/nio/ByteBuffer
+   #64 = Class              #63           // java/nio/ByteBuffer
+   #65 = Utf8               allocate
+   #66 = Utf8               (I)Ljava/nio/ByteBuffer;
+   #67 = NameAndType        #65:#66       // allocate:(I)Ljava/nio/ByteBuffer;
+   #68 = Methodref          #64.#67       // java/nio/ByteBuffer.allocate:(I)Ljava/nio/ByteBuffer;
+   #69 = Utf8               java/nio/ByteOrder
+   #70 = Class              #69           // java/nio/ByteOrder
+   #71 = Utf8               LITTLE_ENDIAN
+   #72 = Utf8               Ljava/nio/ByteOrder;
+   #73 = NameAndType        #71:#72       // LITTLE_ENDIAN:Ljava/nio/ByteOrder;
+   #74 = Fieldref           #70.#73       // java/nio/ByteOrder.LITTLE_ENDIAN:Ljava/nio/ByteOrder;
+   #75 = Utf8               order
+   #76 = Utf8               (Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
+   #77 = NameAndType        #75:#76       // order:(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
+   #78 = Methodref          #64.#77       // java/nio/ByteBuffer.order:(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
+   #79 = NameAndType        #56:#57       // header:Ljava/nio/ByteBuffer;
+   #80 = Fieldref           #2.#79        // net/anubis/client/discord/DiscordIpc.header:Ljava/nio/ByteBuffer;
+   #81 = NameAndType        #54:#55       // pipe:Lnet/anubis/client/discord/DiscordIpc$Pipe;
+   #82 = Fieldref           #2.#81        // net/anubis/client/discord/DiscordIpc.pipe:Lnet/anubis/client/discord/DiscordIpc$Pipe;
+   #83 = Utf8               this
+   #84 = Utf8               Lnet/anubis/client/discord/DiscordIpc;
+   #85 = Utf8               connect
+   #86 = Utf8               (Ljava/lang/String;)Lnet/anubis/client/discord/DiscordIpc;
+   #87 = Utf8               java/io/IOException
+   #88 = Class              #87           // java/io/IOException
+   #89 = Utf8               applicationId
+   #90 = Utf8               java/lang/RuntimeException
+   #91 = Class              #90           // java/lang/RuntimeException
+   #92 = NameAndType        #44:#45       // WINDOWS:Z
+   #93 = Fieldref           #2.#92        // net/anubis/client/discord/DiscordIpc.WINDOWS:Z
+   #94 = Utf8               openWindowsPipe
+   #95 = Utf8               ()Lnet/anubis/client/discord/DiscordIpc$Pipe;
+   #96 = NameAndType        #94:#95       // openWindowsPipe:()Lnet/anubis/client/discord/DiscordIpc$Pipe;
+   #97 = Methodref          #2.#96        // net/anubis/client/discord/DiscordIpc.openWindowsPipe:()Lnet/anubis/client/discord/DiscordIpc$Pipe;
+   #98 = Utf8               openUnixSocket
+   #99 = NameAndType        #98:#95       // openUnixSocket:()Lnet/anubis/client/discord/DiscordIpc$Pipe;
+  #100 = Methodref          #2.#99        // net/anubis/client/discord/DiscordIpc.openUnixSocket:()Lnet/anubis/client/discord/DiscordIpc$Pipe;
+  #101 = NameAndType        #58:#59       // "<init>":(Lnet/anubis/client/discord/DiscordIpc$Pipe;)V
+  #102 = Methodref          #2.#101       // net/anubis/client/discord/DiscordIpc."<init>":(Lnet/anubis/client/discord/DiscordIpc$Pipe;)V
+  #103 = Utf8               handshake
+  #104 = Utf8               (Ljava/lang/String;)V
+  #105 = NameAndType        #103:#104     // handshake:(Ljava/lang/String;)V
+  #106 = Methodref          #2.#105       // net/anubis/client/discord/DiscordIpc.handshake:(Ljava/lang/String;)V
+  #107 = Utf8               java/lang/String
+  #108 = Class              #107          // java/lang/String
+  #109 = Utf8               java/lang/Exception
+  #110 = Class              #109          // java/lang/Exception
+  #111 = Utf8               close
+  #112 = NameAndType        #111:#60      // close:()V
+  #113 = Methodref          #2.#112       // net/anubis/client/discord/DiscordIpc.close:()V
+  #114 = Utf8               failure
+  #115 = Utf8               Ljava/lang/Exception;
+  #116 = Utf8               Ljava/lang/String;
+  #117 = Utf8               ipc
+  #118 = Utf8               setActivity
+  #119 = Utf8               (Lcom/google/gson/JsonObject;)V
+  #120 = Utf8               activity
+  #121 = Utf8               java/util/UUID
+  #122 = Class              #121          // java/util/UUID
+  #123 = Utf8               randomUUID
+  #124 = Utf8               ()Ljava/util/UUID;
+  #125 = NameAndType        #123:#124     // randomUUID:()Ljava/util/UUID;
+  #126 = Methodref          #122.#125     // java/util/UUID.randomUUID:()Ljava/util/UUID;
+  #127 = Utf8               toString
+  #128 = Utf8               ()Ljava/lang/String;
+  #129 = NameAndType        #127:#128     // toString:()Ljava/lang/String;
+  #130 = Methodref          #122.#129     // java/util/UUID.toString:()Ljava/lang/String;
+  #131 = Utf8               com/google/gson/JsonObject
+  #132 = Class              #131          // com/google/gson/JsonObject
+  #133 = Methodref          #132.#61      // com/google/gson/JsonObject."<init>":()V
+  #134 = Utf8               pid
+  #135 = String             #134          // pid
+  #136 = NameAndType        #51:#47       // PID:J
+  #137 = Fieldref           #2.#136       // net/anubis/client/discord/DiscordIpc.PID:J
+  #138 = Utf8               java/lang/Long
+  #139 = Class              #138          // java/lang/Long
+  #140 = Utf8               valueOf
+  #141 = Utf8               (J)Ljava/lang/Long;
+  #142 = NameAndType        #140:#141     // valueOf:(J)Ljava/lang/Long;
+  #143 = Methodref          #139.#142     // java/lang/Long.valueOf:(J)Ljava/lang/Long;
+  #144 = Utf8               addProperty
+  #145 = Utf8               (Ljava/lang/String;Ljava/lang/Number;)V
+  #146 = NameAndType        #144:#145     // addProperty:(Ljava/lang/String;Ljava/lang/Number;)V
+  #147 = Methodref          #132.#146     // com/google/gson/JsonObject.addProperty:(Ljava/lang/String;Ljava/lang/Number;)V
+  #148 = String             #120          // activity
+  #149 = Utf8               com/google/gson/JsonNull
+  #150 = Class              #149          // com/google/gson/JsonNull
+  #151 = Utf8               INSTANCE
+  #152 = Utf8               Lcom/google/gson/JsonNull;
+  #153 = NameAndType        #151:#152     // INSTANCE:Lcom/google/gson/JsonNull;
+  #154 = Fieldref           #150.#153     // com/google/gson/JsonNull.INSTANCE:Lcom/google/gson/JsonNull;
+  #155 = Utf8               com/google/gson/JsonElement
+  #156 = Class              #155          // com/google/gson/JsonElement
+  #157 = Utf8               add
+  #158 = Utf8               (Ljava/lang/String;Lcom/google/gson/JsonElement;)V
+  #159 = NameAndType        #157:#158     // add:(Ljava/lang/String;Lcom/google/gson/JsonElement;)V
+  #160 = Methodref          #132.#159     // com/google/gson/JsonObject.add:(Ljava/lang/String;Lcom/google/gson/JsonElement;)V
+  #161 = Utf8               cmd
+  #162 = String             #161          // cmd
+  #163 = Utf8               SET_ACTIVITY
+  #164 = String             #163          // SET_ACTIVITY
+  #165 = Utf8               (Ljava/lang/String;Ljava/lang/String;)V
+  #166 = NameAndType        #144:#165     // addProperty:(Ljava/lang/String;Ljava/lang/String;)V
+  #167 = Methodref          #132.#166     // com/google/gson/JsonObject.addProperty:(Ljava/lang/String;Ljava/lang/String;)V
+  #168 = Utf8               args
+  #169 = String             #168          // args
+  #170 = Utf8               nonce
+  #171 = String             #170          // nonce
+  #172 = Utf8               send
+  #173 = Utf8               (ILcom/google/gson/JsonObject;)V
+  #174 = NameAndType        #172:#173     // send:(ILcom/google/gson/JsonObject;)V
+  #175 = Methodref          #2.#174       // net/anubis/client/discord/DiscordIpc.send:(ILcom/google/gson/JsonObject;)V
+  #176 = Utf8               java/lang/System
+  #177 = Class              #176          // java/lang/System
+  #178 = Utf8               nanoTime
+  #179 = Utf8               ()J
+  #180 = NameAndType        #178:#179     // nanoTime:()J
+  #181 = Methodref          #177.#180     // java/lang/System.nanoTime:()J
+  #182 = NameAndType        #46:#47       // REPLY_TIMEOUT_NANOS:J
+  #183 = Fieldref           #2.#182       // net/anubis/client/discord/DiscordIpc.REPLY_TIMEOUT_NANOS:J
+  #184 = Utf8               readFrame
+  #185 = Utf8               (JZ)Lnet/anubis/client/discord/DiscordIpc$Frame;
+  #186 = NameAndType        #184:#185     // readFrame:(JZ)Lnet/anubis/client/discord/DiscordIpc$Frame;
+  #187 = Methodref          #2.#186       // net/anubis/client/discord/DiscordIpc.readFrame:(JZ)Lnet/anubis/client/discord/DiscordIpc$Frame;
+  #188 = Utf8               answer
+  #189 = Utf8               (Lnet/anubis/client/discord/DiscordIpc$Frame;)Lcom/google/gson/JsonObject;
+  #190 = NameAndType        #188:#189     // answer:(Lnet/anubis/client/discord/DiscordIpc$Frame;)Lcom/google/gson/JsonObject;
+  #191 = Methodref          #2.#190       // net/anubis/client/discord/DiscordIpc.answer:(Lnet/anubis/client/discord/DiscordIpc$Frame;)Lcom/google/gson/JsonObject;
+  #192 = Utf8               string
+  #193 = Utf8               (Lcom/google/gson/JsonObject;Ljava/lang/String;)Ljava/lang/String;
+  #194 = NameAndType        #192:#193     // string:(Lcom/google/gson/JsonObject;Ljava/lang/String;)Ljava/lang/String;
+  #195 = Methodref          #2.#194       // net/anubis/client/discord/DiscordIpc.string:(Lcom/google/gson/JsonObject;Ljava/lang/String;)Ljava/lang/String;
+  #196 = Utf8               equals
+  #197 = Utf8               (Ljava/lang/Object;)Z
+  #198 = NameAndType        #196:#197     // equals:(Ljava/lang/Object;)Z
+  #199 = Methodref          #108.#198     // java/lang/String.equals:(Ljava/lang/Object;)Z
+  #200 = Utf8               ERROR
+  #201 = String             #200          // ERROR
+  #202 = Utf8               evt
+  #203 = String             #202          // evt
+  #204 = Utf8               errorMessage
+  #205 = Utf8               (Lcom/google/gson/JsonObject;)Ljava/lang/String;
+  #206 = NameAndType        #204:#205     // errorMessage:(Lcom/google/gson/JsonObject;)Ljava/lang/String;
+  #207 = Methodref          #2.#206       // net/anubis/client/discord/DiscordIpc.errorMessage:(Lcom/google/gson/JsonObject;)Ljava/lang/String;
+  #208 = NameAndType        #58:#104      // "<init>":(Ljava/lang/String;)V
+  #209 = Methodref          #17.#208      // net/anubis/client/discord/DiscordIpc$RefusedException."<init>":(Ljava/lang/String;)V
+  #210 = Utf8               reply
+  #211 = Utf8               Lcom/google/gson/JsonObject;
+  #212 = Utf8               command
+  #213 = Utf8               deadline
+  #214 = Utf8               poll
+  #215 = Utf8               frame
+  #216 = Utf8               Lnet/anubis/client/discord/DiscordIpc$Frame;
+  #217 = InterfaceMethodref #13.#112      // net/anubis/client/discord/DiscordIpc$Pipe.close:()V
+  #218 = Utf8               v
+  #219 = String             #218          // v
+  #220 = Utf8               java/lang/Integer
+  #221 = Class              #220          // java/lang/Integer
+  #222 = Utf8               (I)Ljava/lang/Integer;
+  #223 = NameAndType        #140:#222     // valueOf:(I)Ljava/lang/Integer;
+  #224 = Methodref          #221.#223     // java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+  #225 = Utf8               client_id
+  #226 = String             #225          // client_id
+  #227 = Utf8               DISPATCH
+  #228 = String             #227          // DISPATCH
+  #229 = Utf8               READY
+  #230 = String             #229          // READY
+  #231 = Utf8               Discord refused the handshake: \u0001
+  #232 = String             #231          // Discord refused the handshake: \u0001
+  #233 = Utf8               java/lang/invoke/StringConcatFactory
+  #234 = Class              #233          // java/lang/invoke/StringConcatFactory
+  #235 = Utf8               makeConcatWithConstants
+  #236 = Utf8               (Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+  #237 = NameAndType        #235:#236     // makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+  #238 = Methodref          #234.#237     // java/lang/invoke/StringConcatFactory.makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+  #239 = MethodHandle       6:#238        // REF_invokeStatic java/lang/invoke/StringConcatFactory.makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+  #240 = Utf8               (Ljava/lang/String;)Ljava/lang/String;
+  #241 = NameAndType        #235:#240     // makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+  #242 = InvokeDynamic      #0:#241       // #0:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+  #243 = Methodref          #88.#208      // java/io/IOException."<init>":(Ljava/lang/String;)V
+  #244 = Utf8               event
+  #245 = Utf8               hello
+  #246 = Utf8               opcode
+  #247 = Utf8               ()I
+  #248 = NameAndType        #246:#247     // opcode:()I
+  #249 = Methodref          #15.#248      // net/anubis/client/discord/DiscordIpc$Frame.opcode:()I
+  #250 = Utf8               json
+  #251 = Utf8               ()Lcom/google/gson/JsonObject;
+  #252 = NameAndType        #250:#251     // json:()Lcom/google/gson/JsonObject;
+  #253 = Methodref          #15.#252      // net/anubis/client/discord/DiscordIpc$Frame.json:()Lcom/google/gson/JsonObject;
+  #254 = Utf8               body
+  #255 = Utf8               ()[B
+  #256 = NameAndType        #254:#255     // body:()[B
+  #257 = Methodref          #15.#256      // net/anubis/client/discord/DiscordIpc$Frame.body:()[B
+  #258 = Utf8               (I[B)V
+  #259 = NameAndType        #172:#258     // send:(I[B)V
+  #260 = Methodref          #2.#259       // net/anubis/client/discord/DiscordIpc.send:(I[B)V
+  #261 = Utf8               Discord closed the connection: \u0001
+  #262 = String             #261          // Discord closed the connection: \u0001
+  #263 = InvokeDynamic      #1:#241       // #1:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+  #264 = Utf8               wait
+  #265 = Utf8               clear
+  #266 = Utf8               ()Ljava/nio/ByteBuffer;
+  #267 = NameAndType        #265:#266     // clear:()Ljava/nio/ByteBuffer;
+  #268 = Methodref          #64.#267      // java/nio/ByteBuffer.clear:()Ljava/nio/ByteBuffer;
+  #269 = Utf8               readWaiting
+  #270 = Utf8               (Ljava/nio/ByteBuffer;)I
+  #271 = NameAndType        #269:#270     // readWaiting:(Ljava/nio/ByteBuffer;)I
+  #272 = InterfaceMethodref #13.#271      // net/anubis/client/discord/DiscordIpc$Pipe.readWaiting:(Ljava/nio/ByteBuffer;)I
+  #273 = Utf8               readFully
+  #274 = Utf8               (Ljava/nio/ByteBuffer;J)V
+  #275 = NameAndType        #273:#274     // readFully:(Ljava/nio/ByteBuffer;J)V
+  #276 = Methodref          #2.#275       // net/anubis/client/discord/DiscordIpc.readFully:(Ljava/nio/ByteBuffer;J)V
+  #277 = Utf8               flip
+  #278 = NameAndType        #277:#266     // flip:()Ljava/nio/ByteBuffer;
+  #279 = Methodref          #64.#278      // java/nio/ByteBuffer.flip:()Ljava/nio/ByteBuffer;
+  #280 = Utf8               getInt
+  #281 = NameAndType        #280:#247     // getInt:()I
+  #282 = Methodref          #64.#281      // java/nio/ByteBuffer.getInt:()I
+  #283 = Utf8               Discord sent a frame of \u0001 bytes
+  #284 = String             #283          // Discord sent a frame of \u0001 bytes
+  #285 = Utf8               (I)Ljava/lang/String;
+  #286 = NameAndType        #235:#285     // makeConcatWithConstants:(I)Ljava/lang/String;
+  #287 = InvokeDynamic      #2:#286       // #2:makeConcatWithConstants:(I)Ljava/lang/String;
+  #288 = Utf8               array
+  #289 = NameAndType        #288:#255     // array:()[B
+  #290 = Methodref          #64.#289      // java/nio/ByteBuffer.array:()[B
+  #291 = NameAndType        #58:#258      // "<init>":(I[B)V
+  #292 = Methodref          #15.#291      // net/anubis/client/discord/DiscordIpc$Frame."<init>":(I[B)V
+  #293 = Utf8               length
+  #294 = Utf8               buffer
+  #295 = Utf8               hasRemaining
+  #296 = Utf8               ()Z
+  #297 = NameAndType        #295:#296     // hasRemaining:()Z
+  #298 = Methodref          #64.#297      // java/nio/ByteBuffer.hasRemaining:()Z
+  #299 = Utf8               java/net/SocketTimeoutException
+  #300 = Class              #299          // java/net/SocketTimeoutException
+  #301 = Utf8               Discord did not answer in time
+  #302 = String             #301          // Discord did not answer in time
+  #303 = Methodref          #300.#208     // java/net/SocketTimeoutException."<init>":(Ljava/lang/String;)V
+  #304 = NameAndType        #48:#47       // READ_POLL_NANOS:J
+  #305 = Fieldref           #2.#304       // net/anubis/client/discord/DiscordIpc.READ_POLL_NANOS:J
+  #306 = Utf8               java/util/concurrent/locks/LockSupport
+  #307 = Class              #306          // java/util/concurrent/locks/LockSupport
+  #308 = Utf8               parkNanos
+  #309 = Utf8               (J)V
+  #310 = NameAndType        #308:#309     // parkNanos:(J)V
+  #311 = Methodref          #307.#310     // java/util/concurrent/locks/LockSupport.parkNanos:(J)V
+  #312 = NameAndType        #52:#53       // GSON:Lcom/google/gson/Gson;
+  #313 = Fieldref           #2.#312       // net/anubis/client/discord/DiscordIpc.GSON:Lcom/google/gson/Gson;
+  #314 = Utf8               com/google/gson/Gson
+  #315 = Class              #314          // com/google/gson/Gson
+  #316 = Utf8               toJson
+  #317 = Utf8               (Lcom/google/gson/JsonElement;)Ljava/lang/String;
+  #318 = NameAndType        #316:#317     // toJson:(Lcom/google/gson/JsonElement;)Ljava/lang/String;
+  #319 = Methodref          #315.#318     // com/google/gson/Gson.toJson:(Lcom/google/gson/JsonElement;)Ljava/lang/String;
+  #320 = Utf8               java/nio/charset/StandardCharsets
+  #321 = Class              #320          // java/nio/charset/StandardCharsets
+  #322 = Utf8               UTF_8
+  #323 = Utf8               Ljava/nio/charset/Charset;
+  #324 = NameAndType        #322:#323     // UTF_8:Ljava/nio/charset/Charset;
+  #325 = Fieldref           #321.#324     // java/nio/charset/StandardCharsets.UTF_8:Ljava/nio/charset/Charset;
+  #326 = Utf8               getBytes
+  #327 = Utf8               (Ljava/nio/charset/Charset;)[B
+  #328 = NameAndType        #326:#327     // getBytes:(Ljava/nio/charset/Charset;)[B
+  #329 = Methodref          #108.#328     // java/lang/String.getBytes:(Ljava/nio/charset/Charset;)[B
+  #330 = Utf8               putInt
+  #331 = NameAndType        #330:#66      // putInt:(I)Ljava/nio/ByteBuffer;
+  #332 = Methodref          #64.#331      // java/nio/ByteBuffer.putInt:(I)Ljava/nio/ByteBuffer;
+  #333 = Utf8               put
+  #334 = Utf8               ([B)Ljava/nio/ByteBuffer;
+  #335 = NameAndType        #333:#334     // put:([B)Ljava/nio/ByteBuffer;
+  #336 = Methodref          #64.#335      // java/nio/ByteBuffer.put:([B)Ljava/nio/ByteBuffer;
+  #337 = Utf8               write
+  #338 = NameAndType        #337:#274     // write:(Ljava/nio/ByteBuffer;J)V
+  #339 = InterfaceMethodref #13.#338      // net/anubis/client/discord/DiscordIpc$Pipe.write:(Ljava/nio/ByteBuffer;J)V
+  #340 = Utf8               [B
+  #341 = Utf8               data
+  #342 = String             #341          // data
+  #343 = Utf8               get
+  #344 = Utf8               (Ljava/lang/String;)Lcom/google/gson/JsonElement;
+  #345 = NameAndType        #343:#344     // get:(Ljava/lang/String;)Lcom/google/gson/JsonElement;
+  #346 = Methodref          #132.#345     // com/google/gson/JsonObject.get:(Ljava/lang/String;)Lcom/google/gson/JsonElement;
+  #347 = Utf8               isJsonObject
+  #348 = NameAndType        #347:#296     // isJsonObject:()Z
+  #349 = Methodref          #156.#348     // com/google/gson/JsonElement.isJsonObject:()Z
+  #350 = Utf8               getAsJsonObject
+  #351 = NameAndType        #350:#251     // getAsJsonObject:()Lcom/google/gson/JsonObject;
+  #352 = Methodref          #156.#351     // com/google/gson/JsonElement.getAsJsonObject:()Lcom/google/gson/JsonObject;
+  #353 = Utf8               message
+  #354 = String             #353          // message
+  #355 = Methodref          #132.#129     // com/google/gson/JsonObject.toString:()Ljava/lang/String;
+  #356 = Utf8               Lcom/google/gson/JsonElement;
+  #357 = Utf8               object
+  #358 = Utf8               key
+  #359 = Utf8               isJsonPrimitive
+  #360 = NameAndType        #359:#296     // isJsonPrimitive:()Z
+  #361 = Methodref          #156.#360     // com/google/gson/JsonElement.isJsonPrimitive:()Z
+  #362 = Utf8               getAsString
+  #363 = NameAndType        #362:#128     // getAsString:()Ljava/lang/String;
+  #364 = Methodref          #156.#363     // com/google/gson/JsonElement.getAsString:()Ljava/lang/String;
+  #365 = Utf8               value
+  #366 = Utf8               java/io/FileNotFoundException
+  #367 = Class              #366          // java/io/FileNotFoundException
+  #368 = Utf8               java/io/RandomAccessFile
+  #369 = Class              #368          // java/io/RandomAccessFile
+  #370 = Utf8               \\\\.\\pipe\\discord-ipc-\u0001
+  #371 = String             #370          // \\\\.\\pipe\\discord-ipc-\u0001
+  #372 = InvokeDynamic      #3:#286       // #3:makeConcatWithConstants:(I)Ljava/lang/String;
+  #373 = Utf8               rw
+  #374 = String             #373          // rw
+  #375 = NameAndType        #58:#165      // "<init>":(Ljava/lang/String;Ljava/lang/String;)V
+  #376 = Methodref          #369.#375     // java/io/RandomAccessFile."<init>":(Ljava/lang/String;Ljava/lang/String;)V
+  #377 = Utf8               (Ljava/io/RandomAccessFile;)V
+  #378 = NameAndType        #58:#377      // "<init>":(Ljava/io/RandomAccessFile;)V
+  #379 = Methodref          #11.#378      // net/anubis/client/discord/DiscordIpc$WindowsPipe."<init>":(Ljava/io/RandomAccessFile;)V
+  #380 = Utf8               slot
+  #381 = Utf8               unixFolders
+  #382 = Utf8               ()Ljava/util/Set;
+  #383 = NameAndType        #381:#382     // unixFolders:()Ljava/util/Set;
+  #384 = Methodref          #2.#383       // net/anubis/client/discord/DiscordIpc.unixFolders:()Ljava/util/Set;
+  #385 = Utf8               java/util/Set
+  #386 = Class              #385          // java/util/Set
+  #387 = Utf8               iterator
+  #388 = Utf8               ()Ljava/util/Iterator;
+  #389 = NameAndType        #387:#388     // iterator:()Ljava/util/Iterator;
+  #390 = InterfaceMethodref #386.#389     // java/util/Set.iterator:()Ljava/util/Iterator;
+  #391 = Utf8               java/util/Iterator
+  #392 = Class              #391          // java/util/Iterator
+  #393 = Utf8               hasNext
+  #394 = NameAndType        #393:#296     // hasNext:()Z
+  #395 = InterfaceMethodref #392.#394     // java/util/Iterator.hasNext:()Z
+  #396 = Utf8               next
+  #397 = Utf8               ()Ljava/lang/Object;
+  #398 = NameAndType        #396:#397     // next:()Ljava/lang/Object;
+  #399 = InterfaceMethodref #392.#398     // java/util/Iterator.next:()Ljava/lang/Object;
+  #400 = Utf8               java/nio/file/Path
+  #401 = Class              #400          // java/nio/file/Path
+  #402 = Utf8               discord-ipc-\u0001
+  #403 = String             #402          // discord-ipc-\u0001
+  #404 = InvokeDynamic      #4:#286       // #4:makeConcatWithConstants:(I)Ljava/lang/String;
+  #405 = Utf8               resolve
+  #406 = Utf8               (Ljava/lang/String;)Ljava/nio/file/Path;
+  #407 = NameAndType        #405:#406     // resolve:(Ljava/lang/String;)Ljava/nio/file/Path;
+  #408 = InterfaceMethodref #401.#407     // java/nio/file/Path.resolve:(Ljava/lang/String;)Ljava/nio/file/Path;
+  #409 = Utf8               java/nio/file/LinkOption
+  #410 = Class              #409          // java/nio/file/LinkOption
+  #411 = Utf8               java/nio/file/Files
+  #412 = Class              #411          // java/nio/file/Files
+  #413 = Utf8               exists
+  #414 = Utf8               (Ljava/nio/file/Path;[Ljava/nio/file/LinkOption;)Z
+  #415 = NameAndType        #413:#414     // exists:(Ljava/nio/file/Path;[Ljava/nio/file/LinkOption;)Z
+  #416 = Methodref          #412.#415     // java/nio/file/Files.exists:(Ljava/nio/file/Path;[Ljava/nio/file/LinkOption;)Z
+  #417 = Utf8               java/net/StandardProtocolFamily
+  #418 = Class              #417          // java/net/StandardProtocolFamily
+  #419 = Utf8               UNIX
+  #420 = Utf8               Ljava/net/StandardProtocolFamily;
+  #421 = NameAndType        #419:#420     // UNIX:Ljava/net/StandardProtocolFamily;
+  #422 = Fieldref           #418.#421     // java/net/StandardProtocolFamily.UNIX:Ljava/net/StandardProtocolFamily;
+  #423 = Utf8               java/nio/channels/SocketChannel
+  #424 = Class              #423          // java/nio/channels/SocketChannel
+  #425 = Utf8               open
+  #426 = Utf8               (Ljava/net/ProtocolFamily;)Ljava/nio/channels/SocketChannel;
+  #427 = NameAndType        #425:#426     // open:(Ljava/net/ProtocolFamily;)Ljava/nio/channels/SocketChannel;
+  #428 = Methodref          #424.#427     // java/nio/channels/SocketChannel.open:(Ljava/net/ProtocolFamily;)Ljava/nio/channels/SocketChannel;
+  #429 = Utf8               java/net/UnixDomainSocketAddress
+  #430 = Class              #429          // java/net/UnixDomainSocketAddress
+  #431 = Utf8               of
+  #432 = Utf8               (Ljava/nio/file/Path;)Ljava/net/UnixDomainSocketAddress;
+  #433 = NameAndType        #431:#432     // of:(Ljava/nio/file/Path;)Ljava/net/UnixDomainSocketAddress;
+  #434 = Methodref          #430.#433     // java/net/UnixDomainSocketAddress.of:(Ljava/nio/file/Path;)Ljava/net/UnixDomainSocketAddress;
+  #435 = Utf8               (Ljava/net/SocketAddress;)Z
+  #436 = NameAndType        #85:#435      // connect:(Ljava/net/SocketAddress;)Z
+  #437 = Methodref          #424.#436     // java/nio/channels/SocketChannel.connect:(Ljava/net/SocketAddress;)Z
+  #438 = Utf8               configureBlocking
+  #439 = Utf8               (Z)Ljava/nio/channels/SelectableChannel;
+  #440 = NameAndType        #438:#439     // configureBlocking:(Z)Ljava/nio/channels/SelectableChannel;
+  #441 = Methodref          #424.#440     // java/nio/channels/SocketChannel.configureBlocking:(Z)Ljava/nio/channels/SelectableChannel;
+  #442 = Utf8               (Ljava/nio/channels/SocketChannel;)V
+  #443 = NameAndType        #58:#442      // "<init>":(Ljava/nio/channels/SocketChannel;)V
+  #444 = Methodref          #9.#443       // net/anubis/client/discord/DiscordIpc$UnixPipe."<init>":(Ljava/nio/channels/SocketChannel;)V
+  #445 = Methodref          #424.#112     // java/nio/channels/SocketChannel.close:()V
+  #446 = Utf8               Ljava/io/IOException;
+  #447 = Utf8               channel
+  #448 = Utf8               Ljava/nio/channels/SocketChannel;
+  #449 = Utf8               socket
+  #450 = Utf8               Ljava/nio/file/Path;
+  #451 = Utf8               folder
+  #452 = Utf8               ()Ljava/util/Set<Ljava/nio/file/Path;>;
+  #453 = Utf8               java/nio/file/InvalidPathException
+  #454 = Class              #453          // java/nio/file/InvalidPathException
+  #455 = Utf8               java/util/LinkedHashSet
+  #456 = Class              #455          // java/util/LinkedHashSet
+  #457 = Methodref          #456.#61      // java/util/LinkedHashSet."<init>":()V
+  #458 = NameAndType        #42:#43       // UNIX_TEMP_VARIABLES:[Ljava/lang/String;
+  #459 = Fieldref           #2.#458       // net/anubis/client/discord/DiscordIpc.UNIX_TEMP_VARIABLES:[Ljava/lang/String;
+  #460 = Class              #43           // "[Ljava/lang/String;"
+  #461 = Utf8               getenv
+  #462 = NameAndType        #461:#240     // getenv:(Ljava/lang/String;)Ljava/lang/String;
+  #463 = Methodref          #177.#462     // java/lang/System.getenv:(Ljava/lang/String;)Ljava/lang/String;
+  #464 = Utf8               isBlank
+  #465 = NameAndType        #464:#296     // isBlank:()Z
+  #466 = Methodref          #108.#465     // java/lang/String.isBlank:()Z
+  #467 = Utf8               (Ljava/lang/String;[Ljava/lang/String;)Ljava/nio/file/Path;
+  #468 = NameAndType        #431:#467     // of:(Ljava/lang/String;[Ljava/lang/String;)Ljava/nio/file/Path;
+  #469 = InterfaceMethodref #401.#468     // java/nio/file/Path.of:(Ljava/lang/String;[Ljava/lang/String;)Ljava/nio/file/Path;
+  #470 = NameAndType        #157:#197     // add:(Ljava/lang/Object;)Z
+  #471 = InterfaceMethodref #386.#470     // java/util/Set.add:(Ljava/lang/Object;)Z
+  #472 = Utf8               /tmp
+  #473 = String             #472          // /tmp
+  #474 = Utf8               app
+  #475 = String             #474          // app
+  #476 = Utf8               *
+  #477 = String             #476          // *
+  #478 = Utf8               addSubfolders
+  #479 = Utf8               (Ljava/util/Set;Ljava/nio/file/Path;Ljava/lang/String;)V
+  #480 = NameAndType        #478:#479     // addSubfolders:(Ljava/util/Set;Ljava/nio/file/Path;Ljava/lang/String;)V
+  #481 = Methodref          #2.#480       // net/anubis/client/discord/DiscordIpc.addSubfolders:(Ljava/util/Set;Ljava/nio/file/Path;Ljava/lang/String;)V
+  #482 = Utf8               snap.*
+  #483 = String             #482          // snap.*
+  #484 = Utf8               variable
+  #485 = Utf8               root
+  #486 = Utf8               roots
+  #487 = Utf8               Ljava/util/Set<Ljava/nio/file/Path;>;
+  #488 = Utf8               Ljava/util/Set;
+  #489 = Utf8               folders
+  #490 = Utf8               (Ljava/util/Set<Ljava/nio/file/Path;>;Ljava/nio/file/Path;Ljava/lang/String;)V
+  #491 = Utf8               parent
+  #492 = Utf8               glob
+  #493 = Utf8               java/lang/Throwable
+  #494 = Class              #493          // java/lang/Throwable
+  #495 = Utf8               java/lang/SecurityException
+  #496 = Class              #495          // java/lang/SecurityException
+  #497 = Utf8               isDirectory
+  #498 = NameAndType        #497:#414     // isDirectory:(Ljava/nio/file/Path;[Ljava/nio/file/LinkOption;)Z
+  #499 = Methodref          #412.#498     // java/nio/file/Files.isDirectory:(Ljava/nio/file/Path;[Ljava/nio/file/LinkOption;)Z
+  #500 = Utf8               newDirectoryStream
+  #501 = Utf8               (Ljava/nio/file/Path;Ljava/lang/String;)Ljava/nio/file/DirectoryStream;
+  #502 = NameAndType        #500:#501     // newDirectoryStream:(Ljava/nio/file/Path;Ljava/lang/String;)Ljava/nio/file/DirectoryStream;
+  #503 = Methodref          #412.#502     // java/nio/file/Files.newDirectoryStream:(Ljava/nio/file/Path;Ljava/lang/String;)Ljava/nio/file/DirectoryStream;
+  #504 = Utf8               java/nio/file/DirectoryStream
+  #505 = Class              #504          // java/nio/file/DirectoryStream
+  #506 = InterfaceMethodref #505.#389     // java/nio/file/DirectoryStream.iterator:()Ljava/util/Iterator;
+  #507 = InterfaceMethodref #505.#112     // java/nio/file/DirectoryStream.close:()V
+  #508 = Utf8               addSuppressed
+  #509 = Utf8               (Ljava/lang/Throwable;)V
+  #510 = NameAndType        #508:#509     // addSuppressed:(Ljava/lang/Throwable;)V
+  #511 = Methodref          #494.#510     // java/lang/Throwable.addSuppressed:(Ljava/lang/Throwable;)V
+  #512 = Utf8               child
+  #513 = Utf8               children
+  #514 = Utf8               Ljava/nio/file/DirectoryStream<Ljava/nio/file/Path;>;
+  #515 = Utf8               Ljava/nio/file/DirectoryStream;
+  #516 = Utf8               <clinit>
+  #517 = Utf8               XDG_RUNTIME_DIR
+  #518 = String             #517          // XDG_RUNTIME_DIR
+  #519 = Utf8               TMPDIR
+  #520 = String             #519          // TMPDIR
+  #521 = Utf8               TMP
+  #522 = String             #521          // TMP
+  #523 = Utf8               TEMP
+  #524 = String             #523          // TEMP
+  #525 = Utf8               com/sun/jna/Platform
+  #526 = Class              #525          // com/sun/jna/Platform
+  #527 = Utf8               isWindows
+  #528 = NameAndType        #527:#296     // isWindows:()Z
+  #529 = Methodref          #526.#528     // com/sun/jna/Platform.isWindows:()Z
+  #530 = Utf8               java/util/concurrent/TimeUnit
+  #531 = Class              #530          // java/util/concurrent/TimeUnit
+  #532 = Utf8               SECONDS
+  #533 = Utf8               Ljava/util/concurrent/TimeUnit;
+  #534 = NameAndType        #532:#533     // SECONDS:Ljava/util/concurrent/TimeUnit;
+  #535 = Fieldref           #531.#534     // java/util/concurrent/TimeUnit.SECONDS:Ljava/util/concurrent/TimeUnit;
+  #536 = Long               5l
+  #538 = Utf8               toNanos
+  #539 = Utf8               (J)J
+  #540 = NameAndType        #538:#539     // toNanos:(J)J
+  #541 = Methodref          #531.#540     // java/util/concurrent/TimeUnit.toNanos:(J)J
+  #542 = Utf8               MILLISECONDS
+  #543 = NameAndType        #542:#533     // MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+  #544 = Fieldref           #531.#543     // java/util/concurrent/TimeUnit.MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+  #545 = Long               20l
+  #547 = Utf8               java/lang/ProcessHandle
+  #548 = Class              #547          // java/lang/ProcessHandle
+  #549 = Utf8               current
+  #550 = Utf8               ()Ljava/lang/ProcessHandle;
+  #551 = NameAndType        #549:#550     // current:()Ljava/lang/ProcessHandle;
+  #552 = InterfaceMethodref #548.#551     // java/lang/ProcessHandle.current:()Ljava/lang/ProcessHandle;
+  #553 = NameAndType        #134:#179     // pid:()J
+  #554 = InterfaceMethodref #548.#553     // java/lang/ProcessHandle.pid:()J
+  #555 = Utf8               com/google/gson/GsonBuilder
+  #556 = Class              #555          // com/google/gson/GsonBuilder
+  #557 = Methodref          #556.#61      // com/google/gson/GsonBuilder."<init>":()V
+  #558 = Utf8               serializeNulls
+  #559 = Utf8               ()Lcom/google/gson/GsonBuilder;
+  #560 = NameAndType        #558:#559     // serializeNulls:()Lcom/google/gson/GsonBuilder;
+  #561 = Methodref          #556.#560     // com/google/gson/GsonBuilder.serializeNulls:()Lcom/google/gson/GsonBuilder;
+  #562 = Utf8               create
+  #563 = Utf8               ()Lcom/google/gson/Gson;
+  #564 = NameAndType        #562:#563     // create:()Lcom/google/gson/Gson;
+  #565 = Methodref          #556.#564     // com/google/gson/GsonBuilder.create:()Lcom/google/gson/Gson;
+  #566 = Utf8               Lnet/fabricmc/api/Environment;
+  #567 = Utf8               Lnet/fabricmc/api/EnvType;
+  #568 = Utf8               CLIENT
+  #569 = Utf8               ConstantValue
+  #570 = Utf8               Code
+  #571 = Utf8               LineNumberTable
+  #572 = Utf8               LocalVariableTable
+  #573 = Utf8               MethodParameters
+  #574 = Utf8               StackMapTable
+  #575 = Utf8               Exceptions
+  #576 = Utf8               LocalVariableTypeTable
+  #577 = Utf8               Signature
+  #578 = Utf8               InnerClasses
+  #579 = Utf8               SourceFile
+  #580 = Utf8               RuntimeVisibleAnnotations
+  #581 = Utf8               BootstrapMethods
+  #582 = Utf8               NestMembers
+{
+  private static final int OP_HANDSHAKE;
+    descriptor: I
+    flags: (0x001a) ACC_PRIVATE, ACC_STATIC, ACC_FINAL
+    ConstantValue: int 0
+
+  private static final int OP_FRAME;
+    descriptor: I
+    flags: (0x001a) ACC_PRIVATE, ACC_STATIC, ACC_FINAL
+    ConstantValue: int 1
+
+  private static final int OP_CLOSE;
+    descriptor: I
+    flags: (0x001a) ACC_PRIVATE, ACC_STATIC, ACC_FINAL
+    ConstantValue: int 2
+
+  private static final int OP_PING;
+    descriptor: I
+    flags: (0x001a) ACC_PRIVATE, ACC_STATIC, ACC_FINAL
+    ConstantValue: int 3
+
+  private static final int OP_PONG;
+    descriptor: I
+    flags: (0x001a) ACC_PRIVATE, ACC_STATIC, ACC_FINAL
+    ConstantValue: int 4
+
+  private static final int RPC_VERSION;
+    descriptor: I
+    flags: (0x001a) ACC_PRIVATE, ACC_STATIC, ACC_FINAL
+    ConstantValue: int 1
+
+  private static final int SOCKET_SLOTS;
+    descriptor: I
+    flags: (0x001a) ACC_PRIVATE, ACC_STATIC, ACC_FINAL
+    ConstantValue: int 10
+
+  private static final java.lang.String[] UNIX_TEMP_VARIABLES;
+    descriptor: [Ljava/lang/String;
+    flags: (0x001a) ACC_PRIVATE, ACC_STATIC, ACC_FINAL
+
+  private static final boolean WINDOWS;
+    descriptor: Z
+    flags: (0x001a) ACC_PRIVATE, ACC_STATIC, ACC_FINAL
+
+  private static final long REPLY_TIMEOUT_NANOS;
+    descriptor: J
+    flags: (0x001a) ACC_PRIVATE, ACC_STATIC, ACC_FINAL
+
+  private static final long READ_POLL_NANOS;
+    descriptor: J
+    flags: (0x001a) ACC_PRIVATE, ACC_STATIC, ACC_FINAL
+
+  private static final int MAX_FRAME_BYTES;
+    descriptor: I
+    flags: (0x001a) ACC_PRIVATE, ACC_STATIC, ACC_FINAL
+    ConstantValue: int 1048576
+
+  private static final long PID;
+    descriptor: J
+    flags: (0x001a) ACC_PRIVATE, ACC_STATIC, ACC_FINAL
+
+  private static final com.google.gson.Gson GSON;
+    descriptor: Lcom/google/gson/Gson;
+    flags: (0x001a) ACC_PRIVATE, ACC_STATIC, ACC_FINAL
+
+  private final net.anubis.client.discord.DiscordIpc$Pipe pipe;
+    descriptor: Lnet/anubis/client/discord/DiscordIpc$Pipe;
+    flags: (0x0012) ACC_PRIVATE, ACC_FINAL
+
+  private final java.nio.ByteBuffer header;
+    descriptor: Ljava/nio/ByteBuffer;
+    flags: (0x0012) ACC_PRIVATE, ACC_FINAL
+
+  private net.anubis.client.discord.DiscordIpc(net.anubis.client.discord.DiscordIpc$Pipe);
+    descriptor: (Lnet/anubis/client/discord/DiscordIpc$Pipe;)V
+    flags: (0x0002) ACC_PRIVATE
+    Code:
+      stack=3, locals=2, args_size=2
+         0: aload_0
+         1: invokespecial #62                 // Method java/lang/Object."<init>":()V
+         4: aload_0
+         5: bipush        8
+         7: invokestatic  #68                 // Method java/nio/ByteBuffer.allocate:(I)Ljava/nio/ByteBuffer;
+        10: getstatic     #74                 // Field java/nio/ByteOrder.LITTLE_ENDIAN:Ljava/nio/ByteOrder;
+        13: invokevirtual #78                 // Method java/nio/ByteBuffer.order:(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
+        16: putfield      #80                 // Field header:Ljava/nio/ByteBuffer;
+        19: aload_0
+        20: aload_1
+        21: putfield      #82                 // Field pipe:Lnet/anubis/client/discord/DiscordIpc$Pipe;
+        24: return
+      LineNumberTable:
+        line 61: 0
+        line 59: 4
+        line 62: 19
+        line 63: 24
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      25     0  this   Lnet/anubis/client/discord/DiscordIpc;
+            0      25     1  pipe   Lnet/anubis/client/discord/DiscordIpc$Pipe;
+    MethodParameters:
+      Name                           Flags
+      pipe
+
+  public static net.anubis.client.discord.DiscordIpc connect(java.lang.String) throws java.io.IOException;
+    descriptor: (Ljava/lang/String;)Lnet/anubis/client/discord/DiscordIpc;
+    flags: (0x0009) ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=3, locals=4, args_size=1
+         0: getstatic     #93                 // Field WINDOWS:Z
+         3: ifeq          12
+         6: invokestatic  #97                 // Method openWindowsPipe:()Lnet/anubis/client/discord/DiscordIpc$Pipe;
+         9: goto          15
+        12: invokestatic  #100                // Method openUnixSocket:()Lnet/anubis/client/discord/DiscordIpc$Pipe;
+        15: astore_1
+        16: aload_1
+        17: ifnonnull     22
+        20: aconst_null
+        21: areturn
+        22: new           #2                  // class net/anubis/client/discord/DiscordIpc
+        25: dup
+        26: aload_1
+        27: invokespecial #102                // Method "<init>":(Lnet/anubis/client/discord/DiscordIpc$Pipe;)V
+        30: astore_2
+        31: aload_2
+        32: aload_0
+        33: invokevirtual #106                // Method handshake:(Ljava/lang/String;)V
+        36: aload_2
+        37: areturn
+        38: astore_3
+        39: aload_2
+        40: invokevirtual #113                // Method close:()V
+        43: aload_3
+        44: athrow
+      Exception table:
+         from    to  target type
+            31    37    38   Class java/io/IOException
+            31    37    38   Class java/lang/RuntimeException
+      StackMapTable: number_of_entries = 4
+        frame_type = 12 /* same */
+        frame_type = 66 /* same_locals_1_stack_item */
+          stack = [ class net/anubis/client/discord/DiscordIpc$Pipe ]
+        frame_type = 252 /* append */
+          offset_delta = 6
+          locals = [ class net/anubis/client/discord/DiscordIpc$Pipe ]
+        frame_type = 255 /* full_frame */
+          offset_delta = 15
+          locals = [ class java/lang/String, class net/anubis/client/discord/DiscordIpc$Pipe, class net/anubis/client/discord/DiscordIpc ]
+          stack = [ class java/lang/Exception ]
+      LineNumberTable:
+        line 66: 0
+        line 67: 16
+        line 68: 22
+        line 70: 31
+        line 71: 36
+        line 72: 38
+        line 73: 39
+        line 74: 43
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+           39       6     3 failure   Ljava/lang/Exception;
+            0      45     0 applicationId   Ljava/lang/String;
+           16      29     1  pipe   Lnet/anubis/client/discord/DiscordIpc$Pipe;
+           31      14     2   ipc   Lnet/anubis/client/discord/DiscordIpc;
+    Exceptions:
+      throws java.io.IOException
+    MethodParameters:
+      Name                           Flags
+      applicationId
+
+  public void setActivity(com.google.gson.JsonObject) throws java.io.IOException, net.anubis.client.discord.DiscordIpc$RefusedException;
+    descriptor: (Lcom/google/gson/JsonObject;)V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=5, locals=8, args_size=2
+         0: invokestatic  #126                // Method java/util/UUID.randomUUID:()Ljava/util/UUID;
+         3: invokevirtual #130                // Method java/util/UUID.toString:()Ljava/lang/String;
+         6: astore_2
+         7: new           #132                // class com/google/gson/JsonObject
+        10: dup
+        11: invokespecial #133                // Method com/google/gson/JsonObject."<init>":()V
+        14: astore_3
+        15: aload_3
+        16: ldc           #135                // String pid
+        18: getstatic     #137                // Field PID:J
+        21: invokestatic  #143                // Method java/lang/Long.valueOf:(J)Ljava/lang/Long;
+        24: invokevirtual #147                // Method com/google/gson/JsonObject.addProperty:(Ljava/lang/String;Ljava/lang/Number;)V
+        27: aload_3
+        28: ldc           #148                // String activity
+        30: aload_1
+        31: ifnull        38
+        34: aload_1
+        35: goto          41
+        38: getstatic     #154                // Field com/google/gson/JsonNull.INSTANCE:Lcom/google/gson/JsonNull;
+        41: invokevirtual #160                // Method com/google/gson/JsonObject.add:(Ljava/lang/String;Lcom/google/gson/JsonElement;)V
+        44: new           #132                // class com/google/gson/JsonObject
+        47: dup
+        48: invokespecial #133                // Method com/google/gson/JsonObject."<init>":()V
+        51: astore        4
+        53: aload         4
+        55: ldc           #162                // String cmd
+        57: ldc           #164                // String SET_ACTIVITY
+        59: invokevirtual #167                // Method com/google/gson/JsonObject.addProperty:(Ljava/lang/String;Ljava/lang/String;)V
+        62: aload         4
+        64: ldc           #169                // String args
+        66: aload_3
+        67: invokevirtual #160                // Method com/google/gson/JsonObject.add:(Ljava/lang/String;Lcom/google/gson/JsonElement;)V
+        70: aload         4
+        72: ldc           #171                // String nonce
+        74: aload_2
+        75: invokevirtual #167                // Method com/google/gson/JsonObject.addProperty:(Ljava/lang/String;Ljava/lang/String;)V
+        78: aload_0
+        79: iconst_1
+        80: aload         4
+        82: invokevirtual #175                // Method send:(ILcom/google/gson/JsonObject;)V
+        85: invokestatic  #181                // Method java/lang/System.nanoTime:()J
+        88: getstatic     #183                // Field REPLY_TIMEOUT_NANOS:J
+        91: ladd
+        92: lstore        5
+        94: aload_0
+        95: aload_0
+        96: lload         5
+        98: iconst_1
+        99: invokevirtual #187                // Method readFrame:(JZ)Lnet/anubis/client/discord/DiscordIpc$Frame;
+       102: invokevirtual #191                // Method answer:(Lnet/anubis/client/discord/DiscordIpc$Frame;)Lcom/google/gson/JsonObject;
+       105: astore        7
+       107: aload         7
+       109: ifnull        94
+       112: aload_2
+       113: aload         7
+       115: ldc           #171                // String nonce
+       117: invokestatic  #195                // Method string:(Lcom/google/gson/JsonObject;Ljava/lang/String;)Ljava/lang/String;
+       120: invokevirtual #199                // Method java/lang/String.equals:(Ljava/lang/Object;)Z
+       123: ifne          129
+       126: goto          94
+       129: ldc           #201                // String ERROR
+       131: aload         7
+       133: ldc           #203                // String evt
+       135: invokestatic  #195                // Method string:(Lcom/google/gson/JsonObject;Ljava/lang/String;)Ljava/lang/String;
+       138: invokevirtual #199                // Method java/lang/String.equals:(Ljava/lang/Object;)Z
+       141: ifeq          157
+       144: new           #17                 // class net/anubis/client/discord/DiscordIpc$RefusedException
+       147: dup
+       148: aload         7
+       150: invokestatic  #207                // Method errorMessage:(Lcom/google/gson/JsonObject;)Ljava/lang/String;
+       153: invokespecial #209                // Method net/anubis/client/discord/DiscordIpc$RefusedException."<init>":(Ljava/lang/String;)V
+       156: athrow
+       157: return
+      StackMapTable: number_of_entries = 5
+        frame_type = 255 /* full_frame */
+          offset_delta = 38
+          locals = [ class net/anubis/client/discord/DiscordIpc, class com/google/gson/JsonObject, class java/lang/String, class com/google/gson/JsonObject ]
+          stack = [ class com/google/gson/JsonObject, class java/lang/String ]
+        frame_type = 255 /* full_frame */
+          offset_delta = 2
+          locals = [ class net/anubis/client/discord/DiscordIpc, class com/google/gson/JsonObject, class java/lang/String, class com/google/gson/JsonObject ]
+          stack = [ class com/google/gson/JsonObject, class java/lang/String, class com/google/gson/JsonElement ]
+        frame_type = 253 /* append */
+          offset_delta = 52
+          locals = [ class com/google/gson/JsonObject, long ]
+        frame_type = 252 /* append */
+          offset_delta = 34
+          locals = [ class com/google/gson/JsonObject ]
+        frame_type = 27 /* same */
+      LineNumberTable:
+        line 79: 0
+        line 80: 7
+        line 81: 15
+        line 82: 27
+        line 83: 44
+        line 84: 53
+        line 85: 62
+        line 86: 70
+        line 87: 78
+        line 89: 85
+        line 91: 94
+        line 92: 107
+        line 93: 129
+        line 94: 157
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+          107      51     7 reply   Lcom/google/gson/JsonObject;
+            0     158     0  this   Lnet/anubis/client/discord/DiscordIpc;
+            0     158     1 activity   Lcom/google/gson/JsonObject;
+            7     151     2 nonce   Ljava/lang/String;
+           15     143     3  args   Lcom/google/gson/JsonObject;
+           53     105     4 command   Lcom/google/gson/JsonObject;
+           94      64     5 deadline   J
+    Exceptions:
+      throws java.io.IOException, net.anubis.client.discord.DiscordIpc$RefusedException
+    MethodParameters:
+      Name                           Flags
+      activity
+
+  public void poll() throws java.io.IOException;
+    descriptor: ()V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=5, locals=2, args_size=1
+         0: aload_0
+         1: invokestatic  #181                // Method java/lang/System.nanoTime:()J
+         4: getstatic     #183                // Field REPLY_TIMEOUT_NANOS:J
+         7: ladd
+         8: iconst_0
+         9: invokevirtual #187                // Method readFrame:(JZ)Lnet/anubis/client/discord/DiscordIpc$Frame;
+        12: dup
+        13: astore_1
+        14: ifnull        26
+        17: aload_0
+        18: aload_1
+        19: invokevirtual #191                // Method answer:(Lnet/anubis/client/discord/DiscordIpc$Frame;)Lcom/google/gson/JsonObject;
+        22: pop
+        23: goto          0
+        26: return
+      StackMapTable: number_of_entries = 2
+        frame_type = 0 /* same */
+        frame_type = 252 /* append */
+          offset_delta = 25
+          locals = [ class net/anubis/client/discord/DiscordIpc$Frame ]
+      LineNumberTable:
+        line 100: 0
+        line 101: 17
+        line 103: 26
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      27     0  this   Lnet/anubis/client/discord/DiscordIpc;
+           14      13     1 frame   Lnet/anubis/client/discord/DiscordIpc$Frame;
+    Exceptions:
+      throws java.io.IOException
+
+  public void close();
+    descriptor: ()V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=1, locals=2, args_size=1
+         0: aload_0
+         1: getfield      #82                 // Field pipe:Lnet/anubis/client/discord/DiscordIpc$Pipe;
+         4: invokeinterface #217,  1          // InterfaceMethod net/anubis/client/discord/DiscordIpc$Pipe.close:()V
+         9: goto          13
+        12: astore_1
+        13: return
+      Exception table:
+         from    to  target type
+             0     9    12   Class java/io/IOException
+      StackMapTable: number_of_entries = 2
+        frame_type = 76 /* same_locals_1_stack_item */
+          stack = [ class java/io/IOException ]
+        frame_type = 0 /* same */
+      LineNumberTable:
+        line 108: 0
+        line 110: 9
+        line 109: 12
+        line 111: 13
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      14     0  this   Lnet/anubis/client/discord/DiscordIpc;
+
+  private void handshake(java.lang.String) throws java.io.IOException;
+    descriptor: (Ljava/lang/String;)V
+    flags: (0x0002) ACC_PRIVATE
+    Code:
+      stack=5, locals=7, args_size=2
+         0: new           #132                // class com/google/gson/JsonObject
+         3: dup
+         4: invokespecial #133                // Method com/google/gson/JsonObject."<init>":()V
+         7: astore_2
+         8: aload_2
+         9: ldc           #219                // String v
+        11: iconst_1
+        12: invokestatic  #224                // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+        15: invokevirtual #147                // Method com/google/gson/JsonObject.addProperty:(Ljava/lang/String;Ljava/lang/Number;)V
+        18: aload_2
+        19: ldc           #226                // String client_id
+        21: aload_1
+        22: invokevirtual #167                // Method com/google/gson/JsonObject.addProperty:(Ljava/lang/String;Ljava/lang/String;)V
+        25: aload_0
+        26: iconst_0
+        27: aload_2
+        28: invokevirtual #175                // Method send:(ILcom/google/gson/JsonObject;)V
+        31: invokestatic  #181                // Method java/lang/System.nanoTime:()J
+        34: getstatic     #183                // Field REPLY_TIMEOUT_NANOS:J
+        37: ladd
+        38: lstore_3
+        39: aload_0
+        40: aload_0
+        41: lload_3
+        42: iconst_1
+        43: invokevirtual #187                // Method readFrame:(JZ)Lnet/anubis/client/discord/DiscordIpc$Frame;
+        46: invokevirtual #191                // Method answer:(Lnet/anubis/client/discord/DiscordIpc$Frame;)Lcom/google/gson/JsonObject;
+        49: astore        5
+        51: aload         5
+        53: ifnull        39
+        56: ldc           #228                // String DISPATCH
+        58: aload         5
+        60: ldc           #162                // String cmd
+        62: invokestatic  #195                // Method string:(Lcom/google/gson/JsonObject;Ljava/lang/String;)Ljava/lang/String;
+        65: invokevirtual #199                // Method java/lang/String.equals:(Ljava/lang/Object;)Z
+        68: ifne          74
+        71: goto          39
+        74: aload         5
+        76: ldc           #203                // String evt
+        78: invokestatic  #195                // Method string:(Lcom/google/gson/JsonObject;Ljava/lang/String;)Ljava/lang/String;
+        81: astore        6
+        83: ldc           #230                // String READY
+        85: aload         6
+        87: invokevirtual #199                // Method java/lang/String.equals:(Ljava/lang/Object;)Z
+        90: ifeq          94
+        93: return
+        94: ldc           #201                // String ERROR
+        96: aload         6
+        98: invokevirtual #199                // Method java/lang/String.equals:(Ljava/lang/Object;)Z
+       101: ifeq          122
+       104: new           #88                 // class java/io/IOException
+       107: dup
+       108: aload         5
+       110: invokestatic  #207                // Method errorMessage:(Lcom/google/gson/JsonObject;)Ljava/lang/String;
+       113: invokedynamic #242,  0            // InvokeDynamic #0:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+       118: invokespecial #243                // Method java/io/IOException."<init>":(Ljava/lang/String;)V
+       121: athrow
+       122: goto          39
+      StackMapTable: number_of_entries = 4
+        frame_type = 253 /* append */
+          offset_delta = 39
+          locals = [ class com/google/gson/JsonObject, long ]
+        frame_type = 252 /* append */
+          offset_delta = 34
+          locals = [ class com/google/gson/JsonObject ]
+        frame_type = 252 /* append */
+          offset_delta = 19
+          locals = [ class java/lang/String ]
+        frame_type = 249 /* chop */
+          offset_delta = 27
+      LineNumberTable:
+        line 114: 0
+        line 115: 8
+        line 116: 18
+        line 117: 25
+        line 119: 31
+        line 121: 39
+        line 122: 51
+        line 123: 74
+        line 124: 83
+        line 125: 94
+        line 126: 122
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+           51      71     5 reply   Lcom/google/gson/JsonObject;
+           83      39     6 event   Ljava/lang/String;
+            0     125     0  this   Lnet/anubis/client/discord/DiscordIpc;
+            0     125     1 applicationId   Ljava/lang/String;
+            8     117     2 hello   Lcom/google/gson/JsonObject;
+           39      86     3 deadline   J
+    Exceptions:
+      throws java.io.IOException
+    MethodParameters:
+      Name                           Flags
+      applicationId
+
+  private com.google.gson.JsonObject answer(net.anubis.client.discord.DiscordIpc$Frame) throws java.io.IOException;
+    descriptor: (Lnet/anubis/client/discord/DiscordIpc$Frame;)Lcom/google/gson/JsonObject;
+    flags: (0x0002) ACC_PRIVATE
+    Code:
+      stack=3, locals=2, args_size=2
+         0: aload_1
+         1: invokevirtual #249                // Method net/anubis/client/discord/DiscordIpc$Frame.opcode:()I
+         4: tableswitch   { // 1 to 3
+                       1: 32
+                       2: 52
+                       3: 39
+                 default: 72
+            }
+        32: aload_1
+        33: invokevirtual #253                // Method net/anubis/client/discord/DiscordIpc$Frame.json:()Lcom/google/gson/JsonObject;
+        36: goto          73
+        39: aload_0
+        40: iconst_4
+        41: aload_1
+        42: invokevirtual #257                // Method net/anubis/client/discord/DiscordIpc$Frame.body:()[B
+        45: invokevirtual #260                // Method send:(I[B)V
+        48: aconst_null
+        49: goto          73
+        52: new           #88                 // class java/io/IOException
+        55: dup
+        56: aload_1
+        57: invokevirtual #253                // Method net/anubis/client/discord/DiscordIpc$Frame.json:()Lcom/google/gson/JsonObject;
+        60: invokestatic  #207                // Method errorMessage:(Lcom/google/gson/JsonObject;)Ljava/lang/String;
+        63: invokedynamic #263,  0            // InvokeDynamic #1:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+        68: invokespecial #243                // Method java/io/IOException."<init>":(Ljava/lang/String;)V
+        71: athrow
+        72: aconst_null
+        73: areturn
+      StackMapTable: number_of_entries = 5
+        frame_type = 32 /* same */
+        frame_type = 6 /* same */
+        frame_type = 12 /* same */
+        frame_type = 19 /* same */
+        frame_type = 64 /* same_locals_1_stack_item */
+          stack = [ class com/google/gson/JsonObject ]
+      LineNumberTable:
+        line 130: 0
+        line 131: 32
+        line 133: 39
+        line 134: 48
+        line 136: 52
+        line 137: 72
+        line 130: 73
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      74     0  this   Lnet/anubis/client/discord/DiscordIpc;
+            0      74     1 frame   Lnet/anubis/client/discord/DiscordIpc$Frame;
+    Exceptions:
+      throws java.io.IOException
+    MethodParameters:
+      Name                           Flags
+      frame
+
+  private net.anubis.client.discord.DiscordIpc$Frame readFrame(long, boolean) throws java.io.IOException;
+    descriptor: (JZ)Lnet/anubis/client/discord/DiscordIpc$Frame;
+    flags: (0x0002) ACC_PRIVATE
+    Code:
+      stack=4, locals=7, args_size=3
+         0: aload_0
+         1: getfield      #80                 // Field header:Ljava/nio/ByteBuffer;
+         4: invokevirtual #268                // Method java/nio/ByteBuffer.clear:()Ljava/nio/ByteBuffer;
+         7: pop
+         8: iload_3
+         9: ifne          30
+        12: aload_0
+        13: getfield      #82                 // Field pipe:Lnet/anubis/client/discord/DiscordIpc$Pipe;
+        16: aload_0
+        17: getfield      #80                 // Field header:Ljava/nio/ByteBuffer;
+        20: invokeinterface #272,  2          // InterfaceMethod net/anubis/client/discord/DiscordIpc$Pipe.readWaiting:(Ljava/nio/ByteBuffer;)I
+        25: ifne          30
+        28: aconst_null
+        29: areturn
+        30: aload_0
+        31: aload_0
+        32: getfield      #80                 // Field header:Ljava/nio/ByteBuffer;
+        35: lload_1
+        36: invokevirtual #276                // Method readFully:(Ljava/nio/ByteBuffer;J)V
+        39: aload_0
+        40: getfield      #80                 // Field header:Ljava/nio/ByteBuffer;
+        43: invokevirtual #279                // Method java/nio/ByteBuffer.flip:()Ljava/nio/ByteBuffer;
+        46: pop
+        47: aload_0
+        48: getfield      #80                 // Field header:Ljava/nio/ByteBuffer;
+        51: invokevirtual #282                // Method java/nio/ByteBuffer.getInt:()I
+        54: istore        4
+        56: aload_0
+        57: getfield      #80                 // Field header:Ljava/nio/ByteBuffer;
+        60: invokevirtual #282                // Method java/nio/ByteBuffer.getInt:()I
+        63: istore        5
+        65: iload         5
+        67: iflt          77
+        70: iload         5
+        72: ldc           #50                 // int 1048576
+        74: if_icmple     92
+        77: new           #88                 // class java/io/IOException
+        80: dup
+        81: iload         5
+        83: invokedynamic #287,  0            // InvokeDynamic #2:makeConcatWithConstants:(I)Ljava/lang/String;
+        88: invokespecial #243                // Method java/io/IOException."<init>":(Ljava/lang/String;)V
+        91: athrow
+        92: iload         5
+        94: invokestatic  #68                 // Method java/nio/ByteBuffer.allocate:(I)Ljava/nio/ByteBuffer;
+        97: astore        6
+        99: aload_0
+       100: aload         6
+       102: lload_1
+       103: invokevirtual #276                // Method readFully:(Ljava/nio/ByteBuffer;J)V
+       106: new           #15                 // class net/anubis/client/discord/DiscordIpc$Frame
+       109: dup
+       110: iload         4
+       112: aload         6
+       114: invokevirtual #290                // Method java/nio/ByteBuffer.array:()[B
+       117: invokespecial #292                // Method net/anubis/client/discord/DiscordIpc$Frame."<init>":(I[B)V
+       120: areturn
+      StackMapTable: number_of_entries = 3
+        frame_type = 30 /* same */
+        frame_type = 253 /* append */
+          offset_delta = 46
+          locals = [ int, int ]
+        frame_type = 14 /* same */
+      LineNumberTable:
+        line 142: 0
+        line 143: 8
+        line 144: 30
+        line 145: 39
+        line 146: 47
+        line 147: 56
+        line 148: 65
+        line 149: 77
+        line 151: 92
+        line 152: 99
+        line 153: 106
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0     121     0  this   Lnet/anubis/client/discord/DiscordIpc;
+            0     121     1 deadline   J
+            0     121     3  wait   Z
+           56      65     4 opcode   I
+           65      56     5 length   I
+           99      22     6  body   Ljava/nio/ByteBuffer;
+    Exceptions:
+      throws java.io.IOException
+    MethodParameters:
+      Name                           Flags
+      deadline
+      wait
+
+  private void readFully(java.nio.ByteBuffer, long) throws java.io.IOException;
+    descriptor: (Ljava/nio/ByteBuffer;J)V
+    flags: (0x0002) ACC_PRIVATE
+    Code:
+      stack=4, locals=4, args_size=3
+         0: aload_1
+         1: invokevirtual #298                // Method java/nio/ByteBuffer.hasRemaining:()Z
+         4: ifeq          53
+         7: aload_0
+         8: getfield      #82                 // Field pipe:Lnet/anubis/client/discord/DiscordIpc$Pipe;
+        11: aload_1
+        12: invokeinterface #272,  2          // InterfaceMethod net/anubis/client/discord/DiscordIpc$Pipe.readWaiting:(Ljava/nio/ByteBuffer;)I
+        17: ifle          23
+        20: goto          0
+        23: invokestatic  #181                // Method java/lang/System.nanoTime:()J
+        26: lload_2
+        27: lsub
+        28: lconst_0
+        29: lcmp
+        30: iflt          44
+        33: new           #300                // class java/net/SocketTimeoutException
+        36: dup
+        37: ldc_w         #302                // String Discord did not answer in time
+        40: invokespecial #303                // Method java/net/SocketTimeoutException."<init>":(Ljava/lang/String;)V
+        43: athrow
+        44: getstatic     #305                // Field READ_POLL_NANOS:J
+        47: invokestatic  #311                // Method java/util/concurrent/locks/LockSupport.parkNanos:(J)V
+        50: goto          0
+        53: return
+      StackMapTable: number_of_entries = 4
+        frame_type = 0 /* same */
+        frame_type = 22 /* same */
+        frame_type = 20 /* same */
+        frame_type = 8 /* same */
+      LineNumberTable:
+        line 157: 0
+        line 158: 7
+        line 159: 23
+        line 160: 44
+        line 162: 53
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      54     0  this   Lnet/anubis/client/discord/DiscordIpc;
+            0      54     1 buffer   Ljava/nio/ByteBuffer;
+            0      54     2 deadline   J
+    Exceptions:
+      throws java.io.IOException
+    MethodParameters:
+      Name                           Flags
+      buffer
+      deadline
+
+  private void send(int, com.google.gson.JsonObject) throws java.io.IOException;
+    descriptor: (ILcom/google/gson/JsonObject;)V
+    flags: (0x0002) ACC_PRIVATE
+    Code:
+      stack=4, locals=3, args_size=3
+         0: aload_0
+         1: iload_1
+         2: getstatic     #313                // Field GSON:Lcom/google/gson/Gson;
+         5: aload_2
+         6: invokevirtual #319                // Method com/google/gson/Gson.toJson:(Lcom/google/gson/JsonElement;)Ljava/lang/String;
+         9: getstatic     #325                // Field java/nio/charset/StandardCharsets.UTF_8:Ljava/nio/charset/Charset;
+        12: invokevirtual #329                // Method java/lang/String.getBytes:(Ljava/nio/charset/Charset;)[B
+        15: invokevirtual #260                // Method send:(I[B)V
+        18: return
+      LineNumberTable:
+        line 165: 0
+        line 166: 18
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      19     0  this   Lnet/anubis/client/discord/DiscordIpc;
+            0      19     1 opcode   I
+            0      19     2  body   Lcom/google/gson/JsonObject;
+    Exceptions:
+      throws java.io.IOException
+    MethodParameters:
+      Name                           Flags
+      opcode
+      body
+
+  private void send(int, byte[]) throws java.io.IOException;
+    descriptor: (I[B)V
+    flags: (0x0002) ACC_PRIVATE
+    Code:
+      stack=6, locals=4, args_size=3
+         0: bipush        8
+         2: aload_2
+         3: arraylength
+         4: iadd
+         5: invokestatic  #68                 // Method java/nio/ByteBuffer.allocate:(I)Ljava/nio/ByteBuffer;
+         8: getstatic     #74                 // Field java/nio/ByteOrder.LITTLE_ENDIAN:Ljava/nio/ByteOrder;
+        11: invokevirtual #78                 // Method java/nio/ByteBuffer.order:(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
+        14: astore_3
+        15: aload_3
+        16: iload_1
+        17: invokevirtual #332                // Method java/nio/ByteBuffer.putInt:(I)Ljava/nio/ByteBuffer;
+        20: aload_2
+        21: arraylength
+        22: invokevirtual #332                // Method java/nio/ByteBuffer.putInt:(I)Ljava/nio/ByteBuffer;
+        25: aload_2
+        26: invokevirtual #336                // Method java/nio/ByteBuffer.put:([B)Ljava/nio/ByteBuffer;
+        29: invokevirtual #279                // Method java/nio/ByteBuffer.flip:()Ljava/nio/ByteBuffer;
+        32: pop
+        33: aload_0
+        34: getfield      #82                 // Field pipe:Lnet/anubis/client/discord/DiscordIpc$Pipe;
+        37: aload_3
+        38: invokestatic  #181                // Method java/lang/System.nanoTime:()J
+        41: getstatic     #183                // Field REPLY_TIMEOUT_NANOS:J
+        44: ladd
+        45: invokeinterface #339,  4          // InterfaceMethod net/anubis/client/discord/DiscordIpc$Pipe.write:(Ljava/nio/ByteBuffer;J)V
+        50: return
+      LineNumberTable:
+        line 169: 0
+        line 170: 15
+        line 171: 33
+        line 172: 50
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      51     0  this   Lnet/anubis/client/discord/DiscordIpc;
+            0      51     1 opcode   I
+            0      51     2  body   [B
+           15      36     3 frame   Ljava/nio/ByteBuffer;
+    Exceptions:
+      throws java.io.IOException
+    MethodParameters:
+      Name                           Flags
+      opcode
+      body
+
+  private static java.lang.String errorMessage(com.google.gson.JsonObject);
+    descriptor: (Lcom/google/gson/JsonObject;)Ljava/lang/String;
+    flags: (0x000a) ACC_PRIVATE, ACC_STATIC
+    Code:
+      stack=2, locals=3, args_size=1
+         0: aload_0
+         1: ldc_w         #342                // String data
+         4: invokevirtual #346                // Method com/google/gson/JsonObject.get:(Ljava/lang/String;)Lcom/google/gson/JsonElement;
+         7: astore_1
+         8: aload_1
+         9: ifnull        26
+        12: aload_1
+        13: invokevirtual #349                // Method com/google/gson/JsonElement.isJsonObject:()Z
+        16: ifeq          26
+        19: aload_1
+        20: invokevirtual #352                // Method com/google/gson/JsonElement.getAsJsonObject:()Lcom/google/gson/JsonObject;
+        23: goto          27
+        26: aload_0
+        27: ldc_w         #354                // String message
+        30: invokestatic  #195                // Method string:(Lcom/google/gson/JsonObject;Ljava/lang/String;)Ljava/lang/String;
+        33: astore_2
+        34: aload_2
+        35: ifnull        42
+        38: aload_2
+        39: goto          46
+        42: aload_0
+        43: invokevirtual #355                // Method com/google/gson/JsonObject.toString:()Ljava/lang/String;
+        46: areturn
+      StackMapTable: number_of_entries = 4
+        frame_type = 252 /* append */
+          offset_delta = 26
+          locals = [ class com/google/gson/JsonElement ]
+        frame_type = 64 /* same_locals_1_stack_item */
+          stack = [ class com/google/gson/JsonObject ]
+        frame_type = 252 /* append */
+          offset_delta = 14
+          locals = [ class java/lang/String ]
+        frame_type = 67 /* same_locals_1_stack_item */
+          stack = [ class java/lang/String ]
+      LineNumberTable:
+        line 175: 0
+        line 176: 8
+        line 177: 34
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      47     0  body   Lcom/google/gson/JsonObject;
+            8      39     1  data   Lcom/google/gson/JsonElement;
+           34      13     2 message   Ljava/lang/String;
+    MethodParameters:
+      Name                           Flags
+      body
+
+  private static java.lang.String string(com.google.gson.JsonObject, java.lang.String);
+    descriptor: (Lcom/google/gson/JsonObject;Ljava/lang/String;)Ljava/lang/String;
+    flags: (0x000a) ACC_PRIVATE, ACC_STATIC
+    Code:
+      stack=2, locals=3, args_size=2
+         0: aload_0
+         1: aload_1
+         2: invokevirtual #346                // Method com/google/gson/JsonObject.get:(Ljava/lang/String;)Lcom/google/gson/JsonElement;
+         5: astore_2
+         6: aload_2
+         7: ifnull        24
+        10: aload_2
+        11: invokevirtual #361                // Method com/google/gson/JsonElement.isJsonPrimitive:()Z
+        14: ifeq          24
+        17: aload_2
+        18: invokevirtual #364                // Method com/google/gson/JsonElement.getAsString:()Ljava/lang/String;
+        21: goto          25
+        24: aconst_null
+        25: areturn
+      StackMapTable: number_of_entries = 2
+        frame_type = 252 /* append */
+          offset_delta = 24
+          locals = [ class com/google/gson/JsonElement ]
+        frame_type = 64 /* same_locals_1_stack_item */
+          stack = [ class java/lang/String ]
+      LineNumberTable:
+        line 181: 0
+        line 182: 6
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      26     0 object   Lcom/google/gson/JsonObject;
+            0      26     1   key   Ljava/lang/String;
+            6      20     2 value   Lcom/google/gson/JsonElement;
+    MethodParameters:
+      Name                           Flags
+      object
+      key
+
+  private static net.anubis.client.discord.DiscordIpc$Pipe openWindowsPipe();
+    descriptor: ()Lnet/anubis/client/discord/DiscordIpc$Pipe;
+    flags: (0x000a) ACC_PRIVATE, ACC_STATIC
+    Code:
+      stack=6, locals=2, args_size=0
+         0: iconst_0
+         1: istore_0
+         2: iload_0
+         3: bipush        10
+         5: if_icmpge     39
+         8: new           #11                 // class net/anubis/client/discord/DiscordIpc$WindowsPipe
+        11: dup
+        12: new           #369                // class java/io/RandomAccessFile
+        15: dup
+        16: iload_0
+        17: invokedynamic #372,  0            // InvokeDynamic #3:makeConcatWithConstants:(I)Ljava/lang/String;
+        22: ldc_w         #374                // String rw
+        25: invokespecial #376                // Method java/io/RandomAccessFile."<init>":(Ljava/lang/String;Ljava/lang/String;)V
+        28: invokespecial #379                // Method net/anubis/client/discord/DiscordIpc$WindowsPipe."<init>":(Ljava/io/RandomAccessFile;)V
+        31: areturn
+        32: astore_1
+        33: iinc          0, 1
+        36: goto          2
+        39: aconst_null
+        40: areturn
+      Exception table:
+         from    to  target type
+             8    31    32   Class java/io/FileNotFoundException
+      StackMapTable: number_of_entries = 3
+        frame_type = 252 /* append */
+          offset_delta = 2
+          locals = [ int ]
+        frame_type = 93 /* same_locals_1_stack_item */
+          stack = [ class java/io/FileNotFoundException ]
+        frame_type = 250 /* chop */
+          offset_delta = 6
+      LineNumberTable:
+        line 186: 0
+        line 188: 8
+        line 189: 32
+        line 186: 33
+        line 192: 39
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            2      37     0  slot   I
+
+  private static net.anubis.client.discord.DiscordIpc$Pipe openUnixSocket();
+    descriptor: ()Lnet/anubis/client/discord/DiscordIpc$Pipe;
+    flags: (0x000a) ACC_PRIVATE, ACC_STATIC
+    Code:
+      stack=3, locals=6, args_size=0
+         0: invokestatic  #384                // Method unixFolders:()Ljava/util/Set;
+         3: invokeinterface #390,  1          // InterfaceMethod java/util/Set.iterator:()Ljava/util/Iterator;
+         8: astore_0
+         9: aload_0
+        10: invokeinterface #395,  1          // InterfaceMethod java/util/Iterator.hasNext:()Z
+        15: ifeq          119
+        18: aload_0
+        19: invokeinterface #399,  1          // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+        24: checkcast     #401                // class java/nio/file/Path
+        27: astore_1
+        28: iconst_0
+        29: istore_2
+        30: iload_2
+        31: bipush        10
+        33: if_icmpge     116
+        36: aload_1
+        37: iload_2
+        38: invokedynamic #404,  0            // InvokeDynamic #4:makeConcatWithConstants:(I)Ljava/lang/String;
+        43: invokeinterface #408,  2          // InterfaceMethod java/nio/file/Path.resolve:(Ljava/lang/String;)Ljava/nio/file/Path;
+        48: astore_3
+        49: aload_3
+        50: iconst_0
+        51: anewarray     #410                // class java/nio/file/LinkOption
+        54: invokestatic  #416                // Method java/nio/file/Files.exists:(Ljava/nio/file/Path;[Ljava/nio/file/LinkOption;)Z
+        57: ifne          63
+        60: goto          110
+        63: getstatic     #422                // Field java/net/StandardProtocolFamily.UNIX:Ljava/net/StandardProtocolFamily;
+        66: invokestatic  #428                // Method java/nio/channels/SocketChannel.open:(Ljava/net/ProtocolFamily;)Ljava/nio/channels/SocketChannel;
+        69: astore        4
+        71: aload         4
+        73: aload_3
+        74: invokestatic  #434                // Method java/net/UnixDomainSocketAddress.of:(Ljava/nio/file/Path;)Ljava/net/UnixDomainSocketAddress;
+        77: invokevirtual #437                // Method java/nio/channels/SocketChannel.connect:(Ljava/net/SocketAddress;)Z
+        80: pop
+        81: aload         4
+        83: iconst_0
+        84: invokevirtual #441                // Method java/nio/channels/SocketChannel.configureBlocking:(Z)Ljava/nio/channels/SelectableChannel;
+        87: pop
+        88: new           #9                  // class net/anubis/client/discord/DiscordIpc$UnixPipe
+        91: dup
+        92: aload         4
+        94: invokespecial #444                // Method net/anubis/client/discord/DiscordIpc$UnixPipe."<init>":(Ljava/nio/channels/SocketChannel;)V
+        97: areturn
+        98: astore        5
+       100: aload         4
+       102: invokevirtual #445                // Method java/nio/channels/SocketChannel.close:()V
+       105: aload         5
+       107: athrow
+       108: astore        4
+       110: iinc          2, 1
+       113: goto          30
+       116: goto          9
+       119: aconst_null
+       120: areturn
+      Exception table:
+         from    to  target type
+            71    97    98   Class java/io/IOException
+            63    97   108   Class java/io/IOException
+            98   108   108   Class java/io/IOException
+      StackMapTable: number_of_entries = 8
+        frame_type = 252 /* append */
+          offset_delta = 9
+          locals = [ class java/util/Iterator ]
+        frame_type = 253 /* append */
+          offset_delta = 20
+          locals = [ class java/nio/file/Path, int ]
+        frame_type = 252 /* append */
+          offset_delta = 32
+          locals = [ class java/nio/file/Path ]
+        frame_type = 255 /* full_frame */
+          offset_delta = 34
+          locals = [ class java/util/Iterator, class java/nio/file/Path, int, class java/nio/file/Path, class java/nio/channels/SocketChannel ]
+          stack = [ class java/io/IOException ]
+        frame_type = 255 /* full_frame */
+          offset_delta = 9
+          locals = [ class java/util/Iterator, class java/nio/file/Path, int, class java/nio/file/Path ]
+          stack = [ class java/io/IOException ]
+        frame_type = 250 /* chop */
+          offset_delta = 1
+        frame_type = 249 /* chop */
+          offset_delta = 5
+        frame_type = 250 /* chop */
+          offset_delta = 2
+      LineNumberTable:
+        line 196: 0
+        line 197: 28
+        line 198: 36
+        line 199: 49
+        line 201: 63
+        line 203: 71
+        line 204: 81
+        line 205: 88
+        line 206: 98
+        line 207: 100
+        line 208: 105
+        line 210: 108
+        line 197: 110
+        line 213: 116
+        line 214: 119
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+          100       8     5 failure   Ljava/io/IOException;
+           71      37     4 channel   Ljava/nio/channels/SocketChannel;
+           49      61     3 socket   Ljava/nio/file/Path;
+           30      86     2  slot   I
+           28      88     1 folder   Ljava/nio/file/Path;
+
+  private static java.util.Set<java.nio.file.Path> unixFolders();
+    descriptor: ()Ljava/util/Set;
+    flags: (0x000a) ACC_PRIVATE, ACC_STATIC
+    Code:
+      stack=3, locals=7, args_size=0
+         0: new           #456                // class java/util/LinkedHashSet
+         3: dup
+         4: invokespecial #457                // Method java/util/LinkedHashSet."<init>":()V
+         7: astore_0
+         8: getstatic     #459                // Field UNIX_TEMP_VARIABLES:[Ljava/lang/String;
+        11: astore_1
+        12: aload_1
+        13: arraylength
+        14: istore_2
+        15: iconst_0
+        16: istore_3
+        17: iload_3
+        18: iload_2
+        19: if_icmpge     77
+        22: aload_1
+        23: iload_3
+        24: aaload
+        25: astore        4
+        27: aload         4
+        29: invokestatic  #463                // Method java/lang/System.getenv:(Ljava/lang/String;)Ljava/lang/String;
+        32: astore        5
+        34: aload         5
+        36: ifnull        71
+        39: aload         5
+        41: invokevirtual #466                // Method java/lang/String.isBlank:()Z
+        44: ifeq          50
+        47: goto          71
+        50: aload_0
+        51: aload         5
+        53: iconst_0
+        54: anewarray     #108                // class java/lang/String
+        57: invokestatic  #469                // InterfaceMethod java/nio/file/Path.of:(Ljava/lang/String;[Ljava/lang/String;)Ljava/nio/file/Path;
+        60: invokeinterface #471,  2          // InterfaceMethod java/util/Set.add:(Ljava/lang/Object;)Z
+        65: pop
+        66: goto          71
+        69: astore        6
+        71: iinc          3, 1
+        74: goto          17
+        77: aload_0
+        78: ldc_w         #473                // String /tmp
+        81: iconst_0
+        82: anewarray     #108                // class java/lang/String
+        85: invokestatic  #469                // InterfaceMethod java/nio/file/Path.of:(Ljava/lang/String;[Ljava/lang/String;)Ljava/nio/file/Path;
+        88: invokeinterface #471,  2          // InterfaceMethod java/util/Set.add:(Ljava/lang/Object;)Z
+        93: pop
+        94: new           #456                // class java/util/LinkedHashSet
+        97: dup
+        98: invokespecial #457                // Method java/util/LinkedHashSet."<init>":()V
+       101: astore_1
+       102: aload_0
+       103: invokeinterface #390,  1          // InterfaceMethod java/util/Set.iterator:()Ljava/util/Iterator;
+       108: astore_2
+       109: aload_2
+       110: invokeinterface #395,  1          // InterfaceMethod java/util/Iterator.hasNext:()Z
+       115: ifeq          163
+       118: aload_2
+       119: invokeinterface #399,  1          // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+       124: checkcast     #401                // class java/nio/file/Path
+       127: astore_3
+       128: aload_1
+       129: aload_3
+       130: invokeinterface #471,  2          // InterfaceMethod java/util/Set.add:(Ljava/lang/Object;)Z
+       135: pop
+       136: aload_1
+       137: aload_3
+       138: ldc_w         #475                // String app
+       141: invokeinterface #408,  2          // InterfaceMethod java/nio/file/Path.resolve:(Ljava/lang/String;)Ljava/nio/file/Path;
+       146: ldc_w         #477                // String *
+       149: invokestatic  #481                // Method addSubfolders:(Ljava/util/Set;Ljava/nio/file/Path;Ljava/lang/String;)V
+       152: aload_1
+       153: aload_3
+       154: ldc_w         #483                // String snap.*
+       157: invokestatic  #481                // Method addSubfolders:(Ljava/util/Set;Ljava/nio/file/Path;Ljava/lang/String;)V
+       160: goto          109
+       163: aload_1
+       164: areturn
+      Exception table:
+         from    to  target type
+            50    66    69   Class java/nio/file/InvalidPathException
+      StackMapTable: number_of_entries = 7
+        frame_type = 255 /* full_frame */
+          offset_delta = 17
+          locals = [ class java/util/Set, class "[Ljava/lang/String;", int, int ]
+          stack = []
+        frame_type = 253 /* append */
+          offset_delta = 32
+          locals = [ class java/lang/String, class java/lang/String ]
+        frame_type = 82 /* same_locals_1_stack_item */
+          stack = [ class java/nio/file/InvalidPathException ]
+        frame_type = 249 /* chop */
+          offset_delta = 1
+        frame_type = 248 /* chop */
+          offset_delta = 5
+        frame_type = 253 /* append */
+          offset_delta = 31
+          locals = [ class java/util/Set, class java/util/Iterator ]
+        frame_type = 250 /* chop */
+          offset_delta = 53
+      LineNumberTable:
+        line 218: 0
+        line 219: 8
+        line 220: 27
+        line 221: 34
+        line 223: 50
+        line 225: 66
+        line 224: 69
+        line 219: 71
+        line 227: 77
+        line 228: 94
+        line 229: 102
+        line 230: 128
+        line 231: 136
+        line 232: 152
+        line 233: 160
+        line 234: 163
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+           34      37     5 value   Ljava/lang/String;
+           27      44     4 variable   Ljava/lang/String;
+          128      32     3  root   Ljava/nio/file/Path;
+            8     157     0 roots   Ljava/util/Set;
+          102      63     1 folders   Ljava/util/Set;
+      LocalVariableTypeTable:
+        Start  Length  Slot  Name   Signature
+            8     157     0 roots   Ljava/util/Set<Ljava/nio/file/Path;>;
+          102      63     1 folders   Ljava/util/Set<Ljava/nio/file/Path;>;
+    Signature: #452                         // ()Ljava/util/Set<Ljava/nio/file/Path;>;
+
+  private static void addSubfolders(java.util.Set<java.nio.file.Path>, java.nio.file.Path, java.lang.String);
+    descriptor: (Ljava/util/Set;Ljava/nio/file/Path;Ljava/lang/String;)V
+    flags: (0x000a) ACC_PRIVATE, ACC_STATIC
+    Code:
+      stack=2, locals=6, args_size=3
+         0: aload_1
+         1: iconst_0
+         2: anewarray     #410                // class java/nio/file/LinkOption
+         5: invokestatic  #499                // Method java/nio/file/Files.isDirectory:(Ljava/nio/file/Path;[Ljava/nio/file/LinkOption;)Z
+         8: ifne          12
+        11: return
+        12: aload_1
+        13: aload_2
+        14: invokestatic  #503                // Method java/nio/file/Files.newDirectoryStream:(Ljava/nio/file/Path;Ljava/lang/String;)Ljava/nio/file/DirectoryStream;
+        17: astore_3
+        18: aload_3
+        19: invokeinterface #506,  1          // InterfaceMethod java/nio/file/DirectoryStream.iterator:()Ljava/util/Iterator;
+        24: astore        4
+        26: aload         4
+        28: invokeinterface #395,  1          // InterfaceMethod java/util/Iterator.hasNext:()Z
+        33: ifeq          72
+        36: aload         4
+        38: invokeinterface #399,  1          // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+        43: checkcast     #401                // class java/nio/file/Path
+        46: astore        5
+        48: aload         5
+        50: iconst_0
+        51: anewarray     #410                // class java/nio/file/LinkOption
+        54: invokestatic  #499                // Method java/nio/file/Files.isDirectory:(Ljava/nio/file/Path;[Ljava/nio/file/LinkOption;)Z
+        57: ifeq          69
+        60: aload_0
+        61: aload         5
+        63: invokeinterface #471,  2          // InterfaceMethod java/util/Set.add:(Ljava/lang/Object;)Z
+        68: pop
+        69: goto          26
+        72: aload_3
+        73: ifnull        112
+        76: aload_3
+        77: invokeinterface #507,  1          // InterfaceMethod java/nio/file/DirectoryStream.close:()V
+        82: goto          112
+        85: astore        4
+        87: aload_3
+        88: ifnull        109
+        91: aload_3
+        92: invokeinterface #507,  1          // InterfaceMethod java/nio/file/DirectoryStream.close:()V
+        97: goto          109
+       100: astore        5
+       102: aload         4
+       104: aload         5
+       106: invokevirtual #511                // Method java/lang/Throwable.addSuppressed:(Ljava/lang/Throwable;)V
+       109: aload         4
+       111: athrow
+       112: goto          116
+       115: astore_3
+       116: return
+      Exception table:
+         from    to  target type
+            18    72    85   Class java/lang/Throwable
+            91    97   100   Class java/lang/Throwable
+            12   112   115   Class java/io/IOException
+            12   112   115   Class java/lang/SecurityException
+      StackMapTable: number_of_entries = 10
+        frame_type = 12 /* same */
+        frame_type = 253 /* append */
+          offset_delta = 13
+          locals = [ class java/nio/file/DirectoryStream, class java/util/Iterator ]
+        frame_type = 42 /* same */
+        frame_type = 250 /* chop */
+          offset_delta = 2
+        frame_type = 76 /* same_locals_1_stack_item */
+          stack = [ class java/lang/Throwable ]
+        frame_type = 255 /* full_frame */
+          offset_delta = 14
+          locals = [ class java/util/Set, class java/nio/file/Path, class java/lang/String, class java/nio/file/DirectoryStream, class java/lang/Throwable ]
+          stack = [ class java/lang/Throwable ]
+        frame_type = 8 /* same */
+        frame_type = 249 /* chop */
+          offset_delta = 2
+        frame_type = 66 /* same_locals_1_stack_item */
+          stack = [ class java/lang/Exception ]
+        frame_type = 0 /* same */
+      LineNumberTable:
+        line 238: 0
+        line 239: 12
+        line 240: 18
+        line 241: 48
+        line 242: 69
+        line 243: 72
+        line 239: 85
+        line 244: 112
+        line 243: 115
+        line 245: 116
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+           48      21     5 child   Ljava/nio/file/Path;
+           18      94     3 children   Ljava/nio/file/DirectoryStream;
+            0     117     0 folders   Ljava/util/Set;
+            0     117     1 parent   Ljava/nio/file/Path;
+            0     117     2  glob   Ljava/lang/String;
+      LocalVariableTypeTable:
+        Start  Length  Slot  Name   Signature
+           18      94     3 children   Ljava/nio/file/DirectoryStream<Ljava/nio/file/Path;>;
+            0     117     0 folders   Ljava/util/Set<Ljava/nio/file/Path;>;
+    Signature: #490                         // (Ljava/util/Set<Ljava/nio/file/Path;>;Ljava/nio/file/Path;Ljava/lang/String;)V
+    MethodParameters:
+      Name                           Flags
+      folders
+      parent
+      glob
+
+  static {};
+    descriptor: ()V
+    flags: (0x0008) ACC_STATIC
+    Code:
+      stack=4, locals=0, args_size=0
+         0: iconst_4
+         1: anewarray     #108                // class java/lang/String
+         4: dup
+         5: iconst_0
+         6: ldc_w         #518                // String XDG_RUNTIME_DIR
+         9: aastore
+        10: dup
+        11: iconst_1
+        12: ldc_w         #520                // String TMPDIR
+        15: aastore
+        16: dup
+        17: iconst_2
+        18: ldc_w         #522                // String TMP
+        21: aastore
+        22: dup
+        23: iconst_3
+        24: ldc_w         #524                // String TEMP
+        27: aastore
+        28: putstatic     #459                // Field UNIX_TEMP_VARIABLES:[Ljava/lang/String;
+        31: invokestatic  #529                // Method com/sun/jna/Platform.isWindows:()Z
+        34: putstatic     #93                 // Field WINDOWS:Z
+        37: getstatic     #535                // Field java/util/concurrent/TimeUnit.SECONDS:Ljava/util/concurrent/TimeUnit;
+        40: ldc2_w        #536                // long 5l
+        43: invokevirtual #541                // Method java/util/concurrent/TimeUnit.toNanos:(J)J
+        46: putstatic     #183                // Field REPLY_TIMEOUT_NANOS:J
+        49: getstatic     #544                // Field java/util/concurrent/TimeUnit.MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+        52: ldc2_w        #545                // long 20l
+        55: invokevirtual #541                // Method java/util/concurrent/TimeUnit.toNanos:(J)J
+        58: putstatic     #305                // Field READ_POLL_NANOS:J
+        61: invokestatic  #552                // InterfaceMethod java/lang/ProcessHandle.current:()Ljava/lang/ProcessHandle;
+        64: invokeinterface #554,  1          // InterfaceMethod java/lang/ProcessHandle.pid:()J
+        69: putstatic     #137                // Field PID:J
+        72: new           #556                // class com/google/gson/GsonBuilder
+        75: dup
+        76: invokespecial #557                // Method com/google/gson/GsonBuilder."<init>":()V
+        79: invokevirtual #561                // Method com/google/gson/GsonBuilder.serializeNulls:()Lcom/google/gson/GsonBuilder;
+        82: invokevirtual #565                // Method com/google/gson/GsonBuilder.create:()Lcom/google/gson/Gson;
+        85: putstatic     #313                // Field GSON:Lcom/google/gson/Gson;
+        88: return
+      LineNumberTable:
+        line 45: 0
+        line 46: 31
+        line 48: 37
+        line 50: 49
+        line 54: 61
+        line 56: 72
+}
+InnerClasses:
+  private static #18= #13 of #2;          // Pipe=class net/anubis/client/discord/DiscordIpc$Pipe of class net/anubis/client/discord/DiscordIpc
+  private static final #19= #15 of #2;    // Frame=class net/anubis/client/discord/DiscordIpc$Frame of class net/anubis/client/discord/DiscordIpc
+  public static final #20= #17 of #2;     // RefusedException=class net/anubis/client/discord/DiscordIpc$RefusedException of class net/anubis/client/discord/DiscordIpc
+  private static final #21= #11 of #2;    // WindowsPipe=class net/anubis/client/discord/DiscordIpc$WindowsPipe of class net/anubis/client/discord/DiscordIpc
+  private static final #22= #9 of #2;     // UnixPipe=class net/anubis/client/discord/DiscordIpc$UnixPipe of class net/anubis/client/discord/DiscordIpc
+  public static final #27= #24 of #26;    // Lookup=class java/lang/invoke/MethodHandles$Lookup of class java/lang/invoke/MethodHandles
+SourceFile: "DiscordIpc.java"
+RuntimeVisibleAnnotations:
+  0: #566(#365=e#567.#568)
+    net.fabricmc.api.Environment(
+      value=Lnet/fabricmc/api/EnvType;.CLIENT
+    )
+BootstrapMethods:
+  0: #239 REF_invokeStatic java/lang/invoke/StringConcatFactory.makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #232 Discord refused the handshake: \u0001
+  1: #239 REF_invokeStatic java/lang/invoke/StringConcatFactory.makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #262 Discord closed the connection: \u0001
+  2: #239 REF_invokeStatic java/lang/invoke/StringConcatFactory.makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #284 Discord sent a frame of \u0001 bytes
+  3: #239 REF_invokeStatic java/lang/invoke/StringConcatFactory.makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #371 \\\\.\\pipe\\discord-ipc-\u0001
+  4: #239 REF_invokeStatic java/lang/invoke/StringConcatFactory.makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #403 discord-ipc-\u0001
+NestMembers:
+  net/anubis/client/discord/DiscordIpc$UnixPipe
+  net/anubis/client/discord/DiscordIpc$WindowsPipe
+  net/anubis/client/discord/DiscordIpc$Pipe
+  net/anubis/client/discord/DiscordIpc$Frame
+  net/anubis/client/discord/DiscordIpc$RefusedException
