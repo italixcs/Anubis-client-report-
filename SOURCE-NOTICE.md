@@ -5,3 +5,7 @@ The repository's existing MIT license is retained for original report material a
 The supplied Anubis metadata declares GPL-3.0-only. A copy of its supplied license is retained as [ANUBIS-LICENSE.txt](evidence/anubis/ANUBIS-LICENSE.txt). Third-party libraries retain their own copyrights and licenses. Decompiled outputs are static review evidence, not the project's upstream source distribution.
 
 This is an independent exact-hash review. It does not distribute the mod JAR, compiled classes, Android DEX or bundled native binaries, and does not override the stated analysis limits.
+
+## Scanner screenshots and service data
+
+Screenshots and selected public report data reproduce the named scanners' actual displays/results for commentary and verification. Product names, interfaces and trademarks belong to their respective owners. This independent report is not endorsed by VirusTotal, OPSWAT/Filescan.io, Recorded Future/Triage, Hybrid Analysis or RatRater. Source/result URLs are provided in the scanner supplement; locally captured RatRater results are labeled separately from hosted reports.

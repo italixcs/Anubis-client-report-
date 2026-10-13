@@ -9,9 +9,18 @@
 | Read this first | Explore the evidence |
 |---|---|
 | [Full report · 26 sections](reports/ANUBIS-SECURITY-REPORT.md) | [Evidence guide](evidence/anubis/README.md) |
+| [Verified scanner results + real screenshots](reports/EXTERNAL-SCANNER-RESULTS.md) | [Scanner evidence](evidence/scanners/README.md) |
 | [Why scanners might flag it](reports/SCANNER-FLAGS.md) | [All declared Anubis mixins](evidence/anubis/MIXINS.md) |
 | [Token flow and the real concern](reports/ACCOUNT-TOKEN-REVIEW.md) | [Module inventory](evidence/anubis/MODULES.md) |
 | [Methodology and limitations](reports/METHODOLOGY.md) | [Hashes and contextual indicators](evidence/anubis/indicators.json) |
+
+## Verified scanner checks
+
+**VirusTotal: 0/62 detections** in the existing exact-hash report. Thirteen additional engine entries timed out, failed or did not support the file type. **Filescan.io: Low Risk**, with two specific string heuristics explained. **Triage: 3/10 and 5/10** reports retained, with process attribution reviewed. **RatRater 2:** no known-family/session-token flag; remote Quantiy classifier returned `class: no`; two warnings are explained.
+
+[Result links, genuine screenshots, scan limitations and the Filescan.io submission](reports/EXTERNAL-SCANNER-RESULTS.md) are published together. These are observed scanner results, not a safety percentage.
+
+![Actual VirusTotal result for the exact reviewed JAR](assets/scanners/virustotal.png)
 
 ## The assessment
 
@@ -45,13 +54,13 @@ Treat the account file and its copies as secrets. Do not share them. Avoid savin
 - **Discord/webhook references** support status/game notifications; reviewed payloads do not include account tokens.
 - **Plaintext saved tokens** remain a real concern. A true “cheat tool” or “native loader” classification is not automatically false; interpreting it as account theft can be unsupported.
 
-No vendor-specific scan results were supplied or reproduced. [The flag guide](reports/SCANNER-FLAGS.md) explains possible heuristics and their evidence, rather than dismissing every antivirus detection.
+[Verified scanner observations](reports/EXTERNAL-SCANNER-RESULTS.md) include a specific RatRater manifest false positive and Triage alerts attributed to other processes. [The flag guide](reports/SCANNER-FLAGS.md) explains possible heuristics and their evidence; accurate capability signals and plaintext token storage remain real concerns.
 
 ## Evidence at a glance
 
 ![Static evidence coverage](assets/evidence-scope.svg)
 
-The analysis used JADX, CFR, direct class-file parsing, javap, archive inspection, native signatures/symbols/strings, targeted ARM64 disassembly and published-library comparisons. The JAR, target classes/static initializers, nested JARs, DEX and bundled native binaries were **never executed**. Minecraft was not launched.
+The local analysis used JADX, CFR, direct class-file parsing, javap, archive inspection, native signatures/symbols/strings, targeted ARM64 disassembly and published-library comparisons. The JAR, target classes/static initializers, nested JARs, DEX and bundled native binaries were **never executed in our workspace**. Minecraft was not launched here. The scanner supplement separately cites pre-existing third-party sandbox runs and records explicitly authorized public submissions.
 
 Decompiler gaps were checked with complementary sources and/or bytecode. Indexing is not a claim that every runtime path was formally proved. Native/JNI indirection, external runtime libraries and independently installed addons limit certainty.
 

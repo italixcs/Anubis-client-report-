@@ -4,7 +4,7 @@
 
 A scanner may recognize an API, string, binary or code pattern without tracing its purpose. An account-stealing conclusion needs a reachable path from credentials to an unauthorized use or recipient.
 
-**No vendor-specific alert list or antivirus scan was supplied or reproduced.** The triggers below are possible heuristic matches, not claimed detections by a named product. A new alert should be evaluated against its exact label, artifact hash and evidence; this guide is not a blanket dismissal.
+**Actual scanner results are now documented in [Verified scanner results](EXTERNAL-SCANNER-RESULTS.md), with links and genuine screenshots.** That supplement distinguishes VirusTotal's 0/62 result, Filescan's Low Risk verdict and proxyserver/AutoClose string heuristics, RatRater's specific manifest false positive, accurate coverage/unsigned-JAR warnings and Triage telemetry attributed to other processes. The general matrix below describes possible heuristic matches, not additional claimed vendor detections. A new alert should be evaluated against its exact label, artifact hash and evidence; this guide is not a blanket dismissal.
 
 ![Evidence scope](../assets/evidence-scope.svg)
 

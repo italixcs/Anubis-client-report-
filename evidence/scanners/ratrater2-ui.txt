@@ -1,0 +1,20 @@
+Anubis Beta 0.9.9.1.jar
+
+21 MB
+
+20a03c38a39d013bf5f6836818c0b665478eb3381181fd372cd661c438fd752a
+
+Browser
+We haven't seen this file
+100% done
+Possible obfuscation
+Obfuscation
+
+Non-scanned executable files
+
+META-INF/jars/fabric-api-base-1.0.5+4ebb5c083e.jar
+
+Obfuscator noted in manifest.mf
+
+META-INF/MANIFEST.MF
+Webhooks

@@ -1,0 +1,17 @@
+{
+  "scanner_source": "https://github.com/KTibow/RatRater2/blob/c8bcb930e863f76b29277d9309b50532b00558f1/src/lib/analysis/runAnalysis.ts",
+  "scanner_source_commit": "c8bcb930e863f76b29277d9309b50532b00558f1",
+  "manifest_pattern": "^(?=.*protected).*$",
+  "matched_physical_lines": [
+    " s;net/anubis/client/module/impl/misc/nameprotect/ProtectedText$Pieces.c",
+    " lass;net/anubis/client/module/impl/misc/nameprotect/ProtectedText$Runs.",
+    " class;net/anubis/client/module/impl/misc/nameprotect/ProtectedText.clas",
+    " s/ProtectedChunkStore$Bucket.class;net/anubis/client/util/playerbypass/",
+    " ProtectedChunkStore.class;net/anubis/client/util/playerbypass/VisibleCh"
+  ],
+  "logical_header": "Fabric-Loom-Client-Only-Entries",
+  "official_hash_json_sha256": "671cda9075f8ac494f429d44f5e8219a8e1b1353a5057a3dbec10e7cb12b264c",
+  "official_hash_json_git_blob": "8ee9faff24f6f066bedb8e0016d250b62d581a2c",
+  "official_hash_snapshot_entries": 662,
+  "exact_hash_matches": 0
+}

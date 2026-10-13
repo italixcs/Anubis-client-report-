@@ -1,0 +1,231 @@
+Login
+Reports
+
+Overview
+
+overview
+
+5
+
+Static
+
+static
+
+3
+
+Anubis Bet....1.jar
+
+windows10-2004-x64
+
+5
+
+Anubis Bet....1.jar
+
+windows11-ltsc_2024-x64
+
+1
+Download Sample
+Feedback
+Print to PDF
+PCAPNG
+Analysis
+user interaction
+yes
+max time kernel
+149s
+max time network
+140s
+platform
+windows10-2004_x64
+resource
+win10v2004-20260911-en
+resource tags
+
+
+ARCH:X64
+ARCH:X86
+IMAGE:WIN10V2004-20260911-EN
+LOCALE:EN-US
+OS:WINDOWS10-2004-X64
+SYSTEM
+WINDOWS
+submitted
+12/10/2026, 15:07 UTC
+Sharing
+Copy URL
+Twitter
+E-mail
+Report
+Analysis Logs
+General
+Target
+Anubis Beta 0.9.9.1.jar
+Size
+20.2MB
+Sample
+261012-shcdqaxvez
+SHA256
+20a03c38a39d013bf5f6836818c0b665478eb3381181fd372cd661c438fd752a
+MD5
+SHA1
+SHA512
+SSDEEP
+TLSH
+Score
+5
+/10
+Malware Config
+Signatures
+Drops file in System32 directory 11 IoCs
+Checks SCSI registry key(s) 3 TTPs 3 IoCs
+
+SCSI information is often read in order to detect sandboxing environments.
+
+Modifies registry class 1 IoCs
+Suspicious behavior: EnumeratesProcesses 15 IoCs
+Suspicious behavior: GetForegroundWindowSpam 1 IoCs
+Suspicious use of AdjustPrivilegeToken 5 IoCs
+Suspicious use of FindShellTrayWindow 39 IoCs
+Suspicious use of SendNotifyMessage 38 IoCs
+Suspicious use of SetWindowsHookEx 2 IoCs
+Processes
+C:\Program Files (x86)\Common Files\Oracle\Java\javapath\java.exe
+java -jar "C:\Users\Admin\AppData\Local\Temp\Anubis Beta 0.9.9.1.jar"
+PID:3772
+C:\Windows\system32\taskmgr.exe
+"C:\Windows\system32\taskmgr.exe" /4
+PID:4344
+C:\Windows\system32\mspaint.exe
+"C:\Windows\system32\mspaint.exe" "C:\Users\Admin\Desktop\UnlockWrite.jpg" /ForceBootstrapPaint3D
+PID:444
+C:\Windows\System32\svchost.exe
+C:\Windows\System32\svchost.exe -k LocalSystemNetworkRestricted -p -s DsSvc
+PID:760
+C:\Windows\system32\OpenWith.exe
+C:\Windows\system32\OpenWith.exe -Embedding
+PID:4012
+Network
+Requests
+3
+TCP
+1
+UDP
+1
+DNS
+c.pki.goog
+GET
+http://c.pki.goog/r/r1.crl
+GET
+http://c.pki.goog/wr2/oBFYYahzgVI.crl
+MITRE ATT&CK Enterprise
+v16
+Replay Monitor
+Downloads
+
+DSS.log
+
+Path
+C:\Windows\System32\config\systemprofile\AppData\Local\DataSharing\Storage\DSS.log
+Size
+64KB
+SHA256
+693131c199c670640ce34c354131d5116f4922e372b088270115784ee447ecfc
+MD5
+SHA1
+SHA512
+SSDEEP
+TLSH
+Submit
+Download
+
+memory/760-44-0x0000022616890000-0x0000022616891000-memory.dmp
+
+Download
+
+memory/760-48-0x00000226168A0000-0x00000226168A1000-memory.dmp
+
+Download
+
+memory/760-45-0x00000226168A0000-0x00000226168A1000-memory.dmp
+
+Download
+
+memory/760-26-0x0000022606460000-0x0000022606470000-memory.dmp
+
+Download
+
+memory/760-43-0x0000022616890000-0x0000022616891000-memory.dmp
+
+Download
+
+memory/760-42-0x0000022616800000-0x0000022616801000-memory.dmp
+
+Download
+
+memory/760-40-0x0000022616800000-0x0000022616801000-memory.dmp
+
+Download
+
+memory/760-38-0x0000022616780000-0x0000022616781000-memory.dmp
+
+Download
+
+memory/760-30-0x00000226064A0000-0x00000226064B0000-memory.dmp
+
+Download
+
+memory/3772-12-0x0000023F8B890000-0x0000023F8BB00000-memory.dmp
+
+Download
+
+memory/3772-2-0x0000023F8B890000-0x0000023F8BB00000-memory.dmp
+
+Download
+
+memory/3772-11-0x0000023F8A040000-0x0000023F8A041000-memory.dmp
+
+Download
+
+memory/4344-14-0x000001FC14590000-0x000001FC14591000-memory.dmp
+
+Download
+
+memory/4344-19-0x000001FC14590000-0x000001FC14591000-memory.dmp
+
+Download
+
+memory/4344-20-0x000001FC14590000-0x000001FC14591000-memory.dmp
+
+Download
+
+memory/4344-21-0x000001FC14590000-0x000001FC14591000-memory.dmp
+
+Download
+
+memory/4344-22-0x000001FC14590000-0x000001FC14591000-memory.dmp
+
+Download
+
+memory/4344-23-0x000001FC14590000-0x000001FC14591000-memory.dmp
+
+Download
+
+memory/4344-24-0x000001FC14590000-0x000001FC14591000-memory.dmp
+
+Download
+
+memory/4344-25-0x000001FC14590000-0x000001FC14591000-memory.dmp
+
+Download
+
+memory/4344-15-0x000001FC14590000-0x000001FC14591000-memory.dmp
+
+Download
+
+memory/4344-13-0x000001FC14590000-0x000001FC14591000-memory.dmp
+
+Download
+
+© 2018-2026
+
+Terms | Privacy

@@ -1,0 +1,13 @@
+{
+  "service": "RatRater 2 Quantiy classifier",
+  "endpoint": "https://rr-quantiy.ktibow.workers.dev/",
+  "method": "POST",
+  "public_submission_authorized": true,
+  "http_status": 200,
+  "completed_at_utc": "2026-10-13T21:49:57.189367+00:00",
+  "sha256": "20a03c38a39d013bf5f6836818c0b665478eb3381181fd372cd661c438fd752a",
+  "result": {
+    "class": "no"
+  },
+  "limitation": "Only this classifier; no hosted sample identifier or shareable per-file result URL returned."
+}

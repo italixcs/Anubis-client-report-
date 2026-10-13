@@ -1,0 +1,60 @@
+{
+  "url": "https://www.filescan.io/uploads/6acea7db6d047129e7cd2b7a",
+  "captured_at_utc": "2026-10-13T21:56:23.550Z",
+  "links": [
+    {
+      "text": "Reports",
+      "url": "https://www.filescan.io/reports"
+    }
+  ],
+  "responses": [
+    {
+      "url": "https://www.filescan.io/api/system/config",
+      "status": 200
+    },
+    {
+      "url": "https://www.filescan.io/api/system/product-features",
+      "status": 200
+    },
+    {
+      "url": "https://www.filescan.io/api/system/mitre",
+      "status": 200
+    },
+    {
+      "url": "https://www.filescan.io/api/reward/2026-summer/meta",
+      "status": 200
+    },
+    {
+      "url": "https://www.filescan.io/api/system/version",
+      "status": 200
+    },
+    {
+      "url": "https://www.filescan.io/api/system/translations/en",
+      "status": 200
+    },
+    {
+      "url": "https://www.filescan.io/api/system/mbc",
+      "status": 200
+    },
+    {
+      "url": "https://www.filescan.io/api/system/logo?theme=light&type=footer&time=1720805293",
+      "status": 200
+    },
+    {
+      "url": "https://www.filescan.io/api/system/atlas",
+      "status": 200
+    },
+    {
+      "url": "https://www.filescan.io/api/system/version",
+      "status": 200
+    },
+    {
+      "url": "https://www.filescan.io/api/system/logo?theme=light&type=top_menu&time=1754900794",
+      "status": 200
+    },
+    {
+      "url": "https://www.filescan.io/api/scan/6acea7db6d047129e7cd2b7a/report?filter=general&filter=allSignalGroups&filter=allTags&filter=overallState&filter=taskWarnings&filter=positionInQueue&filter=taskReference&filter=subtaskReferences&filter=interestingScore&filter=finalVerdict&filter=fd%3AfileDownloadResults&filter=fd%3AextractedUrls&filter=fd%3AsignalGroupsByID&filter=dr%3AdomainResolveResults&filter=dr%3AsignalGroupsByID&filter=v%3AvisualizedSample.compressedBase64&filter=v%3ArenderedImages&filter=v%3AsignalGroupsByID&filter=wi%3AwhoisLookupResults&filter=ur%3ArenderResults&filter=f%3Aall&filter=o%3Aall&filter=llmds%3Aall&sorting=allSignalGroups(description%3Aasc%2CallMitreTechniques%3Adesc%2CaverageSignalStrength%3Adesc)&sorting=allOsintTags(tag.name%3Aasc)&sorting=f%3AdisassemblySections(levelOfInformation%3Adesc)&sorting=f%3AextendedData.importsEx(module.suspicious%3Adesc)",
+      "status": 200
+    }
+  ]
+}

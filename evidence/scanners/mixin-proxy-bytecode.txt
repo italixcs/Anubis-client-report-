@@ -1,0 +1,27 @@
+Compiled from "MixinProxyServerStatusPinger.java"
+public abstract class com.example.client.mixin.MixinProxyServerStatusPinger {
+  public com.example.client.mixin.MixinProxyServerStatusPinger();
+    Code:
+       0: aload_0
+       1: invokespecial #14                 // Method java/lang/Object."<init>":()V
+       4: return
+
+  private io.netty.bootstrap.AbstractBootstrap<?, ?> anubis$routeLegacyPing(io.netty.bootstrap.Bootstrap, io.netty.channel.ChannelHandler, com.llamalad7.mixinextras.injector.wrapoperation.Operation<io.netty.bootstrap.AbstractBootstrap<?, ?>>, java.net.InetSocketAddress);
+    Code:
+       0: aload_3
+       1: iconst_2
+       2: anewarray     #4                  // class java/lang/Object
+       5: dup
+       6: iconst_0
+       7: aload_1
+       8: aastore
+       9: dup
+      10: iconst_1
+      11: aload         4
+      13: aload_2
+      14: invokestatic  #41                 // Method net/anubis/client/proxy/ProxyRouting.route:(Ljava/net/InetSocketAddress;Lio/netty/channel/ChannelHandler;)Lio/netty/channel/ChannelHandler;
+      17: aastore
+      18: invokeinterface #47,  2           // InterfaceMethod com/llamalad7/mixinextras/injector/wrapoperation/Operation.call:([Ljava/lang/Object;)Ljava/lang/Object;
+      23: checkcast     #49                 // class io/netty/bootstrap/AbstractBootstrap
+      26: areturn
+}

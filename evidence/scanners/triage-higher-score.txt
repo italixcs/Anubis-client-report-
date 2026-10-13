@@ -1,0 +1,88 @@
+Login
+Reports
+
+Overview
+
+overview
+
+5
+
+Static
+
+static
+
+3
+
+Anubis Bet....1.jar
+
+windows10-2004-x64
+
+5
+
+Anubis Bet....1.jar
+
+windows11-ltsc_2024-x64
+
+1
+Download Sample
+Feedback
+Print to PDF
+Sharing
+Copy URL
+Twitter
+E-mail
+General
+Target
+Anubis Beta 0.9.9.1.jar
+Size
+20.2MB
+Sample
+261012-shcdqaxvez
+SHA256
+20a03c38a39d013bf5f6836818c0b665478eb3381181fd372cd661c438fd752a
+MD5
+SHA1
+SHA512
+SSDEEP
+TLSH
+Score
+5
+/10
+Malware Config
+Targets
+Target
+Anubis Beta 0.9.9.1.jar
+Size
+20.2MB
+SHA256
+20a03c38a39d013bf5f6836818c0b665478eb3381181fd372cd661c438fd752a
+MD5
+SHA1
+SHA512
+SSDEEP
+TLSH
+Score
+5
+/10
+Drops file in System32 directory
+behavioral1
+behavioral2
+MITRE ATT&CK Enterprise
+v16
+Tasks
+static1
+Score
+3
+/10
+behavioral1
+Score
+5
+/10
+behavioral2
+Score
+1
+/10
+
+© 2018-2026
+
+Terms | Privacy

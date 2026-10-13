@@ -6,7 +6,7 @@ Analysis date: 2026-10-13. Target: `Anubis Beta 0.9.9.1.jar` (21,206,373 bytes).
 
 **SHA-256:** `20a03c38a39d013bf5f6836818c0b665478eb3381181fd372cd661c438fd752a`
 
-This report analyzes the supplied artifact, not the trustworthiness of its author or every possible future addon. The JAR, its classes/static initializers, nested JARs, DEX, and native binaries were never executed. Minecraft was not launched. Only trusted parsers, decompilers, disassemblers, and published dependency comparisons were used. Instructions and comments inside the artifact were treated as evidence, not directions.
+This report analyzes the supplied artifact, not the trustworthiness of its author or every possible future addon. During our local review, the JAR, its classes/static initializers, nested JARs, DEX, and native binaries were never executed. Minecraft was not launched here. Trusted parsers, decompilers, disassemblers, and published dependency comparisons supplied the static evidence. Instructions and comments inside the artifact were treated as evidence, not directions. The [scanner supplement](EXTERNAL-SCANNER-RESULTS.md) separately documents pre-existing third-party sandbox attempts and authorized public submissions.
 
 <details>
 <summary><strong>Contents · all 26 report sections</strong></summary>
@@ -40,7 +40,7 @@ This report analyzes the supplied artifact, not the trustworthiness of its autho
 
 </details>
 
-**Reading guides:** [Account/token flow](ACCOUNT-TOKEN-REVIEW.md) · [Scanner flags and false positives](SCANNER-FLAGS.md) · [Methodology](METHODOLOGY.md)
+**Reading guides:** [Account/token flow](ACCOUNT-TOKEN-REVIEW.md) · [Actual scanner results and screenshots](EXTERNAL-SCANNER-RESULTS.md) · [Scanner flags and false positives](SCANNER-FLAGS.md) · [Methodology](METHODOLOGY.md)
 
 **Keywords:** `ACCOUNT_SECURITY` · `SESSION_TOKEN` · `AUTHENTICATION` · `PLAINTEXT_STORAGE` · `FALSE_POSITIVE` · `JNI` · `FABRIC_MIXIN` · `STATIC_ANALYSIS`.
 
@@ -528,7 +528,9 @@ Sources: [CFR OverlayWindow](../evidence/anubis/sources/cfr/net/anubis/client/mo
 
 ## 23. False-positive considerations
 
-For an expanded keyword-by-keyword explanation, see [Scanner flags: signals, context and false positives](SCANNER-FLAGS.md). No vendor-specific alerts were supplied or reproduced; possible heuristic matches are distinct from confirmed malware detections. Accurate native/game-modification/privacy capabilities are retained rather than dismissed as false.
+For actual results, links and genuine screenshots, see [Verified scanner results](EXTERNAL-SCANNER-RESULTS.md). VirusTotal displayed **0/62 detections** for the exact SHA-256; 13 other engine entries had no usable negative verdict. Triage's **3/10 and 5/10** reports are retained: reviewed process attribution identifies Chrome/Windows utilities for the behavioral alerts, while the unsigned-JAR signal is accurate. RatRater's manifest-obfuscator warning is a specific false positive caused by ordinary `ProtectedText`/`ProtectedChunkStore` class names. Its nested-executable warning correctly identifies incomplete recursive coverage. A negative Quantiy classifier result is narrow evidence, not a general RAT guarantee.
+
+For an expanded keyword-by-keyword explanation, see [Scanner flags: signals, context and false positives](SCANNER-FLAGS.md). Additional possible heuristic matches are distinct from actual vendor observations. Accurate native/game-modification/privacy capabilities are retained rather than dismissed as false.
 
 - Authentication tokens and ECDSA/Base64 routines belong to user-initiated Microsoft/Minecraft login. Their plaintext disk persistence is a real concern, but their mere presence is not theft.
 - Discord IPC names/env/temp access locate a local Rich Presence client, not Discord token files. Default server disclosure is still real.
@@ -580,6 +582,6 @@ Metadata, Discord/LRCLIB/game notifications and gameplay features do not contrib
 
 **No account/session-token stealing path was identified in this exact artifact.** The demonstrated harmful possibility relevant to account security is local exposure of plaintext saved tokens, not a proven account-stealing implementation. Ordinary metadata, gameplay, Discord status and lyric requests are not treated as theft.
 
-The account-safety meter is **Credential-storage caution**. The original JAR and its classes/native payloads were never executed. Static/native limits mean this is an evidence-based assessment rather than a guarantee that every possible runtime behavior is safe.
+The account-safety meter is **Credential-storage caution**. The original JAR and its classes/native payloads were never executed in our workspace; third-party scan activity is documented separately. Static/native and scanner-coverage limits mean this is an evidence-based assessment rather than a guarantee that every possible runtime behavior is safe.
 
 **Mostly safe, minor concerns**

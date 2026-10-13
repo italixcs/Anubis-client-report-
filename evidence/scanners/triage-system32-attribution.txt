@@ -1,0 +1,13 @@
+Drops file in System32 directory 11 IoCs
+description	ioc	Process
+File opened for modification	C:\Windows\system32\config\systemprofile\AppData\Local\DataSharing\Storage\DSS.chk	svchost.exe
+File opened for modification	C:\Windows\system32\config\systemprofile\AppData\Local\DataSharing\Storage\DSS.jtx	svchost.exe
+File created	C:\Windows\system32\config\systemprofile\AppData\Local\DataSharing\Storage\DSSres00001.jrs	svchost.exe
+File created	C:\Windows\system32\config\systemprofile\AppData\Local\DataSharing\Storage\DSS.chk	svchost.exe
+File created	C:\Windows\system32\config\systemprofile\AppData\Local\DataSharing\Storage\DSTokenDB2.jfm	svchost.exe
+File created	C:\Windows\system32\config\systemprofile\AppData\Local\DataSharing\Storage\DSTokenDB2.dat	svchost.exe
+File opened for modification	C:\Windows\system32\config\systemprofile\AppData\Local\DataSharing\Storage\DSS.jcp	svchost.exe
+File opened for modification	C:\Windows\system32\config\systemprofile\AppData\Local\DataSharing\Storage\DSS.log	svchost.exe
+File created	C:\Windows\system32\config\systemprofile\AppData\Local\DataSharing\Storage\DSStmp.log	svchost.exe
+File created	C:\Windows\system32\config\systemprofile\AppData\Local\DataSharing\Storage\DSSres00002.jrs	svchost.exe
+File opened for modification	C:\Windows\system32\config\systemprofile\AppData\Local\DataSharing\Storage\DSTokenDB2.dat	svchost.exe

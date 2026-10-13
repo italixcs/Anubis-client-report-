@@ -1,0 +1,656 @@
+20a03c38a39d013bf5f6836818c0b665478eb3381181fd372cd661c438fd752a |  Triage™
+Login
+Reports
+Overview
+overview
+3
+Static
+static
+3
+Anubis Bet....1.jar
+windows10-2004-x64
+3
+Anubis Bet....1.jar
+windows11-ltsc_2024-x64
+1
+Download Sample
+Feedback
+Print to PDF
+PCAPNG
+Analysis
+user interaction
+yes
+max time kernel
+40s
+max time network
+42s
+platform
+windows10-2004_x64
+resource
+win10v2004-20260911-en
+resource tags
+arch:x64
+arch:x86
+image:win10v2004-20260911-en
+locale:en-us
+os:windows10-2004-x64
+system
+windows
+submitted
+13/10/2026, 17:10
+Sharing
+Copy URL
+Twitter
+E-mail
+Static task
+static1
+1 signatures
+Behavioral task
+behavioral1
+Sample
+Anubis Beta 0.9.9.1.jar
+Resource
+win10v2004-20260911-en
+windows10-2004-x64
+10 signatures
+150 seconds
+discovery
+Behavioral task
+behavioral2
+Sample
+Anubis Beta 0.9.9.1.jar
+Resource
+win11ltsc2024-20260911-en
+windows11-ltsc_2024-x64
+0 signatures
+150 seconds
+Report
+Analysis Logs
+General
+Target
+Anubis Beta 0.9.9.1.jar
+Size
+20.2MB
+Sample
+261013-vpwr2sht7n
+SHA256
+20a03c38a39d013bf5f6836818c0b665478eb3381181fd372cd661c438fd752a
+MD5
+e8f5e1e4a7b4ee4e99e4518c318dc1fd
+SHA1
+50548b8dd5e4d9a1a9cb99dda32ccb75a446650c
+SHA512
+40507864700fa08bee8591e96bf79a0adf1ad67eab78971a9b90116c8c16a46cfcc0446d54caf8ed79de304630dca85148303f966e1f0ca9f029f4d7a532d7ba
+SSDEEP
+393216:3cwzJYMAOBBwk0hVnjQ9lC4CTYVVnLslT+JjKO8zZrlAIKXHXTZhcC:pzJYMAOJ2Vjal7BBhp8zDATlhN
+TLSH
+T12D2733027EEDE17ED81B9772C011C1626D3421C85A0BA44FBE79078E4EE4D574B9ABEC
+MD5
+SHA1
+SHA512
+SSDEEP
+TLSH
+Score
+3
+/10
+discovery
+Malware Config
+Signatures
+Browser Information Discovery
+1 TTPs
+Enumerate browser information.
+discovery
+Browser Information Discovery
+T1217
+System Time Discovery
+1 TTPs  1 IoCs
+Adversary may gather the system time and/or time zone settings from a local or remote system.
+discovery
+System Time Discovery
+T1124
+pid
+Process
+3716
+chrome.exe
+Checks processor information in registry
+2 TTPs  2 IoCs
+Processor information is often read in order to detect sandboxing environments.
+Query Registry
+T1012
+System Information Discovery
+T1082
+description
+ioc
+Process
+Key opened
+\REGISTRY\MACHINE\HARDWARE\DESCRIPTION\System\CentralProcessor\0
+chrome.exe
+Key value queried
+\REGISTRY\MACHINE\HARDWARE\DESCRIPTION\System\CentralProcessor\0\VendorIdentifier
+chrome.exe
+Enumerates system info in registry
+2 TTPs  3 IoCs
+Query Registry
+T1012
+System Information Discovery
+T1082
+description
+ioc
+Process
+Key value queried
+\REGISTRY\MACHINE\HARDWARE\DESCRIPTION\System\BIOS\SystemProductName
+chrome.exe
+Key value queried
+\REGISTRY\MACHINE\HARDWARE\DESCRIPTION\System\BIOS\SystemManufacturer
+chrome.exe
+Key opened
+\REGISTRY\MACHINE\HARDWARE\DESCRIPTION\System\BIOS
+chrome.exe
+Suspicious behavior: EnumeratesProcesses
+2 IoCs
+pid
+Process
+4664
+chrome.exe
+4664
+chrome.exe
+Suspicious behavior: NtCreateUserProcessBlockNonMicrosoftBinary
+5 IoCs
+pid
+Process
+4664
+chrome.exe
+4664
+chrome.exe
+4664
+chrome.exe
+4664
+chrome.exe
+4664
+chrome.exe
+Suspicious use of AdjustPrivilegeToken
+16 IoCs
+description
+pid
+Process
+Token: SeShutdownPrivilege
+4664
+chrome.exe
+Token: SeCreatePagefilePrivilege
+4664
+chrome.exe
+Token: SeShutdownPrivilege
+4664
+chrome.exe
+Token: SeCreatePagefilePrivilege
+4664
+chrome.exe
+Token: SeShutdownPrivilege
+4664
+chrome.exe
+Token: SeCreatePagefilePrivilege
+4664
+chrome.exe
+Token: SeShutdownPrivilege
+4664
+chrome.exe
+Token: SeCreatePagefilePrivilege
+4664
+chrome.exe
+Token: SeShutdownPrivilege
+4664
+chrome.exe
+Token: SeCreatePagefilePrivilege
+4664
+chrome.exe
+Token: SeShutdownPrivilege
+4664
+chrome.exe
+Token: SeCreatePagefilePrivilege
+4664
+chrome.exe
+Token: SeShutdownPrivilege
+4664
+chrome.exe
+Token: SeCreatePagefilePrivilege
+4664
+chrome.exe
+Token: SeShutdownPrivilege
+4664
+chrome.exe
+Token: SeCreatePagefilePrivilege
+4664
+chrome.exe
+Suspicious use of FindShellTrayWindow
+34 IoCs
+pid
+Process
+4664
+chrome.exe
+4664
+chrome.exe
+4664
+chrome.exe
+4664
+chrome.exe
+4664
+chrome.exe
+4664
+chrome.exe
+4664
+chrome.exe
+4664
+chrome.exe
+4664
+chrome.exe
+4664
+chrome.exe
+4664
+chrome.exe
+4664
+chrome.exe
+4664
+chrome.exe
+4664
+chrome.exe
+4664
+chrome.exe
+4664
+chrome.exe
+4664
+chrome.exe
+4664
+chrome.exe
+4664
+chrome.exe
+4664
+chrome.exe
+4664
+chrome.exe
+4664
+chrome.exe
+4664
+chrome.exe
+4664
+chrome.exe
+4664
+chrome.exe
+4664
+chrome.exe
+4664
+chrome.exe
+4664
+chrome.exe
+4664
+chrome.exe
+4664
+chrome.exe
+4664
+chrome.exe
+4664
+chrome.exe
+4664
+chrome.exe
+4664
+chrome.exe
+Suspicious use of SendNotifyMessage
+32 IoCs
+pid
+Process
+4664
+chrome.exe
+4664
+chrome.exe
+4664
+chrome.exe
+4664
+chrome.exe
+4664
+chrome.exe
+4664
+chrome.exe
+4664
+chrome.exe
+4664
+chrome.exe
+4664
+chrome.exe
+4664
+chrome.exe
+4664
+chrome.exe
+4664
+chrome.exe
+4664
+chrome.exe
+4664
+chrome.exe
+4664
+chrome.exe
+4664
+chrome.exe
+4664
+chrome.exe
+4664
+chrome.exe
+4664
+chrome.exe
+4664
+chrome.exe
+4664
+chrome.exe
+4664
+chrome.exe
+4664
+chrome.exe
+4664
+chrome.exe
+4664
+chrome.exe
+4664
+chrome.exe
+4664
+chrome.exe
+4664
+chrome.exe
+4664
+chrome.exe
+4664
+chrome.exe
+4664
+chrome.exe
+4664
+chrome.exe
+Suspicious use of WriteProcessMemory
+17 IoCs
+description
+pid
+Process
+procid_target
+PID 4664 wrote to memory of 1124
+4664
+chrome.exe
+108
+PID 4664 wrote to memory of 3716
+4664
+chrome.exe
+109
+PID 4664 wrote to memory of 4204
+4664
+chrome.exe
+110
+PID 4664 wrote to memory of 4204
+4664
+chrome.exe
+110
+PID 4664 wrote to memory of 3412
+4664
+chrome.exe
+111
+PID 4664 wrote to memory of 3412
+4664
+chrome.exe
+111
+PID 4664 wrote to memory of 3236
+4664
+chrome.exe
+113
+PID 4664 wrote to memory of 116
+4664
+chrome.exe
+114
+PID 4664 wrote to memory of 3236
+4664
+chrome.exe
+113
+PID 4664 wrote to memory of 116
+4664
+chrome.exe
+114
+PID 4664 wrote to memory of 1768
+4664
+chrome.exe
+115
+PID 4664 wrote to memory of 1768
+4664
+chrome.exe
+115
+PID 4664 wrote to memory of 3720
+4664
+chrome.exe
+116
+PID 4664 wrote to memory of 3720
+4664
+chrome.exe
+116
+PID 4664 wrote to memory of 4004
+4664
+chrome.exe
+118
+PID 4664 wrote to memory of 4004
+4664
+chrome.exe
+118
+PID 4664 wrote to memory of 4124
+4664
+chrome.exe
+119
+Processes
+C:\Program Files (x86)\Common Files\Oracle\Java\javapath\java.exe
+java -jar "C:\Users\Admin\AppData\Local\Temp\Anubis Beta 0.9.9.1.jar"
+1⤵
+PID:4772
+C:\Program Files\Google\Chrome\Application\chrome.exe
+"C:\Program Files\Google\Chrome\Application\chrome.exe"
+1⤵
+Checks processor information in registry
+Enumerates system info in registry
+Suspicious behavior: EnumeratesProcesses
+Suspicious behavior: NtCreateUserProcessBlockNonMicrosoftBinary
+Suspicious use of AdjustPrivilegeToken
+Suspicious use of FindShellTrayWindow
+Suspicious use of SendNotifyMessage
+Suspicious use of WriteProcessMemory
+PID:4664
+C:\Program Files\Google\Chrome\Application\chrome.exe
+"C:\Program Files\Google\Chrome\Application\chrome.exe" --type=crashpad-handler "--user-data-dir=C:\Users\Admin\AppData\Local\Google\Chrome\User Data" /prefetch:4 --monitor-self-annotation=ptype=crashpad-handler "--database=C:\Users\Admin\AppData\Local\Google\Chrome\User Data\Crashpad" "--metrics-dir=C:\Users\Admin\AppData\Local\Google\Chrome\User Data" --url=https://clients2.google.com/cr/report --annotation=channel= --annotation=plat=Win64 --annotation=prod=Chrome --annotation=ver=140.0.7339.81 --initial-client-data=0x118,0x11c,0x120,0xf4,0x124,0x7ff9c559c728,0x7ff9c559c734,0x7ff9c559c740
+2⤵
+PID:1124
+C:\Program Files\Google\Chrome\Application\chrome.exe
+"C:\Program Files\Google\Chrome\Application\chrome.exe" --type=utility --utility-sub-type=network.mojom.NetworkService --lang=en-US --service-sandbox-type=none --force-high-res-timeticks=disabled --metrics-shmem-handle=2156,i,12839993743967613167,3631512862931209714,524288 --field-trial-handle=2080,i,18018899027465775708,14771879470814205652,262144 --variations-seed-version=20260911-010032.103000-production --mojo-platform-channel-handle=2184 /prefetch:3
+2⤵
+System Time Discovery
+PID:3716
+C:\Program Files\Google\Chrome\Application\chrome.exe
+"C:\Program Files\Google\Chrome\Application\chrome.exe" --type=gpu-process --no-pre-read-main-dll --force-high-res-timeticks=disabled --gpu-preferences=SAAAAAAAAADgAAAIAAAAAAAAAAAAAGAAAQAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAABAAAAAAAAAACAAAAAAAAAAIAAAAAAAAAA== --metrics-shmem-handle=1800,i,17241574664249102926,17959549067275325420,262144 --field-trial-handle=2080,i,18018899027465775708,14771879470814205652,262144 --variations-seed-version=20260911-010032.103000-production --mojo-platform-channel-handle=2076 /prefetch:2
+2⤵
+PID:4204
+C:\Program Files\Google\Chrome\Application\chrome.exe
+"C:\Program Files\Google\Chrome\Application\chrome.exe" --type=utility --utility-sub-type=storage.mojom.StorageService --lang=en-US --service-sandbox-type=service --force-high-res-timeticks=disabled --metrics-shmem-handle=2428,i,7489445290027153947,324557833324349924,524288 --field-trial-handle=2080,i,18018899027465775708,14771879470814205652,262144 --variations-seed-version=20260911-010032.103000-production --mojo-platform-channel-handle=2592 /prefetch:8
+2⤵
+PID:3412
+C:\Program Files\Google\Chrome\Application\chrome.exe
+"C:\Program Files\Google\Chrome\Application\chrome.exe" --type=renderer --enable-dinosaur-easter-egg-alt-images --force-high-res-timeticks=disabled --video-capture-use-gpu-memory-buffer --lang=en-US --device-scale-factor=1 --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=6 --metrics-shmem-handle=3288,i,8895194568605911017,18163489736376110273,2097152 --field-trial-handle=2080,i,18018899027465775708,14771879470814205652,262144 --variations-seed-version=20260911-010032.103000-production --mojo-platform-channel-handle=3296 /prefetch:1
+2⤵
+PID:3236
+C:\Program Files\Google\Chrome\Application\chrome.exe
+"C:\Program Files\Google\Chrome\Application\chrome.exe" --type=renderer --enable-dinosaur-easter-egg-alt-images --force-high-res-timeticks=disabled --video-capture-use-gpu-memory-buffer --lang=en-US --device-scale-factor=1 --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=5 --metrics-shmem-handle=3324,i,15360125087409198676,9139283154262665995,2097152 --field-trial-handle=2080,i,18018899027465775708,14771879470814205652,262144 --variations-seed-version=20260911-010032.103000-production --mojo-platform-channel-handle=3352 /prefetch:1
+2⤵
+PID:116
+C:\Program Files\Google\Chrome\Application\chrome.exe
+"C:\Program Files\Google\Chrome\Application\chrome.exe" --type=renderer --extension-process --enable-dinosaur-easter-egg-alt-images --force-high-res-timeticks=disabled --disable-gpu-compositing --video-capture-use-gpu-memory-buffer --lang=en-US --device-scale-factor=1 --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=7 --metrics-shmem-handle=4492,i,13123836242768786071,5168554461679975550,2097152 --field-trial-handle=2080,i,18018899027465775708,14771879470814205652,262144 --variations-seed-version=20260911-010032.103000-production --mojo-platform-channel-handle=4496 /prefetch:2
+2⤵
+PID:1768
+C:\Program Files\Google\Chrome\Application\chrome.exe
+"C:\Program Files\Google\Chrome\Application\chrome.exe" --type=renderer --enable-dinosaur-easter-egg-alt-images --force-high-res-timeticks=disabled --disable-gpu-compositing --video-capture-use-gpu-memory-buffer --lang=en-US --device-scale-factor=1 --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=8 --metrics-shmem-handle=4632,i,13601906757159790750,10173852665509276116,2097152 --field-trial-handle=2080,i,18018899027465775708,14771879470814205652,262144 --variations-seed-version=20260911-010032.103000-production --mojo-platform-channel-handle=4768 /prefetch:1
+2⤵
+PID:3720
+C:\Program Files\Google\Chrome\Application\chrome.exe
+"C:\Program Files\Google\Chrome\Application\chrome.exe" --type=renderer --enable-dinosaur-easter-egg-alt-images --force-high-res-timeticks=disabled --disable-gpu-compositing --video-capture-use-gpu-memory-buffer --lang=en-US --device-scale-factor=1 --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=9 --metrics-shmem-handle=5008,i,10209562705130176460,12910320400174883303,2097152 --field-trial-handle=2080,i,18018899027465775708,14771879470814205652,262144 --variations-seed-version=20260911-010032.103000-production --mojo-platform-channel-handle=4972 /prefetch:1
+2⤵
+PID:4004
+C:\Program Files\Google\Chrome\Application\chrome.exe
+"C:\Program Files\Google\Chrome\Application\chrome.exe" --type=utility --utility-sub-type=chrome.mojom.ProcessorMetrics --lang=en-US --service-sandbox-type=none --force-high-res-timeticks=disabled --metrics-shmem-handle=5728,i,4384629370507669848,14063773713102390383,524288 --field-trial-handle=2080,i,18018899027465775708,14771879470814205652,262144 --variations-seed-version=20260911-010032.103000-production --mojo-platform-channel-handle=5716 /prefetch:8
+2⤵
+PID:4124
+C:\Program Files\Google\Chrome\Application\140.0.7339.81\elevation_service.exe
+"C:\Program Files\Google\Chrome\Application\140.0.7339.81\elevation_service.exe"
+1⤵
+PID:4312
+C:\Windows\system32\svchost.exe
+C:\Windows\system32\svchost.exe -k LocalSystemNetworkRestricted -p -s NgcSvc
+1⤵
+PID:3508
+Network
+Requests
+0
+TCP
+0
+UDP
+0
+MITRE ATT&CK Enterprise
+v16
+Reconnaissance
+Resource Development
+Initial Access
+Execution
+Persistence
+Privilege Escalation
+Defense Evasion
+Credential Access
+Discovery
+Browser Information Discovery
+1
+T1217
+Query Registry
+2
+T1012
+System Information Discovery
+2
+T1082
+System Time Discovery
+1
+T1124
+Lateral Movement
+Collection
+Command and Control
+Exfiltration
+Impact
+Replay Monitor
+Loading Replay Monitor...
+Downloads
+6cc5347d-9f3d-4cbf-99fd-b2b18fccd3df.tmp
+Path
+C:\Users\Admin\AppData\Local\Google\Chrome\User Data\6cc5347d-9f3d-4cbf-99fd-b2b18fccd3df.tmp
+Size
+130KB
+SHA256
+07bda59713ca1b6d68939356d1f52fbea2dbd36b9ec9802f0c8f055d0a8c62dd
+MD5
+a7bc02c45627998e606ed2f1bbe437cc
+SHA1
+26a3df80c08210348e2c85b88c996b4ae20054ed
+SHA512
+b90334071d6780e9fd304fdb238e454fb7b68154ed49e05fe45c4d2caa3abdb5e0107a2b6d60a36a0fdbfb3eb5f277e06cbbe8880619709c667df0f11bde73cd
+SSDEEP
+3072:wJM+lPFz63F8+7t5x0M2XLqD90xWfrz6a9pInCOp+EGFAJ8P+g3:wq+hFD+7t56OD9ZfSAppr3
+TLSH
+T1A2D31232AA94D8BBC9BC5541F157A300DD626CED41DE7A09444A9F8EE09FC5C06B3A33
+MD5
+SHA1
+SHA512
+SSDEEP
+TLSH
+Submit
+Download
+0903aa00-8608-4f85-acdf-a8895cf6a8cc.tmp
+Path
+C:\Users\Admin\AppData\Local\Google\Chrome\User Data\Default\0903aa00-8608-4f85-acdf-a8895cf6a8cc.tmp
+Size
+414B
+SHA256
+5d76cf8703be2e54a21d99bc15f8c197b4d3cd91f32bf33e6fd4df348152e77c
+MD5
+1c4b82393a878bd8c5d048b94f43b665
+SHA1
+ba9ed0afba9c7a56ed82d41237cd6c907326d291
+SHA512
+fc84c7b243cb92ba825260331e4381f720bc35aea00a23ae5872f37682d5fa35fec25032da633d68bc7610f215c54e26f3b50881c87835d76d97dc8bb357f71b
+TLSH
+T180E02BAACC21AD3B1CF80B2D50E14B8AE76113573A51850F773D811C8FB05774695D9C
+MD5
+SHA1
+SHA512
+TLSH
+Submit
+Download
+403ae30f-914f-4288-b8a4-3a2e1fbb596e.tmp
+Path
+C:\Users\Admin\AppData\Local\Google\Chrome\User Data\Default\403ae30f-914f-4288-b8a4-3a2e1fbb596e.tmp
+Size
+6B
+SHA256
+4489f9e3e454748b3521eb214e0a5694d562cff3d9ff511cb456953c8f534c00
+MD5
+377d072e137022223a370760763420bb
+SHA1
+534e5f914ae99bf0a342a2f7a7e0724bd0d11ef7
+SHA512
+d1e37e45e8d603c46c9254d7295744104222b09340246c5e5f50d661d4688ccc2068adf1e0cd78599bcdcf475f8a0a6255dcd3e429812aa14cc2e2022309955c
+MD5
+SHA1
+SHA512
+Submit
+Download
+f_000007
+Path
+C:\Users\Admin\AppData\Local\Google\Chrome\User Data\Default\Cache\Cache_Data\f_000007
+Size
+346KB
+SHA256
+a1ceb3df9fb44cafac57aa6814112f415b31d062f45029b84330a4c8b6ee2223
+MD5
+807f8ed795ff77a6c52f008ff70e789e
+SHA1
+d2c5b378d4c9e95c777a2b2767248cc4ad57eb05
+SHA512
+9ab714adadd47d5e4124250693f0bc2366fb520fa9148d5980bc80be30880fe9d42b57c815be020acbbdaff434bd0209888b1050bb269ea06030c9dd97638703
+SSDEEP
+6144:gK5i8M8Z3iE2CPijzOflx7Dcya48kFcUl0hFvpBuEHAWwuIySTPxtBJyS4Nmir+R:gKA83iEF7nFzlk5uZuIySTDBJyJLrFiT
+TLSH
+T1707423104324319ED4DF2DBD4C016ACABAF2899E18D3E6DD0CB1F1E69257C1FA626B17
+MD5
+SHA1
+SHA512
+SSDEEP
+TLSH
+Submit
+Download
+087099ec-8506-462f-a61d-93fe215a0220.tmp
+Path
+C:\Users\Admin\AppData\Local\Google\Chrome\User Data\Default\Network\087099ec-8506-462f-a61d-93fe215a0220.tmp
+Size
+2B
+SHA256
+4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945
+MD5
+d751713988987e9331980363e24189ce
+SHA1
+97d170e1550eee4afc0af065b78cda302a97674c
+SHA512
+b25b294cb4deb69ea00a4c3cf3113904801b6015e5956bd019a8570b1fe1d6040e944ef3cdee16d0a46503ca6e659a25f21cf9ceddc13f352a3c98138c15d6af
+MD5
+SHA1
+SHA512
+Submit
+Download
+memory/4772-2-0x00000282EA390000-0x00000282EA600000-memory.dmp
+Download
+memory/4772-11-0x00000282E8B50000-0x00000282E8B51000-memory.dmp
+Download
+memory/4772-12-0x00000282EA390000-0x00000282EA600000-memory.dmp
+Download
+© 2018-2026
+Terms
+|
+Privacy

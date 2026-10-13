@@ -1,0 +1,135 @@
+REPORTS
+TRENDS
+HUNTING
+LEADERBOARD
+API
+FEED
+RESOURCES
+ENTERPRISE
+Start Tour
+EN
+SIGN IN
+Anubis Beta 0.9.9.1.jar
+Overview
+Download File
+Download Report
+Anubis Beta 0.9.9.1
+.jar
+SHA-256
+20a03c38a39d013bf5f6836818c0b665478eb3381181fd372cd661c438fd752a
+LOW RISK
+java
+macros-on-close
+anti-debug
+obfuscated
+Overview
+File Details
+Threat Indicators
+Indicators of Compromise
+Similarity Search
+Extracted Strings
+OSINT Lookups
+Geolocation
+Zero-Day Detection
+1
+Threat Reputation
+detected 9 IOCs.
+2
+Static Analysis
+is not applicable on this file.
+3
+Dynamic Analysis
+detected 2 Low Risk Threat Indicators.
+4
+Threat Scoring
+aggregated evidence. Final verdict is Low Risk.
+5
+Threat Hunting
+matched 1 similar Low Risk sample.
+Threat Indicators
+View Threat Indicators (4)
+Low Risk
+2
+No Threat Detected
+2
+TOP THREAT INDICATORS
+Found a suspicious firewall registry string artifact
+Defense Evasion:
+Disable or Modify Tools
+Found an OLE string indicating automatic macro execution on document open/close/modify
+Execution:
+User Execution
+Found a living off the land (LotL) or Windows desktop utility string artifact
+Discovery
+(1)
+Defense Evasion
+(1)
+Found API call reference typical for Java obfuscators
+Command and Control:
+Data Obfuscation
+Indicators Of Compromise
+View IOCs (9)
+TOP INDICATORS OF COMPROMISE
+IP
+1.1.1.1
+Email
+f@z.Fd
+UUID
+00000036-0000-0000-C000-000000000046
+UUID
+2050C4EE-11A0-57DE-AED7-C97C70338245
+UUID
+905A0FE1-BC53-11DF-8C49-001E4FC686DA
+UUID
+905A0FE2-BC53-11DF-8C49-001E4FC686DA
+UUID
+97D098A5-3B99-4DE9-88A5-E11D2F50C795
+Emulation Data
+Learn More
+Processes
+-
+Network
+-
+Other
+-
+
+Emulation Data is not applicable for this file.
+
+Learn more
+File Details
+View File Details
+1 input
+1
+Report ID:
+90607aed-5383-4428-b4c2-f19b54f15c51
+
+Scan engine:
+Internal
+
+Media type:
+application/java-archive
+
+Size:
+20.22 MB
+
+Submission:
+5 minutes ago
+
+File magic:
+Android package (APK), with MANIFEST.MF and classes.dex
+
+Entropy:
+8.0
+
+Strings:
+9,102
+AD
+Need private, high-volume malware analysis? MetaDefender Aether brings industry-leading malware analysis into enterprise SOC, IR, and malware triage workflows with scalable deployment and automation options. Explore MetaDefender Aether
+FAQ
+Status
+Privacy Policy
+Cookie Policy
+Terms Of Use
+MetaDefender Aether
+3rd Party EULA
+V20261003.1-Community

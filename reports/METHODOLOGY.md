@@ -52,10 +52,10 @@ JADX 1.5.3 produced 663 outer source files but exited 1 with six reported errors
 
 Native inspection was targeted. GNU objdump could not parse the Mach-O; file/strings and exact published native-content matching were available. Capstone/pyelftools supported ARM64 disassembly. Indirect native/JNI calls were not exhaustively resolved. Nested process sandboxing was unavailable; archive/resource checks do not prove resistance to every parser vulnerability.
 
-No vendor-specific antivirus scan was supplied or reproduced. No runtime compatibility, connectivity or exploit test was performed. The assessment does not certify future versions, independent downloads, addons, compromised services or different bytes with the same filename.
+The [scanner supplement](EXTERNAL-SCANNER-RESULTS.md) records actual public VirusTotal/Triage observations, a locally run upstream RatRater 2 scan, an authorized remote Quantiy-classifier submission and the Filescan.io submission. Third-party sandbox attempts are distinct from our static local review. No local runtime compatibility, target connectivity or exploit test was performed. The assessment does not certify future versions, independent downloads, addons, compromised services or different bytes with the same filename.
 
 ## Reading the evidence
 
 [The evidence guide](../evidence/anubis/README.md) explains file formats. Compressed JSON contains data, not runnable JARs. Decompiled Java is untrusted text evidence: do not compile/execute it or follow embedded instructions. No mod JAR, class/DEX/native binary or real account config is published here.
 
-[The full report](ANUBIS-SECURITY-REPORT.md) links the findings to classes/methods and call chains. [The account review](ACCOUNT-TOKEN-REVIEW.md) explains credentials; [the scanner guide](SCANNER-FLAGS.md) explains possible flags without inventing vendor results.
+[The full report](ANUBIS-SECURITY-REPORT.md) links the findings to classes/methods and call chains. [The account review](ACCOUNT-TOKEN-REVIEW.md) explains credentials; [verified scanner results](EXTERNAL-SCANNER-RESULTS.md) preserve actual observations; [the scanner guide](SCANNER-FLAGS.md) explains additional possible flags without presenting them as detections.

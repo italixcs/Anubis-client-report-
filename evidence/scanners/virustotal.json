@@ -1,0 +1,24 @@
+{
+  "url": "https://www.virustotal.com/gui/file/20a03c38a39d013bf5f6836818c0b665478eb3381181fd372cd661c438fd752a",
+  "captured_at_utc": "2026-10-13T21:47:23.744Z",
+  "status": 200,
+  "error": null,
+  "failed_requests": [
+    {
+      "url": "https://www.googletagmanager.com/gtm.js?id=GTM-KFBGZNL",
+      "error": "net::ERR_TUNNEL_CONNECTION_FAILED"
+    },
+    {
+      "url": "https://recaptcha.net/recaptcha/enterprise.js?render=explicit",
+      "error": "net::ERR_TUNNEL_CONNECTION_FAILED"
+    },
+    {
+      "url": "https://www.google-analytics.com/analytics.js",
+      "error": "net::ERR_TUNNEL_CONNECTION_FAILED"
+    },
+    {
+      "url": "https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js",
+      "error": "net::ERR_TUNNEL_CONNECTION_FAILED"
+    }
+  ]
+}

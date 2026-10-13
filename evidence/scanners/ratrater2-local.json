@@ -1,0 +1,81 @@
+{
+  "captured_at_utc": "2026-10-13T21:43:07.620Z",
+  "artifact": {
+    "name": "Anubis Beta 0.9.9.1.jar",
+    "size": 21206373,
+    "sha256": "20a03c38a39d013bf5f6836818c0b665478eb3381181fd372cd661c438fd752a"
+  },
+  "scanner": {
+    "name": "RatRater 2",
+    "mode": "local static browser scan, remote Quantiy classifier NOT RUN",
+    "source_commit": "c8bcb930e863f76b29277d9309b50532b00558f1"
+  },
+  "result": {
+    "analysis": {
+      "obfuscation": {
+        "Non-scanned executable files": {
+          "file": "META-INF/jars/fabric-api-base-1.0.5+4ebb5c083e.jar"
+        },
+        "Obfuscator noted in manifest.mf": {
+          "file": "META-INF/MANIFEST.MF",
+          "initialFind": {
+            "searchString": "^(?=.*protected).*$",
+            "isRegex": true,
+            "wholeWord": false,
+            "matchCase": false
+          }
+        }
+      },
+      "flags": {}
+    },
+    "progress": {
+      "done": 1112,
+      "total": 1112
+    },
+    "webhooks": []
+  },
+  "blocked_requests": [
+    {
+      "url": "https://rr-quantiy.ktibow.workers.dev/",
+      "method": "POST",
+      "reason": "External browser requests disabled for local static scan"
+    },
+    {
+      "url": "https://rr-quantiy.ktibow.workers.dev/",
+      "method": "POST",
+      "reason": "External browser requests disabled for local static scan"
+    }
+  ],
+  "browser_messages": [
+    {
+      "type": "debug",
+      "text": "[vite] connecting..."
+    },
+    {
+      "type": "debug",
+      "text": "[vite] connected."
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "type": "error",
+      "text": "While scanning, TypeError: Failed to fetch\n    at window.fetch (http://127.0.0.1:4173/node_modules/.pnpm/@sveltejs+kit@2.26.1_@sveltejs+vite-plugin-svelte@6.1.0_svelte@5.37.1_vite@7.0.6_jiti@2_adb2bbd601a9a67125a47c7bb26e2fe3/node_modules/@sveltejs/kit/src/runtime/client/fetcher.js?v=2e41bb9b:66:10)\n    at apiAnalysisTask (http://127.0.0.1:4173/src/lib/analysis/runAnalysis.ts:248:24)\n    at default (http://127.0.0.1:4173/src/lib/analysis/runAnalysis.ts:270:14)\n    at createAnalysis (http://127.0.0.1:4173/src/lib/analysis/createAnalysis.ts:11:3)\n    at http://127.0.0.1:4173/src/lib/analysis/Results.svelte:127:7\n    at untrack (http://127.0.0.1:4173/node_modules/.vite/deps/chunk-TORTZHMS.js?v=2e41bb9b:3075:12)\n    at http://127.0.0.1:4173/node_modules/.vite/deps/chunk-TORTZHMS.js?v=2e41bb9b:2407:5\n    at update_reaction (http://127.0.0.1:4173/node_modules/.vite/deps/chunk-TORTZHMS.js?v=2e41bb9b:2788:23)\n    at update_effect (http://127.0.0.1:4173/node_modules/.vite/deps/chunk-TORTZHMS.js?v=2e41bb9b:2919:21)\n    at create_effect (http://127.0.0.1:4173/node_modules/.vite/deps/chunk-TORTZHMS.js?v=2e41bb9b:2299:7)"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "type": "error",
+      "text": "While scanning, TypeError: Failed to fetch\n    at window.fetch (http://127.0.0.1:4173/node_modules/.pnpm/@sveltejs+kit@2.26.1_@sveltejs+vite-plugin-svelte@6.1.0_svelte@5.37.1_vite@7.0.6_jiti@2_adb2bbd601a9a67125a47c7bb26e2fe3/node_modules/@sveltejs/kit/src/runtime/client/fetcher.js?v=2e41bb9b:66:10)\n    at apiAnalysisTask (http://127.0.0.1:4173/src/lib/analysis/runAnalysis.ts:248:24)\n    at default (http://127.0.0.1:4173/src/lib/analysis/runAnalysis.ts:270:14)\n    at createAnalysis (http://127.0.0.1:4173/src/lib/analysis/createAnalysis.ts:11:3)\n    at eval (eval at evaluate (:311:30), <anonymous>:4:38)\n    at async <anonymous>:337:30"
+    }
+  ],
+  "notes": [
+    "UI 100% counts settled tasks, including a failed remote task; not full scanner coverage.",
+    "Outer archive classes scanned; nested JARs and native code are not recursively inspected by this scanner.",
+    "Original upstream source used; official-hash JSON fetched separately through GitHub API and mirrored into browser.",
+    "No webhook POST/DELETE, target execution or public file upload performed."
+  ]
+}

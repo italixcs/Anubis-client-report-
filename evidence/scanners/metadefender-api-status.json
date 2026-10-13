@@ -1,0 +1,6 @@
+{
+  "url": "https://api.metadefender.com/v4/hash/20a03c38a39d013bf5f6836818c0b665478eb3381181fd372cd661c438fd752a",
+  "http_status": 401,
+  "captured_at_utc": "2026-10-13T21:49:42.468340+00:00",
+  "note": "No scanner API credentials supplied. This is not a file scan verdict."
+}
